@@ -16,9 +16,9 @@ export default function Home() {
           <div className="lane-lines"><i/><i/><i/><i/><i/></div>
           <img className="hero-rolling-logo" src={`${assetBase}/west-lanes-logo.jpg`} alt="" />
           <div className="hero-impact"/>
-          <div className="pin pin-one"/>
-          <div className="pin pin-two"/>
-          <div className="pin pin-three"/>
+          <div className="hero-pin-rack">
+            {Array.from({ length: 10 }, (_, index) => <i key={index}/>)}
+          </div>
           <div className="hero-stamp">EST.<strong>1955</strong></div>
         </div>
         <div className="hero-copy">
