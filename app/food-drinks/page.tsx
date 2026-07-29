@@ -60,7 +60,7 @@ export default function FoodDrinks() {
       <section className="section menu-intro">
         <div>
           <p className="eyebrow red">Sample menu preview</p>
-          <h2>Roll hungry.<br/>Leave happy.</h2>
+          <h2>Never roll hungry.</h2>
         </div>
         <div>
           <p>Grab a quick snack between games, split a pizza with the team, or settle in at the bar after the final frame.</p>
