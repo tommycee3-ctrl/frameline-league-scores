@@ -28,6 +28,7 @@ const links = [
   ["/open-bowling", "Open Bowling"],
   ["/leagues", "Leagues"],
   ["/cosmic-bowling", "Cosmic Bowling"],
+  ["/food-drinks", "Food & Drinks"],
   ["/events", "Events"],
 ] as const;
 const assetBase = process.env.NEXT_PUBLIC_BASE_PATH ?? "";

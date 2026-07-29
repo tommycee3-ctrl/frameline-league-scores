@@ -53,6 +53,19 @@ export default function Home() {
         <Link href="/cosmic-bowling" className="activity-card red-card"><span>03</span><h3>Cosmic Bowling</h3><p>Turn down the lights and turn up the fun.</p><ArrowRight/></Link>
       </section>
 
+      <section className="food-home">
+        <div className="food-home-art" aria-hidden="true">
+          <div className="pizza"><i/><i/><i/><i/></div>
+          <div className="drink-cup"><span/></div>
+        </div>
+        <div className="food-home-copy">
+          <p className="eyebrow">Food & drinks</p>
+          <h2>Fuel the<br/>next frame.</h2>
+          <p>From pizza and wings to cold drinks at the bar, the good times do not stop between games.</p>
+          <Link className="button button-light" href="/food-drinks">See the sample menu <ArrowRight/></Link>
+        </div>
+      </section>
+
       <section className="section events-section">
         <div className="section-heading">
           <div><p className="eyebrow red">What&apos;s happening</p><h2>Upcoming events</h2></div>
