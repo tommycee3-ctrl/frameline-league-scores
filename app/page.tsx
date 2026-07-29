@@ -12,15 +12,6 @@ export default function Home() {
   return (
     <>
       <section className="hero hero-entrance">
-        <div className="hero-copy">
-          <p className="eyebrow">Omaha&apos;s neighborhood lanes since 1955</p>
-          <h1>Good times<br/><span>roll here.</span></h1>
-          <p className="hero-lede">Classic lanes, friendly competition, and room for everyone—from first frames to league night.</p>
-          <div className="button-row">
-            <Link className="button button-primary" href="/open-bowling">Plan your visit <ArrowRight /></Link>
-            <Link className="button button-ghost" href="/leagues">Find a league</Link>
-          </div>
-        </div>
         <div className="hero-art" aria-hidden="true">
           <div className="lane-lines"><i/><i/><i/><i/><i/></div>
           <img className="hero-rolling-logo" src={`${assetBase}/west-lanes-logo.jpg`} alt="" />
@@ -29,6 +20,15 @@ export default function Home() {
           <div className="pin pin-two"/>
           <div className="pin pin-three"/>
           <div className="hero-stamp">EST.<strong>1955</strong></div>
+        </div>
+        <div className="hero-copy">
+          <p className="eyebrow">Omaha&apos;s neighborhood lanes since 1955</p>
+          <h1>Good times<br/><span>roll here.</span></h1>
+          <p className="hero-lede">Classic lanes, friendly competition, and room for everyone—from first frames to league night.</p>
+          <div className="button-row">
+            <Link className="button button-primary" href="/open-bowling">Plan your visit <ArrowRight /></Link>
+            <Link className="button button-ghost" href="/leagues">Find a league</Link>
+          </div>
         </div>
       </section>
 
