@@ -23,7 +23,10 @@ export default function Home() {
         </div>
         <div className="hero-copy">
           <p className="eyebrow">Omaha&apos;s neighborhood lanes since 1955</p>
-          <h1>Good times<br/><span>roll here.</span></h1>
+          <h1>
+            <span className="headline-line headline-line-one">Good times</span>
+            <span className="headline-line headline-line-two">Roll here.</span>
+          </h1>
           <p className="hero-lede">Classic lanes, friendly competition, and room for everyone—from first frames to league night.</p>
           <div className="button-row">
             <Link className="button button-primary" href="/open-bowling">Plan your visit <ArrowRight /></Link>
