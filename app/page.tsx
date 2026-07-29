@@ -6,11 +6,12 @@ const events = [
   { date: "AUG 15", title: "Cosmic After Dark", detail: "Black lights, music, lane effects and late-night bowling.", tag: "Cosmic" },
   { date: "SEP 03", title: "Fall League Meet & Greet", detail: "Meet captains, find a team and reserve your spot.", tag: "Leagues" },
 ];
+const assetBase = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export default function Home() {
   return (
     <>
-      <section className="hero">
+      <section className="hero hero-entrance">
         <div className="hero-copy">
           <p className="eyebrow">Omaha&apos;s neighborhood lanes since 1955</p>
           <h1>Good times<br/><span>roll here.</span></h1>
@@ -22,7 +23,8 @@ export default function Home() {
         </div>
         <div className="hero-art" aria-hidden="true">
           <div className="lane-lines"><i/><i/><i/><i/><i/></div>
-          <div className="ball"><b/><b/><b/></div>
+          <img className="hero-rolling-logo" src={`${assetBase}/west-lanes-logo.jpg`} alt="" />
+          <div className="hero-impact"/>
           <div className="pin pin-one"/>
           <div className="pin pin-two"/>
           <div className="pin pin-three"/>
