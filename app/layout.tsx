@@ -5,6 +5,9 @@ import { MobileNav } from "./mobile-nav";
 import { ArrowRight, FacebookMark, MailMark, PhoneMark } from "./ui";
 
 export const metadata: Metadata = {
+  metadataBase: process.env.GITHUB_ACTIONS === "true"
+    ? new URL("https://tommycee3-ctrl.github.io/west-lanes-bowling/")
+    : undefined,
   title: { default: "West Lanes Bowlatorium", template: "%s | West Lanes" },
   description: "Omaha bowling, leagues, cosmic bowling and events at West Lanes Bowlatorium, established 1955.",
   openGraph: {
@@ -27,6 +30,7 @@ const links = [
   ["/cosmic-bowling", "Cosmic Bowling"],
   ["/events", "Events"],
 ] as const;
+const assetBase = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
@@ -34,7 +38,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body>
         <header className="site-header">
           <Link href="/" className="brand" aria-label="West Lanes home">
-            <img src="/west-lanes-logo.jpg" alt="West Lanes Bowlatorium" />
+            <img src={`${assetBase}/west-lanes-logo.jpg`} alt="West Lanes Bowlatorium" />
             <span>WEST LANES<small>BOWLATORIUM · EST. 1955</small></span>
           </Link>
           <nav className="desktop-nav" aria-label="Main navigation">
@@ -46,7 +50,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <footer className="site-footer">
           <div className="footer-main">
             <div className="footer-brand">
-              <img src="/west-lanes-logo.jpg" alt="" />
+              <img src={`${assetBase}/west-lanes-logo.jpg`} alt="" />
               <p>A striking Omaha tradition since 1955.</p>
               <a className="facebook-link" href="https://www.facebook.com/share/199TAZEkJ6/?mibextid=wwXIfr" target="_blank" rel="noreferrer"><FacebookMark/> Follow West Lanes</a>
             </div>
