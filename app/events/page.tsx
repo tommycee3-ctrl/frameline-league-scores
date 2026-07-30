@@ -66,23 +66,11 @@ export default function Events() {
             <div className="event-block"><strong>{event.day}</strong><span>{event.month}</span></div>
             <div className={event.featured ? "featured-event-content" : undefined}>
               {event.featured && (
-                <div className="event-photo-grid" aria-label="National Spider-Man Day guests and prizes">
-                  <div
-                    className="event-photo spider-photo"
-                    role="img"
-                    aria-label="Spider-Man"
-                  ><img src={`${assetBase}/national-spiderman-day.png`} alt="" /></div>
-                  <div
-                    className="event-photo characters-photo"
-                    role="img"
-                    aria-label="Spider-Man Day costumed characters"
-                  ><img src={`${assetBase}/national-spiderman-day.png`} alt="" /></div>
-                  <div
-                    className="event-photo kgor-photo"
-                    role="img"
-                    aria-label="KGOR's Lucy Chapman"
-                  ><img src={`${assetBase}/national-spiderman-day.png`} alt="" /></div>
-                </div>
+                <img
+                  className="event-flyer"
+                  src={`${assetBase}/national-spiderman-day.png`}
+                  alt="West Lanes National Spider-Man Day flyer with complete event information"
+                />
               )}
               <div>
                 <small>{event.time}</small>

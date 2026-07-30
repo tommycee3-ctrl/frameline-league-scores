@@ -15,12 +15,6 @@ export default function Home() {
             we&apos;ll keep a lane warm.
           </p>
           <Link className="home-event-callout" href="/events">
-            <span
-              className="home-event-image"
-              aria-hidden="true"
-            >
-              <img src={`${assetBase}/national-spiderman-day.png`} alt="" />
-            </span>
             <span className="home-event-date"><b>AUG</b><strong>01</strong></span>
             <span className="home-event-copy">
               <small>Featured family event · Noon–2 PM</small>
