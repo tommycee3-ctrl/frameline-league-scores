@@ -69,28 +69,19 @@ export default function Events() {
                 <div className="event-photo-grid" aria-label="National Spider-Man Day guests and prizes">
                   <div
                     className="event-photo spider-photo"
-                    style={{ backgroundImage: `url(${assetBase}/national-spiderman-day.png)` }}
                     role="img"
                     aria-label="Spider-Man"
-                  />
+                  ><img src={`${assetBase}/national-spiderman-day.png`} alt="" /></div>
                   <div
                     className="event-photo characters-photo"
-                    style={{ backgroundImage: `url(${assetBase}/national-spiderman-day.png)` }}
                     role="img"
                     aria-label="Spider-Man Day costumed characters"
-                  />
+                  ><img src={`${assetBase}/national-spiderman-day.png`} alt="" /></div>
                   <div
                     className="event-photo kgor-photo"
-                    style={{ backgroundImage: `url(${assetBase}/national-spiderman-day.png)` }}
                     role="img"
                     aria-label="KGOR's Lucy Chapman"
-                  />
-                  <div
-                    className="event-photo movie-photo"
-                    style={{ backgroundImage: `url(${assetBase}/national-spiderman-day.png)` }}
-                    role="img"
-                    aria-label="Spider-Man movie poster giveaway"
-                  />
+                  ><img src={`${assetBase}/national-spiderman-day.png`} alt="" /></div>
                 </div>
               )}
               <div>

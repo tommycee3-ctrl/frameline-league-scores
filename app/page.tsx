@@ -17,9 +17,10 @@ export default function Home() {
           <Link className="home-event-callout" href="/events">
             <span
               className="home-event-image"
-              style={{ backgroundImage: `url(${assetBase}/national-spiderman-day.png)` }}
               aria-hidden="true"
-            />
+            >
+              <img src={`${assetBase}/national-spiderman-day.png`} alt="" />
+            </span>
             <span className="home-event-date"><b>AUG</b><strong>01</strong></span>
             <span className="home-event-copy">
               <small>Featured family event · Noon–2 PM</small>
