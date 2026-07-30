@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { PageHeader } from "../page-header";
 
 export const metadata: Metadata = { title: "Events" };
+const assetBase = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 const events = [
   {
@@ -63,16 +64,25 @@ export default function Events() {
         {events.map((event) => (
           <article className={event.featured ? "featured-event" : undefined} key={event.title}>
             <div className="event-block"><strong>{event.day}</strong><span>{event.month}</span></div>
-            <div>
-              <small>{event.time}</small>
-              <h2>{event.title}</h2>
-              <p>{event.detail}</p>
-              {event.extra && <p className="event-extra">{event.extra}</p>}
-              {event.highlights && (
-                <ul className="event-highlights">
-                  {event.highlights.map((highlight) => <li key={highlight}>{highlight}</li>)}
-                </ul>
+            <div className={event.featured ? "featured-event-content" : undefined}>
+              {event.featured && (
+                <img
+                  className="event-flyer"
+                  src={`${assetBase}/national-spiderman-day.png`}
+                  alt="West Lanes National Spider-Man Day event flyer"
+                />
               )}
+              <div>
+                <small>{event.time}</small>
+                <h2>{event.title}</h2>
+                <p>{event.detail}</p>
+                {event.extra && <p className="event-extra">{event.extra}</p>}
+                {event.highlights && (
+                  <ul className="event-highlights">
+                    {event.highlights.map((highlight) => <li key={highlight}>{highlight}</li>)}
+                  </ul>
+                )}
+              </div>
             </div>
             <a href="tel:+14025563344">Call for details</a>
           </article>
