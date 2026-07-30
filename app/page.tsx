@@ -1,96 +1,77 @@
 import Link from "next/link";
 import { ArrowRight, CalendarDays, Clock3, MapPin } from "./ui";
 
-const events = [
-  { date: "AUG 08", title: "Summer Family Bowl", detail: "Two hours of bowling, shoes, pizza & pop.", tag: "Family" },
-  { date: "AUG 15", title: "Cosmic After Dark", detail: "Black lights, music, lane effects and late-night bowling.", tag: "Cosmic" },
-  { date: "SEP 03", title: "Fall League Meet & Greet", detail: "Meet captains, find a team and reserve your spot.", tag: "Leagues" },
-];
 const assetBase = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export default function Home() {
   return (
-    <>
-      <section className="hero hero-entrance">
-        <div className="hero-art" aria-hidden="true">
-          <div className="lane-lines"><i/><i/><i/><i/><i/></div>
-          <img className="hero-rolling-logo" src={`${assetBase}/west-lanes-logo.jpg`} alt="" />
-          <div className="hero-impact"/>
-          <div className="hero-pin-rack">
-            {Array.from({ length: 10 }, (_, index) => <i key={index}/>)}
-          </div>
-          <div className="hero-stamp">EST.<strong>1955</strong></div>
-        </div>
-        <div className="hero-copy">
-          <p className="eyebrow">Omaha&apos;s neighborhood lanes since 1955</p>
-          <h1>
-            <span className="headline-line headline-line-one">Good times</span>
-            <span className="headline-line headline-line-two">Roll here.</span>
-          </h1>
-          <p className="hero-lede">Classic lanes, friendly competition, and room for everyone—from first frames to league night.</p>
-          <div className="button-row">
-            <Link className="button button-primary" href="/open-bowling">Plan your visit <ArrowRight /></Link>
-            <Link className="button button-ghost" href="/leagues">Find a league</Link>
+    <div className="social-home">
+      <section className="social-hero">
+        <div className="social-copy">
+          <p className="social-kicker">Omaha&apos;s neighborhood lanes since 1955</p>
+          <h1>Good times<br /><em>roll here.</em></h1>
+          <p className="social-lede">
+            Bowling, food, leagues, and room for everyone. Come as you are;
+            we&apos;ll keep a lane warm.
+          </p>
+          <div className="social-actions">
+            <Link className="social-button primary" href="/open-bowling">
+              Plan your visit <ArrowRight />
+            </Link>
+            <Link className="social-button secondary" href="/leagues">
+              Find a league
+            </Link>
           </div>
         </div>
-      </section>
 
-      <section className="quick-strip">
-        <div><Clock3/><span><small>Today&apos;s sample hours</small><strong>12 PM – 11 PM</strong></span></div>
-        <div><MapPin/><span><small>Find us</small><strong>151 N. 72nd St.</strong></span></div>
-        <div><CalendarDays/><span><small>Coming up</small><strong>Cosmic Saturday</strong></span></div>
-      </section>
-
-      <section className="section intro-grid">
-        <div>
-          <p className="eyebrow red">Welcome to West Lanes</p>
-          <h2>Bowling with a little history.</h2>
-        </div>
-        <div className="body-copy">
-          <p>West Lanes has been part of Omaha since 1955. Today, it is still a place to meet friends, celebrate milestones, compete in a league, and make the kind of memories that only happen at the lanes.</p>
-          <p className="sample-note">This preview uses sample pricing, schedules and event details until West Lanes confirms the current information.</p>
+        <div className="social-collage" aria-label="Friends and families enjoying West Lanes">
+          <div className="social-photo photo-bowlers" />
+          <div className="social-photo photo-lanes" />
+          <div className="social-logo-card">
+            <img src={`${assetBase}/west-lanes-logo.jpg`} alt="West Lanes Bowlatorium" />
+            <span>Est. 1955</span>
+          </div>
+          <div className="social-burst">LET&apos;S<br />BOWL!</div>
         </div>
       </section>
 
-      <section className="section activity-grid">
-        <Link href="/open-bowling" className="activity-card cream"><span>01</span><h3>Open Bowling</h3><p>Walk in, grab a lane and make a day of it.</p><ArrowRight/></Link>
-        <Link href="/leagues" className="activity-card navy"><span>02</span><h3>League Bowling</h3><p>Find your people and compete all season.</p><ArrowRight/></Link>
-        <Link href="/cosmic-bowling" className="activity-card red-card"><span>03</span><h3>Cosmic Bowling</h3><p>Turn down the lights and turn up the fun.</p><ArrowRight/></Link>
+      <section className="social-dashboard" aria-label="West Lanes at a glance">
+        <article className="social-today">
+          <div className="social-card-heading">
+            <span><Clock3 /> Today at West Lanes</span>
+            <Link href="/open-bowling">Full hours <ArrowRight /></Link>
+          </div>
+          <div className="today-details">
+            <div><small>Open bowling</small><strong>12 PM–11 PM</strong></div>
+            <div><small>Tonight</small><strong>Cosmic at 9 PM</strong></div>
+            <div><small>Location</small><strong>151 N. 72nd St.</strong></div>
+          </div>
+        </article>
+
+        <Link href="/events" className="social-tile tile-yellow">
+          <span className="tile-icon"><CalendarDays /></span>
+          <div><small>Next up</small><strong>Summer Family Bowl</strong><span>August 8</span></div>
+          <ArrowRight />
+        </Link>
+
+        <Link href="/food-drinks" className="social-tile tile-coral">
+          <span className="tile-icon food-icon">🍔</span>
+          <div><small>Food & drinks</small><strong>Never roll hungry</strong><span>See specials & menu</span></div>
+          <ArrowRight />
+        </Link>
+
+        <Link href="/cosmic-bowling" className="social-tile tile-blue">
+          <span className="tile-icon">✦</span>
+          <div><small>Friday & Saturday</small><strong>Cosmic Bowling</strong><span>Lights down. Music up.</span></div>
+          <ArrowRight />
+        </Link>
       </section>
 
-      <section className="food-home">
-        <div className="food-home-art" aria-hidden="true">
-          <div className="pizza"><i/><i/><i/><i/></div>
-          <div className="drink-cup"><span/></div>
-        </div>
-        <div className="food-home-copy">
-          <p className="eyebrow">Food & drinks</p>
-          <h2>Fuel the<br/>next frame.</h2>
-          <p>From pizza and wings to cold drinks at the bar, the good times do not stop between games.</p>
-          <Link className="button button-light" href="/food-drinks">See the sample menu <ArrowRight/></Link>
-        </div>
-      </section>
-
-      <section className="section events-section">
-        <div className="section-heading">
-          <div><p className="eyebrow red">What&apos;s happening</p><h2>Upcoming events</h2></div>
-          <Link href="/events" className="text-link">See all events <ArrowRight/></Link>
-        </div>
-        <div className="event-list">
-          {events.map((event) => (
-            <article className="event-row" key={event.title}>
-              <div className="event-date">{event.date.split(" ").map((part) => <span key={part}>{part}</span>)}</div>
-              <div><small>{event.tag}</small><h3>{event.title}</h3><p>{event.detail}</p></div>
-              <ArrowRight/>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="cta-band">
-        <div><p className="eyebrow">Ready when you are</p><h2>Meet us at the lanes.</h2></div>
-        <a className="button button-light" href="tel:+14025563344">Call (402) 556-3344 <ArrowRight/></a>
-      </section>
-    </>
+      <div className="social-lower">
+        <div><MapPin /><span>Omaha, Nebraska</span></div>
+        <p>Sample hours and event details are shown for preview.</p>
+        <Link href="/events">Explore everything happening <ArrowRight /></Link>
+      </div>
+    </div>
   );
 }
