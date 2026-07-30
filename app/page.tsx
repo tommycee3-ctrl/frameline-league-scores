@@ -14,6 +14,15 @@ export default function Home() {
             Bowling, food, leagues, and room for everyone. Come as you are;
             we&apos;ll keep a lane warm.
           </p>
+          <Link className="home-event-callout" href="/events">
+            <span className="home-event-date"><b>AUG</b><strong>01</strong></span>
+            <span className="home-event-copy">
+              <small>Featured family event · Noon–2 PM</small>
+              <strong>National Spider-Man Day</strong>
+              <em>$3 games · $3 shoes · Meet the characters</em>
+            </span>
+            <ArrowRight />
+          </Link>
           <div className="social-actions">
             <Link className="social-button primary" href="/open-bowling">
               Plan your visit <ArrowRight />
@@ -50,7 +59,7 @@ export default function Home() {
 
         <Link href="/events" className="social-tile tile-yellow">
           <span className="tile-icon"><CalendarDays /></span>
-          <div><small>Saturday · Noon–2 PM</small><strong>National Spider-Man Day</strong><span>August 1 · $3 games & shoes</span></div>
+          <div><small>Saturday · Noon–2 PM</small><strong>National Spider-Man Day</strong><span>All event details</span></div>
           <ArrowRight />
         </Link>
 

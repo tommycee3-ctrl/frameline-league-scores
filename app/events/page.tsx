@@ -11,6 +11,14 @@ const events = [
     time: "Saturday · Noon–2 PM",
     detail: "Half-price family bowling with $3 games and $3 shoe rental. Meet Spider-Man, Spider-Woman and Black Cat in person while supplies last.",
     extra: "KGOR’s Lucy Chapman will be live with chances to win West Lanes gift certificates, special-screening tickets and free movie posters.",
+    highlights: [
+      "$3 bowling games",
+      "$3 shoe rental",
+      "Meet Spider-Man, Spider-Woman and Black Cat",
+      "Spin to win free West Lanes gift certificates",
+      "Win tickets to a special screening of Spider-Man: Brand New Day at B&B Oak View Plaza 14",
+      "Free Spider-Man movie posters while supplies last",
+    ],
     featured: true,
   },
   {
@@ -60,6 +68,11 @@ export default function Events() {
               <h2>{event.title}</h2>
               <p>{event.detail}</p>
               {event.extra && <p className="event-extra">{event.extra}</p>}
+              {event.highlights && (
+                <ul className="event-highlights">
+                  {event.highlights.map((highlight) => <li key={highlight}>{highlight}</li>)}
+                </ul>
+              )}
             </div>
             <a href="tel:+14025563344">Call for details</a>
           </article>
