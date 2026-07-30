@@ -63,27 +63,22 @@ export default function Events() {
       <section className="section events-page-list">
         {events.map((event) => (
           <article className={event.featured ? "featured-event" : undefined} key={event.title}>
-            <div className="event-block"><strong>{event.day}</strong><span>{event.month}</span></div>
-            <div className={event.featured ? "featured-event-content" : undefined}>
-              {event.featured && (
+            {!event.featured && <div className="event-block"><strong>{event.day}</strong><span>{event.month}</span></div>}
+            {event.featured ? (
+              <div className="featured-event-content">
                 <img
                   className="event-flyer"
                   src={`${assetBase}/national-spiderman-day.png`}
                   alt="West Lanes National Spider-Man Day flyer with complete event information"
                 />
-              )}
+              </div>
+            ) : (
               <div>
                 <small>{event.time}</small>
                 <h2>{event.title}</h2>
                 <p>{event.detail}</p>
-                {event.extra && <p className="event-extra">{event.extra}</p>}
-                {event.highlights && (
-                  <ul className="event-highlights">
-                    {event.highlights.map((highlight) => <li key={highlight}>{highlight}</li>)}
-                  </ul>
-                )}
               </div>
-            </div>
+            )}
             <a href="tel:+14025563344">Call for details</a>
           </article>
         ))}

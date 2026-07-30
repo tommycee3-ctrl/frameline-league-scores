@@ -35,7 +35,6 @@ export default function Home() {
 
         <div className="social-collage" aria-label="Friends and families enjoying West Lanes">
           <div className="social-photo photo-bowlers" />
-          <div className="social-photo photo-lanes" />
           <div className="social-logo-card">
             <img src={`${assetBase}/west-lanes-logo.jpg`} alt="West Lanes Bowlatorium" />
             <span>Est. 1955</span>
