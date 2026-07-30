@@ -50,7 +50,7 @@ export default function Home() {
 
         <Link href="/events" className="social-tile tile-yellow">
           <span className="tile-icon"><CalendarDays /></span>
-          <div><small>Next up</small><strong>Summer Family Bowl</strong><span>August 8</span></div>
+          <div><small>Saturday · Noon–2 PM</small><strong>National Spider-Man Day</strong><span>August 1 · $3 games & shoes</span></div>
           <ArrowRight />
         </Link>
 

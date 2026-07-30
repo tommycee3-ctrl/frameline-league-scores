@@ -4,17 +4,71 @@ import { PageHeader } from "../page-header";
 export const metadata: Metadata = { title: "Events" };
 
 const events = [
-  ["08", "AUG", "Summer Family Bowl", "12 PM – 4 PM", "Two hours of bowling, rental shoes, one-topping pizza and a pitcher of pop."],
-  ["15", "AUG", "Cosmic After Dark", "9 PM – Midnight", "Black lights, music, lane effects and a lively late-night atmosphere."],
-  ["03", "SEP", "Fall League Meet & Greet", "6 PM – 8 PM", "Meet league captains, find teammates and ask questions before the season."],
-  ["12", "SEP", "9-Pin No-Tap Tournament", "Check-in at 10 AM", "A fun open tournament for bowlers of all experience levels."],
-  ["24", "OCT", "Halloween Cosmic Bowl", "8 PM – Midnight", "Costumes, glow bowling, music and prizes throughout the evening."],
+  {
+    day: "01",
+    month: "AUG",
+    title: "National Spider-Man Day",
+    time: "Saturday · Noon–2 PM",
+    detail: "Half-price family bowling with $3 games and $3 shoe rental. Meet Spider-Man, Spider-Woman and Black Cat in person while supplies last.",
+    extra: "KGOR’s Lucy Chapman will be live with chances to win West Lanes gift certificates, special-screening tickets and free movie posters.",
+    featured: true,
+  },
+  {
+    day: "15",
+    month: "AUG",
+    title: "Cosmic After Dark",
+    time: "9 PM–Midnight",
+    detail: "Black lights, music, lane effects and a lively late-night atmosphere.",
+  },
+  {
+    day: "03",
+    month: "SEP",
+    title: "Fall League Meet & Greet",
+    time: "6 PM–8 PM",
+    detail: "Meet league captains, find teammates and ask questions before the season.",
+  },
+  {
+    day: "12",
+    month: "SEP",
+    title: "9-Pin No-Tap Tournament",
+    time: "Check-in at 10 AM",
+    detail: "A fun open tournament for bowlers of all experience levels.",
+  },
+  {
+    day: "24",
+    month: "OCT",
+    title: "Halloween Cosmic Bowl",
+    time: "8 PM–Midnight",
+    detail: "Costumes, glow bowling, music and prizes throughout the evening.",
+  },
 ];
 
 export default function Events() {
-  return <>
-    <PageHeader eyebrow="Save the date" title="Events at West Lanes" intro="Special bowling nights, tournaments, league gatherings and more reasons to get together."/>
-    <section className="section events-page-list">{events.map(([day, month, title, time, detail]) => <article key={title}><div className="event-block"><strong>{day}</strong><span>{month}</span></div><div><small>{time}</small><h2>{title}</h2><p>{detail}</p></div><a href="tel:+14025563344">Call for details</a></article>)}</section>
-    <section className="cta-band"><div><p className="eyebrow">Plan something special</p><h2>Bring your group to the lanes.</h2></div><a className="button button-light" href="mailto:new_west_lanes@yahoo.com?subject=West%20Lanes%20group%20event">Ask about a group event</a></section>
-  </>;
+  return (
+    <>
+      <PageHeader
+        eyebrow="Save the date"
+        title="Events at West Lanes"
+        intro="Special bowling nights, tournaments, league gatherings and more reasons to get together."
+      />
+      <section className="section events-page-list">
+        {events.map((event) => (
+          <article className={event.featured ? "featured-event" : undefined} key={event.title}>
+            <div className="event-block"><strong>{event.day}</strong><span>{event.month}</span></div>
+            <div>
+              <small>{event.time}</small>
+              <h2>{event.title}</h2>
+              <p>{event.detail}</p>
+              {event.extra && <p className="event-extra">{event.extra}</p>}
+            </div>
+            <a href="tel:+14025563344">Call for details</a>
+          </article>
+        ))}
+      </section>
+      <section className="cta-band">
+        <div><p className="eyebrow">Plan something special</p><h2>Bring your group to the lanes.</h2></div>
+        <a className="button button-light" href="mailto:new_west_lanes@yahoo.com?subject=West%20Lanes%20group%20event">Ask about a group event</a>
+      </section>
+    </>
+  );
 }
