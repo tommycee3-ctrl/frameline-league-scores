@@ -18,13 +18,13 @@ function SyncedLeague({data}:{data:LeagueSnapshot}) {
   return <>
     <section className="section nationals-overview">
       <div className="nationals-title"><p className="eyebrow red">League ID {data.id}</p><h2>{data.displayName}</h2><p>{data.bowlsOn} nights · {data.startTime} · Started {data.startDate}.</p></div>
-      <div className="league-facts"><article><small>Status</small><strong>{hasScores?`Week ${data.week??"posted"}`:hasPostedData?"Roster posted":"Awaiting Week 1"}</strong></article><article><small>Source update</small><strong>{data.sourceUpdated}</strong></article><article><small>Automatic check</small><strong>Every 6 hours</strong></article></div>
+      <div className="league-facts"><article><small>Status</small><strong>{hasScores?`Week ${data.week??"posted"}`:hasPostedData?"Roster posted":"Awaiting Week 1"}</strong></article><article><small>Last league update</small><strong>{data.sourceUpdated}</strong></article></div>
     </section>
     <section className="section league-hub" id="league-dashboard">
       <div className="section-heading"><div><p className="eyebrow red">{hasScores?`Week ${data.week??"results"}`:"Season setup"}</p><h2>{data.displayName}</h2></div><p>{hasScores?"Latest verified league results":"Results will appear automatically after LeagueSecretary posts them."}</p></div>
       <div className="league-hub-tabs" role="tablist" aria-label="League views">{tabs.map(id=><button key={id} className={tab===id?"active":""} onClick={()=>setTab(id)}>{labels[id]}</button>)}</div>
       <div className="league-tools team-search"><label><span>Search {labels[tab].toLowerCase()}</span><input value={query} onChange={e=>setQuery(e.target.value)} placeholder="Team or bowler name"/></label></div>
-      {!hasScores&&<div className="league-awaiting"><span>WED</span><div><h3>{hasPostedData?"Teams and bowlers are posted":"Wednesday Scratch Draft League is ready"}</h3><p>The first score check begins Thursday at midnight Central. It will retry every six hours until LeagueSecretary posts a verified change.</p></div></div>}
+      {!hasScores&&<div className="league-awaiting"><span>WED</span><div><h3>{hasPostedData?"Teams and bowlers are posted":"Wednesday Scratch Draft League is ready"}</h3><p>Official scores and standings will appear here when the league posts its first completed week.</p></div></div>}
       {filtered.map((table,index)=><article className="synced-table" key={`${table.title}-${index}`}><h3>{table.title||labels[tab]}</h3><div className="recap-scroll"><table><thead><tr>{table.headers.map((h,i)=><th key={`${h}-${i}`}>{h}</th>)}</tr></thead><tbody>{table.rows.map((row,rowIndex)=><tr key={`${rowIndex}-${row.join("-")}`} className="clickable-source-row">{row.map((cell,i)=><td key={i}>{cell}</td>)}</tr>)}</tbody></table></div></article>)}
     </section>
   </>;

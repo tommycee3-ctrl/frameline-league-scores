@@ -19,7 +19,7 @@ const browser = await chromium.launch({headless:true});
 let changed = false;
 try {
   for (const league of leagues) {
-    if (!force && (chicago.weekday!==league.checkDay || !["00","06","12","18","24"].includes(chicago.hour))) continue;
+    if (!force && (chicago.weekday!==league.checkDay || Number(chicago.hour)%2!==0)) continue;
     const file = path.join(process.cwd(),"public","data","leagues",`${league.id}.json`);
     const current = JSON.parse(await readFile(file,"utf8"));
     const views = {};
