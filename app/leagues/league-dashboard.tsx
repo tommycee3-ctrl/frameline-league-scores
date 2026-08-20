@@ -25,7 +25,7 @@ make("Team 17",[],0,0),
 make("Casper & Co.",[],12,0),
 ];
 
-const matchups = [[0,1],[3,4],[5,6],[7,8],[10,11],[12,13]] as const;
+const matchups = [[3,4],[10,11],[1,0],[12,13],[6,5],[7,8]] as const;
 for (const [a,b] of matchups) for(let i=0;i<5;i++){
   let ap=0,bp=0; const A=teams[a].bowlers[i], B=teams[b].bowlers[i];
   for(let g=0;g<3;g++){ const av=A.games[g]+A.hcp,bv=B.games[g]+B.hcp; if(av>bv)ap++; else if(bv>av)bp++; else {ap+=.5;bp+=.5;} }
@@ -41,9 +41,9 @@ const scratchGameTotal=(team:Team,game:number)=>team.bowlers.reduce((sum,b)=>sum
 const handicapGameTotal=(team:Team,game:number)=>team.bowlers.reduce((sum,b)=>sum+b.games[game]+b.hcp,0);
 const handicapSeries=(bowler:Bowler)=>bowler.games.reduce((sum,g)=>sum+g,0)+bowler.hcp*3;
 const teamPointBreakdown=(team:Team,opponent:Team)=>{
- const games=[0,1,2].map(game=>{const a=handicapGameTotal(team,game),b=handicapGameTotal(opponent,game);return a>b?6:a===b?3:0});
- const a=games.reduce((sum,_,game)=>sum+handicapGameTotal(team,game),0),b=games.reduce((sum,_,game)=>sum+handicapGameTotal(opponent,game),0);
- return {games,series:a>b?4:a===b?2:0,total:games.reduce((sum,p)=>sum+p,0)+(a>b?4:a===b?2:0)};
+ const games:number[]=[0,1,2].map(game=>{const a=handicapGameTotal(team,game),b=handicapGameTotal(opponent,game);return a>b?6:a===b?3:0});
+ const a=[0,1,2].reduce((sum,game)=>sum+handicapGameTotal(team,game),0),b=[0,1,2].reduce((sum,game)=>sum+handicapGameTotal(opponent,game),0);
+ return {games,series:a>b?4:a===b?2:0,total:games.reduce<number>((sum,p)=>sum+p,0)+(a>b?4:a===b?2:0)};
 };
 
 export function LeagueDashboard(){
