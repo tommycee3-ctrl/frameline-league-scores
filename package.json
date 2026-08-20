@@ -9,6 +9,7 @@
     "dev": "vinext dev",
     "build": "vinext build",
     "build:pages": "next build",
+    "sync:leagues": "node scripts/sync-leaguesecretary.mjs --force",
     "start": "vinext start",
     "test": "npm run build && node --test tests/rendered-html.test.mjs",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
@@ -17,6 +18,7 @@
   "dependencies": {
     "drizzle-orm": "0.45.2",
     "next": "16.2.6",
+    "playwright": "1.55.0",
     "react": "19.2.6",
     "react-dom": "19.2.6"
   },
