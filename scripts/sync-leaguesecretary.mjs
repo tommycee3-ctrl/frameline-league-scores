@@ -91,7 +91,14 @@ try {
     const recordCount=Object.values(views).reduce((sum,tables)=>sum+tables.reduce((n,t)=>n+t.rows.length,0),0);
     if(recordCount===0) continue;
     const fingerprint=createHash("sha256").update(JSON.stringify({week,views})).digest("hex");
-    const complete=(views.recaps??[]).some(table=>table.rows.length>0)&&(views.bowlers??[]).some(table=>{const games=table.headers.findIndex(h=>h.toLowerCase()==="games");return games>=0&&table.rows.some(row=>Number(row[games])>0)});
+    const standingsTeams=new Set((views.standings??[]).flatMap(table=>{
+      const teamIndex=table.headers.findIndex(h=>h.toLowerCase()==="team#");
+      return teamIndex<0?[]:table.rows.map(row=>row[teamIndex]).filter(Boolean);
+    }));
+    const recapTeams=new Set((views.recaps??[]).flatMap(table=>table.rows.map(row=>row[0]?.match(/^Team\s+(\d+)$/i)?.[1]).filter(Boolean)));
+    const allTeamsRecapped=standingsTeams.size>0&&[...standingsTeams].every(team=>recapTeams.has(team));
+    const bowlersScored=(views.bowlers??[]).some(table=>{const games=table.headers.findIndex(h=>h.toLowerCase()==="games");return games>=0&&table.rows.some(row=>Number(row[games])>0)});
+    const complete=allTeamsRecapped&&bowlersScored;
     const cycle=targetCycle(league);
     const lastCompletedCycle=complete?cycle:(current.lastCompletedCycle??null);
     if(fingerprint===current.fingerprint&&lastCompletedCycle===current.lastCompletedCycle) continue;
