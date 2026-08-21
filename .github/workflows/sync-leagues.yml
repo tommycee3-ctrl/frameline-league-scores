@@ -2,9 +2,10 @@ name: Sync league results
 
 on:
   schedule:
-    # Run hourly so Central daylight/standard time are both covered. A private
-    # gate below continues only at midnight, 2 AM, 4 AM, and so on Thursday.
-    - cron: "0 * * * 4"
+    # Run hourly so Central daylight/standard time are both covered. The gate
+    # continues only every two hours; the collector decides which league is
+    # still waiting for its weekly update.
+    - cron: "0 * * * *"
   workflow_dispatch:
 
 permissions:
