@@ -10,6 +10,8 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 concurrency:
   group: league-results-sync
@@ -18,6 +20,8 @@ concurrency:
 jobs:
   sync:
     runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.publish.outputs.changed }}
     steps:
       - name: Check the private Central-time window
         id: window
@@ -48,10 +52,12 @@ jobs:
         if: steps.window.outputs.run == 'true'
         run: node scripts/sync-leaguesecretary.mjs
       - name: Publish changed league data
+        id: publish
         if: steps.window.outputs.run == 'true'
         run: |
           if git diff --quiet -- public/data/leagues; then
             echo "No new league data to publish."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
           git config user.name "West Lanes League Sync"
@@ -59,3 +65,32 @@ jobs:
           git add -- public/data/leagues
           git commit -m "Update West Lanes league results"
           git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+      - uses: actions/configure-pages@v5
+        if: steps.publish.outputs.changed == 'true'
+        with:
+          enablement: true
+      - name: Build the updated public site
+        if: steps.publish.outputs.changed == 'true'
+        run: npm run build:pages
+        env:
+          NEXT_PUBLIC_BASE_PATH: /west-lanes-bowling
+      - uses: actions/upload-pages-artifact@v3
+        if: steps.publish.outputs.changed == 'true'
+        with:
+          path: ./out
+
+  deploy:
+    needs: sync
+    if: needs.sync.outputs.changed == 'true'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      pages: write
+      id-token: write
+    steps:
+      - name: Deploy updated league results
+        id: deployment
+        uses: actions/deploy-pages@v4

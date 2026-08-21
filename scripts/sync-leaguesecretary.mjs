@@ -25,6 +25,15 @@ function isWindowOpen(league,current) {
 
 function clean(value="") { return value.replace(/\s+/g," ").trim(); }
 function validTable(table) { return table.headers.length>1 && table.rows.some(row=>row.filter(Boolean).length>1); }
+async function extractTables(page) {
+  const tables=await page.locator("table").evaluateAll((nodes)=>nodes.map((table,index)=>{
+    const title=(table.closest("section,article,.card,.panel")?.querySelector("h1,h2,h3,h4,h5,.card-title")?.textContent||`Table ${index+1}`).replace(/\s+/g," ").trim();
+    const all=[...table.querySelectorAll("tr")].map(tr=>[...tr.querySelectorAll("th,td")].map(cell=>(cell.textContent||"").replace(/\s+/g," ").trim()).filter(Boolean)).filter(row=>row.length);
+    const first=all[0]||[]; const hasHeader=table.querySelector("thead")||table.querySelector("tr th");
+    return {title,headers:hasHeader?first:first.map((_,i)=>`Column ${i+1}`),rows:hasHeader?all.slice(1):all};
+  }));
+  return tables.filter(validTable);
+}
 
 const candidates=[];
 for(const league of leagues){
@@ -50,14 +59,33 @@ try {
       const text=clean(await page.locator("body").innerText());
       const updated=text.match(/Updated:\s*([^|]+?)(?:League Dashboard|Contact League Admin|$)/i)?.[1];
       if(updated) sourceUpdated=clean(updated);
-      const weekMatch=text.match(/Week\s+(\d+)/i); if(weekMatch) week=weekMatch[1];
-      const tables=await page.locator("table").evaluateAll((nodes)=>nodes.map((table,index)=>{
-        const title=(table.closest("section,article,.card,.panel")?.querySelector("h1,h2,h3,h4,h5,.card-title")?.textContent||`Table ${index+1}`).replace(/\s+/g," ").trim();
-        const all=[...table.querySelectorAll("tr")].map(tr=>[...tr.querySelectorAll("th,td")].map(cell=>(cell.textContent||"").replace(/\s+/g," ").trim()).filter(Boolean)).filter(row=>row.length);
-        const first=all[0]||[]; const hasHeader=table.querySelector("thead")||table.querySelector("tr th");
-        return {title,headers:hasHeader?first:first.map((_,i)=>`Column ${i+1}`),rows:hasHeader?all.slice(1):all};
-      }));
-      views[view]=tables.filter(validTable);
+      const weekMatch=text.match(/Week\s+(\d+)/i); if(weekMatch&&view!=="lanes") week=weekMatch[1];
+      if(view==="recaps") {
+        const collected=[];
+        const teamCombo=page.getByRole("combobox").nth(1);
+        try {
+          await teamCombo.click();
+          const labels=(await page.getByRole("option").allTextContents()).map(clean).filter(label=>/^Team\s+\d+$/i.test(label)).sort((a,b)=>Number(a.match(/\d+/)?.[0])-Number(b.match(/\d+/)?.[0]));
+          await page.keyboard.press("Escape");
+          for(const label of labels.filter((_,index)=>index%2===0)) {
+            await page.locator("#ddTeam").evaluate((element,target)=>{
+              const widget=window.jQuery(element).data("kendoDropDownList");
+              const textField=widget.options.dataTextField;
+              const valueField=widget.options.dataValueField;
+              const item=widget.dataSource.data().find(entry=>String(entry[textField])===target);
+              if(!item) throw new Error(`Team selector is missing ${target}`);
+              widget.value(item[valueField]);
+              widget.trigger("change");
+            },label);
+            await page.waitForTimeout(1800);
+            const matchup=await extractTables(page);
+            if(matchup[0]) collected.push({...matchup[0],title:`${label} matchup`});
+          }
+        } catch(error) {
+          console.warn(`Could not enumerate every recap for ${league.displayName}: ${error.message}`);
+        }
+        views[view]=collected.length?collected:await extractTables(page);
+      } else views[view]=await extractTables(page);
     }
     await page.close();
     const recordCount=Object.values(views).reduce((sum,tables)=>sum+tables.reduce((n,t)=>n+t.rows.length,0),0);
