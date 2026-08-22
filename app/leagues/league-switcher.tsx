@@ -24,22 +24,30 @@ export function LeagueSwitcher({nationals}:{nationals:ReactNode}) {
   const [leagueId,setLeagueId]=useState("132277");
   const [favorites,setFavorites]=useState<string[]>([]);
   const pullStart=useRef<number|null>(null);
+  const pullDistanceRef=useRef(0);
   const [pullDistance,setPullDistance]=useState(0);
   useEffect(()=>{
     try { setFavorites(JSON.parse(localStorage.getItem("west-lanes-favorite-leagues")||"[]")); } catch { setFavorites([]); }
   },[]);
+  useEffect(()=>{
+    const start=(event:TouchEvent)=>{if(window.scrollY<=1){pullStart.current=event.touches[0]?.clientY??null;pullDistanceRef.current=0;}};
+    const move=(event:TouchEvent)=>{if(pullStart.current===null)return;const distance=Math.min(120,Math.max(0,((event.touches[0]?.clientY??pullStart.current)-pullStart.current)*.65));pullDistanceRef.current=distance;setPullDistance(distance);};
+    const finish=()=>{const refresh=pullDistanceRef.current>=72;pullStart.current=null;pullDistanceRef.current=0;setPullDistance(0);if(refresh){const url=new URL(window.location.href);url.searchParams.set("refresh",Date.now().toString());window.location.assign(url.toString());}};
+    window.addEventListener("touchstart",start,{passive:true});
+    window.addEventListener("touchmove",move,{passive:true});
+    window.addEventListener("touchend",finish,{passive:true});
+    window.addEventListener("touchcancel",finish,{passive:true});
+    return()=>{window.removeEventListener("touchstart",start);window.removeEventListener("touchmove",move);window.removeEventListener("touchend",finish);window.removeEventListener("touchcancel",finish);};
+  },[]);
   const saveFavorites=(next:string[])=>{setFavorites(next);localStorage.setItem("west-lanes-favorite-leagues",JSON.stringify(next));};
   const toggleFavorite=()=>saveFavorites(favorites.includes(leagueId)?favorites.filter(id=>id!==leagueId):[...favorites,leagueId]);
-  const beginPull=(y:number)=>{if(window.scrollY<=0)pullStart.current=y;};
-  const movePull=(y:number)=>{if(pullStart.current!==null)setPullDistance(Math.min(110,Math.max(0,(y-pullStart.current)*.55)));};
-  const finishPull=()=>{const refresh=pullDistance>=72;pullStart.current=null;setPullDistance(0);if(refresh)window.location.reload();};
   const selected=snapshots.find(item=>item.id===leagueId)??snapshots[1];
   const favoriteLeagues=favorites.map(id=>snapshots.find(item=>item.id===id)).filter((item):item is LeagueSnapshot=>Boolean(item));
   const hasResults=Object.values(selected.views).some(tables=>tables.some(table=>table.rows.length));
   const week=selected.week?`Week ${selected.week}`:"Awaiting Week 1";
   const schedule=`${selected.bowlsOn} · ${selected.startTime} · ${selected.startDate}.`;
 
-  return <div id="league-center" onTouchStart={event=>beginPull(event.touches[0].clientY)} onTouchMove={event=>movePull(event.touches[0].clientY)} onTouchEnd={finishPull} onTouchCancel={finishPull}>
+  return <div id="league-center">
     <div className={`pull-refresh ${pullDistance>=72?"ready":""}`} style={{transform:`translate(-50%, ${pullDistance-54}px)`,opacity:pullDistance?1:0}} aria-hidden="true"><span>{pullDistance>=72?"↻":"↓"}</span>{pullDistance>=72?"Release to refresh":"Pull to refresh"}</div>
     <section className="section league-picker">
       <p className="eyebrow red">Choose a league</p>
