@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactNode, useEffect, useState } from "react";
+import { ReactNode, useEffect, useRef, useState } from "react";
 import nationalsData from "../../public/data/leagues/132277.json";
 import canuso from "../../public/data/leagues/111723.json";
 import heartland from "../../public/data/leagues/96414.json";
@@ -23,18 +23,24 @@ const snapshots = [
 export function LeagueSwitcher({nationals}:{nationals:ReactNode}) {
   const [leagueId,setLeagueId]=useState("132277");
   const [favorites,setFavorites]=useState<string[]>([]);
+  const pullStart=useRef<number|null>(null);
+  const [pullDistance,setPullDistance]=useState(0);
   useEffect(()=>{
     try { setFavorites(JSON.parse(localStorage.getItem("west-lanes-favorite-leagues")||"[]")); } catch { setFavorites([]); }
   },[]);
   const saveFavorites=(next:string[])=>{setFavorites(next);localStorage.setItem("west-lanes-favorite-leagues",JSON.stringify(next));};
   const toggleFavorite=()=>saveFavorites(favorites.includes(leagueId)?favorites.filter(id=>id!==leagueId):[...favorites,leagueId]);
+  const beginPull=(y:number)=>{if(window.scrollY<=0)pullStart.current=y;};
+  const movePull=(y:number)=>{if(pullStart.current!==null)setPullDistance(Math.min(110,Math.max(0,(y-pullStart.current)*.55)));};
+  const finishPull=()=>{const refresh=pullDistance>=72;pullStart.current=null;setPullDistance(0);if(refresh)window.location.reload();};
   const selected=snapshots.find(item=>item.id===leagueId)??snapshots[1];
   const favoriteLeagues=favorites.map(id=>snapshots.find(item=>item.id===id)).filter((item):item is LeagueSnapshot=>Boolean(item));
   const hasResults=Object.values(selected.views).some(tables=>tables.some(table=>table.rows.length));
   const week=selected.week?`Week ${selected.week}`:"Awaiting Week 1";
   const schedule=`${selected.bowlsOn} · ${selected.startTime} · ${selected.startDate}.`;
 
-  return <div id="league-center">
+  return <div id="league-center" onTouchStart={event=>beginPull(event.touches[0].clientY)} onTouchMove={event=>movePull(event.touches[0].clientY)} onTouchEnd={finishPull} onTouchCancel={finishPull}>
+    <div className={`pull-refresh ${pullDistance>=72?"ready":""}`} style={{transform:`translate(-50%, ${pullDistance-54}px)`,opacity:pullDistance?1:0}} aria-hidden="true"><span>{pullDistance>=72?"↻":"↓"}</span>{pullDistance>=72?"Release to refresh":"Pull to refresh"}</div>
     <section className="section league-picker">
       <p className="eyebrow red">Choose a league</p>
       {favoriteLeagues.length>0&&<div className="favorite-league-cards">{favoriteLeagues.map(item=><button key={item.id} className={leagueId===item.id?"active":""} onClick={()=>setLeagueId(item.id)}>
