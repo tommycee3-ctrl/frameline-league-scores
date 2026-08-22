@@ -23,6 +23,7 @@ const snapshots = [
 export function LeagueSwitcher({nationals}:{nationals:ReactNode}) {
   const [leagueId,setLeagueId]=useState("132277");
   const [favorites,setFavorites]=useState<string[]>([]);
+  const [leagueMenuOpen,setLeagueMenuOpen]=useState(false);
   const pullStart=useRef<number|null>(null);
   const pullDistanceRef=useRef(0);
   const [pullDistance,setPullDistance]=useState(0);
@@ -54,7 +55,7 @@ export function LeagueSwitcher({nationals}:{nationals:ReactNode}) {
       {favoriteLeagues.length>0&&<div className="favorite-league-cards">{favoriteLeagues.map(item=><button key={item.id} className={leagueId===item.id?"active":""} onClick={()=>setLeagueId(item.id)}>
         <small>★ {item.bowlsOn?.toUpperCase()} · {item.startTime}</small><strong>{item.displayName}</strong>
       </button>)}</div>}
-      <div className="league-select-row"><label><span>All active leagues</span><select value={leagueId} onChange={event=>setLeagueId(event.target.value)}>{snapshots.map(item=><option key={item.id} value={item.id}>{item.bowlsOn} · {item.startTime} — {item.displayName}</option>)}</select></label><button className={`favorite-toggle ${favorites.includes(leagueId)?"selected":""}`} onClick={toggleFavorite} aria-pressed={favorites.includes(leagueId)}><span>{favorites.includes(leagueId)?"★":"☆"}</span>{favorites.includes(leagueId)?"Favorited":"Add favorite"}</button></div>
+      <div className="league-select-row"><div className="custom-league-select"><span>All active leagues</span><button className="custom-league-trigger" onClick={()=>setLeagueMenuOpen(open=>!open)} aria-expanded={leagueMenuOpen} aria-haspopup="listbox"><span><small>{selected.bowlsOn} · {selected.startTime}</small><strong>{selected.displayName}</strong></span><b>{leagueMenuOpen?"×":"⌄"}</b></button>{leagueMenuOpen&&<div className="custom-league-menu" role="listbox" aria-label="All active leagues">{snapshots.map(item=><button key={item.id} role="option" aria-selected={item.id===leagueId} className={item.id===leagueId?"selected":""} onClick={()=>{setLeagueId(item.id);setLeagueMenuOpen(false);}}><span><small>{item.bowlsOn} · {item.startTime}</small><strong>{item.displayName}</strong></span>{favorites.includes(item.id)&&<b>★</b>}</button>)}</div>}</div><button className={`favorite-toggle ${favorites.includes(leagueId)?"selected":""}`} onClick={toggleFavorite} aria-pressed={favorites.includes(leagueId)}><span>{favorites.includes(leagueId)?"★":"☆"}</span>{favorites.includes(leagueId)?"Favorited":"Add favorite"}</button></div>
     </section>
     <section className="section nationals-overview league-identity">
       <div className="nationals-title"><p className="eyebrow red">League ID {selected.id}</p><h2>{selected.displayName}</h2><p>{schedule}</p></div>
