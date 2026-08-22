@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 
 export type Table={title:string;headers:string[];rows:string[][]};
-export type LeagueSnapshot={id:string;displayName:string;startDate:string;startTime:string;sourceUpdated:string;week:string|null;views:Record<string,Table[]>};
+export type LeagueSnapshot={id:string;displayName:string;bowlsOn?:string;type?:string;startDate:string;startTime:string;sourceUpdated:string;week:string|null;views:Record<string,Table[]>};
 const cell=(table:Table,row:string[],name:string)=>row[table.headers.findIndex(h=>h.toLowerCase()===name.toLowerCase())]??"";
 const personName=(name:string)=>name.includes(",")?name.split(",").map(x=>x.trim()).reverse().join(" "):name;
 const score=(row:string[],game:number)=>Number(row[3+game]??0);
@@ -43,7 +43,7 @@ export function SyncedLeagueDashboard({data}:{data:LeagueSnapshot}){
   const laneTable=data.views.lanes?.[0];
   return <>
     <section className="section league-hub" id="league-dashboard">
-      <div className="section-heading"><div><p className="eyebrow red">Week {week} · {data.startDate}</p><h2>League results hub</h2></div><p>Scratch scores · scratch used for points</p></div>
+      <div className="section-heading"><div><p className="eyebrow red">Week {week} · {data.startDate}</p><h2>League results hub</h2></div><p>{data.type?.toLowerCase().includes("scratch")?"Scratch scores · scratch used for points":"Scratch scores · handicap used for points"}</p></div>
       <div className="league-hub-tabs">{tabs.map(id=><button key={id} className={tab===id?"active":""} onClick={()=>{setTab(id);setQuery("");}}>{labels[id]}</button>)}</div>
       <div className="league-tools team-search"><label><span>Search {labels[tab].toLowerCase()}</span><input value={query} onChange={e=>setQuery(e.target.value)} placeholder="Team or bowler name"/></label></div>
       {tab==="standings"&&standings&&<div className="league-standings-direct synced-standing-list"><div className="result-head standing-grid"><span>Place</span><span>Team</span><span>Won</span><span>Lost</span><span>Win %</span><span>Average</span><span>Pins</span></div>{standings.rows.filter(row=>{const team=cell(standings,row,"Team#");const names=(bowlersByTeam[team]??[]).map(r=>cell(bowlerTable!,r,"Name")).join(" ");return !q||row.join(" ").toLowerCase().includes(q)||names.toLowerCase().includes(q);}).map(row=>{

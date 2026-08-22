@@ -1,23 +1,44 @@
 "use client";
 
 import { ReactNode, useState } from "react";
+import nationalsData from "../../public/data/leagues/132277.json";
+import canuso from "../../public/data/leagues/111723.json";
+import heartland from "../../public/data/leagues/96414.json";
 import wednesday from "../../public/data/leagues/148625.json";
+import thirsty from "../../public/data/leagues/148688.json";
+import seniors from "../../public/data/leagues/112159.json";
+import graphicArts from "../../public/data/leagues/64208.json";
 import { LeagueSnapshot, SyncedLeagueDashboard } from "./synced-league-dashboard";
 
+const snapshots = [
+  nationalsData,
+  canuso,
+  heartland,
+  wednesday,
+  thirsty,
+  seniors,
+  graphicArts,
+] as LeagueSnapshot[];
+
 export function LeagueSwitcher({nationals}:{nationals:ReactNode}) {
-  const [league,setLeague]=useState<"132277"|"148625">("132277");
-  const info=league==="132277"
-    ? {id:"132277",name:"Nationals League 26–27",schedule:"Monday nights · 6:30 PM · Started August 17, 2026.",week:"Week 1",updated:"08/18/2026"}
-    : {id:"148625",name:wednesday.displayName,schedule:`Wednesday nights · ${wednesday.startTime} · Started ${wednesday.startDate}.`,week:`Week ${wednesday.week??1}`,updated:wednesday.sourceUpdated};
+  const [leagueId,setLeagueId]=useState("132277");
+  const selected=snapshots.find(item=>item.id===leagueId)??snapshots[1];
+  const hasResults=Object.values(selected.views).some(tables=>tables.some(table=>table.rows.length));
+  const week=selected.week?`Week ${selected.week}`:"Awaiting Week 1";
+  const schedule=`${selected.bowlsOn} · ${selected.startTime} · ${selected.startDate}.`;
+
   return <div id="league-center">
-    <section className="section league-picker"><p className="eyebrow red">Choose a league</p><div>
-      <button className={league==="132277"?"active":""} onClick={()=>setLeague("132277")}><small>MONDAY · 6:30 PM</small><strong>Nationals League 26–27</strong></button>
-      <button className={league==="148625"?"active":""} onClick={()=>setLeague("148625")}><small>WEDNESDAY · 9:30 PM</small><strong>Wednesday Scratch Draft League</strong></button>
-    </div></section>
-    <section className="section nationals-overview league-identity">
-      <div className="nationals-title"><p className="eyebrow red">League ID {info.id}</p><h2>{info.name}</h2><p>{info.schedule}</p></div>
-      <div className="league-facts"><article><small>Status</small><strong>{info.week}</strong></article><article><small>Last league update</small><strong>{info.updated}</strong></article></div>
+    <section className="section league-picker">
+      <p className="eyebrow red">Choose a league</p>
+      <div>{snapshots.map(item=><button key={item.id} className={leagueId===item.id?"active":""} onClick={()=>setLeagueId(item.id)}>
+        <small>{item.bowlsOn?.toUpperCase()} · {item.startTime}</small>
+        <strong>{item.displayName}</strong>
+      </button>)}</div>
     </section>
-    {league==="132277"?nationals:<SyncedLeagueDashboard data={wednesday as LeagueSnapshot}/>}
+    <section className="section nationals-overview league-identity">
+      <div className="nationals-title"><p className="eyebrow red">League ID {selected.id}</p><h2>{selected.displayName}</h2><p>{schedule}</p></div>
+      <div className="league-facts"><article><small>Current week</small><strong>{week}</strong></article><article><small>Last updated</small><strong>{selected.sourceUpdated||"Awaiting first update"}</strong></article></div>
+    </section>
+    {leagueId==="132277"?nationals:hasResults?<SyncedLeagueDashboard data={selected}/>:<section className="section league-hub awaiting-league"><p className="eyebrow red">Results coming soon</p><h2>Week 1 has not been posted yet.</h2><p>This league is active and will fill in automatically after its first official upload.</p></section>}
   </div>;
 }

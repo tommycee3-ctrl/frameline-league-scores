@@ -4,8 +4,13 @@ import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 const leagues = [
-  {id:"132277",slug:"nationals-league-2627",name:"NATIONALS LEAGUE 26-27",displayName:"Nationals League 26–27",bowlsOn:"Monday",startDate:"August 17, 2026",startTime:"6:30 PM",bowlDay:1},
-  {id:"148625",slug:"wednesday-fall-draft-league26",name:"Wednesday Fall Draft League-26",displayName:"Wednesday Scratch Draft League",bowlsOn:"Wednesday",startDate:"August 19, 2026",startTime:"9:30 PM",bowlDay:3}
+  {id:"132277",slug:"nationals-league-2627",name:"NATIONALS LEAGUE 26-27",displayName:"Nationals League 26-27",bowlsOn:"Monday",startDate:"August 17, 2026",startTime:"6:30 PM",bowlDay:1,type:"Handicap Adult Mixed"},
+  {id:"111723",slug:"mike-canuso-open-classic-league-2627",name:"MIKE CANUSO OPEN CLASSIC LEAGUE 26-27",displayName:"Mike Canuso Open Classic League 26-27",bowlsOn:"Tuesday",startDate:"Fall 2026",startTime:"6:45 PM",bowlDay:2,type:"Handicap Adult Mixed"},
+  {id:"96414",slug:"the-heartland-l-g-b-t-league-2627",name:"The HEARTLAND L G B T LEAGUE 26-27",displayName:"Heartland LGBT League 26-27",bowlsOn:"Tuesday",startDate:"Fall 2026",startTime:"7:00 PM",bowlDay:2,type:"Handicap Adult/Youth Mixed"},
+  {id:"148625",slug:"wednesday-fall-draft-league26",name:"Wednesday Fall Draft League-26",displayName:"Wednesday Scratch Draft League",bowlsOn:"Wednesday",startDate:"August 19, 2026",startTime:"9:30 PM",bowlDay:3,type:"Scratch Adult Mixed"},
+  {id:"148688",slug:"thirsty-thursday-20262027",name:"Thirsty Thursday 2026-2027",displayName:"Thirsty Thursday 2026-27",bowlsOn:"Thursday",startDate:"Fall 2026",startTime:"6:30 PM",bowlDay:4,type:"Handicap Adult Mixed"},
+  {id:"112159",slug:"friday-senior-crazy-mixed-2627",name:"FRIDAY SENIOR CRAZY MIXED 26-27",displayName:"Friday Senior Crazy Mixed 26-27",bowlsOn:"Friday",startDate:"Fall 2026",startTime:"12:00 PM",bowlDay:5,type:"Handicap Adult Mixed"},
+  {id:"64208",slug:"graphic-arts-bowling-league-2627",name:"GRAPHIC ARTS BOWLING LEAGUE 26-27",displayName:"Graphic Arts Bowling League 26-27",bowlsOn:"Friday",startDate:"Fall 2026",startTime:"6:30 PM",bowlDay:5,type:"Handicap Mens"}
 ];
 const viewPaths = { standings:"league/standings", bowlers:"bowler/list", recaps:"league/recaps", lanes:"league/lane-assignments" };
 const force = process.argv.includes("--force");
