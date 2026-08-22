@@ -49,7 +49,10 @@ const teamPointBreakdown=(team:Team,opponent:Team)=>{
 
 export function LeagueDashboard(){
  const [tab,setTab]=useState<"standings"|"bowlers"|"recaps"|"lanes">("standings"),[query,setQuery]=useState(""),[teamQuery,setTeamQuery]=useState(""),[sort,setSort]=useState<"series"|"average"|"high"|"points">("series"),[selected,setSelected]=useState<Bowler|null>(null),[openTeam,setOpenTeam]=useState<string|null>(null);
+ const [standingSort,setStandingSort]=useState<{index:number;direction:"asc"|"desc"}>({index:0,direction:"asc"});
  const filtered=useMemo(()=>allBowlers.filter(b=>(b.name+" "+b.team).toLowerCase().includes(query.toLowerCase())).sort((a,b)=>sort==="average"?b.avg-a.avg:sort==="high"?b.high-a.high:sort==="points"?(b.individual??-1)-(a.individual??-1):b.series-a.series),[query,sort]);
+ const sortedStandings=useMemo(()=>[...standings].sort((a,b)=>{const av=a[standingSort.index],bv=b[standingSort.index];const comparison=typeof av==="string"&&standingSort.index===1?av.localeCompare(String(bv)):Number(String(av).replace(/[^\d.-]/g,""))-Number(String(bv).replace(/[^\d.-]/g,""));return standingSort.direction==="asc"?comparison:-comparison;}),[standingSort]);
+ const sortStanding=(index:number)=>setStandingSort(current=>current.index===index?{index,direction:current.direction==="desc"?"asc":"desc"}:{index,direction:index<2?"asc":"desc"});
  return <section className="section league-hub" id="league-dashboard">
   <div className="section-heading"><div><p className="eyebrow red">Week 1 · August 17</p><h2>League results hub</h2></div><p>Scratch scores · handicap used for points</p></div>
   <div className="league-hub-tabs" role="tablist" aria-label="League views">{([['standings','League Standings'],['bowlers','Bowlers'],['recaps','Weekly Recaps'],['lanes','Lane Assignments']] as const).map(([id,label])=><button key={id} className={tab===id?'active':''} onClick={()=>setTab(id)}>{label}</button>)}</div>

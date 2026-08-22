@@ -18,6 +18,7 @@ export function SyncedLeagueDashboard({data}:{data:LeagueSnapshot}){
   const [tab,setTab]=useState<(typeof tabs)[number]>("standings");
   const [query,setQuery]=useState("");
   const [openTeam,setOpenTeam]=useState<string|null>(null);
+  const [standingSort,setStandingSort]=useState<{key:"place"|"team"|"won"|"lost"|"percent"|"average"|"pins";direction:"asc"|"desc"}>({key:"place",direction:"asc"});
   const standings=data.views.standings?.[0];
   const bowlerTable=data.views.bowlers?.[0];
   const bowlersByTeam=useMemo(()=>{
@@ -41,12 +42,15 @@ export function SyncedLeagueDashboard({data}:{data:LeagueSnapshot}){
   const q=query.trim().toLowerCase();
   const week=data.week??"1";
   const laneTable=data.views.lanes?.[0];
+  const sortStanding=(key:typeof standingSort.key)=>setStandingSort(current=>current.key===key?{key,direction:current.direction==="desc"?"asc":"desc"}:{key,direction:key==="place"||key==="team"?"asc":"desc"});
+  const standingValue=(row:string[],key:typeof standingSort.key)=>key==="place"?cell(standings!,row,"Place"):key==="team"?(cell(standings!,row,"Team")||`Team ${cell(standings!,row,"Team#")}`):key==="won"?cell(standings!,row,"Won"):key==="lost"?cell(standings!,row,"Lost"):key==="percent"?cell(standings!,row,"% Won"):key==="average"?cell(standings!,row,"Avg"):cell(standings!,row,"Pins");
+  const sortedStandingRows=standings?[...standings.rows].sort((a,b)=>{const av=standingValue(a,standingSort.key),bv=standingValue(b,standingSort.key);const comparison=standingSort.key==="team"?av.localeCompare(bv):Number(String(av).replace(/[^\d.-]/g,""))-Number(String(bv).replace(/[^\d.-]/g,""));return standingSort.direction==="asc"?comparison:-comparison;}):[];
   return <>
     <section className="section league-hub" id="league-dashboard">
       <div className="section-heading"><div><p className="eyebrow red">Week {week} · {data.startDate}</p><h2>League results hub</h2></div><p>{data.type?.toLowerCase().includes("scratch")?"Scratch scores · scratch used for points":"Scratch scores · handicap used for points"}</p></div>
       <div className="league-hub-tabs">{tabs.map(id=><button key={id} className={tab===id?"active":""} onClick={()=>{setTab(id);setQuery("");}}>{labels[id]}</button>)}</div>
       <div className="league-tools team-search"><label><span>Search {labels[tab].toLowerCase()}</span><input value={query} onChange={e=>setQuery(e.target.value)} placeholder="Team or bowler name"/></label></div>
-      {tab==="standings"&&standings&&<div className="league-standings-direct synced-standing-list"><div className="result-head standing-grid"><span>Place</span><span>Team</span><span>Won</span><span>Lost</span><span>Win %</span><span>Average</span><span>Pins</span></div>{standings.rows.filter(row=>{const team=cell(standings,row,"Team#");const names=(bowlersByTeam[team]??[]).map(r=>cell(bowlerTable!,r,"Name")).join(" ");return !q||row.join(" ").toLowerCase().includes(q)||names.toLowerCase().includes(q);}).map(row=>{
+      {tab==="standings"&&standings&&<div className="league-standings-direct synced-standing-list"><div className="result-head standing-grid sortable-head">{([['place','Place'],['team','Team'],['won','Won'],['lost','Lost'],['percent','Win %'],['average','Average'],['pins','Pins']] as const).map(([key,label])=><button key={key} onClick={()=>sortStanding(key)} className={standingSort.key===key?"active":""}>{label}<span>{standingSort.key===key?(standingSort.direction==="desc"?"↓":"↑"):"↕"}</span></button>)}</div>{sortedStandingRows.filter(row=>{const team=cell(standings,row,"Team#");const names=(bowlersByTeam[team]??[]).map(r=>cell(bowlerTable!,r,"Name")).join(" ");return !q||row.join(" ").toLowerCase().includes(q)||names.toLowerCase().includes(q);}).map(row=>{
         const team=cell(standings,row,"Team#"),name=cell(standings,row,"Team")||`Team ${team}`,roster=bowlersByTeam[team]??[],recap=recapByTeam[team],expanded=openTeam===team;
         return <article className={`standing-team-block ${expanded?"expanded":""}`} key={team}>
           <button className="standing-direct-row standing-grid" onClick={()=>setOpenTeam(expanded?null:team)} aria-expanded={expanded}><strong>{cell(standings,row,"Place")}</strong><span><b>{name}</b>{name.toLowerCase()!==`team ${team}`.toLowerCase()&&<small>Team {team}</small>}</span><span>{cell(standings,row,"Won")}<small className="mobile-label">Won</small></span><span>{cell(standings,row,"Lost")}<small className="mobile-label">Lost</small></span><span>{cell(standings,row,"% Won").replace(/\s*%/g,"%")}<small className="mobile-label">Win %</small></span><span>{cell(standings,row,"Avg")}<small className="mobile-label">Average</small></span><span>{Number(cell(standings,row,"Pins")).toLocaleString()}<small className="mobile-label">Pins</small></span></button>
