@@ -3,8 +3,8 @@ name: Sync league results
 on:
   schedule:
     # Run hourly so Central daylight/standard time are both covered. The gate
-    # continues only every two hours; the collector decides which league is
-    # still waiting for its weekly update.
+    # checks every active league on each even Central-time hour and publishes
+    # only when LeagueSecretary has actually changed.
     - cron: "0 * * * *"
   workflow_dispatch:
 
@@ -23,7 +23,7 @@ jobs:
     outputs:
       changed: ${{ steps.publish.outputs.changed }}
     steps:
-      - name: Check the private Central-time window
+      - name: Check the two-hour Central-time window
         id: window
         shell: bash
         run: |

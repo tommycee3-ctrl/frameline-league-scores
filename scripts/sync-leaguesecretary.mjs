@@ -24,8 +24,7 @@ function dateKeyDaysAgo(days) {
 function targetCycle(league) { return dateKeyDaysAgo((dayIndex-league.bowlDay+7)%7); }
 function isWindowOpen(league,current) {
   if(force) return true;
-  if(Number(chicago.hour)%2!==0||dayIndex===league.bowlDay) return false;
-  return current.lastCompletedCycle!==targetCycle(league);
+  return Number(chicago.hour)%2===0;
 }
 
 function clean(value="") { return value.replace(/\s+/g," ").trim(); }
