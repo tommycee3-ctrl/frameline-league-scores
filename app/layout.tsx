@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
 import { MobileNav } from "./mobile-nav";
+import { PwaRegister } from "./pwa-register";
 import { ArrowRight, FacebookMark, MailMark, PhoneMark } from "./ui";
+
+const assetBase = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export const metadata: Metadata = {
   metadataBase: process.env.GITHUB_ACTIONS === "true"
@@ -10,6 +13,20 @@ export const metadata: Metadata = {
     : undefined,
   title: { default: "West Lanes Bowlatorium", template: "%s | West Lanes" },
   description: "Omaha bowling, leagues, cosmic bowling and events at West Lanes Bowlatorium, established 1955.",
+  manifest: `${assetBase}/manifest.webmanifest`,
+  applicationName: "West Lanes",
+  appleWebApp: {
+    capable: true,
+    title: "West Lanes",
+    statusBarStyle: "black-translucent",
+  },
+  icons: {
+    icon: [
+      { url: `${assetBase}/icon-192.png`, sizes: "192x192", type: "image/png" },
+      { url: `${assetBase}/icon-512.png`, sizes: "512x512", type: "image/png" },
+    ],
+    apple: [{ url: `${assetBase}/apple-touch-icon.png`, sizes: "180x180", type: "image/png" }],
+  },
   openGraph: {
     title: "West Lanes Bowlatorium",
     description: "Omaha's neighborhood lanes since 1955.",
@@ -31,12 +48,11 @@ const links = [
   ["/food-drinks", "Food & Drinks"],
   ["/events", "Events"],
 ] as const;
-const assetBase = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
-
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
       <body>
+        <PwaRegister />
         <header className="site-header">
           <Link href="/" className="brand" aria-label="West Lanes home">
             <img src={`${assetBase}/west-lanes-logo.jpg`} alt="West Lanes Bowlatorium" />
