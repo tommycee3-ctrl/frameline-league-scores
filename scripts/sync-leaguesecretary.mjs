@@ -29,6 +29,7 @@ function isWindowOpen(league,current) {
 }
 
 function clean(value="") { return value.replace(/\s+/g," ").trim(); }
+function cellValue(table,row,name) { return row[table.headers.findIndex(header=>header.toLowerCase()===name.toLowerCase())]??""; }
 function slugify(value="") { return clean(value).toLowerCase().replace(/&/g,"and").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,""); }
 function displayName(value="") { return clean(value).replace(/\bL G B T\b/i,"LGBT"); }
 function recentlyUpdated(value="") {
@@ -112,6 +113,22 @@ try {
       } else views[view]=await extractTables(page);
     }
     await page.close();
+    for(const view of Object.keys(viewPaths)) {
+      const nextRows=(views[view]??[]).reduce((sum,table)=>sum+table.rows.length,0);
+      const previousRows=(current.views?.[view]??[]).reduce((sum,table)=>sum+table.rows.length,0);
+      if(nextRows===0&&previousRows>0) {
+        console.warn(`Retaining prior ${view} for ${league.displayName}; LeagueSecretary returned no rows.`);
+        views[view]=current.views[view];
+      }
+    }
+    const incomingBowlerTable=views.bowlers?.[0];
+    const previousBowlerTable=current.views?.bowlers?.[0];
+    const usableTeamAssignments=incomingBowlerTable?.rows.some(row=>cellValue(incomingBowlerTable,row,"Team#")!=="0");
+    const priorTeamAssignments=previousBowlerTable?.rows.some(row=>cellValue(previousBowlerTable,row,"Team#")!=="0");
+    if(!usableTeamAssignments&&priorTeamAssignments) {
+      console.warn(`Retaining prior bowlers for ${league.displayName}; LeagueSecretary omitted team assignments.`);
+      views.bowlers=current.views.bowlers;
+    }
     const recordCount=Object.values(views).reduce((sum,tables)=>sum+tables.reduce((n,t)=>n+t.rows.length,0),0);
     if(recordCount===0) continue;
     const fingerprint=createHash("sha256").update(JSON.stringify({week,views})).digest("hex");
