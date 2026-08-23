@@ -1,12 +1,12 @@
 "use client";
 
-import { ReactNode, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import leagueCatalog from "../../public/data/leagues/all.json";
 import { LeagueSnapshot, SyncedLeagueDashboard } from "./synced-league-dashboard";
 
 const snapshots = leagueCatalog as LeagueSnapshot[];
 
-export function LeagueSwitcher({nationals}:{nationals:ReactNode}) {
+export function LeagueSwitcher() {
   const [leagueId,setLeagueId]=useState("132277");
   const [favorites,setFavorites]=useState<string[]>([]);
   const [leagueMenuOpen,setLeagueMenuOpen]=useState(false);
@@ -63,6 +63,6 @@ export function LeagueSwitcher({nationals}:{nationals:ReactNode}) {
       <div className="nationals-title"><p className="eyebrow red">League ID {selected.id}</p><h2>{selected.displayName}</h2><p>{schedule}</p></div>
       <div className="league-facts"><article><small>Current week</small><strong>{week}</strong></article><article><small>Last updated</small><strong>{selected.sourceUpdated||"Awaiting first update"}</strong></article></div>
     </section>
-    {leagueId==="132277"?nationals:hasResults?<SyncedLeagueDashboard data={selected}/>:<section className="section league-hub awaiting-league"><p className="eyebrow red">Results coming soon</p><h2>Week 1 has not been posted yet.</h2><p>This league is active and will fill in automatically after its first official upload.</p></section>}
+    {hasResults?<SyncedLeagueDashboard data={selected}/>:<section className="section league-hub awaiting-league"><p className="eyebrow red">Results coming soon</p><h2>Week 1 has not been posted yet.</h2><p>This league is active and will fill in automatically after its first official upload.</p></section>}
   </div>;
 }

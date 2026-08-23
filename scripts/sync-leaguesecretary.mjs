@@ -25,8 +25,7 @@ function dateKeyDaysAgo(days) {
 }
 function targetCycle(league) { return dateKeyDaysAgo((dayIndex-league.bowlDay+7)%7); }
 function isWindowOpen(league,current) {
-  if(force) return true;
-  return Number(chicago.hour)%2===0;
+  return true;
 }
 
 function clean(value="") { return value.replace(/\s+/g," ").trim(); }
