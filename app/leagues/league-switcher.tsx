@@ -1,24 +1,10 @@
 "use client";
 
 import { ReactNode, useEffect, useRef, useState } from "react";
-import nationalsData from "../../public/data/leagues/132277.json";
-import canuso from "../../public/data/leagues/111723.json";
-import heartland from "../../public/data/leagues/96414.json";
-import wednesday from "../../public/data/leagues/148625.json";
-import thirsty from "../../public/data/leagues/148688.json";
-import seniors from "../../public/data/leagues/112159.json";
-import graphicArts from "../../public/data/leagues/64208.json";
+import leagueCatalog from "../../public/data/leagues/all.json";
 import { LeagueSnapshot, SyncedLeagueDashboard } from "./synced-league-dashboard";
 
-const snapshots = [
-  nationalsData,
-  canuso,
-  heartland,
-  wednesday,
-  thirsty,
-  seniors,
-  graphicArts,
-] as LeagueSnapshot[];
+const snapshots = leagueCatalog as LeagueSnapshot[];
 
 export function LeagueSwitcher({nationals}:{nationals:ReactNode}) {
   const [leagueId,setLeagueId]=useState("132277");

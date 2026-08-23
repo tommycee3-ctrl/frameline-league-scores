@@ -3,7 +3,7 @@ import { createHash } from "node:crypto";
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 
-const leagues = [
+const seedLeagues = [
   {id:"132277",slug:"nationals-league-2627",name:"NATIONALS LEAGUE 26-27",displayName:"Nationals League 26-27",bowlsOn:"Monday",startDate:"August 17, 2026",startTime:"6:30 PM",bowlDay:1,type:"Handicap Adult Mixed"},
   {id:"111723",slug:"mike-canuso-open-classic-league-2627",name:"MIKE CANUSO OPEN CLASSIC LEAGUE 26-27",displayName:"Mike Canuso Open Classic League 26-27",bowlsOn:"Tuesday",startDate:"Fall 2026",startTime:"6:45 PM",bowlDay:2,type:"Handicap Adult Mixed"},
   {id:"96414",slug:"the-heartland-l-g-b-t-league-2627",name:"The HEARTLAND L G B T LEAGUE 26-27",displayName:"Heartland LGBT League 26-27",bowlsOn:"Tuesday",startDate:"Fall 2026",startTime:"7:00 PM",bowlDay:2,type:"Handicap Adult/Youth Mixed"},
@@ -12,6 +12,8 @@ const leagues = [
   {id:"112159",slug:"friday-senior-crazy-mixed-2627",name:"FRIDAY SENIOR CRAZY MIXED 26-27",displayName:"Friday Senior Crazy Mixed 26-27",bowlsOn:"Friday",startDate:"Fall 2026",startTime:"12:00 PM",bowlDay:5,type:"Handicap Adult Mixed"},
   {id:"64208",slug:"graphic-arts-bowling-league-2627",name:"GRAPHIC ARTS BOWLING LEAGUE 26-27",displayName:"Graphic Arts Bowling League 26-27",bowlsOn:"Friday",startDate:"Fall 2026",startTime:"6:30 PM",bowlDay:5,type:"Handicap Mens"}
 ];
+const centerUrl="https://www.leaguesecretary.com/bowling-centers/west-lanes-bowl-omaha-nebraska/leagues/2110";
+const knownById=new Map(seedLeagues.map(league=>[league.id,league]));
 const viewPaths = { standings:"league/standings", bowlers:"bowler/list", recaps:"league/recaps", lanes:"league/lane-assignments" };
 const force = process.argv.includes("--force");
 const chicago = Object.fromEntries(new Intl.DateTimeFormat("en-US",{timeZone:"America/Chicago",year:"numeric",month:"2-digit",day:"2-digit",weekday:"short",hour:"numeric",hour12:false}).formatToParts(new Date()).map(p=>[p.type,p.value]));
@@ -28,6 +30,24 @@ function isWindowOpen(league,current) {
 }
 
 function clean(value="") { return value.replace(/\s+/g," ").trim(); }
+function slugify(value="") { return clean(value).toLowerCase().replace(/&/g,"and").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,""); }
+function displayName(value="") { return clean(value).replace(/\bL G B T\b/i,"LGBT"); }
+function recentlyUpdated(value="") {
+  const [month,day,year]=value.split("/").map(Number);
+  if(!month||!day||!year) return false;
+  return (Date.now()-Date.UTC(year,month-1,day))/864e5<=45;
+}
+async function discoverLeagues(browser) {
+  const page=await browser.newPage({viewport:{width:1440,height:1100}});
+  try {
+    await page.goto(centerUrl,{waitUntil:"domcontentloaded",timeout:90000});
+    await page.waitForTimeout(6000);
+    const rows=await page.locator("table tbody tr").evaluateAll(nodes=>nodes.map(row=>[...row.querySelectorAll("td")].map(cell=>(cell.textContent||"").replace(/\s+/g," ").trim())).filter(row=>row.length>=7));
+    const dayNumbers={Sunday:0,Monday:1,Tuesday:2,Wednesday:3,Thursday:4,Friday:5,Saturday:6};
+    const discovered=rows.map(([id,name,season,bowlsOn,startTime,type,updated])=>({id,name:clean(name),displayName:displayName(name),slug:slugify(name),season,bowlsOn,startTime:clean(startTime).replace(/(AM|PM)$/i," $1"),type,updated,startDate:`${season} 2026`,bowlDay:dayNumbers[bowlsOn]})).filter(league=>knownById.has(league.id)||(league.season==="Fall"&&recentlyUpdated(league.updated)));
+    return discovered.map(league=>({...league,...knownById.get(league.id),updated:league.updated,slug:knownById.get(league.id)?.slug??league.slug})).sort((a,b)=>a.bowlDay-b.bowlDay||a.startTime.localeCompare(b.startTime));
+  } finally { await page.close(); }
+}
 function validTable(table) { return table.headers.length>1 && table.rows.some(row=>row.filter(Boolean).length>1); }
 async function extractTables(page) {
   const tables=await page.locator("table").evaluateAll((nodes)=>nodes.map((table,index)=>{
@@ -39,6 +59,9 @@ async function extractTables(page) {
   return tables.filter(validTable);
 }
 
+const browser = await chromium.launch({headless:true});
+const leagues=await discoverLeagues(browser);
+console.log(`Discovered ${leagues.length} active West Lanes leagues.`);
 const candidates=[];
 for(const league of leagues){
   const file=path.join(process.cwd(),"public","data","leagues",`${league.id}.json`);
@@ -46,9 +69,7 @@ for(const league of leagues){
   try{current=JSON.parse(await readFile(file,"utf8"));}catch{current={...league,sourceUpdated:"Not posted",syncedAt:null,status:"awaiting-results",week:null,fingerprint:null,lastCompletedCycle:null,views:{standings:[],bowlers:[],recaps:[],lanes:[]}};}
   if(isWindowOpen(league,current)) candidates.push({league,file,current});
 }
-if(candidates.length===0){console.log("No league is waiting for a new weekly update.");process.exit(0);}
-
-const browser = await chromium.launch({headless:true});
+if(candidates.length===0){await browser.close();console.log("No league is waiting for a new weekly update.");process.exit(0);}
 let changed = false;
 try {
   for (const {league,file,current} of candidates) {
@@ -111,5 +132,15 @@ try {
     changed=true;
     console.log(`${complete?"Completed":"Refreshed"} ${league.displayName}: ${recordCount} rows`);
   }
+  const catalog=[];
+  for(const league of leagues) {
+    try { catalog.push(JSON.parse(await readFile(path.join(process.cwd(),"public","data","leagues",`${league.id}.json`),"utf8"))); }
+    catch { catalog.push({...league,sourceUpdated:league.updated||"Not posted",syncedAt:null,status:"awaiting-results",week:null,fingerprint:null,lastCompletedCycle:null,views:{standings:[],bowlers:[],recaps:[],lanes:[]}}); }
+  }
+  const catalogFile=path.join(process.cwd(),"public","data","leagues","all.json");
+  const catalogText=JSON.stringify(catalog,null,2)+"\n";
+  let existingCatalog="";
+  try { existingCatalog=await readFile(catalogFile,"utf8"); } catch {}
+  if(catalogText!==existingCatalog) { await writeFile(catalogFile,catalogText,"utf8"); changed=true; }
 } finally { await browser.close(); }
 if(!changed) console.log("No verified league update found.");
