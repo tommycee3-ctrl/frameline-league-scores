@@ -58,6 +58,20 @@ async function extractTables(page) {
   }));
   return tables.filter(validTable);
 }
+async function expandAllGridRows(page) {
+  const expanded=await page.locator(".k-grid").evaluateAll(nodes=>{
+    let changed=false;
+    for(const node of nodes){
+      const grid=window.jQuery?.(node).data("kendoGrid");
+      if(grid?.dataSource&&grid.dataSource.total()>grid.dataSource.pageSize()){
+        grid.dataSource.pageSize(Math.max(1000,grid.dataSource.total()));
+        changed=true;
+      }
+    }
+    return changed;
+  }).catch(()=>false);
+  if(expanded) await page.waitForTimeout(1800);
+}
 
 const browser = await chromium.launch({headless:true});
 const leagues=await discoverLeagues(browser);
@@ -81,6 +95,7 @@ try {
       const url=`https://www.leaguesecretary.com/bowling-centers/west-lanes/bowling-leagues/${league.slug}/${route}/${league.id}`;
       await page.goto(url,{waitUntil:"domcontentloaded",timeout:90000});
       await page.waitForTimeout(6000);
+      await expandAllGridRows(page);
       const text=clean(await page.locator("body").innerText());
       const updated=text.match(/Updated:\s*([^|]+?)(?:League Dashboard|Contact League Admin|$)/i)?.[1];
       if(updated) sourceUpdated=clean(updated);
@@ -90,9 +105,9 @@ try {
         const teamCombo=page.getByRole("combobox").nth(1);
         try {
           await teamCombo.click();
-          const labels=(await page.getByRole("option").allTextContents()).map(clean).filter(label=>/^Team\s+\d+$/i.test(label)).sort((a,b)=>Number(a.match(/\d+/)?.[0])-Number(b.match(/\d+/)?.[0]));
+          const labels=[...new Set((await page.getByRole("option").allTextContents()).map(clean).filter(label=>/^Team\s+\d+$/i.test(label)))].sort((a,b)=>Number(a.match(/\d+/)?.[0])-Number(b.match(/\d+/)?.[0]));
           await page.keyboard.press("Escape");
-          for(const label of labels.filter((_,index)=>index%2===0)) {
+          for(const label of labels) {
             await page.locator("#ddTeam").evaluate((element,target)=>{
               const widget=window.jQuery(element).data("kendoDropDownList");
               const textField=widget.options.dataTextField;
