@@ -72,6 +72,18 @@ async function expandAllGridRows(page) {
   }).catch(()=>false);
   if(expanded) await page.waitForTimeout(1800);
 }
+function normalizeRecap(table,standings) {
+  if(!table||!standings) return table;
+  const teamNumberByName=new Map(standings.rows.map(row=>[
+    clean(cellValue(standings,row,"Team")).toLowerCase(),
+    cellValue(standings,row,"Team#")
+  ]).filter(([name,number])=>name&&number));
+  return {...table,rows:table.rows.map(row=>{
+    if(!/^Lane\s+\d+/i.test(row[1]??"")) return row;
+    const teamNumber=teamNumberByName.get(clean(row[0]).toLowerCase());
+    return teamNumber?[`Team ${teamNumber}`,...row.slice(1)]:row;
+  })};
+}
 
 const browser = await chromium.launch({headless:true});
 const leagues=await discoverLeagues(browser);
@@ -101,30 +113,38 @@ try {
       if(updated) sourceUpdated=clean(updated);
       const weekMatch=text.match(/Week\s+(\d+)/i); if(weekMatch&&view!=="lanes") week=weekMatch[1];
       if(view==="recaps") {
-        const collected=[];
-        const teamCombo=page.getByRole("combobox").nth(1);
+        const collected=new Map();
         try {
-          await teamCombo.click();
-          const labels=[...new Set((await page.getByRole("option").allTextContents()).map(clean).filter(label=>/^Team\s+\d+$/i.test(label)))].sort((a,b)=>Number(a.match(/\d+/)?.[0])-Number(b.match(/\d+/)?.[0]));
-          await page.keyboard.press("Escape");
-          for(const label of labels) {
+          const options=await page.locator("#ddTeam").evaluate(element=>{
+            const widget=window.jQuery(element).data("kendoDropDownList");
+            const textField=widget.options.dataTextField;
+            const valueField=widget.options.dataValueField;
+            return widget.dataSource.data().map(entry=>({
+              label:String(entry[textField]??"").replace(/\s+/g," ").trim(),
+              value:String(entry[valueField]??"")
+            })).filter(option=>option.label&&option.value);
+          });
+          const uniqueOptions=[...new Map(options.map(option=>[option.value,option])).values()];
+          for(const option of uniqueOptions) {
             await page.locator("#ddTeam").evaluate((element,target)=>{
               const widget=window.jQuery(element).data("kendoDropDownList");
-              const textField=widget.options.dataTextField;
-              const valueField=widget.options.dataValueField;
-              const item=widget.dataSource.data().find(entry=>String(entry[textField])===target);
-              if(!item) throw new Error(`Team selector is missing ${target}`);
-              widget.value(item[valueField]);
+              widget.value(target);
               widget.trigger("change");
-            },label);
+            },option.value);
             await page.waitForTimeout(1800);
             const matchup=await extractTables(page);
-            if(matchup[0]) collected.push({...matchup[0],title:`${label} matchup`});
+            if(matchup[0]) {
+              const normalized=normalizeRecap(matchup[0],views.standings?.[0]);
+              const teams=normalized.rows.map(row=>row[0]?.match(/^Team\s+(\d+)$/i)?.[1]).filter(Boolean).sort((a,b)=>Number(a)-Number(b));
+              const signature=teams.join("-")||option.value;
+              collected.set(signature,{...normalized,title:`${option.label} matchup`});
+            }
           }
         } catch(error) {
           console.warn(`Could not enumerate every recap for ${league.displayName}: ${error.message}`);
         }
-        views[view]=collected.length?collected:await extractTables(page);
+        if(collected.size) views[view]=[...collected.values()];
+        else views[view]=(await extractTables(page)).map(table=>normalizeRecap(table,views.standings?.[0]));
       } else views[view]=await extractTables(page);
     }
     await page.close();
