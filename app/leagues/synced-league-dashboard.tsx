@@ -43,7 +43,7 @@ export function SyncedLeagueDashboard({data}:{data:LeagueSnapshot}){
     const liveRows=rosterForTeam(team);
     const details=new Map<string,{name:string;average:string}>();
     for(const person of recapRows){const name=personName(person[0]);if(name)details.set(name,{name,average:person[1]||"—"});}
-    for(const person of liveRows){const name=personName(cell(bowlerTable!,person,"Name"));if(name&&!details.has(name))details.set(name,{name,average:cell(bowlerTable!,person,"Avg")||"—"});}
+    for(const person of liveRows){const name=personName(cell(bowlerTable!,person,"Name"));if(name)details.set(name,{name,average:cell(bowlerTable!,person,"Avg")||details.get(name)?.average||"—"});}
     for(const person of fallbackRoster(team)){if(!details.has(person.name))details.set(person.name,{name:person.name,average:String(person.average)});}
     return [...details.values()];
   };
