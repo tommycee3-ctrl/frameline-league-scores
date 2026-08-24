@@ -14,7 +14,7 @@ const seedLeagues = [
 ];
 const centerUrl="https://www.leaguesecretary.com/bowling-centers/west-lanes-bowl-omaha-nebraska/leagues/2110";
 const knownById=new Map(seedLeagues.map(league=>[league.id,league]));
-const viewPaths = { standings:"league/standings", bowlers:"bowler/list", recaps:"league/recaps", lanes:"league/lane-assignments" };
+const viewPaths = { standings:"league/standings", bowlers:"bowler/list", recaps:"league/recaps", lanes:"league/lane-assignments", rosters:"team/list" };
 const force = process.argv.includes("--force");
 const chicago = Object.fromEntries(new Intl.DateTimeFormat("en-US",{timeZone:"America/Chicago",year:"numeric",month:"2-digit",day:"2-digit",weekday:"short",hour:"numeric",hour12:false}).formatToParts(new Date()).map(p=>[p.type,p.value]));
 const dayIndex={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[chicago.weekday];
@@ -92,7 +92,7 @@ const candidates=[];
 for(const league of leagues){
   const file=path.join(process.cwd(),"public","data","leagues",`${league.id}.json`);
   let current;
-  try{current=JSON.parse(await readFile(file,"utf8"));}catch{current={...league,sourceUpdated:"Not posted",syncedAt:null,status:"awaiting-results",week:null,fingerprint:null,lastCompletedCycle:null,views:{standings:[],bowlers:[],recaps:[],lanes:[]}};}
+  try{current=JSON.parse(await readFile(file,"utf8"));}catch{current={...league,sourceUpdated:"Not posted",syncedAt:null,status:"awaiting-results",week:null,fingerprint:null,lastCompletedCycle:null,views:{standings:[],bowlers:[],recaps:[],lanes:[],rosters:[]}};}
   if(isWindowOpen(league,current)) candidates.push({league,file,current});
 }
 if(candidates.length===0){await browser.close();console.log("No league is waiting for a new weekly update.");process.exit(0);}
@@ -112,7 +112,30 @@ try {
       const updated=text.match(/Updated:\s*([^|]+?)(?:League Dashboard|Contact League Admin|$)/i)?.[1];
       if(updated) sourceUpdated=clean(updated);
       const weekMatch=text.match(/Week\s+(\d+)/i); if(weekMatch&&view!=="lanes") week=weekMatch[1];
-      if(view==="recaps") {
+      if(view==="rosters") {
+        const teamPages=await page.evaluate(()=>{
+          const grid=window.jQuery?.(".grid_main").data("kendoGrid");
+          const main=window.jQuery?.(".div-main-grid");
+          const prefix=window.jQuery?.(".league-header").data("urlprefix");
+          if(!grid||!main||!prefix) return [];
+          const leagueId=main.data("league"),year=main.data("year"),season=main.data("season");
+          return grid.dataSource.data().map(team=>({
+            team:String(team.TeamNum??""),
+            name:String(team.TeamName??""),
+            url:`${prefix}/team/history/${leagueId}/${year}/${season}/${team.TeamID}`
+          })).filter(team=>team.team&&team.url);
+        }).catch(()=>[]);
+        const rosters=[];
+        for(const team of teamPages) {
+          await page.goto(new URL(team.url,"https://www.leaguesecretary.com").toString(),{waitUntil:"domcontentloaded",timeout:90000});
+          await page.locator("table tbody tr").first().waitFor({state:"visible",timeout:15000}).catch(()=>{});
+          await page.waitForTimeout(1800);
+          const tables=await extractTables(page);
+          if(tables[0]) rosters.push({...tables[0],team:team.team,title:`Team ${team.team} · ${team.name} roster`});
+          else console.warn(`Roster page returned no current bowlers for ${league.displayName} team ${team.team}.`);
+        }
+        views[view]=rosters;
+      } else if(view==="recaps") {
         const collected=new Map();
         try {
           const options=await page.locator("#ddTeam").evaluate(element=>{
@@ -186,7 +209,7 @@ try {
   const catalog=[];
   for(const league of leagues) {
     try { catalog.push(JSON.parse(await readFile(path.join(process.cwd(),"public","data","leagues",`${league.id}.json`),"utf8"))); }
-    catch { catalog.push({...league,sourceUpdated:league.updated||"Not posted",syncedAt:null,status:"awaiting-results",week:null,fingerprint:null,lastCompletedCycle:null,views:{standings:[],bowlers:[],recaps:[],lanes:[]}}); }
+    catch { catalog.push({...league,sourceUpdated:league.updated||"Not posted",syncedAt:null,status:"awaiting-results",week:null,fingerprint:null,lastCompletedCycle:null,views:{standings:[],bowlers:[],recaps:[],lanes:[],rosters:[]}}); }
   }
   const catalogFile=path.join(process.cwd(),"public","data","leagues","all.json");
   const catalogText=JSON.stringify(catalog,null,2)+"\n";

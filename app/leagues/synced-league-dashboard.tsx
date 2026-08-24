@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 import { nationalsRosterByTeam } from "./nationals-rosters";
 
-export type Table={title:string;headers:string[];rows:string[][]};
+export type Table={title:string;headers:string[];rows:string[][];team?:string};
 export type LeagueSnapshot={id:string;displayName:string;bowlsOn?:string;type?:string;startDate:string;startTime:string;sourceUpdated:string;week:string|null;views:Record<string,Table[]>};
 const cell=(table:Table,row:string[],name:string)=>row[table.headers.findIndex(h=>h.toLowerCase()===name.toLowerCase())]??"";
 const personName=(name:string)=>name.includes(",")?name.split(",").map(x=>x.trim()).reverse().join(" "):name;
@@ -33,12 +33,18 @@ export function SyncedLeagueDashboard({data}:{data:LeagueSnapshot}){
   },[bowlerTable]);
   const rosterForTeam=(team:string)=>bowlersByTeam[team]??[];
   const fallbackRoster=(team:string)=>data.id==="132277"?(nationalsRosterByTeam[team]??[]):[];
+  const currentRosters=useMemo(()=>Object.fromEntries((data.views.rosters??[]).filter(table=>table.team).map(table=>[table.team!,table])),[data]);
   const recapByTeam=useMemo(()=>{
     const result:Record<string,{lane:string;points:string;rows:string[][]}>={};
     for(const table of data.views.recaps??[]){let current="";for(const row of table.rows){const m=row[0]?.match(/^Team\s+(\d+)$/i);if(m){current=m[1];const detail=row.slice(1).join(" ");result[current]={lane:detail.match(/Lane\s+\d+/i)?.[0]??"",points:detail.match(/points won:\s*([\d.]+)/i)?.[1]??"",rows:[]};}else if(current&&row[0]?.toLowerCase()!=="total")result[current].rows.push(row);}}
     return result;
   },[data]);
   const rosterDetails=(team:string)=>{
+    const currentRoster=currentRosters[team];
+    if(currentRoster) return currentRoster.rows.map(person=>({
+      name:personName(cell(currentRoster,person,"Name")),
+      average:cell(currentRoster,person,"Avg")||"—"
+    })).filter(person=>person.name&&!/vacant/i.test(person.name));
     const recapRows=recapByTeam[team]?.rows??[];
     const liveRows=rosterForTeam(team);
     const details=new Map<string,{name:string;average:string}>();
