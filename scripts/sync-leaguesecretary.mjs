@@ -84,6 +84,26 @@ function normalizeRecap(table,standings) {
     return teamNumber?[`Team ${teamNumber}`,...row.slice(1)]:row;
   })};
 }
+function rosterIdentity(name="") {
+  const suffix=/\b(jr|sr|ii|iii|iv|111|2nd|3rd)\b/gi;
+  const [family="",given=""]=clean(name).split(",").map(clean);
+  return clean(`${given.replace(suffix,"")} ${family.replace(suffix,"")}`).toLowerCase().replace(/[^a-z0-9]+/g," ").trim();
+}
+function currentRoster(table) {
+  if(!table) return table;
+  const nameIndex=table.headers.findIndex(header=>header.toLowerCase()==="name");
+  const gamesIndex=table.headers.findIndex(header=>header.toLowerCase()==="gms");
+  if(nameIndex<0) return table;
+  const people=new Map();
+  for(const row of table.rows) {
+    const name=row[nameIndex]??"";
+    if(!name||/vacant/i.test(name)) continue;
+    const identity=rosterIdentity(name);
+    const existing=people.get(identity);
+    if(!existing||Number(row[gamesIndex]??0)>Number(existing[gamesIndex]??0)) people.set(identity,row);
+  }
+  return {...table,rows:[...people.values()]};
+}
 
 const browser = await chromium.launch({headless:true});
 const leagues=await discoverLeagues(browser);
@@ -131,7 +151,7 @@ try {
           await page.locator("table tbody tr").first().waitFor({state:"visible",timeout:15000}).catch(()=>{});
           await page.waitForTimeout(1800);
           const tables=await extractTables(page);
-          if(tables[0]) rosters.push({...tables[0],team:team.team,title:`Team ${team.team} · ${team.name} roster`});
+          if(tables[0]) rosters.push({...currentRoster(tables[0]),team:team.team,title:`Team ${team.team} · ${team.name} roster`});
           else console.warn(`Roster page returned no current bowlers for ${league.displayName} team ${team.team}.`);
         }
         views[view]=rosters;
