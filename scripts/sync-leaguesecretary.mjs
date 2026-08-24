@@ -16,6 +16,7 @@ const centerUrl="https://www.leaguesecretary.com/bowling-centers/west-lanes-bowl
 const knownById=new Map(seedLeagues.map(league=>[league.id,league]));
 const viewPaths = { standings:"league/standings", bowlers:"bowler/list", recaps:"league/recaps", lanes:"league/lane-assignments", rosters:"team/list" };
 const force = process.argv.includes("--force");
+const requestedLeague=process.argv.find(argument=>argument.startsWith("--league="))?.split("=")[1];
 const chicago = Object.fromEntries(new Intl.DateTimeFormat("en-US",{timeZone:"America/Chicago",year:"numeric",month:"2-digit",day:"2-digit",weekday:"short",hour:"numeric",hour12:false}).formatToParts(new Date()).map(p=>[p.type,p.value]));
 const dayIndex={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[chicago.weekday];
 
@@ -85,28 +86,47 @@ function normalizeRecap(table,standings) {
   })};
 }
 function rosterIdentity(name="") {
-  const suffix=/\b(jr|sr|ii|iii|iv|111|2nd|3rd)\b/gi;
+  const suffix=/\b(111|11|1v|jr|sr|ii|iii|iv|2nd|3rd)\b/gi;
   const [family="",given=""]=clean(name).split(",").map(clean);
   return clean(`${given.replace(suffix,"")} ${family.replace(suffix,"")}`).toLowerCase().replace(/[^a-z0-9]+/g," ").trim();
+}
+function romanSuffix(name="") {
+  const suffix=name.match(/\b(111|11|1v|iii|ii|iv)\b/i)?.[1]?.toLowerCase();
+  return suffix==="111"||suffix==="iii"?"III":suffix==="11"||suffix==="ii"?"II":suffix==="1v"||suffix==="iv"?"IV":"";
+}
+function withRomanSuffix(name,suffix) {
+  if(!suffix) return name;
+  const suffixPattern=/\b(111|11|1v|jr|sr|ii|iii|iv|2nd|3rd)\b/gi;
+  const [family="",given=""]=clean(name).split(",").map(clean);
+  return `${family.replace(suffixPattern,"").trim()}, ${given.replace(suffixPattern,"").trim()} ${suffix}`.trim();
 }
 function currentRoster(table) {
   if(!table) return table;
   const nameIndex=table.headers.findIndex(header=>header.toLowerCase()==="name");
   const gamesIndex=table.headers.findIndex(header=>header.toLowerCase()==="gms");
   if(nameIndex<0) return table;
-  const people=new Map();
+  const groups=new Map();
   for(const row of table.rows) {
     const name=row[nameIndex]??"";
     if(!name||/vacant/i.test(name)) continue;
     const identity=rosterIdentity(name);
-    const existing=people.get(identity);
-    if(!existing||Number(row[gamesIndex]??0)>Number(existing[gamesIndex]??0)) people.set(identity,row);
+    if(!groups.has(identity)) groups.set(identity,[]);
+    groups.get(identity).push(row);
   }
-  return {...table,rows:[...people.values()]};
+  const people=[];
+  for(const rows of groups.values()) {
+    const selected=[...rows].sort((left,right)=>Number(right[gamesIndex]??0)-Number(left[gamesIndex]??0))[0];
+    const suffix=rows.map(row=>romanSuffix(row[nameIndex])).find(Boolean)||romanSuffix(selected[nameIndex]);
+    const normalized=[...selected];
+    normalized[nameIndex]=withRomanSuffix(selected[nameIndex],suffix);
+    people.push(normalized);
+  }
+  return {...table,rows:people};
 }
 
 const browser = await chromium.launch({headless:true});
-const leagues=await discoverLeagues(browser);
+const discoveredLeagues=await discoverLeagues(browser);
+const leagues=requestedLeague?discoveredLeagues.filter(league=>league.id===requestedLeague):discoveredLeagues;
 console.log(`Discovered ${leagues.length} active West Lanes leagues.`);
 const candidates=[];
 for(const league of leagues){
@@ -227,7 +247,7 @@ try {
     console.log(`${complete?"Completed":"Refreshed"} ${league.displayName}: ${recordCount} rows`);
   }
   const catalog=[];
-  for(const league of leagues) {
+  for(const league of discoveredLeagues) {
     try { catalog.push(JSON.parse(await readFile(path.join(process.cwd(),"public","data","leagues",`${league.id}.json`),"utf8"))); }
     catch { catalog.push({...league,sourceUpdated:league.updated||"Not posted",syncedAt:null,status:"awaiting-results",week:null,fingerprint:null,lastCompletedCycle:null,views:{standings:[],bowlers:[],recaps:[],lanes:[],rosters:[]}}); }
   }

@@ -6,7 +6,7 @@ import { nationalsRosterByTeam } from "./nationals-rosters";
 export type Table={title:string;headers:string[];rows:string[][];team?:string};
 export type LeagueSnapshot={id:string;displayName:string;bowlsOn?:string;type?:string;startDate:string;startTime:string;sourceUpdated:string;week:string|null;views:Record<string,Table[]>};
 const cell=(table:Table,row:string[],name:string)=>row[table.headers.findIndex(h=>h.toLowerCase()===name.toLowerCase())]??"";
-const personName=(name:string)=>{if(!name.includes(","))return name;const [familyRaw="",givenRaw=""]=name.split(",").map(x=>x.trim()),suffixPattern=/\b(jr|sr|ii|iii|iv|111|2nd|3rd)\b/ig,suffix=[...(familyRaw.match(suffixPattern)??[]),...(givenRaw.match(suffixPattern)??[])].at(-1),family=familyRaw.replace(suffixPattern,"").trim(),given=givenRaw.replace(suffixPattern,"").trim(),formattedSuffix=suffix?.toLowerCase()==="111"?"III":suffix;return [given,family,formattedSuffix].filter(Boolean).join(" ");};
+const personName=(name:string)=>{if(!name.includes(","))return name;const [familyRaw="",givenRaw=""]=name.split(",").map(x=>x.trim()),suffixPattern=/\b(111|11|1v|jr|sr|ii|iii|iv|2nd|3rd)\b/ig,suffix=[...(familyRaw.match(suffixPattern)??[]),...(givenRaw.match(suffixPattern)??[])].at(-1),family=familyRaw.replace(suffixPattern,"").trim(),given=givenRaw.replace(suffixPattern,"").trim(),raw=suffix?.toLowerCase(),formattedSuffix=raw==="111"||raw==="iii"?"III":raw==="11"||raw==="ii"?"II":raw==="1v"||raw==="iv"?"IV":suffix;return [given,family,formattedSuffix].filter(Boolean).join(" ");};
 const score=(row:string[],game:number)=>Number(row[3+game]??0);
 const series=(row:string[])=>Number(row.at(-1)??0);
 const resultClass=(left:number,right:number)=>left>right?"winner-score":left<right?"loser-score":"tie-score";
