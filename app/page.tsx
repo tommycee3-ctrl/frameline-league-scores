@@ -1,116 +1,40 @@
 import Link from "next/link";
-import { ArrowRight, Clock3, MapPin } from "./ui";
-import { ManagedEventTile, ManagedHomeEvent } from "./managed-content";
 
-const assetBase = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+const features = [
+  ["01", "Standings", "Sort teams by wins, average, pins or place."],
+  ["02", "Bowler scores", "Search every bowler and open their full week."],
+  ["03", "Weekly recaps", "See games, series and points in matchup order."],
+  ["04", "Lane assignments", "Find the next matchup before league night."],
+];
 
 export default function Home() {
-  return (
-    <div className="social-home">
-      <section className="social-hero">
-        <div className="social-copy">
-          <p className="social-kicker">
-            Omaha&apos;s neighborhood lanes since 1955
-          </p>
-          <h1>
-            Good times
-            <br />
-            <em>roll here.</em>
-          </h1>
-          <p className="social-lede">
-            Bowling, food, leagues, and room for everyone. Come as you are;
-            we&apos;ll keep a lane warm.
-          </p>
-          <ManagedHomeEvent />
-          <div className="social-actions">
-            <Link className="social-button primary" href="/open-bowling">
-              Plan your visit <ArrowRight />
-            </Link>
-            <Link className="social-button secondary" href="/leagues">
-              Find a league
-            </Link>
-          </div>
+  return <div className="frameline-home">
+    <section className="frameline-hero">
+      <div className="hero-copy">
+        <p className="frameline-kicker">YOUR LEAGUES. YOUR SCORES.</p>
+        <h1>Every frame.<br/><em>One home.</em></h1>
+        <p>Choose your area, bowling center and league once. FrameLine keeps your current leagues ready whenever you come back.</p>
+        <div className="frameline-actions">
+          <Link className="frameline-primary" href="/leagues">Open My Leagues <span>→</span></Link>
+          <Link className="frameline-secondary" href="/leagues#league-settings">Add a League</Link>
         </div>
-
-        <div
-          className="social-collage"
-          aria-label="Friends and families enjoying West Lanes"
-        >
-          <div className="social-photo photo-bowlers" />
-          <div className="social-logo-card">
-            <img
-              src={`${assetBase}/west-lanes-logo.jpg`}
-              alt="West Lanes Bowlatorium"
-            />
-            <span>Est. 1955</span>
-          </div>
-          <div className="social-burst">
-            LET&apos;S
-            <br />
-            BOWL!
-          </div>
-        </div>
-      </section>
-
-      <section className="social-dashboard" aria-label="West Lanes at a glance">
-        <article className="social-today">
-          <div className="social-card-heading">
-            <span>
-              <Clock3 /> Today at West Lanes
-            </span>
-            <Link href="/open-bowling">
-              Full hours <ArrowRight />
-            </Link>
-          </div>
-          <div className="today-details">
-            <div>
-              <small>Open bowling</small>
-              <strong>12 PM–11 PM</strong>
-            </div>
-            <div>
-              <small>Tonight</small>
-              <strong>Cosmic at 9 PM</strong>
-            </div>
-            <div>
-              <small>Location</small>
-              <strong>151 N. 72nd St.</strong>
-            </div>
-          </div>
-        </article>
-
-        <ManagedEventTile />
-
-        <Link href="/food-drinks" className="social-tile tile-coral">
-          <span className="tile-icon food-icon">🍔</span>
-          <div>
-            <small>Food & drinks</small>
-            <strong>Never roll hungry</strong>
-            <span>See specials & menu</span>
-          </div>
-          <ArrowRight />
-        </Link>
-
-        <Link href="/cosmic-bowling" className="social-tile tile-blue">
-          <span className="tile-icon">✦</span>
-          <div>
-            <small>Friday & Saturday</small>
-            <strong>Cosmic Bowling</strong>
-            <span>Lights down. Music up.</span>
-          </div>
-          <ArrowRight />
-        </Link>
-      </section>
-
-      <div className="social-lower">
-        <div>
-          <MapPin />
-          <span>Omaha, Nebraska</span>
-        </div>
-        <p>Sample hours and event details are shown for preview.</p>
-        <Link href="/events">
-          Explore everything happening <ArrowRight />
-        </Link>
       </div>
-    </div>
-  );
+      <div className="score-preview" aria-label="Example league scorecard">
+        <div className="score-preview-top"><span>LIVE LEAGUE VIEW</span><b>WEEK 2</b></div>
+        <div className="score-preview-row leader"><b>1</b><strong>Split Happens</strong><span>24 W</span></div>
+        <div className="score-preview-row"><b>2</b><strong>Clean Frames</strong><span>22 W</span></div>
+        <div className="score-preview-row"><b>3</b><strong>Ten Back</strong><span>19 W</span></div>
+        <div className="score-preview-foot"><span>Standings updated</span><strong>2 MIN AGO</strong></div>
+      </div>
+    </section>
+    <section className="frameline-feature-grid">
+      {features.map(([number, title, copy]) => <article key={number}><span>{number}</span><h2>{title}</h2><p>{copy}</p></article>)}
+    </section>
+    <section className="coverage-strip">
+      <div><small>STARTING COVERAGE</small><strong>OMAHA</strong></div>
+      <span>+</span><div><small>READY TO ADD</small><strong>BELLEVUE</strong></div>
+      <span>+</span><div><small>READY TO ADD</small><strong>LINCOLN</strong></div>
+      <span>+</span><div><small>READY TO ADD</small><strong>COUNCIL BLUFFS</strong></div>
+    </section>
+  </div>;
 }

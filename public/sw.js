@@ -1,4 +1,4 @@
-const CACHE_NAME = "west-lanes-shell-v1";
+const CACHE_NAME = "frameline-shell-v1";
 const SHELL = ["./", "./leagues/", "./open-bowling/", "./events/", "./food-drinks/", "./cosmic-bowling/", "./manifest.webmanifest", "./icon-192.png"];
 
 self.addEventListener("install", event => {
