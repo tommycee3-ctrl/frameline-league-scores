@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PageHeader } from "../page-header";
+import { ManagedEvents } from "../managed-content";
 
 export const metadata: Metadata = { title: "Events" };
 const assetBase = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
@@ -10,8 +11,10 @@ const events = [
     month: "AUG",
     title: "National Spider-Man Day",
     time: "Saturday · Noon–2 PM",
-    detail: "Half-price family bowling with $3 games and $3 shoe rental. Meet Spider-Man, Spider-Woman and Black Cat in person while supplies last.",
-    extra: "KGOR’s Lucy Chapman will be live with chances to win West Lanes gift certificates, special-screening tickets and free movie posters.",
+    detail:
+      "Half-price family bowling with $3 games and $3 shoe rental. Meet Spider-Man, Spider-Woman and Black Cat in person while supplies last.",
+    extra:
+      "KGOR’s Lucy Chapman will be live with chances to win West Lanes gift certificates, special-screening tickets and free movie posters.",
     highlights: [
       "$3 bowling games",
       "$3 shoe rental",
@@ -27,14 +30,16 @@ const events = [
     month: "AUG",
     title: "Cosmic After Dark",
     time: "9 PM–Midnight",
-    detail: "Black lights, music, lane effects and a lively late-night atmosphere.",
+    detail:
+      "Black lights, music, lane effects and a lively late-night atmosphere.",
   },
   {
     day: "03",
     month: "SEP",
     title: "Fall League Meet & Greet",
     time: "6 PM–8 PM",
-    detail: "Meet league captains, find teammates and ask questions before the season.",
+    detail:
+      "Meet league captains, find teammates and ask questions before the season.",
   },
   {
     day: "12",
@@ -61,31 +66,50 @@ export default function Events() {
         intro="Special bowling nights, tournaments, league gatherings and more reasons to get together."
       />
       <section className="section events-page-list">
-        {events.map((event) => (
-          <article className={event.featured ? "featured-event" : undefined} key={event.title}>
-            {!event.featured && <div className="event-block"><strong>{event.day}</strong><span>{event.month}</span></div>}
-            {event.featured ? (
-              <div className="featured-event-content">
-                <img
-                  className="event-flyer"
-                  src={`${assetBase}/national-spiderman-day.png`}
-                  alt="West Lanes National Spider-Man Day flyer with complete event information"
-                />
-              </div>
-            ) : (
-              <div>
-                <small>{event.time}</small>
-                <h2>{event.title}</h2>
-                <p>{event.detail}</p>
-              </div>
-            )}
-            <a href="tel:+14025563344">Call for details</a>
-          </article>
-        ))}
+        <ManagedEvents />
+        {events
+          .filter((event) => event.featured)
+          .map((event) => (
+            <article
+              className={event.featured ? "featured-event" : undefined}
+              key={event.title}
+            >
+              {!event.featured && (
+                <div className="event-block">
+                  <strong>{event.day}</strong>
+                  <span>{event.month}</span>
+                </div>
+              )}
+              {event.featured ? (
+                <div className="featured-event-content">
+                  <img
+                    className="event-flyer"
+                    src={`${assetBase}/national-spiderman-day.png`}
+                    alt="West Lanes National Spider-Man Day flyer with complete event information"
+                  />
+                </div>
+              ) : (
+                <div>
+                  <small>{event.time}</small>
+                  <h2>{event.title}</h2>
+                  <p>{event.detail}</p>
+                </div>
+              )}
+              <a href="tel:+14025563344">Call for details</a>
+            </article>
+          ))}
       </section>
       <section className="cta-band">
-        <div><p className="eyebrow">Plan something special</p><h2>Bring your group to the lanes.</h2></div>
-        <a className="button button-light" href="mailto:new_west_lanes@yahoo.com?subject=West%20Lanes%20group%20event">Ask about a group event</a>
+        <div>
+          <p className="eyebrow">Plan something special</p>
+          <h2>Bring your group to the lanes.</h2>
+        </div>
+        <a
+          className="button button-light"
+          href="mailto:new_west_lanes@yahoo.com?subject=West%20Lanes%20group%20event"
+        >
+          Ask about a group event
+        </a>
       </section>
     </>
   );
