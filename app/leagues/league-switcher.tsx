@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable react-hooks/set-state-in-effect -- browser storage and URL settings hydrate this client-only dashboard after mount */
+
 import { useEffect, useRef, useState } from "react";
 import leagueCatalog from "../../public/data/leagues/all.json";
 import { LeagueSnapshot, SyncedLeagueDashboard } from "./synced-league-dashboard";
@@ -48,15 +50,21 @@ export function LeagueSwitcher() {
 
   useEffect(() => {
     try {
+      const requestedArea = new URLSearchParams(window.location.search).get("area");
+      if (requestedArea && AREAS.includes(requestedArea)) {
+        setArea(requestedArea);
+        setCenter(CENTERS[requestedArea]?.[0] ?? "");
+        setCandidateId(requestedArea === "Omaha" ? snapshots.find((item) => ((item as LeagueSnapshot & { centerName?: string }).centerName ?? "West Lanes") === "West Lanes")?.id ?? "" : "");
+        setSettingsOpen(true);
+      }
       const current = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]") as string[];
       const legacy = JSON.parse(localStorage.getItem("west-lanes-favorite-leagues") || "[]") as string[];
       const valid = (current.length ? current : legacy).filter((id) => snapshots.some((item) => item.id === id));
       // Local storage is client-only; hydrate the saved dashboard after mount.
-      // eslint-disable-next-line react-hooks/set-state-in-effect
       setSaved(valid);
       setBowlerName(localStorage.getItem(PROFILE_KEY) || "");
       if (valid[0]) setLeagueId(valid[0]);
-      setSettingsOpen(valid.length === 0);
+      if (!requestedArea) setSettingsOpen(valid.length === 0);
     } catch { setSettingsOpen(true); }
     setReady(true);
   }, []);

@@ -27,14 +27,14 @@ export default function Home() {
         <div className="score-preview-foot"><span>Standings updated</span><strong>2 MIN AGO</strong></div>
       </div>
     </section>
-    <section className="frameline-feature-grid">
-      {features.map(([number, title, copy]) => <article key={number}><span>{number}</span><h2>{title}</h2><p>{copy}</p></article>)}
+    <section className="frameline-feature-grid" aria-label="League tools">
+      {features.map(([number, title, copy]) => <Link href="/leagues" key={number}><span>{number}</span><h2>{title}</h2><p>{copy}</p><b>Open My Leagues →</b></Link>)}
     </section>
     <section className="coverage-strip">
-      <div><small>STARTING COVERAGE</small><strong>OMAHA</strong></div>
-      <span>+</span><div><small>READY TO ADD</small><strong>BELLEVUE</strong></div>
-      <span>+</span><div><small>READY TO ADD</small><strong>LINCOLN</strong></div>
-      <span>+</span><div><small>READY TO ADD</small><strong>COUNCIL BLUFFS</strong></div>
+      <Link href="/leagues?area=Omaha#league-settings"><small>IMPORT IN PROGRESS</small><strong>OMAHA</strong><b>Choose area →</b></Link>
+      <Link href="/leagues?area=Bellevue#league-settings"><small>AREA AVAILABLE</small><strong>BELLEVUE</strong><b>Choose area →</b></Link>
+      <Link href="/leagues?area=Lincoln#league-settings"><small>AREA AVAILABLE</small><strong>LINCOLN</strong><b>Choose area →</b></Link>
+      <Link href="/leagues?area=Council%20Bluffs#league-settings"><small>AREA AVAILABLE</small><strong>COUNCIL BLUFFS</strong><b>Choose area →</b></Link>
     </section>
   </div>;
 }
