@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { ArrowRight, CalendarDays, Clock3, MapPin } from "./ui";
-import { ManagedHomeEvent } from "./managed-content";
+import { ArrowRight, Clock3, MapPin } from "./ui";
+import { ManagedEventTile, ManagedHomeEvent } from "./managed-content";
 
 const assetBase = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
@@ -78,17 +78,7 @@ export default function Home() {
           </div>
         </article>
 
-        <Link href="/events" className="social-tile tile-yellow">
-          <span className="tile-icon">
-            <CalendarDays />
-          </span>
-          <div>
-            <small>Saturday · Noon–2 PM</small>
-            <strong>National Spider-Man Day</strong>
-            <span>All event details</span>
-          </div>
-          <ArrowRight />
-        </Link>
+        <ManagedEventTile />
 
         <Link href="/food-drinks" className="social-tile tile-coral">
           <span className="tile-icon food-icon">🍔</span>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   contentApiUrl,
   defaultSiteContent,
@@ -15,6 +15,48 @@ const blankEvent = () => ({
   description: "",
   featured: false,
 });
+
+function EventDescriptionEditor({
+  value,
+  onChange,
+}: {
+  value: string;
+  onChange: (value: string) => void;
+}) {
+  const textarea = useRef<HTMLTextAreaElement>(null);
+  const insert = (before: string, after = before) => {
+    const field = textarea.current;
+    if (!field) return;
+    const start = field.selectionStart;
+    const end = field.selectionEnd;
+    const selected = value.slice(start, end);
+    onChange(
+      `${value.slice(0, start)}${before}${selected}${after}${value.slice(end)}`,
+    );
+    requestAnimationFrame(() => {
+      field.focus();
+      field.setSelectionRange(start + before.length, end + before.length);
+    });
+  };
+  return (
+    <div className="rich-event-editor">
+      <div className="rich-event-toolbar">
+        <button type="button" onClick={() => insert("**")}>
+          Bold selected text
+        </button>
+        <button type="button" onClick={() => insert("\n\n", "")}>
+          Add paragraph space
+        </button>
+        <span>Tip: blank lines create separate paragraphs.</span>
+      </div>
+      <textarea
+        ref={textarea}
+        value={value}
+        onChange={(event) => onChange(event.target.value)}
+      />
+    </div>
+  );
+}
 
 export function AdminEditor() {
   const [content, setContent] = useState<SiteContent>(defaultSiteContent);
@@ -313,10 +355,10 @@ export function AdminEditor() {
                 </label>
                 <label className="wide-field">
                   Description
-                  <textarea
+                  <EventDescriptionEditor
                     value={event.description}
-                    onChange={(e) =>
-                      updateList("events", index, "description", e.target.value)
+                    onChange={(value) =>
+                      updateList("events", index, "description", value)
                     }
                   />
                 </label>

@@ -1,61 +1,8 @@
 import type { Metadata } from "next";
-import { PageHeader } from "../page-header";
 import { ManagedEvents } from "../managed-content";
+import { PageHeader } from "../page-header";
 
 export const metadata: Metadata = { title: "Events" };
-const assetBase = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
-
-const events = [
-  {
-    day: "01",
-    month: "AUG",
-    title: "National Spider-Man Day",
-    time: "Saturday · Noon–2 PM",
-    detail:
-      "Half-price family bowling with $3 games and $3 shoe rental. Meet Spider-Man, Spider-Woman and Black Cat in person while supplies last.",
-    extra:
-      "KGOR’s Lucy Chapman will be live with chances to win West Lanes gift certificates, special-screening tickets and free movie posters.",
-    highlights: [
-      "$3 bowling games",
-      "$3 shoe rental",
-      "Meet Spider-Man, Spider-Woman and Black Cat",
-      "Spin to win free West Lanes gift certificates",
-      "Win tickets to a special screening of Spider-Man: Brand New Day at B&B Oak View Plaza 14",
-      "Free Spider-Man movie posters while supplies last",
-    ],
-    featured: true,
-  },
-  {
-    day: "15",
-    month: "AUG",
-    title: "Cosmic After Dark",
-    time: "9 PM–Midnight",
-    detail:
-      "Black lights, music, lane effects and a lively late-night atmosphere.",
-  },
-  {
-    day: "03",
-    month: "SEP",
-    title: "Fall League Meet & Greet",
-    time: "6 PM–8 PM",
-    detail:
-      "Meet league captains, find teammates and ask questions before the season.",
-  },
-  {
-    day: "12",
-    month: "SEP",
-    title: "9-Pin No-Tap Tournament",
-    time: "Check-in at 10 AM",
-    detail: "A fun open tournament for bowlers of all experience levels.",
-  },
-  {
-    day: "24",
-    month: "OCT",
-    title: "Halloween Cosmic Bowl",
-    time: "8 PM–Midnight",
-    detail: "Costumes, glow bowling, music and prizes throughout the evening.",
-  },
-];
 
 export default function Events() {
   return (
@@ -67,37 +14,6 @@ export default function Events() {
       />
       <section className="section events-page-list">
         <ManagedEvents />
-        {events
-          .filter((event) => event.featured)
-          .map((event) => (
-            <article
-              className={event.featured ? "featured-event" : undefined}
-              key={event.title}
-            >
-              {!event.featured && (
-                <div className="event-block">
-                  <strong>{event.day}</strong>
-                  <span>{event.month}</span>
-                </div>
-              )}
-              {event.featured ? (
-                <div className="featured-event-content">
-                  <img
-                    className="event-flyer"
-                    src={`${assetBase}/national-spiderman-day.png`}
-                    alt="West Lanes National Spider-Man Day flyer with complete event information"
-                  />
-                </div>
-              ) : (
-                <div>
-                  <small>{event.time}</small>
-                  <h2>{event.title}</h2>
-                  <p>{event.detail}</p>
-                </div>
-              )}
-              <a href="tel:+14025563344">Call for details</a>
-            </article>
-          ))}
       </section>
       <section className="cta-band">
         <div>

@@ -20,6 +20,38 @@ function useManagedContent() {
   return content;
 }
 
+const plainPreview = (value: string) =>
+  value
+    .replace(/\*\*/g, "")
+    .split(/\n\s*\n/)[0]
+    .replace(/\s+/g, " ")
+    .trim();
+
+function FormattedEventText({ value }: { value: string }) {
+  const paragraphs = value
+    .split(/\n\s*\n/)
+    .map((part) => part.trim())
+    .filter(Boolean);
+  return (
+    <div className="managed-event-description">
+      {paragraphs.map((paragraph, paragraphIndex) => {
+        const pieces = paragraph.split(/(\*\*[^*]+\*\*)/g).filter(Boolean);
+        return (
+          <p key={`${paragraphIndex}-${paragraph.slice(0, 20)}`}>
+            {pieces.map((piece, pieceIndex) =>
+              piece.startsWith("**") && piece.endsWith("**") ? (
+                <strong key={pieceIndex}>{piece.slice(2, -2)}</strong>
+              ) : (
+                <span key={pieceIndex}>{piece}</span>
+              ),
+            )}
+          </p>
+        );
+      })}
+    </div>
+  );
+}
+
 export function ManagedBanner() {
   const { banner } = useManagedContent();
   if (!banner.active || !banner.message) return null;
@@ -61,7 +93,7 @@ export function ManagedHomeEvent() {
       <span className="home-event-copy">
         <small>{event.time}</small>
         <strong>{event.title}</strong>
-        <em>{event.description}</em>
+        <em>{plainPreview(event.description)}</em>
       </span>
       <ArrowRight />
     </Link>
@@ -96,13 +128,37 @@ export function ManagedEvents() {
             <div>
               <small>{event.time}</small>
               <h2>{event.title}</h2>
-              <p>{event.description}</p>
+              <FormattedEventText value={event.description} />
             </div>
             <a href="tel:+14025563344">Call for details</a>
           </article>
         );
       })}
     </>
+  );
+}
+
+export function ManagedEventTile() {
+  const content = useManagedContent();
+  const event =
+    content.events.find((item) => item.featured) ?? content.events[0];
+  if (!event) return null;
+  const date = new Date(`${event.date}T12:00:00`);
+  return (
+    <Link href="/events" className="social-tile tile-yellow">
+      <span className="tile-icon">
+        {date.toLocaleDateString("en-US", { day: "2-digit" })}
+      </span>
+      <div>
+        <small>
+          {date.toLocaleDateString("en-US", { month: "long", day: "numeric" })}{" "}
+          · {event.time}
+        </small>
+        <strong>{event.title}</strong>
+        <span>All event details</span>
+      </div>
+      <ArrowRight />
+    </Link>
   );
 }
 
