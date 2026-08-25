@@ -21,16 +21,28 @@ function nameTokens(value: string) {
   return value.toLowerCase().replace(/\b(jr|sr|ii|iii|iv|2nd|3rd)\b/g, " ").replace(/[^a-z0-9]+/g, " ").trim().split(/\s+/).filter(Boolean).sort();
 }
 
-function leagueIncludesBowler(league: LeagueSnapshot, query: string) {
+type BowlerSearchMatch = { key: string; name: string; leagueIds: string[] };
+
+function findBowlerMatches(query: string): BowlerSearchMatch[] {
   const wanted = nameTokens(query);
-  if (wanted.join("").length < 4) return false;
-  return (league.views.bowlers ?? []).some((table) => {
-    const index = table.headers.findIndex((header) => header.toLowerCase() === "name");
-    return index >= 0 && table.rows.some((row) => {
-      const roster = nameTokens(row[index] ?? "");
-      return wanted.every((token) => roster.includes(token));
+  if (wanted.join("").length < 2) return [];
+  const matches = new Map<string, { name: string; leagueIds: Set<string> }>();
+  snapshots.forEach((league) => {
+    (league.views.bowlers ?? []).forEach((table) => {
+      const index = table.headers.findIndex((header) => header.toLowerCase() === "name");
+      if (index < 0) return;
+      table.rows.forEach((row) => {
+        const name = (row[index] ?? "").trim();
+        const roster = nameTokens(name);
+        if (!name || !wanted.every((token) => roster.some((part) => part.includes(token)))) return;
+        const key = name.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+        const current = matches.get(key) ?? { name, leagueIds: new Set<string>() };
+        current.leagueIds.add(league.id);
+        matches.set(key, current);
+      });
     });
   });
+  return [...matches.entries()].map(([key, match]) => ({ key, name: match.name, leagueIds: [...match.leagueIds] })).sort((a, b) => a.name.localeCompare(b.name));
 }
 
 export function LeagueSwitcher() {
@@ -39,6 +51,7 @@ export function LeagueSwitcher() {
   const [saved, setSaved] = useState<string[]>([]);
   const [bowlerName, setBowlerName] = useState("");
   const [profileMessage, setProfileMessage] = useState("");
+  const [bowlerMatches, setBowlerMatches] = useState<BowlerSearchMatch[]>([]);
   const [ready, setReady] = useState(false);
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [area, setArea] = useState("Omaha");
@@ -103,13 +116,18 @@ export function LeagueSwitcher() {
   const findMyLeagues = () => {
     const name = bowlerName.trim();
     if (!name) { setProfileMessage("Enter your first and last name."); return; }
-    localStorage.setItem(PROFILE_KEY, name);
-    const matches = snapshots.filter((league) => leagueIncludesBowler(league, name));
-    if (!matches.length) { setProfileMessage("No roster match yet. You can still add a league manually below."); return; }
-    const next = [...new Set([...saved, ...matches.map((league) => league.id)])];
-    persist(next);
-    setProfileMessage(`${matches.length} ${matches.length === 1 ? "league" : "leagues"} found and added.`);
-    openLeague(matches[0].id);
+    const matches = findBowlerMatches(name);
+    setBowlerMatches(matches);
+    if (!matches.length) { setProfileMessage("No matching bowlers found yet. You can still add a league manually below."); return; }
+    setProfileMessage(`${matches.length} matching ${matches.length === 1 ? "bowler" : "bowlers"} found. Select the correct league below.`);
+  };
+  const selectBowlerLeague = (match: BowlerSearchMatch, id: string) => {
+    localStorage.setItem(PROFILE_KEY, match.name);
+    setBowlerName(match.name);
+    if (!saved.includes(id)) persist([...saved, id]);
+    setBowlerMatches([]);
+    setProfileMessage("");
+    openLeague(id);
   };
   const removeLeague = (id: string) => {
     const next = saved.filter((savedId) => savedId !== id); persist(next);
@@ -156,8 +174,21 @@ export function LeagueSwitcher() {
       <div className="setup-heading"><p className="eyebrow red">League setup</p><h2>Add another league</h2><p>Choose a location and league. More areas and centers can be added without changing the rest of the app.</p></div>
       <div className="bowler-profile-setup">
         <div><span className="setup-number">A</span><div><strong>Your name</strong><small>We’ll search imported rosters and add leagues that contain your name.</small></div></div>
-        <div className="bowler-name-row"><input value={bowlerName} onChange={(event) => { setBowlerName(event.target.value); setProfileMessage(""); }} onKeyDown={(event) => { if (event.key === "Enter") findMyLeagues(); }} placeholder="First and last name" autoComplete="name"/><button onClick={findMyLeagues}>Find My Leagues</button></div>
+        <div className="bowler-name-row"><input value={bowlerName} onChange={(event) => { setBowlerName(event.target.value); setProfileMessage(""); setBowlerMatches([]); }} onKeyDown={(event) => { if (event.key === "Enter") findMyLeagues(); }} placeholder="Enter any part of a bowler's name" autoComplete="name"/><button onClick={findMyLeagues}>Search Bowlers</button></div>
         {profileMessage && <p className="profile-message" role="status">{profileMessage}</p>}
+        {bowlerMatches.length > 0 && <div className="bowler-match-results">
+          {bowlerMatches.map((match) => <article key={match.key}>
+            <strong>{match.name}</strong>
+            <div>{match.leagueIds.map((id) => {
+              const league = snapshots.find((item) => item.id === id);
+              if (!league) return null;
+              const location = league as LeagueSnapshot & { centerName?: string };
+              return <button type="button" key={id} onClick={() => selectBowlerLeague(match, id)}>
+                <span>{league.displayName}</span><small>{location.centerName ?? "Bowling center"} · {league.bowlsOn} at {league.startTime}</small><b>{saved.includes(id) ? "Open league" : "Add league"} →</b>
+              </button>;
+            })}</div>
+          </article>)}
+        </div>}
       </div>
       <div className="manual-divider"><span>OR FIND A LEAGUE MANUALLY</span></div>
       <div className="setup-steps">
