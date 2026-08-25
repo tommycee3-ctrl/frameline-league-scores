@@ -36,7 +36,7 @@ export const initialAdminEmail = "tommycee3@gmail.com";
 
 export const defaultSiteContent: SiteContent = {
   banner: {
-    active: true,
+    active: false,
     message: "Saturday hours update",
     detail: "Open bowling begins at noon. Call ahead for lane availability.",
     linkLabel: "View hours",
