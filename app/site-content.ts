@@ -95,5 +95,5 @@ export const defaultSiteContent: SiteContent = {
 export const contentApiUrl = () =>
   typeof window !== "undefined" &&
   window.location.hostname.endsWith("github.io")
-    ? "https://west-lanes-bowling.tommycee3.chatgpt.site/api/site-content"
+    ? "https://frameline-leagues.tommycee3.chatgpt.site/api/site-content"
     : "/api/site-content";

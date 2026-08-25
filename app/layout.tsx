@@ -8,7 +8,7 @@ const assetBase = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export const metadata: Metadata = {
   metadataBase: process.env.GITHUB_ACTIONS === "true"
-    ? new URL("https://tommycee3-ctrl.github.io/west-lanes-bowling/")
+    ? new URL("https://tommycee3-ctrl.github.io/frameline-league-scores/")
     : undefined,
   title: { default: "FrameLine", template: "%s | FrameLine" },
   description: "Local bowling league standings, scores, recaps, bowlers and lane assignments in one easy-to-use app.",

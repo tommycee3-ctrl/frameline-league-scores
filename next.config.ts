@@ -4,8 +4,8 @@ const isGitHubPages = process.env.GITHUB_ACTIONS === "true";
 
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: isGitHubPages ? "/west-lanes-bowling" : "",
-  assetPrefix: isGitHubPages ? "/west-lanes-bowling/" : "",
+  basePath: isGitHubPages ? "/frameline-league-scores" : "",
+  assetPrefix: isGitHubPages ? "/frameline-league-scores/" : "",
   trailingSlash: true,
 };
 
