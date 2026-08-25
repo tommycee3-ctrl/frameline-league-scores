@@ -6,6 +6,7 @@ import { LeagueSnapshot, SyncedLeagueDashboard } from "./synced-league-dashboard
 
 const snapshots = leagueCatalog as LeagueSnapshot[];
 const STORAGE_KEY = "frameline-current-leagues";
+const PROFILE_KEY = "frameline-bowler-name";
 const AREAS = ["Omaha", "Bellevue", "Lincoln", "Council Bluffs"];
 const CENTERS: Record<string, string[]> = {
   Omaha: ["West Lanes", "Maplewood Lanes", "Mockingbird Lanes", "Western Bowl"],
@@ -14,10 +15,28 @@ const CENTERS: Record<string, string[]> = {
   "Council Bluffs": ["Thunderbowl of Council Bluffs"],
 };
 
+function nameTokens(value: string) {
+  return value.toLowerCase().replace(/\b(jr|sr|ii|iii|iv|2nd|3rd)\b/g, " ").replace(/[^a-z0-9]+/g, " ").trim().split(/\s+/).filter(Boolean).sort();
+}
+
+function leagueIncludesBowler(league: LeagueSnapshot, query: string) {
+  const wanted = nameTokens(query);
+  if (wanted.join("").length < 4) return false;
+  return (league.views.bowlers ?? []).some((table) => {
+    const index = table.headers.findIndex((header) => header.toLowerCase() === "name");
+    return index >= 0 && table.rows.some((row) => {
+      const roster = nameTokens(row[index] ?? "");
+      return wanted.every((token) => roster.includes(token));
+    });
+  });
+}
+
 export function LeagueSwitcher() {
   const [leagueId, setLeagueId] = useState(snapshots[0]?.id ?? "");
   const [leagueSelection, setLeagueSelection] = useState(0);
   const [saved, setSaved] = useState<string[]>([]);
+  const [bowlerName, setBowlerName] = useState("");
+  const [profileMessage, setProfileMessage] = useState("");
   const [ready, setReady] = useState(false);
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [area, setArea] = useState("Omaha");
@@ -35,6 +54,7 @@ export function LeagueSwitcher() {
       // Local storage is client-only; hydrate the saved dashboard after mount.
       // eslint-disable-next-line react-hooks/set-state-in-effect
       setSaved(valid);
+      setBowlerName(localStorage.getItem(PROFILE_KEY) || "");
       if (valid[0]) setLeagueId(valid[0]);
       setSettingsOpen(valid.length === 0);
     } catch { setSettingsOpen(true); }
@@ -72,6 +92,17 @@ export function LeagueSwitcher() {
     if (!saved.includes(candidateId)) persist([...saved, candidateId]);
     openLeague(candidateId);
   };
+  const findMyLeagues = () => {
+    const name = bowlerName.trim();
+    if (!name) { setProfileMessage("Enter your first and last name."); return; }
+    localStorage.setItem(PROFILE_KEY, name);
+    const matches = snapshots.filter((league) => leagueIncludesBowler(league, name));
+    if (!matches.length) { setProfileMessage("No roster match yet. You can still add a league manually below."); return; }
+    const next = [...new Set([...saved, ...matches.map((league) => league.id)])];
+    persist(next);
+    setProfileMessage(`${matches.length} ${matches.length === 1 ? "league" : "leagues"} found and added.`);
+    openLeague(matches[0].id);
+  };
   const removeLeague = (id: string) => {
     const next = saved.filter((savedId) => savedId !== id); persist(next);
     if (id === leagueId && next[0]) openLeague(next[0]);
@@ -82,7 +113,10 @@ export function LeagueSwitcher() {
   const savedLeagues = saved.map((id) => snapshots.find((item) => item.id === id)).filter((item): item is LeagueSnapshot => Boolean(item));
   const hasResults = selected && Object.values(selected.views).some((tables) => tables.some((table) => table.rows.length));
   const centerOptions = CENTERS[area] ?? [];
-  const availableLeagues = area === "Omaha" && center === "West Lanes" ? snapshots : [];
+  const availableLeagues = snapshots.filter((item) => {
+    const location = item as LeagueSnapshot & { area?: string; centerName?: string };
+    return (location.area ?? "Omaha") === area && (location.centerName ?? "West Lanes") === center;
+  });
   const week = selected?.week ? `Week ${selected.week}` : "Awaiting Week 1";
   const schedule = selected ? `${selected.bowlsOn} · ${selected.startTime} · Started ${selected.startDate}` : "";
 
@@ -95,7 +129,7 @@ export function LeagueSwitcher() {
 
     <section className="section current-leagues-section">
       <div className="current-leagues-heading">
-        <div><p className="eyebrow red">Quick select</p><h2>Current leagues</h2><p>Saved on this device for quick access.</p></div>
+        <div><p className="eyebrow red">Quick select</p><h2>Current leagues</h2><p>{bowlerName ? `Bowling as ${bowlerName}.` : "Saved on this device for quick access."}</p></div>
         <button className="league-settings-button" onClick={() => setSettingsOpen((open) => !open)} aria-expanded={settingsOpen}>
           <span aria-hidden="true">⚙</span> {settingsOpen ? "Close" : "Manage leagues"}
         </button>
@@ -112,6 +146,12 @@ export function LeagueSwitcher() {
 
     {settingsOpen && <section className="section league-setup" id="league-settings">
       <div className="setup-heading"><p className="eyebrow red">League setup</p><h2>Add another league</h2><p>Choose a location and league. More areas and centers can be added without changing the rest of the app.</p></div>
+      <div className="bowler-profile-setup">
+        <div><span className="setup-number">A</span><div><strong>Your name</strong><small>We’ll search imported rosters and add leagues that contain your name.</small></div></div>
+        <div className="bowler-name-row"><input value={bowlerName} onChange={(event) => { setBowlerName(event.target.value); setProfileMessage(""); }} onKeyDown={(event) => { if (event.key === "Enter") findMyLeagues(); }} placeholder="First and last name" autoComplete="name"/><button onClick={findMyLeagues}>Find My Leagues</button></div>
+        {profileMessage && <p className="profile-message" role="status">{profileMessage}</p>}
+      </div>
+      <div className="manual-divider"><span>OR FIND A LEAGUE MANUALLY</span></div>
       <div className="setup-steps">
         <label><span><b>1</b> Select your area</span><select value={area} onChange={(event) => { const next = event.target.value; setArea(next); setCenter(CENTERS[next]?.[0] ?? ""); setCandidateId(""); }}>{AREAS.map((item) => <option key={item}>{item}</option>)}</select></label>
         <label><span><b>2</b> Select your alley</span><select value={center} disabled={!centerOptions.length} onChange={(event) => { setCenter(event.target.value); setCandidateId(snapshots[0]?.id ?? ""); }}>{centerOptions.length ? centerOptions.map((item) => <option key={item}>{item}</option>) : <option>Coming soon</option>}</select></label>

@@ -12,7 +12,12 @@ const seedLeagues = [
   {id:"112159",slug:"friday-senior-crazy-mixed-2627",name:"FRIDAY SENIOR CRAZY MIXED 26-27",displayName:"Friday Senior Crazy Mixed 26-27",bowlsOn:"Friday",startDate:"Fall 2026",startTime:"12:00 PM",bowlDay:5,type:"Handicap Adult Mixed"},
   {id:"64208",slug:"graphic-arts-bowling-league-2627",name:"GRAPHIC ARTS BOWLING LEAGUE 26-27",displayName:"Graphic Arts Bowling League 26-27",bowlsOn:"Friday",startDate:"Fall 2026",startTime:"6:30 PM",bowlDay:5,type:"Handicap Mens"}
 ];
-const centerUrl="https://www.leaguesecretary.com/bowling-centers/west-lanes-bowl-omaha-nebraska/leagues/2110";
+const centers=[
+  {id:"2110",name:"West Lanes",area:"Omaha",slug:"west-lanes-bowl-omaha-nebraska"},
+  {id:"2119",name:"Maplewood Lanes",area:"Omaha",slug:"maplewood-lanes-omaha-nebraska"},
+  {id:"5144",name:"Mockingbird Lanes",area:"Omaha",slug:"mockingbird-lanes"},
+  {id:"2208",name:"Western Bowl",area:"Omaha",slug:"western-bowl-omaha"},
+];
 const knownById=new Map(seedLeagues.map(league=>[league.id,league]));
 const viewPaths = { standings:"league/standings", bowlers:"bowler/list", recaps:"league/recaps", lanes:"league/lane-assignments", rosters:"team/list" };
 const force = process.argv.includes("--force");
@@ -41,11 +46,14 @@ function recentlyUpdated(value="") {
 async function discoverLeagues(browser) {
   const page=await browser.newPage({viewport:{width:1440,height:1100}});
   try {
-    await page.goto(centerUrl,{waitUntil:"domcontentloaded",timeout:90000});
-    await page.waitForTimeout(6000);
-    const rows=await page.locator("table tbody tr").evaluateAll(nodes=>nodes.map(row=>[...row.querySelectorAll("td")].map(cell=>(cell.textContent||"").replace(/\s+/g," ").trim())).filter(row=>row.length>=7));
     const dayNumbers={Sunday:0,Monday:1,Tuesday:2,Wednesday:3,Thursday:4,Friday:5,Saturday:6};
-    const discovered=rows.map(([id,name,season,bowlsOn,startTime,type,updated])=>({id,name:clean(name),displayName:displayName(name),slug:slugify(name),season,bowlsOn,startTime:clean(startTime).replace(/(AM|PM)$/i," $1"),type,updated,startDate:`${season} 2026`,bowlDay:dayNumbers[bowlsOn]})).filter(league=>knownById.has(league.id)||(league.season==="Fall"&&recentlyUpdated(league.updated)));
+    const discovered=[];
+    for(const center of centers) {
+      await page.goto(`https://www.leaguesecretary.com/bowling-centers/${center.slug}/leagues/${center.id}`,{waitUntil:"domcontentloaded",timeout:90000});
+      await page.waitForTimeout(5000);
+      const rows=await page.locator("table tbody tr").evaluateAll(nodes=>nodes.map(row=>[...row.querySelectorAll("td")].map(cell=>(cell.textContent||"").replace(/\s+/g," ").trim())).filter(row=>row.length>=7));
+      discovered.push(...rows.map(([id,name,season,bowlsOn,startTime,type,updated])=>({id,name:clean(name),displayName:displayName(name),slug:slugify(name),season,bowlsOn,startTime:clean(startTime).replace(/(AM|PM)$/i," $1"),type,updated,startDate:`${season} 2026`,bowlDay:dayNumbers[bowlsOn],centerId:center.id,centerName:center.name,centerSlug:center.slug,area:center.area})).filter(league=>knownById.has(league.id)||(league.season==="Fall"&&recentlyUpdated(league.updated))));
+    }
     return discovered.map(league=>({...league,...knownById.get(league.id),updated:league.updated,slug:knownById.get(league.id)?.slug??league.slug})).sort((a,b)=>a.bowlDay-b.bowlDay||a.startTime.localeCompare(b.startTime));
   } finally { await page.close(); }
 }
@@ -127,7 +135,7 @@ function currentRoster(table) {
 const browser = await chromium.launch({headless:true});
 const discoveredLeagues=await discoverLeagues(browser);
 const leagues=requestedLeague?discoveredLeagues.filter(league=>league.id===requestedLeague):discoveredLeagues;
-console.log(`Discovered ${leagues.length} active West Lanes leagues.`);
+console.log(`Discovered ${leagues.length} active Omaha leagues across ${centers.length} centers.`);
 const candidates=[];
 for(const league of leagues){
   const file=path.join(process.cwd(),"public","data","leagues",`${league.id}.json`);
@@ -144,7 +152,7 @@ try {
     let week = current.week;
     const page = await browser.newPage({viewport:{width:1440,height:1100}});
     for (const [view,route] of Object.entries(viewPaths)) {
-      const url=`https://www.leaguesecretary.com/bowling-centers/west-lanes/bowling-leagues/${league.slug}/${route}/${league.id}`;
+      const url=`https://www.leaguesecretary.com/bowling-centers/${league.centerSlug}/bowling-leagues/${league.slug}/${route}/${league.id}`;
       await page.goto(url,{waitUntil:"domcontentloaded",timeout:90000});
       await page.waitForTimeout(6000);
       await expandAllGridRows(page);
@@ -248,7 +256,7 @@ try {
   }
   const catalog=[];
   for(const league of discoveredLeagues) {
-    try { catalog.push(JSON.parse(await readFile(path.join(process.cwd(),"public","data","leagues",`${league.id}.json`),"utf8"))); }
+    try { catalog.push({...JSON.parse(await readFile(path.join(process.cwd(),"public","data","leagues",`${league.id}.json`),"utf8")),centerId:league.centerId,centerName:league.centerName,centerSlug:league.centerSlug,area:league.area}); }
     catch { catalog.push({...league,sourceUpdated:league.updated||"Not posted",syncedAt:null,status:"awaiting-results",week:null,fingerprint:null,lastCompletedCycle:null,views:{standings:[],bowlers:[],recaps:[],lanes:[],rosters:[]}}); }
   }
   const catalogFile=path.join(process.cwd(),"public","data","leagues","all.json");
