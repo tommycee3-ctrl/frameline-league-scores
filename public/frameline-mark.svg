@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 116" role="img" aria-labelledby="title desc">
+  <title id="title">FrameLine score frame</title>
+  <desc id="desc">A bowling score frame showing nine spare and strike.</desc>
+  <rect width="128" height="116" rx="4" fill="#101b2b"/>
+  <path d="M2 2h124v112H2zM64 2v74M2 76h124" fill="none" stroke="#22d7d1" stroke-width="4"/>
+  <path d="M64 2v74" stroke="#53667b" stroke-width="2"/>
+  <text x="32" y="54" fill="#fff" font-family="Arial,sans-serif" font-size="38" font-style="italic" font-weight="900" text-anchor="middle">9/</text>
+  <text x="96" y="55" fill="#22d7d1" font-family="Arial,sans-serif" font-size="42" font-style="italic" font-weight="900" text-anchor="middle">X</text>
+  <text x="64" y="101" fill="#9eb0c0" font-family="Arial,sans-serif" font-size="11" font-weight="700" letter-spacing="3" text-anchor="middle">FRAME 10</text>
+</svg>

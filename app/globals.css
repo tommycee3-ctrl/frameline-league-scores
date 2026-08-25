@@ -3371,17 +3371,20 @@ body:has(.social-home) .site-footer .footer-bottom {
 .frameline-brand { gap: 12px; color: #101b2b; }
 .frameline-brand > span:last-child { font-family: "Barlow Condensed", sans-serif; font-size: 1.55rem; line-height: .82; letter-spacing: .08em; font-weight: 900; }
 .frameline-brand small { margin-top: 7px; color: #637483; font: 800 .56rem/1 sans-serif; letter-spacing: .16em; }
-.frameline-mark { position: relative; width: 48px; height: 48px; display: grid; grid-template-columns: repeat(3,1fr); border: 2px solid #101b2b; background: #101b2b; overflow: hidden; }
-.frameline-mark i { border-right: 1px solid rgba(255,255,255,.45); background: linear-gradient(to bottom, #10a7a5 0 45%, transparent 45%); }
-.frameline-mark i:nth-child(3) { border: 0; }
-.frameline-mark b { position: absolute; right: 3px; bottom: 1px; color: white; font: 900 13px/1 sans-serif; }
+.frameline-mark { width: 54px; height: 50px; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 13px; border: 2px solid #10a7a5; background: #101b2b; color: #fff; overflow: hidden; box-shadow: 4px 4px 0 #d8e5e7; transform: rotate(-2deg); }
+.frameline-mark>span { display: grid; place-items: center; font: italic 900 17px/1 "Barlow Condensed",sans-serif; }
+.frameline-mark>span:first-child { border-right: 1px solid #53667b; border-bottom: 1px solid #53667b; }
+.frameline-mark>span:nth-child(2) { border-bottom: 1px solid #53667b; color: #22d7d1; }
+.frameline-mark em { grid-column: 1/3; display: grid; place-items: center; color: #9eb0c0; font: normal 800 7px/1 sans-serif; letter-spacing: .13em; }
 .frameline-header .desktop-nav a { color: #101b2b; }
 .frameline-footer { display: grid; grid-template-columns: 1.2fr 1fr auto; gap: 40px; padding: 44px max(5vw,24px); background: #101b2b; color: #dce8eb; }
 .frameline-footer > div { display: grid; align-content: start; gap: 9px; }
 .frameline-footer p { margin: 0; color: #9db0b8; }
 .frameline-footer a { color: white; }
 .footer-wordmark { display: flex; align-items: center; gap: 10px; font-family: "Barlow Condensed", sans-serif; letter-spacing: .08em; font-size: 1.35rem; }
-.footer-wordmark .frameline-mark { width: 36px; height: 36px; border-color: white; }
+.footer-wordmark .frameline-mark { width: 42px; height: 39px; border-color: #22d7d1; box-shadow: 3px 3px 0 #263b53; }
+.footer-wordmark .frameline-mark>span { font-size: 13px; }
+.footer-wordmark .frameline-mark em { font-size: 5px; }
 
 .frameline-home { min-height: calc(100vh - 88px); background: #f4f7f8; color: #101b2b; }
 .frameline-hero { min-height: 620px; display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; gap: clamp(35px,7vw,110px); padding: 70px max(6vw,32px); background: radial-gradient(circle at 83% 20%, rgba(16,167,165,.18), transparent 31%), #101b2b; color: white; overflow: hidden; }

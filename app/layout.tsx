@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   title: { default: "FrameLine", template: "%s | FrameLine" },
   description: "Local bowling league standings, scores, recaps, bowlers and lane assignments in one easy-to-use app.",
   manifest: `${assetBase}/manifest.webmanifest`,
+  icons: { icon: `${assetBase}/frameline-mark.svg` },
   applicationName: "FrameLine",
   appleWebApp: { capable: true, title: "FrameLine", statusBarStyle: "black-translucent" },
 };
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
 const links = [["/leagues", "My Leagues"]] as const;
 
 function FrameLineMark() {
-  return <span className="frameline-mark" aria-hidden="true"><i/><i/><i/><b>10</b></span>;
+  return <span className="frameline-mark" aria-hidden="true"><span>9/</span><span>X</span><em>FRAME 10</em></span>;
 }
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
