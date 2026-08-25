@@ -186,12 +186,16 @@ export function AdminEditor() {
       <div className="admin-preview banner-editor-preview">
         <span>Live banner preview</span>
         {content.banner.active ? (
-          <div className={`managed-banner banner-${content.banner.tone}`}>
-            <div>
-              <strong>{content.banner.message || "Your announcement"}</strong>
-              <span>{content.banner.detail}</span>
+          <div
+            className={`managed-banner banner-${content.banner.tone} banner-motion-${content.banner.motion ?? "static"}`}
+          >
+            <div className="managed-banner-track">
+              <div>
+                <strong>{content.banner.message || "Your announcement"}</strong>
+                <span>{content.banner.detail}</span>
+              </div>
+              <b>{content.banner.linkLabel}</b>
             </div>
-            <b>{content.banner.linkLabel}</b>
           </div>
         ) : (
           <p>Banner is currently hidden.</p>
@@ -257,15 +261,46 @@ export function AdminEditor() {
           </label>
           <label>
             Button destination
-            <input
-              value={content.banner.linkHref}
+            <select
+              value={
+                content.banner.linkHref.toLowerCase().includes("event")
+                  ? "/events"
+                  : content.banner.linkHref
+              }
               onChange={(event) =>
                 setContent({
                   ...content,
                   banner: { ...content.banner, linkHref: event.target.value },
                 })
               }
-            />
+            >
+              <option value="/events">Events page</option>
+              <option value="/open-bowling">Open Bowling page</option>
+              <option value="/leagues">Leagues page</option>
+              <option value="/food-drinks">Food & Drinks page</option>
+              <option value="/cosmic-bowling">Cosmic Bowling page</option>
+              <option value="/">Homepage</option>
+            </select>
+          </label>
+          <label>
+            Banner movement
+            <select
+              value={content.banner.motion ?? "static"}
+              onChange={(event) =>
+                setContent({
+                  ...content,
+                  banner: {
+                    ...content.banner,
+                    motion: event.target
+                      .value as SiteContent["banner"]["motion"],
+                  },
+                })
+              }
+            >
+              <option value="static">Stationary</option>
+              <option value="slide">Slide in from the right</option>
+              <option value="scroll">Continuously scroll</option>
+            </select>
           </label>
           <label>
             Banner color

@@ -55,21 +55,27 @@ function FormattedEventText({ value }: { value: string }) {
 export function ManagedBanner() {
   const { banner } = useManagedContent();
   if (!banner.active || !banner.message) return null;
+  const href = banner.linkHref.toLowerCase().includes("event")
+    ? "/events"
+    : banner.linkHref;
+  const motion = banner.motion ?? "static";
   return (
     <aside
-      className={`managed-banner banner-${banner.tone}`}
+      className={`managed-banner banner-${banner.tone} banner-motion-${motion}`}
       aria-label="West Lanes announcement"
     >
-      <div>
-        <strong>{banner.message}</strong>
-        {banner.detail && <span>{banner.detail}</span>}
+      <div className="managed-banner-track">
+        <div>
+          <strong>{banner.message}</strong>
+          {banner.detail && <span>{banner.detail}</span>}
+        </div>
+        {banner.linkLabel && href && (
+          <Link href={href}>
+            {banner.linkLabel}
+            <ArrowRight />
+          </Link>
+        )}
       </div>
-      {banner.linkLabel && banner.linkHref && (
-        <Link href={banner.linkHref}>
-          {banner.linkLabel}
-          <ArrowRight />
-        </Link>
-      )}
     </aside>
   );
 }

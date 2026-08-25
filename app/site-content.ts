@@ -5,6 +5,7 @@ export type AnnouncementBanner = {
   linkLabel: string;
   linkHref: string;
   tone: "coral" | "yellow" | "navy";
+  motion: "static" | "slide" | "scroll";
 };
 
 export type ManagedEvent = {
@@ -42,6 +43,7 @@ export const defaultSiteContent: SiteContent = {
     linkLabel: "View hours",
     linkHref: "/open-bowling",
     tone: "coral",
+    motion: "static",
   },
   events: [
     {

@@ -140,32 +140,29 @@ function normalizeContent(value: SiteContent): SiteContent {
       tone: ["coral", "yellow", "navy"].includes(value.banner?.tone)
         ? value.banner.tone
         : "coral",
+      motion: ["static", "slide", "scroll"].includes(value.banner?.motion)
+        ? value.banner.motion
+        : "static",
     },
-    events: (value.events ?? [])
-      .slice(0, 50)
-      .map((item) => ({
-        id: String(item.id),
-        date: String(item.date),
-        time: String(item.time).slice(0, 80),
-        title: String(item.title).slice(0, 120),
-        description: String(item.description).slice(0, 600),
-        featured: Boolean(item.featured),
-      })),
-    rates: (value.rates ?? [])
-      .slice(0, 30)
-      .map((item) => ({
-        id: String(item.id),
-        name: String(item.name).slice(0, 100),
-        price: String(item.price).slice(0, 30),
-        detail: String(item.detail).slice(0, 180),
-      })),
-    hours: (value.hours ?? [])
-      .slice(0, 20)
-      .map((item) => ({
-        id: String(item.id),
-        days: String(item.days).slice(0, 80),
-        hours: String(item.hours).slice(0, 80),
-      })),
+    events: (value.events ?? []).slice(0, 50).map((item) => ({
+      id: String(item.id),
+      date: String(item.date),
+      time: String(item.time).slice(0, 80),
+      title: String(item.title).slice(0, 120),
+      description: String(item.description).slice(0, 600),
+      featured: Boolean(item.featured),
+    })),
+    rates: (value.rates ?? []).slice(0, 30).map((item) => ({
+      id: String(item.id),
+      name: String(item.name).slice(0, 100),
+      price: String(item.price).slice(0, 30),
+      detail: String(item.detail).slice(0, 180),
+    })),
+    hours: (value.hours ?? []).slice(0, 20).map((item) => ({
+      id: String(item.id),
+      days: String(item.days).slice(0, 80),
+      hours: String(item.hours).slice(0, 80),
+    })),
     staffEmails,
   };
 }
