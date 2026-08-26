@@ -9,13 +9,12 @@ type InstallPrompt = Event & {
 
 export function InstallAppButton() {
   const [prompt, setPrompt] = useState<InstallPrompt | null>(null);
-  const [isIos, setIsIos] = useState(false);
+  const [isIos] = useState(() => typeof navigator !== "undefined" && /iphone|ipad|ipod/i.test(navigator.userAgent));
   const [showHelp, setShowHelp] = useState(false);
 
   useEffect(() => {
     const standalone = window.matchMedia("(display-mode: standalone)").matches || Boolean((navigator as Navigator & { standalone?: boolean }).standalone);
     if (standalone) return;
-    setIsIos(/iphone|ipad|ipod/i.test(navigator.userAgent));
     const capture = (event: Event) => { event.preventDefault(); setPrompt(event as InstallPrompt); };
     window.addEventListener("beforeinstallprompt", capture);
     return () => window.removeEventListener("beforeinstallprompt", capture);

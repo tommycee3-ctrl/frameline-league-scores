@@ -4441,3 +4441,165 @@ body:has(.social-home) .site-footer .footer-bottom {
     min-width: 720px;
   }
 }
+
+/* FrameLine unified dark app theme */
+.frameline-app,
+.frameline-app body,
+.frameline-app main,
+#league-center {
+  background: #101b2b;
+  color: #f7fbfb;
+}
+.frameline-header {
+  background: rgba(9, 18, 31, .97);
+  border-bottom-color: #294057;
+}
+.frameline-brand,
+.frameline-header .desktop-nav a {
+  color: #f7fbfb;
+}
+.frameline-brand small { color: #91a7b6; }
+.frameline-header .mobile-menu-button {
+  border-color: #72e0d7;
+  color: #f7fbfb;
+  background: #16263b;
+}
+.frameline-app .section,
+.frameline-app .league-hub,
+.frameline-app .current-leagues-section {
+  color: #f7fbfb;
+}
+.frameline-app .current-leagues-heading p,
+.frameline-app .setup-heading p,
+.frameline-app .nationals-title > p:last-child,
+.frameline-app .section-heading > p,
+.frameline-app .recap-heading > p,
+.frameline-app .league-source-note {
+  color: #a9bbc6;
+}
+.current-league-cards article,
+.league-facts,
+.league-facts article,
+.league-standings-direct,
+.standing-direct-row,
+.full-recap,
+.lane-assignment-grid article,
+.lane-team-trigger,
+.bowler-results,
+.bowler-row,
+.league-tools input,
+.league-tools select,
+.custom-league-trigger,
+.custom-league-menu,
+.bowler-modal {
+  background: #16263b;
+  color: #f7fbfb;
+  border-color: #35506a;
+}
+.current-league-cards article { box-shadow: 6px 6px 0 #294057; }
+.current-league-cards article.active { box-shadow: 6px 6px 0 #10a7a5; }
+.league-card-main,
+.custom-league-trigger,
+.custom-league-menu > button,
+.standing-direct-row,
+.lane-team-trigger,
+.lane-assignment-grid strong,
+.full-recap td button {
+  color: #f7fbfb;
+}
+.league-card-main span,
+.custom-league-menu small,
+.league-card-main span,
+.bowler-row small { color: #9db0bd; }
+.league-facts article { border-color: #35506a !important; }
+.league-hub-tabs button {
+  border-color: #35506a;
+  background: #16263b;
+  color: #d7e5e9;
+}
+.league-hub-tabs button.active {
+  background: #72e0d7;
+  border-color: #72e0d7;
+  color: #101b2b;
+}
+.result-head,
+.full-recap > header,
+.lane-team-trigger > b { background: #09121f; }
+.standing-direct-row,
+.standing-team-block,
+.bowler-row,
+.full-recap th,
+.full-recap td,
+.lane-roster,
+.lane-roster > div,
+.custom-league-menu > button {
+  border-color: #294057;
+}
+.standing-direct-row:hover,
+.standing-direct-row:focus-visible,
+.lane-team-trigger:hover,
+.lane-team-trigger:focus-visible,
+.custom-league-menu > button:hover,
+.custom-league-menu > button:focus-visible {
+  background: #1b3448;
+}
+.standing-scorecard,
+.standing-scorecard .team-roster,
+.lane-roster,
+.recap-total,
+.full-recap th {
+  background: #122237;
+  color: #f7fbfb;
+}
+.full-recap table + table { border-top-color: #10a7a5; }
+.full-recap .winner-score,
+.winner-score {
+  color: #72e0d7;
+  background: #18384a;
+  font-weight: 950;
+}
+.full-recap .loser-score {
+  color: #d7e5e9;
+  background: transparent;
+  font-weight: 500;
+}
+.full-recap .tie-score {
+  color: #f7fbfb;
+  background: #25364a;
+  font-weight: 850;
+}
+.recap-total td small,
+.individual-points b,
+.team-points-cell b,
+.recap-key-win { color: #72e0d7; }
+.recap-key-loss { color: #9db0bd; }
+.frameline-app .eyebrow.red,
+.frameline-app .league-facts small,
+.frameline-app .lane-assignment-grid small { color: #72e0d7; }
+
+@media (max-width: 700px) {
+  .frameline-app .section {
+    padding: 34px 20px;
+  }
+  .current-leagues-section {
+    padding-bottom: 18px !important;
+  }
+  .league-identity {
+    margin-top: 0 !important;
+    padding-top: 18px !important;
+    padding-bottom: 22px !important;
+    gap: 24px;
+  }
+  .league-identity + .league-hub {
+    padding-top: 24px !important;
+  }
+  .nationals-title h2 {
+    margin: 10px 0 14px;
+    font-size: clamp(3.1rem, 14vw, 4.8rem);
+  }
+  .league-facts article {
+    padding: 17px 20px;
+  }
+  .league-facts strong { font-size: 1.7rem; }
+  .full-recap .loser-score { color: #d7e5e9; }
+}
