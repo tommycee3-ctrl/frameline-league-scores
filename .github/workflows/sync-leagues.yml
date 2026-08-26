@@ -7,6 +7,10 @@ on:
     # only when LeagueSecretary has actually changed.
     - cron: "0 */2 * * *"
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/sync-leagues.yml"
 
 permissions:
   contents: write
@@ -57,5 +61,18 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           git add -- public/data/leagues
           git commit -m "Update FrameLine league results"
-          git push
+          # The website may be edited while this long-running import is active.
+          # Replay the data commit on top of the newest site version so those
+          # unrelated changes never cause the league-data push to fail.
+          for attempt in 1 2 3; do
+            git pull --rebase origin main
+            if git push; then
+              break
+            fi
+            if [[ "$attempt" == "3" ]]; then
+              echo "Unable to publish league data after three attempts."
+              exit 1
+            fi
+            sleep 5
+          done
           echo "changed=true" >> "$GITHUB_OUTPUT"
