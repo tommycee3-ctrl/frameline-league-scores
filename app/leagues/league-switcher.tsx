@@ -2,7 +2,8 @@
 
 /* eslint-disable react-hooks/set-state-in-effect -- browser storage and URL settings hydrate this client-only dashboard after mount */
 
-import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 import leagueCatalog from "../../public/data/leagues/all.json";
 import { LeagueSnapshot, SyncedLeagueDashboard } from "./synced-league-dashboard";
 
@@ -70,7 +71,7 @@ function findBowlerMatches(query: string): BowlerSearchMatch[] {
   })).sort((a, b) => a.name.localeCompare(b.name));
 }
 
-export function LeagueSwitcher() {
+export function LeagueSwitcher({ manageOnly = false }: { manageOnly?: boolean }) {
   const [leagueId, setLeagueId] = useState(snapshots[0]?.id ?? "");
   const [leagueSelection, setLeagueSelection] = useState(0);
   const [saved, setSaved] = useState<string[]>([]);
@@ -78,13 +79,10 @@ export function LeagueSwitcher() {
   const [profileMessage, setProfileMessage] = useState("");
   const [bowlerMatches, setBowlerMatches] = useState<BowlerSearchMatch[]>([]);
   const [ready, setReady] = useState(false);
-  const [settingsOpen, setSettingsOpen] = useState(false);
+  const [settingsOpen, setSettingsOpen] = useState(manageOnly);
   const [area, setArea] = useState("Omaha");
   const [center, setCenter] = useState("West Lanes");
   const [candidateId, setCandidateId] = useState(snapshots[0]?.id ?? "");
-  const pullStart = useRef<number | null>(null);
-  const pullDistanceRef = useRef(0);
-  const [pullDistance, setPullDistance] = useState(0);
 
   useEffect(() => {
     try {
@@ -102,31 +100,11 @@ export function LeagueSwitcher() {
       setSaved(valid);
       setBowlerName(localStorage.getItem(PROFILE_KEY) || "");
       if (valid[0]) setLeagueId(valid[0]);
-      if (!requestedArea) setSettingsOpen(valid.length === 0);
+      if (manageOnly) setSettingsOpen(true);
+      else if (!requestedArea) setSettingsOpen(valid.length === 0);
     } catch { setSettingsOpen(true); }
     setReady(true);
-  }, []);
-
-  useEffect(() => {
-    const start = (event: TouchEvent) => {
-      if (window.scrollY <= 1) { pullStart.current = event.touches[0]?.clientY ?? null; pullDistanceRef.current = 0; }
-    };
-    const move = (event: TouchEvent) => {
-      if (pullStart.current === null) return;
-      const distance = Math.min(120, Math.max(0, ((event.touches[0]?.clientY ?? pullStart.current) - pullStart.current) * 0.65));
-      pullDistanceRef.current = distance; setPullDistance(distance);
-    };
-    const finish = () => {
-      const refresh = pullDistanceRef.current >= 72;
-      pullStart.current = null; pullDistanceRef.current = 0; setPullDistance(0);
-      if (refresh) { const url = new URL(window.location.href); url.searchParams.set("refresh", Date.now().toString()); window.location.assign(url.toString()); }
-    };
-    window.addEventListener("touchstart", start, { passive: true });
-    window.addEventListener("touchmove", move, { passive: true });
-    window.addEventListener("touchend", finish, { passive: true });
-    window.addEventListener("touchcancel", finish, { passive: true });
-    return () => { window.removeEventListener("touchstart", start); window.removeEventListener("touchmove", move); window.removeEventListener("touchend", finish); window.removeEventListener("touchcancel", finish); };
-  }, []);
+  }, [manageOnly]);
 
   const persist = (ids: string[]) => { setSaved(ids); localStorage.setItem(STORAGE_KEY, JSON.stringify(ids)); };
   const openLeague = (id: string) => {
@@ -174,16 +152,10 @@ export function LeagueSwitcher() {
   if (!ready) return <section className="section frameline-loading">Loading your leagues…</section>;
 
   return <div id="league-center">
-    <div className={`pull-refresh ${pullDistance >= 72 ? "ready" : ""}`} style={{ transform: `translate(-50%, ${pullDistance - 54}px)`, opacity: pullDistance ? 1 : 0 }} aria-hidden="true">
-      <span>{pullDistance >= 72 ? "↻" : "↓"}</span>{pullDistance >= 72 ? "Release to refresh" : "Pull to refresh"}
-    </div>
-
     <section className="section current-leagues-section">
       <div className="current-leagues-heading">
-        <div><p className="eyebrow red">Quick select</p><h2>Current leagues</h2><p>{bowlerName ? `Bowling as ${bowlerName}.` : "Saved on this device for quick access."}</p></div>
-        <button className="league-settings-button" onClick={() => setSettingsOpen((open) => !open)} aria-expanded={settingsOpen}>
-          <span aria-hidden="true">⚙</span> {settingsOpen ? "Close" : "Manage leagues"}
-        </button>
+        <div><p className="eyebrow red">{manageOnly ? "League setup" : "Quick select"}</p><h2>{manageOnly ? "Add / Remove Leagues" : "Current leagues"}</h2><p>{bowlerName ? `Bowling as ${bowlerName}.` : "Saved on this device for quick access."}</p></div>
+        {!manageOnly && <Link className="league-settings-button" href="/manage-leagues"><span aria-hidden="true">⚙</span> Add / Remove Leagues</Link>}
       </div>
       {savedLeagues.length ? <div className="current-league-cards">
         {savedLeagues.map((item) => <article key={item.id} className={leagueId === item.id ? "active" : ""}>
@@ -195,7 +167,7 @@ export function LeagueSwitcher() {
       </div> : <div className="empty-current"><strong>No current leagues yet.</strong><span>Use the setup below to add your first league.</span></div>}
     </section>
 
-    {settingsOpen && <section className="section league-setup" id="league-settings">
+    {(manageOnly || settingsOpen) && <section className="section league-setup" id="league-settings">
       <div className="setup-heading"><p className="eyebrow red">League setup</p><h2>Add another league</h2><p>Choose a location and league. More areas and centers can be added without changing the rest of the app.</p></div>
       <div className="bowler-profile-setup">
         <div><span className="setup-number">A</span><div><strong>Your name</strong><small>We’ll search imported rosters and add leagues that contain your name.</small></div></div>
@@ -224,7 +196,7 @@ export function LeagueSwitcher() {
       <button className="add-current-button" disabled={!candidateId || saved.includes(candidateId)} onClick={addLeague}>{saved.includes(candidateId) ? "Already in Current Leagues" : "Add to Current Leagues"} <span>→</span></button>
     </section>}
 
-    {selected && saved.length > 0 && <>
+    {!manageOnly && selected && saved.length > 0 && <>
       <section className="section nationals-overview league-identity">
         <div className="nationals-title"><p className="eyebrow red">League ID {selected.id}</p><h2>{selected.displayName}</h2><p>{schedule}</p></div>
         <div className="league-facts"><article><small>Current week</small><strong>{week}</strong></article><article><small>Last updated</small><strong>{selected.sourceUpdated || "Awaiting first update"}</strong></article></div>

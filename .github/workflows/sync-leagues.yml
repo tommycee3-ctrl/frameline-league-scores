@@ -58,6 +58,9 @@ jobs:
           # Import incomplete/new centers first; refresh the already-established
           # West Lanes collection after the broader Omaha coverage is published.
           for center in 2119 5144 2208 2110; do
+            # Always generate against the newest published catalog. This keeps
+            # a queued refresh from replaying stale league files.
+            git pull --rebase origin main
             echo "Importing bowling center $center..."
             node scripts/sync-leaguesecretary.mjs "--center=$center"
 
@@ -69,13 +72,25 @@ jobs:
             git add -- public/data/leagues
             git commit -m "Update FrameLine center $center league results"
 
-            # Replay the center's data commit on top of any website edits that
-            # landed while the importer was running, then retry if necessary.
+            # Retry safely if a website edit lands during this center import.
+            # If the generated data itself conflicts, discard only this local
+            # data commit, regenerate from the latest catalog, and publish it.
             for attempt in 1 2 3; do
-              git pull --rebase origin main
               if git push; then
                 echo "Published bowling center $center."
                 break
+              fi
+              git fetch origin main
+              if ! git rebase origin/main; then
+                git rebase --abort || true
+                git reset --hard origin/main
+                node scripts/sync-leaguesecretary.mjs "--center=$center"
+                if git diff --quiet -- public/data/leagues; then
+                  echo "Bowling center $center was already current after refreshing."
+                  break
+                fi
+                git add -- public/data/leagues
+                git commit -m "Update FrameLine center $center league results"
               fi
               if [[ "$attempt" == "3" ]]; then
                 echo "Unable to publish bowling center $center after three attempts."

@@ -3,6 +3,7 @@ import Link from "next/link";
 import "./globals.css";
 import { MobileNav } from "./mobile-nav";
 import { PwaRegister } from "./pwa-register";
+import { PullToRefresh } from "./pull-to-refresh";
 
 const assetBase = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
   appleWebApp: { capable: true, title: "FrameLine", statusBarStyle: "black-translucent" },
 };
 
-const links = [["/leagues", "My Leagues"]] as const;
+const links = [["/leagues", "My Leagues"], ["/manage-leagues", "Add / Remove Leagues"]] as const;
 
 function FrameLineMark() {
   return <span className="frameline-mark" aria-hidden="true"><span>9</span><span>/</span><span>X</span><em>FRAME 10</em></span>;
@@ -33,6 +34,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en">
       <body className="frameline-app">
         <PwaRegister />
+        <PullToRefresh />
         <header className="site-header frameline-header">
           <Link href="/" className="brand frameline-brand" aria-label="FrameLine home">
             <FrameLineMark />
@@ -40,7 +42,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           </Link>
           <nav className="desktop-nav" aria-label="Main navigation">
             <Link href="/leagues">My Leagues</Link>
-            <Link href="/leagues#league-settings">Add a League</Link>
+            <Link href="/manage-leagues">Add / Remove Leagues</Link>
           </nav>
           <MobileNav links={links} />
         </header>
@@ -56,7 +58,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           </div>
           <div>
             <Link href="/leagues">My Leagues</Link>
-            <Link href="/leagues#league-settings">Add a League</Link>
+            <Link href="/manage-leagues">Add / Remove Leagues</Link>
           </div>
         </footer>
       </body>
