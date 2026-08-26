@@ -7,7 +7,8 @@ export function BowlerSearchPanel({ onSelect, heading = "Find a bowler", intro =
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<BowlerMatch[]>([]);
   const [searched, setSearched] = useState(false);
-  const search = () => { setResults(findBowlers(query)); setSearched(true); };
+  const [openLeague, setOpenLeague] = useState("");
+  const search = () => { setResults(findBowlers(query)); setSearched(true); setOpenLeague(""); };
 
   return <section className="bowler-finder">
     <p className="frameline-kicker">BOWLER LOOKUP</p>
@@ -21,10 +22,21 @@ export function BowlerSearchPanel({ onSelect, heading = "Find a bowler", intro =
     <div className="finder-results">
       {results.map((match) => <article key={match.key}>
         <header><strong>{match.name}</strong>{onSelect && <button type="button" onClick={() => onSelect(match)}>This is me</button>}</header>
-        {match.leagues.map((league) => <div key={league.id}>
-          <span><b>{league.displayName}</b><small>{league.centerName} · {league.bowlsOn}{league.startTime ? ` at ${league.startTime}` : ""}</small></span>
-          <strong>{league.teams.length ? league.teams.join(" / ") : "Team not posted"}</strong>
-        </div>)}
+        {match.leagues.map((league) => {
+          const detailKey = `${match.key}-${league.id}`;
+          const expanded = openLeague === detailKey;
+          return <div className={`finder-league ${expanded ? "expanded" : ""}`} key={league.id}>
+            <button className="finder-league-trigger" type="button" onClick={() => setOpenLeague(expanded ? "" : detailKey)} aria-expanded={expanded}>
+              <span><b>{league.displayName}</b><small>{league.centerName} · {league.bowlsOn}{league.startTime ? ` at ${league.startTime}` : ""}</small></span>
+              <span><strong>{league.teams.length ? league.teams.join(" / ") : "Team not posted"}</strong><small>Average {league.average}</small></span>
+              <b>{expanded ? "Close" : "View team"} →</b>
+            </button>
+            {expanded && <section className="finder-team-detail">
+              <header><span><small>Bowler average</small><strong>{league.average}</strong></span><span><small>Combined team average</small><strong>{league.teamAverage ?? "—"}</strong></span></header>
+              <div>{league.teammates.length ? league.teammates.map((person) => <p key={person.name}><strong>{person.name}</strong><span>Average <b>{person.average}</b></span></p>) : <p>Team roster averages have not been posted yet.</p>}</div>
+            </section>}
+          </div>;
+        })}
       </article>)}
     </div>
   </section>;

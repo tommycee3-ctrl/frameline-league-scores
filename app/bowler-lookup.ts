@@ -12,6 +12,9 @@ export type BowlerLeague = {
   bowlsOn: string;
   startTime: string;
   teams: string[];
+  average: string;
+  teamAverage: number | null;
+  teammates: { name: string; average: string }[];
 };
 export type BowlerMatch = { key: string; name: string; leagues: BowlerLeague[] };
 
@@ -35,10 +38,14 @@ function teamName(league: LeagueSnapshot, headers: string[], row: string[]) {
   return `Team ${number}`;
 }
 
+function valueIndex(headers: string[], names: string[]) {
+  return headers.findIndex((header) => names.includes(header.toLowerCase()));
+}
+
 export function findBowlers(query: string): BowlerMatch[] {
   const wanted = tokens(query);
   if (wanted.join("").length < 2) return [];
-  const found = new Map<string, { name: string; leagues: Map<string, Set<string>> }>();
+  const found = new Map<string, { name: string; leagues: Map<string, { teams: Set<string>; average: string; teamAverage: number | null; teammates: { name: string; average: string }[] }> }>();
   leagueSnapshots.forEach((league) => {
     (league.views.bowlers ?? []).forEach((table) => {
       const nameIndex = table.headers.findIndex((header) => header.toLowerCase() === "name");
@@ -48,11 +55,24 @@ export function findBowlers(query: string): BowlerMatch[] {
         const rosterTokens = tokens(name);
         if (!name || !wanted.every((token) => rosterTokens.some((part) => part.includes(token)))) return;
         const key = name.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
-        const entry = found.get(key) ?? { name, leagues: new Map<string, Set<string>>() };
-        const teams = entry.leagues.get(league.id) ?? new Set<string>();
+        const entry = found.get(key) ?? { name, leagues: new Map() };
+        const details = entry.leagues.get(league.id) ?? { teams: new Set<string>(), average: "—", teamAverage: null, teammates: [] };
         const team = teamName(league, table.headers, row);
-        if (team) teams.add(team);
-        entry.leagues.set(league.id, teams);
+        if (team) details.teams.add(team);
+        const averageIndex = valueIndex(table.headers, ["avg", "average"]);
+        const teamIndex = valueIndex(table.headers, ["team#"]);
+        const teamNumber = teamIndex >= 0 ? row[teamIndex] : "";
+        details.average = averageIndex >= 0 && row[averageIndex] ? row[averageIndex] : "—";
+        if (teamNumber && teamNumber !== "0") {
+          const teammates = table.rows.filter((item) => item[teamIndex] === teamNumber).map((item) => ({
+            name: item[nameIndex] ?? "Bowler",
+            average: averageIndex >= 0 && item[averageIndex] ? item[averageIndex] : "—",
+          }));
+          details.teammates = [...new Map(teammates.map((person) => [tokens(person.name).join(" "), person])).values()];
+          const numeric = details.teammates.map((person) => Number(person.average)).filter(Number.isFinite);
+          details.teamAverage = numeric.length ? numeric.reduce((sum, average) => sum + average, 0) : null;
+        }
+        entry.leagues.set(league.id, details);
         found.set(key, entry);
       });
     });
@@ -60,7 +80,7 @@ export function findBowlers(query: string): BowlerMatch[] {
   return [...found.entries()].map(([key, item]) => ({
     key,
     name: item.name,
-    leagues: [...item.leagues.entries()].map(([id, teams]) => {
+    leagues: [...item.leagues.entries()].map(([id, details]) => {
       const league = leagueSnapshots.find((entry) => entry.id === id) as (LeagueSnapshot & { centerName?: string }) | undefined;
       return {
         id,
@@ -68,7 +88,10 @@ export function findBowlers(query: string): BowlerMatch[] {
         centerName: league?.centerName ?? "Bowling center",
         bowlsOn: league?.bowlsOn ?? "",
         startTime: league?.startTime ?? "",
-        teams: [...teams],
+        teams: [...details.teams],
+        average: details.average,
+        teamAverage: details.teamAverage,
+        teammates: details.teammates,
       };
     }),
   })).sort((a, b) => a.name.localeCompare(b.name));

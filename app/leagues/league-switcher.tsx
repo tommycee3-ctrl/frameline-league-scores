@@ -4,6 +4,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { findBowlers } from "../bowler-lookup";
 import leagueCatalog from "../../public/data/leagues/all.json";
 import { LeagueSnapshot, SyncedLeagueDashboard } from "./synced-league-dashboard";
 
@@ -150,6 +151,7 @@ export function LeagueSwitcher({ manageOnly = false }: { manageOnly?: boolean })
   });
   const week = selected?.week ? `Week ${selected.week}` : "Awaiting Week 1";
   const schedule = selected ? `${selected.bowlsOn} · ${selected.startTime} · Started ${selected.startDate}` : "";
+  const bowlerProfile = bowlerName ? findBowlers(bowlerName).find((match) => nameTokens(match.name).join(" ") === nameTokens(bowlerName).join(" ")) : undefined;
 
   if (!ready) return <section className="section frameline-loading">Loading your leagues…</section>;
 
@@ -160,12 +162,19 @@ export function LeagueSwitcher({ manageOnly = false }: { manageOnly?: boolean })
         {!manageOnly && <Link className="league-settings-button" href="/manage-leagues"><span aria-hidden="true">⚙</span> Add / Remove Leagues</Link>}
       </div>
       {savedLeagues.length ? <div className="current-league-cards">
-        {savedLeagues.map((item) => <article key={item.id} className={leagueId === item.id ? "active" : ""}>
-          <button className="league-card-main" onClick={() => openLeague(item.id)}>
-            <small>{item.bowlsOn} · {item.startTime}</small><strong>{item.displayName}</strong><span>{item.week ? `Week ${item.week}` : "Awaiting results"} →</span>
-          </button>
-          <button className="remove-current" onClick={() => removeLeague(item.id)} aria-label={`Remove ${item.displayName}`}>×</button>
-        </article>)}
+        {savedLeagues.map((item) => {
+          const details = bowlerProfile?.leagues.find((league) => league.id === item.id);
+          return <article key={item.id} className={leagueId === item.id ? "active" : ""}>
+            <button className="league-card-main" onClick={() => openLeague(item.id)}>
+              <small>{item.bowlsOn} · {item.startTime}</small>
+              <strong>{item.displayName}</strong>
+              <span className="league-card-team">{details?.teams.join(" / ") || "Team not posted"}</span>
+              <span className="league-card-stats"><b>Average {details?.average ?? "—"}</b><b>{item.week ? `Week ${item.week}` : "Awaiting results"}</b></span>
+              <span className="league-card-updated">Updated {item.sourceUpdated || "not yet posted"} →</span>
+            </button>
+            <button className="remove-current" onClick={() => removeLeague(item.id)} aria-label={`Remove ${item.displayName}`}>×</button>
+          </article>;
+        })}
       </div> : <div className="empty-current"><strong>No current leagues yet.</strong><span>Use the setup below to add your first league.</span></div>}
     </section>
 

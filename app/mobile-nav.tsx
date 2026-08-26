@@ -12,7 +12,6 @@ export function MobileNav({ links }: { links: readonly (readonly [string, string
       </button>
       {open && (
         <nav className="mobile-panel" aria-label="Mobile navigation">
-          <Link href="/" onClick={() => setOpen(false)}>Home</Link>
           {links.map(([href, label]) => <Link key={href} href={href} onClick={() => setOpen(false)}>{label}</Link>)}
         </nav>
       )}
