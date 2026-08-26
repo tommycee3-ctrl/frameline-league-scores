@@ -1,5 +1,5 @@
-const CACHE_NAME = "frameline-shell-v1";
-const SHELL = ["./", "./leagues/", "./open-bowling/", "./events/", "./food-drinks/", "./cosmic-bowling/", "./manifest.webmanifest", "./icon-192.png"];
+const CACHE_NAME = "frameline-shell-v2";
+const SHELL = ["./", "./leagues/", "./manifest.webmanifest", "./frameline-mark.svg", "./icon-192.png", "./icon-512.png"];
 
 self.addEventListener("install", event => {
   event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(SHELL)).then(() => self.skipWaiting()));

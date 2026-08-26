@@ -3378,6 +3378,7 @@ body:has(.social-home) .site-footer .footer-bottom {
 .frameline-mark>span:nth-child(3) { border-right: 0; }
 .frameline-mark em { grid-column: 1/4; display: grid; place-items: center; color: #9eb0c0; font: normal 800 7px/1 sans-serif; letter-spacing: .13em; }
 .frameline-header .desktop-nav a { color: #101b2b; }
+.install-app-control{position:relative;margin-left:18px}.install-app-control>button{min-height:40px;padding:0 16px;border:2px solid #101b2b;background:#101b2b;color:#fff;font-weight:900;cursor:pointer}.install-help{position:absolute;z-index:30;top:50px;right:0;width:min(310px,calc(100vw - 32px));display:flex;gap:12px;align-items:flex-start;padding:15px;border:2px solid #101b2b;background:#fff;color:#101b2b;box-shadow:7px 7px 0 #10a7a5}.install-help>button{margin-left:auto;border:0;background:transparent;color:#101b2b;font-size:1.4rem;cursor:pointer}
 .frameline-footer { display: grid; grid-template-columns: 1.2fr 1fr auto; gap: 40px; padding: 44px max(5vw,24px); background: #101b2b; color: #dce8eb; }
 .frameline-footer > div { display: grid; align-content: start; gap: 9px; }
 .frameline-footer p { margin: 0; color: #9db0b8; }
@@ -3423,6 +3424,7 @@ body:has(.social-home) .site-footer .footer-bottom {
 @media(max-width:900px){.frameline-hero{grid-template-columns:1fr;min-height:0}.score-preview{max-width:650px}.frameline-feature-grid{grid-template-columns:repeat(2,1fr)}.current-league-cards{grid-template-columns:repeat(2,1fr)}.frameline-footer{grid-template-columns:1fr 1fr}.setup-steps{grid-template-columns:1fr}.coverage-strip{display:grid;grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.frameline-header{padding:12px 16px}.frameline-brand>span:last-child{font-size:1.15rem}.frameline-mark{width:42px;height:42px}.frameline-hero{padding:52px 22px}.hero-copy h1{font-size:clamp(4rem,21vw,6.4rem)}.score-preview{box-shadow:9px 9px 0 #10a7a5}.score-preview-row{padding:18px 14px;grid-template-columns:30px 1fr auto}.frameline-feature-grid{grid-template-columns:1fr 1fr}.frameline-feature-grid>a{min-height:190px;padding:24px 18px}.frameline-feature-grid h2{font-size:1.55rem}.coverage-strip{grid-template-columns:1fr 1fr;padding:26px 20px}.current-leagues-heading{align-items:flex-start;flex-direction:column}.current-league-cards{grid-template-columns:1fr}.league-card-main{min-height:126px}.frameline-footer{grid-template-columns:1fr;padding:36px 22px}.league-identity{margin-top:18px}.bowler-name-row{grid-template-columns:1fr}.bowler-name-row input{border-right:2px solid #101b2b;border-bottom:0}.bowler-name-row button{min-height:54px}}
 @media(max-width:600px){.bowler-match-results button{grid-template-columns:1fr;gap:4px}.bowler-match-results button b{margin-top:5px}.bowler-match-results article>strong{font-size:1.08rem}}
+@media(max-width:900px){.install-app-control{position:fixed;right:16px;bottom:16px;z-index:65;margin:0}.install-app-control>button{box-shadow:5px 5px 0 #10a7a5}.install-help{top:auto;right:0;bottom:54px}}
 .league-standings-direct {
   border: 1px solid var(--navy);
   background: #fff;

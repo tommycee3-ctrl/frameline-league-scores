@@ -9,6 +9,7 @@
     "dev": "vinext dev",
     "build": "vinext build",
     "build:pages": "next build",
+    "icons": "node scripts/generate-app-icons.mjs",
     "sync:leagues": "node scripts/sync-leaguesecretary.mjs --force",
     "start": "vinext start",
     "test": "npm run build && node --test tests/rendered-html.test.mjs",

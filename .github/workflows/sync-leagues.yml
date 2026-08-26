@@ -2,10 +2,9 @@ name: Sync league results
 
 on:
   schedule:
-    # Run hourly so Central daylight/standard time are both covered. The gate
-    # checks every active league on each even Central-time hour and publishes
-    # only when LeagueSecretary has actually changed.
-    - cron: "0 */2 * * *"
+    # GitHub schedules in UTC. Run hourly and use the Central-time gate below
+    # so the refresh stays on 10 PM, midnight, 2 AM, etc. across DST changes.
+    - cron: "0 * * * *"
   workflow_dispatch:
   push:
     branches: [main]
@@ -27,11 +26,17 @@ jobs:
         id: window
         shell: bash
         run: |
-          if [[ "$GITHUB_EVENT_NAME" == "workflow_dispatch" ]]; then
+          if [[ "$GITHUB_EVENT_NAME" == "workflow_dispatch" || "$GITHUB_EVENT_NAME" == "push" ]]; then
             echo "run=true" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          echo "run=true" >> "$GITHUB_OUTPUT"
+          central_hour=$(TZ=America/Chicago date +%H)
+          if (( 10#$central_hour % 2 == 0 )); then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "Skipping odd Central-time hour $central_hour."
+          fi
       - uses: actions/checkout@v4
         if: steps.window.outputs.run == 'true'
       - uses: actions/setup-node@v4
