@@ -13,6 +13,10 @@ const seedLeagues = [
   {id:"64208",slug:"graphic-arts-bowling-league-2627",name:"GRAPHIC ARTS BOWLING LEAGUE 26-27",displayName:"Graphic Arts Bowling League 26-27",bowlsOn:"Friday",startDate:"Fall 2026",startTime:"6:30 PM",bowlDay:5,type:"Handicap Mens"}
 ];
 const centers=[
+  {id:"1163",name:"Thunderbowl of Council Bluffs",area:"Council Bluffs",slug:"thunderbowl-of-council-bluffs-council-bluffs-iowa"},
+  {id:"2118",name:"Sun Valley Lanes",area:"Lincoln",slug:"sun-valley-lanes-lincoln-nebraska"},
+  {id:"2173",name:"Parkway Lanes",area:"Lincoln",slug:"parkway-lanes---lincoln-lincoln-nebraska"},
+  {id:"2137",name:"Hollywood Bowl",area:"Lincoln",slug:"hollywood-bowl-lincoln-nebraska"},
   {id:"2110",name:"West Lanes",area:"Omaha",slug:"west-lanes-bowl-omaha-nebraska"},
   {id:"2119",name:"Maplewood Lanes",area:"Omaha",slug:"maplewood-lanes-omaha-nebraska"},
   {id:"5144",name:"Mockingbird Lanes",area:"Omaha",slug:"mockingbird-lanes"},
