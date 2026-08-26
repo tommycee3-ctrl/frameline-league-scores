@@ -22,8 +22,6 @@ concurrency:
 jobs:
   sync:
     runs-on: ubuntu-latest
-    outputs:
-      changed: ${{ steps.publish.outputs.changed }}
     steps:
       - name: Enable scheduled or manual sync
         id: window
@@ -45,34 +43,37 @@ jobs:
         if: steps.window.outputs.run == 'true'
       - run: npx playwright install --with-deps chromium
         if: steps.window.outputs.run == 'true'
-      - name: Check LeagueSecretary for verified updates
+      - name: Import and publish each bowling center
         if: steps.window.outputs.run == 'true'
-        run: node scripts/sync-leaguesecretary.mjs
-      - name: Publish changed league data
-        id: publish
-        if: steps.window.outputs.run == 'true'
+        shell: bash
         run: |
-          if git diff --quiet -- public/data/leagues; then
-            echo "No new league data to publish."
-            echo "changed=false" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
           git config user.name "FrameLine League Sync"
           git config user.email "actions@users.noreply.github.com"
-          git add -- public/data/leagues
-          git commit -m "Update FrameLine league results"
-          # The website may be edited while this long-running import is active.
-          # Replay the data commit on top of the newest site version so those
-          # unrelated changes never cause the league-data push to fail.
-          for attempt in 1 2 3; do
-            git pull --rebase origin main
-            if git push; then
-              break
+
+          for center in 2110 2119 5144 2208; do
+            echo "Importing bowling center $center..."
+            node scripts/sync-leaguesecretary.mjs "--center=$center"
+
+            if git diff --quiet -- public/data/leagues; then
+              echo "Bowling center $center had no new data to publish."
+              continue
             fi
-            if [[ "$attempt" == "3" ]]; then
-              echo "Unable to publish league data after three attempts."
-              exit 1
-            fi
-            sleep 5
+
+            git add -- public/data/leagues
+            git commit -m "Update FrameLine center $center league results"
+
+            # Replay the center's data commit on top of any website edits that
+            # landed while the importer was running, then retry if necessary.
+            for attempt in 1 2 3; do
+              git pull --rebase origin main
+              if git push; then
+                echo "Published bowling center $center."
+                break
+              fi
+              if [[ "$attempt" == "3" ]]; then
+                echo "Unable to publish bowling center $center after three attempts."
+                exit 1
+              fi
+              sleep 5
+            done
           done
-          echo "changed=true" >> "$GITHUB_OUTPUT"

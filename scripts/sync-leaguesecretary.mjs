@@ -22,6 +22,7 @@ const knownById=new Map(seedLeagues.map(league=>[league.id,league]));
 const viewPaths = { standings:"league/standings", bowlers:"bowler/list", recaps:"league/recaps", lanes:"league/lane-assignments", rosters:"team/list" };
 const force = process.argv.includes("--force");
 const requestedLeague=process.argv.find(argument=>argument.startsWith("--league="))?.split("=")[1];
+const requestedCenter=process.argv.find(argument=>argument.startsWith("--center="))?.split("=")[1];
 const chicago = Object.fromEntries(new Intl.DateTimeFormat("en-US",{timeZone:"America/Chicago",year:"numeric",month:"2-digit",day:"2-digit",weekday:"short",hour:"numeric",hour12:false}).formatToParts(new Date()).map(p=>[p.type,p.value]));
 const dayIndex={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[chicago.weekday];
 
@@ -134,7 +135,7 @@ function currentRoster(table) {
 
 const browser = await chromium.launch({headless:true});
 const discoveredLeagues=await discoverLeagues(browser);
-const leagues=requestedLeague?discoveredLeagues.filter(league=>league.id===requestedLeague):discoveredLeagues;
+const leagues=discoveredLeagues.filter(league=>(!requestedLeague||league.id===requestedLeague)&&(!requestedCenter||league.centerId===requestedCenter));
 console.log(`Discovered ${leagues.length} active Omaha leagues across ${centers.length} centers.`);
 const candidates=[];
 for(const league of leagues){
