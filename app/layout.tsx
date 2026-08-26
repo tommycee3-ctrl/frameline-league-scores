@@ -3,7 +3,6 @@ import Link from "next/link";
 import "./globals.css";
 import { MobileNav } from "./mobile-nav";
 import { PwaRegister } from "./pwa-register";
-import { InstallAppButton } from "./install-app-button";
 
 const assetBase = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
@@ -43,7 +42,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             <Link href="/leagues">My Leagues</Link>
             <Link href="/leagues#league-settings">Add a League</Link>
           </nav>
-          <InstallAppButton />
           <MobileNav links={links} />
         </header>
         <main>{children}</main>
