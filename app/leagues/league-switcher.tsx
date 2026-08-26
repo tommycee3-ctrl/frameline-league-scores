@@ -87,6 +87,7 @@ export function LeagueSwitcher({ manageOnly = false }: { manageOnly?: boolean })
   useEffect(() => {
     try {
       const requestedArea = new URLSearchParams(window.location.search).get("area");
+      const requestedLeague = new URLSearchParams(window.location.search).get("league");
       if (requestedArea && AREAS.includes(requestedArea)) {
         setArea(requestedArea);
         setCenter(CENTERS[requestedArea]?.[0] ?? "");
@@ -99,7 +100,8 @@ export function LeagueSwitcher({ manageOnly = false }: { manageOnly?: boolean })
       // Local storage is client-only; hydrate the saved dashboard after mount.
       setSaved(valid);
       setBowlerName(localStorage.getItem(PROFILE_KEY) || "");
-      if (valid[0]) setLeagueId(valid[0]);
+      if (requestedLeague && snapshots.some((item) => item.id === requestedLeague)) setLeagueId(requestedLeague);
+      else if (valid[0]) setLeagueId(valid[0]);
       if (manageOnly) setSettingsOpen(true);
       else if (!requestedArea) setSettingsOpen(valid.length === 0);
     } catch { setSettingsOpen(true); }

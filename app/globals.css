@@ -4601,3 +4601,41 @@ body:has(.social-home) .site-footer .footer-bottom {
   .league-facts strong { font-size: 1.7rem; }
   .full-recap .loser-score { color: #d7e5e9; }
 }
+
+/* Personalized FrameLine welcome and bowler lookup */
+.welcome-home { min-height: calc(100vh - 88px); background: #101b2b; color: #f7fbfb; padding: clamp(42px,7vw,90px) max(5vw,22px); }
+.onboarding-home,.public-bowler-search { display:grid;place-items:start center; }
+.bowler-finder { width:min(980px,100%);padding:clamp(28px,5vw,62px);border:2px solid #35506a;background:#16263b;box-shadow:12px 12px 0 #10a7a5; }
+.bowler-finder h1,.welcome-heading h1 { margin:0;font:900 clamp(4rem,9vw,8rem)/.8 "Barlow Condensed",sans-serif;text-transform:uppercase;letter-spacing:-.025em; }
+.bowler-finder>p:not(.frameline-kicker),.welcome-heading>div>p:last-child { color:#a9bbc6;font-size:1.05rem;line-height:1.6; }
+.bowler-finder-form { display:grid;grid-template-columns:1fr auto;margin-top:28px; }
+.bowler-finder-form input { min-height:62px;border:2px solid #72e0d7;border-right:0;background:#09121f;color:#fff;padding:0 18px;font-size:1rem; }
+.bowler-finder-form button,.finder-results header button,.welcome-heading>button { min-height:62px;border:2px solid #72e0d7;background:#72e0d7;color:#101b2b;padding:0 24px;font-weight:900;text-transform:uppercase;cursor:pointer; }
+.finder-empty { margin:22px 0 0;color:#a9bbc6; }
+.finder-results { display:grid;gap:14px;margin-top:26px; }
+.finder-results article { border:1px solid #35506a;background:#101b2b; }
+.finder-results article>header { display:flex;align-items:center;justify-content:space-between;gap:18px;padding:17px 20px;border-bottom:1px solid #35506a; }
+.finder-results article>header>strong { font-size:1.3rem; }
+.finder-results header button { min-height:40px;padding:0 14px;font-size:.68rem; }
+.finder-results article>div { display:grid;grid-template-columns:1fr auto;gap:18px;padding:15px 20px;border-top:1px solid #294057; }
+.finder-results article>div:first-of-type { border-top:0; }
+.finder-results article>div>span { display:grid;gap:5px; }
+.finder-results article>div small { color:#91a7b6; }
+.finder-results article>div>strong { color:#72e0d7;text-align:right; }
+.welcome-heading { display:flex;align-items:end;justify-content:space-between;gap:30px;max-width:1280px;margin:0 auto 55px; }
+.welcome-heading h1 em { color:#72e0d7;font-style:normal; }
+.welcome-heading>button { background:transparent;color:#72e0d7; }
+.welcome-leagues { max-width:1280px;margin:auto; }
+.welcome-section-title { display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:22px; }
+.welcome-section-title small { color:#72e0d7;font-weight:900;letter-spacing:.16em; }
+.welcome-section-title h2 { margin:5px 0 0;font:900 clamp(3rem,6vw,5.5rem)/.85 "Barlow Condensed",sans-serif;text-transform:uppercase; }
+.welcome-section-title>a { border:2px solid #72e0d7;padding:13px 18px;color:#72e0d7;font-weight:900; }
+.welcome-league-grid { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px; }
+.welcome-league-grid>a,.welcome-empty { min-height:170px;display:grid;align-content:center;gap:12px;padding:26px;border:2px solid #35506a;background:#16263b;color:#f7fbfb;box-shadow:7px 7px 0 #294057; }
+.welcome-league-grid>a:hover,.welcome-league-grid>a:focus-visible { border-color:#72e0d7;box-shadow:7px 7px 0 #10a7a5; }
+.welcome-league-grid small { color:#72e0d7;font-weight:900;text-transform:uppercase;letter-spacing:.1em; }
+.welcome-league-grid strong { font-size:1.25rem; }
+.welcome-league-grid span { color:#a9bbc6; }
+.welcome-empty a { color:#72e0d7;font-weight:900; }
+@media(max-width:800px){.welcome-league-grid{grid-template-columns:1fr 1fr}.welcome-heading{align-items:flex-start;flex-direction:column}}
+@media(max-width:600px){.welcome-home{padding:32px 20px}.bowler-finder{padding:28px 20px;box-shadow:7px 7px 0 #10a7a5}.bowler-finder h1,.welcome-heading h1{font-size:clamp(3.6rem,18vw,5.5rem)}.bowler-finder-form{grid-template-columns:1fr}.bowler-finder-form input{border-right:2px solid #72e0d7;border-bottom:0}.finder-results article>header,.finder-results article>div{align-items:start;grid-template-columns:1fr}.finder-results article>header{flex-direction:column}.finder-results article>div>strong{text-align:left}.welcome-heading{margin-bottom:38px}.welcome-heading>button{width:100%}.welcome-section-title{align-items:flex-start;flex-direction:column}.welcome-league-grid{grid-template-columns:1fr}}
