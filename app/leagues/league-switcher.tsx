@@ -21,12 +21,30 @@ function nameTokens(value: string) {
   return value.toLowerCase().replace(/\b(jr|sr|ii|iii|iv|2nd|3rd)\b/g, " ").replace(/[^a-z0-9]+/g, " ").trim().split(/\s+/).filter(Boolean).sort();
 }
 
-type BowlerSearchMatch = { key: string; name: string; leagueIds: string[] };
+type BowlerLeagueMatch = { id: string; teams: string[] };
+type BowlerSearchMatch = { key: string; name: string; leagues: BowlerLeagueMatch[] };
+
+function bowlerTeamName(league: LeagueSnapshot, headers: string[], row: string[]) {
+  const teamIndex = headers.findIndex((header) => header.toLowerCase() === "team");
+  const directName = teamIndex >= 0 ? (row[teamIndex] ?? "").trim() : "";
+  if (directName && directName !== "0") return directName;
+  const numberIndex = headers.findIndex((header) => header.toLowerCase() === "team#");
+  const teamNumber = numberIndex >= 0 ? (row[numberIndex] ?? "").trim() : "";
+  if (!teamNumber || teamNumber === "0") return "";
+  for (const table of league.views.standings ?? []) {
+    const standingsNumber = table.headers.findIndex((header) => header.toLowerCase() === "team#");
+    const standingsName = table.headers.findIndex((header) => header.toLowerCase() === "team");
+    if (standingsNumber < 0 || standingsName < 0) continue;
+    const match = table.rows.find((standingsRow) => standingsRow[standingsNumber] === teamNumber);
+    if (match?.[standingsName]) return match[standingsName];
+  }
+  return `Team ${teamNumber}`;
+}
 
 function findBowlerMatches(query: string): BowlerSearchMatch[] {
   const wanted = nameTokens(query);
   if (wanted.join("").length < 2) return [];
-  const matches = new Map<string, { name: string; leagueIds: Set<string> }>();
+  const matches = new Map<string, { name: string; leagues: Map<string, Set<string>> }>();
   snapshots.forEach((league) => {
     (league.views.bowlers ?? []).forEach((table) => {
       const index = table.headers.findIndex((header) => header.toLowerCase() === "name");
@@ -36,13 +54,20 @@ function findBowlerMatches(query: string): BowlerSearchMatch[] {
         const roster = nameTokens(name);
         if (!name || !wanted.every((token) => roster.some((part) => part.includes(token)))) return;
         const key = name.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
-        const current = matches.get(key) ?? { name, leagueIds: new Set<string>() };
-        current.leagueIds.add(league.id);
+        const current = matches.get(key) ?? { name, leagues: new Map<string, Set<string>>() };
+        const teams = current.leagues.get(league.id) ?? new Set<string>();
+        const team = bowlerTeamName(league, table.headers, row);
+        if (team) teams.add(team);
+        current.leagues.set(league.id, teams);
         matches.set(key, current);
       });
     });
   });
-  return [...matches.entries()].map(([key, match]) => ({ key, name: match.name, leagueIds: [...match.leagueIds] })).sort((a, b) => a.name.localeCompare(b.name));
+  return [...matches.entries()].map(([key, match]) => ({
+    key,
+    name: match.name,
+    leagues: [...match.leagues.entries()].map(([id, teams]) => ({ id, teams: [...teams] })),
+  })).sort((a, b) => a.name.localeCompare(b.name));
 }
 
 export function LeagueSwitcher() {
@@ -179,12 +204,12 @@ export function LeagueSwitcher() {
         {bowlerMatches.length > 0 && <div className="bowler-match-results">
           {bowlerMatches.map((match) => <article key={match.key}>
             <strong>{match.name}</strong>
-            <div>{match.leagueIds.map((id) => {
+            <div>{match.leagues.map(({ id, teams }) => {
               const league = snapshots.find((item) => item.id === id);
               if (!league) return null;
               const location = league as LeagueSnapshot & { centerName?: string };
               return <button type="button" key={id} onClick={() => selectBowlerLeague(match, id)}>
-                <span>{league.displayName}</span><small>{location.centerName ?? "Bowling center"} · {league.bowlsOn} at {league.startTime}</small><b>{saved.includes(id) ? "Open league" : "Add league"} →</b>
+                <span>{league.displayName}{teams.length > 0 && <em>{teams.join(" / ")}</em>}</span><small>{location.centerName ?? "Bowling center"} · {league.bowlsOn} at {league.startTime}</small><b>{saved.includes(id) ? "Open league" : "Add league"} →</b>
               </button>;
             })}</div>
           </article>)}
