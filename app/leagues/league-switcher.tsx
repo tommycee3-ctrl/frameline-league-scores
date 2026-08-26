@@ -3,6 +3,7 @@
 /* eslint-disable react-hooks/set-state-in-effect -- browser storage and URL settings hydrate this client-only dashboard after mount */
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { findBowlers } from "../bowler-lookup";
 import leagueCatalog from "../../public/data/leagues/all.json";
@@ -73,6 +74,7 @@ function findBowlerMatches(query: string): BowlerSearchMatch[] {
 }
 
 export function LeagueSwitcher({ manageOnly = false }: { manageOnly?: boolean }) {
+  const router = useRouter();
   const [leagueId, setLeagueId] = useState(snapshots[0]?.id ?? "");
   const [leagueSelection, setLeagueSelection] = useState(0);
   const [saved, setSaved] = useState<string[]>([]);
@@ -98,6 +100,11 @@ export function LeagueSwitcher({ manageOnly = false }: { manageOnly?: boolean })
       const current = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]") as string[];
       const legacy = JSON.parse(localStorage.getItem("west-lanes-favorite-leagues") || "[]") as string[];
       const valid = (current.length ? current : legacy).filter((id) => snapshots.some((item) => item.id === id));
+      if (!manageOnly && valid.length === 0) {
+        localStorage.removeItem(PROFILE_KEY);
+        router.replace("/");
+        return;
+      }
       // Local storage is client-only; hydrate the saved dashboard after mount.
       setSaved(valid);
       setBowlerName(localStorage.getItem(PROFILE_KEY) || "");
@@ -107,7 +114,7 @@ export function LeagueSwitcher({ manageOnly = false }: { manageOnly?: boolean })
       else if (!requestedArea) setSettingsOpen(valid.length === 0);
     } catch { setSettingsOpen(true); }
     setReady(true);
-  }, [manageOnly]);
+  }, [manageOnly, router]);
 
   const persist = (ids: string[]) => { setSaved(ids); localStorage.setItem(STORAGE_KEY, JSON.stringify(ids)); };
   const openLeague = (id: string) => {
@@ -138,7 +145,11 @@ export function LeagueSwitcher({ manageOnly = false }: { manageOnly?: boolean })
   const removeLeague = (id: string) => {
     const next = saved.filter((savedId) => savedId !== id); persist(next);
     if (id === leagueId && next[0]) openLeague(next[0]);
-    if (!next.length) setSettingsOpen(true);
+    if (!next.length) {
+      localStorage.removeItem(PROFILE_KEY);
+      setBowlerName("");
+      router.replace("/");
+    }
   };
 
   const selected = snapshots.find((item) => item.id === leagueId) ?? snapshots[0];
