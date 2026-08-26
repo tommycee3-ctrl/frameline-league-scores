@@ -4538,6 +4538,39 @@ body:has(.social-home) .site-footer .footer-bottom {
 .frameline-app .bowler-name-row button { background:#72e0d7;border-color:#72e0d7;color:#101b2b; }
 .frameline-app .empty-current { background:#16263b;border-color:#35506a;color:#f7fbfb; }
 .frameline-app .empty-current span { color:#a9bbc6; }
+.frameline-app .remove-current {
+  background:#72e0d7;
+  color:#101b2b;
+  border:1px solid #101b2b;
+  font-weight:900;
+}
+.frameline-app .remove-current:hover,
+.frameline-app .remove-current:focus-visible { background:#10a7a5;color:#07111f; }
+.back-to-top {
+  position:fixed;
+  right:max(18px,env(safe-area-inset-right));
+  bottom:max(20px,calc(env(safe-area-inset-bottom) + 12px));
+  z-index:120;
+  width:58px;
+  height:58px;
+  display:grid;
+  place-content:center;
+  gap:0;
+  border:2px solid #101b2b;
+  border-radius:50%;
+  background:#72e0d7;
+  color:#101b2b;
+  box-shadow:4px 4px 0 rgba(9,18,31,.7);
+  opacity:0;
+  pointer-events:none;
+  transform:translateY(14px);
+  transition:opacity .18s,transform .18s,background .18s;
+  cursor:pointer;
+}
+.back-to-top.visible { opacity:1;pointer-events:auto;transform:translateY(0); }
+.back-to-top:hover,.back-to-top:focus-visible { background:#10a7a5; }
+.back-to-top span { font:900 1.45rem/.8 sans-serif; }
+.back-to-top small { font-size:.6rem;font-weight:900;text-transform:uppercase;letter-spacing:.06em; }
 .finder-league { display:block !important;padding:0 !important; }
 .finder-league-trigger { width:100%;display:grid;grid-template-columns:minmax(220px,1.4fr) minmax(180px,1fr) auto;align-items:center;gap:20px;padding:18px 20px;border:0;background:#16263b;color:#f7fbfb;text-align:left;cursor:pointer; }
 .finder-league-trigger span { display:grid;gap:5px; }

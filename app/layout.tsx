@@ -4,6 +4,7 @@ import "./globals.css";
 import { MobileNav } from "./mobile-nav";
 import { PwaRegister } from "./pwa-register";
 import { PullToRefresh } from "./pull-to-refresh";
+import { BackToTop } from "./back-to-top";
 
 const assetBase = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
@@ -35,6 +36,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body className="frameline-app">
         <PwaRegister />
         <PullToRefresh />
+        <BackToTop />
         <header className="site-header frameline-header">
           <Link href="/" className="brand frameline-brand" aria-label="FrameLine home">
             <FrameLineMark />
