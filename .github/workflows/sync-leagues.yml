@@ -50,7 +50,9 @@ jobs:
           git config user.name "FrameLine League Sync"
           git config user.email "actions@users.noreply.github.com"
 
-          for center in 2110 2119 5144 2208; do
+          # Import incomplete/new centers first; refresh the already-established
+          # West Lanes collection after the broader Omaha coverage is published.
+          for center in 2119 5144 2208 2110; do
             echo "Importing bowling center $center..."
             node scripts/sync-leaguesecretary.mjs "--center=$center"
 
