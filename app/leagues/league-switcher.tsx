@@ -12,6 +12,7 @@ import { LeagueSnapshot, SyncedLeagueDashboard } from "./synced-league-dashboard
 const snapshots = leagueCatalog as LeagueSnapshot[];
 const STORAGE_KEY = "frameline-current-leagues";
 const PROFILE_KEY = "frameline-bowler-name";
+const LEAGUE_BOWLERS_KEY = "frameline-league-bowlers";
 const AREAS = ["Omaha", "Bellevue", "Lincoln", "Council Bluffs"];
 const CENTERS: Record<string, string[]> = {
   Omaha: ["West Lanes", "Maplewood Lanes", "Mockingbird Lanes", "Western Bowl"],
@@ -86,6 +87,8 @@ export function LeagueSwitcher({ manageOnly = false }: { manageOnly?: boolean })
   const [area, setArea] = useState("Omaha");
   const [center, setCenter] = useState("West Lanes");
   const [candidateId, setCandidateId] = useState(snapshots[0]?.id ?? "");
+  const [leagueBowlers, setLeagueBowlers] = useState<Record<string, string>>({});
+  const [manualBowlerChoices, setManualBowlerChoices] = useState<string[]>([]);
 
   useEffect(() => {
     try {
@@ -108,6 +111,7 @@ export function LeagueSwitcher({ manageOnly = false }: { manageOnly?: boolean })
       // Local storage is client-only; hydrate the saved dashboard after mount.
       setSaved(valid);
       setBowlerName(localStorage.getItem(PROFILE_KEY) || "");
+      setLeagueBowlers(JSON.parse(localStorage.getItem(LEAGUE_BOWLERS_KEY) || "{}"));
       if (requestedLeague && snapshots.some((item) => item.id === requestedLeague)) setLeagueId(requestedLeague);
       else if (valid[0]) setLeagueId(valid[0]);
       if (manageOnly) setSettingsOpen(true);
@@ -121,10 +125,29 @@ export function LeagueSwitcher({ manageOnly = false }: { manageOnly?: boolean })
     setLeagueId(id); setLeagueSelection((value) => value + 1); setSettingsOpen(false);
     window.requestAnimationFrame(() => window.requestAnimationFrame(() => document.getElementById("league-dashboard")?.scrollIntoView({ behavior: "smooth", block: "start" })));
   };
+  const finishManualLeague = (name: string) => {
+    const nextBowlers = { ...leagueBowlers, [candidateId]: name };
+    setLeagueBowlers(nextBowlers);
+    localStorage.setItem(LEAGUE_BOWLERS_KEY, JSON.stringify(nextBowlers));
+    if (name && !bowlerName) {
+      localStorage.setItem(PROFILE_KEY, name);
+      setBowlerName(name);
+    }
+    if (!saved.includes(candidateId)) persist([...saved, candidateId]);
+    setManualBowlerChoices([]);
+    setProfileMessage("");
+    openLeague(candidateId);
+  };
   const addLeague = () => {
     if (!candidateId) return;
-    if (!saved.includes(candidateId)) persist([...saved, candidateId]);
-    openLeague(candidateId);
+    const league = snapshots.find((item) => item.id === candidateId);
+    const names = [...new Set((league?.views.bowlers ?? []).flatMap((table) => {
+      const nameIndex = table.headers.findIndex((header) => header.toLowerCase() === "name");
+      return nameIndex < 0 ? [] : table.rows.map((row) => row[nameIndex]).filter(Boolean);
+    }))].sort((a, b) => a.localeCompare(b));
+    setManualBowlerChoices(names);
+    setProfileMessage(names.length ? "Select your name in this league to finish adding it." : "This roster has not been posted yet, so the league can be added without a bowler match.");
+    if (!names.length) finishManualLeague("");
   };
   const findMyLeagues = () => {
     const name = bowlerName.trim();
@@ -137,6 +160,9 @@ export function LeagueSwitcher({ manageOnly = false }: { manageOnly?: boolean })
   const selectBowlerLeague = (match: BowlerSearchMatch, id: string) => {
     localStorage.setItem(PROFILE_KEY, match.name);
     setBowlerName(match.name);
+    const nextBowlers = { ...leagueBowlers, [id]: match.name };
+    setLeagueBowlers(nextBowlers);
+    localStorage.setItem(LEAGUE_BOWLERS_KEY, JSON.stringify(nextBowlers));
     if (!saved.includes(id)) persist([...saved, id]);
     setBowlerMatches([]);
     setProfileMessage("");
@@ -144,6 +170,10 @@ export function LeagueSwitcher({ manageOnly = false }: { manageOnly?: boolean })
   };
   const removeLeague = (id: string) => {
     const next = saved.filter((savedId) => savedId !== id); persist(next);
+    const nextBowlers = { ...leagueBowlers };
+    delete nextBowlers[id];
+    setLeagueBowlers(nextBowlers);
+    localStorage.setItem(LEAGUE_BOWLERS_KEY, JSON.stringify(nextBowlers));
     if (id === leagueId && next[0]) openLeague(next[0]);
     if (!next.length) {
       localStorage.removeItem(PROFILE_KEY);
@@ -155,6 +185,7 @@ export function LeagueSwitcher({ manageOnly = false }: { manageOnly?: boolean })
     localStorage.removeItem(PROFILE_KEY);
     localStorage.removeItem(STORAGE_KEY);
     localStorage.removeItem("west-lanes-favorite-leagues");
+    localStorage.removeItem(LEAGUE_BOWLERS_KEY);
     setSaved([]);
     setBowlerName("");
     router.replace("/");
@@ -185,7 +216,9 @@ export function LeagueSwitcher({ manageOnly = false }: { manageOnly?: boolean })
       </div>
       {savedLeagues.length ? <div className="current-league-cards">
         {savedLeagues.map((item) => {
-          const details = bowlerProfile?.leagues.find((league) => league.id === item.id);
+          const leagueBowler = leagueBowlers[item.id] || bowlerName;
+          const itemProfile = leagueBowler ? findBowlers(leagueBowler).find((match) => nameTokens(match.name).join(" ") === nameTokens(leagueBowler).join(" ")) : undefined;
+          const details = itemProfile?.leagues.find((league) => league.id === item.id) ?? bowlerProfile?.leagues.find((league) => league.id === item.id);
           return <article key={item.id} className={leagueId === item.id ? "active" : ""}>
             <button className="league-card-main" onClick={() => openLeague(item.id)}>
               <small>{item.bowlsOn} · {item.startTime}</small>
@@ -227,6 +260,10 @@ export function LeagueSwitcher({ manageOnly = false }: { manageOnly?: boolean })
         <label><span><b>3</b> Select your league</span><select value={candidateId} disabled={!availableLeagues.length} onChange={(event) => setCandidateId(event.target.value)}>{availableLeagues.length ? availableLeagues.map((item) => <option value={item.id} key={item.id}>{item.displayName}</option>) : <option>No leagues added yet</option>}</select></label>
       </div>
       <button className="add-current-button" disabled={!candidateId || saved.includes(candidateId)} onClick={addLeague}>{saved.includes(candidateId) ? "Already in Current Leagues" : "Add to Current Leagues"} <span>→</span></button>
+      {manualBowlerChoices.length > 0 && <div className="manual-bowler-picker">
+        <div><p className="eyebrow red">Final step</p><h3>Who are you in this league?</h3><p>Select the exact roster name, even if it differs from your name in another league.</p></div>
+        <div className="manual-bowler-list">{manualBowlerChoices.map((name) => <button key={name} type="button" onClick={() => finishManualLeague(name)}>{name}<span>Add this bowler →</span></button>)}</div>
+      </div>}
     </section>}
 
     {!manageOnly && selected && saved.length > 0 && <>

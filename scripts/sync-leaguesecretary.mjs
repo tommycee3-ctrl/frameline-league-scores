@@ -254,7 +254,13 @@ try {
     const cycle=targetCycle(league);
     const lastCompletedCycle=complete?cycle:(current.lastCompletedCycle??null);
     if(fingerprint===current.fingerprint&&lastCompletedCycle===current.lastCompletedCycle) continue;
-    const next={...current,...league,sourceUpdated,syncedAt:new Date().toISOString(),status:complete?"current":"awaiting-results",week,fingerprint,lastCompletedCycle,views};
+    const syncedAt=new Date().toISOString();
+    const history=[...(current.history??[])];
+    const historyEntry={week,sourceUpdated,syncedAt,views:{bowlers:views.bowlers??[],recaps:views.recaps??[]}};
+    const historyIndex=history.findIndex(entry=>String(entry.week)===String(week));
+    if(historyIndex>=0) history[historyIndex]=historyEntry;
+    else history.push(historyEntry);
+    const next={...current,...league,sourceUpdated,syncedAt,status:complete?"current":"awaiting-results",week,fingerprint,lastCompletedCycle,views,history};
     await writeFile(file,JSON.stringify(next,null,2)+"\n","utf8");
     changed=true;
     console.log(`${complete?"Completed":"Refreshed"} ${league.displayName}: ${recordCount} rows`);

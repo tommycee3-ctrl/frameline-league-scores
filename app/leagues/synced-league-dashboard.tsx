@@ -19,6 +19,12 @@ export type LeagueSnapshot = {
   sourceUpdated: string;
   week: string | null;
   views: Record<string, Table[]>;
+  history?: Array<{
+    week: string | null;
+    sourceUpdated: string;
+    syncedAt: string;
+    views: Record<string, Table[]>;
+  }>;
 };
 const cell = (table: Table, row: string[], name: string) =>
   row[table.headers.findIndex((h) => h.toLowerCase() === name.toLowerCase())] ??
@@ -83,6 +89,10 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
   const [tab, setTab] = useState<(typeof tabs)[number]>("standings");
   const [query, setQuery] = useState("");
   const [openTeam, setOpenTeam] = useState<string | null>(null);
+  const [selectedBowler, setSelectedBowler] = useState<{
+    name: string;
+    team: string;
+  } | null>(null);
   const [standingSort, setStandingSort] = useState<{
     key: "place" | "team" | "won" | "lost" | "percent" | "average" | "pins";
     direction: "asc" | "desc";
@@ -221,6 +231,68 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
       })
       .filter((matchup) => matchup.length);
   }, [data]);
+  const hasIndividualPoints = useMemo(() => {
+    if (!bowlerTable) return false;
+    const wonIndex = bowlerTable.headers.findIndex(
+      (header) => header.toLowerCase() === "won",
+    );
+    return (
+      wonIndex >= 0 &&
+      bowlerTable.rows.some((row) => Number(row[wonIndex]) > 0)
+    );
+  }, [bowlerTable]);
+  const bowlerWeekPoints = (name: string, team: string) => {
+    for (const matchup of recapMatchups) {
+      const side = matchup.findIndex((entry) => entry.team === team);
+      if (side < 0 || matchup.length < 2) continue;
+      const rowIndex = matchup[side].rows.findIndex(
+        (row) => personName(row[0]) === name,
+      );
+      if (rowIndex < 0) continue;
+      return individualPoints(
+        matchup[side].rows[rowIndex],
+        matchup[side === 0 ? 1 : 0].rows[rowIndex] ?? [],
+      );
+    }
+    return null;
+  };
+  const bowlerHistory = (name: string, team: string) => {
+    const snapshots = data.history?.length
+      ? data.history
+      : [{ week: data.week, sourceUpdated: data.sourceUpdated, syncedAt: "", views: data.views }];
+    return snapshots
+      .map((snapshot) => {
+        const table = snapshot.views.bowlers?.[0];
+        const row = table?.rows.find(
+          (item) =>
+            personName(cell(table, item, "Name")) === name &&
+            cell(table, item, "Team#") === team,
+        );
+        let scoreRow: string[] | undefined;
+        for (const recap of snapshot.views.recaps ?? []) {
+          let activeTeam = "";
+          for (const candidate of recap.rows) {
+            const match = candidate[0]?.match(/^Team\s+(\d+)$/i);
+            if (match) activeTeam = match[1];
+            else if (activeTeam === team && personName(candidate[0]) === name) {
+              scoreRow = candidate;
+              break;
+            }
+          }
+          if (scoreRow) break;
+        }
+        if (!row && !scoreRow) return null;
+        return {
+          week: snapshot.week ?? "—",
+          games: scoreRow?.slice(3, 6).filter(Boolean) ?? [],
+          series: scoreRow?.at(-1) || (table && row ? cell(table, row, "HSS") : ""),
+          average: table && row ? cell(table, row, "Avg") : scoreRow?.[1] || "—",
+          totalPoints: hasIndividualPoints && table && row ? cell(table, row, "WON") : "",
+        };
+      })
+      .filter((entry): entry is NonNullable<typeof entry> => Boolean(entry))
+      .reverse();
+  };
   const q = query.trim().toLowerCase();
   const week = data.week ?? "1";
   const laneTable = data.views.lanes?.[0];
@@ -416,7 +488,7 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                                     key={`${n}-${index}`}
                                   >
                                     <span>
-                                      <b>{n}</b>
+                                      <button className="bowler-history-trigger" onClick={() => setSelectedBowler({ name: n, team })}>{n}</button>
                                       <small>
                                         {person
                                           .slice(3, 6)
@@ -425,17 +497,17 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                                       </small>
                                     </span>
                                     <span>
-                                      <small>Series</small>
-                                      <strong>{person.at(-1) || "—"}</strong>
+                                      <small>Average</small>
+                                      <strong>{source ? cell(bowlerTable!, source, "Avg") || person[1] || "—" : person[1] || "—"}</strong>
                                     </span>
-                                    <span>
-                                      <small>Week pts</small>
+                                    {hasIndividualPoints && <span>
+                                      <small>Total pts</small>
                                       <strong className="week-points">
                                         {source
                                           ? cell(bowlerTable!, source, "WON")
                                           : "—"}
                                       </strong>
-                                    </span>
+                                    </span>}
                                   </div>
                                 );
                               })
@@ -446,13 +518,13 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                                     key={person.name}
                                   >
                                     <span>
-                                      <b>{person.name}</b>
+                                      <button className="bowler-history-trigger" onClick={() => setSelectedBowler({ name: person.name, team })}>{person.name}</button>
                                       <small>Current roster</small>
                                     </span>
-                                    <span>
+                                    {hasIndividualPoints && <span>
                                       <small>Average</small>
                                       <strong>{person.average}</strong>
-                                    </span>
+                                    </span>}
                                     <span>
                                       <small>Week pts</small>
                                       <strong className="week-points">—</strong>
@@ -469,18 +541,18 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                                       key={`${n}-${index}`}
                                     >
                                       <span>
-                                        <b>{n}</b>
+                                        <button className="bowler-history-trigger" onClick={() => setSelectedBowler({ name: n, team })}>{n}</button>
                                         <small>
                                           Game scores pending full recap
                                         </small>
                                       </span>
-                                      <span>
+                                      {hasIndividualPoints && <span>
                                         <small>Average</small>
                                         <strong>
                                           {cell(bowlerTable!, person, "Avg") ||
                                             "—"}
                                         </strong>
-                                      </span>
+                                      </span>}
                                       <span>
                                         <small>Week pts</small>
                                         <strong className="week-points">
@@ -511,7 +583,7 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
               <span>Games</span>
               <span>Series</span>
               <span>Avg</span>
-              <span>Pts</span>
+              {hasIndividualPoints && <span>Pts</span>}
             </div>
             {bowlerTable.rows
               .filter((row) => !q || row.join(" ").toLowerCase().includes(q))
@@ -528,7 +600,7 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                 );
                 const games = scoreRow?.slice(3, 6).filter(Boolean) ?? [];
                 return (
-                  <div className="bowler-row" key={`${team}-${name}-${index}`}>
+                  <button className="bowler-row" key={`${team}-${name}-${index}`} onClick={() => setSelectedBowler({ name, team })}>
                     <span>
                       <strong>{name}</strong>
                       <small>Team {team}</small>
@@ -540,8 +612,8 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                     </span>
                     <b>{scoreRow?.at(-1) || cell(bowlerTable, row, "HSS")}</b>
                     <span>{cell(bowlerTable, row, "Avg")}</span>
-                    <span>{cell(bowlerTable, row, "WON")}</span>
-                  </div>
+                    {hasIndividualPoints && <span>{cell(bowlerTable, row, "WON")}</span>}
+                  </button>
                 );
               })}
           </div>
@@ -789,6 +861,31 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
           </div>
         )}
       </section>
+      {selectedBowler && (
+        <div className="bowler-modal-backdrop" onMouseDown={() => setSelectedBowler(null)}>
+          <section className="bowler-modal bowler-history-modal" onMouseDown={(event) => event.stopPropagation()} role="dialog" aria-modal="true" aria-label={`${selectedBowler.name} weekly results`}>
+            <button className="modal-close" onClick={() => setSelectedBowler(null)} aria-label="Close">×</button>
+            <p className="eyebrow red">{teamName(selectedBowler.team)}</p>
+            <h2>{selectedBowler.name}</h2>
+            <p>Week-by-week scores and current average.</p>
+            <div className="bowler-week-history">
+              {bowlerHistory(selectedBowler.name, selectedBowler.team).map((entry, index) => (
+                <article key={`${entry.week}-${index}`}>
+                  <header><strong>Week {entry.week}</strong><span>Average {entry.average}</span></header>
+                  <div className="week-score-line">
+                    <span><small>Games</small><b>{entry.games.length ? entry.games.join(" · ") : "Scores not posted"}</b></span>
+                    <span><small>Series</small><b>{entry.series || "—"}</b></span>
+                    {hasIndividualPoints && <>
+                      <span><small>Week pts</small><b className="week-points">{bowlerWeekPoints(selectedBowler.name, selectedBowler.team) ?? "—"}</b></span>
+                      <span><small>Total pts</small><b className="total-points">{entry.totalPoints || "—"}</b></span>
+                    </>}
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+        </div>
+      )}
     </>
   );
 }
