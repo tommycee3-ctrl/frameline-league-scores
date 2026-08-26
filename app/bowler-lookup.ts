@@ -54,7 +54,8 @@ export function findBowlers(query: string): BowlerMatch[] {
         const name = (row[nameIndex] ?? "").trim();
         const rosterTokens = tokens(name);
         if (!name || !wanted.every((token) => rosterTokens.some((part) => part.includes(token)))) return;
-        const key = name.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+        // Keep "First Last" and "Last, First" records under the same bowler.
+        const key = tokens(name).join(" ");
         const entry = found.get(key) ?? { name, leagues: new Map<string, { teams: Set<string>; average: string; teamAverage: number | null; teammates: { name: string; average: string }[] }>() };
         const details = entry.leagues.get(league.id) ?? { teams: new Set<string>(), average: "—", teamAverage: null, teammates: [] as { name: string; average: string }[] };
         const team = teamName(league, table.headers, row);

@@ -4524,6 +4524,9 @@ body:has(.social-home) .site-footer .footer-bottom {
   background:#72e0d7;
   color:#101b2b;
 }
+.league-heading-actions { display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end; }
+.reset-bowler-button { min-height:48px;padding:0 18px;border:2px solid #72e0d7;background:transparent;color:#72e0d7;font-weight:900;cursor:pointer;text-transform:uppercase;letter-spacing:.04em; }
+.reset-bowler-button:hover,.reset-bowler-button:focus-visible { background:#72e0d7;color:#101b2b; }
 .frameline-app .league-settings-button span { color:#101b2b; }
 .frameline-app .current-league-cards { grid-template-columns:repeat(4,minmax(0,1fr));gap:14px; }
 .frameline-app .league-card-main { min-height:112px;padding:17px 18px;gap:7px; }
@@ -4587,7 +4590,7 @@ body:has(.social-home) .site-footer .footer-bottom {
 .finder-team-detail > div p b { color:#72e0d7; }
 @media(max-width:1100px){.frameline-app .current-league-cards{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:900px){.frameline-app .current-league-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:600px){.frameline-app .current-league-cards{grid-template-columns:1fr}.finder-league-trigger{grid-template-columns:1fr;gap:9px}.finder-team-detail>header{grid-template-columns:1fr 1fr}.finder-team-detail>div p{align-items:center}}
+@media(max-width:600px){.current-leagues-heading h2{font-size:clamp(2.5rem,14vw,4rem)}.league-heading-actions{width:100%;justify-content:stretch}.league-heading-actions>*{flex:1;min-width:145px}.frameline-app .current-league-cards{grid-template-columns:1fr}.finder-league-trigger{grid-template-columns:1fr;gap:9px}.finder-team-detail>header{grid-template-columns:1fr 1fr}.finder-team-detail>div p{align-items:center}}
 .league-facts article { border-color: #35506a !important; }
 .league-hub-tabs button {
   border-color: #35506a;

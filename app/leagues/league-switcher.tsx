@@ -151,6 +151,14 @@ export function LeagueSwitcher({ manageOnly = false }: { manageOnly?: boolean })
       router.replace("/");
     }
   };
+  const resetBowler = () => {
+    localStorage.removeItem(PROFILE_KEY);
+    localStorage.removeItem(STORAGE_KEY);
+    localStorage.removeItem("west-lanes-favorite-leagues");
+    setSaved([]);
+    setBowlerName("");
+    router.replace("/");
+  };
 
   const selected = snapshots.find((item) => item.id === leagueId) ?? snapshots[0];
   const savedLeagues = saved.map((id) => snapshots.find((item) => item.id === id)).filter((item): item is LeagueSnapshot => Boolean(item));
@@ -163,14 +171,17 @@ export function LeagueSwitcher({ manageOnly = false }: { manageOnly?: boolean })
   const week = selected?.week ? `Week ${selected.week}` : "Awaiting Week 1";
   const schedule = selected ? `${selected.bowlsOn} · ${selected.startTime} · Started ${selected.startDate}` : "";
   const bowlerProfile = bowlerName ? findBowlers(bowlerName).find((match) => nameTokens(match.name).join(" ") === nameTokens(bowlerName).join(" ")) : undefined;
+  const firstName = bowlerName
+    ? (bowlerName.includes(",") ? bowlerName.split(",")[1] : bowlerName).trim().split(/\s+/)[0]
+    : "Bowler";
 
   if (!ready) return <section className="section frameline-loading">Loading your leagues…</section>;
 
   return <div id="league-center">
     <section className="section current-leagues-section">
       <div className="current-leagues-heading">
-        <div><p className="eyebrow red">{manageOnly ? "League setup" : "Quick select"}</p><h2>{manageOnly ? "Add / Remove Leagues" : "Current leagues"}</h2><p>{bowlerName ? `Bowling as ${bowlerName}.` : "Saved on this device for quick access."}</p></div>
-        {!manageOnly && <Link className="league-settings-button" href="/manage-leagues"><span aria-hidden="true">⚙</span> Add / Remove Leagues</Link>}
+        <div>{manageOnly && <p className="eyebrow red">League setup</p>}<h2>{manageOnly ? "Add / Remove Leagues" : `Welcome, ${firstName}`}</h2>{manageOnly && <p>{bowlerName ? `Bowling as ${bowlerName}.` : "Saved on this device for quick access."}</p>}</div>
+        {!manageOnly && <div className="league-heading-actions"><Link className="league-settings-button" href="/manage-leagues"><span aria-hidden="true">⚙</span> Add / Remove Leagues</Link><button className="reset-bowler-button" type="button" onClick={resetBowler}>Reset bowler</button></div>}
       </div>
       {savedLeagues.length ? <div className="current-league-cards">
         {savedLeagues.map((item) => {
