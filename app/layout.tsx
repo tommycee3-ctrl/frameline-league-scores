@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 const links = [["/leagues", "My Leagues"]] as const;
 
 function FrameLineMark() {
-  return <span className="frameline-mark" aria-hidden="true"><span>9/</span><span>X</span><em>FRAME 10</em></span>;
+  return <span className="frameline-mark" aria-hidden="true"><span>9</span><span>/</span><span>X</span><em>FRAME 10</em></span>;
 }
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
