@@ -28,11 +28,19 @@ jobs:
         run: |
           if [[ "$GITHUB_EVENT_NAME" == "workflow_dispatch" || "$GITHUB_EVENT_NAME" == "push" ]]; then
             echo "run=true" >> "$GITHUB_OUTPUT"
+            echo "mode=--known-only" >> "$GITHUB_OUTPUT"
             exit 0
           fi
           central_hour=$(TZ=America/Chicago date +%H)
           if (( 10#$central_hour % 2 == 0 )); then
             echo "run=true" >> "$GITHUB_OUTPUT"
+            if [[ "$central_hour" == "00" ]]; then
+              echo "mode=" >> "$GITHUB_OUTPUT"
+              echo "Running the daily new-league discovery scan."
+            else
+              echo "mode=--known-only" >> "$GITHUB_OUTPUT"
+              echo "Checking known leagues for changed source dates."
+            fi
           else
             echo "run=false" >> "$GITHUB_OUTPUT"
             echo "Skipping odd Central-time hour $central_hour."
@@ -48,55 +56,21 @@ jobs:
         if: steps.window.outputs.run == 'true'
       - run: npx playwright install --with-deps chromium
         if: steps.window.outputs.run == 'true'
-      - name: Import and publish each bowling center
+      - name: Check changed leagues and publish updates
         if: steps.window.outputs.run == 'true'
         shell: bash
         run: |
           git config user.name "FrameLine League Sync"
           git config user.email "actions@users.noreply.github.com"
 
-          # Import incomplete/new centers first; refresh the already-established
-          # West Lanes collection after the broader Omaha coverage is published.
-          # Import the smaller new areas first, then refresh the Omaha catalog.
-          for center in 1163 2118 2173 2137 2119 5144 2208 2110; do
-            # Always generate against the newest published catalog. This keeps
-            # a queued refresh from replaying stale league files.
-            git pull --rebase origin main
-            echo "Importing bowling center $center..."
-            node scripts/sync-leaguesecretary.mjs "--center=$center"
+          git pull --rebase origin main
+          node scripts/sync-leaguesecretary.mjs ${{ steps.window.outputs.mode }}
 
-            if git diff --quiet -- public/data/leagues; then
-              echo "Bowling center $center had no new data to publish."
-              continue
-            fi
+          if git diff --quiet -- public/data/leagues; then
+            echo "All known leagues are current."
+            exit 0
+          fi
 
-            git add -- public/data/leagues
-            git commit -m "Update FrameLine center $center league results"
-
-            # Retry safely if a website edit lands during this center import.
-            # If the generated data itself conflicts, discard only this local
-            # data commit, regenerate from the latest catalog, and publish it.
-            for attempt in 1 2 3; do
-              if git push; then
-                echo "Published bowling center $center."
-                break
-              fi
-              git fetch origin main
-              if ! git rebase origin/main; then
-                git rebase --abort || true
-                git reset --hard origin/main
-                node scripts/sync-leaguesecretary.mjs "--center=$center"
-                if git diff --quiet -- public/data/leagues; then
-                  echo "Bowling center $center was already current after refreshing."
-                  break
-                fi
-                git add -- public/data/leagues
-                git commit -m "Update FrameLine center $center league results"
-              fi
-              if [[ "$attempt" == "3" ]]; then
-                echo "Unable to publish bowling center $center after three attempts."
-                exit 1
-              fi
-              sleep 5
-            done
-          done
+          git add -- public/data/leagues
+          git commit -m "Update changed FrameLine league results"
+          git push

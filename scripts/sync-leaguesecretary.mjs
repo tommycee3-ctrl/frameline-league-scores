@@ -23,8 +23,16 @@ const centers=[
   {id:"2208",name:"Western Bowl",area:"Omaha",slug:"western-bowl-omaha"},
 ];
 const knownById=new Map(seedLeagues.map(league=>[league.id,league]));
+const catalogFile=path.join(process.cwd(),"public","data","leagues","all.json");
+let knownLeagueIds=new Set(knownById.keys());
+let existingCatalogEntries=[];
+try {
+  existingCatalogEntries=JSON.parse(await readFile(catalogFile,"utf8"));
+  for(const league of existingCatalogEntries) knownLeagueIds.add(league.id);
+} catch {}
 const viewPaths = { standings:"league/standings", bowlers:"bowler/list", recaps:"league/recaps", lanes:"league/lane-assignments", rosters:"team/list" };
 const force = process.argv.includes("--force");
+const knownOnly = process.argv.includes("--known-only");
 const requestedLeague=process.argv.find(argument=>argument.startsWith("--league="))?.split("=")[1];
 const requestedCenter=process.argv.find(argument=>argument.startsWith("--center="))?.split("=")[1];
 const chicago = Object.fromEntries(new Intl.DateTimeFormat("en-US",{timeZone:"America/Chicago",year:"numeric",month:"2-digit",day:"2-digit",weekday:"short",hour:"numeric",hour12:false}).formatToParts(new Date()).map(p=>[p.type,p.value]));
@@ -57,7 +65,7 @@ async function discoverLeagues(browser) {
       await page.goto(`https://www.leaguesecretary.com/bowling-centers/${center.slug}/leagues/${center.id}`,{waitUntil:"domcontentloaded",timeout:90000});
       await page.waitForTimeout(5000);
       const rows=await page.locator("table tbody tr").evaluateAll(nodes=>nodes.map(row=>[...row.querySelectorAll("td")].map(cell=>(cell.textContent||"").replace(/\s+/g," ").trim())).filter(row=>row.length>=7));
-      discovered.push(...rows.map(([id,name,season,bowlsOn,startTime,type,updated])=>({id,name:clean(name),displayName:displayName(name),slug:slugify(name),season,bowlsOn,startTime:clean(startTime).replace(/(AM|PM)$/i," $1"),type,updated,startDate:center.includeAllListed?`${season} season`:`${season} 2026`,bowlDay:dayNumbers[bowlsOn],centerId:center.id,centerName:center.name,centerSlug:center.slug,area:center.area})).filter(league=>knownById.has(league.id)||center.includeAllListed||(league.season==="Fall"&&recentlyUpdated(league.updated))));
+      discovered.push(...rows.map(([id,name,season,bowlsOn,startTime,type,updated])=>({id,name:clean(name),displayName:displayName(name),slug:slugify(name),season,bowlsOn,startTime:clean(startTime).replace(/(AM|PM)$/i," $1"),type,updated,startDate:center.includeAllListed?`${season} season`:`${season} 2026`,bowlDay:dayNumbers[bowlsOn],centerId:center.id,centerName:center.name,centerSlug:center.slug,area:center.area})).filter(league=>knownLeagueIds.has(league.id)||center.includeAllListed||(league.season==="Fall"&&recentlyUpdated(league.updated))));
     }
     return discovered.map(league=>({...league,...knownById.get(league.id),updated:league.updated,slug:knownById.get(league.id)?.slug??league.slug})).sort((a,b)=>a.bowlDay-b.bowlDay||a.startTime.localeCompare(b.startTime));
   } finally { await page.close(); }
@@ -138,7 +146,8 @@ function currentRoster(table) {
 }
 
 const browser = await chromium.launch({headless:true});
-const discoveredLeagues=await discoverLeagues(browser);
+const listedLeagues=await discoverLeagues(browser);
+const discoveredLeagues=knownOnly ? listedLeagues.filter(league=>knownLeagueIds.has(league.id)) : listedLeagues;
 const leagues=discoveredLeagues.filter(league=>(!requestedLeague||league.id===requestedLeague)&&(!requestedCenter||league.centerId===requestedCenter));
 console.log(`Discovered ${leagues.length} listed leagues${requestedCenter ? ` for center ${requestedCenter}` : ` across ${centers.length} centers`}.`);
 const candidates=[];
@@ -146,7 +155,12 @@ for(const league of leagues){
   const file=path.join(process.cwd(),"public","data","leagues",`${league.id}.json`);
   let current;
   try{current=JSON.parse(await readFile(file,"utf8"));}catch{current={...league,sourceUpdated:"Not posted",syncedAt:null,status:"awaiting-results",week:null,fingerprint:null,lastCompletedCycle:null,views:{standings:[],bowlers:[],recaps:[],lanes:[],rosters:[]}};}
-  if(isWindowOpen(league,current)) candidates.push({league,file,current});
+  const hasRows=Object.values(current.views??{}).some(tables=>tables.some(table=>table.rows?.length));
+  // Compare the center-list timestamp to the timestamp captured on the prior
+  // scan. The league detail page can publish a different date, which should
+  // not cause the same league to be re-imported every two hours.
+  const sourceChanged=clean(league.updated)!==clean(current.updated);
+  if(isWindowOpen(league,current)&&(force||!hasRows||sourceChanged)) candidates.push({league,file,current});
 }
 if(candidates.length===0){await browser.close();console.log("No league is waiting for a new weekly update.");process.exit(0);}
 let changed = false;
@@ -265,12 +279,12 @@ try {
     changed=true;
     console.log(`${complete?"Completed":"Refreshed"} ${league.displayName}: ${recordCount} rows`);
   }
-  const catalog=[];
+  const catalogById=new Map(existingCatalogEntries.map(league=>[league.id,league]));
   for(const league of discoveredLeagues) {
-    try { catalog.push({...JSON.parse(await readFile(path.join(process.cwd(),"public","data","leagues",`${league.id}.json`),"utf8")),centerId:league.centerId,centerName:league.centerName,centerSlug:league.centerSlug,area:league.area}); }
-    catch { catalog.push({...league,sourceUpdated:league.updated||"Not posted",syncedAt:null,status:"awaiting-results",week:null,fingerprint:null,lastCompletedCycle:null,views:{standings:[],bowlers:[],recaps:[],lanes:[],rosters:[]}}); }
+    try { catalogById.set(league.id,{...JSON.parse(await readFile(path.join(process.cwd(),"public","data","leagues",`${league.id}.json`),"utf8")),centerId:league.centerId,centerName:league.centerName,centerSlug:league.centerSlug,area:league.area}); }
+    catch { catalogById.set(league.id,{...league,sourceUpdated:league.updated||"Not posted",syncedAt:null,status:"awaiting-results",week:null,fingerprint:null,lastCompletedCycle:null,views:{standings:[],bowlers:[],recaps:[],lanes:[],rosters:[]}}); }
   }
-  const catalogFile=path.join(process.cwd(),"public","data","leagues","all.json");
+  const catalog=[...catalogById.values()];
   const catalogText=JSON.stringify(catalog,null,2)+"\n";
   let existingCatalog="";
   try { existingCatalog=await readFile(catalogFile,"utf8"); } catch {}
