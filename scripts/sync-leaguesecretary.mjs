@@ -13,7 +13,7 @@ const seedLeagues = [
   {id:"64208",slug:"graphic-arts-bowling-league-2627",name:"GRAPHIC ARTS BOWLING LEAGUE 26-27",displayName:"Graphic Arts Bowling League 26-27",bowlsOn:"Friday",startDate:"Fall 2026",startTime:"6:30 PM",bowlDay:5,type:"Handicap Mens"}
 ];
 const centers=[
-  {id:"1163",name:"Thunderbowl of Council Bluffs",area:"Council Bluffs",slug:"thunderbowl-of-council-bluffs-council-bluffs-iowa"},
+  {id:"1163",name:"Thunderbowl of Council Bluffs",area:"Council Bluffs",slug:"thunderbowl-of-council-bluffs-council-bluffs-iowa",includeAllListed:true},
   {id:"2118",name:"Sun Valley Lanes",area:"Lincoln",slug:"sun-valley-lanes-lincoln-nebraska"},
   {id:"2173",name:"Parkway Lanes",area:"Lincoln",slug:"parkway-lanes---lincoln-lincoln-nebraska"},
   {id:"2137",name:"Hollywood Bowl",area:"Lincoln",slug:"hollywood-bowl-lincoln-nebraska"},
@@ -57,7 +57,7 @@ async function discoverLeagues(browser) {
       await page.goto(`https://www.leaguesecretary.com/bowling-centers/${center.slug}/leagues/${center.id}`,{waitUntil:"domcontentloaded",timeout:90000});
       await page.waitForTimeout(5000);
       const rows=await page.locator("table tbody tr").evaluateAll(nodes=>nodes.map(row=>[...row.querySelectorAll("td")].map(cell=>(cell.textContent||"").replace(/\s+/g," ").trim())).filter(row=>row.length>=7));
-      discovered.push(...rows.map(([id,name,season,bowlsOn,startTime,type,updated])=>({id,name:clean(name),displayName:displayName(name),slug:slugify(name),season,bowlsOn,startTime:clean(startTime).replace(/(AM|PM)$/i," $1"),type,updated,startDate:`${season} 2026`,bowlDay:dayNumbers[bowlsOn],centerId:center.id,centerName:center.name,centerSlug:center.slug,area:center.area})).filter(league=>knownById.has(league.id)||(league.season==="Fall"&&recentlyUpdated(league.updated))));
+      discovered.push(...rows.map(([id,name,season,bowlsOn,startTime,type,updated])=>({id,name:clean(name),displayName:displayName(name),slug:slugify(name),season,bowlsOn,startTime:clean(startTime).replace(/(AM|PM)$/i," $1"),type,updated,startDate:center.includeAllListed?`${season} season`:`${season} 2026`,bowlDay:dayNumbers[bowlsOn],centerId:center.id,centerName:center.name,centerSlug:center.slug,area:center.area})).filter(league=>knownById.has(league.id)||center.includeAllListed||(league.season==="Fall"&&recentlyUpdated(league.updated))));
     }
     return discovered.map(league=>({...league,...knownById.get(league.id),updated:league.updated,slug:knownById.get(league.id)?.slug??league.slug})).sort((a,b)=>a.bowlDay-b.bowlDay||a.startTime.localeCompare(b.startTime));
   } finally { await page.close(); }
@@ -140,7 +140,7 @@ function currentRoster(table) {
 const browser = await chromium.launch({headless:true});
 const discoveredLeagues=await discoverLeagues(browser);
 const leagues=discoveredLeagues.filter(league=>(!requestedLeague||league.id===requestedLeague)&&(!requestedCenter||league.centerId===requestedCenter));
-console.log(`Discovered ${leagues.length} active Omaha leagues across ${centers.length} centers.`);
+console.log(`Discovered ${leagues.length} listed leagues${requestedCenter ? ` for center ${requestedCenter}` : ` across ${centers.length} centers`}.`);
 const candidates=[];
 for(const league of leagues){
   const file=path.join(process.cwd(),"public","data","leagues",`${league.id}.json`);
