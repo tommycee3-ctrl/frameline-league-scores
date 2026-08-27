@@ -3542,6 +3542,43 @@ body:has(.social-home) .site-footer .footer-bottom {
 .week-score-line small { color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.7rem; }
 .week-score-line .week-points { color: var(--aqua); }
 .week-score-line .total-points { color: #62b67b; }
+.frameline-app .bowler-history-modal {
+  background: #16263b;
+  color: #f7fbfb;
+  border-color: #35506a;
+  box-shadow: 12px 12px 0 #10a7a5;
+}
+.frameline-app .bowler-week-history article {
+  background: #101f31;
+  border-color: #35506a;
+}
+.frameline-app .bowler-week-history article > header {
+  background: #09121f;
+  color: #f7fbfb;
+}
+.frameline-app .week-score-line {
+  background: #122237;
+  color: #f7fbfb;
+}
+.frameline-app .week-score-line small { color: #9db0bd; }
+.frameline-app .week-score-line b { color: #f7fbfb; }
+.frameline-app .week-score-line .week-points { color: #72e0d7; }
+.frameline-app .week-score-line .total-points { color: #72d59a; }
+.frameline-app .bowler-history-modal .modal-close {
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 0;
+  background: transparent;
+  color: #72e0d7;
+  font-size: 2.5rem;
+  line-height: 1;
+  font-weight: 400;
+}
+.frameline-app .bowler-history-modal .modal-close:hover,
+.frameline-app .bowler-history-modal .modal-close:focus-visible {
+  background: transparent;
+  color: #f7fbfb;
+}
 .manual-bowler-picker { margin-top: 1.25rem; padding: clamp(1rem, 3vw, 1.6rem); border: 2px solid var(--navy); background: #fff; }
 .manual-bowler-picker h3 { margin: 0.25rem 0; font-size: clamp(1.4rem, 3vw, 2rem); }
 .manual-bowler-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 0.6rem; margin-top: 1rem; max-height: 22rem; overflow: auto; }
