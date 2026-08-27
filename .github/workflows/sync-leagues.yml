@@ -11,6 +11,7 @@ on:
     branches: [main]
     paths:
       - ".github/workflows/sync-leagues.yml"
+      - "scripts/sync-leaguesecretary.mjs"
 
 permissions:
   contents: write

@@ -30,6 +30,7 @@ try {
   existingCatalogEntries=JSON.parse(await readFile(catalogFile,"utf8"));
   for(const league of existingCatalogEntries) knownLeagueIds.add(league.id);
 } catch {}
+const existingCatalogById=new Map(existingCatalogEntries.map(league=>[league.id,league]));
 const viewPaths = { standings:"league/standings", bowlers:"bowler/list", recaps:"league/recaps", lanes:"league/lane-assignments", rosters:"team/list" };
 const force = process.argv.includes("--force");
 const knownOnly = process.argv.includes("--known-only");
@@ -86,6 +87,19 @@ async function extractTables(page) {
     return {title,headers:hasHeader?first:first.map((_,i)=>`Column ${i+1}`),rows:hasHeader?all.slice(1):all};
   }));
   return tables.filter(validTable);
+}
+async function readStandingsFingerprint(page,league) {
+  const responsePromise=page.waitForResponse(response=>
+    response.url().includes("/League/InteractiveStandings_Read")&&
+    response.request().postData()?.includes(`leagueId=${league.id}`),
+  {timeout:30000}).catch(()=>null);
+  const url=`https://www.leaguesecretary.com/bowling-centers/${league.centerSlug}/bowling-leagues/${league.slug}/league/standings/${league.id}`;
+  await page.goto(url,{waitUntil:"domcontentloaded",timeout:90000});
+  const response=await responsePromise;
+  if(!response?.ok()) return null;
+  const payload=await response.json().catch(()=>null);
+  if(!payload?.Data) return null;
+  return createHash("sha256").update(JSON.stringify(payload)).digest("hex");
 }
 async function expandAllGridRows(page) {
   const expanded=await page.locator(".k-grid").evaluateAll(nodes=>{
@@ -158,6 +172,8 @@ const discoveredLeagues=knownOnly ? listedLeagues.filter(league=>knownLeagueIds.
 const leagues=discoveredLeagues.filter(league=>(!requestedLeague||league.id===requestedLeague)&&(!requestedCenter||league.centerId===requestedCenter));
 console.log(`Discovered ${leagues.length} listed leagues${requestedCenter ? ` for center ${requestedCenter}` : ` across ${centers.length} centers`}.`);
 const candidates=[];
+const sourceFingerprintById=new Map();
+const markerPage=await browser.newPage({viewport:{width:1280,height:800}});
 for(const league of leagues){
   const file=path.join(process.cwd(),"public","data","leagues",`${league.id}.json`);
   let current;
@@ -167,12 +183,22 @@ for(const league of leagues){
   // scan. The league detail page can publish a different date, which should
   // not cause the same league to be re-imported every two hours.
   const sourceChanged=clean(league.updated)!==clean(current.updated);
-  if(isWindowOpen(league,current)&&(force||!hasRows||sourceChanged||isInPostingWindow(league))) candidates.push({league,file,current});
+  let sourceFingerprint=null;
+  try { sourceFingerprint=await readStandingsFingerprint(markerPage,league); }
+  catch(error) { console.warn(`Could not read the quick change marker for ${league.displayName}: ${error.message}`); }
+  if(sourceFingerprint) sourceFingerprintById.set(league.id,sourceFingerprint);
+  const storedSourceFingerprint=current.sourceFingerprint??existingCatalogById.get(league.id)?.sourceFingerprint??null;
+  const fingerprintChanged=Boolean(sourceFingerprint&&storedSourceFingerprint&&sourceFingerprint!==storedSourceFingerprint);
+  // During the first fingerprint rollout, re-import only leagues that may
+  // still be receiving same-day corrections. Older leagues establish a
+  // baseline without the expensive full import.
+  const needsInitialRecentCheck=Boolean(sourceFingerprint&&!storedSourceFingerprint&&isInPostingWindow(league));
+  if(isWindowOpen(league,current)&&(force||!hasRows||sourceChanged||fingerprintChanged||needsInitialRecentCheck)) candidates.push({league,file,current,sourceFingerprint});
 }
-if(candidates.length===0){await browser.close();console.log("No league is waiting for a new weekly update.");process.exit(0);}
+await markerPage.close();
 let changed = false;
 try {
-  for (const {league,file,current} of candidates) {
+  for (const {league,file,current,sourceFingerprint} of candidates) {
     const views = {};
     let sourceUpdated = current.sourceUpdated;
     let week = current.week;
@@ -281,14 +307,14 @@ try {
     const historyIndex=history.findIndex(entry=>String(entry.week)===String(week));
     if(historyIndex>=0) history[historyIndex]=historyEntry;
     else history.push(historyEntry);
-    const next={...current,...league,sourceUpdated,syncedAt,status:complete?"current":"awaiting-results",week,fingerprint,lastCompletedCycle,views,history};
+    const next={...current,...league,sourceUpdated,sourceFingerprint:sourceFingerprint??current.sourceFingerprint??null,syncedAt,status:complete?"current":"awaiting-results",week,fingerprint,lastCompletedCycle,views,history};
     await writeFile(file,JSON.stringify(next,null,2)+"\n","utf8");
     changed=true;
     console.log(`${complete?"Completed":"Refreshed"} ${league.displayName}: ${recordCount} rows`);
   }
   const catalogById=new Map(existingCatalogEntries.map(league=>[league.id,league]));
   for(const league of discoveredLeagues) {
-    try { catalogById.set(league.id,{...JSON.parse(await readFile(path.join(process.cwd(),"public","data","leagues",`${league.id}.json`),"utf8")),centerId:league.centerId,centerName:league.centerName,centerSlug:league.centerSlug,area:league.area}); }
+    try { catalogById.set(league.id,{...JSON.parse(await readFile(path.join(process.cwd(),"public","data","leagues",`${league.id}.json`),"utf8")),sourceFingerprint:sourceFingerprintById.get(league.id)??existingCatalogById.get(league.id)?.sourceFingerprint??null,centerId:league.centerId,centerName:league.centerName,centerSlug:league.centerSlug,area:league.area}); }
     catch { catalogById.set(league.id,{...league,sourceUpdated:league.updated||"Not posted",syncedAt:null,status:"awaiting-results",week:null,fingerprint:null,lastCompletedCycle:null,views:{standings:[],bowlers:[],recaps:[],lanes:[],rosters:[]}}); }
   }
   const catalog=[...catalogById.values()];
@@ -298,3 +324,4 @@ try {
   if(catalogText!==existingCatalog) { await writeFile(catalogFile,catalogText,"utf8"); changed=true; }
 } finally { await browser.close(); }
 if(!changed) console.log("No verified league update found.");
+else if(candidates.length===0) console.log("Stored initial quick-change markers; no full league import was required.");
