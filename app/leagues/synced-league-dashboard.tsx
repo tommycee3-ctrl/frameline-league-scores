@@ -79,9 +79,10 @@ const teamResult = (team: string[], opponent: string[], game: number) => {
 };
 
 export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
-  const tabs = ["standings", "bowlers", "recaps", "lanes"] as const;
+  const tabs = ["standings", "honors", "bowlers", "recaps", "lanes"] as const;
   const labels = {
     standings: "League Standings",
+    honors: "Honors",
     bowlers: "Bowlers",
     recaps: "Weekly Recaps",
     lanes: "Lane Assignments",
@@ -241,6 +242,46 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
       bowlerTable.rows.some((row) => Number(row[wonIndex]) > 0)
     );
   }, [bowlerTable]);
+  const honors = useMemo(() => {
+    if (!bowlerTable) return [];
+    const isScratchLeague = data.type?.toLowerCase().includes("scratch");
+    const divisions = [
+      { id: "men", label: "Men", matches: (value: string) => /^m/i.test(value) },
+      { id: "women", label: "Women", matches: (value: string) => /^(w|f)/i.test(value) },
+    ];
+    const categories = [
+      { id: "scratch-game", label: "Scratch High Game", column: "HSG", handicap: false },
+      { id: "scratch-series", label: "Scratch High Series", column: "HSS", handicap: false },
+      { id: "handicap-game", label: "Handicap High Game", column: "HHG", handicap: true },
+      { id: "handicap-series", label: "Handicap High Series", column: "HHS", handicap: true },
+    ];
+    return divisions.flatMap((division) => {
+      const divisionRows = bowlerTable.rows.filter((row) =>
+        division.matches(cell(bowlerTable, row, "Gndr")),
+      );
+      if (!divisionRows.length) return [];
+      const groups = categories
+        .filter((category) => !category.handicap || !isScratchLeague)
+        .map((category) => ({
+          ...category,
+          leaders: [...divisionRows]
+            .filter((row) => Number(cell(bowlerTable, row, category.column)) > 0)
+            .sort(
+              (a, b) =>
+                Number(cell(bowlerTable, b, category.column)) -
+                Number(cell(bowlerTable, a, category.column)),
+            )
+            .slice(0, 3)
+            .map((row) => ({
+              name: personName(cell(bowlerTable, row, "Name")),
+              team: cell(bowlerTable, row, "Team#"),
+              score: cell(bowlerTable, row, category.column),
+            })),
+        }))
+        .filter((category) => category.leaders.length);
+      return groups.length ? [{ ...division, groups }] : [];
+    });
+  }, [bowlerTable, data.type]);
   const bowlerWeekPoints = (name: string, team: string) => {
     for (const matchup of recapMatchups) {
       const side = matchup.findIndex((entry) => entry.team === team);
@@ -616,6 +657,35 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                   </button>
                 );
               })}
+          </div>
+        )}
+        {tab === "honors" && (
+          <div className="league-honors">
+            <div className="recap-heading">
+              <div><p className="eyebrow red">League leaders</p><h3>Honors</h3></div>
+              <p>Top three posted scores in each eligible division.</p>
+            </div>
+            {honors.length ? honors.map((division) => (
+              <section className="honors-division" key={division.id}>
+                <header><span>{division.id === "men" ? "M" : "W"}</span><h3>{division.label}</h3></header>
+                <div className="honors-grid">
+                  {division.groups.map((group) => (
+                    <article key={group.id}>
+                      <h4>{group.label}</h4>
+                      <ol>
+                        {group.leaders.map((leader, index) => (
+                          <li key={`${leader.name}-${leader.score}`}>
+                            <b>{index + 1}</b>
+                            <button onClick={() => setSelectedBowler({ name: leader.name, team: leader.team })}>{leader.name}</button>
+                            <strong>{leader.score}</strong>
+                          </li>
+                        ))}
+                      </ol>
+                    </article>
+                  ))}
+                </div>
+              </section>
+            )) : <div className="empty-current"><strong>Honors are awaiting posted scores.</strong><span>This section will fill automatically with the next league update.</span></div>}
           </div>
         )}
         {tab === "recaps" && (
