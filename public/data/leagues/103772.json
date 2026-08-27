@@ -15,10 +15,10 @@
   "centerSlug": "mockingbird-lanes",
   "area": "Omaha",
   "sourceUpdated": "08/27/2026",
-  "syncedAt": "2026-08-27T15:21:08.566Z",
+  "syncedAt": "2026-08-27T20:12:44.670Z",
   "status": "awaiting-results",
   "week": "2",
-  "fingerprint": "36c684b820ecef9132f7598e0432ea2171e496588a901f5e6ac1e944e39c84b8",
+  "fingerprint": "b4d85c8cb93d2c54e287f531462bca805d7248e66f94d1139ade7444b45cd76d",
   "lastCompletedCycle": null,
   "views": {
     "standings": [
@@ -1029,6 +1029,28 @@
     ],
     "rosters": [
       {
+        "title": "Team 16 · CASPER roster",
+        "headers": [
+          "Week",
+          "Date",
+          "HCP",
+          "Gm1",
+          "Gm2",
+          "Gm3",
+          "SS",
+          "Avg"
+        ],
+        "rows": [
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "team": "16"
+      },
+      {
         "title": "Team 15 · Team Bailor H roster",
         "headers": [
           "Pos",
@@ -1195,6 +1217,38 @@
           ]
         ],
         "team": "14"
+      },
+      {
+        "title": "Team 1 · Team Leavitt roster",
+        "headers": [
+          "Week",
+          "Date",
+          "HCP",
+          "Gm1",
+          "Gm2",
+          "Gm3",
+          "SS",
+          "Avg"
+        ],
+        "rows": [
+          [
+            "1",
+            "08/19/2026",
+            "34",
+            "152",
+            "169",
+            "164",
+            "485",
+            "161"
+          ],
+          [
+            "152",
+            "169",
+            "164",
+            "485"
+          ]
+        ],
+        "team": "1"
       },
       {
         "title": "Team 5 · Team Linquist roster",
@@ -2260,7 +2314,7 @@
     {
       "week": "2",
       "sourceUpdated": "08/27/2026",
-      "syncedAt": "2026-08-27T15:21:08.566Z",
+      "syncedAt": "2026-08-27T20:12:44.670Z",
       "views": {
         "bowlers": [
           {
@@ -2933,5 +2987,6 @@
         ]
       }
     }
-  ]
+  ],
+  "sourceFingerprint": "7d7090be0fdcdf8163084daa1c837e69d00cdd67ec4d5cfb90a856ff0e6344bd"
 }

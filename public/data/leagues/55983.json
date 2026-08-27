@@ -15,10 +15,10 @@
   "centerSlug": "mockingbird-lanes",
   "area": "Omaha",
   "sourceUpdated": "08/27/2026",
-  "syncedAt": "2026-08-27T15:23:51.284Z",
+  "syncedAt": "2026-08-27T20:17:23.574Z",
   "status": "awaiting-results",
   "week": "2",
-  "fingerprint": "a816b86061c781da3c2aadcfca96b01c1d0c5fde0c32c0622873ea63a5b1cd06",
+  "fingerprint": "3616816d4c6d62921da177ead662e2a28a0081b082e24f569e04de8fd3e5a85b",
   "lastCompletedCycle": null,
   "views": {
     "standings": [
@@ -6615,6 +6615,28 @@
         "team": "24"
       },
       {
+        "title": "Team 6 · CASPER roster",
+        "headers": [
+          "Week",
+          "Date",
+          "HCP",
+          "Gm1",
+          "Gm2",
+          "Gm3",
+          "SS",
+          "Avg"
+        ],
+        "rows": [
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "team": "6"
+      },
+      {
         "title": "Team 23 · Chop Suey roster",
         "headers": [
           "Pos",
@@ -7970,7 +7992,7 @@
     {
       "week": "2",
       "sourceUpdated": "08/27/2026",
-      "syncedAt": "2026-08-27T15:23:51.284Z",
+      "syncedAt": "2026-08-27T20:17:23.574Z",
       "views": {
         "bowlers": [
           {
@@ -13457,5 +13479,6 @@
         ]
       }
     }
-  ]
+  ],
+  "sourceFingerprint": "5cc83b4bb89030c6783e8227077ad285f59be298785fdfb4b2dd28360fa26938"
 }
