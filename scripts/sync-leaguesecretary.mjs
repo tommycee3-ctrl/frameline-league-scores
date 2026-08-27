@@ -46,6 +46,13 @@ function targetCycle(league) { return dateKeyDaysAgo((dayIndex-league.bowlDay+7)
 function isWindowOpen(league,current) {
   return true;
 }
+function isInPostingWindow(league) {
+  // LeagueSecretary can revise results several times without changing the
+  // date shown on the center listing. Recheck leagues that bowl today or
+  // yesterday so late corrections are not skipped as "already current".
+  const daysSinceBowling=(dayIndex-league.bowlDay+7)%7;
+  return daysSinceBowling<=1;
+}
 
 function clean(value="") { return value.replace(/\s+/g," ").trim(); }
 function cellValue(table,row,name) { return row[table.headers.findIndex(header=>header.toLowerCase()===name.toLowerCase())]??""; }
@@ -160,7 +167,7 @@ for(const league of leagues){
   // scan. The league detail page can publish a different date, which should
   // not cause the same league to be re-imported every two hours.
   const sourceChanged=clean(league.updated)!==clean(current.updated);
-  if(isWindowOpen(league,current)&&(force||!hasRows||sourceChanged)) candidates.push({league,file,current});
+  if(isWindowOpen(league,current)&&(force||!hasRows||sourceChanged||isInPostingWindow(league))) candidates.push({league,file,current});
 }
 if(candidates.length===0){await browser.close();console.log("No league is waiting for a new weekly update.");process.exit(0);}
 let changed = false;
