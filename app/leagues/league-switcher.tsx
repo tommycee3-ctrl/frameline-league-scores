@@ -169,6 +169,8 @@ export function LeagueSwitcher({ manageOnly = false }: { manageOnly?: boolean })
     openLeague(id);
   };
   const removeLeague = (id: string) => {
+    const league = snapshots.find((item) => item.id === id);
+    if (!window.confirm(`Remove ${league?.displayName ?? "this league"} from your saved leagues?`)) return;
     const next = saved.filter((savedId) => savedId !== id); persist(next);
     const nextBowlers = { ...leagueBowlers };
     delete nextBowlers[id];
@@ -182,6 +184,7 @@ export function LeagueSwitcher({ manageOnly = false }: { manageOnly?: boolean })
     }
   };
   const resetBowler = () => {
+    if (!window.confirm("Reset your bowler profile and remove all saved leagues from this device?")) return;
     localStorage.removeItem(PROFILE_KEY);
     localStorage.removeItem(STORAGE_KEY);
     localStorage.removeItem("west-lanes-favorite-leagues");

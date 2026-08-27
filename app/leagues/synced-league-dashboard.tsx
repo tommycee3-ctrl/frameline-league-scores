@@ -833,7 +833,7 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                           {roster.length ? (
                             roster.map((person) => (
                               <div key={person.name}>
-                                <strong>{person.name}</strong>
+                                <button className="bowler-history-trigger lane-bowler-trigger" onClick={() => setSelectedBowler({ name: person.name, team })}>{person.name}</button>
                                 <span className="lane-roster-stats">
                                   <span>
                                     <small>Average</small>
