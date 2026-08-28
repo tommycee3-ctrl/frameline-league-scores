@@ -120,6 +120,7 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
   };
   const [tab, setTab] = useState<(typeof tabs)[number]>("standings");
   const [honorsView, setHonorsView] = useState<"weekly" | "yearly">("weekly");
+  const [recapWeek, setRecapWeek] = useState(String(data.week ?? "1"));
   const [query, setQuery] = useState("");
   const [openTeam, setOpenTeam] = useState<string | null>(null);
   const [selectedBowler, setSelectedBowler] = useState<{
@@ -236,6 +237,18 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
   const recapMatchups = useMemo(() => {
     return parseRecapMatchups(data.views.recaps ?? []);
   }, [data]);
+  const recapWeeks = useMemo(() => {
+    const byWeek = new Map<string, { week: string; views: Record<string, Table[]> }>();
+    for (const snapshot of data.history ?? []) {
+      if (snapshot.week) byWeek.set(String(snapshot.week), { week: String(snapshot.week), views: snapshot.views });
+    }
+    if (data.week) byWeek.set(String(data.week), { week: String(data.week), views: data.views });
+    return [...byWeek.values()].sort((left, right) => Number(right.week) - Number(left.week));
+  }, [data]);
+  const selectedRecapMatchups = useMemo(() => {
+    const snapshot = recapWeeks.find((entry) => entry.week === recapWeek) ?? recapWeeks[0];
+    return parseRecapMatchups(snapshot?.views.recaps ?? []);
+  }, [recapWeek, recapWeeks]);
   const hasIndividualPoints = useMemo(() => {
     if (!bowlerTable) return false;
     const wonIndex = bowlerTable.headers.findIndex(
@@ -744,12 +757,20 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
           <div className="weekly-recaps">
             <div className="recap-heading">
               <div>
-                <p className="eyebrow red">Week {week}</p>
+                <p className="eyebrow red">Week {recapWeek}</p>
                 <h3>Full matchup recaps</h3>
               </div>
-              <p>Individual and team points are shown separately.</p>
+              <div className="recap-week-tools">
+                <p>Individual and team points are shown separately.</p>
+                {recapWeeks.length > 1 && <label>
+                  <span>View week</span>
+                  <select value={recapWeek} onChange={(event) => setRecapWeek(event.target.value)}>
+                    {recapWeeks.map((entry) => <option value={entry.week} key={entry.week}>Week {entry.week}</option>)}
+                  </select>
+                </label>}
+              </div>
             </div>
-            {recapMatchups
+            {selectedRecapMatchups
               .filter(
                 (matchup) =>
                   !q ||

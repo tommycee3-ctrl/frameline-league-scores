@@ -117,6 +117,57 @@ async function expandAllGridRows(page) {
   }).catch(()=>false);
   if(expanded) await page.waitForTimeout(1800);
 }
+async function leagueWeekOptions(page) {
+  return page.locator("#ddLeagueSeasonYearWeek").evaluate(element=>{
+    const widget=window.jQuery?.(element).data("kendoDropDownList");
+    if(!widget) return [];
+    const textField=widget.options.dataTextField;
+    const valueField=widget.options.dataValueField;
+    return widget.dataSource.data().map(entry=>({
+      label:String(entry[textField]??"").replace(/\s+/g," ").trim(),
+      value:String(entry[valueField]??""),
+      week:String(entry.WeekNum??String(entry[valueField]??"").split("|")[0]??"")
+    })).filter(option=>option.value&&option.week);
+  }).catch(()=>[]);
+}
+async function selectLeagueWeek(page,value) {
+  await page.locator("#ddLeagueSeasonYearWeek").evaluate((element,target)=>{
+    const widget=window.jQuery?.(element).data("kendoDropDownList");
+    if(!widget) return;
+    widget.value(target);
+    widget.trigger("change");
+  },value);
+  await page.waitForTimeout(2200);
+  await expandAllGridRows(page);
+}
+async function extractAllRecaps(page,standings) {
+  const collected=new Map();
+  const options=await page.locator("#ddTeam").evaluate(element=>{
+    const widget=window.jQuery(element).data("kendoDropDownList");
+    const textField=widget.options.dataTextField;
+    const valueField=widget.options.dataValueField;
+    return widget.dataSource.data().map(entry=>({
+      label:String(entry[textField]??"").replace(/\s+/g," ").trim(),
+      value:String(entry[valueField]??"")
+    })).filter(option=>option.label&&option.value);
+  }).catch(()=>[]);
+  const uniqueOptions=[...new Map(options.map(option=>[option.value,option])).values()];
+  for(const option of uniqueOptions) {
+    await page.locator("#ddTeam").evaluate((element,target)=>{
+      const widget=window.jQuery(element).data("kendoDropDownList");
+      widget.value(target);
+      widget.trigger("change");
+    },option.value);
+    await page.waitForTimeout(1800);
+    const matchup=await extractTables(page);
+    if(!matchup[0]) continue;
+    const normalized=normalizeRecap(matchup[0],standings);
+    const teams=normalized.rows.map(row=>row[0]?.match(/^Team\s+(\d+)$/i)?.[1]).filter(Boolean).sort((a,b)=>Number(a)-Number(b));
+    const signature=teams.join("-")||option.value;
+    collected.set(signature,{...normalized,title:`${option.label} matchup`});
+  }
+  return collected.size?[...collected.values()]:(await extractTables(page)).map(table=>normalizeRecap(table,standings));
+}
 function normalizeRecap(table,standings) {
   if(!table||!standings) return table;
   const teamNumberByName=new Map(standings.rows.map(row=>[
@@ -195,13 +246,16 @@ for(const league of leagues){
   // still be receiving same-day corrections. Older leagues establish a
   // baseline without the expensive full import.
   const needsInitialRecentCheck=Boolean(sourceFingerprint&&!storedSourceFingerprint&&isInPostingWindow(league));
-  if(isWindowOpen(league,current)&&(force||!hasRows||sourceChanged||fingerprintChanged||needsInitialRecentCheck)) candidates.push({league,file,current,sourceFingerprint});
+  const historyWeeks=new Set((current.history??[]).map(entry=>String(entry.week)));
+  const needsHistoryBackfill=Number(current.week)>1&&historyWeeks.size<Number(current.week);
+  if(isWindowOpen(league,current)&&(force||!hasRows||sourceChanged||fingerprintChanged||needsInitialRecentCheck||needsHistoryBackfill)) candidates.push({league,file,current,sourceFingerprint});
 }
 await markerPage.close();
 let changed = false;
 try {
   for (const {league,file,current,sourceFingerprint} of candidates) {
     const views = {};
+    const archivedHistory=[];
     let sourceUpdated = current.sourceUpdated;
     let week = current.week;
     const page = await browser.newPage({viewport:{width:1440,height:1100}});
@@ -238,39 +292,33 @@ try {
         }
         views[view]=rosters;
       } else if(view==="recaps") {
-        const collected=new Map();
         try {
-          const options=await page.locator("#ddTeam").evaluate(element=>{
-            const widget=window.jQuery(element).data("kendoDropDownList");
-            const textField=widget.options.dataTextField;
-            const valueField=widget.options.dataValueField;
-            return widget.dataSource.data().map(entry=>({
-              label:String(entry[textField]??"").replace(/\s+/g," ").trim(),
-              value:String(entry[valueField]??"")
-            })).filter(option=>option.label&&option.value);
-          });
-          const uniqueOptions=[...new Map(options.map(option=>[option.value,option])).values()];
-          for(const option of uniqueOptions) {
-            await page.locator("#ddTeam").evaluate((element,target)=>{
-              const widget=window.jQuery(element).data("kendoDropDownList");
-              widget.value(target);
-              widget.trigger("change");
-            },option.value);
-            await page.waitForTimeout(1800);
-            const matchup=await extractTables(page);
-            if(matchup[0]) {
-              const normalized=normalizeRecap(matchup[0],views.standings?.[0]);
-              const teams=normalized.rows.map(row=>row[0]?.match(/^Team\s+(\d+)$/i)?.[1]).filter(Boolean).sort((a,b)=>Number(a)-Number(b));
-              const signature=teams.join("-")||option.value;
-              collected.set(signature,{...normalized,title:`${option.label} matchup`});
-            }
-          }
+          views[view]=await extractAllRecaps(page,views.standings?.[0]);
         } catch(error) {
           console.warn(`Could not enumerate every recap for ${league.displayName}: ${error.message}`);
+          views[view]=(await extractTables(page)).map(table=>normalizeRecap(table,views.standings?.[0]));
         }
-        if(collected.size) views[view]=[...collected.values()];
-        else views[view]=(await extractTables(page)).map(table=>normalizeRecap(table,views.standings?.[0]));
       } else views[view]=await extractTables(page);
+    }
+    // Backfill every posted week, not only weeks observed after FrameLine's
+    // history feature was introduced. LeagueSecretary exposes the archived
+    // week list on both the bowler and recap views.
+    const existingWeeks=new Set((current.history??[]).map(entry=>String(entry.week)));
+    const recapUrl=`https://www.leaguesecretary.com/bowling-centers/${league.centerSlug}/bowling-leagues/${league.slug}/${viewPaths.recaps}/${league.id}`;
+    await page.goto(recapUrl,{waitUntil:"domcontentloaded",timeout:90000});
+    await page.waitForTimeout(3000);
+    const weekOptions=await leagueWeekOptions(page);
+    for(const option of weekOptions.filter(item=>item.week!==String(week)&&!existingWeeks.has(item.week))) {
+      await selectLeagueWeek(page,option.value);
+      const recaps=await extractAllRecaps(page,views.standings?.[0]).catch(()=>[]);
+      const bowlerUrl=`https://www.leaguesecretary.com/bowling-centers/${league.centerSlug}/bowling-leagues/${league.slug}/${viewPaths.bowlers}/${league.id}`;
+      await page.goto(bowlerUrl,{waitUntil:"domcontentloaded",timeout:90000});
+      await page.waitForTimeout(2500);
+      await selectLeagueWeek(page,option.value);
+      const bowlers=await extractTables(page);
+      if(bowlers.length||recaps.length) archivedHistory.push({week:option.week,sourceUpdated:option.label,syncedAt:new Date().toISOString(),views:{bowlers,recaps}});
+      await page.goto(recapUrl,{waitUntil:"domcontentloaded",timeout:90000});
+      await page.waitForTimeout(2200);
     }
     await page.close();
     for(const view of Object.keys(viewPaths)) {
@@ -302,9 +350,9 @@ try {
     const complete=allTeamsRecapped&&bowlersScored;
     const cycle=targetCycle(league);
     const lastCompletedCycle=complete?cycle:(current.lastCompletedCycle??null);
-    if(fingerprint===current.fingerprint&&lastCompletedCycle===current.lastCompletedCycle) continue;
+    if(fingerprint===current.fingerprint&&lastCompletedCycle===current.lastCompletedCycle&&!archivedHistory.length) continue;
     const syncedAt=new Date().toISOString();
-    const history=[...(current.history??[])];
+    const history=[...(current.history??[]),...archivedHistory];
     const historyEntry={week,sourceUpdated,syncedAt,views:{bowlers:views.bowlers??[],recaps:views.recaps??[]}};
     const historyIndex=history.findIndex(entry=>String(entry.week)===String(week));
     if(historyIndex>=0) history[historyIndex]=historyEntry;

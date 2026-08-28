@@ -3528,7 +3528,24 @@ body:has(.social-home) .site-footer .footer-bottom {
   background: transparent;
   color: #f7fbfb;
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  user-select: none;
+  touch-action: manipulation;
 }
+.frameline-app button { -webkit-tap-highlight-color: transparent; }
+.frameline-app .bowler-history-trigger:active,
+.frameline-app .bowler-history-trigger:focus:not(:focus-visible) {
+  background: transparent;
+  color: #f7fbfb;
+  outline: none;
+}
+.recap-week-tools { display: flex; align-items: end; gap: 1rem; }
+.recap-week-tools > p { margin: 0; }
+.recap-week-tools label { display: grid; gap: 0.35rem; min-width: 9.5rem; }
+.recap-week-tools label span { color: #9db0bd; font-size: 0.7rem; font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase; }
+.recap-week-tools select { min-height: 2.8rem; border: 2px solid #72e0d7; border-radius: 0; background: #101f31; color: #f7fbfb; padding: 0 2.4rem 0 0.8rem; font: inherit; font-weight: 900; }
+@media (max-width: 700px) { .recap-week-tools { align-items: stretch; flex-direction: column; width: 100%; } .recap-week-tools label { width: 100%; } }
 .frameline-app .bowler-history-trigger:hover,
 .frameline-app .bowler-history-trigger:focus-visible {
   color: #72e0d7;
