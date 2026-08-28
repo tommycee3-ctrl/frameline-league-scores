@@ -334,7 +334,21 @@ try {
   if(catalogText!==existingCatalog) { await writeFile(catalogFile,catalogText,"utf8"); changed=true; }
 } finally { await browser.close(); }
 const refreshFinishedAt=new Date();
-console.log(`SYNC SUMMARY | ${refreshFinishedAt.toISOString()} | ${knownOnly?"known leagues":"league discovery"} | checked ${leagues.length} | changed ${refreshedLeagues.length} | ${Math.max(0,Math.round((refreshFinishedAt-refreshStartedAt)/1000))} seconds`);
+const refreshRecord={
+  startedAt:refreshStartedAt.toISOString(),
+  finishedAt:refreshFinishedAt.toISOString(),
+  durationSeconds:Math.max(0,Math.round((refreshFinishedAt-refreshStartedAt)/1000)),
+  mode:knownOnly?"known leagues":"league discovery",
+  leaguesChecked:leagues.length,
+  changeCount:refreshedLeagues.length,
+  changes:refreshedLeagues
+};
+const refreshHistoryFile=path.join(process.cwd(),".github","refresh-history.json");
+let refreshHistory=[];
+try { refreshHistory=JSON.parse(await readFile(refreshHistoryFile,"utf8")); } catch {}
+refreshHistory.unshift(refreshRecord);
+await writeFile(refreshHistoryFile,JSON.stringify(refreshHistory.slice(0,250),null,2)+"\n","utf8");
+console.log(`SYNC SUMMARY | ${refreshFinishedAt.toISOString()} | ${refreshRecord.mode} | checked ${leagues.length} | changed ${refreshedLeagues.length} | ${refreshRecord.durationSeconds} seconds`);
 for(const league of refreshedLeagues) console.log(`SYNC CHANGE | ${league.area} | ${league.center} | ${league.id} | ${league.name} | Week ${league.week??"not posted"} | Source ${league.sourceUpdated}`);
 if(!changed) console.log("No verified league update found.");
 else if(candidates.length===0) console.log("Stored initial quick-change markers; no full league import was required.");
