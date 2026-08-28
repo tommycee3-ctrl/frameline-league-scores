@@ -70,18 +70,27 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
 
           git pull --rebase origin main
-          node scripts/sync-leaguesecretary.mjs ${{ steps.window.outputs.mode }}
+          node scripts/sync-leaguesecretary.mjs ${{ steps.window.outputs.mode }} | tee sync-report.log
+          {
+            echo "## FrameLine refresh report"
+            echo '```'
+            grep -E '^SYNC (SUMMARY|CHANGE)' sync-report.log || echo "No refresh summary was produced."
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
 
           if git diff --quiet -- public/data/leagues; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
-            echo "All known leagues are current."
-            exit 0
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
 
           git add -- public/data/leagues
-          git commit -m "Update changed FrameLine league results"
+          if git diff --cached --quiet; then
+            echo "All known leagues are current."
+            exit 0
+          fi
+          git commit -m "Record FrameLine league refresh"
           git push
-          echo "changed=true" >> "$GITHUB_OUTPUT"
 
   deploy:
     if: needs.sync.outputs.changed == 'true'

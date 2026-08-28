@@ -36,6 +36,8 @@ const force = process.argv.includes("--force");
 const knownOnly = process.argv.includes("--known-only");
 const requestedLeague=process.argv.find(argument=>argument.startsWith("--league="))?.split("=")[1];
 const requestedCenter=process.argv.find(argument=>argument.startsWith("--center="))?.split("=")[1];
+const refreshStartedAt=new Date();
+const refreshedLeagues=[];
 const chicago = Object.fromEntries(new Intl.DateTimeFormat("en-US",{timeZone:"America/Chicago",year:"numeric",month:"2-digit",day:"2-digit",weekday:"short",hour:"numeric",hour12:false}).formatToParts(new Date()).map(p=>[p.type,p.value]));
 const dayIndex={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[chicago.weekday];
 
@@ -310,6 +312,14 @@ try {
     const next={...current,...league,sourceUpdated,sourceFingerprint:sourceFingerprint??current.sourceFingerprint??null,syncedAt,status:complete?"current":"awaiting-results",week,fingerprint,lastCompletedCycle,views,history};
     await writeFile(file,JSON.stringify(next,null,2)+"\n","utf8");
     changed=true;
+    refreshedLeagues.push({
+      id:league.id,
+      name:league.displayName,
+      area:league.area||"Other",
+      center:league.centerName||"Bowling center",
+      week:week??null,
+      sourceUpdated:sourceUpdated||league.updated||"Not posted"
+    });
     console.log(`${complete?"Completed":"Refreshed"} ${league.displayName}: ${recordCount} rows`);
   }
   const catalogById=new Map(existingCatalogEntries.map(league=>[league.id,league]));
@@ -323,5 +333,8 @@ try {
   try { existingCatalog=await readFile(catalogFile,"utf8"); } catch {}
   if(catalogText!==existingCatalog) { await writeFile(catalogFile,catalogText,"utf8"); changed=true; }
 } finally { await browser.close(); }
+const refreshFinishedAt=new Date();
+console.log(`SYNC SUMMARY | ${refreshFinishedAt.toISOString()} | ${knownOnly?"known leagues":"league discovery"} | checked ${leagues.length} | changed ${refreshedLeagues.length} | ${Math.max(0,Math.round((refreshFinishedAt-refreshStartedAt)/1000))} seconds`);
+for(const league of refreshedLeagues) console.log(`SYNC CHANGE | ${league.area} | ${league.center} | ${league.id} | ${league.name} | Week ${league.week??"not posted"} | Source ${league.sourceUpdated}`);
 if(!changed) console.log("No verified league update found.");
 else if(candidates.length===0) console.log("Stored initial quick-change markers; no full league import was required.");
