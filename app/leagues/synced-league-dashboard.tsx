@@ -455,16 +455,18 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
             </button>
           ))}
         </div>
-        <div className="league-tools team-search">
-          <label>
-            <span>Search {labels[tab].toLowerCase()}</span>
-            <input
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              placeholder="Team or bowler name"
-            />
-          </label>
-        </div>
+        {tab !== "honors" && (
+          <div className="league-tools team-search">
+            <label>
+              <span>Search {labels[tab].toLowerCase()}</span>
+              <input
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                placeholder="Team or bowler name"
+              />
+            </label>
+          </div>
+        )}
         {tab === "standings" && standings && (
           <div className="league-standings-direct synced-standing-list">
             <div className="result-head standing-grid sortable-head">
