@@ -242,7 +242,7 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
       bowlerTable.rows.some((row) => Number(row[wonIndex]) > 0)
     );
   }, [bowlerTable]);
-  const honors = useMemo(() => {
+  const leagueHonors = useMemo(() => {
     if (!bowlerTable) return [];
     const isScratchLeague = data.type?.toLowerCase().includes("scratch");
     const divisions = [
@@ -282,6 +282,56 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
       return groups.length ? [{ ...division, groups }] : [];
     });
   }, [bowlerTable, data.type]);
+  const weeklyHonors = useMemo(() => {
+    if (!bowlerTable) return [];
+    const isScratchLeague = data.type?.toLowerCase().includes("scratch");
+    const seen = new Set<string>();
+    const records = recapMatchups.flatMap((matchup) => matchup.flatMap((team) => team.rows.map((row) => {
+      const name = personName(row[0] ?? "");
+      const key = `${team.team}-${name}`;
+      if (!name || seen.has(key)) return null;
+      seen.add(key);
+      const bowler = bowlerTable.rows.find((candidate) => personName(cell(bowlerTable, candidate, "Name")) === name && cell(bowlerTable, candidate, "Team#") === team.team);
+      const games = [0, 1, 2].map((game) => score(row, game)).filter((value) => value > 0);
+      if (!games.length) return null;
+      const handicap = Number(row[2] || (bowler ? cell(bowlerTable, bowler, "HCP") : 0)) || 0;
+      const scratchSeries = games.reduce((sum, value) => sum + value, 0);
+      return {
+        name,
+        team: team.team,
+        gender: bowler ? cell(bowlerTable, bowler, "Gndr") : "",
+        values: {
+          "scratch-game": Math.max(...games),
+          "scratch-series": scratchSeries,
+          "handicap-game": Math.max(...games.map((value) => value + handicap)),
+          "handicap-series": scratchSeries + handicap * games.length,
+        },
+      };
+    }))).filter((record): record is NonNullable<typeof record> => Boolean(record));
+    const divisions = [
+      { id: "men", label: "Men", matches: (value: string) => /^m/i.test(value) },
+      { id: "women", label: "Women", matches: (value: string) => /^(w|f)/i.test(value) },
+    ];
+    const categories = [
+      { id: "scratch-game" as const, label: "Scratch High Game", handicap: false },
+      { id: "scratch-series" as const, label: "Scratch High Series", handicap: false },
+      { id: "handicap-game" as const, label: "Handicap High Game", handicap: true },
+      { id: "handicap-series" as const, label: "Handicap High Series", handicap: true },
+    ];
+    return divisions.flatMap((division) => {
+      const divisionRecords = records.filter((record) => division.matches(record.gender));
+      if (!divisionRecords.length) return [];
+      const groups = categories.filter((category) => !category.handicap || !isScratchLeague).map((category) => ({
+        ...category,
+        leaders: [...divisionRecords].sort((a, b) => b.values[category.id] - a.values[category.id]).slice(0, 3).map((record) => ({
+          name: record.name,
+          team: record.team,
+          score: String(record.values[category.id]),
+        })),
+      })).filter((category) => category.leaders.length);
+      return groups.length ? [{ ...division, groups }] : [];
+    });
+  }, [bowlerTable, data.type, recapMatchups]);
   const bowlerWeekPoints = (name: string, team: string) => {
     for (const matchup of recapMatchups) {
       const side = matchup.findIndex((entry) => entry.team === team);
@@ -661,31 +711,36 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
         )}
         {tab === "honors" && (
           <div className="league-honors">
-            <div className="recap-heading">
-              <div><p className="eyebrow red">League leaders</p><h3>Honors</h3></div>
-              <p>Top three posted scores in each eligible division.</p>
-            </div>
-            {honors.length ? honors.map((division) => (
-              <section className="honors-division" key={division.id}>
-                <header><span>{division.id === "men" ? "M" : "W"}</span><h3>{division.label}</h3></header>
-                <div className="honors-grid">
-                  {division.groups.map((group) => (
-                    <article key={group.id}>
-                      <h4>{group.label}</h4>
-                      <ol>
-                        {group.leaders.map((leader, index) => (
-                          <li key={`${leader.name}-${leader.score}`}>
-                            <b>{index + 1}</b>
-                            <button onClick={() => setSelectedBowler({ name: leader.name, team: leader.team })}>{leader.name}</button>
-                            <strong>{leader.score}</strong>
-                          </li>
-                        ))}
-                      </ol>
-                    </article>
-                  ))}
-                </div>
-              </section>
-            )) : <div className="empty-current"><strong>Honors are awaiting posted scores.</strong><span>This section will fill automatically with the next league update.</span></div>}
+            {[
+              { id: "weekly", eyebrow: `Week ${data.week ?? "—"}`, title: "Weekly Honors", description: "Top three scores from the latest posted week.", divisions: weeklyHonors },
+              { id: "league", eyebrow: "Season to date", title: "League Honors", description: "Top three posted scores across the full league season.", divisions: leagueHonors },
+            ].map((section) => <section className="honors-section" key={section.id}>
+              <div className="recap-heading">
+                <div><p className="eyebrow red">{section.eyebrow}</p><h3>{section.title}</h3></div>
+                <p>{section.description}</p>
+              </div>
+              {section.divisions.length ? section.divisions.map((division) => (
+                <section className="honors-division" key={`${section.id}-${division.id}`}>
+                  <header><span>{division.id === "men" ? "M" : "W"}</span><h3>{division.label}</h3></header>
+                  <div className="honors-grid">
+                    {division.groups.map((group) => (
+                      <article key={group.id}>
+                        <h4>{group.label}</h4>
+                        <ol>
+                          {group.leaders.map((leader, index) => (
+                            <li key={`${leader.name}-${leader.score}`}>
+                              <b>{index + 1}</b>
+                              <button onClick={() => setSelectedBowler({ name: leader.name, team: leader.team })}>{leader.name}</button>
+                              <strong>{leader.score}</strong>
+                            </li>
+                          ))}
+                        </ol>
+                      </article>
+                    ))}
+                  </div>
+                </section>
+              )) : <div className="empty-current"><strong>{section.title} are awaiting posted scores.</strong><span>This section will fill automatically with the next league update.</span></div>}
+            </section>)}
           </div>
         )}
         {tab === "recaps" && (

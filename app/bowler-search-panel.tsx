@@ -3,12 +3,15 @@
 import { useState } from "react";
 import { BowlerMatch, findBowlers } from "./bowler-lookup";
 
-export function BowlerSearchPanel({ onSelect, heading = "Find a bowler", intro = "Search by any part of a bowler's name." }: { onSelect?: (match: BowlerMatch) => void; heading?: string; intro?: string }) {
+export function BowlerSearchPanel({ onSelect, onSelectMany, heading = "Find a bowler", intro = "Search by any part of a bowler's name." }: { onSelect?: (match: BowlerMatch) => void; onSelectMany?: (matches: BowlerMatch[]) => void; heading?: string; intro?: string }) {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<BowlerMatch[]>([]);
   const [searched, setSearched] = useState(false);
   const [openLeague, setOpenLeague] = useState("");
-  const search = () => { setResults(findBowlers(query)); setSearched(true); setOpenLeague(""); };
+  const [selectedKeys, setSelectedKeys] = useState<string[]>([]);
+  const search = () => { setResults(findBowlers(query)); setSearched(true); setOpenLeague(""); setSelectedKeys([]); };
+  const toggle = (key: string) => setSelectedKeys((current) => current.includes(key) ? current.filter((item) => item !== key) : [...current, key]);
+  const selectedMatches = results.filter((match) => selectedKeys.includes(match.key));
 
   return <section className="bowler-finder">
     <p className="frameline-kicker">BOWLER LOOKUP</p>
@@ -21,7 +24,7 @@ export function BowlerSearchPanel({ onSelect, heading = "Find a bowler", intro =
     {searched && !results.length && <p className="finder-empty">No matching bowlers are in the imported leagues yet.</p>}
     <div className="finder-results">
       {results.map((match) => <article key={match.key}>
-        <header><strong>{match.name}</strong>{onSelect && <button type="button" onClick={() => onSelect(match)}>This is me</button>}</header>
+        <header><strong>{match.name}</strong>{onSelectMany ? <label className="bowler-identity-choice"><input type="checkbox" checked={selectedKeys.includes(match.key)} onChange={() => toggle(match.key)}/><span>{selectedKeys.includes(match.key) ? "Selected" : "This is me"}</span></label> : onSelect && <button type="button" onClick={() => onSelect(match)}>This is me</button>}</header>
         {match.leagues.map((league) => {
           const detailKey = `${match.key}-${league.id}`;
           const expanded = openLeague === detailKey;
@@ -39,5 +42,6 @@ export function BowlerSearchPanel({ onSelect, heading = "Find a bowler", intro =
         })}
       </article>)}
     </div>
+    {onSelectMany && selectedMatches.length > 0 && <div className="bowler-multi-confirm"><span><b>{selectedMatches.length}</b> roster {selectedMatches.length === 1 ? "name" : "names"} selected</span><button type="button" onClick={() => onSelectMany(selectedMatches)}>Continue with selected names â†’</button></div>}
   </section>;
 }

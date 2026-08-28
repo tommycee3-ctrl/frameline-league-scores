@@ -2,6 +2,7 @@ import leagueCatalog from "../public/data/leagues/all.json";
 import type { LeagueSnapshot } from "./leagues/synced-league-dashboard";
 
 export const PROFILE_KEY = "frameline-bowler-name";
+export const PROFILE_ALIASES_KEY = "frameline-bowler-aliases";
 export const LEAGUES_KEY = "frameline-current-leagues";
 export const leagueSnapshots = leagueCatalog as LeagueSnapshot[];
 

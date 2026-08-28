@@ -12,6 +12,7 @@ import { LeagueSnapshot, SyncedLeagueDashboard } from "./synced-league-dashboard
 const snapshots = leagueCatalog as LeagueSnapshot[];
 const STORAGE_KEY = "frameline-current-leagues";
 const PROFILE_KEY = "frameline-bowler-name";
+const PROFILE_ALIASES_KEY = "frameline-bowler-aliases";
 const LEAGUE_BOWLERS_KEY = "frameline-league-bowlers";
 const AREAS = ["Omaha", "Bellevue", "Lincoln", "Council Bluffs"];
 const CENTERS: Record<string, string[]> = {
@@ -105,6 +106,7 @@ export function LeagueSwitcher({ manageOnly = false }: { manageOnly?: boolean })
       const valid = (current.length ? current : legacy).filter((id) => snapshots.some((item) => item.id === id));
       if (!manageOnly && valid.length === 0) {
         localStorage.removeItem(PROFILE_KEY);
+        localStorage.removeItem(PROFILE_ALIASES_KEY);
         router.replace("/");
         return;
       }
@@ -179,6 +181,7 @@ export function LeagueSwitcher({ manageOnly = false }: { manageOnly?: boolean })
     if (id === leagueId && next[0]) openLeague(next[0]);
     if (!next.length) {
       localStorage.removeItem(PROFILE_KEY);
+      localStorage.removeItem(PROFILE_ALIASES_KEY);
       setBowlerName("");
       router.replace("/");
     }
@@ -186,6 +189,7 @@ export function LeagueSwitcher({ manageOnly = false }: { manageOnly?: boolean })
   const resetBowler = () => {
     if (!window.confirm("Reset your bowler profile and remove all saved leagues from this device?")) return;
     localStorage.removeItem(PROFILE_KEY);
+    localStorage.removeItem(PROFILE_ALIASES_KEY);
     localStorage.removeItem(STORAGE_KEY);
     localStorage.removeItem("west-lanes-favorite-leagues");
     localStorage.removeItem(LEAGUE_BOWLERS_KEY);

@@ -4,7 +4,7 @@
 
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { BowlerMatch, LEAGUES_KEY, PROFILE_KEY } from "./bowler-lookup";
+import { BowlerMatch, LEAGUES_KEY, PROFILE_ALIASES_KEY, PROFILE_KEY } from "./bowler-lookup";
 import { BowlerSearchPanel } from "./bowler-search-panel";
 
 export function HomeDashboard() {
@@ -19,9 +19,13 @@ export function HomeDashboard() {
     else setReady(true);
   }, [router]);
 
-  const choose = (match: BowlerMatch) => {
-    const ids = [...new Set([...saved, ...match.leagues.map((league) => league.id)])];
-    localStorage.setItem(PROFILE_KEY, match.name);
+  const choose = (matches: BowlerMatch[]) => {
+    if (!matches.length) return;
+    const ids = [...new Set([...saved, ...matches.flatMap((match) => match.leagues.map((league) => league.id))])];
+    const leagueBowlers = Object.fromEntries(matches.flatMap((match) => match.leagues.map((league) => [league.id, match.name])));
+    localStorage.setItem(PROFILE_KEY, matches[0].name);
+    localStorage.setItem(PROFILE_ALIASES_KEY, JSON.stringify(matches.map((match) => match.name)));
+    localStorage.setItem("frameline-league-bowlers", JSON.stringify(leagueBowlers));
     localStorage.setItem(LEAGUES_KEY, JSON.stringify(ids));
     router.replace("/leagues");
   };
@@ -29,6 +33,6 @@ export function HomeDashboard() {
   if (!ready) return <main className="welcome-home"><div className="frameline-loading">Opening your leagues…</div></main>;
 
   return <main className="welcome-home onboarding-home">
-    <BowlerSearchPanel onSelect={choose} heading="Hello, Bowler." intro="Please enter your name and I’ll find every imported league and team connected to you." />
+    <BowlerSearchPanel onSelectMany={choose} heading="Hello, Bowler." intro="Search your name, then select every roster version that belongs to you—for example, Tom and Tommy." />
   </main>;
 }
