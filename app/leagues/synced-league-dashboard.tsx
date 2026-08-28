@@ -353,7 +353,7 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
     const snapshots = data.history?.length
       ? data.history
       : [{ week: data.week, sourceUpdated: data.sourceUpdated, syncedAt: "", views: data.views }];
-    return snapshots
+    const entries = snapshots
       .map((snapshot) => {
         const table = snapshot.views.bowlers?.[0];
         const row = table?.rows.find(
@@ -382,11 +382,19 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
           series: scoreRow?.at(-1) || (table && row ? cell(table, row, "HSS") : ""),
           average: table && row ? cell(table, row, "Avg") : scoreRow?.[1] || "—",
           weekPoints,
-          totalPoints: hasIndividualPoints && table && row ? cell(table, row, "WON") : "",
+          totalPoints: "",
         };
       })
       .filter((entry): entry is NonNullable<typeof entry> => Boolean(entry))
       .sort((left, right) => Number(left.week) - Number(right.week));
+    let runningPoints = 0;
+    return entries.map((entry) => {
+      if (entry.weekPoints !== null) runningPoints += entry.weekPoints;
+      return {
+        ...entry,
+        totalPoints: hasIndividualPoints ? String(runningPoints) : "",
+      };
+    });
   };
   const q = query.trim().toLowerCase();
   const week = data.week ?? "1";
