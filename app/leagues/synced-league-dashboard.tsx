@@ -52,6 +52,9 @@ const personName = (name: string) => {
 };
 const score = (row: string[], game: number) => Number(row[3 + game] ?? 0);
 const series = (row: string[]) => Number(row.at(-1) ?? 0);
+const handicap = (row: string[]) => Number(row[2] ?? 0);
+const pointScore = (row: string[], game: number) => score(row, game) + handicap(row);
+const pointSeries = (row: string[]) => series(row) + handicap(row) * 3;
 const laneNumber = (value = "") => Number(value.match(/\d+/)?.[0] ?? Number.MAX_SAFE_INTEGER);
 const resultClass = (left: number, right: number) =>
   left > right ? "winner-score" : left < right ? "loser-score" : "tie-score";
@@ -59,16 +62,16 @@ const individualPoints = (bowler: string[], opponent: string[]) =>
   [0, 1, 2].reduce(
     (points, game) =>
       points +
-      (score(bowler, game) > score(opponent, game)
+      (pointScore(bowler, game) > pointScore(opponent, game)
         ? 1
-        : score(bowler, game) === score(opponent, game)
+        : pointScore(bowler, game) === pointScore(opponent, game)
           ? 0.5
           : 0),
     0,
   ) +
-  (series(bowler) > series(opponent)
+  (pointSeries(bowler) > pointSeries(opponent)
     ? 1
-    : series(bowler) === series(opponent)
+    : pointSeries(bowler) === pointSeries(opponent)
       ? 0.5
       : 0);
 const teamResult = (team: string[], opponent: string[], game: number) => {
@@ -396,6 +399,10 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
       };
     });
   };
+  const bowlerPointTotal = (name: string, team: string) => {
+    const history = bowlerHistory(name, team);
+    return history.at(-1)?.totalPoints || "0";
+  };
   const q = query.trim().toLowerCase();
   const week = data.week ?? "1";
   const laneTable = data.views.lanes?.[0];
@@ -608,9 +615,7 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                                     {hasIndividualPoints && <span>
                                       <small>Total pts</small>
                                       <strong className="week-points">
-                                        {source
-                                          ? cell(bowlerTable!, source, "WON")
-                                          : "—"}
+                                        {bowlerPointTotal(n, team)}
                                       </strong>
                                     </span>}
                                   </div>
@@ -659,10 +664,9 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                                         </strong>
                                       </span>}
                                       <span>
-                                        <small>Week pts</small>
+                                        <small>Total pts</small>
                                         <strong className="week-points">
-                                          {cell(bowlerTable!, person, "WON") ||
-                                            "—"}
+                                          {bowlerPointTotal(n, team)}
                                         </strong>
                                       </span>
                                     </div>
@@ -717,7 +721,7 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                     </span>
                     <b>{scoreRow?.at(-1) || cell(bowlerTable, row, "HSS")}</b>
                     <span>{cell(bowlerTable, row, "Avg")}</span>
-                    {hasIndividualPoints && <span>{cell(bowlerTable, row, "WON")}</span>}
+                    {hasIndividualPoints && <span>{bowlerPointTotal(name, team)}</span>}
                   </button>
                 );
               })}
@@ -839,8 +843,8 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                                     <td
                                       key={game}
                                       className={resultClass(
-                                        score(row, game),
-                                        score(versus, game),
+                                        pointScore(row, game),
+                                        pointScore(versus, game),
                                       )}
                                     >
                                       {row[3 + game]}
@@ -848,8 +852,8 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                                   ))}
                                   <td
                                     className={resultClass(
-                                      series(row),
-                                      series(versus),
+                                      pointSeries(row),
+                                      pointSeries(versus),
                                     )}
                                   >
                                     <b>{row.at(-1)}</b>
