@@ -2,10 +2,9 @@ name: Sync league results
 
 on:
   schedule:
-    # Avoid the busiest top-of-hour scheduler window. Run hourly at :17 and
-    # use the Central-time gate below
+    # Run at the top of every hour and use the Central-time gate below
     # so the refresh stays on 10 PM, midnight, 2 AM, etc. across DST changes.
-    - cron: "17 * * * *"
+    - cron: "0 * * * *"
   workflow_dispatch:
   push:
     branches: [main]
