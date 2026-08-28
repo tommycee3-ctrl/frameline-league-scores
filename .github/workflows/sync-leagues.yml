@@ -2,10 +2,10 @@ name: Sync league results
 
 on:
   schedule:
-    # Try at the top of the hour, then retry at :10 if GitHub dropped or did not
-    # complete the primary schedule. The Central-time gate keeps even hours.
-    - cron: "0 * * * *"
-    - cron: "10 * * * *"
+    # GitHub warns that jobs at the start of an hour can be delayed or dropped.
+    # Run at :17 with a :37 fallback; the Central-time gate keeps even hours.
+    - cron: "17 * * * *"
+    - cron: "37 * * * *"
   workflow_dispatch:
   push:
     branches: [main]
@@ -19,12 +19,13 @@ permissions:
   id-token: write
 
 concurrency:
-  group: league-results-sync
+  group: league-score-refresh
   cancel-in-progress: false
 
 jobs:
   sync:
     runs-on: ubuntu-latest
+    timeout-minutes: 75
     outputs:
       changed: ${{ steps.publish.outputs.changed }}
     steps:
@@ -40,13 +41,8 @@ jobs:
           central_hour=$(TZ=America/Chicago date +%H)
           if (( 10#$central_hour % 2 == 0 )); then
             echo "run=true" >> "$GITHUB_OUTPUT"
-            if [[ "$central_hour" == "00" ]]; then
-              echo "mode=" >> "$GITHUB_OUTPUT"
-              echo "Running the daily new-league discovery scan."
-            else
-              echo "mode=--known-only" >> "$GITHUB_OUTPUT"
-              echo "Checking known leagues for changed source dates."
-            fi
+            echo "mode=--known-only" >> "$GITHUB_OUTPUT"
+            echo "Checking known leagues for changed source dates."
           else
             echo "run=false" >> "$GITHUB_OUTPUT"
             echo "Skipping odd Central-time hour $central_hour."
@@ -63,10 +59,10 @@ jobs:
           TRIGGER_SCHEDULE: ${{ github.event.schedule }}
         run: |
           echo "run=true" >> "$GITHUB_OUTPUT"
-          if [[ "$GITHUB_EVENT_NAME" != "schedule" || "$TRIGGER_SCHEDULE" != "10 * * * *" ]]; then
+          if [[ "$GITHUB_EVENT_NAME" != "schedule" || "$TRIGGER_SCHEDULE" != "37 * * * *" ]]; then
             exit 0
           fi
-          latest=$(jq -r '.[0].finishedAt // empty' .github/refresh-history.json 2>/dev/null || true)
+          latest=$(jq -r '[.[] | select(.mode == "known leagues")][0].finishedAt // empty' .github/refresh-history.json 2>/dev/null || true)
           if [[ -z "$latest" ]]; then
             echo "No completed refresh is logged for this cycle; running fallback."
             exit 0

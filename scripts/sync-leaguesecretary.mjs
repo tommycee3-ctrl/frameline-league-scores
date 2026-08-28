@@ -247,7 +247,10 @@ for(const league of leagues){
   // baseline without the expensive full import.
   const needsInitialRecentCheck=Boolean(sourceFingerprint&&!storedSourceFingerprint&&isInPostingWindow(league));
   const historyWeeks=new Set((current.history??[]).map(entry=>String(entry.week)));
-  const needsHistoryBackfill=Number(current.week)>1&&historyWeeks.size<Number(current.week);
+  // Historical backfills belong to the nightly maintenance workflow. The
+  // frequent known-league refresh must remain small enough to finish before
+  // its next two-hour cycle.
+  const needsHistoryBackfill=!knownOnly&&Number(current.week)>1&&historyWeeks.size<Number(current.week);
   if(isWindowOpen(league,current)&&(force||!hasRows||sourceChanged||fingerprintChanged||needsInitialRecentCheck||needsHistoryBackfill)) candidates.push({league,file,current,sourceFingerprint});
 }
 await markerPage.close();
@@ -303,22 +306,24 @@ try {
     // Backfill every posted week, not only weeks observed after FrameLine's
     // history feature was introduced. LeagueSecretary exposes the archived
     // week list on both the bowler and recap views.
-    const existingWeeks=new Set((current.history??[]).map(entry=>String(entry.week)));
-    const recapUrl=`https://www.leaguesecretary.com/bowling-centers/${league.centerSlug}/bowling-leagues/${league.slug}/${viewPaths.recaps}/${league.id}`;
-    await page.goto(recapUrl,{waitUntil:"domcontentloaded",timeout:90000});
-    await page.waitForTimeout(3000);
-    const weekOptions=await leagueWeekOptions(page);
-    for(const option of weekOptions.filter(item=>item.week!==String(week)&&!existingWeeks.has(item.week))) {
-      await selectLeagueWeek(page,option.value);
-      const recaps=await extractAllRecaps(page,views.standings?.[0]).catch(()=>[]);
-      const bowlerUrl=`https://www.leaguesecretary.com/bowling-centers/${league.centerSlug}/bowling-leagues/${league.slug}/${viewPaths.bowlers}/${league.id}`;
-      await page.goto(bowlerUrl,{waitUntil:"domcontentloaded",timeout:90000});
-      await page.waitForTimeout(2500);
-      await selectLeagueWeek(page,option.value);
-      const bowlers=await extractTables(page);
-      if(bowlers.length||recaps.length) archivedHistory.push({week:option.week,sourceUpdated:option.label,syncedAt:new Date().toISOString(),views:{bowlers,recaps}});
+    if(!knownOnly) {
+      const existingWeeks=new Set((current.history??[]).map(entry=>String(entry.week)));
+      const recapUrl=`https://www.leaguesecretary.com/bowling-centers/${league.centerSlug}/bowling-leagues/${league.slug}/${viewPaths.recaps}/${league.id}`;
       await page.goto(recapUrl,{waitUntil:"domcontentloaded",timeout:90000});
-      await page.waitForTimeout(2200);
+      await page.waitForTimeout(3000);
+      const weekOptions=await leagueWeekOptions(page);
+      for(const option of weekOptions.filter(item=>item.week!==String(week)&&!existingWeeks.has(item.week))) {
+        await selectLeagueWeek(page,option.value);
+        const recaps=await extractAllRecaps(page,views.standings?.[0]).catch(()=>[]);
+        const bowlerUrl=`https://www.leaguesecretary.com/bowling-centers/${league.centerSlug}/bowling-leagues/${league.slug}/${viewPaths.bowlers}/${league.id}`;
+        await page.goto(bowlerUrl,{waitUntil:"domcontentloaded",timeout:90000});
+        await page.waitForTimeout(2500);
+        await selectLeagueWeek(page,option.value);
+        const bowlers=await extractTables(page);
+        if(bowlers.length||recaps.length) archivedHistory.push({week:option.week,sourceUpdated:option.label,syncedAt:new Date().toISOString(),views:{bowlers,recaps}});
+        await page.goto(recapUrl,{waitUntil:"domcontentloaded",timeout:90000});
+        await page.waitForTimeout(2200);
+      }
     }
     await page.close();
     for(const view of Object.keys(viewPaths)) {

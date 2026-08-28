@@ -1,0 +1,104 @@
+name: Maintain league catalog and history
+
+on:
+  schedule:
+    # 05:43 UTC is midnight Central during daylight time; 06:43 UTC is
+    # midnight during standard time. The local-time gate selects one run.
+    - cron: "43 5,6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: league-catalog-maintenance
+  cancel-in-progress: false
+
+jobs:
+  maintain:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    outputs:
+      changed: ${{ steps.publish.outputs.changed }}
+    steps:
+      - name: Run only at midnight Central
+        id: window
+        shell: bash
+        run: |
+          if [[ "$GITHUB_EVENT_NAME" == "workflow_dispatch" || "$(TZ=America/Chicago date +%H)" == "00" ]]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "Skipping the daylight/standard-time duplicate."
+          fi
+      - uses: actions/checkout@v4
+        if: steps.window.outputs.run == 'true'
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        if: steps.window.outputs.run == 'true'
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+        if: steps.window.outputs.run == 'true'
+      - run: npx playwright install --with-deps chromium
+        if: steps.window.outputs.run == 'true'
+      - name: Discover leagues and backfill history
+        id: publish
+        if: steps.window.outputs.run == 'true'
+        shell: bash
+        run: |
+          git config user.name "FrameLine League Maintenance"
+          git config user.email "actions@users.noreply.github.com"
+          git pull --rebase origin main
+          node scripts/sync-leaguesecretary.mjs | tee maintenance-report.log
+          {
+            echo "## FrameLine maintenance report"
+            echo '```'
+            grep -E '^SYNC (SUMMARY|CHANGE)' maintenance-report.log || echo "No maintenance summary was produced."
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+          if git diff --quiet -- public/data/leagues; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+          git add -- public/data/leagues .github/refresh-history.json
+          if git diff --cached --quiet; then
+            echo "League catalog and histories are current."
+            exit 0
+          fi
+          git commit -m "Maintain FrameLine league catalog and history"
+          git pull --rebase origin main
+          git push
+
+  deploy:
+    if: needs.maintain.outputs.changed == 'true'
+    needs: maintain
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: Build the maintained app
+        env:
+          NEXT_PUBLIC_BASE_PATH: /frameline-league-scores
+        run: npm run build:pages
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./out
+      - name: Publish maintained league data
+        id: deployment
+        uses: actions/deploy-pages@v4
