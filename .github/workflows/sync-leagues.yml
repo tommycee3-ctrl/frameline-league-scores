@@ -2,9 +2,10 @@ name: Sync league results
 
 on:
   schedule:
-    # Run at the top of every hour and use the Central-time gate below
-    # so the refresh stays on 10 PM, midnight, 2 AM, etc. across DST changes.
+    # Try at the top of the hour, then retry at :10 if GitHub dropped or did not
+    # complete the primary schedule. The Central-time gate keeps even hours.
     - cron: "0 * * * *"
+    - cron: "10 * * * *"
   workflow_dispatch:
   push:
     branches: [main]
@@ -52,18 +53,44 @@ jobs:
           fi
       - uses: actions/checkout@v4
         if: steps.window.outputs.run == 'true'
-      - uses: actions/setup-node@v4
+        with:
+          ref: main
+      - name: Skip an unnecessary fallback
+        id: fallback
         if: steps.window.outputs.run == 'true'
+        shell: bash
+        env:
+          TRIGGER_SCHEDULE: ${{ github.event.schedule }}
+        run: |
+          echo "run=true" >> "$GITHUB_OUTPUT"
+          if [[ "$GITHUB_EVENT_NAME" != "schedule" || "$TRIGGER_SCHEDULE" != "10 * * * *" ]]; then
+            exit 0
+          fi
+          latest=$(jq -r '.[0].finishedAt // empty' .github/refresh-history.json 2>/dev/null || true)
+          if [[ -z "$latest" ]]; then
+            echo "No completed refresh is logged for this cycle; running fallback."
+            exit 0
+          fi
+          current_cycle=$(TZ=America/Chicago date +%Y-%m-%dT%H)
+          latest_cycle=$(TZ=America/Chicago date -d "$latest" +%Y-%m-%dT%H)
+          if [[ "$latest_cycle" == "$current_cycle" ]]; then
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "The primary refresh already completed during $current_cycle Central; skipping fallback."
+          else
+            echo "No completed primary refresh was found for $current_cycle Central; running fallback."
+          fi
+      - uses: actions/setup-node@v4
+        if: steps.window.outputs.run == 'true' && steps.fallback.outputs.run == 'true'
         with:
           node-version: 24
           cache: npm
       - run: npm ci
-        if: steps.window.outputs.run == 'true'
+        if: steps.window.outputs.run == 'true' && steps.fallback.outputs.run == 'true'
       - run: npx playwright install --with-deps chromium
-        if: steps.window.outputs.run == 'true'
+        if: steps.window.outputs.run == 'true' && steps.fallback.outputs.run == 'true'
       - name: Check changed leagues and publish updates
         id: publish
-        if: steps.window.outputs.run == 'true'
+        if: steps.window.outputs.run == 'true' && steps.fallback.outputs.run == 'true'
         shell: bash
         run: |
           git config user.name "FrameLine League Sync"
