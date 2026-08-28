@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   appleWebApp: { capable: true, title: "FrameLine", statusBarStyle: "black-translucent" },
 };
 
-const links = [["/leagues", "My Leagues"], ["/bowler-search", "Bowler Search"], ["/manage-leagues", "Add / Remove Leagues"]] as const;
+const links = [["/leagues", "My Leagues"], ["/league-view", "League View"], ["/bowler-search", "Bowler Search"], ["/manage-leagues", "Add / Remove Leagues"]] as const;
 
 function FrameLineMark() {
   return <span className="frameline-mark" aria-hidden="true"><span>9</span><span>/</span><span>X</span><em>FRAME 10</em></span>;
@@ -44,6 +44,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           </Link>
           <nav className="desktop-nav" aria-label="Main navigation">
             <Link href="/leagues">My Leagues</Link>
+            <Link href="/league-view">League View</Link>
             <Link href="/bowler-search">Bowler Search</Link>
             <Link href="/manage-leagues">Add / Remove Leagues</Link>
           </nav>
@@ -61,6 +62,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           </div>
           <div>
             <Link href="/leagues">My Leagues</Link>
+            <Link href="/league-view">League View</Link>
             <Link href="/bowler-search">Bowler Search</Link>
             <Link href="/manage-leagues">Add / Remove Leagues</Link>
           </div>
