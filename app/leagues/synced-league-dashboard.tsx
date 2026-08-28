@@ -89,7 +89,7 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
     lanes: "Lane Assignments",
   };
   const [tab, setTab] = useState<(typeof tabs)[number]>("standings");
-  const [honorsView, setHonorsView] = useState<"weekly" | "league">("weekly");
+  const [honorsView, setHonorsView] = useState<"weekly" | "yearly">("weekly");
   const [query, setQuery] = useState("");
   const [openTeam, setOpenTeam] = useState<string | null>(null);
   const [selectedBowler, setSelectedBowler] = useState<{
@@ -715,11 +715,11 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
           <div className="league-honors">
             <div className="honors-view-buttons" role="group" aria-label="Choose honors period">
               <button type="button" className={honorsView === "weekly" ? "active" : ""} onClick={() => setHonorsView("weekly")}>Weekly Honors</button>
-              <button type="button" className={honorsView === "league" ? "active" : ""} onClick={() => setHonorsView("league")}>League Honors</button>
+              <button type="button" className={honorsView === "yearly" ? "active" : ""} onClick={() => setHonorsView("yearly")}>Yearly Honors</button>
             </div>
             {[
               { id: "weekly", eyebrow: `Week ${data.week ?? "—"}`, title: "Weekly Honors", description: "Top three scores from the latest posted week.", divisions: weeklyHonors },
-              { id: "league", eyebrow: "Season to date", title: "League Honors", description: "Top three posted scores across the full league season.", divisions: leagueHonors },
+              { id: "yearly", eyebrow: "Season to date", title: "Yearly Honors", description: "Top three posted scores across the full league season.", divisions: leagueHonors },
             ].filter((section) => section.id === honorsView).map((section) => <section className="honors-section" key={section.id}>
               <div className="recap-heading">
                 <div><p className="eyebrow red">{section.eyebrow}</p><h3>{section.title}</h3></div>
