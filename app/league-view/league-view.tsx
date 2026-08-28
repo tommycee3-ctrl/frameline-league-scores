@@ -46,7 +46,7 @@ export function LeagueView() {
     </section>
     <section className="section league-browser">
       <div className="league-browser-tools">
-        <label><span>Search</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="League, center, or League ID" /></label>
+        <label><span>Search</span><input value={query} onChange={(event) => setQuery(event.target.value)} onKeyDown={(event) => { if (event.key === "Enter") { event.preventDefault(); event.currentTarget.blur(); } }} enterKeyHint="done" inputMode="search" placeholder="League, center, or League ID" /></label>
         <label><span>Area</span><select value={area} onChange={(event) => { setArea(event.target.value); setCenter("All centers"); }}><option>All areas</option>{areas.map((item) => <option key={item}>{item}</option>)}</select></label>
         <label><span>Center</span><select value={center} onChange={(event) => setCenter(event.target.value)}><option>All centers</option>{centers.map((item) => <option key={item}>{item}</option>)}</select></label>
         <label><span>Day</span><select value={day} onChange={(event) => setDay(event.target.value)}><option>All days</option>{["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"].map((item) => <option key={item}>{item}</option>)}</select></label>
