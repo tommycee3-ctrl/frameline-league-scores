@@ -1,0 +1,60 @@
+name: Verify league refresh cadence
+
+on:
+  schedule:
+    # Independent safety check. If GitHub misses the regular two-hour schedule,
+    # this workflow restarts it once the last completed refresh is stale.
+    - cron: "52 * * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/sync-watchdog.yml"
+
+permissions:
+  actions: write
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Restart a missed league refresh
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          latest=$(jq -r '[.[] | select(.mode == "known leagues")][0].finishedAt // empty' .github/refresh-history.json 2>/dev/null || true)
+          stale=true
+
+          if [[ -n "$latest" ]]; then
+            latest_epoch=$(date -d "$latest" +%s)
+            now_epoch=$(date +%s)
+            age_minutes=$(( (now_epoch - latest_epoch) / 60 ))
+            echo "Last completed league refresh: $latest ($age_minutes minutes ago)."
+            if (( age_minutes < 105 )); then
+              stale=false
+            fi
+          else
+            echo "No completed league refresh was found."
+          fi
+
+          if [[ "$GITHUB_EVENT_NAME" == "push" || "$GITHUB_EVENT_NAME" == "workflow_dispatch" ]]; then
+            stale=true
+          fi
+
+          if [[ "$stale" == "false" ]]; then
+            echo "Refresh cadence is healthy; no restart is needed."
+            exit 0
+          fi
+
+          echo "The refresh is stale. Dispatching the independent score-sync workflow."
+          gh api --method POST \
+            "repos/${GITHUB_REPOSITORY}/actions/workflows/sync-leagues.yml/dispatches" \
+            -f ref=main
+          echo "League refresh dispatch accepted."
