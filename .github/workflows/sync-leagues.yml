@@ -3,7 +3,8 @@ name: Sync league results
 on:
   schedule:
     # GitHub warns that jobs at the start of an hour can be delayed or dropped.
-    # Run at :17 with a :37 fallback; the Central-time gate keeps even hours.
+    # Run at :17 with a :37 fallback. Freshness, rather than the wall clock,
+    # decides whether delayed jobs need to refresh the data.
     - cron: "17 * * * *"
     - cron: "37 * * * *"
   workflow_dispatch:
@@ -33,47 +34,37 @@ jobs:
         id: window
         shell: bash
         run: |
-          if [[ "$GITHUB_EVENT_NAME" == "workflow_dispatch" || "$GITHUB_EVENT_NAME" == "push" ]]; then
-            echo "run=true" >> "$GITHUB_OUTPUT"
-            echo "mode=--known-only" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-          central_hour=$(TZ=America/Chicago date +%H)
-          if (( 10#$central_hour % 2 == 0 )); then
-            echo "run=true" >> "$GITHUB_OUTPUT"
-            echo "mode=--known-only" >> "$GITHUB_OUTPUT"
-            echo "Checking known leagues for changed source dates."
-          else
-            echo "run=false" >> "$GITHUB_OUTPUT"
-            echo "Skipping odd Central-time hour $central_hour."
-          fi
+          echo "run=true" >> "$GITHUB_OUTPUT"
+          echo "mode=--known-only" >> "$GITHUB_OUTPUT"
+          echo "Checking whether the last completed refresh is stale."
       - uses: actions/checkout@v4
         if: steps.window.outputs.run == 'true'
         with:
           ref: main
-      - name: Skip an unnecessary fallback
+      - name: Run only when league data is due
         id: fallback
         if: steps.window.outputs.run == 'true'
         shell: bash
-        env:
-          TRIGGER_SCHEDULE: ${{ github.event.schedule }}
         run: |
           echo "run=true" >> "$GITHUB_OUTPUT"
-          if [[ "$GITHUB_EVENT_NAME" != "schedule" || "$TRIGGER_SCHEDULE" != "37 * * * *" ]]; then
+          if [[ "$GITHUB_EVENT_NAME" != "schedule" ]]; then
             exit 0
           fi
           latest=$(jq -r '[.[] | select(.mode == "known leagues")][0].finishedAt // empty' .github/refresh-history.json 2>/dev/null || true)
           if [[ -z "$latest" ]]; then
-            echo "No completed refresh is logged for this cycle; running fallback."
+            echo "No completed refresh is logged; running now."
             exit 0
           fi
-          current_cycle=$(TZ=America/Chicago date +%Y-%m-%dT%H)
-          latest_cycle=$(TZ=America/Chicago date -d "$latest" +%Y-%m-%dT%H)
-          if [[ "$latest_cycle" == "$current_cycle" ]]; then
+
+          latest_epoch=$(date -d "$latest" +%s)
+          now_epoch=$(date +%s)
+          age_minutes=$(( (now_epoch - latest_epoch) / 60 ))
+          echo "Last completed refresh was $age_minutes minutes ago."
+          if (( age_minutes < 105 )); then
             echo "run=false" >> "$GITHUB_OUTPUT"
-            echo "The primary refresh already completed during $current_cycle Central; skipping fallback."
+            echo "League data is still fresh; skipping this duplicate trigger."
           else
-            echo "No completed primary refresh was found for $current_cycle Central; running fallback."
+            echo "League data is stale; running the refresh even if GitHub delivered this job late."
           fi
       - uses: actions/setup-node@v4
         if: steps.window.outputs.run == 'true' && steps.fallback.outputs.run == 'true'
