@@ -55,10 +55,11 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           git pull --rebase origin main
           node scripts/sync-leaguesecretary.mjs | tee maintenance-report.log
+          node scripts/sync-leaguepals.mjs | tee -a maintenance-report.log
           {
             echo "## FrameLine maintenance report"
             echo '```'
-            grep -E '^SYNC (SUMMARY|CHANGE)' maintenance-report.log || echo "No maintenance summary was produced."
+            grep -E '^(SYNC|LEAGUEPALS) (SUMMARY|CHANGE)' maintenance-report.log || echo "No maintenance summary was produced."
             echo '```'
           } >> "$GITHUB_STEP_SUMMARY"
           if git diff --quiet -- public/data/leagues; then
