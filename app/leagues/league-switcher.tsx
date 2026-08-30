@@ -14,6 +14,7 @@ const STORAGE_KEY = "frameline-current-leagues";
 const PROFILE_KEY = "frameline-bowler-name";
 const PROFILE_ALIASES_KEY = "frameline-bowler-aliases";
 const LEAGUE_BOWLERS_KEY = "frameline-league-bowlers";
+const DISMISSED_SUGGESTIONS_KEY = "frameline-dismissed-league-suggestions";
 const AREAS = ["Omaha", "Bellevue", "Lincoln", "Council Bluffs"];
 const CENTERS: Record<string, string[]> = {
   Omaha: ["West Lanes", "Maplewood Lanes", "Mockingbird Lanes", "Western Bowl"],
@@ -28,6 +29,7 @@ function nameTokens(value: string) {
 
 type BowlerLeagueMatch = { id: string; teams: string[] };
 type BowlerSearchMatch = { key: string; name: string; leagues: BowlerLeagueMatch[] };
+type LeagueSuggestion = { key: string; bowlerName: string; leagueId: string; teams: string[] };
 
 function bowlerTeamName(league: LeagueSnapshot, headers: string[], row: string[]) {
   const teamIndex = headers.findIndex((header) => header.toLowerCase() === "team");
@@ -90,6 +92,7 @@ export function LeagueSwitcher({ manageOnly = false }: { manageOnly?: boolean })
   const [candidateId, setCandidateId] = useState(snapshots[0]?.id ?? "");
   const [leagueBowlers, setLeagueBowlers] = useState<Record<string, string>>({});
   const [manualBowlerChoices, setManualBowlerChoices] = useState<string[]>([]);
+  const [leagueSuggestions, setLeagueSuggestions] = useState<LeagueSuggestion[]>([]);
 
   useEffect(() => {
     try {
@@ -121,6 +124,29 @@ export function LeagueSwitcher({ manageOnly = false }: { manageOnly?: boolean })
     } catch { setSettingsOpen(true); }
     setReady(true);
   }, [manageOnly, router]);
+
+  useEffect(() => {
+    if (!ready || !bowlerName) return;
+    let aliases: string[] = [bowlerName];
+    let dismissed: string[] = [];
+    try {
+      const storedAliases = JSON.parse(localStorage.getItem(PROFILE_ALIASES_KEY) || "[]") as string[];
+      if (storedAliases.length) aliases = storedAliases;
+      dismissed = JSON.parse(localStorage.getItem(DISMISSED_SUGGESTIONS_KEY) || "[]") as string[];
+    } catch {}
+    const rejected = new Set(dismissed);
+    const suggestions = new Map<string, LeagueSuggestion>();
+    aliases.forEach((alias) => {
+      const aliasKey = nameTokens(alias).join(" ");
+      findBowlerMatches(alias)
+        .filter((match) => nameTokens(match.name).join(" ") === aliasKey)
+        .forEach((match) => match.leagues.forEach((league) => {
+          const key = `${league.id}:${match.key}`;
+          if (!saved.includes(league.id) && !rejected.has(key)) suggestions.set(key, { key, bowlerName: match.name, leagueId: league.id, teams: league.teams });
+        }));
+    });
+    setLeagueSuggestions([...suggestions.values()]);
+  }, [ready, bowlerName, saved]);
 
   const persist = (ids: string[]) => { setSaved(ids); localStorage.setItem(STORAGE_KEY, JSON.stringify(ids)); };
   const openLeague = (id: string) => {
@@ -170,6 +196,20 @@ export function LeagueSwitcher({ manageOnly = false }: { manageOnly?: boolean })
     setProfileMessage("");
     openLeague(id);
   };
+  const acceptLeagueSuggestion = (suggestion: LeagueSuggestion) => {
+    const nextBowlers = { ...leagueBowlers, [suggestion.leagueId]: suggestion.bowlerName };
+    setLeagueBowlers(nextBowlers);
+    localStorage.setItem(LEAGUE_BOWLERS_KEY, JSON.stringify(nextBowlers));
+    if (!saved.includes(suggestion.leagueId)) persist([...saved, suggestion.leagueId]);
+    setLeagueSuggestions((current) => current.filter((item) => item.key !== suggestion.key));
+    openLeague(suggestion.leagueId);
+  };
+  const dismissLeagueSuggestion = (suggestion: LeagueSuggestion) => {
+    let dismissed: string[] = [];
+    try { dismissed = JSON.parse(localStorage.getItem(DISMISSED_SUGGESTIONS_KEY) || "[]") as string[]; } catch {}
+    localStorage.setItem(DISMISSED_SUGGESTIONS_KEY, JSON.stringify([...new Set([...dismissed, suggestion.key])]));
+    setLeagueSuggestions((current) => current.filter((item) => item.key !== suggestion.key));
+  };
   const removeLeague = (id: string) => {
     const league = snapshots.find((item) => item.id === id);
     if (!window.confirm(`Remove ${league?.displayName ?? "this league"} from your saved leagues?`)) return;
@@ -193,6 +233,7 @@ export function LeagueSwitcher({ manageOnly = false }: { manageOnly?: boolean })
     localStorage.removeItem(STORAGE_KEY);
     localStorage.removeItem("west-lanes-favorite-leagues");
     localStorage.removeItem(LEAGUE_BOWLERS_KEY);
+    localStorage.removeItem(DISMISSED_SUGGESTIONS_KEY);
     setSaved([]);
     setBowlerName("");
     router.replace("/");
@@ -232,6 +273,18 @@ export function LeagueSwitcher({ manageOnly = false }: { manageOnly?: boolean })
         <div>{manageOnly && <p className="eyebrow red">League setup</p>}<h2>{manageOnly ? "Add / Remove Leagues" : `Welcome, ${firstName}`}</h2>{!manageOnly && (highAverage > 0 || highSeries > 0) && <div className="personal-highs">{highAverage > 0 && <span><small>High Average</small><b>{highAverage}</b></span>}{highSeries > 0 && <span><small>High Series</small><b>{highSeries}</b></span>}</div>}{manageOnly && <p>{bowlerName ? `Bowling as ${bowlerName}.` : "Saved on this device for quick access."}</p>}</div>
         {!manageOnly && <div className="league-heading-actions"><Link className="league-settings-button" href="/manage-leagues"><span aria-hidden="true">⚙</span> Add / Remove Leagues</Link><button className="reset-bowler-button" type="button" onClick={resetBowler}>Reset bowler</button></div>}
       </div>
+      {leagueSuggestions.length > 0 && <aside className="league-suggestion" aria-live="polite">
+        <div><p className="eyebrow">New league match</p><h3>Is this you?</h3></div>
+        {leagueSuggestions.slice(0, 1).map((suggestion) => {
+          const league = snapshots.find((item) => item.id === suggestion.leagueId);
+          const location = league as (LeagueSnapshot & { centerName?: string }) | undefined;
+          return <div className="league-suggestion-match" key={suggestion.key}>
+            <span><strong>{suggestion.bowlerName}</strong><small>{league?.displayName ?? "New league"} · {suggestion.teams.join(" / ") || "Team not posted"}<br/>{location?.centerName ?? "Bowling center"}</small></span>
+            <button type="button" onClick={() => acceptLeagueSuggestion(suggestion)}>Yes, add it</button>
+            <button type="button" className="league-suggestion-dismiss" onClick={() => dismissLeagueSuggestion(suggestion)}>Not me</button>
+          </div>;
+        })}
+      </aside>}
       {savedLeagues.length ? <div className="current-league-cards">
         {savedLeagues.map((item) => {
           const leagueBowler = leagueBowlers[item.id] || bowlerName;
