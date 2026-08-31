@@ -7,23 +7,23 @@
   "bowlsOn": "Tuesday",
   "startTime": "6:30 PM",
   "type": "Handicap Adult Mixed",
-  "updated": "08/26/2026",
+  "updated": "08/31/2026",
   "startDate": "Fall 2026",
   "bowlDay": 2,
   "centerId": "2173",
   "centerName": "Parkway Lanes",
   "centerSlug": "parkway-lanes---lincoln-lincoln-nebraska",
   "area": "Lincoln",
-  "sourceUpdated": "08/26/2026",
-  "syncedAt": "2026-08-26T22:02:27.284Z",
+  "sourceUpdated": "08/31/2026",
+  "syncedAt": "2026-08-31T20:12:03.412Z",
   "status": "current",
   "week": "1",
-  "fingerprint": "76b76f24964499885f2673204b390367d2673929d405afa231ae7cb47ef4d104",
+  "fingerprint": "26bf810bbaf62f1e0027c8f4b88ddffa9af960fda354e6f059a8a703c94a7207",
   "lastCompletedCycle": "2026-08-25",
   "views": {
     "standings": [
       {
-        "title": "Table 1",
+        "title": "Table 3",
         "headers": [
           "Division",
           "Place",
@@ -296,7 +296,7 @@
     ],
     "bowlers": [
       {
-        "title": "Table 1",
+        "title": "Table 3",
         "headers": [
           "Name",
           "Team#",
@@ -673,6 +673,24 @@
             "588",
             "163",
             "465",
+            "0",
+            "0"
+          ],
+          [
+            "Davis, Erin",
+            "8",
+            "5",
+            "TIME TO SPARE",
+            "W",
+            "0",
+            "0",
+            "160",
+            "160",
+            "36",
+            "0",
+            "0",
+            "0",
+            "0",
             "0",
             "0"
           ],
@@ -2939,7 +2957,7 @@
     ],
     "lanes": [
       {
-        "title": "Table 1",
+        "title": "Table 3",
         "headers": [
           "Lane",
           "Team#",
@@ -3941,6 +3959,15 @@
             "3",
             "406",
             "158"
+          ],
+          [
+            "5",
+            "Davis, Erin",
+            "W",
+            "36",
+            "0",
+            "0",
+            "160"
           ]
         ],
         "team": "8"
@@ -4070,12 +4097,12 @@
   "history": [
     {
       "week": "1",
-      "sourceUpdated": "08/26/2026",
-      "syncedAt": "2026-08-26T22:02:27.284Z",
+      "sourceUpdated": "08/31/2026",
+      "syncedAt": "2026-08-31T20:12:03.412Z",
       "views": {
         "bowlers": [
           {
-            "title": "Table 1",
+            "title": "Table 3",
             "headers": [
               "Name",
               "Team#",
@@ -4452,6 +4479,24 @@
                 "588",
                 "163",
                 "465",
+                "0",
+                "0"
+              ],
+              [
+                "Davis, Erin",
+                "8",
+                "5",
+                "TIME TO SPARE",
+                "W",
+                "0",
+                "0",
+                "160",
+                "160",
+                "36",
+                "0",
+                "0",
+                "0",
+                "0",
                 "0",
                 "0"
               ],
@@ -6718,5 +6763,6 @@
         ]
       }
     }
-  ]
+  ],
+  "sourceFingerprint": "0202060b0777879f030d8d088e9f36ec04da9459382348e5bfa63e215fb07333"
 }
