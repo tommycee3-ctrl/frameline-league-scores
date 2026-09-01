@@ -15,15 +15,15 @@
   "centerSlug": "mockingbird-lanes",
   "area": "Omaha",
   "sourceUpdated": "08/26/2026",
-  "syncedAt": "2026-08-27T15:19:00.988Z",
+  "syncedAt": "2026-09-01T08:04:50.194Z",
   "status": "awaiting-results",
   "week": "2",
-  "fingerprint": "aae7089d4292f2ff28275dedfcd5a1848db55eed92a5b69cae7bb67f753fb040",
+  "fingerprint": "cb5772ee0673d256e547944c8c2275c0d4e46d6a2ff64cf26465511144c37ab4",
   "lastCompletedCycle": null,
   "views": {
     "standings": [
       {
-        "title": "Table 1",
+        "title": "Table 3",
         "headers": [
           "Division",
           "Place",
@@ -380,7 +380,7 @@
     ],
     "bowlers": [
       {
-        "title": "Table 1",
+        "title": "Table 3",
         "headers": [
           "Name",
           "Team#",
@@ -4962,7 +4962,7 @@
     ],
     "lanes": [
       {
-        "title": "Table 1",
+        "title": "Table 3",
         "headers": [
           "Lane",
           "Team#",
@@ -5308,6 +5308,28 @@
           ]
         ],
         "team": "5"
+      },
+      {
+        "title": "Team 24 · CASPER roster",
+        "headers": [
+          "Week",
+          "Date",
+          "HCP",
+          "Gm1",
+          "Gm2",
+          "Gm3",
+          "SS",
+          "Avg"
+        ],
+        "rows": [
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "team": "24"
       },
       {
         "title": "Team 10 · Detail By Z Man roster",
@@ -6830,11 +6852,11 @@
     {
       "week": "2",
       "sourceUpdated": "08/26/2026",
-      "syncedAt": "2026-08-27T15:19:00.988Z",
+      "syncedAt": "2026-09-01T08:04:50.194Z",
       "views": {
         "bowlers": [
           {
-            "title": "Table 1",
+            "title": "Table 3",
             "headers": [
               "Name",
               "Team#",
@@ -11416,5 +11438,6 @@
         ]
       }
     }
-  ]
+  ],
+  "sourceFingerprint": "4667d4f1ee20a63523283da73536980e867c3c834df06732f8e9f67b9f4f1da0"
 }
