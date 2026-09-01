@@ -252,6 +252,21 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
     const snapshot = recapWeeks.find((entry) => entry.week === recapWeek) ?? recapWeeks[0];
     return parseRecapMatchups(snapshot?.views.recaps ?? []);
   }, [recapWeek, recapWeeks]);
+  const selectedRecapBowlerTable = useMemo(() => {
+    const snapshot = recapWeeks.find((entry) => entry.week === recapWeek) ?? recapWeeks[0];
+    return snapshot?.views.bowlers?.[0];
+  }, [recapWeek, recapWeeks]);
+  const officialWeekPoints = (name: string, team: string, table?: Table) => {
+    if (!table) return null;
+    const row = table.rows.find(
+      (item) =>
+        personName(cell(table, item, "Name")) === name &&
+        cell(table, item, "Team#") === team,
+    );
+    if (!row) return null;
+    const value = cell(table, row, "WON");
+    return value === "" || Number.isNaN(Number(value)) ? null : Number(value);
+  };
   const hasIndividualPoints = useMemo(() => {
     if (!bowlerTable) return false;
     const wonIndex = bowlerTable.headers.findIndex(
@@ -365,7 +380,7 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
             cell(table, item, "Team#") === team,
         );
         let scoreRow: string[] | undefined;
-        let weekPoints: number | null = null;
+        let weekPoints: number | null = officialWeekPoints(name, team, table);
         for (const matchup of parseRecapMatchups(snapshot.views.recaps ?? [])) {
           const side = matchup.findIndex((entry) => entry.team === team);
           if (side < 0) continue;
@@ -375,7 +390,8 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
           if (rowIndex < 0) continue;
           scoreRow = matchup[side].rows[rowIndex];
           const opponent = matchup[side === 0 ? 1 : 0]?.rows[rowIndex];
-          if (opponent) weekPoints = individualPoints(scoreRow, opponent);
+          if (weekPoints === null && opponent)
+            weekPoints = individualPoints(scoreRow, opponent);
           break;
         }
         if (!row && !scoreRow) return null;
@@ -865,8 +881,8 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                                     <b>{row.at(-1)}</b>
                                   </td>
                                   <td className="individual-points">
-                                    <b>{individualPoints(row, versus)}</b>
-                                    <small>of 4</small>
+                                    <b>{officialWeekPoints(personName(row[0]), team.team, selectedRecapBowlerTable) ?? (opponent ? individualPoints(row, versus) : "â€”")}</b>
+                                    <small>official pts</small>
                                   </td>
                                 </tr>
                               );
@@ -931,6 +947,21 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                                   </td>
                                 </tr>
                               )}
+                            {team.total.length > 0 && !opponent && (
+                              <tr className="recap-total">
+                                <td>Team total</td>
+                                <td></td>
+                                <td></td>
+                                <td>{team.total[1]}</td>
+                                <td>{team.total[2]}</td>
+                                <td>{team.total[3]}</td>
+                                <td><b>{team.total.at(-1)}</b></td>
+                                <td className="team-points-cell">
+                                  <b>{team.points || "â€”"}</b>
+                                  <small>official pts</small>
+                                </td>
+                              </tr>
+                            )}
                           </tbody>
                         </table>
                       );
