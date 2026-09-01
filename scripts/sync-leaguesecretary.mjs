@@ -251,7 +251,13 @@ for(const league of leagues){
   // frequent known-league refresh must remain small enough to finish before
   // its next two-hour cycle.
   const needsHistoryBackfill=!knownOnly&&Number(current.week)>1&&historyWeeks.size<Number(current.week);
-  if(isWindowOpen(league,current)&&(force||!hasRows||sourceChanged||fingerprintChanged||needsInitialRecentCheck||needsHistoryBackfill)) candidates.push({league,file,current,sourceFingerprint});
+  // Standings, recaps, and lane assignments are not always published at the
+  // same time.  A standings-only fingerprint can therefore remain unchanged
+  // while a new recap or the next lane assignment has appeared.  During the
+  // league's normal posting window, refresh the complete league so those
+  // later-published views are not left behind.
+  const postingWindowRefresh=isInPostingWindow(league);
+  if(isWindowOpen(league,current)&&(force||!hasRows||sourceChanged||fingerprintChanged||needsInitialRecentCheck||needsHistoryBackfill||postingWindowRefresh)) candidates.push({league,file,current,sourceFingerprint});
 }
 await markerPage.close();
 let changed = false;

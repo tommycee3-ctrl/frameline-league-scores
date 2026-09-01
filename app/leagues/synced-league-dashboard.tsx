@@ -580,7 +580,7 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                           <span>
                             <small>Team points won</small>
                             <strong>
-                              {recap?.points || cell(standings, row, "Won")}
+                              {recap?.points || "Awaiting official recap"}
                             </strong>
                           </span>
                         </div>
@@ -803,14 +803,20 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                     <span>
                       <small>{matchup[0]?.lane}</small>
                       <strong>{teamName(matchup[0]?.team)}</strong>
-                      <b>{matchup[0]?.points} official pts</b>
+                      <b>{matchup[0]?.points ? `${matchup[0].points} official pts` : "Official points pending"}</b>
                     </span>
-                    <em>vs</em>
-                    <span>
-                      <small>{matchup[1]?.lane}</small>
-                      <strong>{teamName(matchup[1]?.team)}</strong>
-                      <b>{matchup[1]?.points} official pts</b>
-                    </span>
+                    {matchup[1] ? <>
+                      <em>vs</em>
+                      <span>
+                        <small>{matchup[1].lane}</small>
+                        <strong>{teamName(matchup[1].team)}</strong>
+                        <b>{matchup[1].points ? `${matchup[1].points} official pts` : "Official points pending"}</b>
+                      </span>
+                    </> : <span>
+                      <small>Blind opponent</small>
+                      <strong>Official recap uses blind scores</strong>
+                      <b>No opponent scorecard posted</b>
+                    </span>}
                   </header>
                   <div className="recap-scroll">
                     {matchup.map((team, teamIndex) => {
