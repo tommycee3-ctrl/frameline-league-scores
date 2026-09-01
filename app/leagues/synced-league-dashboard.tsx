@@ -74,12 +74,22 @@ const individualPoints = (bowler: string[], opponent: string[]) =>
     : pointSeries(bowler) === pointSeries(opponent)
       ? 0.5
       : 0);
-const teamResult = (team: string[], opponent: string[], game: number) => {
+const teamResult = (
+  team: string[],
+  opponent: string[],
+  game: number,
+  pointsForWin = 2,
+) => {
   const left =
       game < 3 ? Number(team[1 + game] ?? 0) : Number(team.at(-1) ?? 0),
     right =
       game < 3 ? Number(opponent[1 + game] ?? 0) : Number(opponent.at(-1) ?? 0);
-  return { left, right, points: left > right ? 2 : left === right ? 1 : 0 };
+  return {
+    left,
+    right,
+    points:
+      left > right ? pointsForWin : left === right ? pointsForWin / 2 : 0,
+  };
 };
 type RecapTeam = {
   team: string;
@@ -422,6 +432,8 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
   const q = query.trim().toLowerCase();
   const week = data.week ?? "1";
   const laneTable = data.views.lanes?.[0];
+  const teamPointValue = (game: number) =>
+    data.id === "132277" ? (game < 3 ? 4 : 5) : 2;
   const sortStanding = (key: typeof standingSort.key) =>
     setStandingSort((current) =>
       current.key === key
@@ -854,6 +866,7 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                           <tbody>
                             {team.rows.map((row, r) => {
                               const versus = opponent?.rows[r] ?? [];
+                              const blind = Math.max(Number(row[1] ?? 0) - 10, 0);
                               return (
                                 <tr key={r}>
                                   <td>
@@ -865,8 +878,8 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                                     <td
                                       key={game}
                                       className={resultClass(
-                                        pointScore(row, game),
-                                        pointScore(versus, game),
+                                        opponent ? pointScore(row, game) : score(row, game),
+                                        opponent ? pointScore(versus, game) : blind,
                                       )}
                                     >
                                       {row[3 + game]}
@@ -874,8 +887,8 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                                   ))}
                                   <td
                                     className={resultClass(
-                                      pointSeries(row),
-                                      pointSeries(versus),
+                                      opponent ? pointSeries(row) : series(row),
+                                      opponent ? pointSeries(versus) : blind * 3,
                                     )}
                                   >
                                     <b>{row.at(-1)}</b>
@@ -898,6 +911,7 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                                       team.total,
                                       opponent.total,
                                       game,
+                                      teamPointValue(game),
                                     );
                                     return (
                                       <td
@@ -917,6 +931,7 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                                       team.total,
                                       opponent.total,
                                       3,
+                                      teamPointValue(3),
                                     );
                                     return (
                                       <td
@@ -939,6 +954,7 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                                             team.total,
                                             opponent.total,
                                             game,
+                                            teamPointValue(game),
                                           ).points,
                                         0,
                                       )}
@@ -948,19 +964,32 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                                 </tr>
                               )}
                             {team.total.length > 0 && !opponent && (
-                              <tr className="recap-total">
+                              (() => {
+                                const blindGame = team.rows.reduce(
+                                  (sum, row) => sum + Math.max(Number(row[1] ?? 0) - 10, 0),
+                                  0,
+                                );
+                                return <tr className="recap-total">
                                 <td>Team total</td>
                                 <td></td>
                                 <td></td>
-                                <td>{team.total[1]}</td>
-                                <td>{team.total[2]}</td>
-                                <td>{team.total[3]}</td>
-                                <td><b>{team.total.at(-1)}</b></td>
+                                {[1, 2, 3].map((index) => {
+                                  const won = Number(team.total[index] ?? 0) > blindGame;
+                                  return <td className={resultClass(Number(team.total[index] ?? 0), blindGame)} key={index}>
+                                    {team.total[index]}
+                                    <small>{won ? `${teamPointValue(index - 1)} team pts` : "0 team pts"}</small>
+                                  </td>;
+                                })}
+                                <td className={resultClass(Number(team.total.at(-1) ?? 0), blindGame * 3)}>
+                                  <b>{team.total.at(-1)}</b>
+                                  <small>{Number(team.total.at(-1) ?? 0) > blindGame * 3 ? `${teamPointValue(3)} team pts` : "0 team pts"}</small>
+                                </td>
                                 <td className="team-points-cell">
                                   <b>{team.points || "â€”"}</b>
                                   <small>official pts</small>
                                 </td>
-                              </tr>
+                              </tr>;
+                              })()
                             )}
                           </tbody>
                         </table>
