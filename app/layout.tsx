@@ -33,6 +33,13 @@ function FrameLineMark() {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          defer
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon='{"token":"6692d3b8c9d64289bf58db061f61d2aa"}'
+        />
+      </head>
       <body className="frameline-app">
         <PwaRegister />
         <PullToRefresh />
