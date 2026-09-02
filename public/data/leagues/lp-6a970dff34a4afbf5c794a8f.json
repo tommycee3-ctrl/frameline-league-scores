@@ -14,10 +14,10 @@
   "startDate": "08/20/2026",
   "sourceUpdated": "08/20/2026",
   "type": "Mixed",
-  "syncedAt": "2026-09-01T22:24:05.954Z",
-  "status": "awaiting-results",
+  "syncedAt": "2026-09-02T05:13:12.712Z",
+  "status": "current",
   "week": "2",
-  "fingerprint": "b480fefa9b3e9be3858df5ba6e4d1995ce16a45a3b55e7bf2604c3bcb8eaf933",
+  "fingerprint": "23386857d7b70aa3a828716831e1bf60f86628d1facb384b9150a96b58cfb538",
   "views": {
     "standings": [
       {
@@ -37,21 +37,21 @@
             "1",
             "1",
             "Frame by Frame",
-            "0",
-            "0",
-            "0%",
-            "0",
-            "0"
+            "2",
+            "7",
+            "22%",
+            "745",
+            "2512"
           ],
           [
             "2",
             "2",
             "Jerry Tyler And Them",
-            "0",
-            "0",
-            "0%",
-            "819",
-            "0"
+            "7",
+            "2",
+            "78%",
+            "845",
+            "2657"
           ],
           [
             "3",
@@ -234,61 +234,61 @@
             "Carl Rothermund",
             "1",
             "Frame by Frame",
+            "94",
             "0",
-            "0",
-            "0",
-            "0",
-            "0"
+            "3",
+            "282",
+            "115"
           ],
           [
             "Jake Ebertowski",
             "1",
             "Frame by Frame",
+            "126",
             "0",
-            "0",
-            "0",
-            "0",
-            "0"
+            "3",
+            "378",
+            "160"
           ],
           [
             "Brad Wise",
             "1",
             "Frame by Frame",
+            "136",
             "0",
-            "0",
-            "0",
-            "0",
-            "0"
+            "3",
+            "410",
+            "148"
           ],
           [
             "Anthony Allen Sr",
             "1",
             "Frame by Frame",
+            "169",
             "0",
-            "0",
-            "0",
-            "0",
-            "0"
+            "3",
+            "507",
+            "184"
           ],
           [
             "Joshua Renshaw",
             "1",
             "Frame by Frame",
+            "220",
             "0",
-            "0",
-            "0",
-            "0",
-            "0"
+            "3",
+            "662",
+            "236"
           ],
           [
             "Jerry Shaw",
             "2",
             "Jerry Tyler And Them",
-            "183",
+            "156",
             "0",
-            "0",
-            "0",
-            "0"
+            "3",
+            "469",
+            "171"
           ],
           [
             "Pat Ring",
@@ -296,19 +296,19 @@
             "Jerry Tyler And Them",
             "164",
             "0",
-            "0",
-            "0",
-            "0"
+            "3",
+            "493",
+            "180"
           ],
           [
             "Tyler Study",
             "2",
             "Jerry Tyler And Them",
-            "172",
+            "225",
             "0",
-            "0",
-            "0",
-            "0"
+            "3",
+            "675",
+            "277"
           ],
           [
             "Ashley Ring",
@@ -1307,27 +1307,27 @@
         "rows": [
           [
             "Carl Rothermund",
-            "0",
+            "94",
             "0"
           ],
           [
             "Jake Ebertowski",
-            "0",
+            "126",
             "0"
           ],
           [
             "Brad Wise",
-            "0",
+            "136",
             "0"
           ],
           [
             "Anthony Allen Sr",
-            "0",
+            "169",
             "0"
           ],
           [
             "Joshua Renshaw",
-            "0",
+            "220",
             "0"
           ]
         ]
@@ -1343,7 +1343,7 @@
         "rows": [
           [
             "Jerry Shaw",
-            "183",
+            "156",
             "0"
           ],
           [
@@ -1353,7 +1353,7 @@
           ],
           [
             "Tyler Study",
-            "172",
+            "225",
             "0"
           ],
           [
@@ -2026,5 +2026,131 @@
       }
     ]
   },
-  "history": []
+  "history": [
+    {
+      "week": "1",
+      "sourceUpdated": "08/20/2026",
+      "syncedAt": "2026-09-02T05:13:12.712Z",
+      "views": {
+        "bowlers": [
+          {
+            "title": "Week 1 bowlers",
+            "headers": [
+              "Name",
+              "Team#",
+              "Team",
+              "Avg",
+              "HCP",
+              "Games",
+              "HSS",
+              "HGS"
+            ],
+            "rows": [
+              [
+                "Carl Rothermund",
+                "1",
+                "Frame by Frame",
+                "94",
+                "",
+                "3",
+                "282",
+                "115"
+              ],
+              [
+                "Jake Ebertowski",
+                "1",
+                "Frame by Frame",
+                "126",
+                "",
+                "3",
+                "378",
+                "160"
+              ],
+              [
+                "Brad Wise",
+                "1",
+                "Frame by Frame",
+                "136",
+                "",
+                "3",
+                "410",
+                "148"
+              ],
+              [
+                "Anthony Allen Sr",
+                "1",
+                "Frame by Frame",
+                "169",
+                "",
+                "3",
+                "507",
+                "184"
+              ],
+              [
+                "Joshua Renshaw",
+                "1",
+                "Frame by Frame",
+                "220",
+                "",
+                "3",
+                "662",
+                "236"
+              ],
+              [
+                "Jerry Shaw",
+                "2",
+                "Jerry Tyler And Them",
+                "156",
+                "",
+                "3",
+                "469",
+                "171"
+              ],
+              [
+                "Pat Ring",
+                "2",
+                "Jerry Tyler And Them",
+                "164",
+                "",
+                "3",
+                "493",
+                "180"
+              ],
+              [
+                "Tyler Study",
+                "2",
+                "Jerry Tyler And Them",
+                "225",
+                "",
+                "3",
+                "675",
+                "277"
+              ],
+              [
+                "Ashley Ring",
+                "2",
+                "Jerry Tyler And Them",
+                "185",
+                "",
+                "3",
+                "0",
+                "2"
+              ],
+              [
+                "Joseph Fugate",
+                "2",
+                "Jerry Tyler And Them",
+                "115",
+                "",
+                "3",
+                "0",
+                "2"
+              ]
+            ]
+          }
+        ],
+        "recaps": []
+      }
+    }
+  ]
 }
