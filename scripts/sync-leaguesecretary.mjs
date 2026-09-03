@@ -19,6 +19,7 @@ const centers=[
   {id:"2137",name:"Hollywood Bowl",area:"Lincoln",slug:"hollywood-bowl-lincoln-nebraska"},
   {id:"2110",name:"West Lanes",area:"Omaha",slug:"west-lanes-bowl-omaha-nebraska"},
   {id:"2119",name:"Maplewood Lanes",area:"Omaha",slug:"maplewood-lanes-omaha-nebraska"},
+  {id:"2175",name:"Papio Bowl",area:"Omaha",slug:"papio-bowl-papillion-nebraska",includeAllListed:true},
   {id:"5144",name:"Mockingbird Lanes",area:"Omaha",slug:"mockingbird-lanes"},
   {id:"2208",name:"Western Bowl",area:"Omaha",slug:"western-bowl-omaha"},
 ];
