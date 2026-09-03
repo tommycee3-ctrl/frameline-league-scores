@@ -409,7 +409,7 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
             cell(table, item, "Team#") === team,
         );
         let scoreRow: string[] | undefined;
-        const cumulativePoints = officialWeekPoints(name, team, table);
+        const reportedWeekPoints = officialWeekPoints(name, team, table);
         let weekPoints: number | null = null;
         for (const matchup of parseRecapMatchups(snapshot.views.recaps ?? [])) {
           const side = matchup.findIndex((entry) => entry.team === team);
@@ -432,21 +432,23 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
           series: scoreRow?.at(-1) || (table && row ? cell(table, row, "HSS") : ""),
           average: table && row ? cell(table, row, "Avg") : scoreRow?.[1] || "—",
           weekPoints,
-          cumulativePoints,
+          reportedWeekPoints,
           totalPoints: "",
         };
       })
       .filter((entry): entry is NonNullable<typeof entry> => Boolean(entry))
       .sort((left, right) => Number(left.week) - Number(right.week));
-    let previousCumulative = 0;
+    let runningTotal = 0;
     return entries.map((entry) => {
-      if (entry.cumulativePoints !== null) {
-        entry.weekPoints = Math.max(0, entry.cumulativePoints - previousCumulative);
-        previousCumulative = entry.cumulativePoints;
+      // LeagueSecretary's WON column is the official individual-points result
+      // for that selected week. It is not a season-to-date total.
+      if (entry.reportedWeekPoints !== null) {
+        entry.weekPoints = entry.reportedWeekPoints;
+        runningTotal += entry.reportedWeekPoints;
       }
       return {
         ...entry,
-        totalPoints: hasIndividualPoints && entry.cumulativePoints !== null ? String(entry.cumulativePoints) : "",
+        totalPoints: hasIndividualPoints && entry.reportedWeekPoints !== null ? String(runningTotal) : "",
       };
     });
   };
