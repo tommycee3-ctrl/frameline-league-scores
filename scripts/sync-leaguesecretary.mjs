@@ -84,9 +84,18 @@ function validTable(table) { return table.headers.length>1 && table.rows.some(ro
 async function extractTables(page) {
   const tables=await page.locator("table").evaluateAll((nodes)=>nodes.map((table,index)=>{
     const title=(table.closest("section,article,.card,.panel")?.querySelector("h1,h2,h3,h4,h5,.card-title")?.textContent||`Table ${index+1}`).replace(/\s+/g," ").trim();
-    const all=[...table.querySelectorAll("tr")].map(tr=>[...tr.querySelectorAll("th,td")].map(cell=>(cell.textContent||"").replace(/\s+/g," ").trim()).filter(Boolean)).filter(row=>row.length);
-    const first=all[0]||[]; const hasHeader=table.querySelector("thead")||table.querySelector("tr th");
-    return {title,headers:hasHeader?first:first.map((_,i)=>`Column ${i+1}`),rows:hasHeader?all.slice(1):all};
+    const extracted=[...table.querySelectorAll("tr")].map(tr=>{
+      const cells=[...tr.querySelectorAll("th,td")].map(cell=>({
+        text:(cell.textContent||"").replace(/\s+/g," ").trim(),
+        // LeagueSecretary uses bold type as the official win marker on recap
+        // sheets. Preserve that fact instead of trying to recreate it later.
+        emphasized:Boolean(cell.querySelector("b,strong"))||Number.parseInt(getComputedStyle(cell).fontWeight,10)>=600||/winner|won|bold/i.test(cell.className),
+      })).filter(cell=>cell.text);
+      return {values:cells.map(cell=>cell.text),emphasis:cells.map(cell=>cell.emphasized)};
+    }).filter(row=>row.values.length);
+    const first=extracted[0]?.values||[]; const hasHeader=table.querySelector("thead")||table.querySelector("tr th");
+    const body=hasHeader?extracted.slice(1):extracted;
+    return {title,headers:hasHeader?first:first.map((_,i)=>`Column ${i+1}`),rows:body.map(row=>row.values),emphasis:body.map(row=>row.emphasis)};
   }));
   return tables.filter(validTable);
 }
@@ -246,7 +255,7 @@ for(const league of leagues){
   // still be receiving same-day corrections. Older leagues establish a
   // baseline without the expensive full import.
   const needsInitialRecentCheck=Boolean(sourceFingerprint&&!storedSourceFingerprint&&isInPostingWindow(league));
-  const historyWeeks=new Set((current.history??[]).map(entry=>String(entry.week)));
+  const historyWeeks=new Set((current.history??[]).filter(entry=>entry.views?.standings?.length&&entry.views?.recaps?.length).map(entry=>String(entry.week)));
   // Historical backfills belong to the nightly maintenance workflow. The
   // frequent known-league refresh must remain small enough to finish before
   // its next two-hour cycle.
@@ -313,7 +322,7 @@ try {
     // history feature was introduced. LeagueSecretary exposes the archived
     // week list on both the bowler and recap views.
     if(!knownOnly) {
-      const existingWeeks=new Set((current.history??[]).map(entry=>String(entry.week)));
+      const existingWeeks=new Set((current.history??[]).filter(entry=>entry.views?.standings?.length&&entry.views?.recaps?.length).map(entry=>String(entry.week)));
       const recapUrl=`https://www.leaguesecretary.com/bowling-centers/${league.centerSlug}/bowling-leagues/${league.slug}/${viewPaths.recaps}/${league.id}`;
       await page.goto(recapUrl,{waitUntil:"domcontentloaded",timeout:90000});
       await page.waitForTimeout(3000);
@@ -321,12 +330,15 @@ try {
       for(const option of weekOptions.filter(item=>item.week!==String(week)&&!existingWeeks.has(item.week))) {
         await selectLeagueWeek(page,option.value);
         const recaps=await extractAllRecaps(page,views.standings?.[0]).catch(()=>[]);
-        const bowlerUrl=`https://www.leaguesecretary.com/bowling-centers/${league.centerSlug}/bowling-leagues/${league.slug}/${viewPaths.bowlers}/${league.id}`;
-        await page.goto(bowlerUrl,{waitUntil:"domcontentloaded",timeout:90000});
-        await page.waitForTimeout(2500);
-        await selectLeagueWeek(page,option.value);
-        const bowlers=await extractTables(page);
-        if(bowlers.length||recaps.length) archivedHistory.push({week:option.week,sourceUpdated:option.label,syncedAt:new Date().toISOString(),views:{bowlers,recaps}});
+        const archivedViews={recaps};
+        for(const view of ["standings","bowlers","lanes"]) {
+          const archiveUrl=`https://www.leaguesecretary.com/bowling-centers/${league.centerSlug}/bowling-leagues/${league.slug}/${viewPaths[view]}/${league.id}`;
+          await page.goto(archiveUrl,{waitUntil:"domcontentloaded",timeout:90000});
+          await page.waitForTimeout(2500);
+          await selectLeagueWeek(page,option.value);
+          archivedViews[view]=await extractTables(page);
+        }
+        if(Object.values(archivedViews).some(tables=>tables.length)) archivedHistory.push({week:option.week,sourceUpdated:option.label,syncedAt:new Date().toISOString(),views:archivedViews});
         await page.goto(recapUrl,{waitUntil:"domcontentloaded",timeout:90000});
         await page.waitForTimeout(2200);
       }
@@ -363,11 +375,11 @@ try {
     const lastCompletedCycle=complete?cycle:(current.lastCompletedCycle??null);
     if(fingerprint===current.fingerprint&&lastCompletedCycle===current.lastCompletedCycle&&!archivedHistory.length) continue;
     const syncedAt=new Date().toISOString();
-    const history=[...(current.history??[]),...archivedHistory];
-    const historyEntry={week,sourceUpdated,syncedAt,views:{bowlers:views.bowlers??[],recaps:views.recaps??[]}};
-    const historyIndex=history.findIndex(entry=>String(entry.week)===String(week));
-    if(historyIndex>=0) history[historyIndex]=historyEntry;
-    else history.push(historyEntry);
+    const historyEntry={week,sourceUpdated,syncedAt,views};
+    const historyByWeek=new Map((current.history??[]).map(entry=>[String(entry.week),entry]));
+    for(const entry of archivedHistory) historyByWeek.set(String(entry.week),entry);
+    historyByWeek.set(String(week),historyEntry);
+    const history=[...historyByWeek.values()].sort((left,right)=>Number(left.week)-Number(right.week));
     const next={...current,...league,sourceUpdated,sourceFingerprint:sourceFingerprint??current.sourceFingerprint??null,syncedAt,status:complete?"current":"awaiting-results",week,fingerprint,lastCompletedCycle,views,history};
     await writeFile(file,JSON.stringify(next,null,2)+"\n","utf8");
     changed=true;

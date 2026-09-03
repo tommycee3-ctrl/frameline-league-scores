@@ -3032,6 +3032,20 @@ body:has(.social-home) .site-footer .footer-bottom {
   background: var(--navy);
   color: #fff;
 }
+.league-week-selector {
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  gap:18px;
+  margin:0 0 20px;
+  padding:16px 18px;
+  border:1px solid #35506a;
+  background:#16263b;
+}
+.league-week-selector label { display:grid;gap:6px;min-width:220px;color:#72e0d7;font-size:.7rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase; }
+.league-week-selector select { min-height:48px;border:2px solid #72e0d7;border-radius:0;background:#09121f;color:#f7fbfb;padding:0 14px;font:800 1rem "DM Sans",sans-serif; }
+.league-week-selector small { color:#9db0bd; }
+@media(max-width:600px){.league-week-selector{align-items:stretch;flex-direction:column}.league-week-selector label{min-width:0}.league-week-selector select{font-size:16px}}
 .league-tools {
   display: grid;
   grid-template-columns: 1fr 13rem;

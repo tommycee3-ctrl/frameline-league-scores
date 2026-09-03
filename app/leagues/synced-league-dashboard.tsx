@@ -7,6 +7,7 @@ export type Table = {
   title: string;
   headers: string[];
   rows: string[][];
+  emphasis?: boolean[][];
   team?: string;
 };
 export type LeagueSnapshot = {
@@ -96,14 +97,16 @@ type RecapTeam = {
   lane: string;
   points: string;
   rows: string[][];
+  emphasis: boolean[][];
   total: string[];
+  totalEmphasis: boolean[];
 };
 const parseRecapMatchups = (tables: Table[] = []) =>
   tables
     .map((table) => {
       const teams: RecapTeam[] = [];
       let active: RecapTeam | null = null;
-      for (const row of table.rows) {
+      for (const [rowIndex, row] of table.rows.entries()) {
         const match = row[0]?.match(/^Team\s+(\d+)$/i);
         if (match) {
           const detail = row.slice(1).join(" ");
@@ -112,11 +115,18 @@ const parseRecapMatchups = (tables: Table[] = []) =>
             lane: detail.match(/Lane\s+\d+/i)?.[0] ?? "",
             points: detail.match(/points won:\s*([\d.]+)/i)?.[1] ?? "",
             rows: [],
+            emphasis: [],
             total: [],
+            totalEmphasis: [],
           };
           teams.push(active);
-        } else if (active && row[0]?.toLowerCase() === "total") active.total = row;
-        else if (active) active.rows.push(row);
+        } else if (active && row[0]?.toLowerCase() === "total") {
+          active.total = row;
+          active.totalEmphasis = table.emphasis?.[rowIndex] ?? [];
+        } else if (active) {
+          active.rows.push(row);
+          active.emphasis.push(table.emphasis?.[rowIndex] ?? []);
+        }
       }
       return teams;
     })
@@ -133,7 +143,7 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
   };
   const [tab, setTab] = useState<(typeof tabs)[number]>("standings");
   const [honorsView, setHonorsView] = useState<"weekly" | "yearly">("weekly");
-  const [recapWeek, setRecapWeek] = useState(String(data.week ?? "1"));
+  const [selectedWeek, setSelectedWeek] = useState(String(data.week ?? "1"));
   const [query, setQuery] = useState("");
   const [openTeam, setOpenTeam] = useState<string | null>(null);
   const [selectedBowler, setSelectedBowler] = useState<{
@@ -144,8 +154,18 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
     key: "place" | "team" | "won" | "lost" | "percent" | "average" | "pins";
     direction: "asc" | "desc";
   }>({ key: "place", direction: "asc" });
-  const standings = data.views.standings?.[0];
-  const bowlerTable = data.views.bowlers?.[0];
+  const weekSnapshots = useMemo(() => {
+    const byWeek = new Map<string, { week: string; views: Record<string, Table[]> }>();
+    for (const snapshot of data.history ?? []) {
+      if (snapshot.week) byWeek.set(String(snapshot.week), { week: String(snapshot.week), views: snapshot.views });
+    }
+    if (data.week) byWeek.set(String(data.week), { week: String(data.week), views: data.views });
+    return [...byWeek.values()].sort((left, right) => Number(right.week) - Number(left.week));
+  }, [data]);
+  const selectedSnapshot = weekSnapshots.find((entry) => entry.week === selectedWeek) ?? weekSnapshots[0];
+  const activeViews = selectedSnapshot?.views ?? data.views;
+  const standings = activeViews.standings?.[0] ?? data.views.standings?.[0];
+  const bowlerTable = activeViews.bowlers?.[0] ?? data.views.bowlers?.[0];
   const teamName = (team: string) => {
     const row = standings?.rows.find(
       (item) => cell(standings, item, "Team#") === team,
@@ -168,18 +188,18 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
   const currentRosters = useMemo(
     () =>
       Object.fromEntries(
-        (data.views.rosters ?? [])
+        (activeViews.rosters ?? data.views.rosters ?? [])
           .filter((table) => table.team)
           .map((table) => [table.team!, table]),
       ),
-    [data],
+    [activeViews.rosters, data.views.rosters],
   );
   const recapByTeam = useMemo(() => {
     const result: Record<
       string,
       { lane: string; points: string; rows: string[][] }
     > = {};
-    for (const table of data.views.recaps ?? []) {
+    for (const table of activeViews.recaps ?? []) {
       let current = "";
       for (const row of table.rows) {
         const m = row[0]?.match(/^Team\s+(\d+)$/i);
@@ -196,7 +216,7 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
       }
     }
     return result;
-  }, [data]);
+  }, [activeViews.recaps]);
   const rosterDetails = (team: string) => {
     const currentRoster = currentRosters[team];
     if (currentRoster)
@@ -248,24 +268,10 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
     return [...details.values()];
   };
   const recapMatchups = useMemo(() => {
-    return parseRecapMatchups(data.views.recaps ?? []);
-  }, [data]);
-  const recapWeeks = useMemo(() => {
-    const byWeek = new Map<string, { week: string; views: Record<string, Table[]> }>();
-    for (const snapshot of data.history ?? []) {
-      if (snapshot.week) byWeek.set(String(snapshot.week), { week: String(snapshot.week), views: snapshot.views });
-    }
-    if (data.week) byWeek.set(String(data.week), { week: String(data.week), views: data.views });
-    return [...byWeek.values()].sort((left, right) => Number(right.week) - Number(left.week));
-  }, [data]);
-  const selectedRecapMatchups = useMemo(() => {
-    const snapshot = recapWeeks.find((entry) => entry.week === recapWeek) ?? recapWeeks[0];
-    return parseRecapMatchups(snapshot?.views.recaps ?? []);
-  }, [recapWeek, recapWeeks]);
-  const selectedRecapBowlerTable = useMemo(() => {
-    const snapshot = recapWeeks.find((entry) => entry.week === recapWeek) ?? recapWeeks[0];
-    return snapshot?.views.bowlers?.[0];
-  }, [recapWeek, recapWeeks]);
+    return parseRecapMatchups(activeViews.recaps ?? []);
+  }, [activeViews.recaps]);
+  const selectedRecapMatchups = recapMatchups;
+  const selectedRecapBowlerTable = bowlerTable;
   const officialWeekPoints = (name: string, team: string, table?: Table) => {
     if (!table) return null;
     const row = table.rows.find(
@@ -277,7 +283,20 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
     const value = cell(table, row, "WON");
     return value === "" || Number.isNaN(Number(value)) ? null : Number(value);
   };
+  const recapWeekPoints = (recapTeam: RecapTeam, rowIndex: number) => {
+    const flags = recapTeam.emphasis[rowIndex] ?? [];
+    if (!flags.some(Boolean)) return 0;
+    return [3, 4, 5, flags.length - 1].reduce(
+      (points, column) => points + (flags[column] ? 1 : 0),
+      0,
+    );
+  };
+  const recapHasOfficialIndividualPoints = (matchups: RecapTeam[][]) =>
+    matchups.some((matchup) =>
+      matchup.some((team) => team.emphasis.some((row) => row.slice(3).some(Boolean))),
+    );
   const hasIndividualPoints = useMemo(() => {
+    if (recapHasOfficialIndividualPoints(recapMatchups)) return true;
     if (!bowlerTable) return false;
     const wonIndex = bowlerTable.headers.findIndex(
       (header) => header.toLowerCase() === "won",
@@ -286,7 +305,7 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
       wonIndex >= 0 &&
       bowlerTable.rows.some((row) => Number(row[wonIndex]) > 0)
     );
-  }, [bowlerTable]);
+  }, [bowlerTable, recapMatchups]);
   const leagueHonors = useMemo(() => {
     if (!bowlerTable) return [];
     const isScratchLeague = data.type?.toLowerCase().includes("scratch");
@@ -390,7 +409,8 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
             cell(table, item, "Team#") === team,
         );
         let scoreRow: string[] | undefined;
-        let weekPoints: number | null = officialWeekPoints(name, team, table);
+        const cumulativePoints = officialWeekPoints(name, team, table);
+        let weekPoints: number | null = null;
         for (const matchup of parseRecapMatchups(snapshot.views.recaps ?? [])) {
           const side = matchup.findIndex((entry) => entry.team === team);
           if (side < 0) continue;
@@ -399,9 +419,10 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
           );
           if (rowIndex < 0) continue;
           scoreRow = matchup[side].rows[rowIndex];
-          const opponent = matchup[side === 0 ? 1 : 0]?.rows[rowIndex];
-          if (weekPoints === null && opponent)
-            weekPoints = individualPoints(scoreRow, opponent);
+          const officialFlags = matchup[side].emphasis[rowIndex] ?? [];
+          if (officialFlags.some(Boolean)) weekPoints = recapWeekPoints(matchup[side], rowIndex);
+          else if (recapHasOfficialIndividualPoints([matchup])) weekPoints = 0;
+          else weekPoints = null;
           break;
         }
         if (!row && !scoreRow) return null;
@@ -411,17 +432,21 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
           series: scoreRow?.at(-1) || (table && row ? cell(table, row, "HSS") : ""),
           average: table && row ? cell(table, row, "Avg") : scoreRow?.[1] || "—",
           weekPoints,
+          cumulativePoints,
           totalPoints: "",
         };
       })
       .filter((entry): entry is NonNullable<typeof entry> => Boolean(entry))
       .sort((left, right) => Number(left.week) - Number(right.week));
-    let runningPoints = 0;
+    let previousCumulative = 0;
     return entries.map((entry) => {
-      if (entry.weekPoints !== null) runningPoints += entry.weekPoints;
+      if (entry.cumulativePoints !== null) {
+        entry.weekPoints = Math.max(0, entry.cumulativePoints - previousCumulative);
+        previousCumulative = entry.cumulativePoints;
+      }
       return {
         ...entry,
-        totalPoints: hasIndividualPoints ? String(runningPoints) : "",
+        totalPoints: hasIndividualPoints && entry.cumulativePoints !== null ? String(entry.cumulativePoints) : "",
       };
     });
   };
@@ -430,8 +455,8 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
     return history.at(-1)?.totalPoints || "0";
   };
   const q = query.trim().toLowerCase();
-  const week = data.week ?? "1";
-  const laneTable = data.views.lanes?.[0];
+  const week = selectedWeek;
+  const laneTable = activeViews.lanes?.[0] ?? data.views.lanes?.[0];
   const teamPointValue = (game: number) =>
     data.id === "132277" ? (game < 3 ? 4 : 5) : 2;
   const sortStanding = (key: typeof standingSort.key) =>
@@ -486,6 +511,20 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
               : "Scratch scores · handicap used for points"}
           </p>
         </div>
+        {weekSnapshots.length > 1 && <div className="league-week-selector">
+          <label>
+            <span>View league week</span>
+            <select value={selectedWeek} onChange={(event) => {
+              setSelectedWeek(event.target.value);
+              setOpenTeam(null);
+              setSelectedBowler(null);
+              setQuery("");
+            }}>
+              {weekSnapshots.map((entry) => <option value={entry.week} key={entry.week}>Week {entry.week}</option>)}
+            </select>
+          </label>
+          <small>Changes every league section to the selected week.</small>
+        </div>}
         <div className="league-hub-tabs">
           {tabs.map((id) => (
             <button
@@ -797,17 +836,11 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
           <div className="weekly-recaps">
             <div className="recap-heading">
               <div>
-                <p className="eyebrow red">Week {recapWeek}</p>
+                <p className="eyebrow red">Week {selectedWeek}</p>
                 <h3>Full matchup recaps</h3>
               </div>
               <div className="recap-week-tools">
                 <p>Individual and team points are shown separately.</p>
-                {recapWeeks.length > 1 && <label>
-                  <span>View week</span>
-                  <select value={recapWeek} onChange={(event) => setRecapWeek(event.target.value)}>
-                    {recapWeeks.map((entry) => <option value={entry.week} key={entry.week}>Week {entry.week}</option>)}
-                  </select>
-                </label>}
               </div>
             </div>
             {selectedRecapMatchups
@@ -860,13 +893,14 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                               <th>Game 2</th>
                               <th>Game 3</th>
                               <th>Series</th>
-                              <th>Individual pts</th>
+                              {hasIndividualPoints && <th>Individual pts</th>}
                             </tr>
                           </thead>
                           <tbody>
                             {team.rows.map((row, r) => {
                               const versus = opponent?.rows[r] ?? [];
-                              const blind = Math.max(Number(row[1] ?? 0) - 10, 0);
+                              const officialFlags = team.emphasis[r] ?? [];
+                              const hasOfficialMarkers = recapHasOfficialIndividualPoints([matchup]);
                               return (
                                 <tr key={r}>
                                   <td>
@@ -877,26 +911,28 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                                   {[0, 1, 2].map((game) => (
                                     <td
                                       key={game}
-                                      className={resultClass(
-                                        opponent ? pointScore(row, game) : score(row, game),
-                                        opponent ? pointScore(versus, game) : blind,
-                                      )}
+                                      className={hasOfficialMarkers
+                                        ? (officialFlags[3 + game] ? "winner-score" : "loser-score")
+                                        : opponent
+                                          ? resultClass(pointScore(row, game), pointScore(versus, game))
+                                          : "loser-score"}
                                     >
                                       {row[3 + game]}
                                     </td>
                                   ))}
                                   <td
-                                    className={resultClass(
-                                      opponent ? pointSeries(row) : series(row),
-                                      opponent ? pointSeries(versus) : blind * 3,
-                                    )}
+                                    className={hasOfficialMarkers
+                                      ? (officialFlags[officialFlags.length - 1] ? "winner-score" : "loser-score")
+                                      : opponent
+                                        ? resultClass(pointSeries(row), pointSeries(versus))
+                                        : "loser-score"}
                                   >
                                     <b>{row.at(-1)}</b>
                                   </td>
-                                  <td className="individual-points">
-                                    <b>{officialWeekPoints(personName(row[0]), team.team, selectedRecapBowlerTable) ?? (opponent ? individualPoints(row, versus) : "â€”")}</b>
+                                  {hasIndividualPoints && <td className="individual-points">
+                                    <b>{bowlerHistory(personName(row[0]), team.team).find((entry) => String(entry.week) === selectedWeek)?.weekPoints ?? "—"}</b>
                                     <small>official pts</small>
-                                  </td>
+                                  </td>}
                                 </tr>
                               );
                             })}
@@ -945,7 +981,7 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                                       </td>
                                     );
                                   })()}
-                                  <td className="team-points-cell">
+                                  {hasIndividualPoints && <td className="team-points-cell">
                                     <b>
                                       {[0, 1, 2, 3].reduce(
                                         (sum, game) =>
@@ -960,7 +996,7 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                                       )}
                                     </b>
                                     <small>team pts</small>
-                                  </td>
+                                  </td>}
                                 </tr>
                               )}
                             {team.total.length > 0 && !opponent && (
@@ -984,10 +1020,10 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                                   <b>{team.total.at(-1)}</b>
                                   <small>{Number(team.total.at(-1) ?? 0) > blindGame * 3 ? `${teamPointValue(3)} team pts` : "0 team pts"}</small>
                                 </td>
-                                <td className="team-points-cell">
+                                {hasIndividualPoints && <td className="team-points-cell">
                                   <b>{team.points || "â€”"}</b>
                                   <small>official pts</small>
-                                </td>
+                                </td>}
                               </tr>;
                               })()
                             )}
