@@ -2,6 +2,7 @@ import { chromium } from "playwright";
 import { createHash } from "node:crypto";
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
+import { getDocument } from "pdfjs-dist/legacy/build/pdf.mjs";
 
 const seedLeagues = [
   {id:"132277",slug:"nationals-league-2627",name:"NATIONALS LEAGUE 26-27",displayName:"Nationals League 26-27",bowlsOn:"Monday",startDate:"August 17, 2026",startTime:"6:30 PM",bowlDay:1,type:"Handicap Adult Mixed"},
@@ -179,6 +180,81 @@ async function extractAllRecaps(page,standings) {
   }
   return collected.size?[...collected.values()]:(await extractTables(page)).map(table=>normalizeRecap(table,standings));
 }
+
+const recapNameTokens = (value="") => clean(value)
+  .toLowerCase()
+  .replace(/\b(jr|sr|ii|iii|iv|2nd|3rd|111|11|1v)\b/g,"")
+  .replace(/[^a-z]+/g," ")
+  .trim()
+  .split(/\s+/)
+  .filter(Boolean);
+const isBoldPdfFont = font => /bold/i.test(font?.name??"");
+async function officialRecapPdfUrl(page,league,selectedValue="") {
+  const [week,year,season]=String(selectedValue).split("|");
+  const suffix=week&&year&&season?`/${year}/${season}/${week}`:"";
+  const url=`https://www.leaguesecretary.com/bowling-centers/${league.centerSlug}/bowling-leagues/${league.slug}/league/recaps-png/${league.id}${suffix}`;
+  await page.goto(url,{waitUntil:"domcontentloaded",timeout:90000});
+  const html=await page.content();
+  return html.match(/https:\/\/pdf\.leaguesecretary\.com\/uploads\/[^'"<]+\.pdf/i)?.[0]??null;
+}
+async function applyOfficialRecapEmphasis(page,league,tables,selectedValue="") {
+  const pdfUrl=await officialRecapPdfUrl(page,league,selectedValue).catch(()=>null);
+  if(!pdfUrl) return tables;
+  const response=await fetch(pdfUrl);
+  if(!response.ok) return tables;
+  const document=await getDocument({data:new Uint8Array(await response.arrayBuffer()),disableWorker:true}).promise;
+  const lines=[];
+  for(let pageNumber=1;pageNumber<=document.numPages;pageNumber++) {
+    const pdfPage=await document.getPage(pageNumber);
+    await pdfPage.getOperatorList();
+    const content=await pdfPage.getTextContent();
+    const groups=[];
+    for(const item of content.items) {
+      const y=item.transform?.[5]??0;
+      let group=groups.find(entry=>Math.abs(entry.y-y)<1.2);
+      if(!group) { group={y,items:[]}; groups.push(group); }
+      group.items.push({...item,bold:isBoldPdfFont(pdfPage.commonObjs.get(item.fontName))});
+    }
+    for(const group of groups) {
+      const midpoint=pdfPage.view[2]/2;
+      for(const side of [group.items.filter(item=>item.transform[4]<midpoint),group.items.filter(item=>item.transform[4]>=midpoint)]) {
+        side.sort((a,b)=>a.transform[4]-b.transform[4]);
+        const text=side.map(item=>item.str).join(" ").toLowerCase();
+        const numbers=side.flatMap(item=>(item.str.match(/(?:bk)?\d+(?:\.\d+)?/gi)??[]).map(value=>({value:value.replace(/^bk/i,""),bold:item.bold})));
+        if(side.length) lines.push({text,numbers});
+      }
+    }
+  }
+  return tables.map(table=>({...table,emphasis:table.rows.map((row,rowIndex)=>{
+    if(/^Team\s+\d+$/i.test(row[0]??"")) return table.emphasis?.[rowIndex]??row.map(()=>false);
+    if(/^(total)$/i.test(row[0]??"")) {
+      const expected=row.slice(1).map(value=>String(value??"").replace(/^bk/i,""));
+      const line=lines.find(candidate=>/scratch total/.test(candidate.text)&&expected.every(value=>candidate.numbers.some(entry=>entry.value===value)));
+      if(!line) return table.emphasis?.[rowIndex]??row.map(()=>false);
+      let cursor=0;
+      return row.map((_,column)=>{
+        if(column===0) return false;
+        const found=line.numbers.findIndex((entry,index)=>index>=cursor&&entry.value===expected[column-1]);
+        if(found<0) return false;
+        cursor=found+1;
+        return line.numbers[found].bold;
+      });
+    }
+    const tokens=recapNameTokens(row[0]);
+    const line=lines.find(candidate=>tokens.length&&tokens.every(token=>candidate.text.includes(token)));
+    if(!line) return table.emphasis?.[rowIndex]??row.map(()=>false);
+    let cursor=0;
+    const flags=row.map(()=>false);
+    for(let column=1;column<row.length;column++) {
+      const expected=String(row[column]??"").replace(/^bk/i,"");
+      const found=line.numbers.findIndex((entry,index)=>index>=cursor&&entry.value===expected);
+      if(found<0) continue;
+      flags[column]=line.numbers[found].bold;
+      cursor=found+1;
+    }
+    return flags;
+  })}));
+}
 function normalizeRecap(table,standings) {
   if(!table||!standings) return table;
   const teamNumberByName=new Map(standings.rows.map(row=>[
@@ -318,6 +394,10 @@ try {
           console.warn(`Could not enumerate every recap for ${league.displayName}: ${error.message}`);
           views[view]=(await extractTables(page)).map(table=>normalizeRecap(table,views.standings?.[0]));
         }
+        views[view]=await applyOfficialRecapEmphasis(page,league,views[view]).catch(error=>{
+          console.warn(`Could not read official bold recap markers for ${league.displayName}: ${error.message}`);
+          return views[view];
+        });
       } else views[view]=await extractTables(page);
     }
     // Backfill every posted week, not only weeks observed after FrameLine's
@@ -331,7 +411,8 @@ try {
       const weekOptions=await leagueWeekOptions(page);
       for(const option of weekOptions.filter(item=>item.week!==String(week)&&!existingWeeks.has(item.week))) {
         await selectLeagueWeek(page,option.value);
-        const recaps=await extractAllRecaps(page,views.standings?.[0]).catch(()=>[]);
+        let recaps=await extractAllRecaps(page,views.standings?.[0]).catch(()=>[]);
+        recaps=await applyOfficialRecapEmphasis(page,league,recaps,option.value).catch(()=>recaps);
         const archivedViews={recaps};
         for(const view of ["standings","bowlers","lanes"]) {
           const archiveUrl=`https://www.leaguesecretary.com/bowling-centers/${league.centerSlug}/bowling-leagues/${league.slug}/${viewPaths[view]}/${league.id}`;
@@ -382,7 +463,7 @@ try {
     for(const entry of archivedHistory) historyByWeek.set(String(entry.week),entry);
     historyByWeek.set(String(week),historyEntry);
     const history=[...historyByWeek.values()].sort((left,right)=>Number(left.week)-Number(right.week));
-    const next={...current,...league,sourceUpdated,sourceFingerprint:sourceFingerprint??current.sourceFingerprint??null,syncedAt,status:complete?"current":"awaiting-results",week,fingerprint,lastCompletedCycle,views,history};
+    const next={...current,...league,officialRecapVersion:1,sourceUpdated,sourceFingerprint:sourceFingerprint??current.sourceFingerprint??null,syncedAt,status:complete?"current":"awaiting-results",week,fingerprint,lastCompletedCycle,views,history};
     await writeFile(file,JSON.stringify(next,null,2)+"\n","utf8");
     changed=true;
     refreshedLeagues.push({
