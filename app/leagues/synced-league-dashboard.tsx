@@ -421,8 +421,11 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
           scoreRow = matchup[side].rows[rowIndex];
           const officialFlags = matchup[side].emphasis[rowIndex] ?? [];
           if (officialFlags.some(Boolean)) weekPoints = recapWeekPoints(matchup[side], rowIndex);
-          else if (recapHasOfficialIndividualPoints([matchup])) weekPoints = 0;
-          else weekPoints = null;
+          else {
+            const opponent = matchup[side === 0 ? 1 : 0];
+            const opponentRow = opponent?.rows[rowIndex];
+            weekPoints = opponentRow ? individualPoints(scoreRow, opponentRow) : null;
+          }
           break;
         }
         if (!row && !scoreRow) return null;
@@ -442,13 +445,21 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
     return entries.map((entry) => {
       // LeagueSecretary's WON column is the official individual-points result
       // for that selected week. It is not a season-to-date total.
-      if (entry.reportedWeekPoints !== null) {
-        entry.weekPoints = entry.reportedWeekPoints;
-        runningTotal += entry.reportedWeekPoints;
+      // Some LeagueSecretary bowler tables report zero even when the recap
+      // scorecard clearly identifies one or more head-to-head wins. In that
+      // case, use the same handicap comparison that highlights the winning
+      // games in the recap so the points and highlights cannot disagree.
+      const resolvedWeekPoints =
+        entry.reportedWeekPoints === 0 && (entry.weekPoints ?? 0) > 0
+          ? entry.weekPoints
+          : entry.reportedWeekPoints ?? entry.weekPoints;
+      if (resolvedWeekPoints !== null) {
+        entry.weekPoints = resolvedWeekPoints;
+        runningTotal += resolvedWeekPoints;
       }
       return {
         ...entry,
-        totalPoints: hasIndividualPoints && entry.reportedWeekPoints !== null ? String(runningTotal) : "",
+        totalPoints: hasIndividualPoints && resolvedWeekPoints !== null ? String(runningTotal) : "",
       };
     });
   };
