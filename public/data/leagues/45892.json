@@ -7,18 +7,18 @@
   "bowlsOn": "Wednesday",
   "startTime": "10:00 AM",
   "type": "Handicap Adult Mixed",
-  "updated": "09/02/2026",
+  "updated": "09/04/2026",
   "startDate": "Fall 2026",
   "bowlDay": 3,
   "centerId": "2119",
   "centerName": "Maplewood Lanes",
   "centerSlug": "maplewood-lanes-omaha-nebraska",
   "area": "Omaha",
-  "sourceUpdated": "09/02/2026",
-  "syncedAt": "2026-09-04T02:24:04.394Z",
+  "sourceUpdated": "09/04/2026",
+  "syncedAt": "2026-09-04T15:09:36.041Z",
   "status": "current",
   "week": "2",
-  "fingerprint": "87a9096262bd8e8ee080ec5a3febf10529ef0a0eb2009ef8a9a5459cef09884b",
+  "fingerprint": "6e7b44194a8829574791b7fcaec7db0008ec1ffaaac1aec105c5c411efce4100",
   "lastCompletedCycle": "2026-09-02",
   "views": {
     "standings": [
@@ -140,20 +140,6 @@
           [
             "1",
             "8",
-            "5",
-            "One More Strike",
-            "29",
-            "21",
-            "58 %",
-            "29",
-            "625",
-            "3053",
-            "541",
-            "1561"
-          ],
-          [
-            "1",
-            "9",
             "7",
             "Bowling Stones",
             "27.5",
@@ -164,6 +150,20 @@
             "3595",
             "672",
             "1837"
+          ],
+          [
+            "1",
+            "9",
+            "15",
+            "Dream Team",
+            "25",
+            "25",
+            "50 %",
+            "25",
+            "332",
+            "2657",
+            "486",
+            "1330"
           ],
           [
             "1",
@@ -280,6 +280,20 @@
           [
             "1",
             "18",
+            "5",
+            "One More Strike",
+            "16",
+            "34",
+            "32 %",
+            "16",
+            "625",
+            "3053",
+            "541",
+            "1561"
+          ],
+          [
+            "1",
+            "19",
             "19",
             "M & M's",
             "14",
@@ -290,20 +304,6 @@
             "2798",
             "512",
             "1428"
-          ],
-          [
-            "1",
-            "19",
-            "15",
-            "Dream Team",
-            "11",
-            "36",
-            "23 %",
-            "11",
-            "332",
-            "2297",
-            "486",
-            "1330"
           ],
           [
             "1",
@@ -4442,8 +4442,8 @@
             false,
             false,
             false,
-            true,
-            true,
+            false,
+            false,
             false
           ],
           [
@@ -4451,8 +4451,8 @@
             false,
             false,
             false,
-            true,
-            true,
+            false,
+            false,
             false
           ],
           [
@@ -4474,24 +4474,6 @@
             false,
             false,
             false,
-            true,
-            true,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            true,
-            false,
-            true,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            true,
             false,
             false,
             false
@@ -4500,7 +4482,25 @@
             false,
             false,
             false,
-            true,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
             false,
             false,
             false
@@ -4642,27 +4642,9 @@
             false,
             false,
             false,
-            true,
-            false,
-            true,
-            false
-          ],
-          [
             false,
             false,
             false,
-            true,
-            true,
-            true,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            true,
-            true,
-            true,
             false
           ],
           [
@@ -4670,8 +4652,26 @@
             false,
             false,
             false,
-            true,
-            true,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
             false
           ],
           [
@@ -4693,7 +4693,7 @@
             false,
             false,
             false,
-            true,
+            false,
             false,
             false
           ],
@@ -4880,16 +4880,16 @@
             false,
             false,
             false,
-            true,
-            true,
+            false,
+            false,
             false
           ],
           [
             false,
             false,
             false,
-            true,
-            true,
+            false,
+            false,
             false,
             false
           ],
@@ -4920,16 +4920,7 @@
             false,
             false,
             false,
-            true,
-            true,
-            true,
-            false
-          ],
-          [
             false,
-            false,
-            false,
-            true,
             false,
             false,
             false
@@ -4940,7 +4931,16 @@
             false,
             false,
             false,
-            true,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
             false
           ],
           [
@@ -4972,7 +4972,7 @@
         "rows": [
           [
             "Team 5",
-            "Lane 25 | Team points won: 19"
+            "Lane 25 | Team points won: 6"
           ],
           [
             "Woodworth, Beth",
@@ -5022,7 +5022,7 @@
           ],
           [
             "Team 15",
-            "Lane 26 | Team points won: 5"
+            "Lane 26 | Team points won: 19"
           ],
           [
             "Vreugdenhil, Jan",
@@ -5052,14 +5052,23 @@
             "358"
           ],
           [
+            "Amis, Joanna",
+            "120",
+            "90",
+            "120",
+            "120",
+            "120",
+            "360"
+          ],
+          [
             "Total",
-            "313",
-            "344",
-            "310",
+            "433",
+            "464",
+            "430",
             "0",
             "0",
             "0",
-            "967"
+            "1327"
           ]
         ],
         "emphasis": [
@@ -5071,9 +5080,9 @@
             false,
             false,
             false,
-            true,
             false,
-            true,
+            false,
+            false,
             false
           ],
           [
@@ -5082,15 +5091,6 @@
             false,
             false,
             false,
-            true,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            true,
             false,
             false
           ],
@@ -5098,9 +5098,18 @@
             false,
             false,
             false,
-            true,
             false,
-            true,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
             false
           ],
           [
@@ -5130,8 +5139,8 @@
             false,
             false,
             false,
-            true,
-            true,
+            false,
+            false,
             false,
             false
           ],
@@ -5139,9 +5148,18 @@
             false,
             false,
             false,
-            true,
             false,
-            true,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
             false
           ],
           [
@@ -5281,15 +5299,6 @@
             false,
             false,
             false,
-            true,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
             false,
             false,
             false,
@@ -5309,7 +5318,16 @@
             false,
             false,
             false,
-            true,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
             false,
             false
           ],
@@ -5332,35 +5350,35 @@
             false,
             false,
             false,
-            true,
-            true,
+            false,
+            false,
             false
           ],
           [
             false,
             false,
             false,
-            true,
-            true,
-            true,
+            false,
+            false,
+            false,
             false
           ],
           [
             false,
             false,
             false,
-            true,
-            true,
-            true,
+            false,
+            false,
+            false,
             false
           ],
           [
             false,
             false,
             false,
-            true,
             false,
-            true,
+            false,
+            false,
             false
           ],
           [
@@ -5500,7 +5518,7 @@
             false,
             false,
             false,
-            true,
+            false,
             false,
             false,
             false
@@ -5509,26 +5527,26 @@
             false,
             false,
             false,
-            true,
             false,
-            true,
+            false,
+            false,
             false
           ],
           [
             false,
             false,
             false,
-            true,
-            true,
-            true,
+            false,
+            false,
+            false,
             false
           ],
           [
             false,
             false,
             false,
-            true,
-            true,
+            false,
+            false,
             false,
             false
           ],
@@ -5551,15 +5569,6 @@
             false,
             false,
             false,
-            true,
-            true,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
             false,
             false,
             false
@@ -5579,7 +5588,16 @@
             false,
             false,
             false,
-            true,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
             false
           ],
           [
@@ -5720,7 +5738,16 @@
             false,
             false,
             false,
-            true,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
             false,
             false
           ],
@@ -5737,17 +5764,8 @@
             false,
             false,
             false,
-            true,
-            true,
-            true,
-            false
-          ],
-          [
             false,
             false,
-            false,
-            true,
-            true,
             false,
             false
           ],
@@ -5769,18 +5787,9 @@
             false,
             false,
             false,
-            true,
-            false,
-            true,
-            false
-          ],
-          [
             false,
             false,
             false,
-            true,
-            true,
-            true,
             false
           ],
           [
@@ -5798,7 +5807,16 @@
             false,
             false,
             false,
-            true,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
             false
           ],
           [
@@ -5939,8 +5957,8 @@
             false,
             false,
             false,
-            true,
-            true,
+            false,
+            false,
             false
           ],
           [
@@ -5948,8 +5966,8 @@
             false,
             false,
             false,
-            true,
-            true,
+            false,
+            false,
             false
           ],
           [
@@ -5957,8 +5975,8 @@
             false,
             false,
             false,
-            true,
-            true,
+            false,
+            false,
             false
           ],
           [
@@ -5966,7 +5984,7 @@
             false,
             false,
             false,
-            true,
+            false,
             false,
             false
           ],
@@ -6015,9 +6033,9 @@
             false,
             false,
             false,
-            true,
             false,
-            true,
+            false,
+            false,
             false
           ],
           [
@@ -6159,7 +6177,16 @@
             false,
             false,
             false,
-            true,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
             false
           ],
           [
@@ -6169,15 +6196,6 @@
             false,
             false,
             false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            true,
-            true,
             false
           ],
           [
@@ -6207,25 +6225,7 @@
             false,
             false,
             false,
-            true,
-            true,
             false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            true,
-            true,
-            true,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            true,
             false,
             false,
             false
@@ -6234,9 +6234,27 @@
             false,
             false,
             false,
-            true,
-            true,
-            true,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
             false
           ],
           [
@@ -6376,15 +6394,6 @@
             false,
             false,
             false,
-            true,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
             false,
             false,
             false,
@@ -6395,7 +6404,16 @@
             false,
             false,
             false,
-            true,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
             false,
             false
           ],
@@ -6427,26 +6445,8 @@
             false,
             false,
             false,
-            true,
-            true,
-            false
-          ],
-          [
             false,
             false,
-            false,
-            false,
-            true,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            true,
-            false,
-            true,
             false
           ],
           [
@@ -6455,7 +6455,25 @@
             false,
             false,
             false,
-            true,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
             false
           ],
           [
@@ -11580,8 +11598,8 @@
     },
     {
       "week": "2",
-      "sourceUpdated": "09/02/2026",
-      "syncedAt": "2026-09-04T02:24:04.394Z",
+      "sourceUpdated": "09/04/2026",
+      "syncedAt": "2026-09-04T15:09:36.041Z",
       "views": {
         "standings": [
           {
@@ -11702,20 +11720,6 @@
               [
                 "1",
                 "8",
-                "5",
-                "One More Strike",
-                "29",
-                "21",
-                "58 %",
-                "29",
-                "625",
-                "3053",
-                "541",
-                "1561"
-              ],
-              [
-                "1",
-                "9",
                 "7",
                 "Bowling Stones",
                 "27.5",
@@ -11726,6 +11730,20 @@
                 "3595",
                 "672",
                 "1837"
+              ],
+              [
+                "1",
+                "9",
+                "15",
+                "Dream Team",
+                "25",
+                "25",
+                "50 %",
+                "25",
+                "332",
+                "2657",
+                "486",
+                "1330"
               ],
               [
                 "1",
@@ -11842,6 +11860,20 @@
               [
                 "1",
                 "18",
+                "5",
+                "One More Strike",
+                "16",
+                "34",
+                "32 %",
+                "16",
+                "625",
+                "3053",
+                "541",
+                "1561"
+              ],
+              [
+                "1",
+                "19",
                 "19",
                 "M & M's",
                 "14",
@@ -11852,20 +11884,6 @@
                 "2798",
                 "512",
                 "1428"
-              ],
-              [
-                "1",
-                "19",
-                "15",
-                "Dream Team",
-                "11",
-                "36",
-                "23 %",
-                "11",
-                "332",
-                "2297",
-                "486",
-                "1330"
               ],
               [
                 "1",
@@ -16004,8 +16022,8 @@
                 false,
                 false,
                 false,
-                true,
-                true,
+                false,
+                false,
                 false
               ],
               [
@@ -16013,8 +16031,8 @@
                 false,
                 false,
                 false,
-                true,
-                true,
+                false,
+                false,
                 false
               ],
               [
@@ -16036,24 +16054,6 @@
                 false,
                 false,
                 false,
-                true,
-                true,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                true,
-                false,
-                true,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                true,
                 false,
                 false,
                 false
@@ -16062,7 +16062,25 @@
                 false,
                 false,
                 false,
-                true,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
                 false,
                 false,
                 false
@@ -16204,27 +16222,9 @@
                 false,
                 false,
                 false,
-                true,
-                false,
-                true,
-                false
-              ],
-              [
                 false,
                 false,
                 false,
-                true,
-                true,
-                true,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                true,
-                true,
-                true,
                 false
               ],
               [
@@ -16232,8 +16232,26 @@
                 false,
                 false,
                 false,
-                true,
-                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
                 false
               ],
               [
@@ -16255,7 +16273,7 @@
                 false,
                 false,
                 false,
-                true,
+                false,
                 false,
                 false
               ],
@@ -16442,16 +16460,16 @@
                 false,
                 false,
                 false,
-                true,
-                true,
+                false,
+                false,
                 false
               ],
               [
                 false,
                 false,
                 false,
-                true,
-                true,
+                false,
+                false,
                 false,
                 false
               ],
@@ -16482,16 +16500,7 @@
                 false,
                 false,
                 false,
-                true,
-                true,
-                true,
-                false
-              ],
-              [
                 false,
-                false,
-                false,
-                true,
                 false,
                 false,
                 false
@@ -16502,7 +16511,16 @@
                 false,
                 false,
                 false,
-                true,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
                 false
               ],
               [
@@ -16534,7 +16552,7 @@
             "rows": [
               [
                 "Team 5",
-                "Lane 25 | Team points won: 19"
+                "Lane 25 | Team points won: 6"
               ],
               [
                 "Woodworth, Beth",
@@ -16584,7 +16602,7 @@
               ],
               [
                 "Team 15",
-                "Lane 26 | Team points won: 5"
+                "Lane 26 | Team points won: 19"
               ],
               [
                 "Vreugdenhil, Jan",
@@ -16614,14 +16632,23 @@
                 "358"
               ],
               [
+                "Amis, Joanna",
+                "120",
+                "90",
+                "120",
+                "120",
+                "120",
+                "360"
+              ],
+              [
                 "Total",
-                "313",
-                "344",
-                "310",
+                "433",
+                "464",
+                "430",
                 "0",
                 "0",
                 "0",
-                "967"
+                "1327"
               ]
             ],
             "emphasis": [
@@ -16633,9 +16660,9 @@
                 false,
                 false,
                 false,
-                true,
                 false,
-                true,
+                false,
+                false,
                 false
               ],
               [
@@ -16644,15 +16671,6 @@
                 false,
                 false,
                 false,
-                true,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                true,
                 false,
                 false
               ],
@@ -16660,9 +16678,18 @@
                 false,
                 false,
                 false,
-                true,
                 false,
-                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
                 false
               ],
               [
@@ -16692,8 +16719,8 @@
                 false,
                 false,
                 false,
-                true,
-                true,
+                false,
+                false,
                 false,
                 false
               ],
@@ -16701,9 +16728,18 @@
                 false,
                 false,
                 false,
-                true,
                 false,
-                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
                 false
               ],
               [
@@ -16843,15 +16879,6 @@
                 false,
                 false,
                 false,
-                true,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
                 false,
                 false,
                 false,
@@ -16871,7 +16898,16 @@
                 false,
                 false,
                 false,
-                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
                 false,
                 false
               ],
@@ -16894,35 +16930,35 @@
                 false,
                 false,
                 false,
-                true,
-                true,
+                false,
+                false,
                 false
               ],
               [
                 false,
                 false,
                 false,
-                true,
-                true,
-                true,
+                false,
+                false,
+                false,
                 false
               ],
               [
                 false,
                 false,
                 false,
-                true,
-                true,
-                true,
+                false,
+                false,
+                false,
                 false
               ],
               [
                 false,
                 false,
                 false,
-                true,
                 false,
-                true,
+                false,
+                false,
                 false
               ],
               [
@@ -17062,7 +17098,7 @@
                 false,
                 false,
                 false,
-                true,
+                false,
                 false,
                 false,
                 false
@@ -17071,26 +17107,26 @@
                 false,
                 false,
                 false,
-                true,
                 false,
-                true,
+                false,
+                false,
                 false
               ],
               [
                 false,
                 false,
                 false,
-                true,
-                true,
-                true,
+                false,
+                false,
+                false,
                 false
               ],
               [
                 false,
                 false,
                 false,
-                true,
-                true,
+                false,
+                false,
                 false,
                 false
               ],
@@ -17113,15 +17149,6 @@
                 false,
                 false,
                 false,
-                true,
-                true,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
                 false,
                 false,
                 false
@@ -17141,7 +17168,16 @@
                 false,
                 false,
                 false,
-                true,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
                 false
               ],
               [
@@ -17282,7 +17318,16 @@
                 false,
                 false,
                 false,
-                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
                 false,
                 false
               ],
@@ -17299,17 +17344,8 @@
                 false,
                 false,
                 false,
-                true,
-                true,
-                true,
-                false
-              ],
-              [
                 false,
                 false,
-                false,
-                true,
-                true,
                 false,
                 false
               ],
@@ -17331,18 +17367,9 @@
                 false,
                 false,
                 false,
-                true,
-                false,
-                true,
-                false
-              ],
-              [
                 false,
                 false,
                 false,
-                true,
-                true,
-                true,
                 false
               ],
               [
@@ -17360,7 +17387,16 @@
                 false,
                 false,
                 false,
-                true,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
                 false
               ],
               [
@@ -17501,8 +17537,8 @@
                 false,
                 false,
                 false,
-                true,
-                true,
+                false,
+                false,
                 false
               ],
               [
@@ -17510,8 +17546,8 @@
                 false,
                 false,
                 false,
-                true,
-                true,
+                false,
+                false,
                 false
               ],
               [
@@ -17519,8 +17555,8 @@
                 false,
                 false,
                 false,
-                true,
-                true,
+                false,
+                false,
                 false
               ],
               [
@@ -17528,7 +17564,7 @@
                 false,
                 false,
                 false,
-                true,
+                false,
                 false,
                 false
               ],
@@ -17577,9 +17613,9 @@
                 false,
                 false,
                 false,
-                true,
                 false,
-                true,
+                false,
+                false,
                 false
               ],
               [
@@ -17721,7 +17757,16 @@
                 false,
                 false,
                 false,
-                true,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
                 false
               ],
               [
@@ -17731,15 +17776,6 @@
                 false,
                 false,
                 false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                true,
-                true,
                 false
               ],
               [
@@ -17769,25 +17805,7 @@
                 false,
                 false,
                 false,
-                true,
-                true,
                 false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                true,
-                true,
-                true,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                true,
                 false,
                 false,
                 false
@@ -17796,9 +17814,27 @@
                 false,
                 false,
                 false,
-                true,
-                true,
-                true,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
                 false
               ],
               [
@@ -17938,15 +17974,6 @@
                 false,
                 false,
                 false,
-                true,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
                 false,
                 false,
                 false,
@@ -17957,7 +17984,16 @@
                 false,
                 false,
                 false,
-                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
                 false,
                 false
               ],
@@ -17989,26 +18025,8 @@
                 false,
                 false,
                 false,
-                true,
-                true,
-                false
-              ],
-              [
                 false,
                 false,
-                false,
-                false,
-                true,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                true,
-                false,
-                true,
                 false
               ],
               [
@@ -18017,7 +18035,25 @@
                 false,
                 false,
                 false,
-                true,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
                 false
               ],
               [
@@ -20104,6 +20140,6 @@
       }
     }
   ],
-  "sourceFingerprint": "e350d342c6be793011bb01cc37dd3974a6c48a450b3d2ec796635c72ea7c25ee",
+  "sourceFingerprint": "4ca92aa4a58cd8b0aa0dcb075511f6df9b3a6014c142e8adb449d09aab65e630",
   "officialRecapVersion": 1
 }
