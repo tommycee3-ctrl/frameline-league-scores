@@ -19,7 +19,7 @@ const centers=[
   {id:"2137",name:"Hollywood Bowl",area:"Lincoln",slug:"hollywood-bowl-lincoln-nebraska"},
   {id:"2110",name:"West Lanes",area:"Omaha",slug:"west-lanes-bowl-omaha-nebraska"},
   {id:"2119",name:"Maplewood Lanes",area:"Omaha",slug:"maplewood-lanes-omaha-nebraska"},
-  {id:"2175",name:"Papio Bowl",area:"Omaha",slug:"papio-bowl-papillion-nebraska",includeAllListed:true},
+  {id:"2175",name:"Papio Bowl",area:"Omaha",slug:"papio-bowl-papillion-nebraska"},
   {id:"5144",name:"Mockingbird Lanes",area:"Omaha",slug:"mockingbird-lanes"},
   {id:"2208",name:"Western Bowl",area:"Omaha",slug:"western-bowl-omaha"},
 ];
@@ -35,6 +35,7 @@ const existingCatalogById=new Map(existingCatalogEntries.map(league=>[league.id,
 const viewPaths = { standings:"league/standings", bowlers:"bowler/list", recaps:"league/recaps", lanes:"league/lane-assignments", rosters:"team/list" };
 const force = process.argv.includes("--force");
 const knownOnly = process.argv.includes("--known-only");
+const currentOnly = process.argv.includes("--current-only");
 const requestedLeague=process.argv.find(argument=>argument.startsWith("--league="))?.split("=")[1];
 const requestedCenter=process.argv.find(argument=>argument.startsWith("--center="))?.split("=")[1];
 const refreshStartedAt=new Date();
@@ -322,7 +323,7 @@ try {
     // Backfill every posted week, not only weeks observed after FrameLine's
     // history feature was introduced. LeagueSecretary exposes the archived
     // week list on both the bowler and recap views.
-    if(!knownOnly) {
+    if(!knownOnly&&!currentOnly) {
       const existingWeeks=new Set((current.history??[]).filter(entry=>entry.views?.standings?.length&&entry.views?.recaps?.length).map(entry=>String(entry.week)));
       const recapUrl=`https://www.leaguesecretary.com/bowling-centers/${league.centerSlug}/bowling-leagues/${league.slug}/${viewPaths.recaps}/${league.id}`;
       await page.goto(recapUrl,{waitUntil:"domcontentloaded",timeout:90000});
