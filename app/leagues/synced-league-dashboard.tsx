@@ -133,15 +133,19 @@ const parseRecapMatchups = (tables: Table[] = []) =>
     .filter((matchup) => matchup.length);
 
 export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
-  const tabs = ["standings", "honors", "bowlers", "recaps", "lanes"] as const;
-  const labels = {
+  type LeagueTab = "standings" | "positionRank" | "honors" | "bowlers" | "recaps" | "lanes";
+  const tabs: LeagueTab[] = data.id === "148625"
+    ? ["standings", "positionRank", "honors", "bowlers", "recaps", "lanes"]
+    : ["standings", "honors", "bowlers", "recaps", "lanes"];
+  const labels: Record<LeagueTab, string> = {
     standings: "League Standings",
+    positionRank: "Position Rank",
     honors: "Honors",
     bowlers: "Bowlers",
     recaps: "Weekly Recaps",
     lanes: "Lane Assignments",
   };
-  const [tab, setTab] = useState<(typeof tabs)[number]>("standings");
+  const [tab, setTab] = useState<LeagueTab>("standings");
   const [honorsView, setHonorsView] = useState<"weekly" | "yearly">("weekly");
   const [selectedWeek, setSelectedWeek] = useState(String(data.week ?? "1"));
   const [query, setQuery] = useState("");
@@ -194,6 +198,26 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
       ),
     [activeViews.rosters, data.views.rosters],
   );
+  const positionRanks = useMemo(() => {
+    if (data.id !== "148625") return [];
+    const latestRosters = data.views.rosters ?? [];
+    return latestRosters
+      .filter((table) => table.team)
+      .map((table) => ({
+        team: table.team!,
+        name: teamName(table.team!),
+        bowlers: table.rows
+          .map((row) => ({
+            name: personName(cell(table, row, "Name")),
+            average: Number(cell(table, row, "Avg")),
+          }))
+          .filter((bowler) => bowler.name && !/vacant/i.test(bowler.name) && Number.isFinite(bowler.average))
+          .sort((left, right) => right.average - left.average || left.name.localeCompare(right.name))
+          .slice(0, 3),
+      }))
+      .filter((team) => team.bowlers.length)
+      .sort((left, right) => Number(left.team) - Number(right.team));
+  }, [data]);
   const recapByTeam = useMemo(() => {
     const result: Record<
       string,
@@ -763,6 +787,29 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                   </article>
                 );
               })}
+          </div>
+        )}
+        {tab === "positionRank" && data.id === "148625" && (
+          <div className="position-rank-grid">
+            {positionRanks
+              .filter((team) => !q || `${team.name} Team ${team.team} ${team.bowlers.map((bowler) => bowler.name).join(" ")}`.toLowerCase().includes(q))
+              .map((team) => (
+                <article className="position-rank-team" key={team.team}>
+                  <header>
+                    <span>Team {team.team}</span>
+                    <h3>{team.name}</h3>
+                  </header>
+                  <ol>
+                    {team.bowlers.map((bowler, index) => (
+                      <li key={bowler.name}>
+                        <b>{index + 1}</b>
+                        <button type="button" onClick={() => setSelectedBowler({ name: bowler.name, team: team.team })}>{bowler.name}</button>
+                        <span><small>Current average</small><strong>{bowler.average}</strong></span>
+                      </li>
+                    ))}
+                  </ol>
+                </article>
+              ))}
           </div>
         )}
         {tab === "bowlers" && bowlerTable && (
