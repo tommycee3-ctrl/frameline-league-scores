@@ -3077,7 +3077,7 @@ body:has(.social-home) .site-footer .footer-bottom {
 }
 .position-rank-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
 .position-rank-team {
@@ -3125,6 +3125,11 @@ body:has(.social-home) .site-footer .footer-bottom {
   font-size: 1rem;
   font-weight: 800;
   cursor: pointer;
+}
+.position-rank-team li button small {
+  display: block;
+  margin-top: .2rem;
+  font-weight: 600;
 }
 .position-rank-team li > span { display: grid; text-align: right; }
 .position-rank-team li small { color: var(--muted); font-size: .66rem; text-transform: uppercase; }

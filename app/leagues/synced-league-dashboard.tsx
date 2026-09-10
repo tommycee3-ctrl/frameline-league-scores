@@ -201,22 +201,22 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
   const positionRanks = useMemo(() => {
     if (data.id !== "148625") return [];
     const latestRosters = data.views.rosters ?? [];
-    return latestRosters
-      .filter((table) => table.team)
-      .map((table) => ({
-        team: table.team!,
-        name: teamName(table.team!),
-        bowlers: table.rows
+    return ["1", "2", "3"].map((position) => ({
+      position,
+      bowlers: latestRosters
+        .filter((table) => table.team)
+        .flatMap((table) => table.rows
+          .filter((row) => cell(table, row, "Pos") === position)
           .map((row) => ({
             name: personName(cell(table, row, "Name")),
             average: Number(cell(table, row, "Avg")),
-          }))
-          .filter((bowler) => bowler.name && !/vacant/i.test(bowler.name) && Number.isFinite(bowler.average))
-          .sort((left, right) => right.average - left.average || left.name.localeCompare(right.name))
-          .slice(0, 3),
-      }))
-      .filter((team) => team.bowlers.length)
-      .sort((left, right) => Number(left.team) - Number(right.team));
+            team: table.team!,
+            teamName: teamName(table.team!),
+          })))
+        .filter((bowler) => bowler.name && !/vacant/i.test(bowler.name) && Number.isFinite(bowler.average))
+        .sort((left, right) => right.average - left.average || left.name.localeCompare(right.name))
+        .slice(0, 3),
+    }));
   }, [data]);
   const recapByTeam = useMemo(() => {
     const result: Record<
@@ -792,18 +792,24 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
         {tab === "positionRank" && data.id === "148625" && (
           <div className="position-rank-grid">
             {positionRanks
-              .filter((team) => !q || `${team.name} Team ${team.team} ${team.bowlers.map((bowler) => bowler.name).join(" ")}`.toLowerCase().includes(q))
-              .map((team) => (
-                <article className="position-rank-team" key={team.team}>
+              .map((group) => ({
+                ...group,
+                bowlers: group.bowlers.filter((bowler) => !q || `${bowler.name} ${bowler.teamName} Team ${bowler.team}`.toLowerCase().includes(q)),
+              }))
+              .map((group) => (
+                <article className="position-rank-team" key={group.position}>
                   <header>
-                    <span>Team {team.team}</span>
-                    <h3>{team.name}</h3>
+                    <span>League leaders</span>
+                    <h3>{group.position} Spot</h3>
                   </header>
                   <ol>
-                    {team.bowlers.map((bowler, index) => (
-                      <li key={bowler.name}>
+                    {group.bowlers.map((bowler, index) => (
+                      <li key={`${bowler.team}-${bowler.name}`}>
                         <b>{index + 1}</b>
-                        <button type="button" onClick={() => setSelectedBowler({ name: bowler.name, team: team.team })}>{bowler.name}</button>
+                        <button type="button" onClick={() => setSelectedBowler({ name: bowler.name, team: bowler.team })}>
+                          {bowler.name}
+                          <small>{bowler.teamName} · Team {bowler.team}</small>
+                        </button>
                         <span><small>Current average</small><strong>{bowler.average}</strong></span>
                       </li>
                     ))}
