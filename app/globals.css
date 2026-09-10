@@ -3081,13 +3081,14 @@ body:has(.social-home) .site-footer .footer-bottom {
   gap: 1rem;
 }
 .position-rank-team {
-  border: 1px solid var(--navy);
-  background: #fff;
+  border: 1px solid #35506a;
+  background: #101f31;
 }
 .position-rank-team header {
   padding: 1rem;
-  background: var(--navy);
-  color: #fff;
+  border-bottom: 1px solid #35506a;
+  background: #09121f;
+  color: #f7fbfb;
 }
 .position-rank-team header span {
   color: #72e0d7;
@@ -3104,21 +3105,21 @@ body:has(.social-home) .site-footer .footer-bottom {
   align-items: center;
   gap: .8rem;
   padding: .9rem 1rem;
-  border-top: 1px solid #d8dee5;
+  border-top: 1px solid #294057;
 }
 .position-rank-team li > b {
   display: grid;
   place-items: center;
   width: 2rem;
   height: 2rem;
-  background: var(--red);
-  color: #fff;
+  background: #72e0d7;
+  color: #101b2b;
   font-size: 1.05rem;
 }
 .position-rank-team li button {
   border: 0;
   background: transparent;
-  color: var(--navy);
+  color: #f7fbfb;
   padding: 0;
   text-align: left;
   font-family: inherit;
@@ -3131,9 +3132,11 @@ body:has(.social-home) .site-footer .footer-bottom {
   margin-top: .2rem;
   font-weight: 600;
 }
+.position-rank-team li button:hover,
+.position-rank-team li button:focus-visible { color: #72e0d7; }
 .position-rank-team li > span { display: grid; text-align: right; }
-.position-rank-team li small { color: var(--muted); font-size: .66rem; text-transform: uppercase; }
-.position-rank-team li strong { color: var(--red); font-size: 1.25rem; }
+.position-rank-team li small { color: #9db0bd; font-size: .66rem; text-transform: uppercase; }
+.position-rank-team li strong { color: #72e0d7; font-size: 1.25rem; }
 @media (max-width: 700px) {
   .position-rank-grid { grid-template-columns: 1fr; }
 }

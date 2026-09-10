@@ -210,12 +210,13 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
           .map((row) => ({
             name: personName(cell(table, row, "Name")),
             average: Number(cell(table, row, "Avg")),
+            games: Number(cell(table, row, "Gms")),
             team: table.team!,
             teamName: teamName(table.team!),
           })))
         .filter((bowler) => bowler.name && !/vacant/i.test(bowler.name) && Number.isFinite(bowler.average))
         .sort((left, right) => right.average - left.average || left.name.localeCompare(right.name))
-        .slice(0, 3),
+        .slice(0, 5),
     }));
   }, [data]);
   const recapByTeam = useMemo(() => {
@@ -810,7 +811,11 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                           {bowler.name}
                           <small>{bowler.teamName} · Team {bowler.team}</small>
                         </button>
-                        <span><small>Current average</small><strong>{bowler.average}</strong></span>
+                        <span>
+                          <small>Current average</small>
+                          <strong>{bowler.average}</strong>
+                          <small>{bowler.games} total games</small>
+                        </span>
                       </li>
                     ))}
                   </ol>
