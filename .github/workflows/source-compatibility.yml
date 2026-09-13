@@ -26,6 +26,8 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npx playwright install --with-deps chromium
+      - name: Check importer and cache regressions
+        run: node --test tests/source-contract.test.mjs tests/sync-layout.test.mjs tests/service-worker-data.test.mjs
       - name: Test current source reports without changing published data
         shell: bash
         run: |
