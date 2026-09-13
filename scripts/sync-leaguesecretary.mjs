@@ -1,3 +1,4 @@
+import { validateSourceView } from "./source-contract.mjs";
 import { chromium } from "playwright";
 import { createHash } from "node:crypto";
 import { readFile, writeFile } from "node:fs/promises";
@@ -243,6 +244,43 @@ function currentRoster(table) {
 
 const browser = await chromium.launch({headless:true});
 const listedLeagues=await discoverLeagues(browser);
+if(process.argv.includes('--check-source')) {
+  try {
+    const samples=['48706','132277',listedLeagues.find(league=>league.centerId==='2118')?.id].filter(Boolean);
+    for(const id of samples) {
+      const league=listedLeagues.find(league=>league.id===id);
+      if(!league) throw new Error('Source layout check: expected sample league missing '+id);
+      const page=await browser.newPage();
+      try {
+        let standings;
+        for(const view of ['standings','bowlers','recaps','lanes']) {
+          await page.goto(`https://www.leaguesecretary.com/bowling-centers/${league.centerSlug}/bowling-leagues/${league.slug}/${viewPaths[view]}/${id}`,{waitUntil:'domcontentloaded',timeout:90000});
+          await page.locator('.k-grid tbody tr:visible').first().waitFor({timeout:20000});
+          const tables=await extractTables(page);
+          if(view==='standings') standings=tables[0];
+          if(view==='recaps') {
+            const controls=page.locator('#ddTeam, #leagueRecapTeam');
+            if(!await controls.count()) throw new Error('Source layout check: recap team selector missing');
+            if(!(await leagueWeekOptions(page)).length) throw new Error('Source layout check: report period selector missing');
+          }
+          validateSourceView(view,view==='recaps'?tables.map(table=>normalizeRecap(table,standings)):tables,{required:true});
+          console.log('SOURCE CHECK OK | '+league.centerName+' | '+view);
+        }
+        await page.goto(`https://www.leaguesecretary.com/bowling-centers/${league.centerSlug}/bowling-leagues/${league.slug}/team/list/${id}`,{waitUntil:'domcontentloaded',timeout:90000});
+        await page.locator('.k-grid tbody tr:visible').first().waitFor({timeout:20000});
+        const team=await page.evaluate(()=>window.jQuery('.grid_main').data('kendoGrid').dataSource.data()[0]?.TeamID);
+        const metadata=await page.locator('.div-main-grid').evaluate(node=>({...node.dataset}));
+        if(!team||!metadata.year||!metadata.season) throw new Error('Source layout check: roster navigation changed');
+        await page.goto(`https://www.leaguesecretary.com/bowling-centers/${league.centerSlug}/bowling-leagues/${league.slug}/team/history/${id}/${metadata.year}/${metadata.season}/${team}`,{waitUntil:'domcontentloaded',timeout:90000});
+        await page.locator('.k-grid tbody tr:visible').first().waitFor({timeout:20000});
+        validateSourceView('rosters',(await extractTables(page)).slice(0,1),{required:true});
+        console.log('SOURCE CHECK OK | '+league.centerName+' | rosters');
+      } finally {await page.close();}
+    }
+    console.log('SOURCE CHECK OK | '+listedLeagues.length+' discovered leagues | all sample reports passed');
+  } finally {await browser.close();}
+  process.exit(0);
+}
 const discoveredLeagues=knownOnly ? listedLeagues.filter(league=>knownLeagueIds.has(league.id)) : listedLeagues;
 const leagues=discoveredLeagues.filter(league=>(!requestedLeague||league.id===requestedLeague)&&(!requestedCenter||league.centerId===requestedCenter));
 console.log(`Discovered ${leagues.length} listed leagues${requestedCenter ? ` for center ${requestedCenter}` : ` across ${centers.length} centers`}.`);
@@ -358,6 +396,7 @@ try {
       }
     }
     await page.close();
+    for(const view of Object.keys(viewPaths)) validateSourceView(view,views[view],{required:(current.views?.[view]??[]).some(table=>table.rows?.length)});
     for(const view of Object.keys(viewPaths)) {
       const nextRows=(views[view]??[]).reduce((sum,table)=>sum+table.rows.length,0);
       const previousRows=(current.views?.[view]??[]).reduce((sum,table)=>sum+table.rows.length,0);

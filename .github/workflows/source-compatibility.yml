@@ -1,0 +1,47 @@
+name: Check bowling source compatibility
+on:
+  schedule:
+    - cron: '9 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/sync-leaguesecretary.mjs'
+      - 'scripts/source-contract.mjs'
+      - '.github/workflows/source-compatibility.yml'
+permissions:
+  contents: read
+concurrency:
+  group: source-compatibility
+  cancel-in-progress: false
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: Test current source reports without changing published data
+        shell: bash
+        run: |
+          set -o pipefail
+          node scripts/sync-leaguesecretary.mjs --check-source 2>&1 | tee source-check.log
+      - name: Save compatibility report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: source-compatibility-report
+          path: source-check.log
+      - name: Summarize source status
+        if: always()
+        shell: bash
+        run: |
+          echo '## Bowling source compatibility' >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          tail -40 source-check.log >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
