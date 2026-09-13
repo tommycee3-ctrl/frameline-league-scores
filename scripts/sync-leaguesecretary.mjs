@@ -64,43 +64,46 @@ function cellValue(table,row,name) { return row[table.headers.findIndex(header=>
 function slugify(value="") { return clean(value).toLowerCase().replace(/&/g,"and").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,""); }
 function displayName(value="") { return clean(value).replace(/\bL G B T\b/i,"LGBT"); }
 function recentlyUpdated(value="") {
-  const [month,day,year]=value.split("/").map(Number);
-  if(!month||!day||!year) return false;
-  return (Date.now()-Date.UTC(year,month-1,day))/864e5<=45;
+  const timestamp=Date.parse(value);
+  return Number.isFinite(timestamp)&&(Date.now()-timestamp)/864e5<=45;
 }
 async function discoverLeagues(browser) {
   const page=await browser.newPage({viewport:{width:1440,height:1100}});
   try {
     const dayNumbers={Sunday:0,Monday:1,Tuesday:2,Wednesday:3,Thursday:4,Friday:5,Saturday:6};
     const discovered=[];
-    for(const center of centers) {
+    for(const center of centers.filter(center=>!requestedCenter||center.id===requestedCenter)) {
       await page.goto(`https://www.leaguesecretary.com/bowling-centers/${center.slug}/leagues/${center.id}`,{waitUntil:"domcontentloaded",timeout:90000});
       await page.waitForTimeout(5000);
-      const rows=await page.locator("table tbody tr").evaluateAll(nodes=>nodes.map(row=>[...row.querySelectorAll("td")].map(cell=>(cell.textContent||"").replace(/\s+/g," ").trim())).filter(row=>row.length>=7));
-      discovered.push(...rows.map(([id,name,season,bowlsOn,startTime,type,updated])=>({id,name:clean(name),displayName:displayName(name),slug:slugify(name),season,bowlsOn,startTime:clean(startTime).replace(/(AM|PM)$/i," $1"),type,updated,startDate:center.includeAllListed?`${season} season`:`${season} 2026`,bowlDay:dayNumbers[bowlsOn],centerId:center.id,centerName:center.name,centerSlug:center.slug,area:center.area})).filter(league=>knownLeagueIds.has(league.id)||center.includeAllListed||(league.season==="Fall"&&recentlyUpdated(league.updated))));
+      const rows=await page.locator("table tbody tr").evaluateAll(nodes=>nodes.map(row=>[...row.querySelectorAll("td")].map(cell=>(cell.textContent||"").replace(/\s+/g," ").trim())).filter(row=>row.length>=6));
+      if(!rows.length) throw new Error(`No league rows returned for ${center.name}; refusing to record an empty successful scan.`);
+      discovered.push(...rows.map(row=>{ const [id,name,season]=row; const [bowlsOn,startTime,type,updated]=row.length>=7?row.slice(3):[...(row[3].match(/^(Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday)\s*(.*)$/)?.slice(1)??["",""]),row[4],row[5]]; return ({id,name:clean(name),displayName:displayName(name),slug:slugify(name),season,bowlsOn,startTime:clean(startTime).replace(/(AM|PM)$/i," $1"),type,updated,startDate:center.includeAllListed?`${season} season`:`${season} ${chicago.year}`,bowlDay:dayNumbers[bowlsOn],centerId:center.id,centerName:center.name,centerSlug:center.slug,area:center.area}); }).filter(league=>knownLeagueIds.has(league.id)||center.includeAllListed||recentlyUpdated(league.updated)));
     }
     return discovered.map(league=>({...league,...knownById.get(league.id),updated:league.updated,slug:knownById.get(league.id)?.slug??league.slug})).sort((a,b)=>a.bowlDay-b.bowlDay||a.startTime.localeCompare(b.startTime));
   } finally { await page.close(); }
 }
 function validTable(table) { return table.headers.length>1 && table.rows.some(row=>row.filter(Boolean).length>1); }
 async function extractTables(page) {
-  const tables=await page.locator("table").evaluateAll((nodes)=>nodes.map((table,index)=>{
-    const title=(table.closest("section,article,.card,.panel")?.querySelector("h1,h2,h3,h4,h5,.card-title")?.textContent||`Table ${index+1}`).replace(/\s+/g," ").trim();
-    const extracted=[...table.querySelectorAll("tr")].map(tr=>{
-      const cells=[...tr.querySelectorAll("th,td")].map(cell=>({
-        text:(cell.textContent||"").replace(/\s+/g," ").trim(),
-        // LeagueSecretary uses bold type as the official win marker on recap
-        // sheets. Preserve that fact instead of trying to recreate it later.
-        emphasized:Boolean(cell.querySelector("b,strong"))||Number.parseInt(getComputedStyle(cell).fontWeight,10)>=600||/winner|won|bold/i.test(cell.className),
-      })).filter(cell=>cell.text);
-      return {values:cells.map(cell=>cell.text),emphasis:cells.map(cell=>cell.emphasized)};
-    }).filter(row=>row.values.length);
-    const first=extracted[0]?.values||[]; const hasHeader=table.querySelector("thead")||table.querySelector("tr th");
-    const body=hasHeader?extracted.slice(1):extracted;
-    return {title,headers:hasHeader?first:first.map((_,i)=>`Column ${i+1}`),rows:body.map(row=>row.values),emphasis:body.map(row=>row.emphasis)};
+  const tables=await page.locator('.k-grid, table:not(.k-grid table)').evaluateAll(nodes=>nodes.filter(node=>node.matches('.k-grid')||!node.closest('.k-grid')).map((node,index)=>{
+    const tidy=value=>(value||'').replace(/\s+/g,' ').trim();
+    const aliases={TeamNum:'Team#',TeamName:'Team',TeamDivision:'Div',PercentWinLoss:'%',PointsWonYTD:'YTD WON',AverageAfterBowling:'AVG',TotalPinsSplit:'Pins',HighScratchGame:'HSG',HighScratchSeries:'HSS',PointsWonSplit:'WON',PointsLostSplit:'LOST'};
+    const th=[...node.querySelectorAll('th')];
+    const headers=th.map(cell=>aliases[cell.dataset.field]||tidy(cell.textContent));
+    const rows=[],emphasis=[];
+    for(const tr of node.querySelectorAll('tbody tr')) {
+      const cells=[...tr.querySelectorAll('td')]; if(!cells.length) continue;
+      rows.push(cells.map(cell=>tidy(cell.innerText).replace(/^—$/,'')));
+      emphasis.push(cells.map(cell=>Boolean(cell.querySelector('b,strong'))||/winner|won|bold/i.test(cell.className)));
+    }
+    if(th.some(cell=>cell.dataset.field==='BowlerTitle')) {
+      const keep=th.map((cell,i)=>!/^(Game[456]|HandicapTotal)$/.test(cell.dataset.field||'')?i:-1).filter(i=>i>=0);
+      return {title:'Recap',headers:keep.map(i=>headers[i]),rows:rows.map(row=>keep.map(i=>row[i])),emphasis:emphasis.map(row=>keep.map(i=>row[i]))};
+    }
+    return {title:tidy(node.closest('section')?.querySelector('h2,h3')?.textContent)||'Table '+(index+1),headers,rows,emphasis};
   }));
   return tables.filter(validTable);
 }
+
 async function readStandingsFingerprint(page,league) {
   const responsePromise=page.waitForResponse(response=>
     response.url().includes("/League/InteractiveStandings_Read")&&
@@ -129,9 +132,9 @@ async function expandAllGridRows(page) {
   if(expanded) await page.waitForTimeout(1800);
 }
 async function leagueWeekOptions(page) {
-  return page.locator("#ddLeagueSeasonYearWeek").evaluate(element=>{
+  return page.locator("#ddLeagueSeasonYearWeek, select[id$=Period]").first().evaluate(element=>{
     const widget=window.jQuery?.(element).data("kendoDropDownList");
-    if(!widget) return [];
+    if(!widget) return [...element.options].filter(option=>option.value.split("|").slice(1).join("|")===element.value.split("|").slice(1).join("|")).map(option=>({label:option.text, value:option.value,week:option.value.split("|")[0]}));
     const textField=widget.options.dataTextField;
     const valueField=widget.options.dataValueField;
     return widget.dataSource.data().map(entry=>({
@@ -142,9 +145,9 @@ async function leagueWeekOptions(page) {
   }).catch(()=>[]);
 }
 async function selectLeagueWeek(page,value) {
-  await page.locator("#ddLeagueSeasonYearWeek").evaluate((element,target)=>{
+  await page.locator("#ddLeagueSeasonYearWeek, select[id$=Period]").first().evaluate((element,target)=>{
     const widget=window.jQuery?.(element).data("kendoDropDownList");
-    if(!widget) return;
+    if(!widget) { element.value=target; element.dispatchEvent(new Event("change",{bubbles:true})); return; }
     widget.value(target);
     widget.trigger("change");
   },value);
@@ -153,8 +156,9 @@ async function selectLeagueWeek(page,value) {
 }
 async function extractAllRecaps(page,standings) {
   const collected=new Map();
-  const options=await page.locator("#ddTeam").evaluate(element=>{
-    const widget=window.jQuery(element).data("kendoDropDownList");
+  const options=await page.locator("#ddTeam, #leagueRecapTeam").first().evaluate(element=>{
+    const widget=window.jQuery?.(element).data("kendoDropDownList");
+    if(!widget) return [...element.options].map(option=>({label:option.text,value:option.value}));
     const textField=widget.options.dataTextField;
     const valueField=widget.options.dataValueField;
     return widget.dataSource.data().map(entry=>({
@@ -164,8 +168,9 @@ async function extractAllRecaps(page,standings) {
   }).catch(()=>[]);
   const uniqueOptions=[...new Map(options.map(option=>[option.value,option])).values()];
   for(const option of uniqueOptions) {
-    await page.locator("#ddTeam").evaluate((element,target)=>{
-      const widget=window.jQuery(element).data("kendoDropDownList");
+    await page.locator("#ddTeam, #leagueRecapTeam").first().evaluate((element,target)=>{
+      const widget=window.jQuery?.(element).data("kendoDropDownList");
+      if(!widget) { element.value=target; element.dispatchEvent(new Event("change",{bubbles:true})); return; }
       widget.value(target);
       widget.trigger("change");
     },option.value);
@@ -185,7 +190,13 @@ function normalizeRecap(table,standings) {
     clean(cellValue(standings,row,"Team")).toLowerCase(),
     cellValue(standings,row,"Team#")
   ]).filter(([name,number])=>name&&number));
-  return {...table,rows:table.rows.map(row=>{
+  return {...table,emphasis:table.rows.map((row,index)=>{
+    const flags=table.emphasis?.[index]??row.map(()=>false);
+    return /^team total$/i.test(row[0]??'')?[false,...flags.slice(3,6),flags.at(-1)??false]:flags;
+  }),rows:table.rows.map(row=>{
+    const modern=row[0]?.match(/^TEAM\s+(.+?)\s+(Lane\s+\d+)\s*·\s*([\d.]+) team points won$/i);
+    if(modern) { const number=teamNumberByName.get(clean(modern[1]).toLowerCase()); return number?[`Team ${number}`,`${modern[2]} points won: ${modern[3]}`]:row; }
+    if(/^team total$/i.test(row[0]??'')) return ['Total',...row.slice(3,6),row.at(-1)];
     if(!/^Lane\s+\d+/i.test(row[1]??"")) return row;
     const teamNumber=teamNumberByName.get(clean(row[0]).toLowerCase());
     return teamNumber?[`Team ${teamNumber}`,...row.slice(1)]:row;
@@ -261,22 +272,23 @@ for(const league of leagues){
   // Historical backfills belong to the nightly maintenance workflow. The
   // frequent known-league refresh must remain small enough to finish before
   // its next two-hour cycle.
-  const needsHistoryBackfill=!knownOnly&&Number(current.week)>1&&historyWeeks.size<Number(current.week);
+  const needsHistoryBackfill=!knownOnly&&!currentOnly&&Number(current.week)>1&&historyWeeks.size<Number(current.week);
   // Standings, recaps, and lane assignments are not always published at the
   // same time.  A standings-only fingerprint can therefore remain unchanged
   // while a new recap or the next lane assignment has appeared.  During the
   // league's normal posting window, refresh the complete league so those
   // later-published views are not left behind.
-  const postingWindowRefresh=isInPostingWindow(league);
+  const postingWindowRefresh=isInPostingWindow(league)||!current.syncedAt||Date.now()-Date.parse(current.syncedAt)>24*60*60*1000;
   if(isWindowOpen(league,current)&&(force||!hasRows||sourceChanged||fingerprintChanged||needsInitialRecentCheck||needsHistoryBackfill||postingWindowRefresh)) candidates.push({league,file,current,sourceFingerprint});
 }
 await markerPage.close();
 let changed = false;
 try {
   for (const {league,file,current,sourceFingerprint} of candidates) {
+    console.log(`Importing ${league.displayName}`);
     const views = {};
     const archivedHistory=[];
-    let sourceUpdated = current.sourceUpdated;
+    let sourceUpdated = league.updated || current.sourceUpdated;
     let week = current.week;
     const page = await browser.newPage({viewport:{width:1440,height:1100}});
     for (const [view,route] of Object.entries(viewPaths)) {
@@ -304,7 +316,7 @@ try {
         const rosters=[];
         for(const team of teamPages) {
           await page.goto(new URL(team.url,"https://www.leaguesecretary.com").toString(),{waitUntil:"domcontentloaded",timeout:90000});
-          await page.locator("table tbody tr").first().waitFor({state:"visible",timeout:15000}).catch(()=>{});
+          await page.locator("table tbody tr:visible").first().waitFor({state:"visible",timeout:15000}).catch(()=>{});
           await page.waitForTimeout(1800);
           const tables=await extractTables(page);
           if(tables[0]) rosters.push({...currentRoster(tables[0]),team:team.team,title:`Team ${team.team} · ${team.name} roster`});
@@ -412,6 +424,7 @@ const refreshRecord={
   finishedAt:refreshFinishedAt.toISOString(),
   durationSeconds:Math.max(0,Math.round((refreshFinishedAt-refreshStartedAt)/1000)),
   mode:knownOnly?"known leagues":"league discovery",
+  scope:requestedLeague?`league:${requestedLeague}`:requestedCenter?`center:${requestedCenter}`:"all",
   leaguesChecked:leagues.length,
   changeCount:refreshedLeagues.length,
   changes:refreshedLeagues

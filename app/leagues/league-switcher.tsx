@@ -17,7 +17,7 @@ const LEAGUE_BOWLERS_KEY = "frameline-league-bowlers";
 const DISMISSED_SUGGESTIONS_KEY = "frameline-dismissed-league-suggestions";
 const AREAS = ["Omaha", "Bellevue", "Lincoln", "Council Bluffs"];
 const CENTERS: Record<string, string[]> = {
-  Omaha: ["West Lanes", "Maplewood Lanes", "Mockingbird Lanes", "Western Bowl"],
+  Omaha: ["West Lanes", "Maplewood Lanes", "Papio Bowl", "Mockingbird Lanes", "Western Bowl"],
   Bellevue: [],
   Lincoln: ["Sun Valley Lanes", "Parkway Lanes", "Hollywood Bowl"],
   "Council Bluffs": ["Thunderbowl of Council Bluffs"],

@@ -1,4 +1,4 @@
-const CACHE_NAME = "frameline-shell-v2";
+const CACHE_NAME = "frameline-shell-v3";
 const SHELL = ["./", "./leagues/", "./manifest.webmanifest", "./frameline-mark.svg", "./icon-192.png", "./icon-512.png"];
 
 self.addEventListener("install", event => {
@@ -11,6 +11,24 @@ self.addEventListener("activate", event => {
 
 self.addEventListener("fetch", event => {
   if (event.request.method !== "GET" || new URL(event.request.url).origin !== self.location.origin) return;
+  if (new URL(event.request.url).pathname.includes("/data/")) {
+    const url = new URL(event.request.url);
+    const key = new Request(url.origin + url.pathname);
+    event.respondWith((async () => {
+      try {
+        const response = await fetch(event.request, { cache: "no-store" });
+        if (!response.ok) throw new Error("League data unavailable");
+        const cache = await caches.open(CACHE_NAME);
+        await cache.put(key, response.clone());
+        return response;
+      } catch (error) {
+        const cached = await caches.match(key);
+        if (cached) return cached;
+        throw error;
+      }
+    })());
+    return;
+  }
   if (event.request.mode === "navigate") {
     event.respondWith(fetch(event.request).then(response => {
       const copy = response.clone();

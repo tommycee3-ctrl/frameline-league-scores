@@ -21,13 +21,13 @@ permissions:
   id-token: write
 
 concurrency:
-  group: league-score-refresh
+  group: frameline-league-data
   cancel-in-progress: false
 
 jobs:
   sync:
     runs-on: ubuntu-latest
-    timeout-minutes: 75
+    timeout-minutes: 180
     outputs:
       changed: ${{ steps.publish.outputs.changed }}
     steps:
@@ -36,7 +36,7 @@ jobs:
         shell: bash
         run: |
           echo "run=true" >> "$GITHUB_OUTPUT"
-          echo "mode=--known-only" >> "$GITHUB_OUTPUT"
+          echo "mode=--current-only" >> "$GITHUB_OUTPUT"
           echo "Checking whether the last completed refresh is stale."
       - uses: actions/checkout@v4
         if: steps.window.outputs.run == 'true'
@@ -51,7 +51,7 @@ jobs:
           if [[ "$GITHUB_EVENT_NAME" != "schedule" ]]; then
             exit 0
           fi
-          latest=$(jq -r '[.[] | select(.mode == "known leagues")][0].finishedAt // empty' .github/refresh-history.json 2>/dev/null || true)
+          latest=$(jq -r '[.[] | select((.mode == "known leagues" or .mode == "league discovery") and ((.scope // "all") == "all"))][0].finishedAt // empty' .github/refresh-history.json 2>/dev/null || true)
           if [[ -z "$latest" ]]; then
             echo "No completed refresh is logged; running now."
             exit 0

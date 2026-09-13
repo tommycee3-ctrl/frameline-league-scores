@@ -29,7 +29,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          latest=$(jq -r '[.[] | select(.mode == "known leagues")][0].finishedAt // empty' .github/refresh-history.json 2>/dev/null || true)
+          latest=$(jq -r '[.[] | select((.mode == "known leagues" or .mode == "league discovery") and ((.scope // "all") == "all"))][0].finishedAt // empty' .github/refresh-history.json 2>/dev/null || true)
           stale=true
 
           if [[ -n "$latest" ]]; then
