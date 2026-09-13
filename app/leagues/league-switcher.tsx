@@ -154,21 +154,21 @@ export function LeagueSwitcher({ manageOnly = false }: { manageOnly?: boolean })
     window.requestAnimationFrame(() => window.requestAnimationFrame(() => document.getElementById("league-dashboard")?.scrollIntoView({ behavior: "smooth", block: "start" })));
   };
   const finishManualLeague = (name: string) => {
-    const nextBowlers = { ...leagueBowlers, [candidateId]: name };
+    const nextBowlers = { ...leagueBowlers, [resolvedCandidateId]: name };
     setLeagueBowlers(nextBowlers);
     localStorage.setItem(LEAGUE_BOWLERS_KEY, JSON.stringify(nextBowlers));
     if (name && !bowlerName) {
       localStorage.setItem(PROFILE_KEY, name);
       setBowlerName(name);
     }
-    if (!saved.includes(candidateId)) persist([...saved, candidateId]);
+    if (!saved.includes(resolvedCandidateId)) persist([...saved, resolvedCandidateId]);
     setManualBowlerChoices([]);
     setProfileMessage("");
-    openLeague(candidateId);
+    openLeague(resolvedCandidateId);
   };
   const addLeague = () => {
-    if (!candidateId) return;
-    const league = snapshots.find((item) => item.id === candidateId);
+    if (!resolvedCandidateId) return;
+    const league = snapshots.find((item) => item.id === resolvedCandidateId);
     const names = [...new Set((league?.views.bowlers ?? []).flatMap((table) => {
       const nameIndex = table.headers.findIndex((header) => header.toLowerCase() === "name");
       return nameIndex < 0 ? [] : table.rows.map((row) => row[nameIndex]).filter(Boolean);
@@ -247,6 +247,7 @@ export function LeagueSwitcher({ manageOnly = false }: { manageOnly?: boolean })
     const location = item as LeagueSnapshot & { area?: string; centerName?: string };
     return (location.area ?? "Omaha") === area && (location.centerName ?? "West Lanes") === center;
   });
+  const resolvedCandidateId = availableLeagues.some((item) => item.id === candidateId) ? candidateId : availableLeagues[0]?.id ?? "";
   const week = selected?.week ? `Week ${selected.week}` : "Awaiting Week 1";
   const schedule = selected ? `${selected.bowlsOn} · ${selected.startTime} · Started ${selected.startDate}` : "";
   const bowlerProfile = bowlerName ? findBowlers(bowlerName).find((match) => nameTokens(match.name).join(" ") === nameTokens(bowlerName).join(" ")) : undefined;
@@ -328,9 +329,9 @@ export function LeagueSwitcher({ manageOnly = false }: { manageOnly?: boolean })
       <div className="setup-steps">
         <label><span><b>1</b> Select your area</span><select value={area} onChange={(event) => { const next = event.target.value; setArea(next); setCenter(CENTERS[next]?.[0] ?? ""); setCandidateId(""); }}>{AREAS.map((item) => <option key={item}>{item}</option>)}</select></label>
         <label><span><b>2</b> Select your alley</span><select value={center} disabled={!centerOptions.length} onChange={(event) => { setCenter(event.target.value); setCandidateId(snapshots[0]?.id ?? ""); }}>{centerOptions.length ? centerOptions.map((item) => <option key={item}>{item}</option>) : <option>Coming soon</option>}</select></label>
-        <label><span><b>3</b> Select your league</span><select value={candidateId} disabled={!availableLeagues.length} onChange={(event) => setCandidateId(event.target.value)}>{availableLeagues.length ? availableLeagues.map((item) => <option value={item.id} key={item.id}>{item.displayName}</option>) : <option>No leagues added yet</option>}</select></label>
+        <label><span><b>3</b> Select your league</span><select value={resolvedCandidateId} disabled={!availableLeagues.length} onChange={(event) => setCandidateId(event.target.value)}>{availableLeagues.length ? availableLeagues.map((item) => <option value={item.id} key={item.id}>{item.displayName}</option>) : <option>No leagues added yet</option>}</select></label>
       </div>
-      <button className="add-current-button" disabled={!candidateId || saved.includes(candidateId)} onClick={addLeague}>{saved.includes(candidateId) ? "Already in Current Leagues" : "Add to Current Leagues"} <span>→</span></button>
+      <button className="add-current-button" disabled={!resolvedCandidateId || saved.includes(resolvedCandidateId)} onClick={addLeague}>{saved.includes(resolvedCandidateId) ? "Already in Current Leagues" : "Add to Current Leagues"} <span>→</span></button>
       {manualBowlerChoices.length > 0 && <div className="manual-bowler-picker">
         <div><p className="eyebrow red">Final step</p><h3>Who are you in this league?</h3><p>Select the exact roster name, even if it differs from your name in another league.</p></div>
         <div className="manual-bowler-list">{manualBowlerChoices.map((name) => <button key={name} type="button" onClick={() => finishManualLeague(name)}>{name}<span>Add this bowler →</span></button>)}</div>

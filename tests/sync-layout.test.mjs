@@ -19,10 +19,12 @@ test('split report headers and empty cells retain their column positions', async
 });
 test('new recap team labels and scratch totals retain the dashboard format', () => {
   const table = {headers: [], rows: [['TEAM Bowling Stones Lane 16 · 4 team points won'], ['Ohren, Marcy','127','56','128','109','148','385'], ['Team total','','','383','353','376','1112']]};
+  table.emphasis = [[], [], [false,false,false,true,false,true,true]];
   const standings = {headers:['Team#','Team'], rows:[['6','Bowling Stones']]};
   const result = normalizeRecap(table, standings);
   assert.deepEqual(result.rows[0], ['Team 6','Lane 16 points won: 4']);
   assert.deepEqual(result.rows[2], ['Total','383','353','376','1112']);
+  assert.deepEqual(result.emphasis[2], [false,true,false,true,true]);
 });
 test('an empty center scan is rejected instead of logged as a successful refresh', async () => {
   const discover = new Function('centers', 'requestedCenter', section('async function discoverLeagues', 'function validTable') + ';return discoverLeagues')([{id:'2175',name:'Papio Bowl',slug:'papio-bowl'}], undefined);

@@ -92,7 +92,7 @@ async function extractTables(page) {
     const rows=[],emphasis=[];
     for(const tr of node.querySelectorAll('tbody tr')) {
       const cells=[...tr.querySelectorAll('td')]; if(!cells.length) continue;
-      rows.push(cells.map(cell=>tidy(cell.innerText).replace(/^—$/,'')));
+      rows.push(cells.map(cell=>tidy(cell.innerText).replace(/^—$/,'').replace(/^(\d{1,3})(,\d{3})+(\.\d+)?$/,value=>value.replaceAll(',',''))));
       emphasis.push(cells.map(cell=>Boolean(cell.querySelector('b,strong'))||/winner|won|bold/i.test(cell.className)));
     }
     if(th.some(cell=>cell.dataset.field==='BowlerTitle')) {
