@@ -5,6 +5,7 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import { bowlerIdentityTables } from "../bowler-identity-tables";
 import { findBowlers } from "../bowler-lookup";
 import leagueCatalog from "../../public/data/leagues/all.json";
 import { LeagueSnapshot, SyncedLeagueDashboard } from "./synced-league-dashboard";
@@ -31,50 +32,9 @@ type BowlerLeagueMatch = { id: string; teams: string[] };
 type BowlerSearchMatch = { key: string; name: string; leagues: BowlerLeagueMatch[] };
 type LeagueSuggestion = { key: string; bowlerName: string; leagueId: string; teams: string[] };
 
-function bowlerTeamName(league: LeagueSnapshot, headers: string[], row: string[]) {
-  const teamIndex = headers.findIndex((header) => header.toLowerCase() === "team");
-  const directName = teamIndex >= 0 ? (row[teamIndex] ?? "").trim() : "";
-  if (directName && directName !== "0") return directName;
-  const numberIndex = headers.findIndex((header) => header.toLowerCase() === "team#");
-  const teamNumber = numberIndex >= 0 ? (row[numberIndex] ?? "").trim() : "";
-  if (!teamNumber || teamNumber === "0") return "";
-  for (const table of league.views.standings ?? []) {
-    const standingsNumber = table.headers.findIndex((header) => header.toLowerCase() === "team#");
-    const standingsName = table.headers.findIndex((header) => header.toLowerCase() === "team");
-    if (standingsNumber < 0 || standingsName < 0) continue;
-    const match = table.rows.find((standingsRow) => standingsRow[standingsNumber] === teamNumber);
-    if (match?.[standingsName]) return match[standingsName];
-  }
-  return `Team ${teamNumber}`;
-}
-
 function findBowlerMatches(query: string): BowlerSearchMatch[] {
-  const wanted = nameTokens(query);
-  if (wanted.join("").length < 2) return [];
-  const matches = new Map<string, { name: string; leagues: Map<string, Set<string>> }>();
-  snapshots.forEach((league) => {
-    (league.views.bowlers ?? []).forEach((table) => {
-      const index = table.headers.findIndex((header) => header.toLowerCase() === "name");
-      if (index < 0) return;
-      table.rows.forEach((row) => {
-        const name = (row[index] ?? "").trim();
-        const roster = nameTokens(name);
-        if (!name || !wanted.every((token) => roster.some((part) => part.includes(token)))) return;
-        const key = name.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
-        const current = matches.get(key) ?? { name, leagues: new Map<string, Set<string>>() };
-        const teams = current.leagues.get(league.id) ?? new Set<string>();
-        const team = bowlerTeamName(league, table.headers, row);
-        if (team) teams.add(team);
-        current.leagues.set(league.id, teams);
-        matches.set(key, current);
-      });
-    });
-  });
-  return [...matches.entries()].map(([key, match]) => ({
-    key,
-    name: match.name,
-    leagues: [...match.leagues.entries()].map(([id, teams]) => ({ id, teams: [...teams] })),
-  })).sort((a, b) => a.name.localeCompare(b.name));
+  return findBowlers(query).map(match => ({ key: match.key, name: match.name,
+    leagues: match.leagues.map(league => ({id: league.id, teams: league.teams})) }));
 }
 
 export function LeagueSwitcher({ manageOnly = false }: { manageOnly?: boolean }) {
@@ -142,7 +102,7 @@ export function LeagueSwitcher({ manageOnly = false }: { manageOnly?: boolean })
         .filter((match) => nameTokens(match.name).join(" ") === aliasKey)
         .forEach((match) => match.leagues.forEach((league) => {
           const key = `${league.id}:${match.key}`;
-          if (!saved.includes(league.id) && !rejected.has(key)) suggestions.set(key, { key, bowlerName: match.name, leagueId: league.id, teams: league.teams });
+          if (!saved.includes(league.id) && !rejected.has(key) && !rejected.has(`${league.id}:${match.name.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim()}`)) suggestions.set(key, { key, bowlerName: match.name, leagueId: league.id, teams: league.teams });
         }));
     });
     setLeagueSuggestions([...suggestions.values()]);
@@ -169,7 +129,7 @@ export function LeagueSwitcher({ manageOnly = false }: { manageOnly?: boolean })
   const addLeague = () => {
     if (!resolvedCandidateId) return;
     const league = snapshots.find((item) => item.id === resolvedCandidateId);
-    const names = [...new Set((league?.views.bowlers ?? []).flatMap((table) => {
+    const names = [...new Set((league ? bowlerIdentityTables(league) : []).flatMap((table) => {
       const nameIndex = table.headers.findIndex((header) => header.toLowerCase() === "name");
       return nameIndex < 0 ? [] : table.rows.map((row) => row[nameIndex]).filter(Boolean);
     }))].sort((a, b) => a.localeCompare(b));

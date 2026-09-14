@@ -1,3 +1,4 @@
+import { bowlerIdentityTables } from "./bowler-identity-tables";
 import leagueCatalog from "../public/data/leagues/all.json";
 import type { LeagueSnapshot } from "./leagues/synced-league-dashboard";
 
@@ -31,7 +32,7 @@ function teamName(league: LeagueSnapshot, headers: string[], row: string[]) {
   const numberIndex = headers.findIndex((header) => header.toLowerCase() === "team#");
   const number = numberIndex >= 0 ? (row[numberIndex] ?? "").trim() : "";
   if (!number || number === "0") return "";
-  for (const table of league.views.standings ?? []) {
+  for (const table of [...(league.views.standings ?? []), ...(league.views.lanes ?? [])]) {
     const no = table.headers.findIndex((header) => header.toLowerCase() === "team#");
     const name = table.headers.findIndex((header) => header.toLowerCase() === "team");
     const match = no >= 0 && name >= 0 ? table.rows.find((item) => item[no] === number) : undefined;
@@ -49,7 +50,7 @@ export function findBowlers(query: string): BowlerMatch[] {
   if (wanted.join("").length < 2) return [];
   const found = new Map<string, { name: string; leagues: Map<string, { teams: Set<string>; average: string; highSeries: string; teamAverage: number | null; teammates: { name: string; average: string }[] }> }>();
   leagueSnapshots.forEach((league) => {
-    (league.views.bowlers ?? []).forEach((table) => {
+    bowlerIdentityTables(league).forEach((table) => {
       const nameIndex = table.headers.findIndex((header) => header.toLowerCase() === "name");
       if (nameIndex < 0) return;
       table.rows.forEach((row) => {

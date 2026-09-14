@@ -27,6 +27,8 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci
+      - name: Check bowler discovery
+        run: node --test tests/bowler-identity.test.cjs
       - name: Build public app
         env:
           NEXT_PUBLIC_BASE_PATH: /frameline-league-scores
