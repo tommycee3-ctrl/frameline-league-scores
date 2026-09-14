@@ -1,4 +1,5 @@
-import { validateSourceView } from "./source-contract.mjs";
+import { withSourceRetry } from "./source-retry.mjs";
+import { validateSourceView, selectRosterTable } from "./source-contract.mjs";
 import { chromium } from "playwright";
 import { createHash } from "node:crypto";
 import { readFile, writeFile } from "node:fs/promises";
@@ -36,6 +37,8 @@ const existingCatalogById=new Map(existingCatalogEntries.map(league=>[league.id,
 const viewPaths = { standings:"league/standings", bowlers:"bowler/list", recaps:"league/recaps", lanes:"league/lane-assignments", rosters:"team/list" };
 const force = process.argv.includes("--force");
 const knownOnly = process.argv.includes("--known-only");
+const discoveryOnly = process.argv.includes("--discover-only");
+const importFailures=[];
 const currentOnly = process.argv.includes("--current-only");
 const requestedLeague=process.argv.find(argument=>argument.startsWith("--league="))?.split("=")[1];
 const requestedCenter=process.argv.find(argument=>argument.startsWith("--center="))?.split("=")[1];
@@ -74,12 +77,24 @@ async function discoverLeagues(browser) {
     const dayNumbers={Sunday:0,Monday:1,Tuesday:2,Wednesday:3,Thursday:4,Friday:5,Saturday:6};
     const discovered=[];
     for(const center of centers.filter(center=>!requestedCenter||center.id===requestedCenter)) {
+      let rows;
+      try { rows=await withSourceRetry(async()=>{
       await page.goto(`https://www.leaguesecretary.com/bowling-centers/${center.slug}/leagues/${center.id}`,{waitUntil:"domcontentloaded",timeout:90000});
       await page.waitForTimeout(5000);
-      const rows=await page.locator("table tbody tr").evaluateAll(nodes=>nodes.map(row=>[...row.querySelectorAll("td")].map(cell=>(cell.textContent||"").replace(/\s+/g," ").trim())).filter(row=>row.length>=6));
-      if(!rows.length) throw new Error(`No league rows returned for ${center.name}; refusing to record an empty successful scan.`);
-      discovered.push(...rows.map(row=>{ const [id,name,season]=row; const [bowlsOn,startTime,type,updated]=row.length>=7?row.slice(3):[...(row[3].match(/^(Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday)\s*(.*)$/)?.slice(1)??["",""]),row[4],row[5]]; return ({id,name:clean(name),displayName:displayName(name),slug:slugify(name),season,bowlsOn,startTime:clean(startTime).replace(/(AM|PM)$/i," $1"),type,updated,startDate:center.includeAllListed?`${season} season`:`${season} ${chicago.year}`,bowlDay:dayNumbers[bowlsOn],centerId:center.id,centerName:center.name,centerSlug:center.slug,area:center.area}); }).filter(league=>knownLeagueIds.has(league.id)||center.includeAllListed||recentlyUpdated(league.updated)));
+      await expandAllGridRows(page);
+      const directoryRows=await page.locator("table tbody tr").evaluateAll(nodes=>nodes.map(row=>[...row.querySelectorAll("td")].map(cell=>(cell.textContent||"").replace(/\s+/g," ").trim())).filter(row=>row.length>=6));
+      if(!directoryRows.length) {const error=new Error(`No league rows returned for ${center.name}; refusing to record an empty successful scan.`);error.code="SOURCE_EMPTY";throw error;}
+        return directoryRows;
+      },{onRetry:error=>console.warn(`Retrying directory ${center.name}: ${error.message}`)});
+      } catch(error) {
+        if(process.argv.includes("--check-source")||centers.filter(item=>!requestedCenter||item.id===requestedCenter).length===1) throw error;
+        importFailures.push({centerId:center.id,name:center.name,error:error.message});
+        console.error(`SYNC FAILURE | center:${center.id} | ${center.name} | ${error.message} | prior directory preserved`);
+        continue;
+      }
+      discovered.push(...rows.map(row=>{ const [id,name,season]=row; const [bowlsOn,startTime,type,updated]=row.length>=7?row.slice(3):[...(row[3].match(/^(Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday)\s*(.*)$/)?.slice(1)??["",""]),row[4],row[5]]; return ({id,name:clean(name),displayName:displayName(name),slug:slugify(name),season,bowlsOn,startTime:clean(startTime).replace(/(AM|PM)$/i," $1"),type,updated,startDate:center.includeAllListed?`${season} season`:`${season} ${chicago.year}`,bowlDay:dayNumbers[bowlsOn],centerId:center.id,centerName:center.name,centerSlug:center.slug,area:center.area}); }).filter(league=> /^\d+$/.test(league.id)));
     }
+    if(!discovered.length) throw new Error("No center directories could be read; preserving the prior catalog.");
     return discovered.map(league=>({...league,...knownById.get(league.id),updated:league.updated,slug:knownById.get(league.id)?.slug??league.slug})).sort((a,b)=>a.bowlDay-b.bowlDay||a.startTime.localeCompare(b.startTime));
   } finally { await page.close(); }
 }
@@ -111,7 +126,7 @@ async function readStandingsFingerprint(page,league) {
     response.request().postData()?.includes(`leagueId=${league.id}`),
   {timeout:30000}).catch(()=>null);
   const url=`https://www.leaguesecretary.com/bowling-centers/${league.centerSlug}/bowling-leagues/${league.slug}/league/standings/${league.id}`;
-  await page.goto(url,{waitUntil:"domcontentloaded",timeout:90000});
+  await withSourceRetry(()=>page.goto(url,{waitUntil:"domcontentloaded",timeout:90000}),{onRetry:error=>console.warn(`Retrying source page: ${error.message}`)});
   const response=await responsePromise;
   if(!response?.ok()) return null;
   const payload=await response.json().catch(()=>null);
@@ -254,7 +269,7 @@ if(process.argv.includes('--check-source')) {
       try {
         let standings;
         for(const view of ['standings','bowlers','recaps','lanes']) {
-          await page.goto(`https://www.leaguesecretary.com/bowling-centers/${league.centerSlug}/bowling-leagues/${league.slug}/${viewPaths[view]}/${id}`,{waitUntil:'domcontentloaded',timeout:90000});
+          await withSourceRetry(()=>page.goto(`https://www.leaguesecretary.com/bowling-centers/${league.centerSlug}/bowling-leagues/${league.slug}/${viewPaths[view]}/${id}`,{waitUntil:'domcontentloaded',timeout:90000}),{onRetry:error=>console.warn(`Retrying source page: ${error.message}`)});
           await page.locator('.k-grid tbody tr:visible').first().waitFor({timeout:20000});
           const tables=await extractTables(page);
           if(view==='standings') standings=tables[0];
@@ -266,14 +281,14 @@ if(process.argv.includes('--check-source')) {
           validateSourceView(view,view==='recaps'?tables.map(table=>normalizeRecap(table,standings)):tables,{required:true});
           console.log('SOURCE CHECK OK | '+league.centerName+' | '+view);
         }
-        await page.goto(`https://www.leaguesecretary.com/bowling-centers/${league.centerSlug}/bowling-leagues/${league.slug}/team/list/${id}`,{waitUntil:'domcontentloaded',timeout:90000});
+        await withSourceRetry(()=>page.goto(`https://www.leaguesecretary.com/bowling-centers/${league.centerSlug}/bowling-leagues/${league.slug}/team/list/${id}`,{waitUntil:'domcontentloaded',timeout:90000}),{onRetry:error=>console.warn(`Retrying source page: ${error.message}`)});
         await page.locator('.k-grid tbody tr:visible').first().waitFor({timeout:20000});
         const team=await page.evaluate(()=>window.jQuery('.grid_main').data('kendoGrid').dataSource.data()[0]?.TeamID);
         const metadata=await page.locator('.div-main-grid').evaluate(node=>({...node.dataset}));
         if(!team||!metadata.year||!metadata.season) throw new Error('Source layout check: roster navigation changed');
-        await page.goto(`https://www.leaguesecretary.com/bowling-centers/${league.centerSlug}/bowling-leagues/${league.slug}/team/history/${id}/${metadata.year}/${metadata.season}/${team}`,{waitUntil:'domcontentloaded',timeout:90000});
+        await withSourceRetry(()=>page.goto(`https://www.leaguesecretary.com/bowling-centers/${league.centerSlug}/bowling-leagues/${league.slug}/team/history/${id}/${metadata.year}/${metadata.season}/${team}`,{waitUntil:'domcontentloaded',timeout:90000}),{onRetry:error=>console.warn(`Retrying source page: ${error.message}`)});
         await page.locator('.k-grid tbody tr:visible').first().waitFor({timeout:20000});
-        validateSourceView('rosters',(await extractTables(page)).slice(0,1),{required:true});
+        validateSourceView('rosters',[selectRosterTable(await extractTables(page))].filter(Boolean),{required:true});
         console.log('SOURCE CHECK OK | '+league.centerName+' | rosters');
       } finally {await page.close();}
     }
@@ -287,7 +302,7 @@ console.log(`Discovered ${leagues.length} listed leagues${requestedCenter ? ` fo
 const candidates=[];
 const sourceFingerprintById=new Map();
 const markerPage=await browser.newPage({viewport:{width:1280,height:800}});
-for(const league of leagues){
+for(const league of discoveryOnly?[]:leagues.filter(league=>recentlyUpdated(league.updated)||existingCatalogById.get(league.id)?.syncedAt)){
   const file=path.join(process.cwd(),"public","data","leagues",`${league.id}.json`);
   let current;
   try{current=JSON.parse(await readFile(file,"utf8"));}catch{current={...league,sourceUpdated:"Not posted",syncedAt:null,status:"awaiting-results",week:null,fingerprint:null,lastCompletedCycle:null,views:{standings:[],bowlers:[],recaps:[],lanes:[],rosters:[]}};}
@@ -319,6 +334,7 @@ for(const league of leagues){
   const postingWindowRefresh=isInPostingWindow(league)||!current.syncedAt||Date.now()-Date.parse(current.syncedAt)>24*60*60*1000;
   if(isWindowOpen(league,current)&&(force||!hasRows||sourceChanged||fingerprintChanged||needsInitialRecentCheck||needsHistoryBackfill||postingWindowRefresh)) candidates.push({league,file,current,sourceFingerprint});
 }
+candidates.sort((a,b)=>Number(Boolean(a.current.syncedAt))-Number(Boolean(b.current.syncedAt)));
 await markerPage.close();
 let changed = false;
 try {
@@ -329,9 +345,10 @@ try {
     let sourceUpdated = league.updated || current.sourceUpdated;
     let week = current.week;
     const page = await browser.newPage({viewport:{width:1440,height:1100}});
+    try {
     for (const [view,route] of Object.entries(viewPaths)) {
       const url=`https://www.leaguesecretary.com/bowling-centers/${league.centerSlug}/bowling-leagues/${league.slug}/${route}/${league.id}`;
-      await page.goto(url,{waitUntil:"domcontentloaded",timeout:90000});
+      await withSourceRetry(()=>page.goto(url,{waitUntil:"domcontentloaded",timeout:90000}),{onRetry:error=>console.warn(`Retrying source page: ${error.message}`)});
       await page.waitForTimeout(6000);
       await expandAllGridRows(page);
       const text=clean(await page.locator("body").innerText());
@@ -353,11 +370,12 @@ try {
         }).catch(()=>[]);
         const rosters=[];
         for(const team of teamPages) {
-          await page.goto(new URL(team.url,"https://www.leaguesecretary.com").toString(),{waitUntil:"domcontentloaded",timeout:90000});
+          await withSourceRetry(()=>page.goto(new URL(team.url,"https://www.leaguesecretary.com").toString(),{waitUntil:"domcontentloaded",timeout:90000}),{onRetry:error=>console.warn(`Retrying source page: ${error.message}`)});
           await page.locator("table tbody tr:visible").first().waitFor({state:"visible",timeout:15000}).catch(()=>{});
           await page.waitForTimeout(1800);
           const tables=await extractTables(page);
-          if(tables[0]) rosters.push({...currentRoster(tables[0]),team:team.team,title:`Team ${team.team} · ${team.name} roster`});
+          const rosterTable=selectRosterTable(tables);
+          if(rosterTable) rosters.push({...currentRoster(rosterTable),team:team.team,title:`Team ${team.team} · ${team.name} roster`});
           else console.warn(`Roster page returned no current bowlers for ${league.displayName} team ${team.team}.`);
         }
         views[view]=rosters;
@@ -376,7 +394,7 @@ try {
     if(!knownOnly&&!currentOnly) {
       const existingWeeks=new Set((current.history??[]).filter(entry=>entry.views?.standings?.length&&entry.views?.recaps?.length).map(entry=>String(entry.week)));
       const recapUrl=`https://www.leaguesecretary.com/bowling-centers/${league.centerSlug}/bowling-leagues/${league.slug}/${viewPaths.recaps}/${league.id}`;
-      await page.goto(recapUrl,{waitUntil:"domcontentloaded",timeout:90000});
+      await withSourceRetry(()=>page.goto(recapUrl,{waitUntil:"domcontentloaded",timeout:90000}),{onRetry:error=>console.warn(`Retrying source page: ${error.message}`)});
       await page.waitForTimeout(3000);
       const weekOptions=await leagueWeekOptions(page);
       for(const option of weekOptions.filter(item=>item.week!==String(week)&&!existingWeeks.has(item.week))) {
@@ -385,13 +403,13 @@ try {
         const archivedViews={recaps};
         for(const view of ["standings","bowlers","lanes"]) {
           const archiveUrl=`https://www.leaguesecretary.com/bowling-centers/${league.centerSlug}/bowling-leagues/${league.slug}/${viewPaths[view]}/${league.id}`;
-          await page.goto(archiveUrl,{waitUntil:"domcontentloaded",timeout:90000});
+          await withSourceRetry(()=>page.goto(archiveUrl,{waitUntil:"domcontentloaded",timeout:90000}),{onRetry:error=>console.warn(`Retrying source page: ${error.message}`)});
           await page.waitForTimeout(2500);
           await selectLeagueWeek(page,option.value);
           archivedViews[view]=await extractTables(page);
         }
         if(Object.values(archivedViews).some(tables=>tables.length)) archivedHistory.push({week:option.week,sourceUpdated:option.label,syncedAt:new Date().toISOString(),views:archivedViews});
-        await page.goto(recapUrl,{waitUntil:"domcontentloaded",timeout:90000});
+        await withSourceRetry(()=>page.goto(recapUrl,{waitUntil:"domcontentloaded",timeout:90000}),{onRetry:error=>console.warn(`Retrying source page: ${error.message}`)});
         await page.waitForTimeout(2200);
       }
     }
@@ -445,8 +463,14 @@ try {
       sourceUpdated:sourceUpdated||league.updated||"Not posted"
     });
     console.log(`${complete?"Completed":"Refreshed"} ${league.displayName}: ${recordCount} rows`);
+    } catch(error) {
+      importFailures.push({id:league.id,name:league.displayName,error:error.message});
+      console.error(`SYNC FAILURE | ${league.id} | ${league.displayName} | ${error.message} | prior snapshot preserved`);
+    } finally { await page.close(); }
   }
-  const catalogById=new Map(existingCatalogEntries.map(league=>[league.id,league]));
+  let latestCatalogEntries=existingCatalogEntries;
+  try { latestCatalogEntries=JSON.parse(await readFile(catalogFile,"utf8")); } catch {}
+  const catalogById=new Map(latestCatalogEntries.map(league=>[league.id,league]));
   for(const league of discoveredLeagues) {
     try { catalogById.set(league.id,{...JSON.parse(await readFile(path.join(process.cwd(),"public","data","leagues",`${league.id}.json`),"utf8")),sourceFingerprint:sourceFingerprintById.get(league.id)??existingCatalogById.get(league.id)?.sourceFingerprint??null,centerId:league.centerId,centerName:league.centerName,centerSlug:league.centerSlug,area:league.area}); }
     catch { catalogById.set(league.id,{...league,sourceUpdated:league.updated||"Not posted",syncedAt:null,status:"awaiting-results",week:null,fingerprint:null,lastCompletedCycle:null,views:{standings:[],bowlers:[],recaps:[],lanes:[],rosters:[]}}); }
@@ -462,11 +486,12 @@ const refreshRecord={
   startedAt:refreshStartedAt.toISOString(),
   finishedAt:refreshFinishedAt.toISOString(),
   durationSeconds:Math.max(0,Math.round((refreshFinishedAt-refreshStartedAt)/1000)),
-  mode:knownOnly?"known leagues":"league discovery",
+  mode:discoveryOnly?"directory discovery":knownOnly?"known leagues":"league discovery",
   scope:requestedLeague?`league:${requestedLeague}`:requestedCenter?`center:${requestedCenter}`:"all",
   leaguesChecked:leagues.length,
   changeCount:refreshedLeagues.length,
-  changes:refreshedLeagues
+  changes:refreshedLeagues,
+  failures:importFailures
 };
 const refreshHistoryFile=path.join(process.cwd(),".github","refresh-history.json");
 let refreshHistory=[];

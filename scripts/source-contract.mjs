@@ -9,3 +9,9 @@ export function validateSourceView(view, tables, { required = false } = {}) {
     if(view==='recaps'&&!table.rows.some(row=>/^Team \d+$/i.test(row[0]??''))) throw new Error('Source layout check: recap team labels could not be matched');
   }
 }
+export function selectRosterTable(tables) {
+  return (tables??[]).find(table=>{
+    const headers=new Set(table.headers.map(header=>header.toLowerCase()));
+    return headers.has('name')&&headers.has('gms')&&headers.has('avg');
+  });
+}

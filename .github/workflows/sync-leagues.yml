@@ -14,6 +14,8 @@ on:
       - ".github/workflows/sync-leagues.yml"
       - "scripts/sync-leaguesecretary.mjs"
       - "scripts/sync-leaguepals.mjs"
+      - "scripts/source-contract.mjs"
+      - "scripts/source-retry.mjs"
 
 permissions:
   contents: write
@@ -30,6 +32,7 @@ jobs:
     timeout-minutes: 180
     outputs:
       changed: ${{ steps.publish.outputs.changed }}
+      partial_failure: ${{ steps.publish.outputs.partial_failure }}
     steps:
       - name: Enable scheduled or manual sync
         id: window
@@ -81,11 +84,12 @@ jobs:
         if: steps.window.outputs.run == 'true' && steps.fallback.outputs.run == 'true'
         shell: bash
         run: |
+          set -o pipefail
           git config user.name "FrameLine League Sync"
           git config user.email "actions@users.noreply.github.com"
 
           git pull --rebase origin main
-          node scripts/sync-leaguesecretary.mjs ${{ steps.window.outputs.mode }} | tee sync-report.log
+          node scripts/sync-leaguesecretary.mjs ${{ steps.window.outputs.mode }} 2>&1 | tee sync-report.log
           node scripts/sync-leaguepals.mjs | tee -a sync-report.log
           {
             echo "## FrameLine refresh report"
@@ -94,6 +98,11 @@ jobs:
             echo '```'
           } >> "$GITHUB_STEP_SUMMARY"
 
+          if grep -q '^SYNC FAILURE' sync-report.log; then
+            echo "partial_failure=true" >> "$GITHUB_OUTPUT"
+            echo '### Import warnings' >> "$GITHUB_STEP_SUMMARY"
+            grep '^SYNC FAILURE' sync-report.log >> "$GITHUB_STEP_SUMMARY"
+          fi
           if git diff --quiet -- public/data/leagues; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
@@ -107,6 +116,12 @@ jobs:
           fi
           git commit -m "Record FrameLine league refresh"
           git push
+          if grep -q '^SYNC FAILURE' sync-report.log; then
+            echo "partial_failure=true" >> "$GITHUB_OUTPUT"
+            echo "Verified updates published; some leagues retain prior data."
+            echo '### Import warnings' >> "$GITHUB_STEP_SUMMARY"
+            grep '^SYNC FAILURE' sync-report.log >> "$GITHUB_STEP_SUMMARY"
+          fi
 
   deploy:
     if: needs.sync.outputs.changed == 'true'
@@ -135,3 +150,13 @@ jobs:
       - name: Publish refreshed league data
         id: deployment
         uses: actions/deploy-pages@v4
+
+  report-import-failures:
+    needs: [sync, deploy]
+    if: always() && needs.sync.outputs.partial_failure == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Flag incomplete refresh after verified updates deploy
+        run: |
+          echo 'Some league imports failed. See the sync summary; prior snapshots were preserved.'
+          exit 1

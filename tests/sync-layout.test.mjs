@@ -27,7 +27,26 @@ test('new recap team labels and scratch totals retain the dashboard format', () 
   assert.deepEqual(result.emphasis[2], [false,true,false,true,true]);
 });
 test('an empty center scan is rejected instead of logged as a successful refresh', async () => {
-  const discover = new Function('centers', 'requestedCenter', section('async function discoverLeagues', 'function validTable') + ';return discoverLeagues')([{id:'2175',name:'Papio Bowl',slug:'papio-bowl'}], undefined);
+  const discover = new Function('centers', 'requestedCenter', 'withSourceRetry', 'expandAllGridRows', section('async function discoverLeagues', 'function validTable') + ';return discoverLeagues')([{id:'2175',name:'Papio Bowl',slug:'papio-bowl'}], undefined, action=>action(),async()=>{});
   const page = {goto:async()=>{},waitForTimeout:async()=>{},locator:()=>({evaluateAll:async()=>[]}),close:async()=>{}};
   await assert.rejects(discover({newPage:async()=>page}), /No league rows returned for Papio Bowl/);
+});
+
+test('directory expansion reads leagues beyond the redesigned first page', async () => {
+  const expand = new Function(section('async function expandAllGridRows', 'async function leagueWeekOptions')+';return expandAllGridRows')();
+  const browser=await chromium.launch();
+  try {const page=await browser.newPage();await page.setContent('<div class="k-grid"></div>');
+    await page.evaluate(()=>{window.pageSize=20;window.jQuery=()=>({data:()=>({dataSource:{total:()=>50,pageSize:value=>value?window.pageSize=value:window.pageSize}})});});
+    await expand(page);assert.equal(await page.evaluate(()=>window.pageSize),1000);
+  } finally {await browser.close();}
+});
+
+test('an unavailable center does not block new leagues at another center', async () => {
+  const failures=[];
+  const discover = new Function('centers','requestedCenter','withSourceRetry','expandAllGridRows','importFailures','knownById','chicago','clean','displayName','slugify',section('async function discoverLeagues','function validTable')+';return discoverLeagues')(
+    [{id:'bad',name:'Unavailable',slug:'bad'},{id:'2119',name:'Maplewood Lanes',slug:'maplewood'}],undefined,action=>action(),async()=>{},failures,new Map(),{year:'2026'},value=>value,value=>value,value=>value);
+  let currentUrl='';
+  const page={goto:async url=>{currentUrl=url},waitForTimeout:async()=>{},locator:()=>({evaluateAll:async()=>currentUrl.includes('/bad/')?[]:[['50719','Double Trouble 2026','Fall','Sunday12:00PM','Mixed','Not posted']]}),close:async()=>{}};
+  const leagues=await discover({newPage:async()=>page});
+  assert.equal(leagues[0].id,'50719');assert.equal(leagues[0].centerId,'2119');assert.equal(failures.length,1);
 });

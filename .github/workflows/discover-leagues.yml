@@ -1,0 +1,144 @@
+name: Discover new bowling leagues
+
+on:
+  schedule:
+    # GitHub warns that jobs at the start of an hour can be delayed or dropped.
+    # Read directories separately so slow report imports cannot block listings.
+    - cron: "27 * * * *"
+    - cron: "47 * * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/discover-leagues.yml"
+      - "scripts/sync-leaguesecretary.mjs"
+      - "scripts/sync-leaguepals.mjs"
+      - "scripts/source-contract.mjs"
+      - "scripts/source-retry.mjs"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: frameline-directory-discovery
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    outputs:
+      changed: ${{ steps.publish.outputs.changed }}
+      partial_failure: ${{ steps.publish.outputs.partial_failure }}
+    steps:
+      - name: Enable scheduled or manual sync
+        id: window
+        shell: bash
+        run: |
+          echo "run=true" >> "$GITHUB_OUTPUT"
+          echo "mode=--discover-only" >> "$GITHUB_OUTPUT"
+          echo "Checking whether the last completed refresh is stale."
+      - uses: actions/checkout@v4
+        if: steps.window.outputs.run == 'true'
+        with:
+          ref: main
+      - name: Run only when league data is due
+        id: fallback
+        if: steps.window.outputs.run == 'true'
+        shell: bash
+        run: |
+          echo "run=true" >> "$GITHUB_OUTPUT"
+          if [[ "$GITHUB_EVENT_NAME" != "schedule" ]]; then
+            exit 0
+          fi
+          echo "Directory discovery runs independently of report refreshes."
+      - uses: actions/setup-node@v4
+        if: steps.window.outputs.run == 'true' && steps.fallback.outputs.run == 'true'
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+        if: steps.window.outputs.run == 'true' && steps.fallback.outputs.run == 'true'
+      - run: npx playwright install --with-deps chromium
+        if: steps.window.outputs.run == 'true' && steps.fallback.outputs.run == 'true'
+      - name: Check changed leagues and publish updates
+        id: publish
+        if: steps.window.outputs.run == 'true' && steps.fallback.outputs.run == 'true'
+        shell: bash
+        run: |
+          set -o pipefail
+          git config user.name "FrameLine League Sync"
+          git config user.email "actions@users.noreply.github.com"
+
+          git pull --rebase origin main
+          node scripts/sync-leaguesecretary.mjs ${{ steps.window.outputs.mode }} 2>&1 | tee sync-report.log
+          {
+            echo "## FrameLine refresh report"
+            echo '```'
+            grep -E '^(SYNC|LEAGUEPALS) (SUMMARY|CHANGE)' sync-report.log || echo "No refresh summary was produced."
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+          if grep -q '^SYNC FAILURE' sync-report.log; then
+            echo "partial_failure=true" >> "$GITHUB_OUTPUT"
+            echo '### Import warnings' >> "$GITHUB_STEP_SUMMARY"
+            grep '^SYNC FAILURE' sync-report.log >> "$GITHUB_STEP_SUMMARY"
+          fi
+          if git diff --quiet -- public/data/leagues; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+          git add -- public/data/leagues .github/refresh-history.json
+          if git diff --cached --quiet; then
+            echo "All known leagues are current."
+            exit 0
+          fi
+          git commit -m "Record FrameLine league refresh"
+          git push
+          if grep -q '^SYNC FAILURE' sync-report.log; then
+            echo "Verified updates published; some leagues retain prior data."
+            echo '### Import warnings' >> "$GITHUB_STEP_SUMMARY"
+            grep '^SYNC FAILURE' sync-report.log >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+  deploy:
+    if: needs.sync.outputs.changed == 'true'
+    needs: sync
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: Build the refreshed app
+        env:
+          NEXT_PUBLIC_BASE_PATH: /frameline-league-scores
+        run: npm run build:pages
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./out
+      - name: Publish refreshed league data
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+  report-directory-failures:
+    needs: [sync, deploy]
+    if: always() && needs.sync.outputs.partial_failure == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Flag unreadable directories after verified listings deploy
+        run: |
+          echo 'Some center directories failed. See sync summary; prior listings were preserved.'
+          exit 1
