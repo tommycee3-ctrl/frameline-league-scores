@@ -7,33 +7,33 @@
   "bowlsOn": "Saturday",
   "startTime": "9:30 AM",
   "type": "Handicap Youth Mixed",
-  "updated": "08/29/2026",
+  "updated": "Sep 12, 2026",
   "startDate": "Fall 2026",
   "bowlDay": 6,
   "centerId": "2119",
   "centerName": "Maplewood Lanes",
   "centerSlug": "maplewood-lanes-omaha-nebraska",
   "area": "Omaha",
-  "sourceUpdated": "08/29/2026",
-  "syncedAt": "2026-09-05T21:39:29.769Z",
+  "sourceUpdated": "Sep 12, 2026",
+  "syncedAt": "2026-09-15T15:48:49.917Z",
   "status": "current",
-  "week": "3",
-  "fingerprint": "2d51dd7325589936d812d1a53188b8300ac1454c713ef5329689f9007543d148",
-  "lastCompletedCycle": "2026-09-05",
+  "week": "4",
+  "fingerprint": "b962990e0f2978f9e9cf35a6f4265c51bd52177dc82ad6ceeb096dbffdff0492",
+  "lastCompletedCycle": "2026-09-12",
   "views": {
     "standings": [
       {
-        "title": "Table 1",
+        "title": "League standings",
         "headers": [
-          "Division",
           "Place",
-          "Team#",
           "Team",
-          "Won",
-          "Lost",
-          "% Won",
-          "YTD Won",
-          "Avg",
+          "Team#",
+          "Div",
+          "WON",
+          "LOST",
+          "%",
+          "YTD WON",
+          "AVG",
           "Pins",
           "HSG",
           "HSS"
@@ -41,57 +41,57 @@
         "rows": [
           [
             "1",
+            "Malvern Manor",
+            "2",
             "1",
-            "4",
+            "18",
+            "10",
+            "64 %",
+            "18",
+            "422",
+            "5077",
+            "474",
+            "1318"
+          ],
+          [
+            "2",
             "Team 4",
-            "14",
-            "7",
-            "67 %",
-            "14",
-            "410",
-            "3648",
+            "4",
+            "1",
+            "16",
+            "12",
+            "57 %",
+            "16",
+            "386",
+            "4746",
             "459",
             "1224"
           ],
           [
-            "1",
-            "2",
-            "2",
-            "Team 2",
-            "11",
-            "10",
-            "52 %",
-            "11",
-            "413",
-            "3759",
-            "474",
-            "1316"
-          ],
-          [
-            "1",
-            "3",
             "3",
             "Team 3",
-            "10",
-            "11",
-            "48 %",
-            "10",
-            "212",
-            "1866",
-            "245",
-            "674"
+            "3",
+            "1",
+            "15",
+            "13",
+            "54 %",
+            "15",
+            "216",
+            "2548",
+            "253",
+            "682"
           ],
           [
-            "1",
             "4",
-            "1",
             "Team 1",
+            "1",
+            "1",
             "7",
-            "14",
-            "33 %",
+            "21",
+            "25 %",
             "7",
-            "464",
-            "4157",
+            "468",
+            "5530",
             "546",
             "1412"
           ]
@@ -104,23 +104,9 @@
             false,
             false,
             false,
+            true,
             false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
+            true,
             false,
             false,
             false
@@ -132,9 +118,9 @@
             false,
             false,
             false,
+            true,
             false,
-            false,
-            false,
+            true,
             false,
             false,
             false
@@ -146,9 +132,23 @@
             false,
             false,
             false,
+            true,
+            false,
+            true,
+            false,
+            false,
+            false
+          ],
+          [
             false,
             false,
             false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            true,
             false,
             false,
             false
@@ -158,7 +158,7 @@
     ],
     "bowlers": [
       {
-        "title": "Table 1",
+        "title": "Bowlers and season statistics",
         "headers": [
           "Name",
           "Team#",
@@ -184,15 +184,15 @@
             "1",
             "Team 1",
             "M",
-            "1285",
-            "9",
-            "142",
+            "1752",
+            "12",
+            "146",
             "126",
-            "70",
+            "66",
             "0",
             "0",
             "186",
-            "446",
+            "467",
             "0",
             "0"
           ],
@@ -202,15 +202,15 @@
             "3",
             "Team 3",
             "W",
-            "238",
-            "6",
-            "39",
+            "389",
+            "9",
+            "43",
             "0",
-            "162",
+            "159",
             "0",
             "0",
-            "55",
-            "147",
+            "63",
+            "151",
             "0",
             "0"
           ],
@@ -220,16 +220,16 @@
             "3",
             "Team 4",
             "M",
-            "537",
-            "9",
+            "746",
+            "12",
+            "62",
             "59",
-            "59",
-            "144",
+            "142",
             "0",
             "0",
             "84",
             "222",
-            "0",
+            "0.17",
             "0"
           ],
           [
@@ -238,11 +238,11 @@
             "1",
             "Team 4",
             "M",
-            "928",
-            "6",
-            "154",
+            "1409",
+            "9",
+            "156",
             "0",
-            "59",
+            "57",
             "0",
             "0",
             "185",
@@ -251,37 +251,20 @@
             "0"
           ],
           [
-            "C, I",
-            "0",
-            "0",
-            "W",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0"
-          ],
-          [
             "D, A",
             "2",
             "3",
-            "Team 2",
+            "Malvern Manor",
             "W",
-            "725",
-            "6",
-            "120",
+            "1160",
+            "9",
+            "128",
             "117",
-            "90",
+            "82",
             "0",
             "0",
             "156",
-            "382",
+            "435",
             "0",
             "0"
           ],
@@ -291,16 +274,16 @@
             "2",
             "Team 4",
             "M",
-            "765",
-            "9",
-            "85",
+            "994",
+            "12",
+            "82",
             "77",
-            "121",
+            "124",
             "0",
             "0",
             "127",
             "281",
-            "0",
+            "0.83",
             "0"
           ],
           [
@@ -309,16 +292,16 @@
             "1",
             "Team 3",
             "M",
-            "875",
-            "9",
-            "97",
+            "1192",
+            "12",
+            "99",
             "74",
-            "110",
+            "108",
             "0",
             "0",
             "125",
             "322",
-            "0",
+            "0.33",
             "0"
           ],
           [
@@ -327,8 +310,8 @@
             "2",
             "Team 3",
             "W",
-            "402",
-            "9",
+            "539",
+            "12",
             "44",
             "0",
             "158",
@@ -336,20 +319,20 @@
             "0",
             "67",
             "162",
-            "0",
+            "0.92",
             "0"
           ],
           [
-            "Kirby, Jacob",
+            "K, J",
             "4",
             "4",
             "Team 4",
             "M",
-            "338",
-            "3",
-            "112",
+            "517",
+            "6",
+            "86",
             "0",
-            "97",
+            "120",
             "0",
             "0",
             "153",
@@ -379,17 +362,17 @@
             "N, A",
             "2",
             "4",
-            "Team 2",
+            "Malvern Manor",
             "W",
-            "612",
-            "6",
-            "102",
+            "938",
+            "9",
+            "104",
             "0",
-            "106",
+            "104",
             "0",
             "0",
             "121",
-            "321",
+            "326",
             "0",
             "0"
           ],
@@ -397,36 +380,36 @@
             "Petersen, Daltyn",
             "2",
             "2",
-            "Team 2",
+            "Malvern Manor",
             "M",
-            "743",
-            "9",
-            "82",
+            "997",
+            "12",
+            "83",
             "81",
-            "124",
+            "123",
             "0",
             "0",
-            "100",
+            "101",
             "274",
-            "0",
+            "0.08",
             "0"
           ],
           [
             "Petersen, Kylara",
             "2",
             "1",
-            "Team 2",
+            "Malvern Manor",
             "W",
-            "989",
-            "9",
-            "109",
+            "1292",
+            "12",
+            "107",
             "116",
-            "99",
+            "101",
             "0",
             "0",
             "141",
             "371",
-            "0",
+            "0.67",
             "0"
           ],
           [
@@ -435,16 +418,16 @@
             "4",
             "Team 3",
             "M",
-            "291",
-            "9",
-            "32",
+            "368",
+            "12",
+            "30",
             "0",
-            "169",
+            "171",
             "0",
             "0",
             "53",
             "130",
-            "0",
+            "0.67",
             "0"
           ],
           [
@@ -523,23 +506,6 @@
           ],
           [
             false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
             false,
             false,
             false,
@@ -759,91 +725,38 @@
     ],
     "recaps": [
       {
-        "title": "Team 4 matchup",
+        "title": "Team 1 matchup",
         "headers": [
           "Bowler",
-          "AVG",
-          "HDCP",
-          "GM1",
-          "GM2",
-          "GM3",
-          "GM4",
-          "GM5",
-          "GM6",
-          "Total"
+          "Average",
+          "Handicap",
+          "Game 1",
+          "Game 2",
+          "Game 3",
+          "Scratch series"
         ],
         "rows": [
           [
-            "Team 4",
-            "Lane 18 | Team points won: 5"
-          ],
-          [
-            "B, J",
-            "143",
-            "69",
-            "143",
-            "171",
-            "185",
-            "499"
-          ],
-          [
-            "F, O",
-            "85",
-            "121",
-            "124",
-            "55",
-            "76",
-            "255"
-          ],
-          [
-            "B, J",
-            "67",
-            "137",
-            "60",
-            "27",
-            "45",
-            "132"
-          ],
-          [
-            "Kirby, Jacob",
-            "112",
-            "97",
-            "108",
-            "77",
-            "153",
-            "338"
-          ],
-          [
-            "Total",
-            "435",
-            "330",
-            "459",
-            "0",
-            "0",
-            "0",
-            "1224"
-          ],
-          [
             "Team 1",
-            "Lane 17 | Team points won: 2"
+            "Lane 18 points won: 0"
           ],
           [
             "A, L",
-            "143",
-            "69",
-            "122",
-            "186",
-            "114",
-            "422"
+            "142",
+            "70",
+            "124",
+            "180",
+            "163",
+            "467"
           ],
           [
             "U, K",
-            "87",
-            "119",
-            "112",
-            "91",
-            "32",
-            "235"
+            "84",
+            "122",
+            "74",
+            "74",
+            "74",
+            "222"
           ],
           [
             "L, W",
@@ -865,288 +778,68 @@
           ],
           [
             "Total",
-            "462",
-            "505",
-            "374",
-            "0",
-            "0",
-            "0",
-            "1341"
-          ]
-        ],
-        "emphasis": [
-          [
-            true,
-            true
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
-          ],
-          [
-            true,
-            true
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
-          ]
-        ]
-      },
-      {
-        "title": "Team 3 matchup",
-        "headers": [
-          "Bowler",
-          "AVG",
-          "HDCP",
-          "GM1",
-          "GM2",
-          "GM3",
-          "GM4",
-          "GM5",
-          "GM6",
-          "Total"
-        ],
-        "rows": [
-          [
-            "Team 3",
-            "Lane 16 | Team points won: 5"
-          ],
-          [
-            "H, L",
-            "100",
-            "108",
-            "86",
-            "107",
-            "77",
-            "270"
-          ],
-          [
-            "H, W",
-            "48",
-            "154",
-            "38",
-            "49",
-            "26",
-            "113"
-          ],
-          [
-            "A, C",
-            "30",
-            "171",
-            "55",
-            "42",
-            "50",
-            "147"
-          ],
-          [
-            "R, E",
-            "34",
-            "167",
-            "38",
-            "24",
-            "22",
-            "84"
-          ],
-          [
-            "Total",
-            "217",
-            "222",
-            "175",
-            "0",
-            "0",
-            "0",
-            "614"
+            "426",
+            "482",
+            "465",
+            "1373"
           ],
           [
             "Team 2",
-            "Lane 15 | Team points won: 2"
+            "Lane 17 points won: 7"
           ],
           [
             "Petersen, Kylara",
-            "116",
-            "93",
-            "121",
-            "84",
-            "85",
-            "290"
+            "109",
+            "99",
+            "99",
+            "109",
+            "95",
+            "303"
           ],
           [
             "Petersen, Daltyn",
-            "86",
-            "120",
-            "52",
-            "71",
-            "100",
-            "223"
+            "82",
+            "124",
+            "62",
+            "101",
+            "91",
+            "254"
           ],
           [
             "D, A",
             "120",
             "90",
-            "110",
-            "110",
-            "110",
-            "330"
+            "156",
+            "138",
+            "141",
+            "435"
           ],
           [
             "N, A",
-            "97",
-            "110",
+            "102",
+            "106",
             "103",
-            "121",
-            "97",
-            "321"
+            "109",
+            "114",
+            "326"
           ],
           [
             "Total",
-            "386",
-            "386",
-            "392",
-            "0",
-            "0",
-            "0",
-            "1164"
+            "420",
+            "457",
+            "441",
+            "1318"
           ]
         ],
         "emphasis": [
           [
             true,
-            true
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
             false,
             false,
             false,
             false,
             false,
             false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
-          ],
-          [
-            true,
-            true
           ],
           [
             false,
@@ -1185,21 +878,284 @@
             false
           ],
           [
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
             true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        ]
+      },
+      {
+        "title": "Team 4 matchup",
+        "headers": [
+          "Bowler",
+          "Average",
+          "Handicap",
+          "Game 1",
+          "Game 2",
+          "Game 3",
+          "Scratch series"
+        ],
+        "rows": [
+          [
+            "Team 4",
+            "Lane 16 points won: 2"
+          ],
+          [
+            "B, J",
+            "154",
+            "59",
+            "153",
+            "144",
+            "184",
+            "481"
+          ],
+          [
+            "F, O",
+            "85",
+            "121",
+            "112",
+            "66",
+            "51",
+            "229"
+          ],
+          [
+            "B, J",
+            "59",
+            "144",
+            "84",
+            "72",
+            "53",
+            "209"
+          ],
+          [
+            "K, J",
+            "112",
+            "97",
+            "74",
+            "60",
+            "45",
+            "179"
+          ],
+          [
+            "Total",
+            "423",
+            "342",
+            "333",
+            "1098"
+          ],
+          [
+            "Team 3",
+            "Lane 15 points won: 5"
+          ],
+          [
+            "H, L",
+            "97",
+            "110",
+            "103",
+            "89",
+            "125",
+            "317"
+          ],
+          [
+            "H, W",
+            "44",
+            "158",
+            "38",
+            "49",
+            "50",
+            "137"
+          ],
+          [
+            "A, C",
+            "39",
+            "162",
+            "57",
+            "63",
+            "31",
+            "151"
+          ],
+          [
+            "R, E",
+            "32",
+            "169",
+            "17",
+            "13",
+            "47",
+            "77"
+          ],
+          [
+            "Total",
+            "215",
+            "214",
+            "253",
+            "682"
+          ]
+        ],
+        "emphasis": [
+          [
             true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
             true,
-            true,
-            true,
-            true,
-            true,
-            true
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false
           ]
         ]
       }
     ],
     "lanes": [
       {
-        "title": "Table 1",
+        "title": "All scheduled teams",
         "headers": [
           "Lane",
           "Team#",
@@ -1208,43 +1164,43 @@
         "rows": [
           [
             "15",
-            "3",
-            "Team 3"
-          ],
-          [
-            "16",
             "4",
             "Team 4"
           ],
           [
-            "17",
+            "16",
             "2",
-            "Team 2"
+            "Malvern Manor"
+          ],
+          [
+            "17",
+            "1",
+            "Team 1"
           ],
           [
             "18",
-            "1",
-            "Team 1"
+            "3",
+            "Team 3"
           ]
         ],
         "emphasis": [
           [
-            false,
-            false,
-            false
-          ],
-          [
-            false,
+            true,
             false,
             false
           ],
           [
-            false,
+            true,
             false,
             false
           ],
           [
+            true,
             false,
+            false
+          ],
+          [
+            true,
             false,
             false
           ]
@@ -1252,6 +1208,95 @@
       }
     ],
     "rosters": [
+      {
+        "title": "Team 2 · Malvern Manor roster",
+        "headers": [
+          "Pos",
+          "Name",
+          "Gndr",
+          "HCP",
+          "Gms",
+          "Pins",
+          "AVG"
+        ],
+        "rows": [
+          [
+            "1",
+            "Petersen, Kylara",
+            "W",
+            "101",
+            "12",
+            "1292",
+            "107"
+          ],
+          [
+            "2",
+            "Petersen, Daltyn",
+            "M",
+            "123",
+            "12",
+            "997",
+            "83"
+          ],
+          [
+            "3",
+            "D, A",
+            "W",
+            "82",
+            "9",
+            "1160",
+            "128"
+          ],
+          [
+            "4",
+            "N, A",
+            "W",
+            "104",
+            "9",
+            "938",
+            "104"
+          ]
+        ],
+        "emphasis": [
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        ],
+        "team": "2"
+      },
       {
         "title": "Team 1 · Team 1 roster",
         "headers": [
@@ -1261,17 +1306,17 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
             "1",
             "A, L",
             "M",
-            "70",
-            "9",
-            "1285",
-            "142"
+            "66",
+            "12",
+            "1752",
+            "146"
           ],
           [
             "2",
@@ -1326,99 +1371,11 @@
             false,
             false,
             false,
+            false,
             false
           ]
         ],
         "team": "1"
-      },
-      {
-        "title": "Team 2 · Team 2 roster",
-        "headers": [
-          "Pos",
-          "Name",
-          "Gndr",
-          "HCP",
-          "Gms",
-          "Pins",
-          "Avg"
-        ],
-        "rows": [
-          [
-            "1",
-            "Petersen, Kylara",
-            "W",
-            "99",
-            "9",
-            "989",
-            "109"
-          ],
-          [
-            "2",
-            "Petersen, Daltyn",
-            "M",
-            "124",
-            "9",
-            "743",
-            "82"
-          ],
-          [
-            "3",
-            "D, A",
-            "W",
-            "90",
-            "6",
-            "725",
-            "120"
-          ],
-          [
-            "4",
-            "N, A",
-            "W",
-            "106",
-            "6",
-            "612",
-            "102"
-          ]
-        ],
-        "emphasis": [
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ]
-        ],
-        "team": "2"
       },
       {
         "title": "Team 3 · Team 3 roster",
@@ -1429,44 +1386,44 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
             "1",
             "H, L",
             "M",
-            "110",
-            "9",
-            "875",
-            "97"
+            "108",
+            "12",
+            "1192",
+            "99"
           ],
           [
             "2",
             "H, W",
             "W",
             "158",
-            "9",
-            "402",
+            "12",
+            "539",
             "44"
           ],
           [
             "3",
             "A, C",
             "W",
-            "162",
-            "6",
-            "238",
-            "39"
+            "159",
+            "9",
+            "389",
+            "43"
           ],
           [
             "4",
             "R, E",
             "M",
-            "169",
-            "9",
-            "291",
-            "32"
+            "171",
+            "12",
+            "368",
+            "30"
           ]
         ],
         "emphasis": [
@@ -1518,35 +1475,35 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
             "3",
             "B, J",
             "M",
-            "144",
-            "9",
-            "537",
-            "59"
+            "142",
+            "12",
+            "746",
+            "62"
           ],
           [
             "2",
             "F, O",
             "M",
-            "121",
-            "9",
-            "765",
-            "85"
+            "124",
+            "12",
+            "994",
+            "82"
           ],
           [
             "4",
-            "Kirby, Jacob",
+            "K, J",
             "M",
-            "97",
-            "3",
-            "338",
-            "112"
+            "120",
+            "6",
+            "517",
+            "86"
           ]
         ],
         "emphasis": [
@@ -1591,7 +1548,7 @@
       }
     ]
   },
-  "sourceFingerprint": "c775e6011c88641be456818fb21fbc087771e237ae5120dcd46301b745aee73a",
+  "sourceFingerprint": "735ac1b3b30076f201a210ca96c8ca053fce1ca6b35c538259b7fa282e36abb3",
   "history": [
     {
       "week": "3",
@@ -3168,6 +3125,1541 @@
           }
         ]
       }
+    },
+    {
+      "week": "4",
+      "sourceUpdated": "Sep 12, 2026",
+      "syncedAt": "2026-09-15T15:48:49.917Z",
+      "views": {
+        "standings": [
+          {
+            "title": "League standings",
+            "headers": [
+              "Place",
+              "Team",
+              "Team#",
+              "Div",
+              "WON",
+              "LOST",
+              "%",
+              "YTD WON",
+              "AVG",
+              "Pins",
+              "HSG",
+              "HSS"
+            ],
+            "rows": [
+              [
+                "1",
+                "Malvern Manor",
+                "2",
+                "1",
+                "18",
+                "10",
+                "64 %",
+                "18",
+                "422",
+                "5077",
+                "474",
+                "1318"
+              ],
+              [
+                "2",
+                "Team 4",
+                "4",
+                "1",
+                "16",
+                "12",
+                "57 %",
+                "16",
+                "386",
+                "4746",
+                "459",
+                "1224"
+              ],
+              [
+                "3",
+                "Team 3",
+                "3",
+                "1",
+                "15",
+                "13",
+                "54 %",
+                "15",
+                "216",
+                "2548",
+                "253",
+                "682"
+              ],
+              [
+                "4",
+                "Team 1",
+                "1",
+                "1",
+                "7",
+                "21",
+                "25 %",
+                "7",
+                "468",
+                "5530",
+                "546",
+                "1412"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ]
+            ]
+          }
+        ],
+        "bowlers": [
+          {
+            "title": "Bowlers and season statistics",
+            "headers": [
+              "Name",
+              "Team#",
+              "Pos#",
+              "Team",
+              "Gndr",
+              "Pins",
+              "Games",
+              "Avg",
+              "EnteringAvg",
+              "HCP",
+              "HHG",
+              "HHS",
+              "HSG",
+              "HSS",
+              "MIB",
+              "WON"
+            ],
+            "rows": [
+              [
+                "A, L",
+                "1",
+                "1",
+                "Team 1",
+                "M",
+                "1752",
+                "12",
+                "146",
+                "126",
+                "66",
+                "0",
+                "0",
+                "186",
+                "467",
+                "0",
+                "0"
+              ],
+              [
+                "A, C",
+                "3",
+                "3",
+                "Team 3",
+                "W",
+                "389",
+                "9",
+                "43",
+                "0",
+                "159",
+                "0",
+                "0",
+                "63",
+                "151",
+                "0",
+                "0"
+              ],
+              [
+                "B, J",
+                "4",
+                "3",
+                "Team 4",
+                "M",
+                "746",
+                "12",
+                "62",
+                "59",
+                "142",
+                "0",
+                "0",
+                "84",
+                "222",
+                "0.17",
+                "0"
+              ],
+              [
+                "B, J",
+                "4",
+                "1",
+                "Team 4",
+                "M",
+                "1409",
+                "9",
+                "156",
+                "0",
+                "57",
+                "0",
+                "0",
+                "185",
+                "499",
+                "0",
+                "0"
+              ],
+              [
+                "D, A",
+                "2",
+                "3",
+                "Malvern Manor",
+                "W",
+                "1160",
+                "9",
+                "128",
+                "117",
+                "82",
+                "0",
+                "0",
+                "156",
+                "435",
+                "0",
+                "0"
+              ],
+              [
+                "F, O",
+                "4",
+                "2",
+                "Team 4",
+                "M",
+                "994",
+                "12",
+                "82",
+                "77",
+                "124",
+                "0",
+                "0",
+                "127",
+                "281",
+                "0.83",
+                "0"
+              ],
+              [
+                "H, L",
+                "3",
+                "1",
+                "Team 3",
+                "M",
+                "1192",
+                "12",
+                "99",
+                "74",
+                "108",
+                "0",
+                "0",
+                "125",
+                "322",
+                "0.33",
+                "0"
+              ],
+              [
+                "H, W",
+                "3",
+                "2",
+                "Team 3",
+                "W",
+                "539",
+                "12",
+                "44",
+                "0",
+                "158",
+                "0",
+                "0",
+                "67",
+                "162",
+                "0.92",
+                "0"
+              ],
+              [
+                "K, J",
+                "4",
+                "4",
+                "Team 4",
+                "M",
+                "517",
+                "6",
+                "86",
+                "0",
+                "120",
+                "0",
+                "0",
+                "153",
+                "338",
+                "0",
+                "0"
+              ],
+              [
+                "L, W",
+                "1",
+                "3",
+                "Team 1",
+                "M",
+                "709",
+                "6",
+                "118",
+                "114",
+                "91",
+                "0",
+                "0",
+                "146",
+                "370",
+                "0",
+                "0"
+              ],
+              [
+                "N, A",
+                "2",
+                "4",
+                "Malvern Manor",
+                "W",
+                "938",
+                "9",
+                "104",
+                "0",
+                "104",
+                "0",
+                "0",
+                "121",
+                "326",
+                "0",
+                "0"
+              ],
+              [
+                "Petersen, Daltyn",
+                "2",
+                "2",
+                "Malvern Manor",
+                "M",
+                "997",
+                "12",
+                "83",
+                "81",
+                "123",
+                "0",
+                "0",
+                "101",
+                "274",
+                "0.08",
+                "0"
+              ],
+              [
+                "Petersen, Kylara",
+                "2",
+                "1",
+                "Malvern Manor",
+                "W",
+                "1292",
+                "12",
+                "107",
+                "116",
+                "101",
+                "0",
+                "0",
+                "141",
+                "371",
+                "0.67",
+                "0"
+              ],
+              [
+                "R, E",
+                "3",
+                "4",
+                "Team 3",
+                "M",
+                "368",
+                "12",
+                "30",
+                "0",
+                "171",
+                "0",
+                "0",
+                "53",
+                "130",
+                "0.67",
+                "0"
+              ],
+              [
+                "U, K",
+                "1",
+                "2",
+                "Team 1",
+                "M",
+                "759",
+                "9",
+                "84",
+                "101",
+                "122",
+                "0",
+                "0",
+                "116",
+                "265",
+                "0",
+                "0"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ]
+          }
+        ],
+        "recaps": [
+          {
+            "title": "Team 1 matchup",
+            "headers": [
+              "Bowler",
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
+            ],
+            "rows": [
+              [
+                "Team 1",
+                "Lane 18 points won: 0"
+              ],
+              [
+                "A, L",
+                "142",
+                "70",
+                "124",
+                "180",
+                "163",
+                "467"
+              ],
+              [
+                "U, K",
+                "84",
+                "122",
+                "74",
+                "74",
+                "74",
+                "222"
+              ],
+              [
+                "L, W",
+                "118",
+                "91",
+                "108",
+                "108",
+                "108",
+                "324"
+              ],
+              [
+                ", Vacant",
+                "120",
+                "90",
+                "120",
+                "120",
+                "120",
+                "360"
+              ],
+              [
+                "Total",
+                "426",
+                "482",
+                "465",
+                "1373"
+              ],
+              [
+                "Team 2",
+                "Lane 17 points won: 7"
+              ],
+              [
+                "Petersen, Kylara",
+                "109",
+                "99",
+                "99",
+                "109",
+                "95",
+                "303"
+              ],
+              [
+                "Petersen, Daltyn",
+                "82",
+                "124",
+                "62",
+                "101",
+                "91",
+                "254"
+              ],
+              [
+                "D, A",
+                "120",
+                "90",
+                "156",
+                "138",
+                "141",
+                "435"
+              ],
+              [
+                "N, A",
+                "102",
+                "106",
+                "103",
+                "109",
+                "114",
+                "326"
+              ],
+              [
+                "Total",
+                "420",
+                "457",
+                "441",
+                "1318"
+              ]
+            ],
+            "emphasis": [
+              [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ]
+          },
+          {
+            "title": "Team 4 matchup",
+            "headers": [
+              "Bowler",
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
+            ],
+            "rows": [
+              [
+                "Team 4",
+                "Lane 16 points won: 2"
+              ],
+              [
+                "B, J",
+                "154",
+                "59",
+                "153",
+                "144",
+                "184",
+                "481"
+              ],
+              [
+                "F, O",
+                "85",
+                "121",
+                "112",
+                "66",
+                "51",
+                "229"
+              ],
+              [
+                "B, J",
+                "59",
+                "144",
+                "84",
+                "72",
+                "53",
+                "209"
+              ],
+              [
+                "K, J",
+                "112",
+                "97",
+                "74",
+                "60",
+                "45",
+                "179"
+              ],
+              [
+                "Total",
+                "423",
+                "342",
+                "333",
+                "1098"
+              ],
+              [
+                "Team 3",
+                "Lane 15 points won: 5"
+              ],
+              [
+                "H, L",
+                "97",
+                "110",
+                "103",
+                "89",
+                "125",
+                "317"
+              ],
+              [
+                "H, W",
+                "44",
+                "158",
+                "38",
+                "49",
+                "50",
+                "137"
+              ],
+              [
+                "A, C",
+                "39",
+                "162",
+                "57",
+                "63",
+                "31",
+                "151"
+              ],
+              [
+                "R, E",
+                "32",
+                "169",
+                "17",
+                "13",
+                "47",
+                "77"
+              ],
+              [
+                "Total",
+                "215",
+                "214",
+                "253",
+                "682"
+              ]
+            ],
+            "emphasis": [
+              [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ]
+          }
+        ],
+        "lanes": [
+          {
+            "title": "All scheduled teams",
+            "headers": [
+              "Lane",
+              "Team#",
+              "Team"
+            ],
+            "rows": [
+              [
+                "15",
+                "4",
+                "Team 4"
+              ],
+              [
+                "16",
+                "2",
+                "Malvern Manor"
+              ],
+              [
+                "17",
+                "1",
+                "Team 1"
+              ],
+              [
+                "18",
+                "3",
+                "Team 3"
+              ]
+            ],
+            "emphasis": [
+              [
+                true,
+                false,
+                false
+              ],
+              [
+                true,
+                false,
+                false
+              ],
+              [
+                true,
+                false,
+                false
+              ],
+              [
+                true,
+                false,
+                false
+              ]
+            ]
+          }
+        ],
+        "rosters": [
+          {
+            "title": "Team 2 · Malvern Manor roster",
+            "headers": [
+              "Pos",
+              "Name",
+              "Gndr",
+              "HCP",
+              "Gms",
+              "Pins",
+              "AVG"
+            ],
+            "rows": [
+              [
+                "1",
+                "Petersen, Kylara",
+                "W",
+                "101",
+                "12",
+                "1292",
+                "107"
+              ],
+              [
+                "2",
+                "Petersen, Daltyn",
+                "M",
+                "123",
+                "12",
+                "997",
+                "83"
+              ],
+              [
+                "3",
+                "D, A",
+                "W",
+                "82",
+                "9",
+                "1160",
+                "128"
+              ],
+              [
+                "4",
+                "N, A",
+                "W",
+                "104",
+                "9",
+                "938",
+                "104"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "team": "2"
+          },
+          {
+            "title": "Team 1 · Team 1 roster",
+            "headers": [
+              "Pos",
+              "Name",
+              "Gndr",
+              "HCP",
+              "Gms",
+              "Pins",
+              "AVG"
+            ],
+            "rows": [
+              [
+                "1",
+                "A, L",
+                "M",
+                "66",
+                "12",
+                "1752",
+                "146"
+              ],
+              [
+                "2",
+                "U, K",
+                "M",
+                "122",
+                "9",
+                "759",
+                "84"
+              ],
+              [
+                "3",
+                "L, W",
+                "M",
+                "91",
+                "6",
+                "709",
+                "118"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "team": "1"
+          },
+          {
+            "title": "Team 3 · Team 3 roster",
+            "headers": [
+              "Pos",
+              "Name",
+              "Gndr",
+              "HCP",
+              "Gms",
+              "Pins",
+              "AVG"
+            ],
+            "rows": [
+              [
+                "1",
+                "H, L",
+                "M",
+                "108",
+                "12",
+                "1192",
+                "99"
+              ],
+              [
+                "2",
+                "H, W",
+                "W",
+                "158",
+                "12",
+                "539",
+                "44"
+              ],
+              [
+                "3",
+                "A, C",
+                "W",
+                "159",
+                "9",
+                "389",
+                "43"
+              ],
+              [
+                "4",
+                "R, E",
+                "M",
+                "171",
+                "12",
+                "368",
+                "30"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "team": "3"
+          },
+          {
+            "title": "Team 4 · Team 4 roster",
+            "headers": [
+              "Pos",
+              "Name",
+              "Gndr",
+              "HCP",
+              "Gms",
+              "Pins",
+              "AVG"
+            ],
+            "rows": [
+              [
+                "3",
+                "B, J",
+                "M",
+                "142",
+                "12",
+                "746",
+                "62"
+              ],
+              [
+                "2",
+                "F, O",
+                "M",
+                "124",
+                "12",
+                "994",
+                "82"
+              ],
+              [
+                "4",
+                "K, J",
+                "M",
+                "120",
+                "6",
+                "517",
+                "86"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "team": "4"
+          }
+        ]
+      }
     }
-  ]
+  ],
+  "lastAttemptedAt": null,
+  "lastCheckedAt": "2026-09-15T15:48:49.917Z"
 }

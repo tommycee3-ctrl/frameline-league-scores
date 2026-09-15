@@ -7,33 +7,33 @@
   "bowlsOn": "Saturday",
   "startTime": "2:00 PM",
   "type": "Scratch Adult Mixed",
-  "updated": "09/06/2026",
+  "updated": "Sep 13, 2026",
   "startDate": "Fall 2026",
   "bowlDay": 6,
   "centerId": "2119",
   "centerName": "Maplewood Lanes",
   "centerSlug": "maplewood-lanes-omaha-nebraska",
   "area": "Omaha",
-  "sourceUpdated": "09/06/2026",
-  "syncedAt": "2026-09-06T17:19:54.055Z",
+  "sourceUpdated": "Sep 13, 2026",
+  "syncedAt": "2026-09-15T15:51:07.228Z",
   "status": "awaiting-results",
-  "week": "4",
-  "fingerprint": "9e83c61673c8a91f0515e76d6338d14c408cb4c9ca089b9d19b60c99a164bf8f",
+  "week": "5",
+  "fingerprint": "44b0d896cc7a5e952249e7d818cb6c03c534f40e17715341796556d553dbb301",
   "lastCompletedCycle": null,
   "views": {
     "standings": [
       {
-        "title": "Table 1",
+        "title": "League standings",
         "headers": [
-          "Division",
           "Place",
-          "Team#",
           "Team",
-          "Won",
-          "Lost",
-          "% Won",
-          "YTD Won",
-          "Avg",
+          "Team#",
+          "Div",
+          "WON",
+          "LOST",
+          "%",
+          "YTD WON",
+          "AVG",
           "Pins",
           "HSG",
           "HSS"
@@ -41,23 +41,37 @@
         "rows": [
           [
             "1",
-            "1",
-            "4",
             "Team 4",
+            "4",
+            "1",
             "0",
             "0",
             "100 %",
             "0",
-            "590",
-            "5826",
+            "595",
+            "6272",
             "691",
             "1870"
           ],
           [
-            "1",
             "2",
-            "5",
+            "Team 3",
+            "3",
+            "1",
+            "0",
+            "0",
+            "100 %",
+            "0",
+            "594",
+            "3740",
+            "0",
+            "0"
+          ],
+          [
+            "3",
             "Team 5",
+            "5",
+            "1",
             "0",
             "0",
             "100 %",
@@ -68,38 +82,24 @@
             "0"
           ],
           [
-            "1",
-            "3",
-            "3",
-            "Team 3",
-            "0",
-            "0",
-            "100 %",
-            "0",
-            "385",
-            "2336",
-            "0",
-            "0"
-          ],
-          [
-            "1",
             "4",
-            "6",
             "Team 6",
+            "6",
+            "1",
             "0",
             "0",
             "100 %",
             "0",
-            "245",
-            "2003",
+            "247",
+            "2200",
             "365",
             "1007"
           ],
           [
-            "1",
             "5",
-            "1",
             "Team 1",
+            "1",
+            "1",
             "0",
             "0",
             "100 %",
@@ -110,24 +110,24 @@
             "0"
           ],
           [
-            "1",
             "6",
-            "8",
             "Team 8",
+            "8",
+            "1",
             "0",
             "0",
             "100 %",
             "0",
-            "0",
+            "182",
             "753",
             "0",
             "0"
           ],
           [
-            "1",
             "7",
-            "2",
             "Team 2",
+            "2",
+            "1",
             "0",
             "0",
             "100 %",
@@ -138,10 +138,10 @@
             "0"
           ],
           [
-            "1",
             "8",
-            "7",
             "Team 7",
+            "7",
+            "1",
             "0",
             "0",
             "100 %",
@@ -160,23 +160,9 @@
             false,
             false,
             false,
+            true,
             false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
+            true,
             false,
             false,
             false
@@ -188,23 +174,9 @@
             false,
             false,
             false,
+            true,
             false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
+            true,
             false,
             false,
             false
@@ -216,23 +188,9 @@
             false,
             false,
             false,
+            true,
             false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
+            true,
             false,
             false,
             false
@@ -244,9 +202,9 @@
             false,
             false,
             false,
+            true,
             false,
-            false,
-            false,
+            true,
             false,
             false,
             false
@@ -258,9 +216,51 @@
             false,
             false,
             false,
+            true,
+            false,
+            true,
+            false,
+            false,
+            false
+          ],
+          [
             false,
             false,
             false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            true,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            true,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            true,
             false,
             false,
             false
@@ -270,7 +270,7 @@
     ],
     "bowlers": [
       {
-        "title": "Table 1",
+        "title": "Bowlers and season statistics",
         "headers": [
           "Name",
           "Team#",
@@ -290,23 +290,6 @@
           "WON"
         ],
         "rows": [
-          [
-            ", Aj",
-            "0",
-            "0",
-            "M",
-            "0",
-            "0",
-            "120",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0"
-          ],
           [
             "Baker, Nathan",
             "1",
@@ -331,16 +314,16 @@
             "2",
             "Team 3",
             "M",
-            "1623",
-            "11",
-            "147",
+            "2021",
+            "14",
+            "144",
             "137",
             "0",
             "188",
             "463",
             "188",
             "463",
-            "0",
+            "0.36",
             "0"
           ],
           [
@@ -380,26 +363,9 @@
             "0"
           ],
           [
-            "Dryden, Matthew",
-            "0",
-            "0",
-            "M",
-            "0",
-            "0",
-            "120",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0"
-          ],
-          [
             "Dunham, Bradley",
             "5",
-            "4",
+            "3",
             "Team 5",
             "M",
             "773",
@@ -420,32 +386,15 @@
             "3",
             "Team 3",
             "M",
-            "794",
-            "6",
-            "132",
+            "1144",
+            "9",
+            "127",
             "149",
             "0",
             "178",
             "405",
             "178",
             "405",
-            "0",
-            "0"
-          ],
-          [
-            "El, Joe",
-            "0",
-            "0",
-            "M",
-            "0",
-            "0",
-            "120",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0",
             "0",
             "0"
           ],
@@ -486,23 +435,6 @@
             "0"
           ],
           [
-            "Harkey, David",
-            "0",
-            "0",
-            "M",
-            "0",
-            "0",
-            "120",
-            "118",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0"
-          ],
-          [
             "Hunter, Derek",
             "3",
             "1",
@@ -522,9 +454,9 @@
           ],
           [
             "Kelly, Lisa",
+            "8",
             "2",
-            "2",
-            "Team 2",
+            "Team 8",
             "W",
             "404",
             "6",
@@ -544,9 +476,9 @@
             "2",
             "Team 6",
             "M",
-            "475",
-            "8",
-            "59",
+            "672",
+            "11",
+            "61",
             "62",
             "0",
             "87",
@@ -575,27 +507,10 @@
             "0"
           ],
           [
-            "Mcnamara, Dean Evan",
-            "0",
-            "0",
-            "M",
-            "0",
-            "0",
-            "120",
-            "103",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0"
-          ],
-          [
             "Parr, Danielle",
+            "8",
             "1",
-            "2",
-            "Team 1",
+            "Team 8",
             "W",
             "1275",
             "11",
@@ -624,23 +539,6 @@
             "598",
             "236",
             "598",
-            "0",
-            "0"
-          ],
-          [
-            "Paustian, Miranda",
-            "0",
-            "0",
-            "W",
-            "0",
-            "0",
-            "120",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0",
             "0",
             "0"
           ],
@@ -681,71 +579,20 @@
             "0"
           ],
           [
-            "Ratt, Dan",
-            "0",
-            "0",
-            "M",
-            "0",
-            "0",
-            "120",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0"
-          ],
-          [
-            "Sprau, Donnie",
-            "0",
-            "0",
-            "M",
-            "0",
-            "0",
-            "120",
-            "104",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0"
-          ],
-          [
-            "Tanderup, Nathan",
-            "0",
-            "0",
-            "M",
-            "0",
-            "0",
-            "120",
-            "124",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0"
-          ],
-          [
             "Taylor, Aj",
             "4",
             "4",
             "Team 4",
             "M",
-            "1038",
-            "8",
-            "129",
+            "1484",
+            "11",
+            "134",
             "143",
             "0",
             "182",
-            "428",
+            "446",
             "182",
-            "428",
+            "446",
             "0",
             "0"
           ],
@@ -769,36 +616,19 @@
           ],
           [
             "Trevarthen, Matthew",
-            "5",
             "3",
-            "Team 5",
+            "4",
+            "Team 3",
             "M",
-            "1081",
-            "5",
-            "216",
+            "1737",
+            "8",
+            "217",
             "212",
             "0",
             "253",
-            "602",
+            "656",
             "253",
-            "602",
-            "0",
-            "0"
-          ],
-          [
-            "Wolfson, Avi",
-            "0",
-            "0",
-            "M",
-            "0",
-            "0",
-            "120",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0",
+            "656",
             "0",
             "0"
           ]
@@ -819,23 +649,6 @@
             false,
             false,
             false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
             false,
             false
           ],
@@ -895,111 +708,6 @@
           ],
           [
             false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
             false,
             false,
             false,
@@ -1103,58 +811,6 @@
             false,
             false,
             false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
             false,
             false
           ],
@@ -1196,39 +852,6 @@
           ],
           [
             false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
             false,
             false,
             false,
@@ -1300,6 +923,43 @@
             false
           ],
           [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
             false,
             false,
             false,
@@ -1321,266 +981,104 @@
     ],
     "recaps": [
       {
-        "title": "Team 2 matchup",
-        "headers": [
-          "Bowler",
-          "AVG",
-          "HDCP",
-          "GM1",
-          "GM2",
-          "GM3",
-          "GM4",
-          "GM5",
-          "GM6",
-          "Total"
-        ],
-        "rows": [
-          [
-            "Team 2",
-            "Lane 2 | Team points won: 0"
-          ],
-          [
-            "Trevarthen, Jimmy",
-            "134",
-            "0",
-            "74",
-            "107",
-            "101",
-            "282"
-          ],
-          [
-            "Kelly, Lisa",
-            "67",
-            "0",
-            "60",
-            "65",
-            "78",
-            "203"
-          ],
-          [
-            "Total",
-            "134",
-            "172",
-            "179",
-            "0",
-            "0",
-            "0",
-            "485"
-          ],
-          [
-            "Team 1",
-            "Lane 1 | Team points won: 0"
-          ],
-          [
-            "Baker, Nathan",
-            "149",
-            "0",
-            "116",
-            "124",
-            "171",
-            "411"
-          ],
-          [
-            "Parr, Danielle",
-            "107",
-            "0",
-            "151",
-            "121",
-            "145",
-            "417"
-          ],
-          [
-            "Total",
-            "267",
-            "245",
-            "316",
-            "0",
-            "0",
-            "0",
-            "828"
-          ]
-        ],
-        "emphasis": [
-          [
-            true,
-            true
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
-          ],
-          [
-            true,
-            true
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
-          ]
-        ]
-      },
-      {
         "title": "Team 4 matchup",
         "headers": [
           "Bowler",
-          "AVG",
-          "HDCP",
-          "GM1",
-          "GM2",
-          "GM3",
-          "GM4",
-          "GM5",
-          "GM6",
-          "Total"
+          "Average",
+          "Handicap",
+          "Game 1",
+          "Game 2",
+          "Game 3",
+          "Scratch series"
         ],
         "rows": [
           [
             "Team 4",
-            "Lane 4 | Team points won: 0"
-          ],
-          [
-            "Foran, Gerianne",
-            "93",
-            "0",
-            "86",
-            "92",
-            "85",
-            "263"
-          ],
-          [
-            "Casey, Mackenzi",
-            "185",
-            "0",
-            "165",
-            "170",
-            "105",
-            "440"
-          ],
-          [
-            "Paustian, Joe",
-            "195",
-            "0",
-            "195",
-            "195",
-            "195",
-            "585"
+            "Lane 4 points won: 0"
           ],
           [
             "Taylor, Aj",
             "129",
             "0",
-            "129",
-            "129",
-            "129",
-            "387"
+            "143",
+            "134",
+            "169",
+            "446"
           ],
           [
             "Total",
-            "575",
-            "586",
-            "514",
-            "0",
-            "0",
-            "0",
-            "1675"
+            "143",
+            "134",
+            "169",
+            "446"
           ],
           [
             "Team 3",
-            "Lane 3 | Team points won: 0"
-          ],
-          [
-            "Hunter, Derek",
-            "103",
-            "0",
-            "83",
-            "105",
-            "153",
-            "341"
+            "Lane 3 points won: 0"
           ],
           [
             "Boggs, Wayne",
-            "145",
+            "147",
             "0",
-            "145",
-            "188",
-            "124",
-            "457"
+            "112",
+            "148",
+            "138",
+            "398"
           ],
           [
             "Eeuchate, Mitchell",
             "132",
             "0",
-            "132",
-            "132",
-            "132",
-            "396"
+            "113",
+            "128",
+            "109",
+            "350"
+          ],
+          [
+            "Trevarthen, Matthew",
+            "216",
+            "0",
+            "198",
+            "223",
+            "235",
+            "656"
           ],
           [
             "Total",
-            "360",
-            "425",
-            "409",
-            "0",
-            "0",
-            "0",
-            "1194"
+            "423",
+            "499",
+            "482",
+            "1404"
           ]
         ],
         "emphasis": [
           [
             true,
-            true
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
           ],
           [
             false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            true,
             false,
             false,
             false,
@@ -1616,131 +1114,50 @@
             false
           ],
           [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
-          ],
-          [
-            true,
-            true
-          ],
-          [
-            false,
-            false,
             false,
             false,
             false,
             false,
             false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
           ]
         ]
       },
       {
-        "title": "Team 5 matchup",
+        "title": "Team 6 matchup",
         "headers": [
           "Bowler",
-          "AVG",
-          "HDCP",
-          "GM1",
-          "GM2",
-          "GM3",
-          "GM4",
-          "GM5",
-          "GM6",
-          "Total"
+          "Average",
+          "Handicap",
+          "Game 1",
+          "Game 2",
+          "Game 3",
+          "Scratch series"
         ],
         "rows": [
           [
-            "Team 5",
-            "Lane 5 | Team points won: 0"
+            "Team 6",
+            "Lane 6 points won: 0"
           ],
           [
-            "Picton, Paul",
-            "107",
+            "Laurent, Chris",
+            "59",
             "0",
-            "107",
-            "107",
-            "107",
-            "321"
-          ],
-          [
-            "Haase, Rustin",
-            "91",
-            "0",
-            "91",
-            "91",
-            "91",
-            "273"
-          ],
-          [
-            "Trevarthen, Matthew",
-            "239",
-            "0",
-            "142",
-            "247",
-            "213",
-            "602"
+            "52",
+            "65",
+            "80",
+            "197"
           ],
           [
             "Total",
-            "340",
-            "445",
-            "411",
-            "0",
-            "0",
-            "0",
-            "1196"
+            "52",
+            "65",
+            "80",
+            "197"
           ]
         ],
         "emphasis": [
           [
             true,
-            true
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
             false,
             false,
             false,
@@ -1758,21 +1175,18 @@
             false
           ],
           [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
+            false,
+            false,
+            false,
+            false,
+            false
           ]
         ]
       }
     ],
     "lanes": [
       {
-        "title": "Table 1",
+        "title": "All scheduled teams",
         "headers": [
           "Lane",
           "Team#",
@@ -1822,42 +1236,42 @@
         ],
         "emphasis": [
           [
-            false,
-            false,
-            false
-          ],
-          [
-            false,
+            true,
             false,
             false
           ],
           [
-            false,
-            false,
-            false
-          ],
-          [
-            false,
+            true,
             false,
             false
           ],
           [
-            false,
-            false,
-            false
-          ],
-          [
-            false,
+            true,
             false,
             false
           ],
           [
-            false,
+            true,
             false,
             false
           ],
           [
+            true,
             false,
+            false
+          ],
+          [
+            true,
+            false,
+            false
+          ],
+          [
+            true,
+            false,
+            false
+          ],
+          [
+            true,
             false,
             false
           ]
@@ -1874,7 +1288,7 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
@@ -1885,27 +1299,9 @@
             "11",
             "1606",
             "146"
-          ],
-          [
-            "2",
-            "Parr, Danielle",
-            "W",
-            "0",
-            "11",
-            "1275",
-            "115"
           ]
         ],
         "emphasis": [
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
           [
             false,
             false,
@@ -1927,7 +1323,7 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
@@ -1938,27 +1334,9 @@
             "8",
             "953",
             "119"
-          ],
-          [
-            "2",
-            "Kelly, Lisa",
-            "W",
-            "0",
-            "6",
-            "404",
-            "67"
           ]
         ],
         "emphasis": [
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
           [
             false,
             false,
@@ -1980,7 +1358,7 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
@@ -1997,21 +1375,39 @@
             "Boggs, Wayne",
             "M",
             "0",
-            "11",
-            "1623",
-            "147"
+            "14",
+            "2021",
+            "144"
           ],
           [
             "3",
             "Eeuchate, Mitchell",
             "M",
             "0",
-            "6",
-            "794",
-            "132"
+            "9",
+            "1144",
+            "127"
+          ],
+          [
+            "4",
+            "Trevarthen, Matthew",
+            "M",
+            "0",
+            "8",
+            "1737",
+            "217"
           ]
         ],
         "emphasis": [
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
           [
             false,
             false,
@@ -2051,7 +1447,7 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
@@ -2086,9 +1482,9 @@
             "Taylor, Aj",
             "M",
             "0",
-            "8",
-            "1038",
-            "129"
+            "11",
+            "1484",
+            "134"
           ]
         ],
         "emphasis": [
@@ -2140,7 +1536,7 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
@@ -2163,15 +1559,6 @@
           ],
           [
             "3",
-            "Trevarthen, Matthew",
-            "M",
-            "0",
-            "5",
-            "1081",
-            "216"
-          ],
-          [
-            "4",
             "Dunham, Bradley",
             "M",
             "0",
@@ -2181,15 +1568,6 @@
           ]
         ],
         "emphasis": [
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
           [
             false,
             false,
@@ -2229,7 +1607,7 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
@@ -2246,9 +1624,9 @@
             "Laurent, Chris",
             "M",
             "0",
-            "8",
-            "475",
-            "59"
+            "11",
+            "672",
+            "61"
           ],
           [
             "3",
@@ -2300,7 +1678,7 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
@@ -2329,31 +1707,32 @@
       {
         "title": "Team 8 · Team 8 roster",
         "headers": [
-          "Week",
-          "Date",
+          "Pos",
+          "Name",
+          "Gndr",
           "HCP",
-          "Gm1",
-          "Gm2",
-          "Gm3",
-          "SS",
-          "Avg"
+          "Gms",
+          "Pins",
+          "AVG"
         ],
         "rows": [
           [
-            "2",
-            "08/22/2026",
+            "1",
+            "Parr, Danielle",
+            "W",
             "0",
-            "93",
-            "73",
-            "96",
-            "262",
-            "87"
+            "11",
+            "1275",
+            "115"
           ],
           [
-            "93",
-            "73",
-            "96",
-            "262"
+            "2",
+            "Kelly, Lisa",
+            "W",
+            "0",
+            "6",
+            "404",
+            "67"
           ]
         ],
         "emphasis": [
@@ -2364,14 +1743,16 @@
             false,
             false,
             false,
-            false,
             false
           ],
           [
-            true,
-            true,
-            true,
-            true
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
           ]
         ],
         "team": "8"
@@ -7250,7 +6631,1753 @@
           }
         ]
       }
+    },
+    {
+      "week": "5",
+      "sourceUpdated": "Sep 13, 2026",
+      "syncedAt": "2026-09-15T15:51:07.228Z",
+      "views": {
+        "standings": [
+          {
+            "title": "League standings",
+            "headers": [
+              "Place",
+              "Team",
+              "Team#",
+              "Div",
+              "WON",
+              "LOST",
+              "%",
+              "YTD WON",
+              "AVG",
+              "Pins",
+              "HSG",
+              "HSS"
+            ],
+            "rows": [
+              [
+                "1",
+                "Team 4",
+                "4",
+                "1",
+                "0",
+                "0",
+                "100 %",
+                "0",
+                "595",
+                "6272",
+                "691",
+                "1870"
+              ],
+              [
+                "2",
+                "Team 3",
+                "3",
+                "1",
+                "0",
+                "0",
+                "100 %",
+                "0",
+                "594",
+                "3740",
+                "0",
+                "0"
+              ],
+              [
+                "3",
+                "Team 5",
+                "5",
+                "1",
+                "0",
+                "0",
+                "100 %",
+                "0",
+                "294",
+                "3678",
+                "0",
+                "0"
+              ],
+              [
+                "4",
+                "Team 6",
+                "6",
+                "1",
+                "0",
+                "0",
+                "100 %",
+                "0",
+                "247",
+                "2200",
+                "365",
+                "1007"
+              ],
+              [
+                "5",
+                "Team 1",
+                "1",
+                "1",
+                "0",
+                "0",
+                "100 %",
+                "0",
+                "146",
+                "1349",
+                "0",
+                "0"
+              ],
+              [
+                "6",
+                "Team 8",
+                "8",
+                "1",
+                "0",
+                "0",
+                "100 %",
+                "0",
+                "182",
+                "753",
+                "0",
+                "0"
+              ],
+              [
+                "7",
+                "Team 2",
+                "2",
+                "1",
+                "0",
+                "0",
+                "100 %",
+                "0",
+                "119",
+                "746",
+                "0",
+                "0"
+              ],
+              [
+                "8",
+                "Team 7",
+                "7",
+                "1",
+                "0",
+                "0",
+                "100 %",
+                "0",
+                "103",
+                "0",
+                "0",
+                "0"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ]
+            ]
+          }
+        ],
+        "bowlers": [
+          {
+            "title": "Bowlers and season statistics",
+            "headers": [
+              "Name",
+              "Team#",
+              "Pos#",
+              "Team",
+              "Gndr",
+              "Pins",
+              "Games",
+              "Avg",
+              "EnteringAvg",
+              "HCP",
+              "HHG",
+              "HHS",
+              "HSG",
+              "HSS",
+              "MIB",
+              "WON"
+            ],
+            "rows": [
+              [
+                "Baker, Nathan",
+                "1",
+                "1",
+                "Team 1",
+                "M",
+                "1606",
+                "11",
+                "146",
+                "136",
+                "0",
+                "188",
+                "471",
+                "188",
+                "471",
+                "0",
+                "0"
+              ],
+              [
+                "Boggs, Wayne",
+                "3",
+                "2",
+                "Team 3",
+                "M",
+                "2021",
+                "14",
+                "144",
+                "137",
+                "0",
+                "188",
+                "463",
+                "188",
+                "463",
+                "0.36",
+                "0"
+              ],
+              [
+                "Casey, Mackenzi",
+                "4",
+                "2",
+                "Team 4",
+                "W",
+                "1922",
+                "11",
+                "174",
+                "153",
+                "0",
+                "233",
+                "561",
+                "233",
+                "561",
+                "0",
+                "0"
+              ],
+              [
+                "Clift, Jerry",
+                "6",
+                "1",
+                "Team 6",
+                "M",
+                "756",
+                "8",
+                "94",
+                "98",
+                "0",
+                "138",
+                "324",
+                "138",
+                "324",
+                "0",
+                "0"
+              ],
+              [
+                "Dunham, Bradley",
+                "5",
+                "3",
+                "Team 5",
+                "M",
+                "773",
+                "8",
+                "96",
+                "89",
+                "0",
+                "115",
+                "282",
+                "115",
+                "282",
+                "0",
+                "0"
+              ],
+              [
+                "Eeuchate, Mitchell",
+                "3",
+                "3",
+                "Team 3",
+                "M",
+                "1144",
+                "9",
+                "127",
+                "149",
+                "0",
+                "178",
+                "405",
+                "178",
+                "405",
+                "0",
+                "0"
+              ],
+              [
+                "Foran, Gerianne",
+                "4",
+                "1",
+                "Team 4",
+                "W",
+                "1013",
+                "11",
+                "92",
+                "107",
+                "0",
+                "133",
+                "305",
+                "133",
+                "305",
+                "0",
+                "0"
+              ],
+              [
+                "Haase, Rustin",
+                "5",
+                "2",
+                "Team 5",
+                "M",
+                "731",
+                "8",
+                "91",
+                "86",
+                "0",
+                "103",
+                "278",
+                "103",
+                "278",
+                "0",
+                "0"
+              ],
+              [
+                "Hunter, Derek",
+                "3",
+                "1",
+                "Team 3",
+                "M",
+                "1169",
+                "11",
+                "106",
+                "0",
+                "0",
+                "153",
+                "341",
+                "153",
+                "341",
+                "0",
+                "0"
+              ],
+              [
+                "Kelly, Lisa",
+                "8",
+                "2",
+                "Team 8",
+                "W",
+                "404",
+                "6",
+                "67",
+                "0",
+                "0",
+                "78",
+                "203",
+                "78",
+                "203",
+                "0",
+                "0"
+              ],
+              [
+                "Laurent, Chris",
+                "6",
+                "2",
+                "Team 6",
+                "M",
+                "672",
+                "11",
+                "61",
+                "62",
+                "0",
+                "87",
+                "204",
+                "87",
+                "204",
+                "0",
+                "0"
+              ],
+              [
+                "Mcdonald, Larry",
+                "7",
+                "1",
+                "Team 7",
+                "M",
+                "311",
+                "3",
+                "103",
+                "123",
+                "0",
+                "116",
+                "311",
+                "116",
+                "311",
+                "0",
+                "0"
+              ],
+              [
+                "Parr, Danielle",
+                "8",
+                "1",
+                "Team 8",
+                "W",
+                "1275",
+                "11",
+                "115",
+                "121",
+                "0",
+                "151",
+                "417",
+                "151",
+                "417",
+                "0",
+                "0"
+              ],
+              [
+                "Paustian, Joe",
+                "4",
+                "3",
+                "Team 4",
+                "M",
+                "1174",
+                "6",
+                "195",
+                "0",
+                "0",
+                "236",
+                "598",
+                "236",
+                "598",
+                "0",
+                "0"
+              ],
+              [
+                "Picton, Paul",
+                "5",
+                "1",
+                "Team 5",
+                "M",
+                "644",
+                "6",
+                "107",
+                "0",
+                "0",
+                "161",
+                "356",
+                "161",
+                "356",
+                "0",
+                "0"
+              ],
+              [
+                "Pratt, Dan",
+                "6",
+                "3",
+                "Team 6",
+                "M",
+                "739",
+                "8",
+                "92",
+                "97",
+                "0",
+                "127",
+                "278",
+                "127",
+                "278",
+                "0",
+                "0"
+              ],
+              [
+                "Taylor, Aj",
+                "4",
+                "4",
+                "Team 4",
+                "M",
+                "1484",
+                "11",
+                "134",
+                "143",
+                "0",
+                "182",
+                "446",
+                "182",
+                "446",
+                "0",
+                "0"
+              ],
+              [
+                "Trevarthen, Jimmy",
+                "2",
+                "1",
+                "Team 2",
+                "M",
+                "953",
+                "8",
+                "119",
+                "132",
+                "0",
+                "157",
+                "410",
+                "157",
+                "410",
+                "0",
+                "0"
+              ],
+              [
+                "Trevarthen, Matthew",
+                "3",
+                "4",
+                "Team 3",
+                "M",
+                "1737",
+                "8",
+                "217",
+                "212",
+                "0",
+                "253",
+                "656",
+                "253",
+                "656",
+                "0",
+                "0"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ]
+          }
+        ],
+        "recaps": [
+          {
+            "title": "Team 4 matchup",
+            "headers": [
+              "Bowler",
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
+            ],
+            "rows": [
+              [
+                "Team 4",
+                "Lane 4 points won: 0"
+              ],
+              [
+                "Taylor, Aj",
+                "129",
+                "0",
+                "143",
+                "134",
+                "169",
+                "446"
+              ],
+              [
+                "Total",
+                "143",
+                "134",
+                "169",
+                "446"
+              ],
+              [
+                "Team 3",
+                "Lane 3 points won: 0"
+              ],
+              [
+                "Boggs, Wayne",
+                "147",
+                "0",
+                "112",
+                "148",
+                "138",
+                "398"
+              ],
+              [
+                "Eeuchate, Mitchell",
+                "132",
+                "0",
+                "113",
+                "128",
+                "109",
+                "350"
+              ],
+              [
+                "Trevarthen, Matthew",
+                "216",
+                "0",
+                "198",
+                "223",
+                "235",
+                "656"
+              ],
+              [
+                "Total",
+                "423",
+                "499",
+                "482",
+                "1404"
+              ]
+            ],
+            "emphasis": [
+              [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ]
+          },
+          {
+            "title": "Team 6 matchup",
+            "headers": [
+              "Bowler",
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
+            ],
+            "rows": [
+              [
+                "Team 6",
+                "Lane 6 points won: 0"
+              ],
+              [
+                "Laurent, Chris",
+                "59",
+                "0",
+                "52",
+                "65",
+                "80",
+                "197"
+              ],
+              [
+                "Total",
+                "52",
+                "65",
+                "80",
+                "197"
+              ]
+            ],
+            "emphasis": [
+              [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ]
+          }
+        ],
+        "lanes": [
+          {
+            "title": "All scheduled teams",
+            "headers": [
+              "Lane",
+              "Team#",
+              "Team"
+            ],
+            "rows": [
+              [
+                "1",
+                "1",
+                "Team 1"
+              ],
+              [
+                "2",
+                "2",
+                "Team 2"
+              ],
+              [
+                "3",
+                "3",
+                "Team 3"
+              ],
+              [
+                "4",
+                "4",
+                "Team 4"
+              ],
+              [
+                "5",
+                "5",
+                "Team 5"
+              ],
+              [
+                "6",
+                "6",
+                "Team 6"
+              ],
+              [
+                "7",
+                "7",
+                "Team 7"
+              ],
+              [
+                "8",
+                "8",
+                "Team 8"
+              ]
+            ],
+            "emphasis": [
+              [
+                true,
+                false,
+                false
+              ],
+              [
+                true,
+                false,
+                false
+              ],
+              [
+                true,
+                false,
+                false
+              ],
+              [
+                true,
+                false,
+                false
+              ],
+              [
+                true,
+                false,
+                false
+              ],
+              [
+                true,
+                false,
+                false
+              ],
+              [
+                true,
+                false,
+                false
+              ],
+              [
+                true,
+                false,
+                false
+              ]
+            ]
+          }
+        ],
+        "rosters": [
+          {
+            "title": "Team 1 · Team 1 roster",
+            "headers": [
+              "Pos",
+              "Name",
+              "Gndr",
+              "HCP",
+              "Gms",
+              "Pins",
+              "AVG"
+            ],
+            "rows": [
+              [
+                "1",
+                "Baker, Nathan",
+                "M",
+                "0",
+                "11",
+                "1606",
+                "146"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "team": "1"
+          },
+          {
+            "title": "Team 2 · Team 2 roster",
+            "headers": [
+              "Pos",
+              "Name",
+              "Gndr",
+              "HCP",
+              "Gms",
+              "Pins",
+              "AVG"
+            ],
+            "rows": [
+              [
+                "1",
+                "Trevarthen, Jimmy",
+                "M",
+                "0",
+                "8",
+                "953",
+                "119"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "team": "2"
+          },
+          {
+            "title": "Team 3 · Team 3 roster",
+            "headers": [
+              "Pos",
+              "Name",
+              "Gndr",
+              "HCP",
+              "Gms",
+              "Pins",
+              "AVG"
+            ],
+            "rows": [
+              [
+                "1",
+                "Hunter, Derek",
+                "M",
+                "0",
+                "11",
+                "1169",
+                "106"
+              ],
+              [
+                "2",
+                "Boggs, Wayne",
+                "M",
+                "0",
+                "14",
+                "2021",
+                "144"
+              ],
+              [
+                "3",
+                "Eeuchate, Mitchell",
+                "M",
+                "0",
+                "9",
+                "1144",
+                "127"
+              ],
+              [
+                "4",
+                "Trevarthen, Matthew",
+                "M",
+                "0",
+                "8",
+                "1737",
+                "217"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "team": "3"
+          },
+          {
+            "title": "Team 4 · Team 4 roster",
+            "headers": [
+              "Pos",
+              "Name",
+              "Gndr",
+              "HCP",
+              "Gms",
+              "Pins",
+              "AVG"
+            ],
+            "rows": [
+              [
+                "1",
+                "Foran, Gerianne",
+                "W",
+                "0",
+                "11",
+                "1013",
+                "92"
+              ],
+              [
+                "2",
+                "Casey, Mackenzi",
+                "W",
+                "0",
+                "11",
+                "1922",
+                "174"
+              ],
+              [
+                "3",
+                "Paustian, Joe",
+                "M",
+                "0",
+                "6",
+                "1174",
+                "195"
+              ],
+              [
+                "4",
+                "Taylor, Aj",
+                "M",
+                "0",
+                "11",
+                "1484",
+                "134"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "team": "4"
+          },
+          {
+            "title": "Team 5 · Team 5 roster",
+            "headers": [
+              "Pos",
+              "Name",
+              "Gndr",
+              "HCP",
+              "Gms",
+              "Pins",
+              "AVG"
+            ],
+            "rows": [
+              [
+                "1",
+                "Picton, Paul",
+                "M",
+                "0",
+                "6",
+                "644",
+                "107"
+              ],
+              [
+                "2",
+                "Haase, Rustin",
+                "M",
+                "0",
+                "8",
+                "731",
+                "91"
+              ],
+              [
+                "3",
+                "Dunham, Bradley",
+                "M",
+                "0",
+                "8",
+                "773",
+                "96"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "team": "5"
+          },
+          {
+            "title": "Team 6 · Team 6 roster",
+            "headers": [
+              "Pos",
+              "Name",
+              "Gndr",
+              "HCP",
+              "Gms",
+              "Pins",
+              "AVG"
+            ],
+            "rows": [
+              [
+                "1",
+                "Clift, Jerry",
+                "M",
+                "0",
+                "8",
+                "756",
+                "94"
+              ],
+              [
+                "2",
+                "Laurent, Chris",
+                "M",
+                "0",
+                "11",
+                "672",
+                "61"
+              ],
+              [
+                "3",
+                "Pratt, Dan",
+                "M",
+                "0",
+                "8",
+                "739",
+                "92"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "team": "6"
+          },
+          {
+            "title": "Team 7 · Team 7 roster",
+            "headers": [
+              "Pos",
+              "Name",
+              "Gndr",
+              "HCP",
+              "Gms",
+              "Pins",
+              "AVG"
+            ],
+            "rows": [
+              [
+                "1",
+                "Mcdonald, Larry",
+                "M",
+                "0",
+                "3",
+                "311",
+                "103"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "team": "7"
+          },
+          {
+            "title": "Team 8 · Team 8 roster",
+            "headers": [
+              "Pos",
+              "Name",
+              "Gndr",
+              "HCP",
+              "Gms",
+              "Pins",
+              "AVG"
+            ],
+            "rows": [
+              [
+                "1",
+                "Parr, Danielle",
+                "W",
+                "0",
+                "11",
+                "1275",
+                "115"
+              ],
+              [
+                "2",
+                "Kelly, Lisa",
+                "W",
+                "0",
+                "6",
+                "404",
+                "67"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "team": "8"
+          }
+        ]
+      }
     }
   ],
-  "sourceFingerprint": "c0b724f5959c03e2173316cf27f38d84c5c829aee5f3d6f825d716f149cfbae3"
+  "sourceFingerprint": "cadc4d10a4618f1e41773b95555bf613bbd05926fc15299c42c514221d7b4b9e",
+  "lastAttemptedAt": null,
+  "lastCheckedAt": "2026-09-15T15:51:07.228Z"
 }

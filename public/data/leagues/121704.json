@@ -7,33 +7,33 @@
   "bowlsOn": "Monday",
   "startTime": "6:30 PM",
   "type": "Handicap Womens",
-  "updated": "09/01/2026",
+  "updated": "Sep 15, 2026",
   "startDate": "Fall 2026",
   "bowlDay": 1,
   "centerId": "2173",
   "centerName": "Parkway Lanes",
   "centerSlug": "parkway-lanes---lincoln-lincoln-nebraska",
   "area": "Lincoln",
-  "sourceUpdated": "09/01/2026",
-  "syncedAt": "2026-09-07T10:36:09.509Z",
+  "sourceUpdated": "Sep 15, 2026",
+  "syncedAt": "2026-09-15T15:55:56.181Z",
   "status": "current",
-  "week": "1",
-  "fingerprint": "34bd2a105100a460e545bafe20c03e2fbbec95bec2c68071e53f38c92226602f",
-  "lastCompletedCycle": "2026-09-07",
+  "week": "2",
+  "fingerprint": "1bf791b2099c623fc38166b67067886323785c61bde96b8c454ea21e69955fec",
+  "lastCompletedCycle": "2026-09-14",
   "views": {
     "standings": [
       {
-        "title": "Table 3",
+        "title": "League standings",
         "headers": [
-          "Division",
           "Place",
-          "Team#",
           "Team",
-          "Won",
-          "Lost",
-          "% Won",
-          "YTD Won",
-          "Avg",
+          "Team#",
+          "Div",
+          "WON",
+          "LOST",
+          "%",
+          "YTD WON",
+          "AVG",
           "Pins",
           "HSG",
           "HSS"
@@ -41,87 +41,87 @@
         "rows": [
           [
             "1",
+            "STRIKE A POSE",
+            "6",
             "1",
-            "3",
-            "ALLEY OOPS",
-            "5",
+            "12",
             "2",
-            "71 %",
+            "86 %",
+            "12",
+            "495",
+            "3217",
+            "618",
+            "1708"
+          ],
+          [
+            "2",
+            "ALLEY OOPS",
+            "3",
+            "1",
+            "9",
             "5",
+            "64 %",
+            "9",
             "511",
-            "1657",
+            "3193",
             "576",
             "1657"
           ],
           [
-            "1",
-            "2",
-            "6",
-            "STRIKE A POSE",
-            "5",
-            "2",
-            "71 %",
-            "5",
-            "495",
-            "1509",
-            "553",
-            "1509"
-          ],
-          [
-            "1",
             "3",
-            "2",
             "HI-WAY DINER",
-            "5",
             "2",
-            "71 %",
-            "5",
+            "1",
+            "8",
+            "6",
+            "57 %",
+            "8",
             "641",
-            "1730",
-            "585",
-            "1730"
+            "3615",
+            "696",
+            "1885"
           ],
           [
-            "1",
-            "4",
             "4",
             "LOVELY LADY LE0PARDS",
-            "2",
-            "5",
-            "29 %",
-            "2",
+            "4",
+            "1",
+            "7",
+            "7",
+            "50 %",
+            "7",
             "554",
-            "1647",
+            "3259",
             "594",
             "1647"
           ],
           [
-            "1",
-            "5",
-            "1",
-            "STAR CITY CUSTOM HOMES",
-            "2",
-            "5",
-            "29 %",
-            "2",
-            "657",
-            "1862",
-            "649",
-            "1862"
-          ],
-          [
-            "1",
-            "6",
             "5",
             "STRIKING RESULTS PRO SHOP",
-            "2",
             "5",
+            "1",
+            "4",
+            "10",
             "29 %",
-            "2",
-            "445",
-            "1179",
+            "4",
+            "430",
+            "2375",
             "422",
-            "1179"
+            "1196"
+          ],
+          [
+            "6",
+            "STAR CITY CUSTOM HOMES",
+            "1",
+            "1",
+            "2",
+            "12",
+            "14 %",
+            "2",
+            "657",
+            "3609",
+            "657",
+            "1862"
           ]
         ],
         "emphasis": [
@@ -132,23 +132,9 @@
             false,
             false,
             false,
+            true,
             false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
+            true,
             false,
             false,
             false
@@ -160,23 +146,9 @@
             false,
             false,
             false,
+            true,
             false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
+            true,
             false,
             false,
             false
@@ -188,9 +160,9 @@
             false,
             false,
             false,
+            true,
             false,
-            false,
-            false,
+            true,
             false,
             false,
             false
@@ -202,9 +174,37 @@
             false,
             false,
             false,
+            true,
+            false,
+            true,
+            false,
+            false,
+            false
+          ],
+          [
             false,
             false,
             false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            true,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            true,
             false,
             false,
             false
@@ -214,7 +214,7 @@
     ],
     "bowlers": [
       {
-        "title": "Table 3",
+        "title": "Bowlers and season statistics",
         "headers": [
           "Name",
           "Team#",
@@ -240,15 +240,15 @@
             "9",
             "ALLEY OOPS",
             "W",
-            "0",
-            "0",
+            "398",
+            "3",
             "124",
             "124",
             "64",
-            "0",
-            "0",
-            "0",
-            "0",
+            "208",
+            "590",
+            "144",
+            "398",
             "0",
             "0"
           ],
@@ -258,15 +258,15 @@
             "3",
             "STRIKE A POSE",
             "W",
-            "371",
-            "3",
+            "781",
+            "6",
             "125",
             "125",
             "63",
-            "214",
-            "560",
-            "151",
-            "371",
+            "223",
+            "599",
+            "160",
+            "410",
             "0",
             "0"
           ],
@@ -276,15 +276,15 @@
             "4",
             "ALLEY OOPS",
             "W",
-            "0",
-            "0",
+            "264",
+            "3",
             "88",
             "88",
             "95",
-            "0",
-            "0",
-            "0",
-            "0",
+            "192",
+            "549",
+            "97",
+            "264",
             "0",
             "0"
           ],
@@ -294,8 +294,8 @@
             "4",
             "LOVELY LADY LE0PARDS",
             "W",
-            "438",
-            "3",
+            "867",
+            "6",
             "140",
             "140",
             "51",
@@ -307,38 +307,38 @@
             "0"
           ],
           [
-            "Connerley, Nancy",
-            "3",
-            "5",
-            "ALLEY OOPS",
-            "W",
-            "0",
-            "0",
-            "123",
-            "123",
-            "65",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0"
-          ],
-          [
             "Cornman, Kristine",
             "6",
             "2",
             "STRIKE A POSE",
             "W",
-            "0",
-            "0",
+            "426",
+            "3",
             "125",
             "125",
             "63",
+            "219",
+            "615",
+            "156",
+            "426",
             "0",
-            "0",
-            "0",
-            "0",
+            "0"
+          ],
+          [
+            "Crowl, Maddy",
+            "4",
+            "2",
+            "LOVELY LADY LE0PARDS",
+            "W",
+            "799",
+            "6",
+            "126",
+            "126",
+            "62",
+            "209",
+            "589",
+            "147",
+            "403",
             "0",
             "0"
           ],
@@ -348,15 +348,15 @@
             "1",
             "LOVELY LADY LE0PARDS",
             "W",
-            "0",
-            "0",
+            "405",
+            "3",
             "132",
             "132",
             "57",
-            "0",
-            "0",
-            "0",
-            "0",
+            "212",
+            "576",
+            "155",
+            "405",
             "0",
             "0"
           ],
@@ -397,55 +397,19 @@
             "0"
           ],
           [
-            "Dixon, Maddy",
-            "4",
-            "2",
-            "LOVELY LADY LE0PARDS",
-            "W",
-            "396",
-            "3",
-            "126",
-            "126",
-            "62",
-            "209",
-            "582",
-            "147",
-            "396",
-            "0",
-            "0"
-          ],
-          [
-            "Dugan, Megan",
-            "3",
-            "7",
-            "ALLEY OOPS",
-            "W",
-            "0",
-            "0",
-            "138",
-            "138",
-            "52",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0"
-          ],
-          [
             "Graham, Roxane",
             "1",
             "2",
             "STAR CITY CUSTOM HOMES",
             "W",
-            "422",
-            "3",
+            "765",
+            "6",
             "140",
             "140",
             "51",
-            "198",
+            "204",
             "575",
-            "147",
+            "153",
             "422",
             "0",
             "0"
@@ -469,38 +433,20 @@
             "0"
           ],
           [
-            "Heine, Laura",
-            "1",
-            "5",
-            "STAR CITY CUSTOM HOMES",
-            "W",
-            "0",
-            "0",
-            "169",
-            "169",
-            "26",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0"
-          ],
-          [
             "Johnston, Angel",
             "6",
             "4",
             "STRIKE A POSE",
             "W",
-            "413",
-            "3",
+            "903",
+            "6",
             "129",
             "129",
             "60",
-            "211",
-            "593",
-            "151",
-            "413",
+            "248",
+            "670",
+            "188",
+            "490",
             "0",
             "0"
           ],
@@ -510,8 +456,8 @@
             "3",
             "STAR CITY CUSTOM HOMES",
             "W",
-            "501",
-            "3",
+            "971",
+            "6",
             "168",
             "168",
             "27",
@@ -528,15 +474,15 @@
             "4",
             "STAR CITY CUSTOM HOMES",
             "W",
-            "518",
-            "3",
+            "1091",
+            "6",
             "206",
             "206",
             "0",
-            "175",
-            "518",
-            "175",
-            "518",
+            "213",
+            "573",
+            "213",
+            "573",
             "0",
             "0"
           ],
@@ -546,8 +492,8 @@
             "1",
             "HI-WAY DINER",
             "W",
-            "439",
-            "3",
+            "863",
+            "6",
             "141",
             "141",
             "50",
@@ -564,15 +510,15 @@
             "5",
             "LOVELY LADY LE0PARDS",
             "W",
-            "350",
-            "3",
-            "116",
+            "725",
+            "6",
+            "120",
             "0",
-            "71",
-            "193",
-            "563",
-            "122",
-            "350",
+            "68",
+            "207",
+            "588",
+            "136",
+            "375",
             "0",
             "0"
           ],
@@ -582,15 +528,15 @@
             "1",
             "STRIKE A POSE",
             "W",
-            "380",
-            "3",
+            "762",
+            "6",
             "116",
             "116",
             "71",
             "223",
-            "593",
+            "595",
             "152",
-            "380",
+            "382",
             "0",
             "0"
           ],
@@ -618,8 +564,8 @@
             "1",
             "STAR CITY CUSTOM HOMES",
             "W",
-            "421",
-            "3",
+            "782",
+            "6",
             "143",
             "143",
             "48",
@@ -636,8 +582,8 @@
             "3",
             "ALLEY OOPS",
             "W",
-            "397",
-            "3",
+            "791",
+            "6",
             "142",
             "142",
             "49",
@@ -654,15 +600,15 @@
             "3",
             "HI-WAY DINER",
             "W",
-            "0",
-            "0",
+            "466",
+            "3",
             "173",
             "173",
             "22",
-            "0",
-            "0",
-            "0",
-            "0",
+            "187",
+            "532",
+            "165",
+            "466",
             "0",
             "0"
           ],
@@ -672,8 +618,8 @@
             "1",
             "STRIKING RESULTS PRO SHOP",
             "W",
-            "253",
-            "3",
+            "504",
+            "6",
             "84",
             "0",
             "98",
@@ -690,51 +636,15 @@
             "2",
             "STRIKING RESULTS PRO SHOP",
             "W",
-            "0",
-            "0",
-            "130",
-            "0",
-            "59",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0"
-          ],
-          [
-            "Rech, Rosalie",
+            "349",
             "3",
-            "6",
-            "ALLEY OOPS",
-            "W",
+            "116",
             "0",
-            "0",
-            "125",
-            "125",
-            "63",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0"
-          ],
-          [
-            "Robertson, Deb",
-            "5",
-            "4",
-            "STRIKING RESULTS PRO SHOP",
-            "W",
-            "0",
-            "0",
-            "130",
-            "0",
-            "59",
-            "0",
-            "0",
-            "0",
-            "0",
+            "71",
+            "194",
+            "562",
+            "123",
+            "349",
             "0",
             "0"
           ],
@@ -744,15 +654,15 @@
             "6",
             "STRIKING RESULTS PRO SHOP",
             "W",
-            "220",
-            "3",
-            "73",
+            "516",
+            "6",
+            "86",
             "0",
-            "107",
-            "186",
-            "541",
-            "79",
+            "96",
             "220",
+            "617",
+            "113",
+            "296",
             "0",
             "0"
           ],
@@ -762,11 +672,11 @@
             "3",
             "STRIKING RESULTS PRO SHOP",
             "W",
-            "305",
-            "3",
-            "101",
+            "605",
+            "6",
+            "100",
             "0",
-            "84",
+            "85",
             "202",
             "557",
             "118",
@@ -780,33 +690,15 @@
             "8",
             "ALLEY OOPS",
             "W",
-            "454",
-            "3",
+            "934",
+            "6",
             "142",
             "142",
             "49",
-            "206",
-            "601",
-            "157",
-            "454",
-            "0",
-            "0"
-          ],
-          [
-            "Terrell, Renessa",
-            "4",
-            "6",
-            "LOVELY LADY LE0PARDS",
-            "W",
-            "0",
-            "0",
-            "140",
-            "140",
-            "51",
-            "0",
-            "0",
-            "0",
-            "0",
+            "231",
+            "627",
+            "182",
+            "480",
             "0",
             "0"
           ],
@@ -816,15 +708,15 @@
             "4",
             "HI-WAY DINER",
             "W",
-            "440",
-            "3",
+            "941",
+            "6",
             "175",
             "175",
             "21",
-            "196",
-            "503",
-            "175",
-            "440",
+            "208",
+            "564",
+            "187",
+            "501",
             "0",
             "0"
           ],
@@ -847,169 +739,25 @@
             "0"
           ],
           [
-            "Waterman, Tressa",
-            "3",
-            "2",
-            "ALLEY OOPS",
-            "W",
-            "0",
-            "0",
-            "148",
-            "148",
-            "44",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0"
-          ],
-          [
             "Wenger, Celeste",
             "2",
             "5",
             "HI-WAY DINER",
             "W",
-            "435",
-            "3",
+            "929",
+            "6",
             "118",
             "118",
             "69",
-            "228",
-            "642",
-            "159",
-            "435",
+            "246",
+            "701",
+            "177",
+            "494",
             "0",
             "0"
           ]
         ],
         "emphasis": [
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
           [
             false,
             false,
@@ -1537,394 +1285,121 @@
     ],
     "recaps": [
       {
-        "title": "LOVELY LADY LE0PARDS matchup",
+        "title": "HI-WAY DINER matchup",
         "headers": [
           "Bowler",
-          "AVG",
-          "HDCP",
-          "GM1",
-          "GM2",
-          "GM3",
-          "GM4",
-          "GM5",
-          "GM6",
-          "Total"
+          "Average",
+          "Handicap",
+          "Game 1",
+          "Game 2",
+          "Game 3",
+          "Scratch series"
         ],
         "rows": [
-          [
-            "Team 4",
-            "Lane 14 | Team points won: 2"
-          ],
-          [
-            "Dixon, Maddy",
-            "126",
-            "62",
-            "147",
-            "114",
-            "135",
-            "396"
-          ],
-          [
-            "Davis, Erin",
-            "156",
-            "37",
-            "142",
-            "140",
-            "181",
-            "463"
-          ],
-          [
-            "Connell, Zale",
-            "140",
-            "51",
-            "135",
-            "145",
-            "158",
-            "438"
-          ],
-          [
-            "Key, Emily",
-            "116",
-            "71",
-            "108",
-            "122",
-            "120",
-            "350"
-          ],
-          [
-            "Total",
-            "532",
-            "521",
-            "594",
-            "0",
-            "0",
-            "0",
-            "1647"
-          ],
-          [
-            "Team 3",
-            "Lane 13 | Team points won: 5"
-          ],
-          [
-            "Dalrymple, Kelli",
-            "133",
-            "56",
-            "161",
-            "141",
-            "117",
-            "419"
-          ],
-          [
-            "Miller, Kelly",
-            "142",
-            "49",
-            "102",
-            "126",
-            "169",
-            "397"
-          ],
-          [
-            "Shepherd, Jan",
-            "142",
-            "49",
-            "142",
-            "157",
-            "155",
-            "454"
-          ],
-          [
-            "Waldman, Laura",
-            "114",
-            "73",
-            "132",
-            "120",
-            "135",
-            "387"
-          ],
-          [
-            "Total",
-            "537",
-            "544",
-            "576",
-            "0",
-            "0",
-            "0",
-            "1657"
-          ]
-        ],
-        "emphasis": [
-          [
-            true,
-            true
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
-          ],
-          [
-            true,
-            true
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
-          ]
-        ]
-      },
-      {
-        "title": "STAR CITY CUSTOM HOMES matchup",
-        "headers": [
-          "Bowler",
-          "AVG",
-          "HDCP",
-          "GM1",
-          "GM2",
-          "GM3",
-          "GM4",
-          "GM5",
-          "GM6",
-          "Total"
-        ],
-        "rows": [
-          [
-            "Team 1",
-            "Lane 11 | Team points won: 2"
-          ],
-          [
-            "Meyer, Tara",
-            "143",
-            "48",
-            "131",
-            "147",
-            "143",
-            "421"
-          ],
-          [
-            "Graham, Roxane",
-            "140",
-            "51",
-            "135",
-            "140",
-            "147",
-            "422"
-          ],
-          [
-            "Kendle, Deb",
-            "168",
-            "27",
-            "171",
-            "146",
-            "184",
-            "501"
-          ],
-          [
-            "Kendle, Kat",
-            "206",
-            "0",
-            "173",
-            "170",
-            "175",
-            "518"
-          ],
-          [
-            "Total",
-            "610",
-            "603",
-            "649",
-            "0",
-            "0",
-            "0",
-            "1862"
-          ],
           [
             "Team 2",
-            "Lane 12 | Team points won: 5"
+            "Lane 15 points won: 3"
           ],
           [
             "Kermoade, Stacy",
             "141",
             "50",
-            "170",
-            "115",
-            "154",
-            "439"
+            "167",
+            "129",
+            "128",
+            "424"
           ],
           [
-            "Harris, Andee",
-            "152",
-            "40",
-            "111",
-            "128",
-            "177",
-            "416"
+            "Novak, Mikayla",
+            "173",
+            "22",
+            "165",
+            "142",
+            "159",
+            "466"
           ],
           [
             "Thiessen, Lisa",
             "175",
             "21",
-            "136",
-            "175",
-            "129",
-            "440"
+            "187",
+            "166",
+            "148",
+            "501"
           ],
           [
             "Wenger, Celeste",
             "118",
             "69",
+            "177",
+            "158",
             "159",
-            "151",
-            "125",
-            "435"
+            "494"
           ],
           [
             "Total",
-            "576",
-            "569",
-            "585",
-            "0",
-            "0",
-            "0",
-            "1730"
+            "696",
+            "595",
+            "594",
+            "1885"
+          ],
+          [
+            "Team 3",
+            "Lane 16 points won: 4"
+          ],
+          [
+            "Miller, Kelly",
+            "142",
+            "49",
+            "123",
+            "122",
+            "149",
+            "394"
+          ],
+          [
+            "Cartwright, Jaime",
+            "88",
+            "95",
+            "82",
+            "85",
+            "97",
+            "264"
+          ],
+          [
+            "Shepherd, Jan",
+            "142",
+            "49",
+            "130",
+            "182",
+            "168",
+            "480"
+          ],
+          [
+            "Booth, Elaine",
+            "124",
+            "64",
+            "125",
+            "129",
+            "144",
+            "398"
+          ],
+          [
+            "Total",
+            "460",
+            "518",
+            "558",
+            "1536"
           ]
         ],
         "emphasis": [
           [
             true,
-            true
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
             false,
             false,
             false,
             false,
             false,
             false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
-          ],
-          [
-            true,
-            true
           ],
           [
             false,
@@ -1963,14 +1438,63 @@
             false
           ],
           [
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
             true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false
           ]
         ]
       },
@@ -1978,172 +1502,118 @@
         "title": "STRIKING RESULTS PRO SHOP matchup",
         "headers": [
           "Bowler",
-          "AVG",
-          "HDCP",
-          "GM1",
-          "GM2",
-          "GM3",
-          "GM4",
-          "GM5",
-          "GM6",
-          "Total"
+          "Average",
+          "Handicap",
+          "Game 1",
+          "Game 2",
+          "Game 3",
+          "Scratch series"
         ],
         "rows": [
           [
             "Team 5",
-            "Lane 15 | Team points won: 2"
+            "Lane 11 points won: 2"
           ],
           [
             "Otto, Melissa",
             "84",
             "98",
-            "80",
-            "106",
-            "67",
-            "253"
+            "87",
+            "88",
+            "76",
+            "251"
+          ],
+          [
+            "Polacek, Carole",
+            "116",
+            "71",
+            "115",
+            "111",
+            "123",
+            "349"
           ],
           [
             "Shearer, Deb",
             "101",
             "84",
-            "82",
-            "118",
+            "93",
             "105",
-            "305"
-          ],
-          [
-            "Loseth, Jane",
-            "133",
-            "56",
-            "126",
-            "127",
-            "148",
-            "401"
+            "102",
+            "300"
           ],
           [
             "Rutledge, Sue",
             "73",
             "107",
-            "70",
-            "71",
-            "79",
-            "220"
+            "92",
+            "113",
+            "91",
+            "296"
           ],
           [
             "Total",
-            "358",
-            "422",
-            "399",
-            "0",
-            "0",
-            "0",
-            "1179"
+            "387",
+            "417",
+            "392",
+            "1196"
           ],
           [
-            "Team 6",
-            "Lane 16 | Team points won: 5"
+            "Team 4",
+            "Lane 12 points won: 5"
           ],
           [
-            "Lehmann, Ruthy",
-            "116",
-            "71",
+            "Crowl, Renita",
             "132",
+            "57",
+            "136",
+            "114",
+            "155",
+            "405"
+          ],
+          [
+            "Crowl, Maddy",
+            "126",
+            "62",
+            "126",
+            "137",
+            "140",
+            "403"
+          ],
+          [
+            "Connell, Zale",
+            "140",
+            "51",
             "152",
-            "96",
-            "380"
+            "143",
+            "134",
+            "429"
           ],
           [
-            "Cornman, Kristine",
-            "125",
-            "63",
-            "115",
-            "115",
-            "115",
-            "345"
-          ],
-          [
-            "Brison, Carrie",
-            "125",
-            "63",
-            "104",
-            "151",
+            "Key, Emily",
             "116",
-            "371"
-          ],
-          [
-            "Johnston, Angel",
-            "129",
-            "60",
-            "151",
-            "135",
-            "127",
-            "413"
+            "71",
+            "136",
+            "122",
+            "117",
+            "375"
           ],
           [
             "Total",
-            "502",
-            "553",
-            "454",
-            "0",
-            "0",
-            "0",
-            "1509"
+            "550",
+            "516",
+            "546",
+            "1612"
           ]
         ],
         "emphasis": [
           [
             true,
-            true
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
             false,
             false,
             false,
             false,
             false,
             false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
-          ],
-          [
-            true,
-            true
           ],
           [
             false,
@@ -2182,21 +1652,284 @@
             false
           ],
           [
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
             true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        ]
+      },
+      {
+        "title": "STRIKE A POSE matchup",
+        "headers": [
+          "Bowler",
+          "Average",
+          "Handicap",
+          "Game 1",
+          "Game 2",
+          "Game 3",
+          "Scratch series"
+        ],
+        "rows": [
+          [
+            "Team 6",
+            "Lane 14 points won: 7"
+          ],
+          [
+            "Lehmann, Ruthy",
+            "116",
+            "71",
+            "137",
+            "106",
+            "139",
+            "382"
+          ],
+          [
+            "Cornman, Kristine",
+            "125",
+            "63",
+            "156",
+            "116",
+            "154",
+            "426"
+          ],
+          [
+            "Brison, Carrie",
+            "125",
+            "63",
+            "137",
+            "160",
+            "113",
+            "410"
+          ],
+          [
+            "Johnston, Angel",
+            "129",
+            "60",
+            "188",
+            "167",
+            "135",
+            "490"
+          ],
+          [
+            "Total",
+            "618",
+            "549",
+            "541",
+            "1708"
+          ],
+          [
+            "Team 1",
+            "Lane 13 points won: 0"
+          ],
+          [
+            "Meyer, Tara",
+            "143",
+            "48",
+            "100",
+            "126",
+            "135",
+            "361"
+          ],
+          [
+            "Graham, Roxane",
+            "140",
+            "51",
+            "97",
+            "93",
+            "153",
+            "343"
+          ],
+          [
+            "Kendle, Deb",
+            "168",
+            "27",
+            "134",
+            "157",
+            "179",
+            "470"
+          ],
+          [
+            "Kendle, Kat",
+            "206",
+            "0",
+            "170",
+            "213",
+            "190",
+            "573"
+          ],
+          [
+            "Total",
+            "501",
+            "589",
+            "657",
+            "1747"
+          ]
+        ],
+        "emphasis": [
+          [
             true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
             true,
-            true,
-            true,
-            true,
-            true,
-            true
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false
           ]
         ]
       }
     ],
     "lanes": [
       {
-        "title": "Table 3",
+        "title": "All scheduled teams",
         "headers": [
           "Lane",
           "Team#",
@@ -2205,63 +1938,63 @@
         "rows": [
           [
             "11",
-            "5",
-            "STRIKING RESULTS PRO SHOP"
+            "3",
+            "ALLEY OOPS"
           ],
           [
             "12",
-            "4",
-            "LOVELY LADY LE0PARDS"
-          ],
-          [
-            "13",
             "1",
             "STAR CITY CUSTOM HOMES"
           ],
           [
-            "14",
-            "6",
-            "STRIKE A POSE"
-          ],
-          [
-            "15",
+            "13",
             "2",
             "HI-WAY DINER"
           ],
           [
+            "14",
+            "5",
+            "STRIKING RESULTS PRO SHOP"
+          ],
+          [
+            "15",
+            "6",
+            "STRIKE A POSE"
+          ],
+          [
             "16",
-            "3",
-            "ALLEY OOPS"
+            "4",
+            "LOVELY LADY LE0PARDS"
           ]
         ],
         "emphasis": [
           [
-            false,
-            false,
-            false
-          ],
-          [
-            false,
+            true,
             false,
             false
           ],
           [
-            false,
-            false,
-            false
-          ],
-          [
-            false,
+            true,
             false,
             false
           ],
           [
-            false,
+            true,
             false,
             false
           ],
           [
+            true,
             false,
+            false
+          ],
+          [
+            true,
+            false,
+            false
+          ],
+          [
+            true,
             false,
             false
           ]
@@ -2278,7 +2011,7 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
@@ -2304,8 +2037,8 @@
             "Miller, Kelly",
             "W",
             "49",
-            "3",
-            "397",
+            "6",
+            "791",
             "142"
           ],
           [
@@ -2313,8 +2046,8 @@
             "Cartwright, Jaime",
             "W",
             "95",
-            "0",
-            "0",
+            "3",
+            "264",
             "88"
           ],
           [
@@ -2349,8 +2082,8 @@
             "Shepherd, Jan",
             "W",
             "49",
-            "3",
-            "454",
+            "6",
+            "934",
             "142"
           ],
           [
@@ -2358,8 +2091,8 @@
             "Booth, Elaine",
             "W",
             "64",
-            "0",
-            "0",
+            "3",
+            "398",
             "124"
           ],
           [
@@ -2475,7 +2208,7 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
@@ -2483,8 +2216,8 @@
             "Kermoade, Stacy",
             "W",
             "50",
-            "3",
-            "439",
+            "6",
+            "863",
             "141"
           ],
           [
@@ -2501,8 +2234,8 @@
             "Novak, Mikayla",
             "W",
             "22",
-            "0",
-            "0",
+            "3",
+            "466",
             "173"
           ],
           [
@@ -2510,8 +2243,8 @@
             "Thiessen, Lisa",
             "W",
             "21",
-            "3",
-            "440",
+            "6",
+            "941",
             "175"
           ],
           [
@@ -2519,8 +2252,8 @@
             "Wenger, Celeste",
             "W",
             "69",
-            "3",
-            "435",
+            "6",
+            "929",
             "118"
           ]
         ],
@@ -2582,7 +2315,7 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
@@ -2590,17 +2323,17 @@
             "Crowl, Renita",
             "W",
             "57",
-            "0",
-            "0",
+            "3",
+            "405",
             "132"
           ],
           [
             "2",
-            "Dixon, Maddy",
+            "Crowl, Maddy",
             "W",
             "62",
-            "3",
-            "396",
+            "6",
+            "799",
             "126"
           ],
           [
@@ -2617,18 +2350,18 @@
             "Connell, Zale",
             "W",
             "51",
-            "3",
-            "438",
+            "6",
+            "867",
             "140"
           ],
           [
             "5",
             "Key, Emily",
             "W",
-            "71",
-            "3",
-            "350",
-            "116"
+            "68",
+            "6",
+            "725",
+            "120"
           ],
           [
             "6",
@@ -2707,7 +2440,7 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
@@ -2715,8 +2448,8 @@
             "Meyer, Tara",
             "W",
             "48",
-            "3",
-            "421",
+            "6",
+            "782",
             "143"
           ],
           [
@@ -2724,8 +2457,8 @@
             "Graham, Roxane",
             "W",
             "51",
-            "3",
-            "422",
+            "6",
+            "765",
             "140"
           ],
           [
@@ -2733,8 +2466,8 @@
             "Kendle, Deb",
             "W",
             "27",
-            "3",
-            "501",
+            "6",
+            "971",
             "168"
           ],
           [
@@ -2742,8 +2475,8 @@
             "Kendle, Kat",
             "W",
             "0",
-            "3",
-            "518",
+            "6",
+            "1091",
             "206"
           ],
           [
@@ -2814,7 +2547,7 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
@@ -2822,8 +2555,8 @@
             "Lehmann, Ruthy",
             "W",
             "71",
-            "3",
-            "380",
+            "6",
+            "762",
             "116"
           ],
           [
@@ -2831,8 +2564,8 @@
             "Cornman, Kristine",
             "W",
             "63",
-            "0",
-            "0",
+            "3",
+            "426",
             "125"
           ],
           [
@@ -2840,8 +2573,8 @@
             "Brison, Carrie",
             "W",
             "63",
-            "3",
-            "371",
+            "6",
+            "781",
             "125"
           ],
           [
@@ -2849,8 +2582,8 @@
             "Johnston, Angel",
             "W",
             "60",
-            "3",
-            "413",
+            "6",
+            "903",
             "129"
           ]
         ],
@@ -2903,7 +2636,7 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
@@ -2911,27 +2644,27 @@
             "Otto, Melissa",
             "W",
             "98",
-            "3",
-            "253",
+            "6",
+            "504",
             "84"
           ],
           [
             "2",
             "Polacek, Carole",
             "W",
-            "59",
-            "0",
-            "0",
-            "130"
+            "71",
+            "3",
+            "349",
+            "116"
           ],
           [
             "3",
             "Shearer, Deb",
             "W",
-            "84",
-            "3",
-            "305",
-            "101"
+            "85",
+            "6",
+            "605",
+            "100"
           ],
           [
             "4",
@@ -2955,10 +2688,10 @@
             "6",
             "Rutledge, Sue",
             "W",
-            "107",
-            "3",
-            "220",
-            "73"
+            "96",
+            "6",
+            "516",
+            "86"
           ]
         ],
         "emphasis": [
@@ -3022,7 +2755,7 @@
     ]
   },
   "officialRecapVersion": 1,
-  "sourceFingerprint": "9dd0065942f53ffddcbb75f90e03efae7b7baa30daed295d4f5f64aabba5186b",
+  "sourceFingerprint": "8e2b712ae2d92c574a52c08c0b0209c693a3c9a1180481a68ec355de87d0f158",
   "history": [
     {
       "week": "1",
@@ -6029,6 +5762,2747 @@
           }
         ]
       }
+    },
+    {
+      "week": "2",
+      "sourceUpdated": "Sep 15, 2026",
+      "syncedAt": "2026-09-15T15:55:56.181Z",
+      "views": {
+        "standings": [
+          {
+            "title": "League standings",
+            "headers": [
+              "Place",
+              "Team",
+              "Team#",
+              "Div",
+              "WON",
+              "LOST",
+              "%",
+              "YTD WON",
+              "AVG",
+              "Pins",
+              "HSG",
+              "HSS"
+            ],
+            "rows": [
+              [
+                "1",
+                "STRIKE A POSE",
+                "6",
+                "1",
+                "12",
+                "2",
+                "86 %",
+                "12",
+                "495",
+                "3217",
+                "618",
+                "1708"
+              ],
+              [
+                "2",
+                "ALLEY OOPS",
+                "3",
+                "1",
+                "9",
+                "5",
+                "64 %",
+                "9",
+                "511",
+                "3193",
+                "576",
+                "1657"
+              ],
+              [
+                "3",
+                "HI-WAY DINER",
+                "2",
+                "1",
+                "8",
+                "6",
+                "57 %",
+                "8",
+                "641",
+                "3615",
+                "696",
+                "1885"
+              ],
+              [
+                "4",
+                "LOVELY LADY LE0PARDS",
+                "4",
+                "1",
+                "7",
+                "7",
+                "50 %",
+                "7",
+                "554",
+                "3259",
+                "594",
+                "1647"
+              ],
+              [
+                "5",
+                "STRIKING RESULTS PRO SHOP",
+                "5",
+                "1",
+                "4",
+                "10",
+                "29 %",
+                "4",
+                "430",
+                "2375",
+                "422",
+                "1196"
+              ],
+              [
+                "6",
+                "STAR CITY CUSTOM HOMES",
+                "1",
+                "1",
+                "2",
+                "12",
+                "14 %",
+                "2",
+                "657",
+                "3609",
+                "657",
+                "1862"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ]
+            ]
+          }
+        ],
+        "bowlers": [
+          {
+            "title": "Bowlers and season statistics",
+            "headers": [
+              "Name",
+              "Team#",
+              "Pos#",
+              "Team",
+              "Gndr",
+              "Pins",
+              "Games",
+              "Avg",
+              "EnteringAvg",
+              "HCP",
+              "HHG",
+              "HHS",
+              "HSG",
+              "HSS",
+              "MIB",
+              "WON"
+            ],
+            "rows": [
+              [
+                "Booth, Elaine",
+                "3",
+                "9",
+                "ALLEY OOPS",
+                "W",
+                "398",
+                "3",
+                "124",
+                "124",
+                "64",
+                "208",
+                "590",
+                "144",
+                "398",
+                "0",
+                "0"
+              ],
+              [
+                "Brison, Carrie",
+                "6",
+                "3",
+                "STRIKE A POSE",
+                "W",
+                "781",
+                "6",
+                "125",
+                "125",
+                "63",
+                "223",
+                "599",
+                "160",
+                "410",
+                "0",
+                "0"
+              ],
+              [
+                "Cartwright, Jaime",
+                "3",
+                "4",
+                "ALLEY OOPS",
+                "W",
+                "264",
+                "3",
+                "88",
+                "88",
+                "95",
+                "192",
+                "549",
+                "97",
+                "264",
+                "0",
+                "0"
+              ],
+              [
+                "Connell, Zale",
+                "4",
+                "4",
+                "LOVELY LADY LE0PARDS",
+                "W",
+                "867",
+                "6",
+                "140",
+                "140",
+                "51",
+                "209",
+                "591",
+                "158",
+                "438",
+                "0",
+                "0"
+              ],
+              [
+                "Cornman, Kristine",
+                "6",
+                "2",
+                "STRIKE A POSE",
+                "W",
+                "426",
+                "3",
+                "125",
+                "125",
+                "63",
+                "219",
+                "615",
+                "156",
+                "426",
+                "0",
+                "0"
+              ],
+              [
+                "Crowl, Maddy",
+                "4",
+                "2",
+                "LOVELY LADY LE0PARDS",
+                "W",
+                "799",
+                "6",
+                "126",
+                "126",
+                "62",
+                "209",
+                "589",
+                "147",
+                "403",
+                "0",
+                "0"
+              ],
+              [
+                "Crowl, Renita",
+                "4",
+                "1",
+                "LOVELY LADY LE0PARDS",
+                "W",
+                "405",
+                "3",
+                "132",
+                "132",
+                "57",
+                "212",
+                "576",
+                "155",
+                "405",
+                "0",
+                "0"
+              ],
+              [
+                "Dalrymple, Kelli",
+                "3",
+                "1",
+                "ALLEY OOPS",
+                "W",
+                "419",
+                "3",
+                "133",
+                "133",
+                "56",
+                "217",
+                "587",
+                "161",
+                "419",
+                "0",
+                "0"
+              ],
+              [
+                "Davis, Erin",
+                "4",
+                "3",
+                "LOVELY LADY LE0PARDS",
+                "W",
+                "463",
+                "3",
+                "156",
+                "156",
+                "37",
+                "218",
+                "574",
+                "181",
+                "463",
+                "0",
+                "0"
+              ],
+              [
+                "Graham, Roxane",
+                "1",
+                "2",
+                "STAR CITY CUSTOM HOMES",
+                "W",
+                "765",
+                "6",
+                "140",
+                "140",
+                "51",
+                "204",
+                "575",
+                "153",
+                "422",
+                "0",
+                "0"
+              ],
+              [
+                "Harris, Andee",
+                "2",
+                "2",
+                "HI-WAY DINER",
+                "W",
+                "416",
+                "3",
+                "152",
+                "152",
+                "40",
+                "217",
+                "536",
+                "177",
+                "416",
+                "0",
+                "0"
+              ],
+              [
+                "Johnston, Angel",
+                "6",
+                "4",
+                "STRIKE A POSE",
+                "W",
+                "903",
+                "6",
+                "129",
+                "129",
+                "60",
+                "248",
+                "670",
+                "188",
+                "490",
+                "0",
+                "0"
+              ],
+              [
+                "Kendle, Deb",
+                "1",
+                "3",
+                "STAR CITY CUSTOM HOMES",
+                "W",
+                "971",
+                "6",
+                "168",
+                "168",
+                "27",
+                "211",
+                "582",
+                "184",
+                "501",
+                "0",
+                "0"
+              ],
+              [
+                "Kendle, Kat",
+                "1",
+                "4",
+                "STAR CITY CUSTOM HOMES",
+                "W",
+                "1091",
+                "6",
+                "206",
+                "206",
+                "0",
+                "213",
+                "573",
+                "213",
+                "573",
+                "0",
+                "0"
+              ],
+              [
+                "Kermoade, Stacy",
+                "2",
+                "1",
+                "HI-WAY DINER",
+                "W",
+                "863",
+                "6",
+                "141",
+                "141",
+                "50",
+                "220",
+                "589",
+                "170",
+                "439",
+                "0",
+                "0"
+              ],
+              [
+                "Key, Emily",
+                "4",
+                "5",
+                "LOVELY LADY LE0PARDS",
+                "W",
+                "725",
+                "6",
+                "120",
+                "0",
+                "68",
+                "207",
+                "588",
+                "136",
+                "375",
+                "0",
+                "0"
+              ],
+              [
+                "Lehmann, Ruthy",
+                "6",
+                "1",
+                "STRIKE A POSE",
+                "W",
+                "762",
+                "6",
+                "116",
+                "116",
+                "71",
+                "223",
+                "595",
+                "152",
+                "382",
+                "0",
+                "0"
+              ],
+              [
+                "Loseth, Jane",
+                "5",
+                "5",
+                "STRIKING RESULTS PRO SHOP",
+                "W",
+                "401",
+                "3",
+                "133",
+                "0",
+                "56",
+                "204",
+                "569",
+                "148",
+                "401",
+                "0",
+                "0"
+              ],
+              [
+                "Meyer, Tara",
+                "1",
+                "1",
+                "STAR CITY CUSTOM HOMES",
+                "W",
+                "782",
+                "6",
+                "143",
+                "143",
+                "48",
+                "195",
+                "565",
+                "147",
+                "421",
+                "0",
+                "0"
+              ],
+              [
+                "Miller, Kelly",
+                "3",
+                "3",
+                "ALLEY OOPS",
+                "W",
+                "791",
+                "6",
+                "142",
+                "142",
+                "49",
+                "218",
+                "544",
+                "169",
+                "397",
+                "0",
+                "0"
+              ],
+              [
+                "Novak, Mikayla",
+                "2",
+                "3",
+                "HI-WAY DINER",
+                "W",
+                "466",
+                "3",
+                "173",
+                "173",
+                "22",
+                "187",
+                "532",
+                "165",
+                "466",
+                "0",
+                "0"
+              ],
+              [
+                "Otto, Melissa",
+                "5",
+                "1",
+                "STRIKING RESULTS PRO SHOP",
+                "W",
+                "504",
+                "6",
+                "84",
+                "0",
+                "98",
+                "204",
+                "547",
+                "106",
+                "253",
+                "0",
+                "0"
+              ],
+              [
+                "Polacek, Carole",
+                "5",
+                "2",
+                "STRIKING RESULTS PRO SHOP",
+                "W",
+                "349",
+                "3",
+                "116",
+                "0",
+                "71",
+                "194",
+                "562",
+                "123",
+                "349",
+                "0",
+                "0"
+              ],
+              [
+                "Rutledge, Sue",
+                "5",
+                "6",
+                "STRIKING RESULTS PRO SHOP",
+                "W",
+                "516",
+                "6",
+                "86",
+                "0",
+                "96",
+                "220",
+                "617",
+                "113",
+                "296",
+                "0",
+                "0"
+              ],
+              [
+                "Shearer, Deb",
+                "5",
+                "3",
+                "STRIKING RESULTS PRO SHOP",
+                "W",
+                "605",
+                "6",
+                "100",
+                "0",
+                "85",
+                "202",
+                "557",
+                "118",
+                "305",
+                "0",
+                "0"
+              ],
+              [
+                "Shepherd, Jan",
+                "3",
+                "8",
+                "ALLEY OOPS",
+                "W",
+                "934",
+                "6",
+                "142",
+                "142",
+                "49",
+                "231",
+                "627",
+                "182",
+                "480",
+                "0",
+                "0"
+              ],
+              [
+                "Thiessen, Lisa",
+                "2",
+                "4",
+                "HI-WAY DINER",
+                "W",
+                "941",
+                "6",
+                "175",
+                "175",
+                "21",
+                "208",
+                "564",
+                "187",
+                "501",
+                "0",
+                "0"
+              ],
+              [
+                "Waldman, Laura",
+                "3",
+                "10",
+                "ALLEY OOPS",
+                "W",
+                "387",
+                "3",
+                "114",
+                "114",
+                "73",
+                "208",
+                "606",
+                "135",
+                "387",
+                "0",
+                "0"
+              ],
+              [
+                "Wenger, Celeste",
+                "2",
+                "5",
+                "HI-WAY DINER",
+                "W",
+                "929",
+                "6",
+                "118",
+                "118",
+                "69",
+                "246",
+                "701",
+                "177",
+                "494",
+                "0",
+                "0"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ]
+          }
+        ],
+        "recaps": [
+          {
+            "title": "HI-WAY DINER matchup",
+            "headers": [
+              "Bowler",
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
+            ],
+            "rows": [
+              [
+                "Team 2",
+                "Lane 15 points won: 3"
+              ],
+              [
+                "Kermoade, Stacy",
+                "141",
+                "50",
+                "167",
+                "129",
+                "128",
+                "424"
+              ],
+              [
+                "Novak, Mikayla",
+                "173",
+                "22",
+                "165",
+                "142",
+                "159",
+                "466"
+              ],
+              [
+                "Thiessen, Lisa",
+                "175",
+                "21",
+                "187",
+                "166",
+                "148",
+                "501"
+              ],
+              [
+                "Wenger, Celeste",
+                "118",
+                "69",
+                "177",
+                "158",
+                "159",
+                "494"
+              ],
+              [
+                "Total",
+                "696",
+                "595",
+                "594",
+                "1885"
+              ],
+              [
+                "Team 3",
+                "Lane 16 points won: 4"
+              ],
+              [
+                "Miller, Kelly",
+                "142",
+                "49",
+                "123",
+                "122",
+                "149",
+                "394"
+              ],
+              [
+                "Cartwright, Jaime",
+                "88",
+                "95",
+                "82",
+                "85",
+                "97",
+                "264"
+              ],
+              [
+                "Shepherd, Jan",
+                "142",
+                "49",
+                "130",
+                "182",
+                "168",
+                "480"
+              ],
+              [
+                "Booth, Elaine",
+                "124",
+                "64",
+                "125",
+                "129",
+                "144",
+                "398"
+              ],
+              [
+                "Total",
+                "460",
+                "518",
+                "558",
+                "1536"
+              ]
+            ],
+            "emphasis": [
+              [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ]
+          },
+          {
+            "title": "STRIKING RESULTS PRO SHOP matchup",
+            "headers": [
+              "Bowler",
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
+            ],
+            "rows": [
+              [
+                "Team 5",
+                "Lane 11 points won: 2"
+              ],
+              [
+                "Otto, Melissa",
+                "84",
+                "98",
+                "87",
+                "88",
+                "76",
+                "251"
+              ],
+              [
+                "Polacek, Carole",
+                "116",
+                "71",
+                "115",
+                "111",
+                "123",
+                "349"
+              ],
+              [
+                "Shearer, Deb",
+                "101",
+                "84",
+                "93",
+                "105",
+                "102",
+                "300"
+              ],
+              [
+                "Rutledge, Sue",
+                "73",
+                "107",
+                "92",
+                "113",
+                "91",
+                "296"
+              ],
+              [
+                "Total",
+                "387",
+                "417",
+                "392",
+                "1196"
+              ],
+              [
+                "Team 4",
+                "Lane 12 points won: 5"
+              ],
+              [
+                "Crowl, Renita",
+                "132",
+                "57",
+                "136",
+                "114",
+                "155",
+                "405"
+              ],
+              [
+                "Crowl, Maddy",
+                "126",
+                "62",
+                "126",
+                "137",
+                "140",
+                "403"
+              ],
+              [
+                "Connell, Zale",
+                "140",
+                "51",
+                "152",
+                "143",
+                "134",
+                "429"
+              ],
+              [
+                "Key, Emily",
+                "116",
+                "71",
+                "136",
+                "122",
+                "117",
+                "375"
+              ],
+              [
+                "Total",
+                "550",
+                "516",
+                "546",
+                "1612"
+              ]
+            ],
+            "emphasis": [
+              [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ]
+          },
+          {
+            "title": "STRIKE A POSE matchup",
+            "headers": [
+              "Bowler",
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
+            ],
+            "rows": [
+              [
+                "Team 6",
+                "Lane 14 points won: 7"
+              ],
+              [
+                "Lehmann, Ruthy",
+                "116",
+                "71",
+                "137",
+                "106",
+                "139",
+                "382"
+              ],
+              [
+                "Cornman, Kristine",
+                "125",
+                "63",
+                "156",
+                "116",
+                "154",
+                "426"
+              ],
+              [
+                "Brison, Carrie",
+                "125",
+                "63",
+                "137",
+                "160",
+                "113",
+                "410"
+              ],
+              [
+                "Johnston, Angel",
+                "129",
+                "60",
+                "188",
+                "167",
+                "135",
+                "490"
+              ],
+              [
+                "Total",
+                "618",
+                "549",
+                "541",
+                "1708"
+              ],
+              [
+                "Team 1",
+                "Lane 13 points won: 0"
+              ],
+              [
+                "Meyer, Tara",
+                "143",
+                "48",
+                "100",
+                "126",
+                "135",
+                "361"
+              ],
+              [
+                "Graham, Roxane",
+                "140",
+                "51",
+                "97",
+                "93",
+                "153",
+                "343"
+              ],
+              [
+                "Kendle, Deb",
+                "168",
+                "27",
+                "134",
+                "157",
+                "179",
+                "470"
+              ],
+              [
+                "Kendle, Kat",
+                "206",
+                "0",
+                "170",
+                "213",
+                "190",
+                "573"
+              ],
+              [
+                "Total",
+                "501",
+                "589",
+                "657",
+                "1747"
+              ]
+            ],
+            "emphasis": [
+              [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ]
+          }
+        ],
+        "lanes": [
+          {
+            "title": "All scheduled teams",
+            "headers": [
+              "Lane",
+              "Team#",
+              "Team"
+            ],
+            "rows": [
+              [
+                "11",
+                "3",
+                "ALLEY OOPS"
+              ],
+              [
+                "12",
+                "1",
+                "STAR CITY CUSTOM HOMES"
+              ],
+              [
+                "13",
+                "2",
+                "HI-WAY DINER"
+              ],
+              [
+                "14",
+                "5",
+                "STRIKING RESULTS PRO SHOP"
+              ],
+              [
+                "15",
+                "6",
+                "STRIKE A POSE"
+              ],
+              [
+                "16",
+                "4",
+                "LOVELY LADY LE0PARDS"
+              ]
+            ],
+            "emphasis": [
+              [
+                true,
+                false,
+                false
+              ],
+              [
+                true,
+                false,
+                false
+              ],
+              [
+                true,
+                false,
+                false
+              ],
+              [
+                true,
+                false,
+                false
+              ],
+              [
+                true,
+                false,
+                false
+              ],
+              [
+                true,
+                false,
+                false
+              ]
+            ]
+          }
+        ],
+        "rosters": [
+          {
+            "title": "Team 3 · ALLEY OOPS roster",
+            "headers": [
+              "Pos",
+              "Name",
+              "Gndr",
+              "HCP",
+              "Gms",
+              "Pins",
+              "AVG"
+            ],
+            "rows": [
+              [
+                "1",
+                "Dalrymple, Kelli",
+                "W",
+                "56",
+                "3",
+                "419",
+                "133"
+              ],
+              [
+                "2",
+                "Waterman, Tressa",
+                "W",
+                "44",
+                "0",
+                "0",
+                "148"
+              ],
+              [
+                "3",
+                "Miller, Kelly",
+                "W",
+                "49",
+                "6",
+                "791",
+                "142"
+              ],
+              [
+                "4",
+                "Cartwright, Jaime",
+                "W",
+                "95",
+                "3",
+                "264",
+                "88"
+              ],
+              [
+                "5",
+                "Connerley, Nancy",
+                "W",
+                "65",
+                "0",
+                "0",
+                "123"
+              ],
+              [
+                "6",
+                "Rech, Rosalie",
+                "W",
+                "63",
+                "0",
+                "0",
+                "125"
+              ],
+              [
+                "7",
+                "Dugan, Megan",
+                "W",
+                "52",
+                "0",
+                "0",
+                "138"
+              ],
+              [
+                "8",
+                "Shepherd, Jan",
+                "W",
+                "49",
+                "6",
+                "934",
+                "142"
+              ],
+              [
+                "9",
+                "Booth, Elaine",
+                "W",
+                "64",
+                "3",
+                "398",
+                "124"
+              ],
+              [
+                "10",
+                "Waldman, Laura",
+                "W",
+                "73",
+                "3",
+                "387",
+                "114"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "team": "3"
+          },
+          {
+            "title": "Team 2 · HI-WAY DINER roster",
+            "headers": [
+              "Pos",
+              "Name",
+              "Gndr",
+              "HCP",
+              "Gms",
+              "Pins",
+              "AVG"
+            ],
+            "rows": [
+              [
+                "1",
+                "Kermoade, Stacy",
+                "W",
+                "50",
+                "6",
+                "863",
+                "141"
+              ],
+              [
+                "2",
+                "Harris, Andee",
+                "W",
+                "40",
+                "3",
+                "416",
+                "152"
+              ],
+              [
+                "3",
+                "Novak, Mikayla",
+                "W",
+                "22",
+                "3",
+                "466",
+                "173"
+              ],
+              [
+                "4",
+                "Thiessen, Lisa",
+                "W",
+                "21",
+                "6",
+                "941",
+                "175"
+              ],
+              [
+                "5",
+                "Wenger, Celeste",
+                "W",
+                "69",
+                "6",
+                "929",
+                "118"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "team": "2"
+          },
+          {
+            "title": "Team 4 · LOVELY LADY LE0PARDS roster",
+            "headers": [
+              "Pos",
+              "Name",
+              "Gndr",
+              "HCP",
+              "Gms",
+              "Pins",
+              "AVG"
+            ],
+            "rows": [
+              [
+                "1",
+                "Crowl, Renita",
+                "W",
+                "57",
+                "3",
+                "405",
+                "132"
+              ],
+              [
+                "2",
+                "Crowl, Maddy",
+                "W",
+                "62",
+                "6",
+                "799",
+                "126"
+              ],
+              [
+                "3",
+                "Davis, Erin",
+                "W",
+                "37",
+                "3",
+                "463",
+                "156"
+              ],
+              [
+                "4",
+                "Connell, Zale",
+                "W",
+                "51",
+                "6",
+                "867",
+                "140"
+              ],
+              [
+                "5",
+                "Key, Emily",
+                "W",
+                "68",
+                "6",
+                "725",
+                "120"
+              ],
+              [
+                "6",
+                "Terrell, Renessa",
+                "W",
+                "51",
+                "0",
+                "0",
+                "140"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "team": "4"
+          },
+          {
+            "title": "Team 1 · STAR CITY CUSTOM HOMES roster",
+            "headers": [
+              "Pos",
+              "Name",
+              "Gndr",
+              "HCP",
+              "Gms",
+              "Pins",
+              "AVG"
+            ],
+            "rows": [
+              [
+                "1",
+                "Meyer, Tara",
+                "W",
+                "48",
+                "6",
+                "782",
+                "143"
+              ],
+              [
+                "2",
+                "Graham, Roxane",
+                "W",
+                "51",
+                "6",
+                "765",
+                "140"
+              ],
+              [
+                "3",
+                "Kendle, Deb",
+                "W",
+                "27",
+                "6",
+                "971",
+                "168"
+              ],
+              [
+                "4",
+                "Kendle, Kat",
+                "W",
+                "0",
+                "6",
+                "1091",
+                "206"
+              ],
+              [
+                "5",
+                "Heine, Laura",
+                "W",
+                "26",
+                "0",
+                "0",
+                "169"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "team": "1"
+          },
+          {
+            "title": "Team 6 · STRIKE A POSE roster",
+            "headers": [
+              "Pos",
+              "Name",
+              "Gndr",
+              "HCP",
+              "Gms",
+              "Pins",
+              "AVG"
+            ],
+            "rows": [
+              [
+                "1",
+                "Lehmann, Ruthy",
+                "W",
+                "71",
+                "6",
+                "762",
+                "116"
+              ],
+              [
+                "2",
+                "Cornman, Kristine",
+                "W",
+                "63",
+                "3",
+                "426",
+                "125"
+              ],
+              [
+                "3",
+                "Brison, Carrie",
+                "W",
+                "63",
+                "6",
+                "781",
+                "125"
+              ],
+              [
+                "4",
+                "Johnston, Angel",
+                "W",
+                "60",
+                "6",
+                "903",
+                "129"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "team": "6"
+          },
+          {
+            "title": "Team 5 · STRIKING RESULTS PRO SHOP roster",
+            "headers": [
+              "Pos",
+              "Name",
+              "Gndr",
+              "HCP",
+              "Gms",
+              "Pins",
+              "AVG"
+            ],
+            "rows": [
+              [
+                "1",
+                "Otto, Melissa",
+                "W",
+                "98",
+                "6",
+                "504",
+                "84"
+              ],
+              [
+                "2",
+                "Polacek, Carole",
+                "W",
+                "71",
+                "3",
+                "349",
+                "116"
+              ],
+              [
+                "3",
+                "Shearer, Deb",
+                "W",
+                "85",
+                "6",
+                "605",
+                "100"
+              ],
+              [
+                "4",
+                "Robertson, Deb",
+                "W",
+                "59",
+                "0",
+                "0",
+                "130"
+              ],
+              [
+                "5",
+                "Loseth, Jane",
+                "W",
+                "56",
+                "3",
+                "401",
+                "133"
+              ],
+              [
+                "6",
+                "Rutledge, Sue",
+                "W",
+                "96",
+                "6",
+                "516",
+                "86"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "team": "5"
+          }
+        ]
+      }
     }
-  ]
+  ],
+  "lastAttemptedAt": null,
+  "lastCheckedAt": "2026-09-15T15:55:56.181Z"
 }

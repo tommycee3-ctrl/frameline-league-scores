@@ -7,33 +7,33 @@
   "bowlsOn": "Saturday",
   "startTime": "10:00 AM",
   "type": "Handicap Youth Mixed",
-  "updated": "04/23/2026",
+  "updated": "Apr 23, 2026",
   "startDate": "Fall season",
   "bowlDay": 6,
   "centerId": "1163",
   "centerName": "Thunderbowl of Council Bluffs",
   "centerSlug": "thunderbowl-of-council-bluffs-council-bluffs-iowa",
   "area": "Council Bluffs",
-  "sourceUpdated": "04/23/2026",
-  "syncedAt": "2026-09-06T00:30:49.529Z",
+  "sourceUpdated": "Apr 23, 2026",
+  "syncedAt": "2026-09-15T15:50:41.107Z",
   "status": "current",
   "week": "31",
-  "fingerprint": "821d8d007d307d96009fca1ccb455bd0426b2966f2db00be61f6210b09f74443",
-  "lastCompletedCycle": "2026-09-05",
+  "fingerprint": "761401d4ad89bfbf117c2f03c237e4de633834f6a3627ac8d46d69f5e17f7a22",
+  "lastCompletedCycle": "2026-09-12",
   "views": {
     "standings": [
       {
-        "title": "Table 3",
+        "title": "League standings",
         "headers": [
-          "Division",
           "Place",
-          "Team#",
           "Team",
-          "Won",
-          "Lost",
-          "% Won",
-          "YTD Won",
-          "Avg",
+          "Team#",
+          "Div",
+          "WON",
+          "LOST",
+          "%",
+          "YTD WON",
+          "AVG",
           "Pins",
           "HSG",
           "HSS"
@@ -41,9 +41,9 @@
         "rows": [
           [
             "1",
-            "1",
-            "1",
             "Wild Ones",
+            "1",
+            "1",
             "24",
             "20",
             "55 %",
@@ -54,10 +54,10 @@
             "0"
           ],
           [
-            "1",
-            "2",
             "2",
             "Team 2",
+            "2",
+            "1",
             "20",
             "24",
             "45 %",
@@ -76,9 +76,9 @@
             false,
             false,
             false,
+            true,
             false,
-            false,
-            false,
+            true,
             false,
             false,
             false
@@ -90,9 +90,9 @@
             false,
             false,
             false,
+            true,
             false,
-            false,
-            false,
+            true,
             false,
             false,
             false
@@ -102,7 +102,7 @@
     ],
     "bowlers": [
       {
-        "title": "Table 3",
+        "title": "Bowlers and season statistics",
         "headers": [
           "Name",
           "Team#",
@@ -231,23 +231,6 @@
             "0"
           ],
           [
-            "Longnelson, Harley",
-            "0",
-            "0",
-            "M",
-            "0",
-            "0",
-            "90",
-            "0",
-            "99",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0"
-          ],
-          [
             "Manning, Michael",
             "2",
             "3",
@@ -269,6 +252,7 @@
             "Ray, Ryan",
             "0",
             "0",
+            "",
             "W",
             "776",
             "11",
@@ -286,6 +270,7 @@
             "Rose, Natalie",
             "0",
             "0",
+            "",
             "W",
             "1084",
             "14",
@@ -442,23 +427,6 @@
             false,
             false,
             false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
             false,
             false
           ],
@@ -477,9 +445,11 @@
             false,
             false,
             false,
+            false,
             false
           ],
           [
+            false,
             false,
             false,
             false,
@@ -522,26 +492,25 @@
         "title": "Wild Ones matchup",
         "headers": [
           "Bowler",
-          "AVG",
-          "HDCP",
-          "GM1",
-          "GM2",
-          "GM3",
-          "GM4",
-          "GM5",
-          "GM6",
-          "Total"
+          "Average",
+          "Handicap",
+          "Game 1",
+          "Game 2",
+          "Game 3",
+          "Scratch series"
         ],
         "rows": [
           [
             "Team 1",
-            "Lane 27 | Team points won: 4"
+            "Lane 27 points won: 4"
           ],
           [
             "White, Luka",
             "69",
             "117",
             "71",
+            "",
+            "",
             "71"
           ],
           [
@@ -549,6 +518,8 @@
             "82",
             "106",
             "83",
+            "",
+            "",
             "83"
           ],
           [
@@ -556,6 +527,8 @@
             "81",
             "107",
             "94",
+            "",
+            "",
             "94"
           ],
           [
@@ -563,6 +536,8 @@
             "88",
             "100",
             "77",
+            "",
+            "",
             "77"
           ],
           [
@@ -570,20 +545,19 @@
             "325",
             "0",
             "0",
-            "0",
-            "0",
-            "0",
             "325"
           ],
           [
             "Team 2",
-            "Lane 28 | Team points won: 0"
+            "Lane 28 points won: 0"
           ],
           [
             "Long-Nelson, Harlee",
             "91",
             "98",
             "71",
+            "",
+            "",
             "71"
           ],
           [
@@ -591,6 +565,8 @@
             "91",
             "98",
             "104",
+            "",
+            "",
             "104"
           ],
           [
@@ -598,6 +574,8 @@
             "64",
             "122",
             "54",
+            "",
+            "",
             "54"
           ],
           [
@@ -605,14 +583,13 @@
             "83",
             "105",
             "74",
+            "",
+            "",
             "74"
           ],
           [
             "Total",
             "303",
-            "0",
-            "0",
-            "0",
             "0",
             "0",
             "303"
@@ -621,9 +598,7 @@
         "emphasis": [
           [
             true,
-            true
-          ],
-          [
+            false,
             false,
             false,
             false,
@@ -635,11 +610,6 @@
             false,
             false,
             false,
-            false
-          ],
-          [
-            false,
-            false,
             false,
             false,
             false
@@ -647,25 +617,6 @@
           [
             false,
             false,
-            false,
-            false,
-            false
-          ],
-          [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
-          ],
-          [
-            true,
-            true
-          ],
-          [
             false,
             false,
             false,
@@ -677,9 +628,13 @@
             false,
             false,
             false,
+            false,
+            false,
             false
           ],
           [
+            false,
+            false,
             false,
             false,
             false,
@@ -695,20 +650,62 @@
           ],
           [
             true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false
           ]
         ]
       }
     ],
     "lanes": [
       {
-        "title": "Table 3",
+        "title": "All scheduled teams",
         "headers": [
           "Lane",
           "Team#",
@@ -728,12 +725,12 @@
         ],
         "emphasis": [
           [
-            false,
+            true,
             false,
             false
           ],
           [
-            false,
+            true,
             false,
             false
           ]
@@ -750,7 +747,7 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
@@ -839,7 +836,7 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
@@ -924,22 +921,22 @@
   "history": [
     {
       "week": "31",
-      "sourceUpdated": "04/23/2026",
-      "syncedAt": "2026-09-06T00:30:49.529Z",
+      "sourceUpdated": "Apr 23, 2026",
+      "syncedAt": "2026-09-15T15:50:41.107Z",
       "views": {
         "standings": [
           {
-            "title": "Table 3",
+            "title": "League standings",
             "headers": [
-              "Division",
               "Place",
-              "Team#",
               "Team",
-              "Won",
-              "Lost",
-              "% Won",
-              "YTD Won",
-              "Avg",
+              "Team#",
+              "Div",
+              "WON",
+              "LOST",
+              "%",
+              "YTD WON",
+              "AVG",
               "Pins",
               "HSG",
               "HSS"
@@ -947,9 +944,9 @@
             "rows": [
               [
                 "1",
-                "1",
-                "1",
                 "Wild Ones",
+                "1",
+                "1",
                 "24",
                 "20",
                 "55 %",
@@ -960,10 +957,10 @@
                 "0"
               ],
               [
-                "1",
-                "2",
                 "2",
                 "Team 2",
+                "2",
+                "1",
                 "20",
                 "24",
                 "45 %",
@@ -982,9 +979,9 @@
                 false,
                 false,
                 false,
+                true,
                 false,
-                false,
-                false,
+                true,
                 false,
                 false,
                 false
@@ -996,9 +993,9 @@
                 false,
                 false,
                 false,
+                true,
                 false,
-                false,
-                false,
+                true,
                 false,
                 false,
                 false
@@ -1008,7 +1005,7 @@
         ],
         "bowlers": [
           {
-            "title": "Table 3",
+            "title": "Bowlers and season statistics",
             "headers": [
               "Name",
               "Team#",
@@ -1137,23 +1134,6 @@
                 "0"
               ],
               [
-                "Longnelson, Harley",
-                "0",
-                "0",
-                "M",
-                "0",
-                "0",
-                "90",
-                "0",
-                "99",
-                "0",
-                "0",
-                "0",
-                "0",
-                "0",
-                "0"
-              ],
-              [
                 "Manning, Michael",
                 "2",
                 "3",
@@ -1175,6 +1155,7 @@
                 "Ray, Ryan",
                 "0",
                 "0",
+                "",
                 "W",
                 "776",
                 "11",
@@ -1192,6 +1173,7 @@
                 "Rose, Natalie",
                 "0",
                 "0",
+                "",
                 "W",
                 "1084",
                 "14",
@@ -1348,23 +1330,6 @@
                 false,
                 false,
                 false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
                 false,
                 false
               ],
@@ -1383,9 +1348,11 @@
                 false,
                 false,
                 false,
+                false,
                 false
               ],
               [
+                false,
                 false,
                 false,
                 false,
@@ -1428,26 +1395,25 @@
             "title": "Wild Ones matchup",
             "headers": [
               "Bowler",
-              "AVG",
-              "HDCP",
-              "GM1",
-              "GM2",
-              "GM3",
-              "GM4",
-              "GM5",
-              "GM6",
-              "Total"
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
             ],
             "rows": [
               [
                 "Team 1",
-                "Lane 27 | Team points won: 4"
+                "Lane 27 points won: 4"
               ],
               [
                 "White, Luka",
                 "69",
                 "117",
                 "71",
+                "",
+                "",
                 "71"
               ],
               [
@@ -1455,6 +1421,8 @@
                 "82",
                 "106",
                 "83",
+                "",
+                "",
                 "83"
               ],
               [
@@ -1462,6 +1430,8 @@
                 "81",
                 "107",
                 "94",
+                "",
+                "",
                 "94"
               ],
               [
@@ -1469,6 +1439,8 @@
                 "88",
                 "100",
                 "77",
+                "",
+                "",
                 "77"
               ],
               [
@@ -1476,20 +1448,19 @@
                 "325",
                 "0",
                 "0",
-                "0",
-                "0",
-                "0",
                 "325"
               ],
               [
                 "Team 2",
-                "Lane 28 | Team points won: 0"
+                "Lane 28 points won: 0"
               ],
               [
                 "Long-Nelson, Harlee",
                 "91",
                 "98",
                 "71",
+                "",
+                "",
                 "71"
               ],
               [
@@ -1497,6 +1468,8 @@
                 "91",
                 "98",
                 "104",
+                "",
+                "",
                 "104"
               ],
               [
@@ -1504,6 +1477,8 @@
                 "64",
                 "122",
                 "54",
+                "",
+                "",
                 "54"
               ],
               [
@@ -1511,14 +1486,13 @@
                 "83",
                 "105",
                 "74",
+                "",
+                "",
                 "74"
               ],
               [
                 "Total",
                 "303",
-                "0",
-                "0",
-                "0",
                 "0",
                 "0",
                 "303"
@@ -1527,9 +1501,7 @@
             "emphasis": [
               [
                 true,
-                true
-              ],
-              [
+                false,
                 false,
                 false,
                 false,
@@ -1541,11 +1513,6 @@
                 false,
                 false,
                 false,
-                false
-              ],
-              [
-                false,
-                false,
                 false,
                 false,
                 false
@@ -1553,25 +1520,6 @@
               [
                 false,
                 false,
-                false,
-                false,
-                false
-              ],
-              [
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true
-              ],
-              [
-                true,
-                true
-              ],
-              [
                 false,
                 false,
                 false,
@@ -1583,9 +1531,13 @@
                 false,
                 false,
                 false,
+                false,
+                false,
                 false
               ],
               [
+                false,
+                false,
                 false,
                 false,
                 false,
@@ -1601,20 +1553,62 @@
               ],
               [
                 true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
               ]
             ]
           }
         ],
         "lanes": [
           {
-            "title": "Table 3",
+            "title": "All scheduled teams",
             "headers": [
               "Lane",
               "Team#",
@@ -1634,12 +1628,12 @@
             ],
             "emphasis": [
               [
-                false,
+                true,
                 false,
                 false
               ],
               [
-                false,
+                true,
                 false,
                 false
               ]
@@ -1656,7 +1650,7 @@
               "HCP",
               "Gms",
               "Pins",
-              "Avg"
+              "AVG"
             ],
             "rows": [
               [
@@ -1745,7 +1739,7 @@
               "HCP",
               "Gms",
               "Pins",
-              "Avg"
+              "AVG"
             ],
             "rows": [
               [
@@ -1829,5 +1823,7 @@
       }
     }
   ],
-  "sourceFingerprint": "998fd31cc5531ca21b0fd9e9aafb0ef6d70766a84b584a3f2c7173aaaf2cd69a"
+  "sourceFingerprint": "5b539dd8babe88a4fd38e9feef6f791db6414c6f6c00bf8d090e28ebec6af8ab",
+  "lastAttemptedAt": null,
+  "lastCheckedAt": "2026-09-15T15:50:41.107Z"
 }

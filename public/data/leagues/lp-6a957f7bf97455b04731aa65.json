@@ -14,10 +14,10 @@
   "startDate": "08/30/2026",
   "sourceUpdated": "08/30/2026",
   "type": "Womens",
-  "syncedAt": "2026-09-07T00:17:01.554Z",
-  "status": "awaiting-results",
+  "syncedAt": "2026-09-15T15:59:02.440Z",
+  "status": "current",
   "week": "2",
-  "fingerprint": "645e08d2a77aa9560912bd321e3f15349bef57e16099d84db871ae356feca3bf",
+  "fingerprint": "d3c2859ccfe6dea8d264e3dcf471a5d774c74afd03cb062118ac4bf7dbaf4325",
   "views": {
     "standings": [
       {
@@ -37,41 +37,41 @@
             "1",
             "1",
             "Team 1",
-            "0",
-            "0",
-            "0%",
-            "0",
-            "0"
+            "3",
+            "1",
+            "75%",
+            "488",
+            "1469"
           ],
           [
             "2",
             "2",
             "Team 2",
-            "0",
-            "0",
-            "0%",
-            "0",
-            "0"
+            "1",
+            "3",
+            "25%",
+            "470",
+            "1464"
           ],
           [
             "3",
             "3",
             "Team 3",
-            "0",
-            "0",
-            "0%",
-            "0",
-            "0"
+            "1",
+            "3",
+            "25%",
+            "500",
+            "1577"
           ],
           [
             "4",
             "4",
             "Team 4",
-            "0",
-            "0",
-            "0%",
-            "0",
-            "0"
+            "3",
+            "1",
+            "75%",
+            "528",
+            "1586"
           ]
         ]
       }
@@ -89,12 +89,484 @@
           "HSS",
           "HGS"
         ],
-        "rows": []
+        "rows": [
+          [
+            "Norma Foster",
+            "1",
+            "Team 1",
+            "115",
+            "0",
+            "3",
+            "347",
+            "127"
+          ],
+          [
+            "Maggy Morrison",
+            "1",
+            "Team 1",
+            "105",
+            "0",
+            "3",
+            "317",
+            "111"
+          ],
+          [
+            "Hope Palser",
+            "1",
+            "Team 1",
+            "143",
+            "0",
+            "3",
+            "430",
+            "156"
+          ],
+          [
+            "Tayla Warnke",
+            "1",
+            "Team 1",
+            "125",
+            "0",
+            "3",
+            "375",
+            "142"
+          ],
+          [
+            "Sue Hess",
+            "2",
+            "Team 2",
+            "113",
+            "0",
+            "3",
+            "341",
+            "161"
+          ],
+          [
+            "Cathy Fenn",
+            "2",
+            "Team 2",
+            "100",
+            "0",
+            "3",
+            "302",
+            "111"
+          ],
+          [
+            "Sharon Jones",
+            "2",
+            "Team 2",
+            "130",
+            "0",
+            "3",
+            "390",
+            "156"
+          ],
+          [
+            "Marcia Buckingham",
+            "2",
+            "Team 2",
+            "127",
+            "0",
+            "3",
+            "383",
+            "150"
+          ],
+          [
+            "Barb Harrison",
+            "3",
+            "Team 3",
+            "106",
+            "0",
+            "3",
+            "318",
+            "135"
+          ],
+          [
+            "Linda Newman",
+            "3",
+            "Team 3",
+            "137",
+            "0",
+            "3",
+            "413",
+            "148"
+          ],
+          [
+            "Sandy Fienhold",
+            "3",
+            "Team 3",
+            "141",
+            "0",
+            "3",
+            "423",
+            "162"
+          ],
+          [
+            "Ginny Fienhold",
+            "3",
+            "Team 3",
+            "116",
+            "0",
+            "3",
+            "348",
+            "130"
+          ],
+          [
+            "Linda Strange",
+            "4",
+            "Team 4",
+            "107",
+            "0",
+            "3",
+            "323",
+            "125"
+          ],
+          [
+            "Linda Weesner",
+            "4",
+            "Team 4",
+            "128",
+            "0",
+            "3",
+            "384",
+            "149"
+          ],
+          [
+            "Stacie Bradley",
+            "4",
+            "Team 4",
+            "150",
+            "0",
+            "3",
+            "450",
+            "179"
+          ],
+          [
+            "Marlene Kidder-rensi",
+            "4",
+            "Team 4",
+            "143",
+            "0",
+            "3",
+            "429",
+            "155"
+          ]
+        ]
       }
     ],
     "recaps": [],
     "lanes": [],
-    "rosters": []
+    "rosters": [
+      {
+        "title": "Team 1 · Team 1 roster",
+        "team": "1",
+        "headers": [
+          "Name",
+          "Avg",
+          "HCP"
+        ],
+        "rows": [
+          [
+            "Norma Foster",
+            "115",
+            "0"
+          ],
+          [
+            "Maggy Morrison",
+            "105",
+            "0"
+          ],
+          [
+            "Hope Palser",
+            "143",
+            "0"
+          ],
+          [
+            "Tayla Warnke",
+            "125",
+            "0"
+          ]
+        ]
+      },
+      {
+        "title": "Team 2 · Team 2 roster",
+        "team": "2",
+        "headers": [
+          "Name",
+          "Avg",
+          "HCP"
+        ],
+        "rows": [
+          [
+            "Sue Hess",
+            "113",
+            "0"
+          ],
+          [
+            "Cathy Fenn",
+            "100",
+            "0"
+          ],
+          [
+            "Sharon Jones",
+            "130",
+            "0"
+          ],
+          [
+            "Marcia Buckingham",
+            "127",
+            "0"
+          ]
+        ]
+      },
+      {
+        "title": "Team 3 · Team 3 roster",
+        "team": "3",
+        "headers": [
+          "Name",
+          "Avg",
+          "HCP"
+        ],
+        "rows": [
+          [
+            "Barb Harrison",
+            "106",
+            "0"
+          ],
+          [
+            "Linda Newman",
+            "137",
+            "0"
+          ],
+          [
+            "Sandy Fienhold",
+            "141",
+            "0"
+          ],
+          [
+            "Ginny Fienhold",
+            "116",
+            "0"
+          ]
+        ]
+      },
+      {
+        "title": "Team 4 · Team 4 roster",
+        "team": "4",
+        "headers": [
+          "Name",
+          "Avg",
+          "HCP"
+        ],
+        "rows": [
+          [
+            "Linda Strange",
+            "107",
+            "0"
+          ],
+          [
+            "Linda Weesner",
+            "128",
+            "0"
+          ],
+          [
+            "Stacie Bradley",
+            "150",
+            "0"
+          ],
+          [
+            "Marlene Kidder-rensi",
+            "143",
+            "0"
+          ]
+        ]
+      }
+    ]
   },
-  "history": []
+  "history": [
+    {
+      "week": "1",
+      "sourceUpdated": "08/30/2026",
+      "syncedAt": "2026-09-15T15:59:02.440Z",
+      "views": {
+        "bowlers": [
+          {
+            "title": "Week 1 bowlers",
+            "headers": [
+              "Name",
+              "Team#",
+              "Team",
+              "Avg",
+              "HCP",
+              "Games",
+              "HSS",
+              "HGS"
+            ],
+            "rows": [
+              [
+                "Norma Foster",
+                "1",
+                "Team 1",
+                "115",
+                "",
+                "3",
+                "347",
+                "127"
+              ],
+              [
+                "Maggy Morrison",
+                "1",
+                "Team 1",
+                "105",
+                "",
+                "3",
+                "317",
+                "111"
+              ],
+              [
+                "Hope Palser",
+                "1",
+                "Team 1",
+                "143",
+                "",
+                "3",
+                "430",
+                "156"
+              ],
+              [
+                "Tayla Warnke",
+                "1",
+                "Team 1",
+                "125",
+                "",
+                "3",
+                "375",
+                "142"
+              ],
+              [
+                "Sue Hess",
+                "2",
+                "Team 2",
+                "113",
+                "",
+                "3",
+                "341",
+                "161"
+              ],
+              [
+                "Cathy Fenn",
+                "2",
+                "Team 2",
+                "100",
+                "",
+                "3",
+                "302",
+                "111"
+              ],
+              [
+                "Sharon Jones",
+                "2",
+                "Team 2",
+                "130",
+                "",
+                "3",
+                "390",
+                "156"
+              ],
+              [
+                "Marcia Buckingham",
+                "2",
+                "Team 2",
+                "127",
+                "",
+                "3",
+                "383",
+                "150"
+              ],
+              [
+                "Barb Harrison",
+                "3",
+                "Team 3",
+                "106",
+                "",
+                "3",
+                "318",
+                "135"
+              ],
+              [
+                "Linda Newman",
+                "3",
+                "Team 3",
+                "137",
+                "",
+                "3",
+                "413",
+                "148"
+              ],
+              [
+                "Sandy Fienhold",
+                "3",
+                "Team 3",
+                "141",
+                "",
+                "3",
+                "423",
+                "162"
+              ],
+              [
+                "Ginny Fienhold",
+                "3",
+                "Team 3",
+                "116",
+                "",
+                "3",
+                "348",
+                "130"
+              ],
+              [
+                "Linda Strange",
+                "4",
+                "Team 4",
+                "107",
+                "",
+                "3",
+                "323",
+                "125"
+              ],
+              [
+                "Linda Weesner",
+                "4",
+                "Team 4",
+                "128",
+                "",
+                "3",
+                "384",
+                "149"
+              ],
+              [
+                "Stacie Bradley",
+                "4",
+                "Team 4",
+                "150",
+                "",
+                "3",
+                "450",
+                "179"
+              ],
+              [
+                "Marlene Kidder-rensi",
+                "4",
+                "Team 4",
+                "143",
+                "",
+                "3",
+                "429",
+                "155"
+              ]
+            ]
+          }
+        ],
+        "recaps": []
+      }
+    }
+  ]
 }
