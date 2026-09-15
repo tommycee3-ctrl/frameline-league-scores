@@ -8,26 +8,26 @@
   "startTime": "6:45 PM",
   "bowlDay": 2,
   "type": "Handicap Adult Mixed",
-  "sourceUpdated": "09/08/2026",
-  "syncedAt": "2026-09-09T14:58:16.186Z",
+  "sourceUpdated": "Sep 10, 2026",
+  "syncedAt": "2026-09-15T14:52:11.601Z",
   "status": "awaiting-results",
   "week": "4",
-  "fingerprint": "52443f2c2be53749bdb5f7382d1e242ac925305feb4e4050401589dbb20dc4ec",
+  "fingerprint": "817d0e44f4c11fba64dffdec1c642518ae1f6500d64099e45c364d9b591f751b",
   "lastCompletedCycle": "2026-09-08",
   "views": {
     "standings": [
       {
-        "title": "Table 3",
+        "title": "League standings",
         "headers": [
-          "Division",
           "Place",
-          "Team#",
           "Team",
-          "Won",
-          "Lost",
-          "% Won",
-          "YTD Won",
-          "Avg",
+          "Team#",
+          "Div",
+          "WON",
+          "LOST",
+          "%",
+          "YTD WON",
+          "AVG",
           "Pins",
           "HSG",
           "HSS"
@@ -35,9 +35,9 @@
         "rows": [
           [
             "1",
-            "1",
-            "7",
             "OFF CONSTANTLY",
+            "7",
+            "1",
             "82",
             "38",
             "68 %",
@@ -48,24 +48,10 @@
             "2832"
           ],
           [
-            "1",
             "2",
-            "6",
-            "RIVER WILDS",
-            "80",
-            "40",
-            "67 %",
-            "80",
-            "868",
-            "10650",
-            "979",
-            "2745"
-          ],
-          [
-            "1",
-            "3",
-            "4",
             "GOOD ANSWER",
+            "4",
+            "1",
             "77.5",
             "42.5",
             "65 %",
@@ -76,10 +62,24 @@
             "2858"
           ],
           [
+            "3",
+            "DOWN N DIRTY",
+            "3",
             "1",
+            "64.5",
+            "55.5",
+            "54 %",
+            "64.5",
+            "865",
+            "10397",
+            "1015",
+            "2672"
+          ],
+          [
             "4",
-            "8",
             "FUCKING 10-PIN!",
+            "8",
+            "1",
             "62.5",
             "57.5",
             "52 %",
@@ -90,24 +90,38 @@
             "2950"
           ],
           [
-            "1",
             "5",
+            "RIVER WILDS",
+            "6",
             "1",
+            "62",
+            "55",
+            "53 %",
+            "62",
+            "900",
+            "10103",
+            "979",
+            "2669"
+          ],
+          [
+            "6",
             "KELLEY'S PRO SH",
+            "1",
+            "1",
             "58.5",
             "61.5",
             "49 %",
             "58.5",
-            "909",
+            "894",
             "10999",
             "1050",
             "2924"
           ],
           [
-            "1",
-            "6",
-            "5",
+            "7",
             "OLD DOGS",
+            "5",
+            "1",
             "49",
             "71",
             "41 %",
@@ -118,32 +132,18 @@
             "3176"
           ],
           [
-            "1",
-            "7",
-            "3",
-            "DOWN N DIRTY",
-            "47.5",
-            "72.5",
-            "40 %",
-            "47.5",
-            "865",
-            "10397",
-            "1015",
-            "2672"
-          ],
-          [
-            "1",
             "8",
+            "Q & THE GANG",
             "2",
-            "the lost boys",
-            "20",
-            "100",
+            "1",
+            "15",
+            "75",
             "17 %",
-            "20",
-            "802",
-            "0",
-            "0",
-            "0"
+            "15",
+            "710",
+            "4790",
+            "851",
+            "2432"
           ]
         ],
         "emphasis": [
@@ -154,23 +154,9 @@
             false,
             false,
             false,
+            true,
             false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
+            true,
             false,
             false,
             false
@@ -182,23 +168,9 @@
             false,
             false,
             false,
+            true,
             false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
+            true,
             false,
             false,
             false
@@ -210,23 +182,9 @@
             false,
             false,
             false,
+            true,
             false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
+            true,
             false,
             false,
             false
@@ -238,9 +196,9 @@
             false,
             false,
             false,
+            true,
             false,
-            false,
-            false,
+            true,
             false,
             false,
             false
@@ -252,9 +210,51 @@
             false,
             false,
             false,
+            true,
+            false,
+            true,
+            false,
+            false,
+            false
+          ],
+          [
             false,
             false,
             false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            true,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            true,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            true,
             false,
             false,
             false
@@ -264,7 +264,7 @@
     ],
     "bowlers": [
       {
-        "title": "Table 3",
+        "title": "Bowlers and season statistics",
         "headers": [
           "Name",
           "Team#",
@@ -323,7 +323,7 @@
           [
             "Barnes, Marc",
             "1",
-            "6",
+            "4",
             "KELLEY'S PRO SH",
             "M",
             "2211",
@@ -467,7 +467,7 @@
           [
             "Chooran, Lorenzo",
             "1",
-            "5",
+            "3",
             "KELLEY'S PRO SH",
             "M",
             "1088",
@@ -629,7 +629,7 @@
           [
             "Hall, Jeff",
             "6",
-            "6",
+            "5",
             "RIVER WILDS",
             "M",
             "2506",
@@ -646,9 +646,9 @@
           ],
           [
             "Hansted, Blake",
-            "2",
-            "2",
-            "the lost boys",
+            "0",
+            "0",
+            "",
             "M",
             "895",
             "6",
@@ -696,7 +696,7 @@
             "223",
             "539",
             "0.08",
-            "0"
+            "2"
           ],
           [
             "Hulla, Greg",
@@ -755,7 +755,7 @@
           [
             "Krejci, Tony",
             "1",
-            "7",
+            "5",
             "KELLEY'S PRO SH",
             "M",
             "1099",
@@ -791,7 +791,7 @@
           [
             "Kuhl, Kyle",
             "6",
-            "5",
+            "4",
             "RIVER WILDS",
             "M",
             "633",
@@ -844,9 +844,9 @@
           ],
           [
             "Melton, Noah",
-            "2",
-            "1",
-            "the lost boys",
+            "0",
+            "0",
+            "",
             "M",
             "873",
             "6",
@@ -880,21 +880,21 @@
           ],
           [
             "Nichols, Quincy",
-            "6",
-            "4",
-            "RIVER WILDS",
+            "2",
+            "5",
+            "Q & THE GANG",
             "M",
-            "1584",
-            "9",
-            "176",
+            "1037",
+            "6",
+            "172",
             "174",
-            "48",
+            "52",
             "0",
             "0",
             "215",
             "564",
             "0",
-            "3"
+            "0"
           ],
           [
             "North, Michael",
@@ -916,9 +916,9 @@
           ],
           [
             "Osborn, Vernon",
-            "1",
-            "4",
-            "KELLEY'S PRO SH",
+            "0",
+            "0",
+            "",
             "M",
             "511",
             "3",
@@ -934,9 +934,9 @@
           ],
           [
             "Peoples, Conner",
-            "2",
-            "3",
-            "the lost boys",
+            "0",
+            "0",
+            "",
             "M",
             "451",
             "3",
@@ -970,9 +970,9 @@
           ],
           [
             "Schommer, Adam",
-            "2",
-            "4",
-            "the lost boys",
+            "0",
+            "0",
+            "",
             "M",
             "1059",
             "6",
@@ -1114,9 +1114,9 @@
           ],
           [
             "Weltyk, Greyson",
-            "2",
-            "5",
-            "the lost boys",
+            "0",
+            "0",
+            "",
             "M",
             "1092",
             "6",
@@ -1133,7 +1133,7 @@
           [
             "Wilkes, Kyle",
             "1",
-            "8",
+            "6",
             "KELLEY'S PRO SH",
             "M",
             "1405",
@@ -2022,20 +2022,17 @@
         "title": "RIVER WILDS matchup",
         "headers": [
           "Bowler",
-          "AVG",
-          "HDCP",
-          "GM1",
-          "GM2",
-          "GM3",
-          "GM4",
-          "GM5",
-          "GM6",
-          "Total"
+          "Average",
+          "Handicap",
+          "Game 1",
+          "Game 2",
+          "Game 3",
+          "Scratch series"
         ],
         "rows": [
           [
             "Team 6",
-            "Lane 18 | Team points won: 25"
+            "Lane 18 points won: 7"
           ],
           [
             "Kuhl, Vern",
@@ -2065,15 +2062,6 @@
             "559"
           ],
           [
-            "Nichols, Quincy",
-            "172",
-            "52",
-            "156",
-            "212",
-            "179",
-            "547"
-          ],
-          [
             "Hall, Jeff",
             "205",
             "22",
@@ -2084,17 +2072,14 @@
           ],
           [
             "Total",
-            "880",
-            "933",
-            "932",
-            "0",
-            "0",
-            "0",
-            "2745"
+            "724",
+            "721",
+            "753",
+            "2198"
           ],
           [
             "Team 3",
-            "Lane 17 | Team points won: 5"
+            "Lane 17 points won: 22"
           ],
           [
             "Burns, Jamie",
@@ -2146,78 +2131,12 @@
             "849",
             "825",
             "860",
-            "0",
-            "0",
-            "0",
             "2534"
           ]
         ],
         "emphasis": [
           [
             true,
-            true
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
-          ],
-          [
-            true,
-            true
-          ],
-          [
-            false,
             false,
             false,
             false,
@@ -2262,14 +2181,72 @@
             false
           ],
           [
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
             true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false
           ]
         ]
       },
@@ -2277,20 +2254,17 @@
         "title": "GOOD ANSWER matchup",
         "headers": [
           "Bowler",
-          "AVG",
-          "HDCP",
-          "GM1",
-          "GM2",
-          "GM3",
-          "GM4",
-          "GM5",
-          "GM6",
-          "Total"
+          "Average",
+          "Handicap",
+          "Game 1",
+          "Game 2",
+          "Game 3",
+          "Scratch series"
         ],
         "rows": [
           [
             "Team 4",
-            "Lane 24 | Team points won: 25"
+            "Lane 24 points won: 25"
           ],
           [
             "Andalon, Marcela",
@@ -2342,14 +2316,11 @@
             "888",
             "982",
             "898",
-            "0",
-            "0",
-            "0",
             "2768"
           ],
           [
             "Team 8",
-            "Lane 23 | Team points won: 5"
+            "Lane 23 points won: 5"
           ],
           [
             "Hall, Becky",
@@ -2401,75 +2372,18 @@
             "907",
             "947",
             "844",
-            "0",
-            "0",
-            "0",
             "2698"
           ]
         ],
         "emphasis": [
           [
             true,
-            true
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
             false,
             false,
             false,
             false,
             false,
             false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
-          ],
-          [
-            true,
-            true
           ],
           [
             false,
@@ -2517,14 +2431,72 @@
             false
           ],
           [
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
             true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false
           ]
         ]
       },
@@ -2532,20 +2504,17 @@
         "title": "OLD DOGS matchup",
         "headers": [
           "Bowler",
-          "AVG",
-          "HDCP",
-          "GM1",
-          "GM2",
-          "GM3",
-          "GM4",
-          "GM5",
-          "GM6",
-          "Total"
+          "Average",
+          "Handicap",
+          "Game 1",
+          "Game 2",
+          "Game 3",
+          "Scratch series"
         ],
         "rows": [
           [
             "Team 5",
-            "Lane 22 | Team points won: 13"
+            "Lane 22 points won: 13"
           ],
           [
             "Gilkerson, John",
@@ -2597,14 +2566,11 @@
             "909",
             "1011",
             "969",
-            "0",
-            "0",
-            "0",
             "2889"
           ],
           [
             "Team 1",
-            "Lane 21 | Team points won: 17"
+            "Lane 21 points won: 17"
           ],
           [
             "Hulla, Greg",
@@ -2656,75 +2622,18 @@
             "850",
             "968",
             "845",
-            "0",
-            "0",
-            "0",
             "2663"
           ]
         ],
         "emphasis": [
           [
             true,
-            true
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
             false,
             false,
             false,
             false,
             false,
             false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
-          ],
-          [
-            true,
-            true
           ],
           [
             false,
@@ -2772,14 +2681,72 @@
             false
           ],
           [
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
             true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false
           ]
         ]
       },
@@ -2787,20 +2754,17 @@
         "title": "OFF CONSTANTLY matchup",
         "headers": [
           "Bowler",
-          "AVG",
-          "HDCP",
-          "GM1",
-          "GM2",
-          "GM3",
-          "GM4",
-          "GM5",
-          "GM6",
-          "Total"
+          "Average",
+          "Handicap",
+          "Game 1",
+          "Game 2",
+          "Game 3",
+          "Scratch series"
         ],
         "rows": [
           [
             "Team 7",
-            "Lane 19 | Team points won: 25"
+            "Lane 19 points won: 25"
           ],
           [
             "Gunter, Stephanie",
@@ -2852,28 +2816,12 @@
             "798",
             "844",
             "851",
-            "0",
-            "0",
-            "0",
             "2493"
           ]
         ],
         "emphasis": [
           [
             true,
-            true
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
             false,
             false,
             false,
@@ -2909,21 +2857,36 @@
             false
           ],
           [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false
           ]
         ]
       }
     ],
     "lanes": [
       {
-        "title": "Table 3",
+        "title": "All scheduled teams",
         "headers": [
           "Lane",
           "Team#",
@@ -2968,47 +2931,47 @@
           [
             "24",
             "2",
-            "the lost boys"
+            "Q & THE GANG"
           ]
         ],
         "emphasis": [
           [
-            false,
-            false,
-            false
-          ],
-          [
-            false,
+            true,
             false,
             false
           ],
           [
-            false,
-            false,
-            false
-          ],
-          [
-            false,
+            true,
             false,
             false
           ],
           [
-            false,
-            false,
-            false
-          ],
-          [
-            false,
+            true,
             false,
             false
           ],
           [
-            false,
+            true,
             false,
             false
           ],
           [
+            true,
             false,
+            false
+          ],
+          [
+            true,
+            false,
+            false
+          ],
+          [
+            true,
+            false,
+            false
+          ],
+          [
+            true,
             false,
             false
           ]
@@ -3025,7 +2988,7 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
@@ -3132,7 +3095,7 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
@@ -3257,7 +3220,7 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
@@ -3382,7 +3345,7 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
@@ -3405,6 +3368,15 @@
           ],
           [
             "3",
+            "Chooran, Lorenzo",
+            "M",
+            "44",
+            "6",
+            "1088",
+            "181"
+          ],
+          [
+            "3",
             "Shadle, Rich",
             "M",
             "0",
@@ -3413,31 +3385,22 @@
             "0"
           ],
           [
-            "3",
-            "Peterson, Dave",
-            "M",
-            "42",
-            "0",
-            "0",
-            "183"
-          ],
-          [
             "4",
-            "Osborn, Vernon",
+            "Barnes, Marc",
             "M",
-            "27",
-            "3",
-            "511",
-            "199"
+            "41",
+            "12",
+            "2211",
+            "184"
           ],
           [
             "5",
-            "Chooran, Lorenzo",
+            "Krejci, Tony",
             "M",
-            "44",
+            "42",
             "6",
-            "1088",
-            "181"
+            "1099",
+            "183"
           ],
           [
             "5",
@@ -3450,69 +3413,15 @@
           ],
           [
             "6",
-            "Barnes, Marc",
-            "M",
-            "41",
-            "12",
-            "2211",
-            "184"
-          ],
-          [
-            "7",
-            "Krejci, Tony",
-            "M",
-            "42",
-            "6",
-            "1099",
-            "183"
-          ],
-          [
-            "8",
             "Wilkes, Kyle",
             "M",
             "0",
             "6",
             "1405",
             "234"
-          ],
-          [
-            "9",
-            "White, Josh",
-            "M",
-            "3",
-            "0",
-            "0",
-            "226"
           ]
         ],
         "emphasis": [
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
           [
             false,
             false,
@@ -3606,7 +3515,7 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
@@ -3731,7 +3640,7 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
@@ -3866,6 +3775,113 @@
         "team": "5"
       },
       {
+        "title": "Team 2 · Q & THE GANG roster",
+        "headers": [
+          "Pos",
+          "Name",
+          "Gndr",
+          "HCP",
+          "Gms",
+          "Pins",
+          "AVG"
+        ],
+        "rows": [
+          [
+            "1",
+            "Kelley, Sydney",
+            "W",
+            "43",
+            "0",
+            "0",
+            "182"
+          ],
+          [
+            "2",
+            "Rahlfs, Jt",
+            "M",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "3",
+            "Stirek, Jake",
+            "M",
+            "68",
+            "0",
+            "0",
+            "154"
+          ],
+          [
+            "4",
+            "Starzyk, Mike",
+            "M",
+            "25",
+            "0",
+            "0",
+            "202"
+          ],
+          [
+            "5",
+            "Nichols, Quincy",
+            "M",
+            "52",
+            "6",
+            "1037",
+            "172"
+          ]
+        ],
+        "emphasis": [
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        ],
+        "team": "2"
+      },
+      {
         "title": "Team 6 · RIVER WILDS roster",
         "headers": [
           "Pos",
@@ -3874,7 +3890,7 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
@@ -3906,15 +3922,6 @@
           ],
           [
             "4",
-            "Nichols, Quincy",
-            "M",
-            "48",
-            "9",
-            "1584",
-            "176"
-          ],
-          [
-            "5",
             "Kuhl, Kyle",
             "M",
             "27",
@@ -3923,7 +3930,7 @@
             "200"
           ],
           [
-            "6",
+            "5",
             "Hall, Jeff",
             "M",
             "19",
@@ -3932,7 +3939,7 @@
             "208"
           ],
           [
-            "7",
+            "6",
             "Smith, Kyler",
             "M",
             "0",
@@ -3941,7 +3948,7 @@
             "0"
           ],
           [
-            "8",
+            "7",
             "Jordan, Eric",
             "M",
             "0",
@@ -4013,135 +4020,19 @@
             false,
             false,
             false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
           ]
         ],
         "team": "6"
-      },
-      {
-        "title": "Team 2 · the lost boys roster",
-        "headers": [
-          "Pos",
-          "Name",
-          "Gndr",
-          "HCP",
-          "Gms",
-          "Pins",
-          "Avg"
-        ],
-        "rows": [
-          [
-            "1",
-            "Melton, Noah",
-            "M",
-            "76",
-            "6",
-            "873",
-            "145"
-          ],
-          [
-            "2",
-            "Hansted, Blake",
-            "M",
-            "72",
-            "6",
-            "895",
-            "149"
-          ],
-          [
-            "3",
-            "Peoples, Conner",
-            "M",
-            "72",
-            "3",
-            "451",
-            "150"
-          ],
-          [
-            "4",
-            "Schommer, Adam",
-            "M",
-            "48",
-            "6",
-            "1059",
-            "176"
-          ],
-          [
-            "5",
-            "Weltyk, Greyson",
-            "M",
-            "43",
-            "6",
-            "1092",
-            "182"
-          ]
-        ],
-        "emphasis": [
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ]
-        ],
-        "team": "2"
       }
     ]
   },
   "season": "Fall",
-  "updated": "09/08/2026",
+  "updated": "Sep 10, 2026",
   "centerId": "2110",
   "centerName": "West Lanes",
   "centerSlug": "west-lanes-bowl-omaha-nebraska",
   "area": "Omaha",
-  "sourceFingerprint": "b549c45d1410602fe9a74f05de5484f0de6ba6bde4cae9703147322a230ea06e",
+  "sourceFingerprint": "a075891498da5a24e110503e5a556cdf2a3ced438fa11ad5e0452a58be756f6d",
   "history": [
     {
       "week": "2",
@@ -10849,22 +10740,22 @@
     },
     {
       "week": "4",
-      "sourceUpdated": "09/08/2026",
-      "syncedAt": "2026-09-09T14:58:16.186Z",
+      "sourceUpdated": "Sep 10, 2026",
+      "syncedAt": "2026-09-15T14:52:11.601Z",
       "views": {
         "standings": [
           {
-            "title": "Table 3",
+            "title": "League standings",
             "headers": [
-              "Division",
               "Place",
-              "Team#",
               "Team",
-              "Won",
-              "Lost",
-              "% Won",
-              "YTD Won",
-              "Avg",
+              "Team#",
+              "Div",
+              "WON",
+              "LOST",
+              "%",
+              "YTD WON",
+              "AVG",
               "Pins",
               "HSG",
               "HSS"
@@ -10872,9 +10763,9 @@
             "rows": [
               [
                 "1",
-                "1",
-                "7",
                 "OFF CONSTANTLY",
+                "7",
+                "1",
                 "82",
                 "38",
                 "68 %",
@@ -10885,24 +10776,10 @@
                 "2832"
               ],
               [
-                "1",
                 "2",
-                "6",
-                "RIVER WILDS",
-                "80",
-                "40",
-                "67 %",
-                "80",
-                "868",
-                "10650",
-                "979",
-                "2745"
-              ],
-              [
-                "1",
-                "3",
-                "4",
                 "GOOD ANSWER",
+                "4",
+                "1",
                 "77.5",
                 "42.5",
                 "65 %",
@@ -10913,10 +10790,24 @@
                 "2858"
               ],
               [
+                "3",
+                "DOWN N DIRTY",
+                "3",
                 "1",
+                "64.5",
+                "55.5",
+                "54 %",
+                "64.5",
+                "865",
+                "10397",
+                "1015",
+                "2672"
+              ],
+              [
                 "4",
-                "8",
                 "FUCKING 10-PIN!",
+                "8",
+                "1",
                 "62.5",
                 "57.5",
                 "52 %",
@@ -10927,24 +10818,38 @@
                 "2950"
               ],
               [
-                "1",
                 "5",
+                "RIVER WILDS",
+                "6",
                 "1",
+                "62",
+                "55",
+                "53 %",
+                "62",
+                "900",
+                "10103",
+                "979",
+                "2669"
+              ],
+              [
+                "6",
                 "KELLEY'S PRO SH",
+                "1",
+                "1",
                 "58.5",
                 "61.5",
                 "49 %",
                 "58.5",
-                "909",
+                "894",
                 "10999",
                 "1050",
                 "2924"
               ],
               [
-                "1",
-                "6",
-                "5",
+                "7",
                 "OLD DOGS",
+                "5",
+                "1",
                 "49",
                 "71",
                 "41 %",
@@ -10955,32 +10860,18 @@
                 "3176"
               ],
               [
-                "1",
-                "7",
-                "3",
-                "DOWN N DIRTY",
-                "47.5",
-                "72.5",
-                "40 %",
-                "47.5",
-                "865",
-                "10397",
-                "1015",
-                "2672"
-              ],
-              [
-                "1",
                 "8",
+                "Q & THE GANG",
                 "2",
-                "the lost boys",
-                "20",
-                "100",
+                "1",
+                "15",
+                "75",
                 "17 %",
-                "20",
-                "802",
-                "0",
-                "0",
-                "0"
+                "15",
+                "710",
+                "4790",
+                "851",
+                "2432"
               ]
             ],
             "emphasis": [
@@ -10991,23 +10882,9 @@
                 false,
                 false,
                 false,
+                true,
                 false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
+                true,
                 false,
                 false,
                 false
@@ -11019,23 +10896,9 @@
                 false,
                 false,
                 false,
+                true,
                 false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
+                true,
                 false,
                 false,
                 false
@@ -11047,23 +10910,9 @@
                 false,
                 false,
                 false,
+                true,
                 false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
+                true,
                 false,
                 false,
                 false
@@ -11075,9 +10924,9 @@
                 false,
                 false,
                 false,
+                true,
                 false,
-                false,
-                false,
+                true,
                 false,
                 false,
                 false
@@ -11089,9 +10938,51 @@
                 false,
                 false,
                 false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
                 false,
                 false,
                 false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
                 false,
                 false,
                 false
@@ -11101,7 +10992,7 @@
         ],
         "bowlers": [
           {
-            "title": "Table 3",
+            "title": "Bowlers and season statistics",
             "headers": [
               "Name",
               "Team#",
@@ -11160,7 +11051,7 @@
               [
                 "Barnes, Marc",
                 "1",
-                "6",
+                "4",
                 "KELLEY'S PRO SH",
                 "M",
                 "2211",
@@ -11304,7 +11195,7 @@
               [
                 "Chooran, Lorenzo",
                 "1",
-                "5",
+                "3",
                 "KELLEY'S PRO SH",
                 "M",
                 "1088",
@@ -11466,7 +11357,7 @@
               [
                 "Hall, Jeff",
                 "6",
-                "6",
+                "5",
                 "RIVER WILDS",
                 "M",
                 "2506",
@@ -11483,9 +11374,9 @@
               ],
               [
                 "Hansted, Blake",
-                "2",
-                "2",
-                "the lost boys",
+                "0",
+                "0",
+                "",
                 "M",
                 "895",
                 "6",
@@ -11533,7 +11424,7 @@
                 "223",
                 "539",
                 "0.08",
-                "0"
+                "2"
               ],
               [
                 "Hulla, Greg",
@@ -11592,7 +11483,7 @@
               [
                 "Krejci, Tony",
                 "1",
-                "7",
+                "5",
                 "KELLEY'S PRO SH",
                 "M",
                 "1099",
@@ -11628,7 +11519,7 @@
               [
                 "Kuhl, Kyle",
                 "6",
-                "5",
+                "4",
                 "RIVER WILDS",
                 "M",
                 "633",
@@ -11681,9 +11572,9 @@
               ],
               [
                 "Melton, Noah",
-                "2",
-                "1",
-                "the lost boys",
+                "0",
+                "0",
+                "",
                 "M",
                 "873",
                 "6",
@@ -11717,21 +11608,21 @@
               ],
               [
                 "Nichols, Quincy",
-                "6",
-                "4",
-                "RIVER WILDS",
+                "2",
+                "5",
+                "Q & THE GANG",
                 "M",
-                "1584",
-                "9",
-                "176",
+                "1037",
+                "6",
+                "172",
                 "174",
-                "48",
+                "52",
                 "0",
                 "0",
                 "215",
                 "564",
                 "0",
-                "3"
+                "0"
               ],
               [
                 "North, Michael",
@@ -11753,9 +11644,9 @@
               ],
               [
                 "Osborn, Vernon",
-                "1",
-                "4",
-                "KELLEY'S PRO SH",
+                "0",
+                "0",
+                "",
                 "M",
                 "511",
                 "3",
@@ -11771,9 +11662,9 @@
               ],
               [
                 "Peoples, Conner",
-                "2",
-                "3",
-                "the lost boys",
+                "0",
+                "0",
+                "",
                 "M",
                 "451",
                 "3",
@@ -11807,9 +11698,9 @@
               ],
               [
                 "Schommer, Adam",
-                "2",
-                "4",
-                "the lost boys",
+                "0",
+                "0",
+                "",
                 "M",
                 "1059",
                 "6",
@@ -11951,9 +11842,9 @@
               ],
               [
                 "Weltyk, Greyson",
-                "2",
-                "5",
-                "the lost boys",
+                "0",
+                "0",
+                "",
                 "M",
                 "1092",
                 "6",
@@ -11970,7 +11861,7 @@
               [
                 "Wilkes, Kyle",
                 "1",
-                "8",
+                "6",
                 "KELLEY'S PRO SH",
                 "M",
                 "1405",
@@ -12859,20 +12750,17 @@
             "title": "RIVER WILDS matchup",
             "headers": [
               "Bowler",
-              "AVG",
-              "HDCP",
-              "GM1",
-              "GM2",
-              "GM3",
-              "GM4",
-              "GM5",
-              "GM6",
-              "Total"
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
             ],
             "rows": [
               [
                 "Team 6",
-                "Lane 18 | Team points won: 25"
+                "Lane 18 points won: 7"
               ],
               [
                 "Kuhl, Vern",
@@ -12902,15 +12790,6 @@
                 "559"
               ],
               [
-                "Nichols, Quincy",
-                "172",
-                "52",
-                "156",
-                "212",
-                "179",
-                "547"
-              ],
-              [
                 "Hall, Jeff",
                 "205",
                 "22",
@@ -12921,17 +12800,14 @@
               ],
               [
                 "Total",
-                "880",
-                "933",
-                "932",
-                "0",
-                "0",
-                "0",
-                "2745"
+                "724",
+                "721",
+                "753",
+                "2198"
               ],
               [
                 "Team 3",
-                "Lane 17 | Team points won: 5"
+                "Lane 17 points won: 22"
               ],
               [
                 "Burns, Jamie",
@@ -12983,78 +12859,12 @@
                 "849",
                 "825",
                 "860",
-                "0",
-                "0",
-                "0",
                 "2534"
               ]
             ],
             "emphasis": [
               [
                 true,
-                true
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true
-              ],
-              [
-                true,
-                true
-              ],
-              [
-                false,
                 false,
                 false,
                 false,
@@ -13099,14 +12909,72 @@
                 false
               ],
               [
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
                 true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
               ]
             ]
           },
@@ -13114,20 +12982,17 @@
             "title": "GOOD ANSWER matchup",
             "headers": [
               "Bowler",
-              "AVG",
-              "HDCP",
-              "GM1",
-              "GM2",
-              "GM3",
-              "GM4",
-              "GM5",
-              "GM6",
-              "Total"
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
             ],
             "rows": [
               [
                 "Team 4",
-                "Lane 24 | Team points won: 25"
+                "Lane 24 points won: 25"
               ],
               [
                 "Andalon, Marcela",
@@ -13179,14 +13044,11 @@
                 "888",
                 "982",
                 "898",
-                "0",
-                "0",
-                "0",
                 "2768"
               ],
               [
                 "Team 8",
-                "Lane 23 | Team points won: 5"
+                "Lane 23 points won: 5"
               ],
               [
                 "Hall, Becky",
@@ -13238,75 +13100,18 @@
                 "907",
                 "947",
                 "844",
-                "0",
-                "0",
-                "0",
                 "2698"
               ]
             ],
             "emphasis": [
               [
                 true,
-                true
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
                 false,
                 false,
                 false,
                 false,
                 false,
                 false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true
-              ],
-              [
-                true,
-                true
               ],
               [
                 false,
@@ -13354,14 +13159,72 @@
                 false
               ],
               [
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
                 true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
               ]
             ]
           },
@@ -13369,20 +13232,17 @@
             "title": "OLD DOGS matchup",
             "headers": [
               "Bowler",
-              "AVG",
-              "HDCP",
-              "GM1",
-              "GM2",
-              "GM3",
-              "GM4",
-              "GM5",
-              "GM6",
-              "Total"
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
             ],
             "rows": [
               [
                 "Team 5",
-                "Lane 22 | Team points won: 13"
+                "Lane 22 points won: 13"
               ],
               [
                 "Gilkerson, John",
@@ -13434,14 +13294,11 @@
                 "909",
                 "1011",
                 "969",
-                "0",
-                "0",
-                "0",
                 "2889"
               ],
               [
                 "Team 1",
-                "Lane 21 | Team points won: 17"
+                "Lane 21 points won: 17"
               ],
               [
                 "Hulla, Greg",
@@ -13493,75 +13350,18 @@
                 "850",
                 "968",
                 "845",
-                "0",
-                "0",
-                "0",
                 "2663"
               ]
             ],
             "emphasis": [
               [
                 true,
-                true
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
                 false,
                 false,
                 false,
                 false,
                 false,
                 false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true
-              ],
-              [
-                true,
-                true
               ],
               [
                 false,
@@ -13609,14 +13409,72 @@
                 false
               ],
               [
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
                 true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
               ]
             ]
           },
@@ -13624,20 +13482,17 @@
             "title": "OFF CONSTANTLY matchup",
             "headers": [
               "Bowler",
-              "AVG",
-              "HDCP",
-              "GM1",
-              "GM2",
-              "GM3",
-              "GM4",
-              "GM5",
-              "GM6",
-              "Total"
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
             ],
             "rows": [
               [
                 "Team 7",
-                "Lane 19 | Team points won: 25"
+                "Lane 19 points won: 25"
               ],
               [
                 "Gunter, Stephanie",
@@ -13689,28 +13544,12 @@
                 "798",
                 "844",
                 "851",
-                "0",
-                "0",
-                "0",
                 "2493"
               ]
             ],
             "emphasis": [
               [
                 true,
-                true
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
                 false,
                 false,
                 false,
@@ -13746,21 +13585,36 @@
                 false
               ],
               [
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
               ]
             ]
           }
         ],
         "lanes": [
           {
-            "title": "Table 3",
+            "title": "All scheduled teams",
             "headers": [
               "Lane",
               "Team#",
@@ -13805,47 +13659,47 @@
               [
                 "24",
                 "2",
-                "the lost boys"
+                "Q & THE GANG"
               ]
             ],
             "emphasis": [
               [
-                false,
-                false,
-                false
-              ],
-              [
-                false,
+                true,
                 false,
                 false
               ],
               [
-                false,
-                false,
-                false
-              ],
-              [
-                false,
+                true,
                 false,
                 false
               ],
               [
-                false,
-                false,
-                false
-              ],
-              [
-                false,
+                true,
                 false,
                 false
               ],
               [
-                false,
+                true,
                 false,
                 false
               ],
               [
+                true,
                 false,
+                false
+              ],
+              [
+                true,
+                false,
+                false
+              ],
+              [
+                true,
+                false,
+                false
+              ],
+              [
+                true,
                 false,
                 false
               ]
@@ -13862,7 +13716,7 @@
               "HCP",
               "Gms",
               "Pins",
-              "Avg"
+              "AVG"
             ],
             "rows": [
               [
@@ -13969,7 +13823,7 @@
               "HCP",
               "Gms",
               "Pins",
-              "Avg"
+              "AVG"
             ],
             "rows": [
               [
@@ -14094,7 +13948,7 @@
               "HCP",
               "Gms",
               "Pins",
-              "Avg"
+              "AVG"
             ],
             "rows": [
               [
@@ -14219,7 +14073,7 @@
               "HCP",
               "Gms",
               "Pins",
-              "Avg"
+              "AVG"
             ],
             "rows": [
               [
@@ -14242,6 +14096,15 @@
               ],
               [
                 "3",
+                "Chooran, Lorenzo",
+                "M",
+                "44",
+                "6",
+                "1088",
+                "181"
+              ],
+              [
+                "3",
                 "Shadle, Rich",
                 "M",
                 "0",
@@ -14250,31 +14113,22 @@
                 "0"
               ],
               [
-                "3",
-                "Peterson, Dave",
-                "M",
-                "42",
-                "0",
-                "0",
-                "183"
-              ],
-              [
                 "4",
-                "Osborn, Vernon",
+                "Barnes, Marc",
                 "M",
-                "27",
-                "3",
-                "511",
-                "199"
+                "41",
+                "12",
+                "2211",
+                "184"
               ],
               [
                 "5",
-                "Chooran, Lorenzo",
+                "Krejci, Tony",
                 "M",
-                "44",
+                "42",
                 "6",
-                "1088",
-                "181"
+                "1099",
+                "183"
               ],
               [
                 "5",
@@ -14287,69 +14141,15 @@
               ],
               [
                 "6",
-                "Barnes, Marc",
-                "M",
-                "41",
-                "12",
-                "2211",
-                "184"
-              ],
-              [
-                "7",
-                "Krejci, Tony",
-                "M",
-                "42",
-                "6",
-                "1099",
-                "183"
-              ],
-              [
-                "8",
                 "Wilkes, Kyle",
                 "M",
                 "0",
                 "6",
                 "1405",
                 "234"
-              ],
-              [
-                "9",
-                "White, Josh",
-                "M",
-                "3",
-                "0",
-                "0",
-                "226"
               ]
             ],
             "emphasis": [
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
               [
                 false,
                 false,
@@ -14443,7 +14243,7 @@
               "HCP",
               "Gms",
               "Pins",
-              "Avg"
+              "AVG"
             ],
             "rows": [
               [
@@ -14568,7 +14368,7 @@
               "HCP",
               "Gms",
               "Pins",
-              "Avg"
+              "AVG"
             ],
             "rows": [
               [
@@ -14703,6 +14503,113 @@
             "team": "5"
           },
           {
+            "title": "Team 2 · Q & THE GANG roster",
+            "headers": [
+              "Pos",
+              "Name",
+              "Gndr",
+              "HCP",
+              "Gms",
+              "Pins",
+              "AVG"
+            ],
+            "rows": [
+              [
+                "1",
+                "Kelley, Sydney",
+                "W",
+                "43",
+                "0",
+                "0",
+                "182"
+              ],
+              [
+                "2",
+                "Rahlfs, Jt",
+                "M",
+                "0",
+                "0",
+                "0",
+                "0"
+              ],
+              [
+                "3",
+                "Stirek, Jake",
+                "M",
+                "68",
+                "0",
+                "0",
+                "154"
+              ],
+              [
+                "4",
+                "Starzyk, Mike",
+                "M",
+                "25",
+                "0",
+                "0",
+                "202"
+              ],
+              [
+                "5",
+                "Nichols, Quincy",
+                "M",
+                "52",
+                "6",
+                "1037",
+                "172"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "team": "2"
+          },
+          {
             "title": "Team 6 · RIVER WILDS roster",
             "headers": [
               "Pos",
@@ -14711,7 +14618,7 @@
               "HCP",
               "Gms",
               "Pins",
-              "Avg"
+              "AVG"
             ],
             "rows": [
               [
@@ -14743,15 +14650,6 @@
               ],
               [
                 "4",
-                "Nichols, Quincy",
-                "M",
-                "48",
-                "9",
-                "1584",
-                "176"
-              ],
-              [
-                "5",
                 "Kuhl, Kyle",
                 "M",
                 "27",
@@ -14760,7 +14658,7 @@
                 "200"
               ],
               [
-                "6",
+                "5",
                 "Hall, Jeff",
                 "M",
                 "19",
@@ -14769,7 +14667,7 @@
                 "208"
               ],
               [
-                "7",
+                "6",
                 "Smith, Kyler",
                 "M",
                 "0",
@@ -14778,7 +14676,7 @@
                 "0"
               ],
               [
-                "8",
+                "7",
                 "Jordan, Eric",
                 "M",
                 "0",
@@ -14850,128 +14748,13 @@
                 false,
                 false,
                 false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
               ]
             ],
             "team": "6"
-          },
-          {
-            "title": "Team 2 · the lost boys roster",
-            "headers": [
-              "Pos",
-              "Name",
-              "Gndr",
-              "HCP",
-              "Gms",
-              "Pins",
-              "Avg"
-            ],
-            "rows": [
-              [
-                "1",
-                "Melton, Noah",
-                "M",
-                "76",
-                "6",
-                "873",
-                "145"
-              ],
-              [
-                "2",
-                "Hansted, Blake",
-                "M",
-                "72",
-                "6",
-                "895",
-                "149"
-              ],
-              [
-                "3",
-                "Peoples, Conner",
-                "M",
-                "72",
-                "3",
-                "451",
-                "150"
-              ],
-              [
-                "4",
-                "Schommer, Adam",
-                "M",
-                "48",
-                "6",
-                "1059",
-                "176"
-              ],
-              [
-                "5",
-                "Weltyk, Greyson",
-                "M",
-                "43",
-                "6",
-                "1092",
-                "182"
-              ]
-            ],
-            "emphasis": [
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ]
-            ],
-            "team": "2"
           }
         ]
       }
     }
-  ]
+  ],
+  "lastCheckedAt": "2026-09-15T14:52:11.601Z"
 }
