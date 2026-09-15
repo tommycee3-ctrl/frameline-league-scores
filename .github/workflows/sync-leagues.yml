@@ -105,6 +105,7 @@ jobs:
             echo '### Import warnings' >> "$GITHUB_STEP_SUMMARY"
             grep '^SYNC FAILURE' sync-report.log >> "$GITHUB_STEP_SUMMARY"
           fi
+          node scripts/reconcile-refresh.mjs
           if git diff --quiet -- public/data/leagues; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else

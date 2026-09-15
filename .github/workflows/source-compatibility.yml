@@ -28,7 +28,7 @@ jobs:
       - run: npm ci
       - run: npx playwright install --with-deps chromium
       - name: Check importer and cache regressions
-        run: node --test tests/import-queue.test.mjs tests/source-retry.test.mjs tests/source-contract.test.mjs tests/sync-layout.test.mjs tests/service-worker-data.test.mjs
+        run: node --test tests/reconcile-refresh.test.mjs tests/import-queue.test.mjs tests/source-retry.test.mjs tests/source-contract.test.mjs tests/sync-layout.test.mjs tests/service-worker-data.test.mjs
       - name: Test current source reports without changing published data
         shell: bash
         run: |
