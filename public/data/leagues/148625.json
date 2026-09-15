@@ -6,25 +6,25 @@
   "bowlsOn": "Wednesday",
   "startDate": "August 19, 2026",
   "startTime": "9:30 PM",
-  "sourceUpdated": "09/09/2026",
-  "syncedAt": "2026-09-10T10:11:33.001Z",
+  "sourceUpdated": "Sep 9, 2026",
+  "syncedAt": "2026-09-15T14:54:25.292Z",
   "status": "current",
   "week": "4",
-  "fingerprint": "8737b83090a8d04472b916dee4f34f5238784ca704e9e54c2e2b811565b7e6e2",
+  "fingerprint": "7ca3a3cb528bffa9302cd7e8cf156a086bd5cdc9a0d5ea4ae224bceb9bd34aa4",
   "views": {
     "standings": [
       {
-        "title": "Table 3",
+        "title": "League standings",
         "headers": [
-          "Division",
           "Place",
-          "Team#",
           "Team",
-          "Won",
-          "Lost",
-          "% Won",
-          "YTD Won",
-          "Avg",
+          "Team#",
+          "Div",
+          "WON",
+          "LOST",
+          "%",
+          "YTD WON",
+          "AVG",
           "Pins",
           "HSG",
           "HSS"
@@ -32,9 +32,9 @@
         "rows": [
           [
             "1",
-            "1",
-            "5",
             "Team 5",
+            "5",
+            "1",
             "52.5",
             "27.5",
             "66 %",
@@ -45,10 +45,10 @@
             "2014"
           ],
           [
-            "1",
-            "2",
             "2",
             "Team 2",
+            "2",
+            "1",
             "51",
             "29",
             "64 %",
@@ -59,10 +59,10 @@
             "1980"
           ],
           [
-            "1",
             "3",
-            "7",
             "Team 7",
+            "7",
+            "1",
             "48.5",
             "31.5",
             "61 %",
@@ -73,10 +73,10 @@
             "2003"
           ],
           [
-            "1",
-            "4",
             "4",
             "Team 4",
+            "4",
+            "1",
             "48",
             "32",
             "60 %",
@@ -87,10 +87,10 @@
             "1925"
           ],
           [
-            "1",
             "5",
-            "9",
             "Team 9",
+            "9",
+            "1",
             "43.5",
             "36.5",
             "54 %",
@@ -101,10 +101,10 @@
             "1956"
           ],
           [
-            "1",
             "6",
-            "8",
             "Team 8",
+            "8",
+            "1",
             "41.5",
             "38.5",
             "52 %",
@@ -115,10 +115,10 @@
             "1926"
           ],
           [
-            "1",
             "7",
-            "3",
             "Team 3",
+            "3",
+            "1",
             "36",
             "44",
             "45 %",
@@ -129,10 +129,10 @@
             "1947"
           ],
           [
-            "1",
             "8",
-            "11",
             "Team 11",
+            "11",
+            "1",
             "35.5",
             "44.5",
             "44 %",
@@ -143,10 +143,10 @@
             "1811"
           ],
           [
-            "1",
             "9",
-            "10",
             "Team 10",
+            "10",
+            "1",
             "32",
             "48",
             "40 %",
@@ -157,10 +157,10 @@
             "1820"
           ],
           [
-            "1",
             "10",
-            "1",
             "Team 1",
+            "1",
+            "1",
             "25",
             "55",
             "31 %",
@@ -171,10 +171,10 @@
             "1868"
           ],
           [
-            "1",
             "11",
-            "6",
             "Team 6",
+            "6",
+            "1",
             "24.5",
             "55.5",
             "31 %",
@@ -185,10 +185,10 @@
             "1900"
           ],
           [
-            "1",
-            "12",
             "12",
             "Team 12",
+            "12",
+            "1",
             "0",
             "80",
             "0 %",
@@ -207,23 +207,9 @@
             false,
             false,
             false,
+            true,
             false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
+            true,
             false,
             false,
             false
@@ -235,23 +221,9 @@
             false,
             false,
             false,
+            true,
             false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
+            true,
             false,
             false,
             false
@@ -263,23 +235,9 @@
             false,
             false,
             false,
+            true,
             false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
+            true,
             false,
             false,
             false
@@ -291,23 +249,9 @@
             false,
             false,
             false,
+            true,
             false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
+            true,
             false,
             false,
             false
@@ -319,23 +263,9 @@
             false,
             false,
             false,
+            true,
             false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
+            true,
             false,
             false,
             false
@@ -347,9 +277,9 @@
             false,
             false,
             false,
+            true,
             false,
-            false,
-            false,
+            true,
             false,
             false,
             false
@@ -361,9 +291,79 @@
             false,
             false,
             false,
+            true,
+            false,
+            true,
+            false,
+            false,
+            false
+          ],
+          [
             false,
             false,
             false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            true,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            true,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            true,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            true,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            true,
             false,
             false,
             false
@@ -373,7 +373,7 @@
     ],
     "bowlers": [
       {
-        "title": "Table 3",
+        "title": "Bowlers and season statistics",
         "headers": [
           "Name",
           "Team#",
@@ -1771,20 +1771,17 @@
         "title": "Team 3 matchup",
         "headers": [
           "Bowler",
-          "AVG",
-          "HDCP",
-          "GM1",
-          "GM2",
-          "GM3",
-          "GM4",
-          "GM5",
-          "GM6",
-          "Total"
+          "Average",
+          "Handicap",
+          "Game 1",
+          "Game 2",
+          "Game 3",
+          "Scratch series"
         ],
         "rows": [
           [
             "Team 3",
-            "Lane 12 | Team points won: 17"
+            "Lane 12 points won: 17"
           ],
           [
             "Rogers, Andre Sr",
@@ -1818,14 +1815,11 @@
             "649",
             "641",
             "657",
-            "0",
-            "0",
-            "0",
             "1947"
           ],
           [
             "Team 1",
-            "Lane 11 | Team points won: 3"
+            "Lane 11 points won: 3"
           ],
           [
             "Trejo, Ricardo",
@@ -1859,57 +1853,18 @@
             "576",
             "586",
             "652",
-            "0",
-            "0",
-            "0",
             "1814"
           ]
         ],
         "emphasis": [
           [
             true,
-            true
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
             false,
             false,
             false,
             false,
             false,
             false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
-          ],
-          [
-            true,
-            true
           ],
           [
             false,
@@ -1939,14 +1894,54 @@
             false
           ],
           [
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
             true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false
           ]
         ]
       },
@@ -1954,20 +1949,17 @@
         "title": "Team 4 matchup",
         "headers": [
           "Bowler",
-          "AVG",
-          "HDCP",
-          "GM1",
-          "GM2",
-          "GM3",
-          "GM4",
-          "GM5",
-          "GM6",
-          "Total"
+          "Average",
+          "Handicap",
+          "Game 1",
+          "Game 2",
+          "Game 3",
+          "Scratch series"
         ],
         "rows": [
           [
             "Team 4",
-            "Lane 8 | Team points won: 14"
+            "Lane 8 points won: 14"
           ],
           [
             "Malone, Johnny",
@@ -2001,14 +1993,11 @@
             "642",
             "578",
             "676",
-            "0",
-            "0",
-            "0",
             "1896"
           ],
           [
             "Team 10",
-            "Lane 7 | Team points won: 6"
+            "Lane 7 points won: 6"
           ],
           [
             "Goodman, Brittany",
@@ -2042,57 +2031,18 @@
             "586",
             "708",
             "526",
-            "0",
-            "0",
-            "0",
             "1820"
           ]
         ],
         "emphasis": [
           [
             true,
-            true
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
             false,
             false,
             false,
             false,
             false,
             false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
-          ],
-          [
-            true,
-            true
           ],
           [
             false,
@@ -2122,14 +2072,54 @@
             false
           ],
           [
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
             true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false
           ]
         ]
       },
@@ -2137,20 +2127,17 @@
         "title": "Team 6 matchup",
         "headers": [
           "Bowler",
-          "AVG",
-          "HDCP",
-          "GM1",
-          "GM2",
-          "GM3",
-          "GM4",
-          "GM5",
-          "GM6",
-          "Total"
+          "Average",
+          "Handicap",
+          "Game 1",
+          "Game 2",
+          "Game 3",
+          "Scratch series"
         ],
         "rows": [
           [
             "Team 6",
-            "Lane 10 | Team points won: 5"
+            "Lane 10 points won: 5"
           ],
           [
             "Burns, Jamie",
@@ -2184,14 +2171,11 @@
             "464",
             "539",
             "590",
-            "0",
-            "0",
-            "0",
             "1593"
           ],
           [
             "Team 11",
-            "Lane 9 | Team points won: 15"
+            "Lane 9 points won: 15"
           ],
           [
             "Dahlgren, John",
@@ -2225,57 +2209,18 @@
             "599",
             "527",
             "642",
-            "0",
-            "0",
-            "0",
             "1768"
           ]
         ],
         "emphasis": [
           [
             true,
-            true
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
             false,
             false,
             false,
             false,
             false,
             false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
-          ],
-          [
-            true,
-            true
           ],
           [
             false,
@@ -2305,14 +2250,54 @@
             false
           ],
           [
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
             true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false
           ]
         ]
       },
@@ -2320,20 +2305,17 @@
         "title": "Team 7 matchup",
         "headers": [
           "Bowler",
-          "AVG",
-          "HDCP",
-          "GM1",
-          "GM2",
-          "GM3",
-          "GM4",
-          "GM5",
-          "GM6",
-          "Total"
+          "Average",
+          "Handicap",
+          "Game 1",
+          "Game 2",
+          "Game 3",
+          "Scratch series"
         ],
         "rows": [
           [
             "Team 7",
-            "Lane 1 | Team points won: 16"
+            "Lane 1 points won: 16"
           ],
           [
             "Casella, Tommy",
@@ -2367,14 +2349,11 @@
             "650",
             "674",
             "567",
-            "0",
-            "0",
-            "0",
             "1891"
           ],
           [
             "Team 12",
-            "Lane 2 | Team points won: 0"
+            "Lane 2 points won: 0"
           ],
           [
             ", Vacant",
@@ -2408,57 +2387,18 @@
             "510",
             "510",
             "510",
-            "0",
-            "0",
-            "0",
             "1530"
           ]
         ],
         "emphasis": [
           [
             true,
-            true
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
             false,
             false,
             false,
             false,
             false,
             false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
-          ],
-          [
-            true,
-            true
           ],
           [
             false,
@@ -2488,14 +2428,54 @@
             false
           ],
           [
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
             true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false
           ]
         ]
       },
@@ -2503,20 +2483,17 @@
         "title": "Team 9 matchup",
         "headers": [
           "Bowler",
-          "AVG",
-          "HDCP",
-          "GM1",
-          "GM2",
-          "GM3",
-          "GM4",
-          "GM5",
-          "GM6",
-          "Total"
+          "Average",
+          "Handicap",
+          "Game 1",
+          "Game 2",
+          "Game 3",
+          "Scratch series"
         ],
         "rows": [
           [
             "Team 9",
-            "Lane 5 | Team points won: 7"
+            "Lane 5 points won: 7"
           ],
           [
             "Williams, Isaiah",
@@ -2550,14 +2527,11 @@
             "520",
             "573",
             "649",
-            "0",
-            "0",
-            "0",
             "1742"
           ],
           [
             "Team 2",
-            "Lane 6 | Team points won: 13"
+            "Lane 6 points won: 13"
           ],
           [
             "Taitte, Matt",
@@ -2591,57 +2565,18 @@
             "596",
             "594",
             "641",
-            "0",
-            "0",
-            "0",
             "1831"
           ]
         ],
         "emphasis": [
           [
             true,
-            true
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
             false,
             false,
             false,
             false,
             false,
             false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
-          ],
-          [
-            true,
-            true
           ],
           [
             false,
@@ -2671,14 +2606,54 @@
             false
           ],
           [
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
             true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false
           ]
         ]
       },
@@ -2686,20 +2661,17 @@
         "title": "Team 8 matchup",
         "headers": [
           "Bowler",
-          "AVG",
-          "HDCP",
-          "GM1",
-          "GM2",
-          "GM3",
-          "GM4",
-          "GM5",
-          "GM6",
-          "Total"
+          "Average",
+          "Handicap",
+          "Game 1",
+          "Game 2",
+          "Game 3",
+          "Scratch series"
         ],
         "rows": [
           [
             "Team 8",
-            "Lane 4 | Team points won: 2"
+            "Lane 4 points won: 2"
           ],
           [
             "Cardwell, Ronald Jr",
@@ -2733,14 +2705,11 @@
             "619",
             "610",
             "579",
-            "0",
-            "0",
-            "0",
             "1808"
           ],
           [
             "Team 5",
-            "Lane 3 | Team points won: 18"
+            "Lane 3 points won: 18"
           ],
           [
             "Christensen, Bill",
@@ -2774,57 +2743,18 @@
             "717",
             "651",
             "616",
-            "0",
-            "0",
-            "0",
             "1984"
           ]
         ],
         "emphasis": [
           [
             true,
-            true
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
             false,
             false,
             false,
             false,
             false,
             false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
-          ],
-          [
-            true,
-            true
           ],
           [
             false,
@@ -2854,21 +2784,61 @@
             false
           ],
           [
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
             true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false
           ]
         ]
       }
     ],
     "lanes": [
       {
-        "title": "Table 3",
+        "title": "All scheduled teams",
         "headers": [
           "Lane",
           "Team#",
@@ -2938,62 +2908,62 @@
         ],
         "emphasis": [
           [
-            false,
-            false,
-            false
-          ],
-          [
-            false,
+            true,
             false,
             false
           ],
           [
-            false,
-            false,
-            false
-          ],
-          [
-            false,
+            true,
             false,
             false
           ],
           [
-            false,
-            false,
-            false
-          ],
-          [
-            false,
+            true,
             false,
             false
           ],
           [
-            false,
-            false,
-            false
-          ],
-          [
-            false,
+            true,
             false,
             false
           ],
           [
-            false,
-            false,
-            false
-          ],
-          [
-            false,
+            true,
             false,
             false
           ],
           [
-            false,
+            true,
             false,
             false
           ],
           [
+            true,
             false,
+            false
+          ],
+          [
+            true,
+            false,
+            false
+          ],
+          [
+            true,
+            false,
+            false
+          ],
+          [
+            true,
+            false,
+            false
+          ],
+          [
+            true,
+            false,
+            false
+          ],
+          [
+            true,
             false,
             false
           ]
@@ -3010,7 +2980,7 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
@@ -3081,7 +3051,7 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
@@ -3188,7 +3158,7 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
@@ -3259,7 +3229,7 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [],
         "emphasis": [
@@ -3302,7 +3272,7 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
@@ -3373,7 +3343,7 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
@@ -3444,7 +3414,7 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
@@ -3533,7 +3503,7 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
@@ -3604,7 +3574,7 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
@@ -3684,7 +3654,7 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
@@ -3755,7 +3725,7 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
@@ -3826,7 +3796,7 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
@@ -3913,7 +3883,7 @@
   "lastCompletedCycle": "2026-09-09",
   "type": "Scratch Adult Mixed",
   "season": "Fall",
-  "updated": "09/09/2026",
+  "updated": "Sep 9, 2026",
   "centerId": "2110",
   "centerName": "West Lanes",
   "centerSlug": "west-lanes-bowl-omaha-nebraska",
@@ -10296,22 +10266,22 @@
     },
     {
       "week": "4",
-      "sourceUpdated": "09/09/2026",
-      "syncedAt": "2026-09-10T10:11:33.001Z",
+      "sourceUpdated": "Sep 9, 2026",
+      "syncedAt": "2026-09-15T14:54:25.292Z",
       "views": {
         "standings": [
           {
-            "title": "Table 3",
+            "title": "League standings",
             "headers": [
-              "Division",
               "Place",
-              "Team#",
               "Team",
-              "Won",
-              "Lost",
-              "% Won",
-              "YTD Won",
-              "Avg",
+              "Team#",
+              "Div",
+              "WON",
+              "LOST",
+              "%",
+              "YTD WON",
+              "AVG",
               "Pins",
               "HSG",
               "HSS"
@@ -10319,9 +10289,9 @@
             "rows": [
               [
                 "1",
-                "1",
-                "5",
                 "Team 5",
+                "5",
+                "1",
                 "52.5",
                 "27.5",
                 "66 %",
@@ -10332,10 +10302,10 @@
                 "2014"
               ],
               [
-                "1",
-                "2",
                 "2",
                 "Team 2",
+                "2",
+                "1",
                 "51",
                 "29",
                 "64 %",
@@ -10346,10 +10316,10 @@
                 "1980"
               ],
               [
-                "1",
                 "3",
-                "7",
                 "Team 7",
+                "7",
+                "1",
                 "48.5",
                 "31.5",
                 "61 %",
@@ -10360,10 +10330,10 @@
                 "2003"
               ],
               [
-                "1",
-                "4",
                 "4",
                 "Team 4",
+                "4",
+                "1",
                 "48",
                 "32",
                 "60 %",
@@ -10374,10 +10344,10 @@
                 "1925"
               ],
               [
-                "1",
                 "5",
-                "9",
                 "Team 9",
+                "9",
+                "1",
                 "43.5",
                 "36.5",
                 "54 %",
@@ -10388,10 +10358,10 @@
                 "1956"
               ],
               [
-                "1",
                 "6",
-                "8",
                 "Team 8",
+                "8",
+                "1",
                 "41.5",
                 "38.5",
                 "52 %",
@@ -10402,10 +10372,10 @@
                 "1926"
               ],
               [
-                "1",
                 "7",
-                "3",
                 "Team 3",
+                "3",
+                "1",
                 "36",
                 "44",
                 "45 %",
@@ -10416,10 +10386,10 @@
                 "1947"
               ],
               [
-                "1",
                 "8",
-                "11",
                 "Team 11",
+                "11",
+                "1",
                 "35.5",
                 "44.5",
                 "44 %",
@@ -10430,10 +10400,10 @@
                 "1811"
               ],
               [
-                "1",
                 "9",
-                "10",
                 "Team 10",
+                "10",
+                "1",
                 "32",
                 "48",
                 "40 %",
@@ -10444,10 +10414,10 @@
                 "1820"
               ],
               [
-                "1",
                 "10",
-                "1",
                 "Team 1",
+                "1",
+                "1",
                 "25",
                 "55",
                 "31 %",
@@ -10458,10 +10428,10 @@
                 "1868"
               ],
               [
-                "1",
                 "11",
-                "6",
                 "Team 6",
+                "6",
+                "1",
                 "24.5",
                 "55.5",
                 "31 %",
@@ -10472,10 +10442,10 @@
                 "1900"
               ],
               [
-                "1",
-                "12",
                 "12",
                 "Team 12",
+                "12",
+                "1",
                 "0",
                 "80",
                 "0 %",
@@ -10494,23 +10464,9 @@
                 false,
                 false,
                 false,
+                true,
                 false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
+                true,
                 false,
                 false,
                 false
@@ -10522,23 +10478,9 @@
                 false,
                 false,
                 false,
+                true,
                 false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
+                true,
                 false,
                 false,
                 false
@@ -10550,23 +10492,9 @@
                 false,
                 false,
                 false,
+                true,
                 false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
+                true,
                 false,
                 false,
                 false
@@ -10578,23 +10506,9 @@
                 false,
                 false,
                 false,
+                true,
                 false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
+                true,
                 false,
                 false,
                 false
@@ -10606,23 +10520,9 @@
                 false,
                 false,
                 false,
+                true,
                 false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
+                true,
                 false,
                 false,
                 false
@@ -10634,9 +10534,9 @@
                 false,
                 false,
                 false,
+                true,
                 false,
-                false,
-                false,
+                true,
                 false,
                 false,
                 false
@@ -10648,9 +10548,79 @@
                 false,
                 false,
                 false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
                 false,
                 false,
                 false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
                 false,
                 false,
                 false
@@ -10660,7 +10630,7 @@
         ],
         "bowlers": [
           {
-            "title": "Table 3",
+            "title": "Bowlers and season statistics",
             "headers": [
               "Name",
               "Team#",
@@ -12058,20 +12028,17 @@
             "title": "Team 3 matchup",
             "headers": [
               "Bowler",
-              "AVG",
-              "HDCP",
-              "GM1",
-              "GM2",
-              "GM3",
-              "GM4",
-              "GM5",
-              "GM6",
-              "Total"
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
             ],
             "rows": [
               [
                 "Team 3",
-                "Lane 12 | Team points won: 17"
+                "Lane 12 points won: 17"
               ],
               [
                 "Rogers, Andre Sr",
@@ -12105,14 +12072,11 @@
                 "649",
                 "641",
                 "657",
-                "0",
-                "0",
-                "0",
                 "1947"
               ],
               [
                 "Team 1",
-                "Lane 11 | Team points won: 3"
+                "Lane 11 points won: 3"
               ],
               [
                 "Trejo, Ricardo",
@@ -12146,57 +12110,18 @@
                 "576",
                 "586",
                 "652",
-                "0",
-                "0",
-                "0",
                 "1814"
               ]
             ],
             "emphasis": [
               [
                 true,
-                true
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
                 false,
                 false,
                 false,
                 false,
                 false,
                 false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true
-              ],
-              [
-                true,
-                true
               ],
               [
                 false,
@@ -12226,14 +12151,54 @@
                 false
               ],
               [
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
                 true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
               ]
             ]
           },
@@ -12241,20 +12206,17 @@
             "title": "Team 4 matchup",
             "headers": [
               "Bowler",
-              "AVG",
-              "HDCP",
-              "GM1",
-              "GM2",
-              "GM3",
-              "GM4",
-              "GM5",
-              "GM6",
-              "Total"
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
             ],
             "rows": [
               [
                 "Team 4",
-                "Lane 8 | Team points won: 14"
+                "Lane 8 points won: 14"
               ],
               [
                 "Malone, Johnny",
@@ -12288,14 +12250,11 @@
                 "642",
                 "578",
                 "676",
-                "0",
-                "0",
-                "0",
                 "1896"
               ],
               [
                 "Team 10",
-                "Lane 7 | Team points won: 6"
+                "Lane 7 points won: 6"
               ],
               [
                 "Goodman, Brittany",
@@ -12329,57 +12288,18 @@
                 "586",
                 "708",
                 "526",
-                "0",
-                "0",
-                "0",
                 "1820"
               ]
             ],
             "emphasis": [
               [
                 true,
-                true
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
                 false,
                 false,
                 false,
                 false,
                 false,
                 false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true
-              ],
-              [
-                true,
-                true
               ],
               [
                 false,
@@ -12409,14 +12329,54 @@
                 false
               ],
               [
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
                 true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
               ]
             ]
           },
@@ -12424,20 +12384,17 @@
             "title": "Team 6 matchup",
             "headers": [
               "Bowler",
-              "AVG",
-              "HDCP",
-              "GM1",
-              "GM2",
-              "GM3",
-              "GM4",
-              "GM5",
-              "GM6",
-              "Total"
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
             ],
             "rows": [
               [
                 "Team 6",
-                "Lane 10 | Team points won: 5"
+                "Lane 10 points won: 5"
               ],
               [
                 "Burns, Jamie",
@@ -12471,14 +12428,11 @@
                 "464",
                 "539",
                 "590",
-                "0",
-                "0",
-                "0",
                 "1593"
               ],
               [
                 "Team 11",
-                "Lane 9 | Team points won: 15"
+                "Lane 9 points won: 15"
               ],
               [
                 "Dahlgren, John",
@@ -12512,57 +12466,18 @@
                 "599",
                 "527",
                 "642",
-                "0",
-                "0",
-                "0",
                 "1768"
               ]
             ],
             "emphasis": [
               [
                 true,
-                true
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
                 false,
                 false,
                 false,
                 false,
                 false,
                 false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true
-              ],
-              [
-                true,
-                true
               ],
               [
                 false,
@@ -12592,14 +12507,54 @@
                 false
               ],
               [
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
                 true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
               ]
             ]
           },
@@ -12607,20 +12562,17 @@
             "title": "Team 7 matchup",
             "headers": [
               "Bowler",
-              "AVG",
-              "HDCP",
-              "GM1",
-              "GM2",
-              "GM3",
-              "GM4",
-              "GM5",
-              "GM6",
-              "Total"
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
             ],
             "rows": [
               [
                 "Team 7",
-                "Lane 1 | Team points won: 16"
+                "Lane 1 points won: 16"
               ],
               [
                 "Casella, Tommy",
@@ -12654,14 +12606,11 @@
                 "650",
                 "674",
                 "567",
-                "0",
-                "0",
-                "0",
                 "1891"
               ],
               [
                 "Team 12",
-                "Lane 2 | Team points won: 0"
+                "Lane 2 points won: 0"
               ],
               [
                 ", Vacant",
@@ -12695,57 +12644,18 @@
                 "510",
                 "510",
                 "510",
-                "0",
-                "0",
-                "0",
                 "1530"
               ]
             ],
             "emphasis": [
               [
                 true,
-                true
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
                 false,
                 false,
                 false,
                 false,
                 false,
                 false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true
-              ],
-              [
-                true,
-                true
               ],
               [
                 false,
@@ -12775,14 +12685,54 @@
                 false
               ],
               [
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
                 true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
               ]
             ]
           },
@@ -12790,20 +12740,17 @@
             "title": "Team 9 matchup",
             "headers": [
               "Bowler",
-              "AVG",
-              "HDCP",
-              "GM1",
-              "GM2",
-              "GM3",
-              "GM4",
-              "GM5",
-              "GM6",
-              "Total"
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
             ],
             "rows": [
               [
                 "Team 9",
-                "Lane 5 | Team points won: 7"
+                "Lane 5 points won: 7"
               ],
               [
                 "Williams, Isaiah",
@@ -12837,14 +12784,11 @@
                 "520",
                 "573",
                 "649",
-                "0",
-                "0",
-                "0",
                 "1742"
               ],
               [
                 "Team 2",
-                "Lane 6 | Team points won: 13"
+                "Lane 6 points won: 13"
               ],
               [
                 "Taitte, Matt",
@@ -12878,57 +12822,18 @@
                 "596",
                 "594",
                 "641",
-                "0",
-                "0",
-                "0",
                 "1831"
               ]
             ],
             "emphasis": [
               [
                 true,
-                true
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
                 false,
                 false,
                 false,
                 false,
                 false,
                 false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true
-              ],
-              [
-                true,
-                true
               ],
               [
                 false,
@@ -12958,14 +12863,54 @@
                 false
               ],
               [
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
                 true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
               ]
             ]
           },
@@ -12973,20 +12918,17 @@
             "title": "Team 8 matchup",
             "headers": [
               "Bowler",
-              "AVG",
-              "HDCP",
-              "GM1",
-              "GM2",
-              "GM3",
-              "GM4",
-              "GM5",
-              "GM6",
-              "Total"
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
             ],
             "rows": [
               [
                 "Team 8",
-                "Lane 4 | Team points won: 2"
+                "Lane 4 points won: 2"
               ],
               [
                 "Cardwell, Ronald Jr",
@@ -13020,14 +12962,11 @@
                 "619",
                 "610",
                 "579",
-                "0",
-                "0",
-                "0",
                 "1808"
               ],
               [
                 "Team 5",
-                "Lane 3 | Team points won: 18"
+                "Lane 3 points won: 18"
               ],
               [
                 "Christensen, Bill",
@@ -13061,57 +13000,18 @@
                 "717",
                 "651",
                 "616",
-                "0",
-                "0",
-                "0",
                 "1984"
               ]
             ],
             "emphasis": [
               [
                 true,
-                true
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
                 false,
                 false,
                 false,
                 false,
                 false,
                 false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true
-              ],
-              [
-                true,
-                true
               ],
               [
                 false,
@@ -13141,21 +13041,61 @@
                 false
               ],
               [
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
                 true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
               ]
             ]
           }
         ],
         "lanes": [
           {
-            "title": "Table 3",
+            "title": "All scheduled teams",
             "headers": [
               "Lane",
               "Team#",
@@ -13225,62 +13165,62 @@
             ],
             "emphasis": [
               [
-                false,
-                false,
-                false
-              ],
-              [
-                false,
+                true,
                 false,
                 false
               ],
               [
-                false,
-                false,
-                false
-              ],
-              [
-                false,
+                true,
                 false,
                 false
               ],
               [
-                false,
-                false,
-                false
-              ],
-              [
-                false,
+                true,
                 false,
                 false
               ],
               [
-                false,
-                false,
-                false
-              ],
-              [
-                false,
+                true,
                 false,
                 false
               ],
               [
-                false,
-                false,
-                false
-              ],
-              [
-                false,
+                true,
                 false,
                 false
               ],
               [
-                false,
+                true,
                 false,
                 false
               ],
               [
+                true,
                 false,
+                false
+              ],
+              [
+                true,
+                false,
+                false
+              ],
+              [
+                true,
+                false,
+                false
+              ],
+              [
+                true,
+                false,
+                false
+              ],
+              [
+                true,
+                false,
+                false
+              ],
+              [
+                true,
                 false,
                 false
               ]
@@ -13297,7 +13237,7 @@
               "HCP",
               "Gms",
               "Pins",
-              "Avg"
+              "AVG"
             ],
             "rows": [
               [
@@ -13368,7 +13308,7 @@
               "HCP",
               "Gms",
               "Pins",
-              "Avg"
+              "AVG"
             ],
             "rows": [
               [
@@ -13475,7 +13415,7 @@
               "HCP",
               "Gms",
               "Pins",
-              "Avg"
+              "AVG"
             ],
             "rows": [
               [
@@ -13546,7 +13486,7 @@
               "HCP",
               "Gms",
               "Pins",
-              "Avg"
+              "AVG"
             ],
             "rows": [],
             "emphasis": [
@@ -13589,7 +13529,7 @@
               "HCP",
               "Gms",
               "Pins",
-              "Avg"
+              "AVG"
             ],
             "rows": [
               [
@@ -13660,7 +13600,7 @@
               "HCP",
               "Gms",
               "Pins",
-              "Avg"
+              "AVG"
             ],
             "rows": [
               [
@@ -13731,7 +13671,7 @@
               "HCP",
               "Gms",
               "Pins",
-              "Avg"
+              "AVG"
             ],
             "rows": [
               [
@@ -13820,7 +13760,7 @@
               "HCP",
               "Gms",
               "Pins",
-              "Avg"
+              "AVG"
             ],
             "rows": [
               [
@@ -13891,7 +13831,7 @@
               "HCP",
               "Gms",
               "Pins",
-              "Avg"
+              "AVG"
             ],
             "rows": [
               [
@@ -13971,7 +13911,7 @@
               "HCP",
               "Gms",
               "Pins",
-              "Avg"
+              "AVG"
             ],
             "rows": [
               [
@@ -14042,7 +13982,7 @@
               "HCP",
               "Gms",
               "Pins",
-              "Avg"
+              "AVG"
             ],
             "rows": [
               [
@@ -14113,7 +14053,7 @@
               "HCP",
               "Gms",
               "Pins",
-              "Avg"
+              "AVG"
             ],
             "rows": [
               [
@@ -14197,6 +14137,7 @@
       }
     }
   ],
-  "sourceFingerprint": "fac7f58b570251ef3989552308af19ccb36ee01ef45e714e8e39add7b7642625",
-  "officialRecapVersion": 1
+  "sourceFingerprint": "ae317bf9850dea17b712f49d38c645db9456ceaad8ce6da2906fa6568ee0e79d",
+  "officialRecapVersion": 1,
+  "lastCheckedAt": "2026-09-15T14:54:25.292Z"
 }
