@@ -1,5 +1,50 @@
 [
   {
+    "startedAt": "2026-09-15T14:56:33.329Z",
+    "finishedAt": "2026-09-15T14:57:27.389Z",
+    "durationSeconds": 54,
+    "mode": "directory discovery",
+    "scope": "all",
+    "leaguesChecked": 170,
+    "changeCount": 0,
+    "changes": [],
+    "deferredLeagues": [],
+    "failures": []
+  },
+  {
+    "startedAt": "2026-09-15T14:51:18.730Z",
+    "finishedAt": "2026-09-15T14:53:10.794Z",
+    "durationSeconds": 112,
+    "mode": "league discovery",
+    "scope": "league:116199",
+    "leaguesChecked": 1,
+    "changeCount": 0,
+    "changes": [],
+    "deferredLeagues": [],
+    "failures": []
+  },
+  {
+    "startedAt": "2026-09-15T14:50:07.733Z",
+    "finishedAt": "2026-09-15T14:52:14.808Z",
+    "durationSeconds": 127,
+    "mode": "league discovery",
+    "scope": "league:132277",
+    "leaguesChecked": 1,
+    "changeCount": 1,
+    "changes": [
+      {
+        "id": "132277",
+        "name": "Nationals League 26-27",
+        "area": "Omaha",
+        "center": "West Lanes",
+        "week": "4",
+        "sourceUpdated": "Sep 14, 2026"
+      }
+    ],
+    "deferredLeagues": [],
+    "failures": []
+  },
+  {
     "startedAt": "2026-09-15T14:48:48.386Z",
     "finishedAt": "2026-09-15T14:56:07.731Z",
     "durationSeconds": 439,
@@ -111,39 +156,6 @@
         "center": "West Lanes",
         "week": "4",
         "sourceUpdated": "Sep 10, 2026"
-      }
-    ],
-    "deferredLeagues": [],
-    "failures": []
-  },
-  {
-    "startedAt": "2026-09-15T14:51:18.730Z",
-    "finishedAt": "2026-09-15T14:53:10.794Z",
-    "durationSeconds": 112,
-    "mode": "league discovery",
-    "scope": "league:116199",
-    "leaguesChecked": 1,
-    "changeCount": 0,
-    "changes": [],
-    "deferredLeagues": [],
-    "failures": []
-  },
-  {
-    "startedAt": "2026-09-15T14:50:07.733Z",
-    "finishedAt": "2026-09-15T14:52:14.808Z",
-    "durationSeconds": 127,
-    "mode": "league discovery",
-    "scope": "league:132277",
-    "leaguesChecked": 1,
-    "changeCount": 1,
-    "changes": [
-      {
-        "id": "132277",
-        "name": "Nationals League 26-27",
-        "area": "Omaha",
-        "center": "West Lanes",
-        "week": "4",
-        "sourceUpdated": "Sep 14, 2026"
       }
     ],
     "deferredLeagues": [],
@@ -282,6 +294,17 @@
     "failures": []
   },
   {
+    "startedAt": "2026-09-14T16:10:14.931Z",
+    "finishedAt": "2026-09-14T16:11:06.891Z",
+    "durationSeconds": 52,
+    "mode": "directory discovery",
+    "scope": "all",
+    "leaguesChecked": 170,
+    "changeCount": 0,
+    "changes": [],
+    "failures": []
+  },
+  {
     "startedAt": "2026-09-14T16:09:06.435Z",
     "finishedAt": "2026-09-14T16:11:46.212Z",
     "durationSeconds": 160,
@@ -299,17 +322,6 @@
         "sourceUpdated": "Sep 14, 2026"
       }
     ],
-    "failures": []
-  },
-  {
-    "startedAt": "2026-09-14T16:10:14.931Z",
-    "finishedAt": "2026-09-14T16:11:06.891Z",
-    "durationSeconds": 52,
-    "mode": "directory discovery",
-    "scope": "all",
-    "leaguesChecked": 170,
-    "changeCount": 0,
-    "changes": [],
     "failures": []
   },
   {
@@ -6572,24 +6584,6 @@
         "center": "Maplewood Lanes",
         "week": "3",
         "sourceUpdated": "08/29/2026"
-      }
-    ]
-  },
-  {
-    "startedAt": "2026-08-29T17:28:57.701Z",
-    "finishedAt": "2026-08-29T17:29:20.822Z",
-    "durationSeconds": 23,
-    "mode": "LeaguePals leagues",
-    "leaguesChecked": 5,
-    "changeCount": 1,
-    "changes": [
-      {
-        "id": "lp-6a80c263a09d0e0071913c83",
-        "name": "Saturday Night Mixed 26",
-        "area": "Council Bluffs",
-        "center": "Bowlero Council Bluffs - 763",
-        "week": "3",
-        "sourceUpdated": "08/14/2026"
       }
     ]
   }
