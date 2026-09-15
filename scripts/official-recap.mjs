@@ -8,7 +8,10 @@ const numeric = value => String(value ?? "").replace(/^(?:bk|[abp])/i, "");
 const tokens = name => String(name).toLowerCase().replace(/\b111\b/g,"iii").replace(/\b11\b/g,"ii").replace(/\b1v\b/g,"iv").split(/[^a-z0-9]+/).filter(Boolean);
 const sameName = (sourceName, pdfName) => {
   const source = tokens(sourceName), pdf = tokens(pdfName);
-  return pdf.length >= 2 && pdf.every(token => source.some(full => full === token || (token.length >= 3 && full.startsWith(token))));
+  // BLS prints middle initials that the interactive report can omit.
+  // Require both primary names; numeric row matching still must be unique.
+  const primary = pdf.length > 2 ? pdf.filter((token, index) => token.length > 1 || index === 0 || index === pdf.length - 1) : pdf;
+  return primary.length >= 2 && primary.every(token => source.some(full => full === token || (token.length >= 3 && full.startsWith(token))));
 };
 export function applyOfficialRecap(tables, teams, week, sourceReport) {
   return tables.map(table => {

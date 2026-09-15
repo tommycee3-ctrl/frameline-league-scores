@@ -62,3 +62,12 @@ test("original sheet totals override incomplete interactive aggregates", () => {
   assert.equal(result[0].rows[index][4],"2682");
   assert.equal(result[0].recapDetails[index].teamPoints.at(-1),"17.0");
 });
+
+
+test("PDF middle initials omitted by the interactive report retain a unique exact-score match", () => {
+  const source=[{rows:[["Team 4", ""],["Gilpin, David","162","52","158","212","133","503"]]}];
+  const pdf=[{team:"4",week:"5",bowlers:[{name:"David M. Gilpin",values:["162","52","158","212","133","503"],handicapSeries:"659",wins:[true,true,false,true]}]}];
+  assert.equal(applyOfficialRecap(source,pdf,"5","official.pdf")[0].recapDetails[1].handicapSeries,"659");
+  pdf[0].bowlers[0].name="Daniel M. Gilpin";
+  assert.throws(()=>applyOfficialRecap(source,pdf,"5","official.pdf"), /Cannot safely match/);
+});
