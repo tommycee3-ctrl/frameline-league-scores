@@ -65,7 +65,7 @@ jobs:
           now_epoch=$(date +%s)
           age_minutes=$(( (now_epoch - latest_epoch) / 60 ))
           echo "Last completed refresh was $age_minutes minutes ago."
-          pending=$(jq -r '.[0].deferredLeagues | length' .github/refresh-history.json 2>/dev/null || echo 0)
+          pending=$(jq -r '[.[] | select((.mode == "known leagues" or .mode == "league discovery") and ((.scope // "all") == "all"))][0].deferredLeagues | length' .github/refresh-history.json 2>/dev/null || echo 0)
           if (( age_minutes < 105 && pending == 0 )); then
             echo "run=false" >> "$GITHUB_OUTPUT"
             echo "League data is still fresh; skipping this duplicate trigger."
