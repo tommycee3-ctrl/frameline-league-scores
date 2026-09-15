@@ -16,6 +16,7 @@ on:
       - "scripts/sync-leaguepals.mjs"
       - "scripts/source-contract.mjs"
       - "scripts/source-retry.mjs"
+      - "scripts/import-queue.mjs"
 
 permissions:
   contents: write
@@ -39,7 +40,7 @@ jobs:
         shell: bash
         run: |
           echo "run=true" >> "$GITHUB_OUTPUT"
-          echo "mode=--current-only" >> "$GITHUB_OUTPUT"
+          echo "mode=--current-only --import-concurrency=4 --max-import-minutes=60" >> "$GITHUB_OUTPUT"
           echo "Checking whether the last completed refresh is stale."
       - uses: actions/checkout@v4
         if: steps.window.outputs.run == 'true'
@@ -64,7 +65,8 @@ jobs:
           now_epoch=$(date +%s)
           age_minutes=$(( (now_epoch - latest_epoch) / 60 ))
           echo "Last completed refresh was $age_minutes minutes ago."
-          if (( age_minutes < 105 )); then
+          pending=$(jq -r '.[0].deferredLeagues | length' .github/refresh-history.json 2>/dev/null || echo 0)
+          if (( age_minutes < 105 && pending == 0 )); then
             echo "run=false" >> "$GITHUB_OUTPUT"
             echo "League data is still fresh; skipping this duplicate trigger."
           else

@@ -1,3 +1,4 @@
+import { runImportQueue } from "./import-queue.mjs";
 import { withSourceRetry } from "./source-retry.mjs";
 import { validateSourceView, selectRosterTable } from "./source-contract.mjs";
 import { chromium } from "playwright";
@@ -39,10 +40,13 @@ const force = process.argv.includes("--force");
 const knownOnly = process.argv.includes("--known-only");
 const discoveryOnly = process.argv.includes("--discover-only");
 const importFailures=[];
+const importConcurrency=Math.max(1,Math.min(4,Number(process.argv.find(argument=>argument.startsWith("--import-concurrency="))?.split("=")[1])||1));
 const currentOnly = process.argv.includes("--current-only");
 const requestedLeague=process.argv.find(argument=>argument.startsWith("--league="))?.split("=")[1];
 const requestedCenter=process.argv.find(argument=>argument.startsWith("--center="))?.split("=")[1];
 const refreshStartedAt=new Date();
+const importBudgetMinutes=Math.max(1,Number(process.argv.find(argument=>argument.startsWith("--max-import-minutes="))?.split("=")[1])||120);
+let deferredLeagues=[];
 const refreshedLeagues=[];
 const chicago = Object.fromEntries(new Intl.DateTimeFormat("en-US",{timeZone:"America/Chicago",year:"numeric",month:"2-digit",day:"2-digit",weekday:"short",hour:"numeric",hour12:false}).formatToParts(new Date()).map(p=>[p.type,p.value]));
 const dayIndex={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[chicago.weekday];
@@ -331,14 +335,14 @@ for(const league of discoveryOnly?[]:leagues.filter(league=>recentlyUpdated(leag
   // while a new recap or the next lane assignment has appeared.  During the
   // league's normal posting window, refresh the complete league so those
   // later-published views are not left behind.
-  const postingWindowRefresh=isInPostingWindow(league)||!current.syncedAt||Date.now()-Date.parse(current.syncedAt)>24*60*60*1000;
+  const postingWindowRefresh=isInPostingWindow(league)||!current.syncedAt||Date.now()-Date.parse(current.lastCheckedAt??current.syncedAt)>24*60*60*1000;
   if(isWindowOpen(league,current)&&(force||!hasRows||sourceChanged||fingerprintChanged||needsInitialRecentCheck||needsHistoryBackfill||postingWindowRefresh)) candidates.push({league,file,current,sourceFingerprint});
 }
-candidates.sort((a,b)=>Number(Boolean(a.current.syncedAt))-Number(Boolean(b.current.syncedAt)));
+candidates.sort((a,b)=>Date.parse(a.current.lastAttemptedAt??a.current.lastCheckedAt??a.current.syncedAt??"1970-01-01")-Date.parse(b.current.lastAttemptedAt??b.current.lastCheckedAt??b.current.syncedAt??"1970-01-01"));
 await markerPage.close();
 let changed = false;
 try {
-  for (const {league,file,current,sourceFingerprint} of candidates) {
+  const remaining=await runImportQueue(candidates,async ({league,file,current,sourceFingerprint})=>{
     console.log(`Importing ${league.displayName}`);
     const views = {};
     const archivedHistory=[];
@@ -432,7 +436,11 @@ try {
       views.bowlers=current.views.bowlers;
     }
     const recordCount=Object.values(views).reduce((sum,tables)=>sum+tables.reduce((n,t)=>n+t.rows.length,0),0);
-    if(recordCount===0) continue;
+    if(recordCount===0) {
+      await writeFile(file,JSON.stringify({...current,...league,lastAttemptedAt:null,lastCheckedAt:new Date().toISOString()},null,2)+"\n","utf8");
+      changed=true;
+      return;
+    }
     const fingerprint=createHash("sha256").update(JSON.stringify({week,views})).digest("hex");
     const standingsTeams=new Set((views.standings??[]).flatMap(table=>{
       const teamIndex=table.headers.findIndex(h=>h.toLowerCase()==="team#");
@@ -444,14 +452,18 @@ try {
     const complete=allTeamsRecapped&&bowlersScored;
     const cycle=targetCycle(league);
     const lastCompletedCycle=complete?cycle:(current.lastCompletedCycle??null);
-    if(fingerprint===current.fingerprint&&lastCompletedCycle===current.lastCompletedCycle&&!archivedHistory.length) continue;
+    if(fingerprint===current.fingerprint&&lastCompletedCycle===current.lastCompletedCycle&&!archivedHistory.length) {
+      await writeFile(file,JSON.stringify({...current,...league,sourceFingerprint:sourceFingerprint??current.sourceFingerprint??null,lastAttemptedAt:null,lastCheckedAt:new Date().toISOString()},null,2)+"\n","utf8");
+      changed=true;
+      return;
+    }
     const syncedAt=new Date().toISOString();
     const historyEntry={week,sourceUpdated,syncedAt,views};
     const historyByWeek=new Map((current.history??[]).map(entry=>[String(entry.week),entry]));
     for(const entry of archivedHistory) historyByWeek.set(String(entry.week),entry);
     historyByWeek.set(String(week),historyEntry);
     const history=[...historyByWeek.values()].sort((left,right)=>Number(left.week)-Number(right.week));
-    const next={...current,...league,sourceUpdated,sourceFingerprint:sourceFingerprint??current.sourceFingerprint??null,syncedAt,status:complete?"current":"awaiting-results",week,fingerprint,lastCompletedCycle,views,history};
+    const next={...current,...league,lastAttemptedAt:null,lastCheckedAt:syncedAt,sourceUpdated,sourceFingerprint:sourceFingerprint??current.sourceFingerprint??null,syncedAt,status:complete?"current":"awaiting-results",week,fingerprint,lastCompletedCycle,views,history};
     await writeFile(file,JSON.stringify(next,null,2)+"\n","utf8");
     changed=true;
     refreshedLeagues.push({
@@ -464,10 +476,14 @@ try {
     });
     console.log(`${complete?"Completed":"Refreshed"} ${league.displayName}: ${recordCount} rows`);
     } catch(error) {
+      await writeFile(file,JSON.stringify({...current,lastAttemptedAt:new Date().toISOString()},null,2)+"\n","utf8");
+      changed=true;
       importFailures.push({id:league.id,name:league.displayName,error:error.message});
       console.error(`SYNC FAILURE | ${league.id} | ${league.displayName} | ${error.message} | prior snapshot preserved`);
     } finally { await page.close(); }
-  }
+  },{concurrency:importConcurrency,deadline:refreshStartedAt.getTime()+importBudgetMinutes*60*1000});
+  deferredLeagues=remaining.map(candidate=>candidate.league.id);
+  if(deferredLeagues.length) console.log(`SYNC DEFERRED | ${deferredLeagues.length} leagues queued for the next refresh; publishing verified work now`);
   let latestCatalogEntries=existingCatalogEntries;
   try { latestCatalogEntries=JSON.parse(await readFile(catalogFile,"utf8")); } catch {}
   const catalogById=new Map(latestCatalogEntries.map(league=>[league.id,league]));
@@ -491,6 +507,7 @@ const refreshRecord={
   leaguesChecked:leagues.length,
   changeCount:refreshedLeagues.length,
   changes:refreshedLeagues,
+  deferredLeagues,
   failures:importFailures
 };
 const refreshHistoryFile=path.join(process.cwd(),".github","refresh-history.json");
