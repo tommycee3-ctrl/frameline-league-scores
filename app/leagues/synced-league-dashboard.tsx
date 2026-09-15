@@ -880,7 +880,7 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                       <b>No opponent scorecard posted</b>
                     </span>}
                   </header>
-                  <p>Scores are scratch. Win highlights follow the official recap, including handicap series. Points follow the official report.</p>
+                  <p>Main scores are scratch; HDCP totals include handicap. Win highlights follow the official recap, including handicap series. Points follow the official report.</p>
                   <div className="recap-scroll">
                     {matchup.map((team) => {
                       return (
@@ -913,14 +913,14 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                                       className={officialScoreClass(officialFlags[3 + game])}
                                     >
                                       {row[3 + game]}
-                                      {team.details[r]?.handicapSeries && Number(row[2]) > 0 && <small>{Number(row[3 + game]) + Number(row[2])} with handicap</small>}
+                                      {team.details[r]?.handicapSeries && Number(row[2]) > 0 && <small className="recap-handicap">{Number(row[3 + game]) + Number(row[2])} <span>HDCP</span></small>}
                                     </td>
                                   ))}
                                   <td
                                     className={officialScoreClass(officialFlags[6])}
                                   >
                                     <b>{row.at(-1)}</b>
-                                    {team.details[r]?.handicapSeries && <small>{team.details[r].handicapSeries} with handicap</small>}
+                                    {team.details[r]?.handicapSeries && <small className="recap-handicap">{team.details[r].handicapSeries} <span>HDCP</span></small>}
                                   </td>
                                   {hasIndividualPoints && <td className="individual-points">
                                     <b>{bowlerHistory(personName(row[0]), team.team).find((entry) => String(entry.week) === selectedWeek)?.weekPoints ?? "—"}</b>
@@ -935,8 +935,8 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                                 {[1, 2, 3, 4].map((column) => (
                                   <td key={column} className={officialScoreClass(team.totalEmphasis[column])}>
                                     {team.total[column]}
-                                    {column < 4 && team.totalDetails?.handicapGames?.[column - 1] && <small>{team.totalDetails.handicapGames[column - 1]} with handicap</small>}
-                                    {column === 4 && team.totalDetails?.handicapSeries && <small>{team.totalDetails.handicapSeries} with handicap</small>}
+                                    {column < 4 && team.totalDetails?.handicapGames?.[column - 1] && <small className="recap-handicap">{team.totalDetails.handicapGames[column - 1]} <span>HDCP</span></small>}
+                                    {column === 4 && team.totalDetails?.handicapSeries && <small className="recap-handicap">{team.totalDetails.handicapSeries} <span>HDCP</span></small>}
                                     {column < 4 && team.totalDetails?.teamPoints?.[column - 1] && <small>{Number(team.totalDetails.teamPoints[column - 1])} team pts</small>}
                                   </td>
                                 ))}

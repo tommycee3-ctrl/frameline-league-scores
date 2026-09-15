@@ -4935,3 +4935,23 @@ body:has(.social-home) .site-footer .footer-bottom {
 
 .league-suggestion{display:grid;grid-template-columns:minmax(180px,.7fr) 2fr;gap:24px;align-items:center;margin:0 0 24px;padding:20px 22px;border:2px solid #72e0d7;background:#13263a;box-shadow:7px 7px 0 #10a7a5;color:#f7fbfb}.league-suggestion h3{margin:4px 0 0;font:900 2rem/1 "Barlow Condensed",sans-serif;text-transform:uppercase}.league-suggestion .eyebrow{color:#72e0d7}.league-suggestion-match{display:grid;grid-template-columns:1fr auto auto;gap:12px;align-items:center}.league-suggestion-match span{display:grid;gap:5px}.league-suggestion-match small{color:#a9bbc6;line-height:1.35}.league-suggestion-match button{min-height:44px;border:2px solid #72e0d7;background:#72e0d7;color:#101b2b;padding:0 16px;font-weight:900;text-transform:uppercase;cursor:pointer}.league-suggestion-match .league-suggestion-dismiss{background:transparent;color:#72e0d7}
 @media(max-width:600px){.league-suggestion{grid-template-columns:1fr}.league-suggestion-match{grid-template-columns:1fr 1fr}.league-suggestion-match span{grid-column:1/-1}}
+
+/* Keep handicap totals on a separate, quieter line in recap score cells. */
+.full-recap td .recap-handicap {
+  display: block;
+  margin-top: 0.4rem;
+  color: #a9bec9;
+  font-size: 0.68rem;
+  font-weight: 500;
+  line-height: 1.35;
+  white-space: nowrap;
+  text-transform: none;
+}
+.full-recap .recap-handicap span {
+  margin-left: 0.2rem;
+  font-size: 0.55rem;
+  letter-spacing: 0.04em;
+}
+.full-recap .recap-handicap + small {
+  margin-top: 0.35rem;
+}
