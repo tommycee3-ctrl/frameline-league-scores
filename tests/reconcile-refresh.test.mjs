@@ -19,7 +19,7 @@ test('publication rebases verified files onto a concurrently updated disposable 
  const remote=path.join(root,'remote.git'),local=path.join(root,'local'),other=path.join(root,'other');
  await fs.mkdir(local);git(root,'init','--bare',remote);git(local,'init','-b','main');git(local,'config','user.name','Test');git(local,'config','user.email','test@example.com');
  await fs.mkdir(path.join(local,'public/data/leagues'),{recursive:true});await fs.mkdir(path.join(local,'.github'));
- const old={id:'a',syncedAt:'2026-09-01'},fresh={id:'a',syncedAt:'2026-09-15'},newLeague={id:'b',syncedAt:null};
+ const old={id:'a',syncedAt:'2026-09-01',fixture:'x'.repeat(2*1024*1024)},fresh={id:'a',syncedAt:'2026-09-15'},newLeague={id:'b',syncedAt:null};
  const save=async(cwd,name,value)=>fs.writeFile(path.join(cwd,name),JSON.stringify(value));
  await save(local,'public/data/leagues/all.json',[old]);await save(local,'public/data/leagues/a.json',old);await save(local,'.github/refresh-history.json',[]);
  git(local,'add','.');git(local,'commit','-m','base');git(local,'remote','add','origin',remote);git(local,'push','-u','origin','main');

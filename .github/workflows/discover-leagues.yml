@@ -15,6 +15,7 @@ on:
       - "scripts/sync-leaguepals.mjs"
       - "scripts/source-contract.mjs"
       - "scripts/source-retry.mjs"
+      - "scripts/reconcile-refresh.mjs"
 
 permissions:
   contents: write

@@ -18,7 +18,7 @@ export function mergeRefreshHistory(local,upstream) {
 }
 async function reconcile() {
  if(process.env.GITHUB_ACTIONS!=='true') throw new Error('Publication reconciliation runs only in the disposable GitHub Actions checkout.');
- const git=(...args)=>execFileSync('git',args,{encoding:'utf8',stdio:['pipe','pipe','pipe']}).trim();
+ const git=(...args)=>execFileSync('git',args,{encoding:'utf8',maxBuffer:128*1024*1024,stdio:['pipe','pipe','pipe']}).trim();
  const catalogPath='public/data/leagues/all.json',historyPath='.github/refresh-history.json';
  const tracked=git('diff','--name-only').split('\n').filter(Boolean);
  const allowed=name=>/^public\/data\/leagues\/[^/]+\.json$/.test(name)||name===historyPath;

@@ -17,6 +17,7 @@ on:
       - "scripts/source-contract.mjs"
       - "scripts/source-retry.mjs"
       - "scripts/import-queue.mjs"
+      - "scripts/reconcile-refresh.mjs"
 
 permissions:
   contents: write
