@@ -7,33 +7,33 @@
   "bowlsOn": "Tuesday",
   "startTime": "6:00 PM",
   "type": "Handicap Womens",
-  "updated": "09/09/2026",
+  "updated": "Sep 9, 2026",
   "startDate": "Fall 2026",
   "bowlDay": 2,
   "centerId": "5144",
   "centerName": "Mockingbird Lanes",
   "centerSlug": "mockingbird-lanes",
   "area": "Omaha",
-  "sourceUpdated": "09/09/2026",
-  "syncedAt": "2026-09-09T14:46:47.349Z",
+  "sourceUpdated": "Sep 9, 2026",
+  "syncedAt": "2026-09-15T18:21:12.777Z",
   "status": "current",
   "week": "4",
-  "fingerprint": "e7034bfed0a66266a7801db263c845ca04272d440dd04f37c8351020f7dc99ff",
-  "lastCompletedCycle": "2026-09-08",
+  "fingerprint": "b895f6f6060aca97faf0b9736477d3b014a9de353ef7456f489e7b8e737ca31c",
+  "lastCompletedCycle": "2026-09-15",
   "views": {
     "standings": [
       {
-        "title": "Table 3",
+        "title": "League standings",
         "headers": [
-          "Division",
           "Place",
-          "Team#",
           "Team",
-          "Won",
-          "Lost",
-          "% Won",
-          "YTD Won",
-          "Avg",
+          "Team#",
+          "Div",
+          "WON",
+          "LOST",
+          "%",
+          "YTD WON",
+          "AVG",
           "Pins",
           "HSG",
           "HSS"
@@ -41,9 +41,9 @@
         "rows": [
           [
             "1",
-            "1",
-            "6",
             "Bowling Chicks",
+            "6",
+            "1",
             "24",
             "8",
             "75 %",
@@ -54,10 +54,10 @@
             "1510"
           ],
           [
-            "1",
             "2",
-            "1",
             "L.L.F.",
+            "1",
+            "1",
             "21",
             "11",
             "66 %",
@@ -68,10 +68,10 @@
             "1832"
           ],
           [
-            "1",
             "3",
-            "8",
             "Girls With Balls",
+            "8",
+            "1",
             "19",
             "13",
             "59 %",
@@ -82,10 +82,10 @@
             "1527"
           ],
           [
-            "1",
             "4",
-            "3",
             "Baja Blasters",
+            "3",
+            "1",
             "14",
             "18",
             "44 %",
@@ -96,10 +96,10 @@
             "1695"
           ],
           [
-            "1",
             "5",
-            "7",
             "Rollin Rebels",
+            "7",
+            "1",
             "14",
             "18",
             "44 %",
@@ -110,10 +110,10 @@
             "1536"
           ],
           [
-            "1",
             "6",
-            "2",
             "Weebles",
+            "2",
+            "1",
             "14",
             "18",
             "44 %",
@@ -124,10 +124,10 @@
             "1536"
           ],
           [
-            "1",
             "7",
-            "4",
             "Olson Constructi",
+            "4",
+            "1",
             "12",
             "20",
             "38 %",
@@ -138,10 +138,10 @@
             "1591"
           ],
           [
-            "1",
             "8",
-            "5",
             "Lola's Team",
+            "5",
+            "1",
             "10",
             "22",
             "31 %",
@@ -160,23 +160,9 @@
             false,
             false,
             false,
+            true,
             false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
+            true,
             false,
             false,
             false
@@ -188,23 +174,9 @@
             false,
             false,
             false,
+            true,
             false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
+            true,
             false,
             false,
             false
@@ -216,23 +188,9 @@
             false,
             false,
             false,
+            true,
             false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
+            true,
             false,
             false,
             false
@@ -244,9 +202,9 @@
             false,
             false,
             false,
+            true,
             false,
-            false,
-            false,
+            true,
             false,
             false,
             false
@@ -258,9 +216,51 @@
             false,
             false,
             false,
+            true,
+            false,
+            true,
+            false,
+            false,
+            false
+          ],
+          [
             false,
             false,
             false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            true,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            true,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            true,
             false,
             false,
             false
@@ -270,7 +270,7 @@
     ],
     "bowlers": [
       {
-        "title": "Table 3",
+        "title": "Bowlers and season statistics",
         "headers": [
           "Name",
           "Team#",
@@ -852,6 +852,7 @@
             "Payne, Dana",
             "0",
             "0",
+            "",
             "W",
             "320",
             "3",
@@ -1710,6 +1711,7 @@
             false,
             false,
             false,
+            false,
             false
           ],
           [
@@ -1987,73 +1989,20 @@
     ],
     "recaps": [
       {
-        "title": "Bowling Chicks matchup",
+        "title": "Baja Blasters matchup",
         "headers": [
           "Bowler",
-          "AVG",
-          "HDCP",
-          "GM1",
-          "GM2",
-          "GM3",
-          "GM4",
-          "GM5",
-          "GM6",
-          "Total"
+          "Average",
+          "Handicap",
+          "Game 1",
+          "Game 2",
+          "Game 3",
+          "Scratch series"
         ],
         "rows": [
           [
-            "Team 6",
-            "Lane 2 | Team points won: 8"
-          ],
-          [
-            "Golden, Margo",
-            "109",
-            "72",
-            "87",
-            "107",
-            "115",
-            "309"
-          ],
-          [
-            "Miller, Debbie",
-            "139",
-            "48",
-            "165",
-            "123",
-            "122",
-            "410"
-          ],
-          [
-            "Crandall, Nicole",
-            "137",
-            "50",
-            "148",
-            "132",
-            "138",
-            "418"
-          ],
-          [
-            "Cary, Jeanne",
-            "108",
-            "73",
-            "96",
-            "108",
-            "142",
-            "346"
-          ],
-          [
-            "Total",
-            "496",
-            "470",
-            "517",
-            "0",
-            "0",
-            "0",
-            "1483"
-          ],
-          [
             "Team 3",
-            "Lane 1 | Team points won: 0"
+            "Lane 1 points won: 0"
           ],
           [
             "Mankle, Mari",
@@ -2096,66 +2045,65 @@
             "482",
             "480",
             "535",
-            "0",
-            "0",
-            "0",
             "1497"
+          ],
+          [
+            "Team 6",
+            "Lane 2 points won: 8"
+          ],
+          [
+            "Golden, Margo",
+            "109",
+            "72",
+            "87",
+            "107",
+            "115",
+            "309"
+          ],
+          [
+            "Miller, Debbie",
+            "139",
+            "48",
+            "165",
+            "123",
+            "122",
+            "410"
+          ],
+          [
+            "Crandall, Nicole",
+            "137",
+            "50",
+            "148",
+            "132",
+            "138",
+            "418"
+          ],
+          [
+            "Cary, Jeanne",
+            "108",
+            "73",
+            "96",
+            "108",
+            "142",
+            "346"
+          ],
+          [
+            "Total",
+            "496",
+            "470",
+            "517",
+            "1483"
           ]
         ],
         "emphasis": [
           [
             true,
-            true
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
             false,
             false,
             false,
             false,
             false,
             false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
-          ],
-          [
-            true,
-            true
           ],
           [
             false,
@@ -2194,85 +2142,140 @@
             false
           ],
           [
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
             true,
-            true,
-            true,
-            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
             true,
             true,
             true,
             true
           ]
-        ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "606"
+          },
+          {
+            "handicapSeries": "503"
+          },
+          {
+            "handicapSeries": "562"
+          },
+          {
+            "handicapSeries": "459"
+          },
+          {
+            "handicapSeries": "2130",
+            "handicapGames": [
+              "693",
+              "691",
+              "746"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0"
+            ]
+          },
+          {},
+          {
+            "handicapSeries": "525"
+          },
+          {
+            "handicapSeries": "554"
+          },
+          {
+            "handicapSeries": "568"
+          },
+          {
+            "handicapSeries": "565"
+          },
+          {
+            "handicapSeries": "2212",
+            "handicapGames": [
+              "739",
+              "713",
+              "760"
+            ],
+            "teamPoints": [
+              "2.0",
+              "2.0",
+              "2.0",
+              "8.0",
+              "8.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/4/5598109082026f202604reprnt00.pdf"
       },
       {
-        "title": "Olson Constructi matchup",
+        "title": "Girls With Balls matchup",
         "headers": [
           "Bowler",
-          "AVG",
-          "HDCP",
-          "GM1",
-          "GM2",
-          "GM3",
-          "GM4",
-          "GM5",
-          "GM6",
-          "Total"
+          "Average",
+          "Handicap",
+          "Game 1",
+          "Game 2",
+          "Game 3",
+          "Scratch series"
         ],
         "rows": [
           [
-            "Team 4",
-            "Lane 8 | Team points won: 2"
-          ],
-          [
-            "Pruch, Jane",
-            "117",
-            "66",
-            "157",
-            "130",
-            "119",
-            "406"
-          ],
-          [
-            "Burney, Sue",
-            "140",
-            "48",
-            "137",
-            "108",
-            "186",
-            "431"
-          ],
-          [
-            "Nolan, Peg",
-            "104",
-            "76",
-            "116",
-            "107",
-            "97",
-            "320"
-          ],
-          [
-            "Grasz, Diane",
-            "144",
-            "44",
-            "106",
-            "104",
-            "118",
-            "328"
-          ],
-          [
-            "Total",
-            "516",
-            "449",
-            "520",
-            "0",
-            "0",
-            "0",
-            "1485"
-          ],
-          [
             "Team 8",
-            "Lane 7 | Team points won: 6"
+            "Lane 7 points won: 6"
           ],
           [
             "Weiss, Lynn",
@@ -2315,66 +2318,117 @@
             "540",
             "502",
             "485",
-            "0",
-            "0",
-            "0",
             "1527"
+          ],
+          [
+            "Team 4",
+            "Lane 8 points won: 2"
+          ],
+          [
+            "Pruch, Jane",
+            "117",
+            "66",
+            "157",
+            "130",
+            "119",
+            "406"
+          ],
+          [
+            "Burney, Sue",
+            "140",
+            "48",
+            "137",
+            "108",
+            "186",
+            "431"
+          ],
+          [
+            "Nolan, Peg",
+            "104",
+            "76",
+            "116",
+            "107",
+            "97",
+            "320"
+          ],
+          [
+            "Grasz, Diane",
+            "144",
+            "44",
+            "106",
+            "104",
+            "118",
+            "328"
+          ],
+          [
+            "Total",
+            "516",
+            "449",
+            "520",
+            "1485"
           ]
         ],
         "emphasis": [
           [
             true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            true,
+            true,
+            false,
             true
           ],
           [
-            false,
+            true,
             false,
             false,
             false,
             false,
             false,
             false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
-          ],
-          [
-            true,
-            true
           ],
           [
             false,
@@ -2413,85 +2467,88 @@
             false
           ],
           [
+            false,
+            false,
+            false,
             true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
+            false
           ]
-        ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "633"
+          },
+          {
+            "handicapSeries": "536"
+          },
+          {
+            "handicapSeries": "549"
+          },
+          {
+            "handicapSeries": "535"
+          },
+          {
+            "handicapSeries": "2253",
+            "handicapGames": [
+              "782",
+              "744",
+              "727"
+            ],
+            "teamPoints": [
+              "2.0",
+              "2.0",
+              "0.0",
+              "6.0",
+              "6.0"
+            ]
+          },
+          {},
+          {
+            "handicapSeries": "604"
+          },
+          {
+            "handicapSeries": "575"
+          },
+          {
+            "handicapSeries": "548"
+          },
+          {
+            "handicapSeries": "460"
+          },
+          {
+            "handicapSeries": "2187",
+            "handicapGames": [
+              "750",
+              "683",
+              "754"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "2.0",
+              "2.0",
+              "2.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/4/5598109082026f202604reprnt00.pdf"
       },
       {
-        "title": "Lola's Team matchup",
+        "title": "L.L.F. matchup",
         "headers": [
           "Bowler",
-          "AVG",
-          "HDCP",
-          "GM1",
-          "GM2",
-          "GM3",
-          "GM4",
-          "GM5",
-          "GM6",
-          "Total"
+          "Average",
+          "Handicap",
+          "Game 1",
+          "Game 2",
+          "Game 3",
+          "Scratch series"
         ],
         "rows": [
           [
-            "Team 5",
-            "Lane 6 | Team points won: 0"
-          ],
-          [
-            "Burton, Diane",
-            "99",
-            "80",
-            "108",
-            "93",
-            "78",
-            "279"
-          ],
-          [
-            "Vanscoy, Megan",
-            "127",
-            "58",
-            "126",
-            "121",
-            "113",
-            "360"
-          ],
-          [
-            "Willson, Marilyn",
-            "131",
-            "55",
-            "127",
-            "95",
-            "125",
-            "347"
-          ],
-          [
-            "Geyza, Dawne",
-            "129",
-            "56",
-            "138",
-            "129",
-            "99",
-            "366"
-          ],
-          [
-            "Total",
-            "499",
-            "438",
-            "415",
-            "0",
-            "0",
-            "0",
-            "1352"
-          ],
-          [
             "Team 1",
-            "Lane 5 | Team points won: 8"
+            "Lane 5 points won: 8"
           ],
           [
             "Williams, Doris",
@@ -2534,66 +2591,65 @@
             "584",
             "569",
             "530",
-            "0",
-            "0",
-            "0",
             "1683"
+          ],
+          [
+            "Team 5",
+            "Lane 6 points won: 0"
+          ],
+          [
+            "Burton, Diane",
+            "99",
+            "80",
+            "108",
+            "93",
+            "78",
+            "279"
+          ],
+          [
+            "Vanscoy, Megan",
+            "127",
+            "58",
+            "126",
+            "121",
+            "113",
+            "360"
+          ],
+          [
+            "Willson, Marilyn",
+            "131",
+            "55",
+            "127",
+            "95",
+            "125",
+            "347"
+          ],
+          [
+            "Geyza, Dawne",
+            "129",
+            "56",
+            "138",
+            "129",
+            "99",
+            "366"
+          ],
+          [
+            "Total",
+            "499",
+            "438",
+            "415",
+            "1352"
           ]
         ],
         "emphasis": [
           [
             true,
-            true
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
             false,
             false,
             false,
             false,
             false,
             false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
-          ],
-          [
-            true,
-            true
           ],
           [
             false,
@@ -2632,85 +2688,140 @@
             false
           ],
           [
-            true,
-            true,
-            true,
-            true,
+            false,
             true,
             true,
             true,
             true
+          ],
+          [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false
           ]
-        ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "646"
+          },
+          {
+            "handicapSeries": "553"
+          },
+          {
+            "handicapSeries": "486"
+          },
+          {
+            "handicapSeries": "589"
+          },
+          {
+            "handicapSeries": "2274",
+            "handicapGames": [
+              "781",
+              "766",
+              "727"
+            ],
+            "teamPoints": [
+              "2.0",
+              "2.0",
+              "2.0",
+              "8.0",
+              "8.0"
+            ]
+          },
+          {},
+          {
+            "handicapSeries": "519"
+          },
+          {
+            "handicapSeries": "534"
+          },
+          {
+            "handicapSeries": "512"
+          },
+          {
+            "handicapSeries": "534"
+          },
+          {
+            "handicapSeries": "2099",
+            "handicapGames": [
+              "748",
+              "687",
+              "664"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/4/5598109082026f202604reprnt00.pdf"
       },
       {
-        "title": "Weebles matchup",
+        "title": "Rollin Rebels matchup",
         "headers": [
           "Bowler",
-          "AVG",
-          "HDCP",
-          "GM1",
-          "GM2",
-          "GM3",
-          "GM4",
-          "GM5",
-          "GM6",
-          "Total"
+          "Average",
+          "Handicap",
+          "Game 1",
+          "Game 2",
+          "Game 3",
+          "Scratch series"
         ],
         "rows": [
           [
-            "Team 2",
-            "Lane 4 | Team points won: 6"
-          ],
-          [
-            "Mcclaren, Jen",
-            "109",
-            "72",
-            "110",
-            "144",
-            "110",
-            "364"
-          ],
-          [
-            "Gerhard, Connie",
-            "109",
-            "72",
-            "127",
-            "95",
-            "115",
-            "337"
-          ],
-          [
-            "Harris, Patty",
-            "115",
-            "68",
-            "106",
-            "137",
-            "135",
-            "378"
-          ],
-          [
-            "Reiss, Rebecca",
-            "144",
-            "44",
-            "139",
-            "99",
-            "119",
-            "357"
-          ],
-          [
-            "Total",
-            "482",
-            "475",
-            "479",
-            "0",
-            "0",
-            "0",
-            "1436"
-          ],
-          [
             "Team 7",
-            "Lane 3 | Team points won: 2"
+            "Lane 3 points won: 2"
           ],
           [
             "Hamilton, Karen",
@@ -2753,66 +2864,65 @@
             "516",
             "520",
             "500",
-            "0",
-            "0",
-            "0",
             "1536"
+          ],
+          [
+            "Team 2",
+            "Lane 4 points won: 6"
+          ],
+          [
+            "Mcclaren, Jen",
+            "109",
+            "72",
+            "110",
+            "144",
+            "110",
+            "364"
+          ],
+          [
+            "Gerhard, Connie",
+            "109",
+            "72",
+            "127",
+            "95",
+            "115",
+            "337"
+          ],
+          [
+            "Harris, Patty",
+            "115",
+            "68",
+            "106",
+            "137",
+            "135",
+            "378"
+          ],
+          [
+            "Reiss, Rebecca",
+            "144",
+            "44",
+            "139",
+            "99",
+            "119",
+            "357"
+          ],
+          [
+            "Total",
+            "482",
+            "475",
+            "479",
+            "1436"
           ]
         ],
         "emphasis": [
           [
             true,
-            true
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
             false,
             false,
             false,
             false,
             false,
             false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
-          ],
-          [
-            true,
-            true
           ],
           [
             false,
@@ -2851,21 +2961,129 @@
             false
           ],
           [
+            false,
+            false,
             true,
+            false,
+            false
+          ],
+          [
             true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
             true,
-            true,
-            true,
-            true,
+            false,
             true,
             true
           ]
-        ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "535"
+          },
+          {
+            "handicapSeries": "577"
+          },
+          {
+            "handicapSeries": "514"
+          },
+          {
+            "handicapSeries": "561"
+          },
+          {
+            "handicapSeries": "2187",
+            "handicapGames": [
+              "733",
+              "737",
+              "717"
+            ],
+            "teamPoints": [
+              "0.0",
+              "2.0",
+              "0.0",
+              "2.0",
+              "2.0"
+            ]
+          },
+          {},
+          {
+            "handicapSeries": "580"
+          },
+          {
+            "handicapSeries": "553"
+          },
+          {
+            "handicapSeries": "582"
+          },
+          {
+            "handicapSeries": "489"
+          },
+          {
+            "handicapSeries": "2204",
+            "handicapGames": [
+              "738",
+              "731",
+              "735"
+            ],
+            "teamPoints": [
+              "2.0",
+              "0.0",
+              "2.0",
+              "6.0",
+              "6.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/4/5598109082026f202604reprnt00.pdf"
       }
     ],
     "lanes": [
       {
-        "title": "Table 3",
+        "title": "All scheduled teams",
         "headers": [
           "Lane",
           "Team#",
@@ -2915,42 +3133,42 @@
         ],
         "emphasis": [
           [
-            false,
-            false,
-            false
-          ],
-          [
-            false,
+            true,
             false,
             false
           ],
           [
-            false,
-            false,
-            false
-          ],
-          [
-            false,
+            true,
             false,
             false
           ],
           [
-            false,
-            false,
-            false
-          ],
-          [
-            false,
+            true,
             false,
             false
           ],
           [
-            false,
+            true,
             false,
             false
           ],
           [
+            true,
             false,
+            false
+          ],
+          [
+            true,
+            false,
+            false
+          ],
+          [
+            true,
+            false,
+            false
+          ],
+          [
+            true,
             false,
             false
           ]
@@ -2967,7 +3185,7 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
@@ -3092,7 +3310,7 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
@@ -3181,7 +3399,7 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
@@ -3306,7 +3524,7 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
@@ -3413,7 +3631,7 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
@@ -3538,7 +3756,7 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
@@ -3645,7 +3863,7 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
@@ -3770,7 +3988,7 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
@@ -3924,7 +4142,7 @@
       }
     ]
   },
-  "sourceFingerprint": "fabebeee37aa15399eb0417d050e86a0ab99ffa999455fe3be65f1c02b5961ac",
+  "sourceFingerprint": "c619384acd26e794916b7626b6578cd0cd64fbf193fe4e935c321bd080c516e6",
   "history": [
     {
       "week": "2",
@@ -10542,22 +10760,22 @@
     },
     {
       "week": "4",
-      "sourceUpdated": "09/09/2026",
-      "syncedAt": "2026-09-09T14:46:47.349Z",
+      "sourceUpdated": "Sep 9, 2026",
+      "syncedAt": "2026-09-15T18:21:12.777Z",
       "views": {
         "standings": [
           {
-            "title": "Table 3",
+            "title": "League standings",
             "headers": [
-              "Division",
               "Place",
-              "Team#",
               "Team",
-              "Won",
-              "Lost",
-              "% Won",
-              "YTD Won",
-              "Avg",
+              "Team#",
+              "Div",
+              "WON",
+              "LOST",
+              "%",
+              "YTD WON",
+              "AVG",
               "Pins",
               "HSG",
               "HSS"
@@ -10565,9 +10783,9 @@
             "rows": [
               [
                 "1",
-                "1",
-                "6",
                 "Bowling Chicks",
+                "6",
+                "1",
                 "24",
                 "8",
                 "75 %",
@@ -10578,10 +10796,10 @@
                 "1510"
               ],
               [
-                "1",
                 "2",
-                "1",
                 "L.L.F.",
+                "1",
+                "1",
                 "21",
                 "11",
                 "66 %",
@@ -10592,10 +10810,10 @@
                 "1832"
               ],
               [
-                "1",
                 "3",
-                "8",
                 "Girls With Balls",
+                "8",
+                "1",
                 "19",
                 "13",
                 "59 %",
@@ -10606,10 +10824,10 @@
                 "1527"
               ],
               [
-                "1",
                 "4",
-                "3",
                 "Baja Blasters",
+                "3",
+                "1",
                 "14",
                 "18",
                 "44 %",
@@ -10620,10 +10838,10 @@
                 "1695"
               ],
               [
-                "1",
                 "5",
-                "7",
                 "Rollin Rebels",
+                "7",
+                "1",
                 "14",
                 "18",
                 "44 %",
@@ -10634,10 +10852,10 @@
                 "1536"
               ],
               [
-                "1",
                 "6",
-                "2",
                 "Weebles",
+                "2",
+                "1",
                 "14",
                 "18",
                 "44 %",
@@ -10648,10 +10866,10 @@
                 "1536"
               ],
               [
-                "1",
                 "7",
-                "4",
                 "Olson Constructi",
+                "4",
+                "1",
                 "12",
                 "20",
                 "38 %",
@@ -10662,10 +10880,10 @@
                 "1591"
               ],
               [
-                "1",
                 "8",
-                "5",
                 "Lola's Team",
+                "5",
+                "1",
                 "10",
                 "22",
                 "31 %",
@@ -10684,23 +10902,9 @@
                 false,
                 false,
                 false,
+                true,
                 false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
+                true,
                 false,
                 false,
                 false
@@ -10712,23 +10916,9 @@
                 false,
                 false,
                 false,
+                true,
                 false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
+                true,
                 false,
                 false,
                 false
@@ -10740,23 +10930,9 @@
                 false,
                 false,
                 false,
+                true,
                 false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
+                true,
                 false,
                 false,
                 false
@@ -10768,9 +10944,9 @@
                 false,
                 false,
                 false,
+                true,
                 false,
-                false,
-                false,
+                true,
                 false,
                 false,
                 false
@@ -10782,9 +10958,51 @@
                 false,
                 false,
                 false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
                 false,
                 false,
                 false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
                 false,
                 false,
                 false
@@ -10794,7 +11012,7 @@
         ],
         "bowlers": [
           {
-            "title": "Table 3",
+            "title": "Bowlers and season statistics",
             "headers": [
               "Name",
               "Team#",
@@ -11376,6 +11594,7 @@
                 "Payne, Dana",
                 "0",
                 "0",
+                "",
                 "W",
                 "320",
                 "3",
@@ -12234,6 +12453,7 @@
                 false,
                 false,
                 false,
+                false,
                 false
               ],
               [
@@ -12511,73 +12731,20 @@
         ],
         "recaps": [
           {
-            "title": "Bowling Chicks matchup",
+            "title": "Baja Blasters matchup",
             "headers": [
               "Bowler",
-              "AVG",
-              "HDCP",
-              "GM1",
-              "GM2",
-              "GM3",
-              "GM4",
-              "GM5",
-              "GM6",
-              "Total"
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
             ],
             "rows": [
               [
-                "Team 6",
-                "Lane 2 | Team points won: 8"
-              ],
-              [
-                "Golden, Margo",
-                "109",
-                "72",
-                "87",
-                "107",
-                "115",
-                "309"
-              ],
-              [
-                "Miller, Debbie",
-                "139",
-                "48",
-                "165",
-                "123",
-                "122",
-                "410"
-              ],
-              [
-                "Crandall, Nicole",
-                "137",
-                "50",
-                "148",
-                "132",
-                "138",
-                "418"
-              ],
-              [
-                "Cary, Jeanne",
-                "108",
-                "73",
-                "96",
-                "108",
-                "142",
-                "346"
-              ],
-              [
-                "Total",
-                "496",
-                "470",
-                "517",
-                "0",
-                "0",
-                "0",
-                "1483"
-              ],
-              [
                 "Team 3",
-                "Lane 1 | Team points won: 0"
+                "Lane 1 points won: 0"
               ],
               [
                 "Mankle, Mari",
@@ -12620,66 +12787,65 @@
                 "482",
                 "480",
                 "535",
-                "0",
-                "0",
-                "0",
                 "1497"
+              ],
+              [
+                "Team 6",
+                "Lane 2 points won: 8"
+              ],
+              [
+                "Golden, Margo",
+                "109",
+                "72",
+                "87",
+                "107",
+                "115",
+                "309"
+              ],
+              [
+                "Miller, Debbie",
+                "139",
+                "48",
+                "165",
+                "123",
+                "122",
+                "410"
+              ],
+              [
+                "Crandall, Nicole",
+                "137",
+                "50",
+                "148",
+                "132",
+                "138",
+                "418"
+              ],
+              [
+                "Cary, Jeanne",
+                "108",
+                "73",
+                "96",
+                "108",
+                "142",
+                "346"
+              ],
+              [
+                "Total",
+                "496",
+                "470",
+                "517",
+                "1483"
               ]
             ],
             "emphasis": [
               [
                 true,
-                true
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
                 false,
                 false,
                 false,
                 false,
                 false,
                 false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true
-              ],
-              [
-                true,
-                true
               ],
               [
                 false,
@@ -12718,85 +12884,140 @@
                 false
               ],
               [
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
                 true,
-                true,
-                true,
-                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
                 true,
                 true,
                 true,
                 true
               ]
-            ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "606"
+              },
+              {
+                "handicapSeries": "503"
+              },
+              {
+                "handicapSeries": "562"
+              },
+              {
+                "handicapSeries": "459"
+              },
+              {
+                "handicapSeries": "2130",
+                "handicapGames": [
+                  "693",
+                  "691",
+                  "746"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "525"
+              },
+              {
+                "handicapSeries": "554"
+              },
+              {
+                "handicapSeries": "568"
+              },
+              {
+                "handicapSeries": "565"
+              },
+              {
+                "handicapSeries": "2212",
+                "handicapGames": [
+                  "739",
+                  "713",
+                  "760"
+                ],
+                "teamPoints": [
+                  "2.0",
+                  "2.0",
+                  "2.0",
+                  "8.0",
+                  "8.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/4/5598109082026f202604reprnt00.pdf"
           },
           {
-            "title": "Olson Constructi matchup",
+            "title": "Girls With Balls matchup",
             "headers": [
               "Bowler",
-              "AVG",
-              "HDCP",
-              "GM1",
-              "GM2",
-              "GM3",
-              "GM4",
-              "GM5",
-              "GM6",
-              "Total"
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
             ],
             "rows": [
               [
-                "Team 4",
-                "Lane 8 | Team points won: 2"
-              ],
-              [
-                "Pruch, Jane",
-                "117",
-                "66",
-                "157",
-                "130",
-                "119",
-                "406"
-              ],
-              [
-                "Burney, Sue",
-                "140",
-                "48",
-                "137",
-                "108",
-                "186",
-                "431"
-              ],
-              [
-                "Nolan, Peg",
-                "104",
-                "76",
-                "116",
-                "107",
-                "97",
-                "320"
-              ],
-              [
-                "Grasz, Diane",
-                "144",
-                "44",
-                "106",
-                "104",
-                "118",
-                "328"
-              ],
-              [
-                "Total",
-                "516",
-                "449",
-                "520",
-                "0",
-                "0",
-                "0",
-                "1485"
-              ],
-              [
                 "Team 8",
-                "Lane 7 | Team points won: 6"
+                "Lane 7 points won: 6"
               ],
               [
                 "Weiss, Lynn",
@@ -12839,66 +13060,117 @@
                 "540",
                 "502",
                 "485",
-                "0",
-                "0",
-                "0",
                 "1527"
+              ],
+              [
+                "Team 4",
+                "Lane 8 points won: 2"
+              ],
+              [
+                "Pruch, Jane",
+                "117",
+                "66",
+                "157",
+                "130",
+                "119",
+                "406"
+              ],
+              [
+                "Burney, Sue",
+                "140",
+                "48",
+                "137",
+                "108",
+                "186",
+                "431"
+              ],
+              [
+                "Nolan, Peg",
+                "104",
+                "76",
+                "116",
+                "107",
+                "97",
+                "320"
+              ],
+              [
+                "Grasz, Diane",
+                "144",
+                "44",
+                "106",
+                "104",
+                "118",
+                "328"
+              ],
+              [
+                "Total",
+                "516",
+                "449",
+                "520",
+                "1485"
               ]
             ],
             "emphasis": [
               [
                 true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                true,
+                true,
+                false,
                 true
               ],
               [
-                false,
+                true,
                 false,
                 false,
                 false,
                 false,
                 false,
                 false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true
-              ],
-              [
-                true,
-                true
               ],
               [
                 false,
@@ -12937,85 +13209,88 @@
                 false
               ],
               [
+                false,
+                false,
+                false,
                 true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true
+                false
               ]
-            ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "633"
+              },
+              {
+                "handicapSeries": "536"
+              },
+              {
+                "handicapSeries": "549"
+              },
+              {
+                "handicapSeries": "535"
+              },
+              {
+                "handicapSeries": "2253",
+                "handicapGames": [
+                  "782",
+                  "744",
+                  "727"
+                ],
+                "teamPoints": [
+                  "2.0",
+                  "2.0",
+                  "0.0",
+                  "6.0",
+                  "6.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "604"
+              },
+              {
+                "handicapSeries": "575"
+              },
+              {
+                "handicapSeries": "548"
+              },
+              {
+                "handicapSeries": "460"
+              },
+              {
+                "handicapSeries": "2187",
+                "handicapGames": [
+                  "750",
+                  "683",
+                  "754"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "2.0",
+                  "2.0",
+                  "2.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/4/5598109082026f202604reprnt00.pdf"
           },
           {
-            "title": "Lola's Team matchup",
+            "title": "L.L.F. matchup",
             "headers": [
               "Bowler",
-              "AVG",
-              "HDCP",
-              "GM1",
-              "GM2",
-              "GM3",
-              "GM4",
-              "GM5",
-              "GM6",
-              "Total"
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
             ],
             "rows": [
               [
-                "Team 5",
-                "Lane 6 | Team points won: 0"
-              ],
-              [
-                "Burton, Diane",
-                "99",
-                "80",
-                "108",
-                "93",
-                "78",
-                "279"
-              ],
-              [
-                "Vanscoy, Megan",
-                "127",
-                "58",
-                "126",
-                "121",
-                "113",
-                "360"
-              ],
-              [
-                "Willson, Marilyn",
-                "131",
-                "55",
-                "127",
-                "95",
-                "125",
-                "347"
-              ],
-              [
-                "Geyza, Dawne",
-                "129",
-                "56",
-                "138",
-                "129",
-                "99",
-                "366"
-              ],
-              [
-                "Total",
-                "499",
-                "438",
-                "415",
-                "0",
-                "0",
-                "0",
-                "1352"
-              ],
-              [
                 "Team 1",
-                "Lane 5 | Team points won: 8"
+                "Lane 5 points won: 8"
               ],
               [
                 "Williams, Doris",
@@ -13058,66 +13333,65 @@
                 "584",
                 "569",
                 "530",
-                "0",
-                "0",
-                "0",
                 "1683"
+              ],
+              [
+                "Team 5",
+                "Lane 6 points won: 0"
+              ],
+              [
+                "Burton, Diane",
+                "99",
+                "80",
+                "108",
+                "93",
+                "78",
+                "279"
+              ],
+              [
+                "Vanscoy, Megan",
+                "127",
+                "58",
+                "126",
+                "121",
+                "113",
+                "360"
+              ],
+              [
+                "Willson, Marilyn",
+                "131",
+                "55",
+                "127",
+                "95",
+                "125",
+                "347"
+              ],
+              [
+                "Geyza, Dawne",
+                "129",
+                "56",
+                "138",
+                "129",
+                "99",
+                "366"
+              ],
+              [
+                "Total",
+                "499",
+                "438",
+                "415",
+                "1352"
               ]
             ],
             "emphasis": [
               [
                 true,
-                true
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
                 false,
                 false,
                 false,
                 false,
                 false,
                 false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true
-              ],
-              [
-                true,
-                true
               ],
               [
                 false,
@@ -13156,85 +13430,140 @@
                 false
               ],
               [
-                true,
-                true,
-                true,
-                true,
+                false,
                 true,
                 true,
                 true,
                 true
+              ],
+              [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
               ]
-            ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "646"
+              },
+              {
+                "handicapSeries": "553"
+              },
+              {
+                "handicapSeries": "486"
+              },
+              {
+                "handicapSeries": "589"
+              },
+              {
+                "handicapSeries": "2274",
+                "handicapGames": [
+                  "781",
+                  "766",
+                  "727"
+                ],
+                "teamPoints": [
+                  "2.0",
+                  "2.0",
+                  "2.0",
+                  "8.0",
+                  "8.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "519"
+              },
+              {
+                "handicapSeries": "534"
+              },
+              {
+                "handicapSeries": "512"
+              },
+              {
+                "handicapSeries": "534"
+              },
+              {
+                "handicapSeries": "2099",
+                "handicapGames": [
+                  "748",
+                  "687",
+                  "664"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/4/5598109082026f202604reprnt00.pdf"
           },
           {
-            "title": "Weebles matchup",
+            "title": "Rollin Rebels matchup",
             "headers": [
               "Bowler",
-              "AVG",
-              "HDCP",
-              "GM1",
-              "GM2",
-              "GM3",
-              "GM4",
-              "GM5",
-              "GM6",
-              "Total"
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
             ],
             "rows": [
               [
-                "Team 2",
-                "Lane 4 | Team points won: 6"
-              ],
-              [
-                "Mcclaren, Jen",
-                "109",
-                "72",
-                "110",
-                "144",
-                "110",
-                "364"
-              ],
-              [
-                "Gerhard, Connie",
-                "109",
-                "72",
-                "127",
-                "95",
-                "115",
-                "337"
-              ],
-              [
-                "Harris, Patty",
-                "115",
-                "68",
-                "106",
-                "137",
-                "135",
-                "378"
-              ],
-              [
-                "Reiss, Rebecca",
-                "144",
-                "44",
-                "139",
-                "99",
-                "119",
-                "357"
-              ],
-              [
-                "Total",
-                "482",
-                "475",
-                "479",
-                "0",
-                "0",
-                "0",
-                "1436"
-              ],
-              [
                 "Team 7",
-                "Lane 3 | Team points won: 2"
+                "Lane 3 points won: 2"
               ],
               [
                 "Hamilton, Karen",
@@ -13277,66 +13606,65 @@
                 "516",
                 "520",
                 "500",
-                "0",
-                "0",
-                "0",
                 "1536"
+              ],
+              [
+                "Team 2",
+                "Lane 4 points won: 6"
+              ],
+              [
+                "Mcclaren, Jen",
+                "109",
+                "72",
+                "110",
+                "144",
+                "110",
+                "364"
+              ],
+              [
+                "Gerhard, Connie",
+                "109",
+                "72",
+                "127",
+                "95",
+                "115",
+                "337"
+              ],
+              [
+                "Harris, Patty",
+                "115",
+                "68",
+                "106",
+                "137",
+                "135",
+                "378"
+              ],
+              [
+                "Reiss, Rebecca",
+                "144",
+                "44",
+                "139",
+                "99",
+                "119",
+                "357"
+              ],
+              [
+                "Total",
+                "482",
+                "475",
+                "479",
+                "1436"
               ]
             ],
             "emphasis": [
               [
                 true,
-                true
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
                 false,
                 false,
                 false,
                 false,
                 false,
                 false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true
-              ],
-              [
-                true,
-                true
               ],
               [
                 false,
@@ -13375,21 +13703,129 @@
                 false
               ],
               [
+                false,
+                false,
                 true,
+                false,
+                false
+              ],
+              [
                 true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
                 true,
-                true,
-                true,
-                true,
+                false,
                 true,
                 true
               ]
-            ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "535"
+              },
+              {
+                "handicapSeries": "577"
+              },
+              {
+                "handicapSeries": "514"
+              },
+              {
+                "handicapSeries": "561"
+              },
+              {
+                "handicapSeries": "2187",
+                "handicapGames": [
+                  "733",
+                  "737",
+                  "717"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "2.0",
+                  "0.0",
+                  "2.0",
+                  "2.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "580"
+              },
+              {
+                "handicapSeries": "553"
+              },
+              {
+                "handicapSeries": "582"
+              },
+              {
+                "handicapSeries": "489"
+              },
+              {
+                "handicapSeries": "2204",
+                "handicapGames": [
+                  "738",
+                  "731",
+                  "735"
+                ],
+                "teamPoints": [
+                  "2.0",
+                  "0.0",
+                  "2.0",
+                  "6.0",
+                  "6.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/4/5598109082026f202604reprnt00.pdf"
           }
         ],
         "lanes": [
           {
-            "title": "Table 3",
+            "title": "All scheduled teams",
             "headers": [
               "Lane",
               "Team#",
@@ -13439,42 +13875,42 @@
             ],
             "emphasis": [
               [
-                false,
-                false,
-                false
-              ],
-              [
-                false,
+                true,
                 false,
                 false
               ],
               [
-                false,
-                false,
-                false
-              ],
-              [
-                false,
+                true,
                 false,
                 false
               ],
               [
-                false,
-                false,
-                false
-              ],
-              [
-                false,
+                true,
                 false,
                 false
               ],
               [
-                false,
+                true,
                 false,
                 false
               ],
               [
+                true,
                 false,
+                false
+              ],
+              [
+                true,
+                false,
+                false
+              ],
+              [
+                true,
+                false,
+                false
+              ],
+              [
+                true,
                 false,
                 false
               ]
@@ -13491,7 +13927,7 @@
               "HCP",
               "Gms",
               "Pins",
-              "Avg"
+              "AVG"
             ],
             "rows": [
               [
@@ -13616,7 +14052,7 @@
               "HCP",
               "Gms",
               "Pins",
-              "Avg"
+              "AVG"
             ],
             "rows": [
               [
@@ -13705,7 +14141,7 @@
               "HCP",
               "Gms",
               "Pins",
-              "Avg"
+              "AVG"
             ],
             "rows": [
               [
@@ -13830,7 +14266,7 @@
               "HCP",
               "Gms",
               "Pins",
-              "Avg"
+              "AVG"
             ],
             "rows": [
               [
@@ -13937,7 +14373,7 @@
               "HCP",
               "Gms",
               "Pins",
-              "Avg"
+              "AVG"
             ],
             "rows": [
               [
@@ -14062,7 +14498,7 @@
               "HCP",
               "Gms",
               "Pins",
-              "Avg"
+              "AVG"
             ],
             "rows": [
               [
@@ -14169,7 +14605,7 @@
               "HCP",
               "Gms",
               "Pins",
-              "Avg"
+              "AVG"
             ],
             "rows": [
               [
@@ -14294,7 +14730,7 @@
               "HCP",
               "Gms",
               "Pins",
-              "Avg"
+              "AVG"
             ],
             "rows": [
               [
@@ -14449,5 +14885,7 @@
         ]
       }
     }
-  ]
+  ],
+  "lastAttemptedAt": null,
+  "lastCheckedAt": "2026-09-15T18:21:12.777Z"
 }

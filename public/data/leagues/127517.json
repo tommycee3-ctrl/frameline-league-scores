@@ -7,33 +7,33 @@
   "bowlsOn": "Thursday",
   "startTime": "6:30 PM",
   "type": "Handicap Womens",
-  "updated": "09/03/2026",
+  "updated": "Sep 10, 2026",
   "startDate": "Fall 2026",
   "bowlDay": 4,
   "centerId": "2118",
   "centerName": "Sun Valley Lanes",
   "centerSlug": "sun-valley-lanes-lincoln-nebraska",
   "area": "Lincoln",
-  "sourceUpdated": "09/03/2026",
-  "syncedAt": "2026-09-10T10:23:52.739Z",
+  "sourceUpdated": "Sep 10, 2026",
+  "syncedAt": "2026-09-15T18:28:20.586Z",
   "status": "current",
-  "week": "3",
-  "fingerprint": "382e3ff6bcc9928400ae17bf8a6b99e8e4ec2a9ddf8e3174115b6e345e0ffac0",
+  "week": "4",
+  "fingerprint": "d491d0b509ef3ca110c26f58726a114e785fd6bcaa47e00373f6d37515b5e2f8",
   "lastCompletedCycle": "2026-09-10",
   "views": {
     "standings": [
       {
-        "title": "Table 1",
+        "title": "League standings",
         "headers": [
-          "Division",
           "Place",
-          "Team#",
           "Team",
-          "Won",
-          "Lost",
-          "% Won",
-          "YTD Won",
-          "Avg",
+          "Team#",
+          "Div",
+          "WON",
+          "LOST",
+          "%",
+          "YTD WON",
+          "AVG",
           "Pins",
           "HSG",
           "HSS"
@@ -41,85 +41,85 @@
         "rows": [
           [
             "1",
-            "1",
-            "6",
             "Split Personalities",
-            "17",
-            "4",
-            "81 %",
-            "17",
-            "598",
-            "5316",
-            "641",
-            "1847"
+            "6",
+            "1",
+            "22",
+            "6",
+            "79 %",
+            "22",
+            "627",
+            "7347",
+            "726",
+            "2031"
           ],
           [
-            "1",
-            "2",
             "2",
             "Gutter Pals",
-            "17",
-            "4",
-            "81 %",
-            "17",
-            "648",
-            "5847",
-            "701",
-            "1999"
+            "2",
+            "1",
+            "19",
+            "9",
+            "68 %",
+            "19",
+            "665",
+            "7955",
+            "783",
+            "2108"
           ],
           [
-            "1",
-            "3",
             "3",
             "Racing Girls",
+            "3",
+            "1",
             "16",
-            "5",
-            "76 %",
+            "12",
+            "57 %",
             "16",
-            "667",
-            "5880",
+            "646",
+            "7722",
             "729",
             "2094"
           ],
           [
+            "4",
+            "Red Herring Concepts",
+            "5",
             "1",
-            "4",
-            "4",
+            "13",
+            "15",
+            "46 %",
+            "13",
+            "658",
+            "7928",
+            "693",
+            "2018"
+          ],
+          [
+            "5",
             "Barbie's Angels",
-            "7",
-            "14",
-            "33 %",
-            "7",
-            "636",
-            "5643",
+            "4",
+            "1",
+            "9",
+            "19",
+            "32 %",
+            "9",
+            "602",
+            "7351",
             "708",
             "2016"
           ],
           [
-            "1",
-            "5",
-            "5",
-            "Red Herring Concepts",
             "6",
-            "15",
-            "29 %",
-            "6",
-            "695",
-            "5933",
-            "692",
-            "2018"
-          ],
-          [
-            "1",
-            "6",
-            "1",
             "Been There Bowle",
-            "0",
-            "21",
-            "0 %",
-            "0",
-            "653",
-            "5948",
+            "1",
+            "1",
+            "5",
+            "23",
+            "18 %",
+            "5",
+            "659",
+            "7891",
             "724",
             "2106"
           ]
@@ -132,23 +132,9 @@
             false,
             false,
             false,
+            true,
             false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
+            true,
             false,
             false,
             false
@@ -160,23 +146,9 @@
             false,
             false,
             false,
+            true,
             false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
+            true,
             false,
             false,
             false
@@ -188,9 +160,9 @@
             false,
             false,
             false,
+            true,
             false,
-            false,
-            false,
+            true,
             false,
             false,
             false
@@ -202,9 +174,37 @@
             false,
             false,
             false,
+            true,
+            false,
+            true,
+            false,
+            false,
+            false
+          ],
+          [
             false,
             false,
             false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            true,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            true,
             false,
             false,
             false
@@ -214,7 +214,7 @@
     ],
     "bowlers": [
       {
-        "title": "Table 1",
+        "title": "Bowlers and season statistics",
         "headers": [
           "Name",
           "Team#",
@@ -240,15 +240,15 @@
             "3",
             "Gutter Pals",
             "W",
-            "734",
-            "6",
-            "122",
+            "1138",
+            "9",
+            "126",
             "0",
-            "78",
+            "74",
             "0",
             "0",
-            "138",
-            "375",
+            "145",
+            "404",
             "0",
             "0"
           ],
@@ -258,16 +258,16 @@
             "4",
             "Racing Girls",
             "W",
-            "1333",
-            "9",
-            "148",
+            "1674",
+            "12",
             "139",
-            "52",
+            "139",
+            "61",
             "0",
             "0",
             "171",
             "480",
-            "0",
+            "0.5",
             "0"
           ],
           [
@@ -276,16 +276,16 @@
             "2",
             "Split Personalities",
             "W",
-            "952",
-            "9",
-            "105",
+            "1306",
+            "12",
+            "108",
             "100",
-            "95",
+            "92",
             "0",
             "0",
-            "134",
-            "342",
-            "0",
+            "136",
+            "354",
+            "0.83",
             "0"
           ],
           [
@@ -294,11 +294,11 @@
             "2",
             "Barbie's Angels",
             "W",
-            "1026",
-            "9",
+            "1356",
+            "12",
+            "113",
             "114",
-            "114",
-            "86",
+            "87",
             "0",
             "0",
             "163",
@@ -312,15 +312,15 @@
             "1",
             "Barbie's Angels",
             "W",
-            "611",
-            "6",
+            "924",
+            "9",
+            "102",
             "116",
-            "116",
-            "84",
+            "98",
             "0",
             "0",
-            "119",
-            "308",
+            "124",
+            "313",
             "0",
             "0"
           ],
@@ -330,15 +330,15 @@
             "1",
             "Split Personalities",
             "W",
-            "560",
-            "6",
+            "920",
+            "9",
+            "102",
             "87",
-            "87",
-            "113",
+            "98",
             "0",
             "0",
-            "112",
-            "308",
+            "124",
+            "360",
             "0",
             "0"
           ],
@@ -348,16 +348,16 @@
             "1",
             "Been There Bowle",
             "W",
-            "707",
-            "9",
-            "78",
+            "889",
+            "12",
+            "74",
             "95",
-            "122",
+            "126",
             "0",
             "0",
             "115",
             "280",
-            "0",
+            "0.08",
             "0"
           ],
           [
@@ -366,11 +366,11 @@
             "5",
             "Barbie's Angels",
             "W",
-            "949",
-            "6",
+            "1335",
+            "9",
+            "148",
             "164",
-            "164",
-            "36",
+            "52",
             "0",
             "0",
             "193",
@@ -384,11 +384,11 @@
             "6",
             "Been There Bowle",
             "W",
-            "906",
-            "6",
+            "1300",
+            "9",
+            "144",
             "165",
-            "165",
-            "35",
+            "56",
             "0",
             "0",
             "169",
@@ -402,15 +402,15 @@
             "3",
             "Been There Bowle",
             "W",
-            "426",
-            "3",
+            "870",
+            "6",
             "134",
             "134",
             "66",
             "0",
             "0",
-            "158",
-            "426",
+            "178",
+            "444",
             "0",
             "0"
           ],
@@ -456,11 +456,11 @@
             "4",
             "Been There Bowle",
             "W",
-            "1048",
-            "6",
+            "1561",
+            "9",
+            "173",
             "162",
-            "162",
-            "38",
+            "27",
             "0",
             "0",
             "214",
@@ -474,16 +474,16 @@
             "3",
             "Barbie's Angels",
             "W",
-            "1146",
-            "9",
+            "1496",
+            "12",
+            "124",
             "127",
-            "127",
-            "73",
+            "76",
             "0",
             "0",
             "163",
             "426",
-            "0",
+            "0.67",
             "0"
           ],
           [
@@ -492,8 +492,8 @@
             "7",
             "Barbie's Angels",
             "W",
-            "378",
-            "3",
+            "707",
+            "6",
             "123",
             "123",
             "77",
@@ -510,15 +510,15 @@
             "5",
             "Racing Girls",
             "W",
-            "854",
-            "6",
+            "1315",
+            "9",
+            "146",
             "160",
-            "160",
-            "40",
+            "54",
             "0",
             "0",
-            "156",
-            "444",
+            "167",
+            "461",
             "0",
             "0"
           ],
@@ -528,11 +528,11 @@
             "3",
             "Racing Girls",
             "W",
-            "892",
-            "9",
-            "99",
-            "0",
+            "1212",
+            "12",
             "101",
+            "0",
+            "99",
             "0",
             "0",
             "147",
@@ -546,16 +546,16 @@
             "3",
             "Red Herring Concepts",
             "W",
-            "1260",
-            "9",
-            "140",
+            "1651",
+            "12",
+            "137",
             "143",
-            "60",
+            "63",
             "0",
             "0",
             "168",
             "434",
-            "0",
+            "0.58",
             "0"
           ],
           [
@@ -582,16 +582,16 @@
             "2",
             "Gutter Pals",
             "W",
-            "1095",
-            "9",
-            "121",
+            "1438",
+            "12",
+            "119",
             "130",
-            "79",
+            "81",
             "0",
             "0",
             "137",
             "390",
-            "0",
+            "0.83",
             "0"
           ],
           [
@@ -618,16 +618,16 @@
             "2",
             "Been There Bowle",
             "W",
-            "1275",
-            "9",
-            "141",
+            "1685",
+            "12",
+            "140",
             "162",
-            "59",
+            "60",
             "0",
             "0",
             "180",
             "443",
-            "0",
+            "0.42",
             "0"
           ],
           [
@@ -636,16 +636,16 @@
             "1",
             "Gutter Pals",
             "W",
-            "1283",
-            "9",
-            "142",
+            "1822",
+            "12",
+            "151",
             "150",
-            "58",
+            "49",
             "0",
             "0",
-            "156",
-            "435",
-            "0",
+            "202",
+            "539",
+            "0.83",
             "0"
           ],
           [
@@ -654,11 +654,11 @@
             "5",
             "Gutter Pals",
             "W",
-            "849",
-            "6",
+            "1258",
+            "9",
+            "139",
             "136",
-            "136",
-            "64",
+            "61",
             "0",
             "0",
             "175",
@@ -672,8 +672,8 @@
             "2",
             "Red Herring Concepts",
             "W",
-            "1152",
-            "9",
+            "1546",
+            "12",
             "128",
             "135",
             "72",
@@ -681,7 +681,7 @@
             "0",
             "162",
             "429",
-            "0",
+            "0.83",
             "0"
           ],
           [
@@ -708,15 +708,15 @@
             "4",
             "Red Herring Concepts",
             "W",
-            "758",
-            "6",
+            "1199",
+            "9",
+            "133",
             "150",
-            "150",
-            "50",
+            "67",
             "0",
             "0",
             "155",
-            "426",
+            "441",
             "0",
             "0"
           ],
@@ -726,11 +726,11 @@
             "1",
             "Red Herring Concepts",
             "W",
-            "696",
-            "6",
+            "1072",
+            "9",
+            "119",
             "136",
-            "136",
-            "64",
+            "81",
             "0",
             "0",
             "147",
@@ -744,16 +744,16 @@
             "5",
             "Split Personalities",
             "W",
-            "1385",
-            "9",
-            "153",
+            "1909",
+            "12",
+            "159",
             "0",
-            "47",
+            "41",
             "0",
             "0",
             "208",
             "533",
-            "0",
+            "0.08",
             "0"
           ],
           [
@@ -762,16 +762,16 @@
             "4",
             "Gutter Pals",
             "W",
-            "1148",
-            "9",
-            "127",
+            "1561",
+            "12",
+            "130",
             "0",
-            "73",
+            "70",
             "0",
             "0",
-            "142",
-            "389",
-            "0",
+            "146",
+            "413",
+            "0.08",
             "0"
           ],
           [
@@ -780,16 +780,16 @@
             "3",
             "Split Personalities",
             "W",
-            "1117",
-            "9",
-            "124",
+            "1553",
+            "12",
+            "129",
             "130",
-            "76",
+            "71",
             "0",
             "0",
-            "145",
-            "386",
-            "0",
+            "179",
+            "436",
+            "0.42",
             "0"
           ]
         ],
@@ -1357,50 +1357,418 @@
     ],
     "recaps": [
       {
-        "title": "Split Personalities matchup",
+        "title": "Barbie's Angels matchup",
         "headers": [
           "Bowler",
-          "AVG",
-          "HDCP",
-          "GM1",
-          "GM2",
-          "GM3",
-          "GM4",
-          "GM5",
-          "GM6",
-          "Total"
+          "Average",
+          "Handicap",
+          "Game 1",
+          "Game 2",
+          "Game 3",
+          "Scratch series"
         ],
         "rows": [
           [
+            "Team 4",
+            "Lane 29 points won: 2"
+          ],
+          [
+            "Classen, Amanda",
+            "116",
+            "84",
+            "124",
+            "111",
+            "78",
+            "313"
+          ],
+          [
+            "Bryant, Wendy",
+            "114",
+            "86",
+            "113",
+            "105",
+            "112",
+            "330"
+          ],
+          [
+            "Hernandez, Jonita",
+            "127",
+            "73",
+            "114",
+            "110",
+            "126",
+            "350"
+          ],
+          [
+            "Dority, Christy",
+            "164",
+            "36",
+            "128",
+            "123",
+            "135",
+            "386"
+          ],
+          [
+            "Howard, Teri",
+            "123",
+            "77",
+            "95",
+            "115",
+            "119",
+            "329"
+          ],
+          [
+            "Total",
+            "574",
+            "564",
+            "570",
+            "1708"
+          ],
+          [
+            "Team 1",
+            "Lane 30 points won: 5"
+          ],
+          [
+            "Cohn, Nancy",
+            "78",
+            "122",
+            "41",
+            "70",
+            "71",
+            "182"
+          ],
+          [
+            "Ortlieb, Connie",
+            "141",
+            "59",
+            "151",
+            "132",
+            "127",
+            "410"
+          ],
+          [
+            "Enderle, Brooke",
+            "134",
+            "66",
+            "145",
+            "178",
+            "121",
+            "444"
+          ],
+          [
+            "Harris, Belva",
+            "162",
+            "38",
+            "161",
+            "203",
+            "149",
+            "513"
+          ],
+          [
+            "Elliott, Nancy",
+            "165",
+            "35",
+            "139",
+            "121",
+            "134",
+            "394"
+          ],
+          [
+            "Total",
+            "637",
+            "704",
+            "602",
+            "1943"
+          ]
+        ],
+        "emphasis": [
+          [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            true,
+            false
+          ],
+          [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            true,
+            true,
+            false,
+            true
+          ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "565"
+          },
+          {
+            "handicapSeries": "588"
+          },
+          {
+            "handicapSeries": "569"
+          },
+          {
+            "handicapSeries": "494"
+          },
+          {
+            "handicapSeries": "560"
+          },
+          {
+            "handicapSeries": "2776",
+            "handicapGames": [
+              "930",
+              "920",
+              "926"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "2.0",
+              "2.0",
+              "2.0"
+            ]
+          },
+          {},
+          {
+            "handicapSeries": "548"
+          },
+          {
+            "handicapSeries": "587"
+          },
+          {
+            "handicapSeries": "642"
+          },
+          {
+            "handicapSeries": "627"
+          },
+          {
+            "handicapSeries": "499"
+          },
+          {
+            "handicapSeries": "2903",
+            "handicapGames": [
+              "957",
+              "1024",
+              "922"
+            ],
+            "teamPoints": [
+              "2.0",
+              "2.0",
+              "0.0",
+              "5.0",
+              "5.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/4/12751709102026f202604reprnt00.pdf"
+      },
+      {
+        "title": "Gutter Pals matchup",
+        "headers": [
+          "Bowler",
+          "Average",
+          "Handicap",
+          "Game 1",
+          "Game 2",
+          "Game 3",
+          "Scratch series"
+        ],
+        "rows": [
+          [
+            "Team 2",
+            "Lane 27 points won: 2"
+          ],
+          [
+            "Preble, Lafran",
+            "142",
+            "58",
+            "166",
+            "171",
+            "202",
+            "539"
+          ],
+          [
+            "Mccreery, Kelly",
+            "121",
+            "79",
+            "95",
+            "116",
+            "132",
+            "343"
+          ],
+          [
+            "Bedwani, Julie",
+            "122",
+            "78",
+            "145",
+            "115",
+            "144",
+            "404"
+          ],
+          [
+            "Walton, Kay",
+            "127",
+            "73",
+            "131",
+            "136",
+            "146",
+            "413"
+          ],
+          [
+            "Preble, Tara",
+            "136",
+            "64",
+            "127",
+            "123",
+            "159",
+            "409"
+          ],
+          [
+            "Total",
+            "664",
+            "661",
+            "783",
+            "2108"
+          ],
+          [
             "Team 6",
-            "Lane 31 | Team points won: 5"
+            "Lane 28 points won: 5"
           ],
           [
             "Clay, Anesha",
             "87",
             "113",
-            "107",
-            "112",
-            "89",
-            "308"
+            "118",
+            "118",
+            "124",
+            "360"
           ],
           [
             "Blinde, Val",
-            "100",
-            "100",
-            "112",
-            "96",
-            "134",
-            "342"
+            "105",
+            "95",
+            "119",
+            "136",
+            "99",
+            "354"
           ],
           [
             "Werts, Mindy",
-            "130",
-            "70",
-            "136",
-            "121",
-            "109",
-            "366"
+            "124",
+            "76",
+            "179",
+            "144",
+            "113",
+            "436"
           ],
           [
             "Siebe, Vonda",
@@ -1413,146 +1781,30 @@
           ],
           [
             "Schilke, Emily",
-            "154",
-            "46",
-            "142",
-            "185",
-            "133",
-            "460"
-          ],
-          [
-            "Total",
-            "616",
-            "633",
-            "584",
-            "0",
-            "0",
-            "0",
-            "1833"
-          ],
-          [
-            "Team 4",
-            "Lane 32 | Team points won: 2"
-          ],
-          [
-            "Classen, Amanda",
-            "116",
-            "84",
-            "106",
-            "106",
-            "106",
-            "318"
-          ],
-          [
-            "Bryant, Wendy",
-            "114",
-            "86",
-            "119",
-            "163",
-            "96",
-            "378"
-          ],
-          [
-            "Hernandez, Jonita",
-            "127",
-            "73",
-            "117",
-            "106",
-            "129",
-            "352"
-          ],
-          [
-            "Murphy, Kelly",
-            "115",
-            "85",
-            "155",
-            "151",
-            "113",
-            "419"
-          ],
-          [
-            "Dority, Christy",
+            "153",
+            "47",
+            "191",
+            "169",
             "164",
-            "36",
-            "159",
-            "128",
-            "168",
-            "455"
+            "524"
           ],
           [
             "Total",
-            "656",
-            "654",
-            "612",
-            "0",
-            "0",
-            "0",
-            "1922"
+            "726",
+            "686",
+            "619",
+            "2031"
           ]
         ],
         "emphasis": [
           [
             true,
-            true
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
             false,
             false,
             false,
             false,
             false,
             false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
-          ],
-          [
-            true,
-            true
           ],
           [
             false,
@@ -1600,469 +1852,274 @@
             false
           ],
           [
+            false,
+            false,
+            false,
+            true,
+            false
+          ],
+          [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
             true,
             true,
-            true,
-            true,
-            true,
-            true,
-            true,
+            false,
             true
           ]
-        ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "713"
+          },
+          {
+            "handicapSeries": "580"
+          },
+          {
+            "handicapSeries": "638"
+          },
+          {
+            "handicapSeries": "632"
+          },
+          {
+            "handicapSeries": "601"
+          },
+          {
+            "handicapSeries": "3164",
+            "handicapGames": [
+              "1016",
+              "1013",
+              "1135"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "2.0",
+              "2.0",
+              "2.0"
+            ]
+          },
+          {},
+          {
+            "handicapSeries": "699"
+          },
+          {
+            "handicapSeries": "639"
+          },
+          {
+            "handicapSeries": "664"
+          },
+          {
+            "handicapSeries": "570"
+          },
+          {
+            "handicapSeries": "665"
+          },
+          {
+            "handicapSeries": "3237",
+            "handicapGames": [
+              "1128",
+              "1088",
+              "1021"
+            ],
+            "teamPoints": [
+              "2.0",
+              "2.0",
+              "0.0",
+              "5.0",
+              "5.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/4/12751709102026f202604reprnt00.pdf"
       },
       {
         "title": "Racing Girls matchup",
         "headers": [
           "Bowler",
-          "AVG",
-          "HDCP",
-          "GM1",
-          "GM2",
-          "GM3",
-          "GM4",
-          "GM5",
-          "GM6",
-          "Total"
+          "Average",
+          "Handicap",
+          "Game 1",
+          "Game 2",
+          "Game 3",
+          "Scratch series"
         ],
         "rows": [
           [
             "Team 3",
-            "Lane 27 | Team points won: 7"
+            "Lane 31 points won: 0"
           ],
           [
             "Hall, Michalle",
-            "121",
-            "79",
-            "117",
-            "137",
-            "165",
-            "419"
+            "123",
+            "77",
+            "113",
+            "113",
+            "113",
+            "339"
           ],
           [
             "Hall, Kasha",
-            "143",
-            "57",
-            "134",
-            "139",
-            "116",
-            "389"
+            "137",
+            "63",
+            "127",
+            "127",
+            "127",
+            "381"
           ],
           [
             "Irwin, Caroline",
-            "89",
-            "111",
-            "104",
-            "105",
-            "147",
-            "356"
+            "99",
+            "101",
+            "99",
+            "85",
+            "136",
+            "320"
           ],
           [
             "Bishop, Paula",
-            "139",
-            "61",
-            "171",
-            "158",
-            "151",
-            "480"
+            "148",
+            "52",
+            "126",
+            "110",
+            "105",
+            "341"
           ],
           [
             "Howe, Chris",
             "160",
             "40",
-            "150",
-            "150",
-            "150",
-            "450"
+            "147",
+            "167",
+            "147",
+            "461"
           ],
           [
             "Total",
-            "676",
-            "689",
-            "729",
-            "0",
-            "0",
-            "0",
-            "2094"
+            "612",
+            "602",
+            "628",
+            "1842"
           ],
-          [
-            "Team 1",
-            "Lane 28 | Team points won: 0"
-          ],
-          [
-            "Cohn, Nancy",
-            "95",
-            "105",
-            "56",
-            "69",
-            "69",
-            "194"
-          ],
-          [
-            "Ortlieb, Connie",
-            "162",
-            "38",
-            "151",
-            "136",
-            "133",
-            "420"
-          ],
-          [
-            "Enderle, Brooke",
-            "134",
-            "66",
-            "124",
-            "124",
-            "124",
-            "372"
-          ],
-          [
-            "Harris, Belva",
-            "162",
-            "38",
-            "162",
-            "159",
-            "214",
-            "535"
-          ],
-          [
-            "Elliott, Nancy",
-            "165",
-            "35",
-            "155",
-            "155",
-            "155",
-            "465"
-          ],
-          [
-            "Total",
-            "648",
-            "643",
-            "695",
-            "0",
-            "0",
-            "0",
-            "1986"
-          ]
-        ],
-        "emphasis": [
-          [
-            true,
-            true
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
-          ],
-          [
-            true,
-            true
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
-          ]
-        ]
-      },
-      {
-        "title": "Red Herring Concepts matchup",
-        "headers": [
-          "Bowler",
-          "AVG",
-          "HDCP",
-          "GM1",
-          "GM2",
-          "GM3",
-          "GM4",
-          "GM5",
-          "GM6",
-          "Total"
-        ],
-        "rows": [
           [
             "Team 5",
-            "Lane 30 | Team points won: 2"
+            "Lane 32 points won: 7"
           ],
           [
             "Sacca, Elaine",
             "136",
             "64",
-            "147",
-            "111",
-            "138",
-            "396"
+            "124",
+            "122",
+            "130",
+            "376"
           ],
           [
             "Prusa, Melony",
-            "135",
-            "65",
-            "115",
-            "162",
-            "94",
-            "371"
+            "128",
+            "72",
+            "124",
+            "129",
+            "141",
+            "394"
           ],
           [
             "Markwardt, Lori",
-            "143",
-            "57",
             "140",
-            "159",
-            "135",
-            "434"
+            "60",
+            "127",
+            "121",
+            "143",
+            "391"
           ],
           [
             "Rosenthal, Roxie",
             "150",
             "50",
-            "140",
-            "140",
-            "140",
-            "420"
+            "146",
+            "147",
+            "148",
+            "441"
           ],
           [
             "Pulsifer, Mary",
-            "142",
-            "58",
-            "140",
-            "120",
-            "137",
-            "397"
-          ],
-          [
-            "Total",
-            "682",
-            "692",
-            "644",
-            "0",
-            "0",
-            "0",
-            "2018"
-          ],
-          [
-            "Team 2",
-            "Lane 29 | Team points won: 5"
-          ],
-          [
-            "Preble, Lafran",
-            "150",
-            "50",
-            "149",
-            "140",
-            "146",
-            "435"
-          ],
-          [
-            "Mccreery, Kelly",
-            "130",
-            "70",
-            "133",
-            "101",
-            "114",
-            "348"
-          ],
-          [
-            "Bedwani, Julie",
-            "119",
-            "81",
-            "138",
-            "118",
-            "119",
-            "375"
-          ],
-          [
-            "Walton, Kay",
-            "127",
-            "73",
-            "129",
-            "124",
+            "141",
+            "59",
             "131",
-            "384"
-          ],
-          [
-            "Preble, Tara",
-            "136",
-            "64",
-            "126",
-            "126",
-            "126",
-            "378"
+            "131",
+            "131",
+            "393"
           ],
           [
             "Total",
-            "675",
-            "609",
-            "636",
-            "0",
-            "0",
-            "0",
-            "1920"
+            "652",
+            "650",
+            "693",
+            "1995"
           ]
         ],
         "emphasis": [
           [
             true,
-            true
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
             false,
             false,
             false,
             false,
             false,
             false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
-          ],
-          [
-            true,
-            true
           ],
           [
             false,
@@ -2110,21 +2167,144 @@
             false
           ],
           [
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
             true,
-            true,
-            true,
-            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
             true,
             true,
             true,
             true
           ]
-        ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "570"
+          },
+          {
+            "handicapSeries": "570"
+          },
+          {
+            "handicapSeries": "623"
+          },
+          {
+            "handicapSeries": "497"
+          },
+          {
+            "handicapSeries": "581"
+          },
+          {
+            "handicapSeries": "2841",
+            "handicapGames": [
+              "945",
+              "935",
+              "961"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0"
+            ]
+          },
+          {},
+          {
+            "handicapSeries": "568"
+          },
+          {
+            "handicapSeries": "610"
+          },
+          {
+            "handicapSeries": "571"
+          },
+          {
+            "handicapSeries": "591"
+          },
+          {
+            "handicapSeries": "570"
+          },
+          {
+            "handicapSeries": "2910",
+            "handicapGames": [
+              "957",
+              "955",
+              "998"
+            ],
+            "teamPoints": [
+              "2.0",
+              "2.0",
+              "2.0",
+              "7.0",
+              "7.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/4/12751709102026f202604reprnt00.pdf"
       }
     ],
     "lanes": [
       {
-        "title": "Table 1",
+        "title": "All scheduled teams",
         "headers": [
           "Lane",
           "Team#",
@@ -2133,63 +2313,63 @@
         "rows": [
           [
             "27",
-            "2",
-            "Gutter Pals"
-          ],
-          [
-            "28",
-            "6",
-            "Split Personalities"
-          ],
-          [
-            "29",
-            "4",
-            "Barbie's Angels"
-          ],
-          [
-            "30",
             "1",
             "Been There Bowle"
           ],
           [
-            "31",
+            "28",
+            "5",
+            "Red Herring Concepts"
+          ],
+          [
+            "29",
+            "6",
+            "Split Personalities"
+          ],
+          [
+            "30",
             "3",
             "Racing Girls"
           ],
           [
+            "31",
+            "4",
+            "Barbie's Angels"
+          ],
+          [
             "32",
-            "5",
-            "Red Herring Concepts"
+            "2",
+            "Gutter Pals"
           ]
         ],
         "emphasis": [
           [
-            false,
-            false,
-            false
-          ],
-          [
-            false,
+            true,
             false,
             false
           ],
           [
-            false,
-            false,
-            false
-          ],
-          [
-            false,
+            true,
             false,
             false
           ],
           [
-            false,
+            true,
             false,
             false
           ],
           [
+            true,
             false,
+            false
+          ],
+          [
+            true,
+            false,
+            false
+          ],
+          [
+            true,
             false,
             false
           ]
@@ -2206,35 +2386,35 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
             "1",
             "Classen, Amanda",
             "W",
-            "84",
-            "6",
-            "611",
-            "116"
+            "98",
+            "9",
+            "924",
+            "102"
           ],
           [
             "2",
             "Bryant, Wendy",
             "W",
-            "86",
-            "9",
-            "1026",
-            "114"
+            "87",
+            "12",
+            "1356",
+            "113"
           ],
           [
             "3",
             "Hernandez, Jonita",
             "W",
-            "73",
-            "9",
-            "1146",
-            "127"
+            "76",
+            "12",
+            "1496",
+            "124"
           ],
           [
             "4",
@@ -2249,10 +2429,10 @@
             "5",
             "Dority, Christy",
             "W",
-            "36",
-            "6",
-            "949",
-            "164"
+            "52",
+            "9",
+            "1335",
+            "148"
           ],
           [
             "6",
@@ -2268,8 +2448,8 @@
             "Howard, Teri",
             "W",
             "77",
-            "3",
-            "378",
+            "6",
+            "707",
             "123"
           ],
           [
@@ -2367,44 +2547,44 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
             "1",
             "Cohn, Nancy",
             "W",
-            "122",
-            "9",
-            "707",
-            "78"
+            "126",
+            "12",
+            "889",
+            "74"
           ],
           [
             "2",
             "Ortlieb, Connie",
             "W",
-            "59",
-            "9",
-            "1275",
-            "141"
+            "60",
+            "12",
+            "1685",
+            "140"
           ],
           [
             "3",
             "Enderle, Brooke",
             "W",
             "66",
-            "3",
-            "426",
+            "6",
+            "870",
             "134"
           ],
           [
             "4",
             "Harris, Belva",
             "W",
-            "38",
-            "6",
-            "1048",
-            "162"
+            "27",
+            "9",
+            "1561",
+            "173"
           ],
           [
             "5",
@@ -2419,10 +2599,10 @@
             "6",
             "Elliott, Nancy",
             "W",
-            "35",
-            "6",
-            "906",
-            "165"
+            "56",
+            "9",
+            "1300",
+            "144"
           ]
         ],
         "emphasis": [
@@ -2492,53 +2672,53 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
             "1",
             "Preble, Lafran",
             "W",
-            "58",
-            "9",
-            "1283",
-            "142"
+            "49",
+            "12",
+            "1822",
+            "151"
           ],
           [
             "2",
             "Mccreery, Kelly",
             "W",
-            "79",
-            "9",
-            "1095",
-            "121"
+            "81",
+            "12",
+            "1438",
+            "119"
           ],
           [
             "3",
             "Bedwani, Julie",
             "W",
-            "78",
-            "6",
-            "734",
-            "122"
+            "74",
+            "9",
+            "1138",
+            "126"
           ],
           [
             "4",
             "Walton, Kay",
             "W",
-            "73",
-            "9",
-            "1148",
-            "127"
+            "70",
+            "12",
+            "1561",
+            "130"
           ],
           [
             "5",
             "Preble, Tara",
             "W",
-            "64",
-            "6",
-            "849",
-            "136"
+            "61",
+            "9",
+            "1258",
+            "139"
           ]
         ],
         "emphasis": [
@@ -2599,7 +2779,7 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
@@ -2624,28 +2804,28 @@
             "3",
             "Irwin, Caroline",
             "W",
-            "101",
-            "9",
-            "892",
-            "99"
+            "99",
+            "12",
+            "1212",
+            "101"
           ],
           [
             "4",
             "Bishop, Paula",
             "W",
-            "52",
-            "9",
-            "1333",
-            "148"
+            "61",
+            "12",
+            "1674",
+            "139"
           ],
           [
             "5",
             "Howe, Chris",
             "W",
-            "40",
-            "6",
-            "854",
-            "160"
+            "54",
+            "9",
+            "1315",
+            "146"
           ]
         ],
         "emphasis": [
@@ -2706,44 +2886,44 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
             "1",
             "Sacca, Elaine",
             "W",
-            "64",
-            "6",
-            "696",
-            "136"
+            "81",
+            "9",
+            "1072",
+            "119"
           ],
           [
             "2",
             "Prusa, Melony",
             "W",
             "72",
-            "9",
-            "1152",
+            "12",
+            "1546",
             "128"
           ],
           [
             "3",
             "Markwardt, Lori",
             "W",
-            "60",
-            "9",
-            "1260",
-            "140"
+            "63",
+            "12",
+            "1651",
+            "137"
           ],
           [
             "4",
             "Rosenthal, Roxie",
             "W",
-            "50",
-            "6",
-            "758",
-            "150"
+            "67",
+            "9",
+            "1199",
+            "133"
           ],
           [
             "5",
@@ -2831,35 +3011,35 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
             "1",
             "Clay, Anesha",
             "W",
-            "113",
-            "6",
-            "560",
-            "87"
+            "98",
+            "9",
+            "920",
+            "102"
           ],
           [
             "2",
             "Blinde, Val",
             "W",
-            "95",
-            "9",
-            "952",
-            "105"
+            "92",
+            "12",
+            "1306",
+            "108"
           ],
           [
             "3",
             "Werts, Mindy",
             "W",
-            "76",
-            "9",
-            "1117",
-            "124"
+            "71",
+            "12",
+            "1553",
+            "129"
           ],
           [
             "4",
@@ -2874,10 +3054,10 @@
             "5",
             "Schilke, Emily",
             "W",
-            "47",
-            "9",
-            "1385",
-            "153"
+            "41",
+            "12",
+            "1909",
+            "159"
           ],
           [
             "6",
@@ -10321,8 +10501,3124 @@
           }
         ]
       }
+    },
+    {
+      "week": "4",
+      "sourceUpdated": "Sep 10, 2026",
+      "syncedAt": "2026-09-15T18:28:20.586Z",
+      "views": {
+        "standings": [
+          {
+            "title": "League standings",
+            "headers": [
+              "Place",
+              "Team",
+              "Team#",
+              "Div",
+              "WON",
+              "LOST",
+              "%",
+              "YTD WON",
+              "AVG",
+              "Pins",
+              "HSG",
+              "HSS"
+            ],
+            "rows": [
+              [
+                "1",
+                "Split Personalities",
+                "6",
+                "1",
+                "22",
+                "6",
+                "79 %",
+                "22",
+                "627",
+                "7347",
+                "726",
+                "2031"
+              ],
+              [
+                "2",
+                "Gutter Pals",
+                "2",
+                "1",
+                "19",
+                "9",
+                "68 %",
+                "19",
+                "665",
+                "7955",
+                "783",
+                "2108"
+              ],
+              [
+                "3",
+                "Racing Girls",
+                "3",
+                "1",
+                "16",
+                "12",
+                "57 %",
+                "16",
+                "646",
+                "7722",
+                "729",
+                "2094"
+              ],
+              [
+                "4",
+                "Red Herring Concepts",
+                "5",
+                "1",
+                "13",
+                "15",
+                "46 %",
+                "13",
+                "658",
+                "7928",
+                "693",
+                "2018"
+              ],
+              [
+                "5",
+                "Barbie's Angels",
+                "4",
+                "1",
+                "9",
+                "19",
+                "32 %",
+                "9",
+                "602",
+                "7351",
+                "708",
+                "2016"
+              ],
+              [
+                "6",
+                "Been There Bowle",
+                "1",
+                "1",
+                "5",
+                "23",
+                "18 %",
+                "5",
+                "659",
+                "7891",
+                "724",
+                "2106"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ]
+            ]
+          }
+        ],
+        "bowlers": [
+          {
+            "title": "Bowlers and season statistics",
+            "headers": [
+              "Name",
+              "Team#",
+              "Pos#",
+              "Team",
+              "Gndr",
+              "Pins",
+              "Games",
+              "Avg",
+              "EnteringAvg",
+              "HCP",
+              "HHG",
+              "HHS",
+              "HSG",
+              "HSS",
+              "MIB",
+              "WON"
+            ],
+            "rows": [
+              [
+                "Bedwani, Julie",
+                "2",
+                "3",
+                "Gutter Pals",
+                "W",
+                "1138",
+                "9",
+                "126",
+                "0",
+                "74",
+                "0",
+                "0",
+                "145",
+                "404",
+                "0",
+                "0"
+              ],
+              [
+                "Bishop, Paula",
+                "3",
+                "4",
+                "Racing Girls",
+                "W",
+                "1674",
+                "12",
+                "139",
+                "139",
+                "61",
+                "0",
+                "0",
+                "171",
+                "480",
+                "0.5",
+                "0"
+              ],
+              [
+                "Blinde, Val",
+                "6",
+                "2",
+                "Split Personalities",
+                "W",
+                "1306",
+                "12",
+                "108",
+                "100",
+                "92",
+                "0",
+                "0",
+                "136",
+                "354",
+                "0.83",
+                "0"
+              ],
+              [
+                "Bryant, Wendy",
+                "4",
+                "2",
+                "Barbie's Angels",
+                "W",
+                "1356",
+                "12",
+                "113",
+                "114",
+                "87",
+                "0",
+                "0",
+                "163",
+                "378",
+                "0",
+                "0"
+              ],
+              [
+                "Classen, Amanda",
+                "4",
+                "1",
+                "Barbie's Angels",
+                "W",
+                "924",
+                "9",
+                "102",
+                "116",
+                "98",
+                "0",
+                "0",
+                "124",
+                "313",
+                "0",
+                "0"
+              ],
+              [
+                "Clay, Anesha",
+                "6",
+                "1",
+                "Split Personalities",
+                "W",
+                "920",
+                "9",
+                "102",
+                "87",
+                "98",
+                "0",
+                "0",
+                "124",
+                "360",
+                "0",
+                "0"
+              ],
+              [
+                "Cohn, Nancy",
+                "1",
+                "1",
+                "Been There Bowle",
+                "W",
+                "889",
+                "12",
+                "74",
+                "95",
+                "126",
+                "0",
+                "0",
+                "115",
+                "280",
+                "0.08",
+                "0"
+              ],
+              [
+                "Dority, Christy",
+                "4",
+                "5",
+                "Barbie's Angels",
+                "W",
+                "1335",
+                "9",
+                "148",
+                "164",
+                "52",
+                "0",
+                "0",
+                "193",
+                "494",
+                "0",
+                "0"
+              ],
+              [
+                "Elliott, Nancy",
+                "1",
+                "6",
+                "Been There Bowle",
+                "W",
+                "1300",
+                "9",
+                "144",
+                "165",
+                "56",
+                "0",
+                "0",
+                "169",
+                "486",
+                "0",
+                "0"
+              ],
+              [
+                "Enderle, Brooke",
+                "1",
+                "3",
+                "Been There Bowle",
+                "W",
+                "870",
+                "6",
+                "134",
+                "134",
+                "66",
+                "0",
+                "0",
+                "178",
+                "444",
+                "0",
+                "0"
+              ],
+              [
+                "Hall, Kasha",
+                "3",
+                "2",
+                "Racing Girls",
+                "W",
+                "1237",
+                "9",
+                "137",
+                "143",
+                "63",
+                "0",
+                "0",
+                "163",
+                "429",
+                "0",
+                "0"
+              ],
+              [
+                "Hall, Michalle",
+                "3",
+                "1",
+                "Racing Girls",
+                "W",
+                "1114",
+                "9",
+                "123",
+                "121",
+                "77",
+                "0",
+                "0",
+                "165",
+                "419",
+                "0",
+                "0"
+              ],
+              [
+                "Harris, Belva",
+                "1",
+                "4",
+                "Been There Bowle",
+                "W",
+                "1561",
+                "9",
+                "173",
+                "162",
+                "27",
+                "0",
+                "0",
+                "214",
+                "535",
+                "0",
+                "0"
+              ],
+              [
+                "Hernandez, Jonita",
+                "4",
+                "3",
+                "Barbie's Angels",
+                "W",
+                "1496",
+                "12",
+                "124",
+                "127",
+                "76",
+                "0",
+                "0",
+                "163",
+                "426",
+                "0.67",
+                "0"
+              ],
+              [
+                "Howard, Teri",
+                "4",
+                "7",
+                "Barbie's Angels",
+                "W",
+                "707",
+                "6",
+                "123",
+                "123",
+                "77",
+                "0",
+                "0",
+                "149",
+                "378",
+                "0",
+                "0"
+              ],
+              [
+                "Howe, Chris",
+                "3",
+                "5",
+                "Racing Girls",
+                "W",
+                "1315",
+                "9",
+                "146",
+                "160",
+                "54",
+                "0",
+                "0",
+                "167",
+                "461",
+                "0",
+                "0"
+              ],
+              [
+                "Irwin, Caroline",
+                "3",
+                "3",
+                "Racing Girls",
+                "W",
+                "1212",
+                "12",
+                "101",
+                "0",
+                "99",
+                "0",
+                "0",
+                "147",
+                "356",
+                "0",
+                "0"
+              ],
+              [
+                "Markwardt, Lori",
+                "5",
+                "3",
+                "Red Herring Concepts",
+                "W",
+                "1651",
+                "12",
+                "137",
+                "143",
+                "63",
+                "0",
+                "0",
+                "168",
+                "434",
+                "0.58",
+                "0"
+              ],
+              [
+                "Masur, Sandy",
+                "4",
+                "6",
+                "Barbie's Angels",
+                "W",
+                "441",
+                "3",
+                "146",
+                "146",
+                "54",
+                "0",
+                "0",
+                "157",
+                "441",
+                "0",
+                "0"
+              ],
+              [
+                "Mccreery, Kelly",
+                "2",
+                "2",
+                "Gutter Pals",
+                "W",
+                "1438",
+                "12",
+                "119",
+                "130",
+                "81",
+                "0",
+                "0",
+                "137",
+                "390",
+                "0.83",
+                "0"
+              ],
+              [
+                "Murphy, Kelly",
+                "4",
+                "4",
+                "Barbie's Angels",
+                "W",
+                "774",
+                "6",
+                "115",
+                "115",
+                "85",
+                "0",
+                "0",
+                "155",
+                "419",
+                "0",
+                "0"
+              ],
+              [
+                "Ortlieb, Connie",
+                "1",
+                "2",
+                "Been There Bowle",
+                "W",
+                "1685",
+                "12",
+                "140",
+                "162",
+                "60",
+                "0",
+                "0",
+                "180",
+                "443",
+                "0.42",
+                "0"
+              ],
+              [
+                "Preble, Lafran",
+                "2",
+                "1",
+                "Gutter Pals",
+                "W",
+                "1822",
+                "12",
+                "151",
+                "150",
+                "49",
+                "0",
+                "0",
+                "202",
+                "539",
+                "0.83",
+                "0"
+              ],
+              [
+                "Preble, Tara",
+                "2",
+                "5",
+                "Gutter Pals",
+                "W",
+                "1258",
+                "9",
+                "139",
+                "136",
+                "61",
+                "0",
+                "0",
+                "175",
+                "443",
+                "0",
+                "0"
+              ],
+              [
+                "Prusa, Melony",
+                "5",
+                "2",
+                "Red Herring Concepts",
+                "W",
+                "1546",
+                "12",
+                "128",
+                "135",
+                "72",
+                "0",
+                "0",
+                "162",
+                "429",
+                "0.83",
+                "0"
+              ],
+              [
+                "Pulsifer, Mary",
+                "5",
+                "5",
+                "Red Herring Concepts",
+                "W",
+                "1269",
+                "9",
+                "141",
+                "142",
+                "59",
+                "0",
+                "0",
+                "159",
+                "441",
+                "0",
+                "0"
+              ],
+              [
+                "Rosenthal, Roxie",
+                "5",
+                "4",
+                "Red Herring Concepts",
+                "W",
+                "1199",
+                "9",
+                "133",
+                "150",
+                "67",
+                "0",
+                "0",
+                "155",
+                "441",
+                "0",
+                "0"
+              ],
+              [
+                "Sacca, Elaine",
+                "5",
+                "1",
+                "Red Herring Concepts",
+                "W",
+                "1072",
+                "9",
+                "119",
+                "136",
+                "81",
+                "0",
+                "0",
+                "147",
+                "396",
+                "0",
+                "0"
+              ],
+              [
+                "Schilke, Emily",
+                "6",
+                "5",
+                "Split Personalities",
+                "W",
+                "1909",
+                "12",
+                "159",
+                "0",
+                "41",
+                "0",
+                "0",
+                "208",
+                "533",
+                "0.08",
+                "0"
+              ],
+              [
+                "Walton, Kay",
+                "2",
+                "4",
+                "Gutter Pals",
+                "W",
+                "1561",
+                "12",
+                "130",
+                "0",
+                "70",
+                "0",
+                "0",
+                "146",
+                "413",
+                "0.08",
+                "0"
+              ],
+              [
+                "Werts, Mindy",
+                "6",
+                "3",
+                "Split Personalities",
+                "W",
+                "1553",
+                "12",
+                "129",
+                "130",
+                "71",
+                "0",
+                "0",
+                "179",
+                "436",
+                "0.42",
+                "0"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ]
+          }
+        ],
+        "recaps": [
+          {
+            "title": "Barbie's Angels matchup",
+            "headers": [
+              "Bowler",
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
+            ],
+            "rows": [
+              [
+                "Team 4",
+                "Lane 29 points won: 2"
+              ],
+              [
+                "Classen, Amanda",
+                "116",
+                "84",
+                "124",
+                "111",
+                "78",
+                "313"
+              ],
+              [
+                "Bryant, Wendy",
+                "114",
+                "86",
+                "113",
+                "105",
+                "112",
+                "330"
+              ],
+              [
+                "Hernandez, Jonita",
+                "127",
+                "73",
+                "114",
+                "110",
+                "126",
+                "350"
+              ],
+              [
+                "Dority, Christy",
+                "164",
+                "36",
+                "128",
+                "123",
+                "135",
+                "386"
+              ],
+              [
+                "Howard, Teri",
+                "123",
+                "77",
+                "95",
+                "115",
+                "119",
+                "329"
+              ],
+              [
+                "Total",
+                "574",
+                "564",
+                "570",
+                "1708"
+              ],
+              [
+                "Team 1",
+                "Lane 30 points won: 5"
+              ],
+              [
+                "Cohn, Nancy",
+                "78",
+                "122",
+                "41",
+                "70",
+                "71",
+                "182"
+              ],
+              [
+                "Ortlieb, Connie",
+                "141",
+                "59",
+                "151",
+                "132",
+                "127",
+                "410"
+              ],
+              [
+                "Enderle, Brooke",
+                "134",
+                "66",
+                "145",
+                "178",
+                "121",
+                "444"
+              ],
+              [
+                "Harris, Belva",
+                "162",
+                "38",
+                "161",
+                "203",
+                "149",
+                "513"
+              ],
+              [
+                "Elliott, Nancy",
+                "165",
+                "35",
+                "139",
+                "121",
+                "134",
+                "394"
+              ],
+              [
+                "Total",
+                "637",
+                "704",
+                "602",
+                "1943"
+              ]
+            ],
+            "emphasis": [
+              [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                true,
+                false
+              ],
+              [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                true,
+                true,
+                false,
+                true
+              ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "565"
+              },
+              {
+                "handicapSeries": "588"
+              },
+              {
+                "handicapSeries": "569"
+              },
+              {
+                "handicapSeries": "494"
+              },
+              {
+                "handicapSeries": "560"
+              },
+              {
+                "handicapSeries": "2776",
+                "handicapGames": [
+                  "930",
+                  "920",
+                  "926"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "2.0",
+                  "2.0",
+                  "2.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "548"
+              },
+              {
+                "handicapSeries": "587"
+              },
+              {
+                "handicapSeries": "642"
+              },
+              {
+                "handicapSeries": "627"
+              },
+              {
+                "handicapSeries": "499"
+              },
+              {
+                "handicapSeries": "2903",
+                "handicapGames": [
+                  "957",
+                  "1024",
+                  "922"
+                ],
+                "teamPoints": [
+                  "2.0",
+                  "2.0",
+                  "0.0",
+                  "5.0",
+                  "5.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/4/12751709102026f202604reprnt00.pdf"
+          },
+          {
+            "title": "Gutter Pals matchup",
+            "headers": [
+              "Bowler",
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
+            ],
+            "rows": [
+              [
+                "Team 2",
+                "Lane 27 points won: 2"
+              ],
+              [
+                "Preble, Lafran",
+                "142",
+                "58",
+                "166",
+                "171",
+                "202",
+                "539"
+              ],
+              [
+                "Mccreery, Kelly",
+                "121",
+                "79",
+                "95",
+                "116",
+                "132",
+                "343"
+              ],
+              [
+                "Bedwani, Julie",
+                "122",
+                "78",
+                "145",
+                "115",
+                "144",
+                "404"
+              ],
+              [
+                "Walton, Kay",
+                "127",
+                "73",
+                "131",
+                "136",
+                "146",
+                "413"
+              ],
+              [
+                "Preble, Tara",
+                "136",
+                "64",
+                "127",
+                "123",
+                "159",
+                "409"
+              ],
+              [
+                "Total",
+                "664",
+                "661",
+                "783",
+                "2108"
+              ],
+              [
+                "Team 6",
+                "Lane 28 points won: 5"
+              ],
+              [
+                "Clay, Anesha",
+                "87",
+                "113",
+                "118",
+                "118",
+                "124",
+                "360"
+              ],
+              [
+                "Blinde, Val",
+                "105",
+                "95",
+                "119",
+                "136",
+                "99",
+                "354"
+              ],
+              [
+                "Werts, Mindy",
+                "124",
+                "76",
+                "179",
+                "144",
+                "113",
+                "436"
+              ],
+              [
+                "Siebe, Vonda",
+                "129",
+                "71",
+                "119",
+                "119",
+                "119",
+                "357"
+              ],
+              [
+                "Schilke, Emily",
+                "153",
+                "47",
+                "191",
+                "169",
+                "164",
+                "524"
+              ],
+              [
+                "Total",
+                "726",
+                "686",
+                "619",
+                "2031"
+              ]
+            ],
+            "emphasis": [
+              [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                true,
+                false
+              ],
+              [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                true,
+                true,
+                false,
+                true
+              ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "713"
+              },
+              {
+                "handicapSeries": "580"
+              },
+              {
+                "handicapSeries": "638"
+              },
+              {
+                "handicapSeries": "632"
+              },
+              {
+                "handicapSeries": "601"
+              },
+              {
+                "handicapSeries": "3164",
+                "handicapGames": [
+                  "1016",
+                  "1013",
+                  "1135"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "2.0",
+                  "2.0",
+                  "2.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "699"
+              },
+              {
+                "handicapSeries": "639"
+              },
+              {
+                "handicapSeries": "664"
+              },
+              {
+                "handicapSeries": "570"
+              },
+              {
+                "handicapSeries": "665"
+              },
+              {
+                "handicapSeries": "3237",
+                "handicapGames": [
+                  "1128",
+                  "1088",
+                  "1021"
+                ],
+                "teamPoints": [
+                  "2.0",
+                  "2.0",
+                  "0.0",
+                  "5.0",
+                  "5.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/4/12751709102026f202604reprnt00.pdf"
+          },
+          {
+            "title": "Racing Girls matchup",
+            "headers": [
+              "Bowler",
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
+            ],
+            "rows": [
+              [
+                "Team 3",
+                "Lane 31 points won: 0"
+              ],
+              [
+                "Hall, Michalle",
+                "123",
+                "77",
+                "113",
+                "113",
+                "113",
+                "339"
+              ],
+              [
+                "Hall, Kasha",
+                "137",
+                "63",
+                "127",
+                "127",
+                "127",
+                "381"
+              ],
+              [
+                "Irwin, Caroline",
+                "99",
+                "101",
+                "99",
+                "85",
+                "136",
+                "320"
+              ],
+              [
+                "Bishop, Paula",
+                "148",
+                "52",
+                "126",
+                "110",
+                "105",
+                "341"
+              ],
+              [
+                "Howe, Chris",
+                "160",
+                "40",
+                "147",
+                "167",
+                "147",
+                "461"
+              ],
+              [
+                "Total",
+                "612",
+                "602",
+                "628",
+                "1842"
+              ],
+              [
+                "Team 5",
+                "Lane 32 points won: 7"
+              ],
+              [
+                "Sacca, Elaine",
+                "136",
+                "64",
+                "124",
+                "122",
+                "130",
+                "376"
+              ],
+              [
+                "Prusa, Melony",
+                "128",
+                "72",
+                "124",
+                "129",
+                "141",
+                "394"
+              ],
+              [
+                "Markwardt, Lori",
+                "140",
+                "60",
+                "127",
+                "121",
+                "143",
+                "391"
+              ],
+              [
+                "Rosenthal, Roxie",
+                "150",
+                "50",
+                "146",
+                "147",
+                "148",
+                "441"
+              ],
+              [
+                "Pulsifer, Mary",
+                "141",
+                "59",
+                "131",
+                "131",
+                "131",
+                "393"
+              ],
+              [
+                "Total",
+                "652",
+                "650",
+                "693",
+                "1995"
+              ]
+            ],
+            "emphasis": [
+              [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                true,
+                true,
+                true,
+                true
+              ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "570"
+              },
+              {
+                "handicapSeries": "570"
+              },
+              {
+                "handicapSeries": "623"
+              },
+              {
+                "handicapSeries": "497"
+              },
+              {
+                "handicapSeries": "581"
+              },
+              {
+                "handicapSeries": "2841",
+                "handicapGames": [
+                  "945",
+                  "935",
+                  "961"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "568"
+              },
+              {
+                "handicapSeries": "610"
+              },
+              {
+                "handicapSeries": "571"
+              },
+              {
+                "handicapSeries": "591"
+              },
+              {
+                "handicapSeries": "570"
+              },
+              {
+                "handicapSeries": "2910",
+                "handicapGames": [
+                  "957",
+                  "955",
+                  "998"
+                ],
+                "teamPoints": [
+                  "2.0",
+                  "2.0",
+                  "2.0",
+                  "7.0",
+                  "7.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/4/12751709102026f202604reprnt00.pdf"
+          }
+        ],
+        "lanes": [
+          {
+            "title": "All scheduled teams",
+            "headers": [
+              "Lane",
+              "Team#",
+              "Team"
+            ],
+            "rows": [
+              [
+                "27",
+                "1",
+                "Been There Bowle"
+              ],
+              [
+                "28",
+                "5",
+                "Red Herring Concepts"
+              ],
+              [
+                "29",
+                "6",
+                "Split Personalities"
+              ],
+              [
+                "30",
+                "3",
+                "Racing Girls"
+              ],
+              [
+                "31",
+                "4",
+                "Barbie's Angels"
+              ],
+              [
+                "32",
+                "2",
+                "Gutter Pals"
+              ]
+            ],
+            "emphasis": [
+              [
+                true,
+                false,
+                false
+              ],
+              [
+                true,
+                false,
+                false
+              ],
+              [
+                true,
+                false,
+                false
+              ],
+              [
+                true,
+                false,
+                false
+              ],
+              [
+                true,
+                false,
+                false
+              ],
+              [
+                true,
+                false,
+                false
+              ]
+            ]
+          }
+        ],
+        "rosters": [
+          {
+            "title": "Team 4 · Barbie's Angels roster",
+            "headers": [
+              "Pos",
+              "Name",
+              "Gndr",
+              "HCP",
+              "Gms",
+              "Pins",
+              "AVG"
+            ],
+            "rows": [
+              [
+                "1",
+                "Classen, Amanda",
+                "W",
+                "98",
+                "9",
+                "924",
+                "102"
+              ],
+              [
+                "2",
+                "Bryant, Wendy",
+                "W",
+                "87",
+                "12",
+                "1356",
+                "113"
+              ],
+              [
+                "3",
+                "Hernandez, Jonita",
+                "W",
+                "76",
+                "12",
+                "1496",
+                "124"
+              ],
+              [
+                "4",
+                "Murphy, Kelly",
+                "W",
+                "85",
+                "6",
+                "774",
+                "115"
+              ],
+              [
+                "5",
+                "Dority, Christy",
+                "W",
+                "52",
+                "9",
+                "1335",
+                "148"
+              ],
+              [
+                "6",
+                "Masur, Sandy",
+                "W",
+                "54",
+                "3",
+                "441",
+                "146"
+              ],
+              [
+                "7",
+                "Howard, Teri",
+                "W",
+                "77",
+                "6",
+                "707",
+                "123"
+              ],
+              [
+                "8",
+                "Knutson, Alysa",
+                "W",
+                "16",
+                "0",
+                "0",
+                "184"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "team": "4"
+          },
+          {
+            "title": "Team 1 · Been There Bowle roster",
+            "headers": [
+              "Pos",
+              "Name",
+              "Gndr",
+              "HCP",
+              "Gms",
+              "Pins",
+              "AVG"
+            ],
+            "rows": [
+              [
+                "1",
+                "Cohn, Nancy",
+                "W",
+                "126",
+                "12",
+                "889",
+                "74"
+              ],
+              [
+                "2",
+                "Ortlieb, Connie",
+                "W",
+                "60",
+                "12",
+                "1685",
+                "140"
+              ],
+              [
+                "3",
+                "Enderle, Brooke",
+                "W",
+                "66",
+                "6",
+                "870",
+                "134"
+              ],
+              [
+                "4",
+                "Harris, Belva",
+                "W",
+                "27",
+                "9",
+                "1561",
+                "173"
+              ],
+              [
+                "5",
+                "Harker, Ann",
+                "W",
+                "62",
+                "0",
+                "0",
+                "138"
+              ],
+              [
+                "6",
+                "Elliott, Nancy",
+                "W",
+                "56",
+                "9",
+                "1300",
+                "144"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "team": "1"
+          },
+          {
+            "title": "Team 2 · Gutter Pals roster",
+            "headers": [
+              "Pos",
+              "Name",
+              "Gndr",
+              "HCP",
+              "Gms",
+              "Pins",
+              "AVG"
+            ],
+            "rows": [
+              [
+                "1",
+                "Preble, Lafran",
+                "W",
+                "49",
+                "12",
+                "1822",
+                "151"
+              ],
+              [
+                "2",
+                "Mccreery, Kelly",
+                "W",
+                "81",
+                "12",
+                "1438",
+                "119"
+              ],
+              [
+                "3",
+                "Bedwani, Julie",
+                "W",
+                "74",
+                "9",
+                "1138",
+                "126"
+              ],
+              [
+                "4",
+                "Walton, Kay",
+                "W",
+                "70",
+                "12",
+                "1561",
+                "130"
+              ],
+              [
+                "5",
+                "Preble, Tara",
+                "W",
+                "61",
+                "9",
+                "1258",
+                "139"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "team": "2"
+          },
+          {
+            "title": "Team 3 · Racing Girls roster",
+            "headers": [
+              "Pos",
+              "Name",
+              "Gndr",
+              "HCP",
+              "Gms",
+              "Pins",
+              "AVG"
+            ],
+            "rows": [
+              [
+                "1",
+                "Hall, Michalle",
+                "W",
+                "77",
+                "9",
+                "1114",
+                "123"
+              ],
+              [
+                "2",
+                "Hall, Kasha",
+                "W",
+                "63",
+                "9",
+                "1237",
+                "137"
+              ],
+              [
+                "3",
+                "Irwin, Caroline",
+                "W",
+                "99",
+                "12",
+                "1212",
+                "101"
+              ],
+              [
+                "4",
+                "Bishop, Paula",
+                "W",
+                "61",
+                "12",
+                "1674",
+                "139"
+              ],
+              [
+                "5",
+                "Howe, Chris",
+                "W",
+                "54",
+                "9",
+                "1315",
+                "146"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "team": "3"
+          },
+          {
+            "title": "Team 5 · Red Herring Concepts roster",
+            "headers": [
+              "Pos",
+              "Name",
+              "Gndr",
+              "HCP",
+              "Gms",
+              "Pins",
+              "AVG"
+            ],
+            "rows": [
+              [
+                "1",
+                "Sacca, Elaine",
+                "W",
+                "81",
+                "9",
+                "1072",
+                "119"
+              ],
+              [
+                "2",
+                "Prusa, Melony",
+                "W",
+                "72",
+                "12",
+                "1546",
+                "128"
+              ],
+              [
+                "3",
+                "Markwardt, Lori",
+                "W",
+                "63",
+                "12",
+                "1651",
+                "137"
+              ],
+              [
+                "4",
+                "Rosenthal, Roxie",
+                "W",
+                "67",
+                "9",
+                "1199",
+                "133"
+              ],
+              [
+                "5",
+                "Pulsifer, Mary",
+                "W",
+                "59",
+                "9",
+                "1269",
+                "141"
+              ],
+              [
+                "6",
+                "Sacca, Andrea",
+                "W",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "team": "5"
+          },
+          {
+            "title": "Team 6 · Split Personalities roster",
+            "headers": [
+              "Pos",
+              "Name",
+              "Gndr",
+              "HCP",
+              "Gms",
+              "Pins",
+              "AVG"
+            ],
+            "rows": [
+              [
+                "1",
+                "Clay, Anesha",
+                "W",
+                "98",
+                "9",
+                "920",
+                "102"
+              ],
+              [
+                "2",
+                "Blinde, Val",
+                "W",
+                "92",
+                "12",
+                "1306",
+                "108"
+              ],
+              [
+                "3",
+                "Werts, Mindy",
+                "W",
+                "71",
+                "12",
+                "1553",
+                "129"
+              ],
+              [
+                "4",
+                "Siebe, Vonda",
+                "W",
+                "71",
+                "0",
+                "0",
+                "129"
+              ],
+              [
+                "5",
+                "Schilke, Emily",
+                "W",
+                "41",
+                "12",
+                "1909",
+                "159"
+              ],
+              [
+                "6",
+                "Schilke, Jen",
+                "W",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "team": "6"
+          }
+        ]
+      }
     }
   ],
-  "sourceFingerprint": "6e046d6fec7ed5a4021ebd2c181b81eae494f30581f5e76c0128ca79d277aaff",
-  "officialRecapVersion": 1
+  "sourceFingerprint": "02f97fbb5a9cf66e775b941917ab67ed6601b76d7b9dc121b92f7855de72312b",
+  "officialRecapVersion": 1,
+  "lastAttemptedAt": null,
+  "lastCheckedAt": "2026-09-15T18:28:20.586Z"
 }

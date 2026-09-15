@@ -15,10 +15,10 @@
   "centerSlug": "parkway-lanes---lincoln-lincoln-nebraska",
   "area": "Lincoln",
   "sourceUpdated": "Sep 15, 2026",
-  "syncedAt": "2026-09-15T15:55:56.181Z",
+  "syncedAt": "2026-09-15T19:10:09.634Z",
   "status": "current",
   "week": "2",
-  "fingerprint": "1bf791b2099c623fc38166b67067886323785c61bde96b8c454ea21e69955fec",
+  "fingerprint": "520ed57715b2827f420244633defaf57fd8b8f1492c920402ef090c7a1c511af",
   "lastCompletedCycle": "2026-09-14",
   "views": {
     "standings": [
@@ -1285,7 +1285,7 @@
     ],
     "recaps": [
       {
-        "title": "HI-WAY DINER matchup",
+        "title": "ALLEY OOPS matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -1296,53 +1296,6 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 2",
-            "Lane 15 points won: 3"
-          ],
-          [
-            "Kermoade, Stacy",
-            "141",
-            "50",
-            "167",
-            "129",
-            "128",
-            "424"
-          ],
-          [
-            "Novak, Mikayla",
-            "173",
-            "22",
-            "165",
-            "142",
-            "159",
-            "466"
-          ],
-          [
-            "Thiessen, Lisa",
-            "175",
-            "21",
-            "187",
-            "166",
-            "148",
-            "501"
-          ],
-          [
-            "Wenger, Celeste",
-            "118",
-            "69",
-            "177",
-            "158",
-            "159",
-            "494"
-          ],
-          [
-            "Total",
-            "696",
-            "595",
-            "594",
-            "1885"
-          ],
           [
             "Team 3",
             "Lane 16 points won: 4"
@@ -1389,6 +1342,53 @@
             "518",
             "558",
             "1536"
+          ],
+          [
+            "Team 2",
+            "Lane 15 points won: 3"
+          ],
+          [
+            "Kermoade, Stacy",
+            "141",
+            "50",
+            "167",
+            "129",
+            "128",
+            "424"
+          ],
+          [
+            "Novak, Mikayla",
+            "173",
+            "22",
+            "165",
+            "142",
+            "159",
+            "466"
+          ],
+          [
+            "Thiessen, Lisa",
+            "175",
+            "21",
+            "187",
+            "166",
+            "148",
+            "501"
+          ],
+          [
+            "Wenger, Celeste",
+            "118",
+            "69",
+            "177",
+            "158",
+            "159",
+            "494"
+          ],
+          [
+            "Total",
+            "696",
+            "595",
+            "594",
+            "1885"
           ]
         ],
         "emphasis": [
@@ -1440,8 +1440,8 @@
           [
             false,
             false,
-            false,
-            false,
+            true,
+            true,
             false
           ],
           [
@@ -1491,15 +1491,74 @@
           ],
           [
             false,
+            true,
             false,
             false,
-            false,
-            false
+            true
           ]
-        ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "541"
+          },
+          {
+            "handicapSeries": "549"
+          },
+          {
+            "handicapSeries": "627"
+          },
+          {
+            "handicapSeries": "590"
+          },
+          {
+            "handicapSeries": "1926",
+            "handicapGames": [
+              "590",
+              "648",
+              "688"
+            ],
+            "teamPoints": [
+              "0.0",
+              "2.0",
+              "2.0",
+              "4.0",
+              "4.0"
+            ]
+          },
+          {},
+          {
+            "handicapSeries": "574"
+          },
+          {
+            "handicapSeries": "532"
+          },
+          {
+            "handicapSeries": "564"
+          },
+          {
+            "handicapSeries": "701"
+          },
+          {
+            "handicapSeries": "1993",
+            "handicapGames": [
+              "732",
+              "631",
+              "630"
+            ],
+            "teamPoints": [
+              "2.0",
+              "0.0",
+              "0.0",
+              "3.0",
+              "3.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/2/12170409142026f202602reprnt00.pdf"
       },
       {
-        "title": "STRIKING RESULTS PRO SHOP matchup",
+        "title": "LOVELY LADY LE0PARDS matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -1510,53 +1569,6 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 5",
-            "Lane 11 points won: 2"
-          ],
-          [
-            "Otto, Melissa",
-            "84",
-            "98",
-            "87",
-            "88",
-            "76",
-            "251"
-          ],
-          [
-            "Polacek, Carole",
-            "116",
-            "71",
-            "115",
-            "111",
-            "123",
-            "349"
-          ],
-          [
-            "Shearer, Deb",
-            "101",
-            "84",
-            "93",
-            "105",
-            "102",
-            "300"
-          ],
-          [
-            "Rutledge, Sue",
-            "73",
-            "107",
-            "92",
-            "113",
-            "91",
-            "296"
-          ],
-          [
-            "Total",
-            "387",
-            "417",
-            "392",
-            "1196"
-          ],
           [
             "Team 4",
             "Lane 12 points won: 5"
@@ -1603,6 +1615,53 @@
             "516",
             "546",
             "1612"
+          ],
+          [
+            "Team 5",
+            "Lane 11 points won: 2"
+          ],
+          [
+            "Otto, Melissa",
+            "84",
+            "98",
+            "87",
+            "88",
+            "76",
+            "251"
+          ],
+          [
+            "Polacek, Carole",
+            "116",
+            "71",
+            "115",
+            "111",
+            "123",
+            "349"
+          ],
+          [
+            "Shearer, Deb",
+            "101",
+            "84",
+            "93",
+            "105",
+            "102",
+            "300"
+          ],
+          [
+            "Rutledge, Sue",
+            "73",
+            "107",
+            "92",
+            "113",
+            "91",
+            "296"
+          ],
+          [
+            "Total",
+            "387",
+            "417",
+            "392",
+            "1196"
           ]
         ],
         "emphasis": [
@@ -1653,10 +1712,10 @@
           ],
           [
             false,
+            true,
             false,
-            false,
-            false,
-            false
+            true,
+            true
           ],
           [
             true,
@@ -1706,14 +1765,73 @@
           [
             false,
             false,
-            false,
+            true,
             false,
             false
           ]
-        ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "576"
+          },
+          {
+            "handicapSeries": "589"
+          },
+          {
+            "handicapSeries": "582"
+          },
+          {
+            "handicapSeries": "588"
+          },
+          {
+            "handicapSeries": "1957",
+            "handicapGames": [
+              "665",
+              "631",
+              "661"
+            ],
+            "teamPoints": [
+              "2.0",
+              "0.0",
+              "2.0",
+              "5.0",
+              "5.0"
+            ]
+          },
+          {},
+          {
+            "handicapSeries": "545"
+          },
+          {
+            "handicapSeries": "562"
+          },
+          {
+            "handicapSeries": "552"
+          },
+          {
+            "handicapSeries": "617"
+          },
+          {
+            "handicapSeries": "1898",
+            "handicapGames": [
+              "621",
+              "651",
+              "626"
+            ],
+            "teamPoints": [
+              "0.0",
+              "2.0",
+              "0.0",
+              "2.0",
+              "2.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/2/12170409142026f202602reprnt00.pdf"
       },
       {
-        "title": "STRIKE A POSE matchup",
+        "title": "STAR CITY CUSTOM HOMES matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -1724,53 +1842,6 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 6",
-            "Lane 14 points won: 7"
-          ],
-          [
-            "Lehmann, Ruthy",
-            "116",
-            "71",
-            "137",
-            "106",
-            "139",
-            "382"
-          ],
-          [
-            "Cornman, Kristine",
-            "125",
-            "63",
-            "156",
-            "116",
-            "154",
-            "426"
-          ],
-          [
-            "Brison, Carrie",
-            "125",
-            "63",
-            "137",
-            "160",
-            "113",
-            "410"
-          ],
-          [
-            "Johnston, Angel",
-            "129",
-            "60",
-            "188",
-            "167",
-            "135",
-            "490"
-          ],
-          [
-            "Total",
-            "618",
-            "549",
-            "541",
-            "1708"
-          ],
           [
             "Team 1",
             "Lane 13 points won: 0"
@@ -1817,6 +1888,53 @@
             "589",
             "657",
             "1747"
+          ],
+          [
+            "Team 6",
+            "Lane 14 points won: 7"
+          ],
+          [
+            "Lehmann, Ruthy",
+            "116",
+            "71",
+            "137",
+            "106",
+            "139",
+            "382"
+          ],
+          [
+            "Cornman, Kristine",
+            "125",
+            "63",
+            "156",
+            "116",
+            "154",
+            "426"
+          ],
+          [
+            "Brison, Carrie",
+            "125",
+            "63",
+            "137",
+            "160",
+            "113",
+            "410"
+          ],
+          [
+            "Johnston, Angel",
+            "129",
+            "60",
+            "188",
+            "167",
+            "135",
+            "490"
+          ],
+          [
+            "Total",
+            "618",
+            "549",
+            "541",
+            "1708"
           ]
         ],
         "emphasis": [
@@ -1919,12 +2037,71 @@
           ],
           [
             false,
-            false,
-            false,
-            false,
-            false
+            true,
+            true,
+            true,
+            true
           ]
-        ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "505"
+          },
+          {
+            "handicapSeries": "496"
+          },
+          {
+            "handicapSeries": "551"
+          },
+          {
+            "handicapSeries": "573"
+          },
+          {
+            "handicapSeries": "1747",
+            "handicapGames": [
+              "501",
+              "589",
+              "657"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0"
+            ]
+          },
+          {},
+          {
+            "handicapSeries": "595"
+          },
+          {
+            "handicapSeries": "615"
+          },
+          {
+            "handicapSeries": "599"
+          },
+          {
+            "handicapSeries": "670"
+          },
+          {
+            "handicapSeries": "2101",
+            "handicapGames": [
+              "749",
+              "680",
+              "672"
+            ],
+            "teamPoints": [
+              "2.0",
+              "2.0",
+              "2.0",
+              "7.0",
+              "7.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/2/12170409142026f202602reprnt00.pdf"
       }
     ],
     "lanes": [
@@ -5766,7 +5943,7 @@
     {
       "week": "2",
       "sourceUpdated": "Sep 15, 2026",
-      "syncedAt": "2026-09-15T15:55:56.181Z",
+      "syncedAt": "2026-09-15T19:10:09.634Z",
       "views": {
         "standings": [
           {
@@ -7032,7 +7209,7 @@
         ],
         "recaps": [
           {
-            "title": "HI-WAY DINER matchup",
+            "title": "ALLEY OOPS matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -7043,53 +7220,6 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 2",
-                "Lane 15 points won: 3"
-              ],
-              [
-                "Kermoade, Stacy",
-                "141",
-                "50",
-                "167",
-                "129",
-                "128",
-                "424"
-              ],
-              [
-                "Novak, Mikayla",
-                "173",
-                "22",
-                "165",
-                "142",
-                "159",
-                "466"
-              ],
-              [
-                "Thiessen, Lisa",
-                "175",
-                "21",
-                "187",
-                "166",
-                "148",
-                "501"
-              ],
-              [
-                "Wenger, Celeste",
-                "118",
-                "69",
-                "177",
-                "158",
-                "159",
-                "494"
-              ],
-              [
-                "Total",
-                "696",
-                "595",
-                "594",
-                "1885"
-              ],
               [
                 "Team 3",
                 "Lane 16 points won: 4"
@@ -7136,6 +7266,53 @@
                 "518",
                 "558",
                 "1536"
+              ],
+              [
+                "Team 2",
+                "Lane 15 points won: 3"
+              ],
+              [
+                "Kermoade, Stacy",
+                "141",
+                "50",
+                "167",
+                "129",
+                "128",
+                "424"
+              ],
+              [
+                "Novak, Mikayla",
+                "173",
+                "22",
+                "165",
+                "142",
+                "159",
+                "466"
+              ],
+              [
+                "Thiessen, Lisa",
+                "175",
+                "21",
+                "187",
+                "166",
+                "148",
+                "501"
+              ],
+              [
+                "Wenger, Celeste",
+                "118",
+                "69",
+                "177",
+                "158",
+                "159",
+                "494"
+              ],
+              [
+                "Total",
+                "696",
+                "595",
+                "594",
+                "1885"
               ]
             ],
             "emphasis": [
@@ -7187,8 +7364,8 @@
               [
                 false,
                 false,
-                false,
-                false,
+                true,
+                true,
                 false
               ],
               [
@@ -7238,15 +7415,74 @@
               ],
               [
                 false,
+                true,
                 false,
                 false,
-                false,
-                false
+                true
               ]
-            ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "541"
+              },
+              {
+                "handicapSeries": "549"
+              },
+              {
+                "handicapSeries": "627"
+              },
+              {
+                "handicapSeries": "590"
+              },
+              {
+                "handicapSeries": "1926",
+                "handicapGames": [
+                  "590",
+                  "648",
+                  "688"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "2.0",
+                  "2.0",
+                  "4.0",
+                  "4.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "574"
+              },
+              {
+                "handicapSeries": "532"
+              },
+              {
+                "handicapSeries": "564"
+              },
+              {
+                "handicapSeries": "701"
+              },
+              {
+                "handicapSeries": "1993",
+                "handicapGames": [
+                  "732",
+                  "631",
+                  "630"
+                ],
+                "teamPoints": [
+                  "2.0",
+                  "0.0",
+                  "0.0",
+                  "3.0",
+                  "3.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/2/12170409142026f202602reprnt00.pdf"
           },
           {
-            "title": "STRIKING RESULTS PRO SHOP matchup",
+            "title": "LOVELY LADY LE0PARDS matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -7257,53 +7493,6 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 5",
-                "Lane 11 points won: 2"
-              ],
-              [
-                "Otto, Melissa",
-                "84",
-                "98",
-                "87",
-                "88",
-                "76",
-                "251"
-              ],
-              [
-                "Polacek, Carole",
-                "116",
-                "71",
-                "115",
-                "111",
-                "123",
-                "349"
-              ],
-              [
-                "Shearer, Deb",
-                "101",
-                "84",
-                "93",
-                "105",
-                "102",
-                "300"
-              ],
-              [
-                "Rutledge, Sue",
-                "73",
-                "107",
-                "92",
-                "113",
-                "91",
-                "296"
-              ],
-              [
-                "Total",
-                "387",
-                "417",
-                "392",
-                "1196"
-              ],
               [
                 "Team 4",
                 "Lane 12 points won: 5"
@@ -7350,6 +7539,53 @@
                 "516",
                 "546",
                 "1612"
+              ],
+              [
+                "Team 5",
+                "Lane 11 points won: 2"
+              ],
+              [
+                "Otto, Melissa",
+                "84",
+                "98",
+                "87",
+                "88",
+                "76",
+                "251"
+              ],
+              [
+                "Polacek, Carole",
+                "116",
+                "71",
+                "115",
+                "111",
+                "123",
+                "349"
+              ],
+              [
+                "Shearer, Deb",
+                "101",
+                "84",
+                "93",
+                "105",
+                "102",
+                "300"
+              ],
+              [
+                "Rutledge, Sue",
+                "73",
+                "107",
+                "92",
+                "113",
+                "91",
+                "296"
+              ],
+              [
+                "Total",
+                "387",
+                "417",
+                "392",
+                "1196"
               ]
             ],
             "emphasis": [
@@ -7400,10 +7636,10 @@
               ],
               [
                 false,
+                true,
                 false,
-                false,
-                false,
-                false
+                true,
+                true
               ],
               [
                 true,
@@ -7453,14 +7689,73 @@
               [
                 false,
                 false,
-                false,
+                true,
                 false,
                 false
               ]
-            ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "576"
+              },
+              {
+                "handicapSeries": "589"
+              },
+              {
+                "handicapSeries": "582"
+              },
+              {
+                "handicapSeries": "588"
+              },
+              {
+                "handicapSeries": "1957",
+                "handicapGames": [
+                  "665",
+                  "631",
+                  "661"
+                ],
+                "teamPoints": [
+                  "2.0",
+                  "0.0",
+                  "2.0",
+                  "5.0",
+                  "5.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "545"
+              },
+              {
+                "handicapSeries": "562"
+              },
+              {
+                "handicapSeries": "552"
+              },
+              {
+                "handicapSeries": "617"
+              },
+              {
+                "handicapSeries": "1898",
+                "handicapGames": [
+                  "621",
+                  "651",
+                  "626"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "2.0",
+                  "0.0",
+                  "2.0",
+                  "2.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/2/12170409142026f202602reprnt00.pdf"
           },
           {
-            "title": "STRIKE A POSE matchup",
+            "title": "STAR CITY CUSTOM HOMES matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -7471,53 +7766,6 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 6",
-                "Lane 14 points won: 7"
-              ],
-              [
-                "Lehmann, Ruthy",
-                "116",
-                "71",
-                "137",
-                "106",
-                "139",
-                "382"
-              ],
-              [
-                "Cornman, Kristine",
-                "125",
-                "63",
-                "156",
-                "116",
-                "154",
-                "426"
-              ],
-              [
-                "Brison, Carrie",
-                "125",
-                "63",
-                "137",
-                "160",
-                "113",
-                "410"
-              ],
-              [
-                "Johnston, Angel",
-                "129",
-                "60",
-                "188",
-                "167",
-                "135",
-                "490"
-              ],
-              [
-                "Total",
-                "618",
-                "549",
-                "541",
-                "1708"
-              ],
               [
                 "Team 1",
                 "Lane 13 points won: 0"
@@ -7564,6 +7812,53 @@
                 "589",
                 "657",
                 "1747"
+              ],
+              [
+                "Team 6",
+                "Lane 14 points won: 7"
+              ],
+              [
+                "Lehmann, Ruthy",
+                "116",
+                "71",
+                "137",
+                "106",
+                "139",
+                "382"
+              ],
+              [
+                "Cornman, Kristine",
+                "125",
+                "63",
+                "156",
+                "116",
+                "154",
+                "426"
+              ],
+              [
+                "Brison, Carrie",
+                "125",
+                "63",
+                "137",
+                "160",
+                "113",
+                "410"
+              ],
+              [
+                "Johnston, Angel",
+                "129",
+                "60",
+                "188",
+                "167",
+                "135",
+                "490"
+              ],
+              [
+                "Total",
+                "618",
+                "549",
+                "541",
+                "1708"
               ]
             ],
             "emphasis": [
@@ -7666,12 +7961,71 @@
               ],
               [
                 false,
-                false,
-                false,
-                false,
-                false
+                true,
+                true,
+                true,
+                true
               ]
-            ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "505"
+              },
+              {
+                "handicapSeries": "496"
+              },
+              {
+                "handicapSeries": "551"
+              },
+              {
+                "handicapSeries": "573"
+              },
+              {
+                "handicapSeries": "1747",
+                "handicapGames": [
+                  "501",
+                  "589",
+                  "657"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "595"
+              },
+              {
+                "handicapSeries": "615"
+              },
+              {
+                "handicapSeries": "599"
+              },
+              {
+                "handicapSeries": "670"
+              },
+              {
+                "handicapSeries": "2101",
+                "handicapGames": [
+                  "749",
+                  "680",
+                  "672"
+                ],
+                "teamPoints": [
+                  "2.0",
+                  "2.0",
+                  "2.0",
+                  "7.0",
+                  "7.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/2/12170409142026f202602reprnt00.pdf"
           }
         ],
         "lanes": [
@@ -8504,5 +8858,5 @@
     }
   ],
   "lastAttemptedAt": null,
-  "lastCheckedAt": "2026-09-15T15:55:56.181Z"
+  "lastCheckedAt": "2026-09-15T19:10:09.634Z"
 }

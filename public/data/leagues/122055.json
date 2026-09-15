@@ -15,10 +15,10 @@
   "centerSlug": "hollywood-bowl-lincoln-nebraska",
   "area": "Lincoln",
   "sourceUpdated": "Sep 14, 2026",
-  "syncedAt": "2026-09-15T15:33:30.471Z",
+  "syncedAt": "2026-09-15T18:58:25.402Z",
   "status": "current",
   "week": "1",
-  "fingerprint": "d91c5c468d0d213eb6f739f7639dc72a10df2ae94d3f81334de52359fcd9ba82",
+  "fingerprint": "8d01c2aeadd3f36174c88e83bc1224d292bb2a76d11f6a7fe993db21d3f0058a",
   "lastCompletedCycle": "2026-09-10",
   "views": {
     "standings": [
@@ -1633,7 +1633,7 @@
     ],
     "recaps": [
       {
-        "title": "CROCODILES matchup",
+        "title": "A FAMILY AFFAIR matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -1644,44 +1644,6 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 7",
-            "Lane 7 points won: 3"
-          ],
-          [
-            "Bouges, Carl",
-            "159",
-            "62",
-            "132",
-            "119",
-            "147",
-            "398"
-          ],
-          [
-            "Nitzel, Doug",
-            "170",
-            "52",
-            "180",
-            "158",
-            "170",
-            "508"
-          ],
-          [
-            "Hawley-Grieser, Michelle",
-            "121",
-            "98",
-            "105",
-            "123",
-            "147",
-            "375"
-          ],
-          [
-            "Total",
-            "417",
-            "400",
-            "464",
-            "1281"
-          ],
           [
             "Team 8",
             "Lane 8 points won: 1"
@@ -1719,6 +1681,44 @@
             "553",
             "539",
             "1538"
+          ],
+          [
+            "Team 7",
+            "Lane 7 points won: 3"
+          ],
+          [
+            "Bouges, Carl",
+            "159",
+            "62",
+            "132",
+            "119",
+            "147",
+            "398"
+          ],
+          [
+            "Nitzel, Doug",
+            "170",
+            "52",
+            "180",
+            "158",
+            "170",
+            "508"
+          ],
+          [
+            "Hawley-Grieser, Michelle",
+            "121",
+            "98",
+            "105",
+            "123",
+            "147",
+            "375"
+          ],
+          [
+            "Total",
+            "417",
+            "400",
+            "464",
+            "1281"
           ]
         ],
         "emphasis": [
@@ -1761,7 +1761,7 @@
           [
             false,
             false,
-            false,
+            true,
             false,
             false
           ],
@@ -1803,15 +1803,68 @@
           ],
           [
             false,
+            true,
             false,
-            false,
-            false,
-            false
+            true,
+            true
           ]
-        ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "600"
+          },
+          {
+            "handicapSeries": "591"
+          },
+          {
+            "handicapSeries": "587"
+          },
+          {
+            "handicapSeries": "1538",
+            "handicapGames": [
+              "446",
+              "553",
+              "539"
+            ],
+            "teamPoints": [
+              "0.0",
+              "1.0",
+              "0.0",
+              "1.0",
+              "1.0"
+            ]
+          },
+          {},
+          {
+            "handicapSeries": "584"
+          },
+          {
+            "handicapSeries": "664"
+          },
+          {
+            "handicapSeries": "669"
+          },
+          {
+            "handicapSeries": "1680",
+            "handicapGames": [
+              "550",
+              "533",
+              "597"
+            ],
+            "teamPoints": [
+              "1.0",
+              "0.0",
+              "1.0",
+              "3.0",
+              "3.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/1/12205509102026f202601reprnt00.pdf"
       },
       {
-        "title": "JUST IN TIME matchup",
+        "title": "BAD TO THE BONE matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -1822,44 +1875,6 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 1",
-            "Lane 1 points won: 1"
-          ],
-          [
-            "Squitieri, Andy",
-            "153",
-            "68",
-            "118",
-            "138",
-            "130",
-            "386"
-          ],
-          [
-            "Thompson, Penny",
-            "138",
-            "82",
-            "131",
-            "155",
-            "86",
-            "372"
-          ],
-          [
-            "Loneman, Andrea",
-            "157",
-            "64",
-            "138",
-            "157",
-            "179",
-            "474"
-          ],
-          [
-            "Total",
-            "387",
-            "450",
-            "395",
-            "1232"
-          ],
           [
             "Team 2",
             "Lane 2 points won: 2"
@@ -1897,6 +1912,44 @@
             "540",
             "537",
             "1561"
+          ],
+          [
+            "Team 1",
+            "Lane 1 points won: 1"
+          ],
+          [
+            "Squitieri, Andy",
+            "153",
+            "68",
+            "118",
+            "138",
+            "130",
+            "386"
+          ],
+          [
+            "Thompson, Penny",
+            "138",
+            "82",
+            "131",
+            "155",
+            "86",
+            "372"
+          ],
+          [
+            "Loneman, Andrea",
+            "157",
+            "64",
+            "138",
+            "157",
+            "179",
+            "474"
+          ],
+          [
+            "Total",
+            "387",
+            "450",
+            "395",
+            "1232"
           ]
         ],
         "emphasis": [
@@ -1938,10 +1991,10 @@
           ],
           [
             false,
+            true,
             false,
-            false,
-            false,
-            false
+            true,
+            true
           ],
           [
             true,
@@ -1981,15 +2034,68 @@
           ],
           [
             false,
-            false,
-            false,
+            true,
+            true,
             false,
             false
           ]
-        ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "623"
+          },
+          {
+            "handicapSeries": "629"
+          },
+          {
+            "handicapSeries": "657"
+          },
+          {
+            "handicapSeries": "1561",
+            "handicapGames": [
+              "484",
+              "540",
+              "537"
+            ],
+            "teamPoints": [
+              "0.5",
+              "0.0",
+              "1.0",
+              "2.5",
+              "2.5"
+            ]
+          },
+          {},
+          {
+            "handicapSeries": "590"
+          },
+          {
+            "handicapSeries": "618"
+          },
+          {
+            "handicapSeries": "666"
+          },
+          {
+            "handicapSeries": "1523",
+            "handicapGames": [
+              "484",
+              "547",
+              "492"
+            ],
+            "teamPoints": [
+              "0.5",
+              "1.0",
+              "0.0",
+              "1.5",
+              "1.5"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/1/12205509102026f202601reprnt00.pdf"
       },
       {
-        "title": "LUCKY STRIKES matchup",
+        "title": "BOWL DOGS matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -2000,44 +2106,6 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 9",
-            "Lane 9 points won: 1"
-          ],
-          [
-            "Cunning, Sharon",
-            "122",
-            "97",
-            "117",
-            "146",
-            "128",
-            "391"
-          ],
-          [
-            "Cochran, Liz",
-            "111",
-            "108",
-            "88",
-            "89",
-            "105",
-            "282"
-          ],
-          [
-            "Heakin, Yvonne",
-            "148",
-            "73",
-            "148",
-            "161",
-            "161",
-            "470"
-          ],
-          [
-            "Total",
-            "353",
-            "396",
-            "394",
-            "1143"
-          ],
           [
             "Team 10",
             "Lane 10 points won: 3"
@@ -2075,6 +2143,44 @@
             "429",
             "377",
             "1202"
+          ],
+          [
+            "Team 9",
+            "Lane 9 points won: 1"
+          ],
+          [
+            "Cunning, Sharon",
+            "122",
+            "97",
+            "117",
+            "146",
+            "128",
+            "391"
+          ],
+          [
+            "Cochran, Liz",
+            "111",
+            "108",
+            "88",
+            "89",
+            "105",
+            "282"
+          ],
+          [
+            "Heakin, Yvonne",
+            "148",
+            "73",
+            "148",
+            "161",
+            "161",
+            "470"
+          ],
+          [
+            "Total",
+            "353",
+            "396",
+            "394",
+            "1143"
           ]
         ],
         "emphasis": [
@@ -2116,10 +2222,10 @@
           ],
           [
             false,
+            true,
+            true,
             false,
-            false,
-            false,
-            false
+            true
           ],
           [
             true,
@@ -2161,13 +2267,66 @@
             false,
             false,
             false,
-            false,
+            true,
             false
           ]
-        ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "697"
+          },
+          {
+            "handicapSeries": "665"
+          },
+          {
+            "handicapSeries": "647"
+          },
+          {
+            "handicapSeries": "1202",
+            "handicapGames": [
+              "396",
+              "429",
+              "377"
+            ],
+            "teamPoints": [
+              "1.0",
+              "1.0",
+              "0.0",
+              "3.0",
+              "3.0"
+            ]
+          },
+          {},
+          {
+            "handicapSeries": "682"
+          },
+          {
+            "handicapSeries": "606"
+          },
+          {
+            "handicapSeries": "689"
+          },
+          {
+            "handicapSeries": "1167",
+            "handicapGames": [
+              "361",
+              "404",
+              "402"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "1.0",
+              "1.0",
+              "1.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/1/12205509102026f202601reprnt00.pdf"
       },
       {
-        "title": "THE PUB matchup",
+        "title": "EASY PICKENS matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -2178,44 +2337,6 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 4",
-            "Lane 4 points won: 1"
-          ],
-          [
-            "Brehm, Doug",
-            "166",
-            "56",
-            "117",
-            "131",
-            "141",
-            "389"
-          ],
-          [
-            "Garrow, Gary",
-            "177",
-            "45",
-            "223",
-            "205",
-            "207",
-            "635"
-          ],
-          [
-            "Agee, Carolyn",
-            "133",
-            "87",
-            "147",
-            "118",
-            "121",
-            "386"
-          ],
-          [
-            "Total",
-            "487",
-            "454",
-            "469",
-            "1410"
-          ],
           [
             "Team 3",
             "Lane 3 points won: 3"
@@ -2253,6 +2374,44 @@
             "493",
             "482",
             "1368"
+          ],
+          [
+            "Team 4",
+            "Lane 4 points won: 1"
+          ],
+          [
+            "Brehm, Doug",
+            "166",
+            "56",
+            "117",
+            "131",
+            "141",
+            "389"
+          ],
+          [
+            "Garrow, Gary",
+            "177",
+            "45",
+            "223",
+            "205",
+            "207",
+            "635"
+          ],
+          [
+            "Agee, Carolyn",
+            "133",
+            "87",
+            "147",
+            "118",
+            "121",
+            "386"
+          ],
+          [
+            "Total",
+            "487",
+            "454",
+            "469",
+            "1410"
           ]
         ],
         "emphasis": [
@@ -2295,9 +2454,9 @@
           [
             false,
             false,
-            false,
-            false,
-            false
+            true,
+            true,
+            true
           ],
           [
             true,
@@ -2337,15 +2496,68 @@
           ],
           [
             false,
-            false,
+            true,
             false,
             false,
             false
           ]
-        ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "660"
+          },
+          {
+            "handicapSeries": "671"
+          },
+          {
+            "handicapSeries": "712"
+          },
+          {
+            "handicapSeries": "1482",
+            "handicapGames": [
+              "431",
+              "531",
+              "520"
+            ],
+            "teamPoints": [
+              "0.0",
+              "1.0",
+              "1.0",
+              "3.0",
+              "3.0"
+            ]
+          },
+          {},
+          {
+            "handicapSeries": "557"
+          },
+          {
+            "handicapSeries": "770"
+          },
+          {
+            "handicapSeries": "647"
+          },
+          {
+            "handicapSeries": "1410",
+            "handicapGames": [
+              "487",
+              "454",
+              "469"
+            ],
+            "teamPoints": [
+              "1.0",
+              "0.0",
+              "0.0",
+              "1.0",
+              "1.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/1/12205509102026f202601reprnt00.pdf"
       },
       {
-        "title": "THE BOWLING STONES matchup",
+        "title": "JUST GETTING BY matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -2356,44 +2568,6 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 6",
-            "Lane 6 points won: 2"
-          ],
-          [
-            "Blazek, Kim",
-            "154",
-            "67",
-            "157",
-            "113",
-            "150",
-            "420"
-          ],
-          [
-            "Pike, Jerry",
-            "159",
-            "62",
-            "118",
-            "158",
-            "167",
-            "443"
-          ],
-          [
-            "Vanderford, Tim",
-            "211",
-            "13",
-            "171",
-            "236",
-            "213",
-            "620"
-          ],
-          [
-            "Total",
-            "446",
-            "507",
-            "530",
-            "1483"
-          ],
           [
             "Team 5",
             "Lane 5 points won: 2"
@@ -2431,6 +2605,44 @@
             "452",
             "438",
             "1342"
+          ],
+          [
+            "Team 6",
+            "Lane 6 points won: 2"
+          ],
+          [
+            "Blazek, Kim",
+            "154",
+            "67",
+            "157",
+            "113",
+            "150",
+            "420"
+          ],
+          [
+            "Pike, Jerry",
+            "159",
+            "62",
+            "118",
+            "158",
+            "167",
+            "443"
+          ],
+          [
+            "Vanderford, Tim",
+            "211",
+            "13",
+            "171",
+            "236",
+            "213",
+            "620"
+          ],
+          [
+            "Total",
+            "446",
+            "507",
+            "530",
+            "1483"
           ]
         ],
         "emphasis": [
@@ -2472,10 +2684,10 @@
           ],
           [
             false,
+            true,
             false,
             false,
-            false,
-            false
+            true
           ],
           [
             true,
@@ -2516,14 +2728,67 @@
           [
             false,
             false,
-            false,
-            false,
+            true,
+            true,
             false
           ]
-        ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "652"
+          },
+          {
+            "handicapSeries": "633"
+          },
+          {
+            "handicapSeries": "636"
+          },
+          {
+            "handicapSeries": "1495",
+            "handicapGames": [
+              "503",
+              "503",
+              "489"
+            ],
+            "teamPoints": [
+              "1.0",
+              "0.0",
+              "0.0",
+              "2.0",
+              "2.0"
+            ]
+          },
+          {},
+          {
+            "handicapSeries": "621"
+          },
+          {
+            "handicapSeries": "629"
+          },
+          {
+            "handicapSeries": "659"
+          },
+          {
+            "handicapSeries": "1483",
+            "handicapGames": [
+              "446",
+              "507",
+              "530"
+            ],
+            "teamPoints": [
+              "0.0",
+              "1.0",
+              "1.0",
+              "2.0",
+              "2.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/1/12205509102026f202601reprnt00.pdf"
       },
       {
-        "title": "THIRD STRIKE OFFENDERS matchup",
+        "title": "STILL WURTLESS matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -2534,44 +2799,6 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 12",
-            "Lane 12 points won: 0"
-          ],
-          [
-            "Albertson, Sharon",
-            "137",
-            "83",
-            "107",
-            "150",
-            "114",
-            "371"
-          ],
-          [
-            "Soflin, Billie",
-            "136",
-            "84",
-            "116",
-            "149",
-            "126",
-            "391"
-          ],
-          [
-            "Grabast, Dennis",
-            "141",
-            "79",
-            "133",
-            "128",
-            "118",
-            "379"
-          ],
-          [
-            "Total",
-            "356",
-            "427",
-            "358",
-            "1141"
-          ],
           [
             "Team 11",
             "Lane 11 points won: 4"
@@ -2609,6 +2836,44 @@
             "566",
             "578",
             "1643"
+          ],
+          [
+            "Team 12",
+            "Lane 12 points won: 0"
+          ],
+          [
+            "Albertson, Sharon",
+            "137",
+            "83",
+            "107",
+            "150",
+            "114",
+            "371"
+          ],
+          [
+            "Soflin, Billie",
+            "136",
+            "84",
+            "116",
+            "149",
+            "126",
+            "391"
+          ],
+          [
+            "Grabast, Dennis",
+            "141",
+            "79",
+            "133",
+            "128",
+            "118",
+            "379"
+          ],
+          [
+            "Total",
+            "356",
+            "427",
+            "358",
+            "1141"
           ]
         ],
         "emphasis": [
@@ -2650,10 +2915,10 @@
           ],
           [
             false,
-            false,
-            false,
-            false,
-            false
+            true,
+            true,
+            true,
+            true
           ],
           [
             true,
@@ -2698,7 +2963,60 @@
             false,
             false
           ]
-        ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "629"
+          },
+          {
+            "handicapSeries": "829"
+          },
+          {
+            "handicapSeries": "632"
+          },
+          {
+            "handicapSeries": "1643",
+            "handicapGames": [
+              "499",
+              "566",
+              "578"
+            ],
+            "teamPoints": [
+              "1.0",
+              "1.0",
+              "1.0",
+              "4.0",
+              "4.0"
+            ]
+          },
+          {},
+          {
+            "handicapSeries": "620"
+          },
+          {
+            "handicapSeries": "643"
+          },
+          {
+            "handicapSeries": "616"
+          },
+          {
+            "handicapSeries": "1429",
+            "handicapGames": [
+              "452",
+              "523",
+              "454"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/1/12205509102026f202601reprnt00.pdf"
       }
     ],
     "lanes": [
@@ -3871,13 +4189,13 @@
     ]
   },
   "lastAttemptedAt": null,
-  "lastCheckedAt": "2026-09-15T15:33:30.471Z",
+  "lastCheckedAt": "2026-09-15T18:58:25.402Z",
   "sourceFingerprint": "d54ac036b4e17f8c77b03c4d6655cf01cbb46a22dd3d08b6556c865a5a4b319d",
   "history": [
     {
       "week": "1",
       "sourceUpdated": "Sep 14, 2026",
-      "syncedAt": "2026-09-15T15:33:30.471Z",
+      "syncedAt": "2026-09-15T18:58:25.402Z",
       "views": {
         "standings": [
           {
@@ -5491,7 +5809,7 @@
         ],
         "recaps": [
           {
-            "title": "CROCODILES matchup",
+            "title": "A FAMILY AFFAIR matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -5502,44 +5820,6 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 7",
-                "Lane 7 points won: 3"
-              ],
-              [
-                "Bouges, Carl",
-                "159",
-                "62",
-                "132",
-                "119",
-                "147",
-                "398"
-              ],
-              [
-                "Nitzel, Doug",
-                "170",
-                "52",
-                "180",
-                "158",
-                "170",
-                "508"
-              ],
-              [
-                "Hawley-Grieser, Michelle",
-                "121",
-                "98",
-                "105",
-                "123",
-                "147",
-                "375"
-              ],
-              [
-                "Total",
-                "417",
-                "400",
-                "464",
-                "1281"
-              ],
               [
                 "Team 8",
                 "Lane 8 points won: 1"
@@ -5577,6 +5857,44 @@
                 "553",
                 "539",
                 "1538"
+              ],
+              [
+                "Team 7",
+                "Lane 7 points won: 3"
+              ],
+              [
+                "Bouges, Carl",
+                "159",
+                "62",
+                "132",
+                "119",
+                "147",
+                "398"
+              ],
+              [
+                "Nitzel, Doug",
+                "170",
+                "52",
+                "180",
+                "158",
+                "170",
+                "508"
+              ],
+              [
+                "Hawley-Grieser, Michelle",
+                "121",
+                "98",
+                "105",
+                "123",
+                "147",
+                "375"
+              ],
+              [
+                "Total",
+                "417",
+                "400",
+                "464",
+                "1281"
               ]
             ],
             "emphasis": [
@@ -5619,7 +5937,7 @@
               [
                 false,
                 false,
-                false,
+                true,
                 false,
                 false
               ],
@@ -5661,15 +5979,68 @@
               ],
               [
                 false,
+                true,
                 false,
-                false,
-                false,
-                false
+                true,
+                true
               ]
-            ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "600"
+              },
+              {
+                "handicapSeries": "591"
+              },
+              {
+                "handicapSeries": "587"
+              },
+              {
+                "handicapSeries": "1538",
+                "handicapGames": [
+                  "446",
+                  "553",
+                  "539"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "1.0",
+                  "0.0",
+                  "1.0",
+                  "1.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "584"
+              },
+              {
+                "handicapSeries": "664"
+              },
+              {
+                "handicapSeries": "669"
+              },
+              {
+                "handicapSeries": "1680",
+                "handicapGames": [
+                  "550",
+                  "533",
+                  "597"
+                ],
+                "teamPoints": [
+                  "1.0",
+                  "0.0",
+                  "1.0",
+                  "3.0",
+                  "3.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/1/12205509102026f202601reprnt00.pdf"
           },
           {
-            "title": "JUST IN TIME matchup",
+            "title": "BAD TO THE BONE matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -5680,44 +6051,6 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 1",
-                "Lane 1 points won: 1"
-              ],
-              [
-                "Squitieri, Andy",
-                "153",
-                "68",
-                "118",
-                "138",
-                "130",
-                "386"
-              ],
-              [
-                "Thompson, Penny",
-                "138",
-                "82",
-                "131",
-                "155",
-                "86",
-                "372"
-              ],
-              [
-                "Loneman, Andrea",
-                "157",
-                "64",
-                "138",
-                "157",
-                "179",
-                "474"
-              ],
-              [
-                "Total",
-                "387",
-                "450",
-                "395",
-                "1232"
-              ],
               [
                 "Team 2",
                 "Lane 2 points won: 2"
@@ -5755,6 +6088,44 @@
                 "540",
                 "537",
                 "1561"
+              ],
+              [
+                "Team 1",
+                "Lane 1 points won: 1"
+              ],
+              [
+                "Squitieri, Andy",
+                "153",
+                "68",
+                "118",
+                "138",
+                "130",
+                "386"
+              ],
+              [
+                "Thompson, Penny",
+                "138",
+                "82",
+                "131",
+                "155",
+                "86",
+                "372"
+              ],
+              [
+                "Loneman, Andrea",
+                "157",
+                "64",
+                "138",
+                "157",
+                "179",
+                "474"
+              ],
+              [
+                "Total",
+                "387",
+                "450",
+                "395",
+                "1232"
               ]
             ],
             "emphasis": [
@@ -5796,10 +6167,10 @@
               ],
               [
                 false,
+                true,
                 false,
-                false,
-                false,
-                false
+                true,
+                true
               ],
               [
                 true,
@@ -5839,15 +6210,68 @@
               ],
               [
                 false,
-                false,
-                false,
+                true,
+                true,
                 false,
                 false
               ]
-            ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "623"
+              },
+              {
+                "handicapSeries": "629"
+              },
+              {
+                "handicapSeries": "657"
+              },
+              {
+                "handicapSeries": "1561",
+                "handicapGames": [
+                  "484",
+                  "540",
+                  "537"
+                ],
+                "teamPoints": [
+                  "0.5",
+                  "0.0",
+                  "1.0",
+                  "2.5",
+                  "2.5"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "590"
+              },
+              {
+                "handicapSeries": "618"
+              },
+              {
+                "handicapSeries": "666"
+              },
+              {
+                "handicapSeries": "1523",
+                "handicapGames": [
+                  "484",
+                  "547",
+                  "492"
+                ],
+                "teamPoints": [
+                  "0.5",
+                  "1.0",
+                  "0.0",
+                  "1.5",
+                  "1.5"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/1/12205509102026f202601reprnt00.pdf"
           },
           {
-            "title": "LUCKY STRIKES matchup",
+            "title": "BOWL DOGS matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -5858,44 +6282,6 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 9",
-                "Lane 9 points won: 1"
-              ],
-              [
-                "Cunning, Sharon",
-                "122",
-                "97",
-                "117",
-                "146",
-                "128",
-                "391"
-              ],
-              [
-                "Cochran, Liz",
-                "111",
-                "108",
-                "88",
-                "89",
-                "105",
-                "282"
-              ],
-              [
-                "Heakin, Yvonne",
-                "148",
-                "73",
-                "148",
-                "161",
-                "161",
-                "470"
-              ],
-              [
-                "Total",
-                "353",
-                "396",
-                "394",
-                "1143"
-              ],
               [
                 "Team 10",
                 "Lane 10 points won: 3"
@@ -5933,6 +6319,44 @@
                 "429",
                 "377",
                 "1202"
+              ],
+              [
+                "Team 9",
+                "Lane 9 points won: 1"
+              ],
+              [
+                "Cunning, Sharon",
+                "122",
+                "97",
+                "117",
+                "146",
+                "128",
+                "391"
+              ],
+              [
+                "Cochran, Liz",
+                "111",
+                "108",
+                "88",
+                "89",
+                "105",
+                "282"
+              ],
+              [
+                "Heakin, Yvonne",
+                "148",
+                "73",
+                "148",
+                "161",
+                "161",
+                "470"
+              ],
+              [
+                "Total",
+                "353",
+                "396",
+                "394",
+                "1143"
               ]
             ],
             "emphasis": [
@@ -5974,10 +6398,10 @@
               ],
               [
                 false,
+                true,
+                true,
                 false,
-                false,
-                false,
-                false
+                true
               ],
               [
                 true,
@@ -6019,13 +6443,66 @@
                 false,
                 false,
                 false,
-                false,
+                true,
                 false
               ]
-            ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "697"
+              },
+              {
+                "handicapSeries": "665"
+              },
+              {
+                "handicapSeries": "647"
+              },
+              {
+                "handicapSeries": "1202",
+                "handicapGames": [
+                  "396",
+                  "429",
+                  "377"
+                ],
+                "teamPoints": [
+                  "1.0",
+                  "1.0",
+                  "0.0",
+                  "3.0",
+                  "3.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "682"
+              },
+              {
+                "handicapSeries": "606"
+              },
+              {
+                "handicapSeries": "689"
+              },
+              {
+                "handicapSeries": "1167",
+                "handicapGames": [
+                  "361",
+                  "404",
+                  "402"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "1.0",
+                  "1.0",
+                  "1.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/1/12205509102026f202601reprnt00.pdf"
           },
           {
-            "title": "THE PUB matchup",
+            "title": "EASY PICKENS matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -6036,44 +6513,6 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 4",
-                "Lane 4 points won: 1"
-              ],
-              [
-                "Brehm, Doug",
-                "166",
-                "56",
-                "117",
-                "131",
-                "141",
-                "389"
-              ],
-              [
-                "Garrow, Gary",
-                "177",
-                "45",
-                "223",
-                "205",
-                "207",
-                "635"
-              ],
-              [
-                "Agee, Carolyn",
-                "133",
-                "87",
-                "147",
-                "118",
-                "121",
-                "386"
-              ],
-              [
-                "Total",
-                "487",
-                "454",
-                "469",
-                "1410"
-              ],
               [
                 "Team 3",
                 "Lane 3 points won: 3"
@@ -6111,6 +6550,44 @@
                 "493",
                 "482",
                 "1368"
+              ],
+              [
+                "Team 4",
+                "Lane 4 points won: 1"
+              ],
+              [
+                "Brehm, Doug",
+                "166",
+                "56",
+                "117",
+                "131",
+                "141",
+                "389"
+              ],
+              [
+                "Garrow, Gary",
+                "177",
+                "45",
+                "223",
+                "205",
+                "207",
+                "635"
+              ],
+              [
+                "Agee, Carolyn",
+                "133",
+                "87",
+                "147",
+                "118",
+                "121",
+                "386"
+              ],
+              [
+                "Total",
+                "487",
+                "454",
+                "469",
+                "1410"
               ]
             ],
             "emphasis": [
@@ -6153,9 +6630,9 @@
               [
                 false,
                 false,
-                false,
-                false,
-                false
+                true,
+                true,
+                true
               ],
               [
                 true,
@@ -6195,15 +6672,68 @@
               ],
               [
                 false,
-                false,
+                true,
                 false,
                 false,
                 false
               ]
-            ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "660"
+              },
+              {
+                "handicapSeries": "671"
+              },
+              {
+                "handicapSeries": "712"
+              },
+              {
+                "handicapSeries": "1482",
+                "handicapGames": [
+                  "431",
+                  "531",
+                  "520"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "1.0",
+                  "1.0",
+                  "3.0",
+                  "3.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "557"
+              },
+              {
+                "handicapSeries": "770"
+              },
+              {
+                "handicapSeries": "647"
+              },
+              {
+                "handicapSeries": "1410",
+                "handicapGames": [
+                  "487",
+                  "454",
+                  "469"
+                ],
+                "teamPoints": [
+                  "1.0",
+                  "0.0",
+                  "0.0",
+                  "1.0",
+                  "1.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/1/12205509102026f202601reprnt00.pdf"
           },
           {
-            "title": "THE BOWLING STONES matchup",
+            "title": "JUST GETTING BY matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -6214,44 +6744,6 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 6",
-                "Lane 6 points won: 2"
-              ],
-              [
-                "Blazek, Kim",
-                "154",
-                "67",
-                "157",
-                "113",
-                "150",
-                "420"
-              ],
-              [
-                "Pike, Jerry",
-                "159",
-                "62",
-                "118",
-                "158",
-                "167",
-                "443"
-              ],
-              [
-                "Vanderford, Tim",
-                "211",
-                "13",
-                "171",
-                "236",
-                "213",
-                "620"
-              ],
-              [
-                "Total",
-                "446",
-                "507",
-                "530",
-                "1483"
-              ],
               [
                 "Team 5",
                 "Lane 5 points won: 2"
@@ -6289,6 +6781,44 @@
                 "452",
                 "438",
                 "1342"
+              ],
+              [
+                "Team 6",
+                "Lane 6 points won: 2"
+              ],
+              [
+                "Blazek, Kim",
+                "154",
+                "67",
+                "157",
+                "113",
+                "150",
+                "420"
+              ],
+              [
+                "Pike, Jerry",
+                "159",
+                "62",
+                "118",
+                "158",
+                "167",
+                "443"
+              ],
+              [
+                "Vanderford, Tim",
+                "211",
+                "13",
+                "171",
+                "236",
+                "213",
+                "620"
+              ],
+              [
+                "Total",
+                "446",
+                "507",
+                "530",
+                "1483"
               ]
             ],
             "emphasis": [
@@ -6330,10 +6860,10 @@
               ],
               [
                 false,
+                true,
                 false,
                 false,
-                false,
-                false
+                true
               ],
               [
                 true,
@@ -6374,14 +6904,67 @@
               [
                 false,
                 false,
-                false,
-                false,
+                true,
+                true,
                 false
               ]
-            ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "652"
+              },
+              {
+                "handicapSeries": "633"
+              },
+              {
+                "handicapSeries": "636"
+              },
+              {
+                "handicapSeries": "1495",
+                "handicapGames": [
+                  "503",
+                  "503",
+                  "489"
+                ],
+                "teamPoints": [
+                  "1.0",
+                  "0.0",
+                  "0.0",
+                  "2.0",
+                  "2.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "621"
+              },
+              {
+                "handicapSeries": "629"
+              },
+              {
+                "handicapSeries": "659"
+              },
+              {
+                "handicapSeries": "1483",
+                "handicapGames": [
+                  "446",
+                  "507",
+                  "530"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "1.0",
+                  "1.0",
+                  "2.0",
+                  "2.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/1/12205509102026f202601reprnt00.pdf"
           },
           {
-            "title": "THIRD STRIKE OFFENDERS matchup",
+            "title": "STILL WURTLESS matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -6392,44 +6975,6 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 12",
-                "Lane 12 points won: 0"
-              ],
-              [
-                "Albertson, Sharon",
-                "137",
-                "83",
-                "107",
-                "150",
-                "114",
-                "371"
-              ],
-              [
-                "Soflin, Billie",
-                "136",
-                "84",
-                "116",
-                "149",
-                "126",
-                "391"
-              ],
-              [
-                "Grabast, Dennis",
-                "141",
-                "79",
-                "133",
-                "128",
-                "118",
-                "379"
-              ],
-              [
-                "Total",
-                "356",
-                "427",
-                "358",
-                "1141"
-              ],
               [
                 "Team 11",
                 "Lane 11 points won: 4"
@@ -6467,6 +7012,44 @@
                 "566",
                 "578",
                 "1643"
+              ],
+              [
+                "Team 12",
+                "Lane 12 points won: 0"
+              ],
+              [
+                "Albertson, Sharon",
+                "137",
+                "83",
+                "107",
+                "150",
+                "114",
+                "371"
+              ],
+              [
+                "Soflin, Billie",
+                "136",
+                "84",
+                "116",
+                "149",
+                "126",
+                "391"
+              ],
+              [
+                "Grabast, Dennis",
+                "141",
+                "79",
+                "133",
+                "128",
+                "118",
+                "379"
+              ],
+              [
+                "Total",
+                "356",
+                "427",
+                "358",
+                "1141"
               ]
             ],
             "emphasis": [
@@ -6508,10 +7091,10 @@
               ],
               [
                 false,
-                false,
-                false,
-                false,
-                false
+                true,
+                true,
+                true,
+                true
               ],
               [
                 true,
@@ -6556,7 +7139,60 @@
                 false,
                 false
               ]
-            ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "629"
+              },
+              {
+                "handicapSeries": "829"
+              },
+              {
+                "handicapSeries": "632"
+              },
+              {
+                "handicapSeries": "1643",
+                "handicapGames": [
+                  "499",
+                  "566",
+                  "578"
+                ],
+                "teamPoints": [
+                  "1.0",
+                  "1.0",
+                  "1.0",
+                  "4.0",
+                  "4.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "620"
+              },
+              {
+                "handicapSeries": "643"
+              },
+              {
+                "handicapSeries": "616"
+              },
+              {
+                "handicapSeries": "1429",
+                "handicapGames": [
+                  "452",
+                  "523",
+                  "454"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/1/12205509102026f202601reprnt00.pdf"
           }
         ],
         "lanes": [

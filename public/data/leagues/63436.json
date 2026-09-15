@@ -11,10 +11,10 @@
   "startDate": "Fall 2026",
   "bowlDay": 3,
   "sourceUpdated": "Sep 9, 2026",
-  "syncedAt": "2026-09-15T14:54:09.946Z",
+  "syncedAt": "2026-09-15T18:42:02.575Z",
   "status": "current",
   "week": "3",
-  "fingerprint": "8b4b9fad0c9d8c8de2f77f00c65bb4249b327f3584ec4d7ac07fb1cc409096eb",
+  "fingerprint": "8bcba51e2b1b0992ebd9d2a1b2dfd950e1d01367540593c7fc626518a8a22689",
   "lastCompletedCycle": "2026-09-09",
   "views": {
     "standings": [
@@ -1517,7 +1517,7 @@
     ],
     "recaps": [
       {
-        "title": "Gutter Gnomes matchup",
+        "title": "2 or 3 Times A Year matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -1528,53 +1528,6 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 6",
-            "Lane 24 points won: 6"
-          ],
-          [
-            "Johnson, Norm",
-            "169",
-            "27",
-            "158",
-            "177",
-            "160",
-            "495"
-          ],
-          [
-            "Johnson, Corrie",
-            "173",
-            "24",
-            "123",
-            "163",
-            "172",
-            "458"
-          ],
-          [
-            "Casella, Tom",
-            "200",
-            "0",
-            "188",
-            "206",
-            "183",
-            "577"
-          ],
-          [
-            "Johnson, Mitchell",
-            "198",
-            "1",
-            "258",
-            "184",
-            "213",
-            "655"
-          ],
-          [
-            "Total",
-            "727",
-            "730",
-            "728",
-            "2185"
-          ],
           [
             "Team 2",
             "Lane 23 points won: 2"
@@ -1621,6 +1574,53 @@
             "524",
             "468",
             "1442"
+          ],
+          [
+            "Team 6",
+            "Lane 24 points won: 6"
+          ],
+          [
+            "Johnson, Norm",
+            "169",
+            "27",
+            "158",
+            "177",
+            "160",
+            "495"
+          ],
+          [
+            "Johnson, Corrie",
+            "173",
+            "24",
+            "123",
+            "163",
+            "172",
+            "458"
+          ],
+          [
+            "Casella, Tom",
+            "200",
+            "0",
+            "188",
+            "206",
+            "183",
+            "577"
+          ],
+          [
+            "Johnson, Mitchell",
+            "198",
+            "1",
+            "258",
+            "184",
+            "213",
+            "655"
+          ],
+          [
+            "Total",
+            "727",
+            "730",
+            "728",
+            "2185"
           ]
         ],
         "emphasis": [
@@ -1672,7 +1672,7 @@
           [
             false,
             false,
-            false,
+            true,
             false,
             false
           ],
@@ -1723,15 +1723,74 @@
           ],
           [
             false,
+            true,
             false,
-            false,
-            false,
-            false
+            true,
+            true
           ]
-        ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "582"
+          },
+          {
+            "handicapSeries": "552"
+          },
+          {
+            "handicapSeries": "580"
+          },
+          {
+            "handicapSeries": "592"
+          },
+          {
+            "handicapSeries": "2306",
+            "handicapGames": [
+              "738",
+              "812",
+              "756"
+            ],
+            "teamPoints": [
+              "0.0",
+              "2.0",
+              "0.0",
+              "2.0",
+              "2.0"
+            ]
+          },
+          {},
+          {
+            "handicapSeries": "576"
+          },
+          {
+            "handicapSeries": "530"
+          },
+          {
+            "handicapSeries": "577"
+          },
+          {
+            "handicapSeries": "658"
+          },
+          {
+            "handicapSeries": "2341",
+            "handicapGames": [
+              "779",
+              "782",
+              "780"
+            ],
+            "teamPoints": [
+              "2.0",
+              "0.0",
+              "2.0",
+              "6.0",
+              "6.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/3/6343609092026f202603reprnt00.pdf"
       },
       {
-        "title": "Keim Time matchup",
+        "title": "5 Pin Hustlers matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -1742,53 +1801,6 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 7",
-            "Lane 21 points won: 2"
-          ],
-          [
-            "Keim, Josh",
-            "194",
-            "5",
-            "225",
-            "168",
-            "193",
-            "586"
-          ],
-          [
-            "Keim, Diana",
-            "151",
-            "44",
-            "149",
-            "178",
-            "158",
-            "485"
-          ],
-          [
-            "Keim, Hans",
-            "173",
-            "24",
-            "173",
-            "184",
-            "190",
-            "547"
-          ],
-          [
-            "Adams, Andy",
-            "193",
-            "6",
-            "149",
-            "194",
-            "203",
-            "546"
-          ],
-          [
-            "Total",
-            "696",
-            "724",
-            "744",
-            "2164"
-          ],
           [
             "Team 3",
             "Lane 22 points won: 6"
@@ -1835,6 +1847,53 @@
             "737",
             "764",
             "2133"
+          ],
+          [
+            "Team 7",
+            "Lane 21 points won: 2"
+          ],
+          [
+            "Keim, Josh",
+            "194",
+            "5",
+            "225",
+            "168",
+            "193",
+            "586"
+          ],
+          [
+            "Keim, Diana",
+            "151",
+            "44",
+            "149",
+            "178",
+            "158",
+            "485"
+          ],
+          [
+            "Keim, Hans",
+            "173",
+            "24",
+            "173",
+            "184",
+            "190",
+            "547"
+          ],
+          [
+            "Adams, Andy",
+            "193",
+            "6",
+            "149",
+            "194",
+            "203",
+            "546"
+          ],
+          [
+            "Total",
+            "696",
+            "724",
+            "744",
+            "2164"
           ]
         ],
         "emphasis": [
@@ -1886,9 +1945,9 @@
           [
             false,
             false,
-            false,
-            false,
-            false
+            true,
+            true,
+            true
           ],
           [
             true,
@@ -1937,15 +1996,74 @@
           ],
           [
             false,
-            false,
+            true,
             false,
             false,
             false
           ]
-        ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "588"
+          },
+          {
+            "handicapSeries": "602"
+          },
+          {
+            "handicapSeries": "630"
+          },
+          {
+            "handicapSeries": "664"
+          },
+          {
+            "handicapSeries": "2484",
+            "handicapGames": [
+              "749",
+              "854",
+              "881"
+            ],
+            "teamPoints": [
+              "0.0",
+              "2.0",
+              "2.0",
+              "6.0",
+              "6.0"
+            ]
+          },
+          {},
+          {
+            "handicapSeries": "601"
+          },
+          {
+            "handicapSeries": "617"
+          },
+          {
+            "handicapSeries": "619"
+          },
+          {
+            "handicapSeries": "564"
+          },
+          {
+            "handicapSeries": "2401",
+            "handicapGames": [
+              "775",
+              "803",
+              "823"
+            ],
+            "teamPoints": [
+              "2.0",
+              "0.0",
+              "0.0",
+              "2.0",
+              "2.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/3/6343609092026f202603reprnt00.pdf"
       },
       {
-        "title": "Thorn's Team matchup",
+        "title": "Medina Sod matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -1956,53 +2074,6 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 4",
-            "Lane 18 points won: 0"
-          ],
-          [
-            "Thorn, Brandon",
-            "179",
-            "18",
-            "185",
-            "181",
-            "182",
-            "548"
-          ],
-          [
-            "Thorn, Tori",
-            "97",
-            "92",
-            "136",
-            "96",
-            "106",
-            "338"
-          ],
-          [
-            "Small, Brynn",
-            "156",
-            "39",
-            "123",
-            "139",
-            "136",
-            "398"
-          ],
-          [
-            "Van Gordon, Zoey",
-            "193",
-            "6",
-            "158",
-            "175",
-            "199",
-            "532"
-          ],
-          [
-            "Total",
-            "602",
-            "591",
-            "623",
-            "1816"
-          ],
           [
             "Team 5",
             "Lane 17 points won: 8"
@@ -2049,6 +2120,53 @@
             "763",
             "752",
             "2206"
+          ],
+          [
+            "Team 4",
+            "Lane 18 points won: 0"
+          ],
+          [
+            "Thorn, Brandon",
+            "179",
+            "18",
+            "185",
+            "181",
+            "182",
+            "548"
+          ],
+          [
+            "Thorn, Tori",
+            "97",
+            "92",
+            "136",
+            "96",
+            "106",
+            "338"
+          ],
+          [
+            "Small, Brynn",
+            "156",
+            "39",
+            "123",
+            "139",
+            "136",
+            "398"
+          ],
+          [
+            "Van Gordon, Zoey",
+            "193",
+            "6",
+            "158",
+            "175",
+            "199",
+            "532"
+          ],
+          [
+            "Total",
+            "602",
+            "591",
+            "623",
+            "1816"
           ]
         ],
         "emphasis": [
@@ -2099,10 +2217,10 @@
           ],
           [
             false,
-            false,
-            false,
-            false,
-            false
+            true,
+            true,
+            true,
+            true
           ],
           [
             true,
@@ -2156,10 +2274,69 @@
             false,
             false
           ]
-        ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "591"
+          },
+          {
+            "handicapSeries": "642"
+          },
+          {
+            "handicapSeries": "592"
+          },
+          {
+            "handicapSeries": "615"
+          },
+          {
+            "handicapSeries": "2440",
+            "handicapGames": [
+              "769",
+              "841",
+              "830"
+            ],
+            "teamPoints": [
+              "2.0",
+              "2.0",
+              "2.0",
+              "8.0",
+              "8.0"
+            ]
+          },
+          {},
+          {
+            "handicapSeries": "602"
+          },
+          {
+            "handicapSeries": "614"
+          },
+          {
+            "handicapSeries": "515"
+          },
+          {
+            "handicapSeries": "550"
+          },
+          {
+            "handicapSeries": "2281",
+            "handicapGames": [
+              "757",
+              "746",
+              "778"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/3/6343609092026f202603reprnt00.pdf"
       },
       {
-        "title": "Tazmania Devils matchup",
+        "title": "Off The Sheeters matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -2170,53 +2347,6 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 1",
-            "Lane 19 points won: 0"
-          ],
-          [
-            "Ondarick, Marge",
-            "81",
-            "107",
-            "80",
-            "100",
-            "131",
-            "311"
-          ],
-          [
-            "Collins, John",
-            "110",
-            "81",
-            "67",
-            "115",
-            "75",
-            "257"
-          ],
-          [
-            "Mlarnik, Joe",
-            "108",
-            "82",
-            "103",
-            "102",
-            "125",
-            "330"
-          ],
-          [
-            "Perry, Corina",
-            "133",
-            "60",
-            "137",
-            "112",
-            "143",
-            "392"
-          ],
-          [
-            "Total",
-            "387",
-            "429",
-            "474",
-            "1290"
-          ],
           [
             "Team 8",
             "Lane 20 points won: 8"
@@ -2263,6 +2393,53 @@
             "687",
             "715",
             "2070"
+          ],
+          [
+            "Team 1",
+            "Lane 19 points won: 0"
+          ],
+          [
+            "Ondarick, Marge",
+            "81",
+            "107",
+            "80",
+            "100",
+            "131",
+            "311"
+          ],
+          [
+            "Collins, John",
+            "110",
+            "81",
+            "67",
+            "115",
+            "75",
+            "257"
+          ],
+          [
+            "Mlarnik, Joe",
+            "108",
+            "82",
+            "103",
+            "102",
+            "125",
+            "330"
+          ],
+          [
+            "Perry, Corina",
+            "133",
+            "60",
+            "137",
+            "112",
+            "143",
+            "392"
+          ],
+          [
+            "Total",
+            "387",
+            "429",
+            "474",
+            "1290"
           ]
         ],
         "emphasis": [
@@ -2313,10 +2490,10 @@
           ],
           [
             false,
-            false,
-            false,
-            false,
-            false
+            true,
+            true,
+            true,
+            true
           ],
           [
             true,
@@ -2370,7 +2547,66 @@
             false,
             false
           ]
-        ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "548"
+          },
+          {
+            "handicapSeries": "616"
+          },
+          {
+            "handicapSeries": "544"
+          },
+          {
+            "handicapSeries": "674"
+          },
+          {
+            "handicapSeries": "2382",
+            "handicapGames": [
+              "772",
+              "791",
+              "819"
+            ],
+            "teamPoints": [
+              "2.0",
+              "2.0",
+              "2.0",
+              "8.0",
+              "8.0"
+            ]
+          },
+          {},
+          {
+            "handicapSeries": "632"
+          },
+          {
+            "handicapSeries": "500"
+          },
+          {
+            "handicapSeries": "576"
+          },
+          {
+            "handicapSeries": "572"
+          },
+          {
+            "handicapSeries": "2280",
+            "handicapGames": [
+              "717",
+              "759",
+              "804"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/3/6343609092026f202603reprnt00.pdf"
       }
     ],
     "lanes": [
@@ -7584,7 +7820,7 @@
     {
       "week": "3",
       "sourceUpdated": "Sep 9, 2026",
-      "syncedAt": "2026-09-15T14:54:09.946Z",
+      "syncedAt": "2026-09-15T18:42:02.575Z",
       "views": {
         "standings": [
           {
@@ -9086,7 +9322,7 @@
         ],
         "recaps": [
           {
-            "title": "Gutter Gnomes matchup",
+            "title": "2 or 3 Times A Year matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -9097,53 +9333,6 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 6",
-                "Lane 24 points won: 6"
-              ],
-              [
-                "Johnson, Norm",
-                "169",
-                "27",
-                "158",
-                "177",
-                "160",
-                "495"
-              ],
-              [
-                "Johnson, Corrie",
-                "173",
-                "24",
-                "123",
-                "163",
-                "172",
-                "458"
-              ],
-              [
-                "Casella, Tom",
-                "200",
-                "0",
-                "188",
-                "206",
-                "183",
-                "577"
-              ],
-              [
-                "Johnson, Mitchell",
-                "198",
-                "1",
-                "258",
-                "184",
-                "213",
-                "655"
-              ],
-              [
-                "Total",
-                "727",
-                "730",
-                "728",
-                "2185"
-              ],
               [
                 "Team 2",
                 "Lane 23 points won: 2"
@@ -9190,6 +9379,53 @@
                 "524",
                 "468",
                 "1442"
+              ],
+              [
+                "Team 6",
+                "Lane 24 points won: 6"
+              ],
+              [
+                "Johnson, Norm",
+                "169",
+                "27",
+                "158",
+                "177",
+                "160",
+                "495"
+              ],
+              [
+                "Johnson, Corrie",
+                "173",
+                "24",
+                "123",
+                "163",
+                "172",
+                "458"
+              ],
+              [
+                "Casella, Tom",
+                "200",
+                "0",
+                "188",
+                "206",
+                "183",
+                "577"
+              ],
+              [
+                "Johnson, Mitchell",
+                "198",
+                "1",
+                "258",
+                "184",
+                "213",
+                "655"
+              ],
+              [
+                "Total",
+                "727",
+                "730",
+                "728",
+                "2185"
               ]
             ],
             "emphasis": [
@@ -9241,7 +9477,7 @@
               [
                 false,
                 false,
-                false,
+                true,
                 false,
                 false
               ],
@@ -9292,15 +9528,74 @@
               ],
               [
                 false,
+                true,
                 false,
-                false,
-                false,
-                false
+                true,
+                true
               ]
-            ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "582"
+              },
+              {
+                "handicapSeries": "552"
+              },
+              {
+                "handicapSeries": "580"
+              },
+              {
+                "handicapSeries": "592"
+              },
+              {
+                "handicapSeries": "2306",
+                "handicapGames": [
+                  "738",
+                  "812",
+                  "756"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "2.0",
+                  "0.0",
+                  "2.0",
+                  "2.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "576"
+              },
+              {
+                "handicapSeries": "530"
+              },
+              {
+                "handicapSeries": "577"
+              },
+              {
+                "handicapSeries": "658"
+              },
+              {
+                "handicapSeries": "2341",
+                "handicapGames": [
+                  "779",
+                  "782",
+                  "780"
+                ],
+                "teamPoints": [
+                  "2.0",
+                  "0.0",
+                  "2.0",
+                  "6.0",
+                  "6.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/3/6343609092026f202603reprnt00.pdf"
           },
           {
-            "title": "Keim Time matchup",
+            "title": "5 Pin Hustlers matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -9311,53 +9606,6 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 7",
-                "Lane 21 points won: 2"
-              ],
-              [
-                "Keim, Josh",
-                "194",
-                "5",
-                "225",
-                "168",
-                "193",
-                "586"
-              ],
-              [
-                "Keim, Diana",
-                "151",
-                "44",
-                "149",
-                "178",
-                "158",
-                "485"
-              ],
-              [
-                "Keim, Hans",
-                "173",
-                "24",
-                "173",
-                "184",
-                "190",
-                "547"
-              ],
-              [
-                "Adams, Andy",
-                "193",
-                "6",
-                "149",
-                "194",
-                "203",
-                "546"
-              ],
-              [
-                "Total",
-                "696",
-                "724",
-                "744",
-                "2164"
-              ],
               [
                 "Team 3",
                 "Lane 22 points won: 6"
@@ -9404,6 +9652,53 @@
                 "737",
                 "764",
                 "2133"
+              ],
+              [
+                "Team 7",
+                "Lane 21 points won: 2"
+              ],
+              [
+                "Keim, Josh",
+                "194",
+                "5",
+                "225",
+                "168",
+                "193",
+                "586"
+              ],
+              [
+                "Keim, Diana",
+                "151",
+                "44",
+                "149",
+                "178",
+                "158",
+                "485"
+              ],
+              [
+                "Keim, Hans",
+                "173",
+                "24",
+                "173",
+                "184",
+                "190",
+                "547"
+              ],
+              [
+                "Adams, Andy",
+                "193",
+                "6",
+                "149",
+                "194",
+                "203",
+                "546"
+              ],
+              [
+                "Total",
+                "696",
+                "724",
+                "744",
+                "2164"
               ]
             ],
             "emphasis": [
@@ -9455,9 +9750,9 @@
               [
                 false,
                 false,
-                false,
-                false,
-                false
+                true,
+                true,
+                true
               ],
               [
                 true,
@@ -9506,15 +9801,74 @@
               ],
               [
                 false,
-                false,
+                true,
                 false,
                 false,
                 false
               ]
-            ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "588"
+              },
+              {
+                "handicapSeries": "602"
+              },
+              {
+                "handicapSeries": "630"
+              },
+              {
+                "handicapSeries": "664"
+              },
+              {
+                "handicapSeries": "2484",
+                "handicapGames": [
+                  "749",
+                  "854",
+                  "881"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "2.0",
+                  "2.0",
+                  "6.0",
+                  "6.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "601"
+              },
+              {
+                "handicapSeries": "617"
+              },
+              {
+                "handicapSeries": "619"
+              },
+              {
+                "handicapSeries": "564"
+              },
+              {
+                "handicapSeries": "2401",
+                "handicapGames": [
+                  "775",
+                  "803",
+                  "823"
+                ],
+                "teamPoints": [
+                  "2.0",
+                  "0.0",
+                  "0.0",
+                  "2.0",
+                  "2.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/3/6343609092026f202603reprnt00.pdf"
           },
           {
-            "title": "Thorn's Team matchup",
+            "title": "Medina Sod matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -9525,53 +9879,6 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 4",
-                "Lane 18 points won: 0"
-              ],
-              [
-                "Thorn, Brandon",
-                "179",
-                "18",
-                "185",
-                "181",
-                "182",
-                "548"
-              ],
-              [
-                "Thorn, Tori",
-                "97",
-                "92",
-                "136",
-                "96",
-                "106",
-                "338"
-              ],
-              [
-                "Small, Brynn",
-                "156",
-                "39",
-                "123",
-                "139",
-                "136",
-                "398"
-              ],
-              [
-                "Van Gordon, Zoey",
-                "193",
-                "6",
-                "158",
-                "175",
-                "199",
-                "532"
-              ],
-              [
-                "Total",
-                "602",
-                "591",
-                "623",
-                "1816"
-              ],
               [
                 "Team 5",
                 "Lane 17 points won: 8"
@@ -9618,6 +9925,53 @@
                 "763",
                 "752",
                 "2206"
+              ],
+              [
+                "Team 4",
+                "Lane 18 points won: 0"
+              ],
+              [
+                "Thorn, Brandon",
+                "179",
+                "18",
+                "185",
+                "181",
+                "182",
+                "548"
+              ],
+              [
+                "Thorn, Tori",
+                "97",
+                "92",
+                "136",
+                "96",
+                "106",
+                "338"
+              ],
+              [
+                "Small, Brynn",
+                "156",
+                "39",
+                "123",
+                "139",
+                "136",
+                "398"
+              ],
+              [
+                "Van Gordon, Zoey",
+                "193",
+                "6",
+                "158",
+                "175",
+                "199",
+                "532"
+              ],
+              [
+                "Total",
+                "602",
+                "591",
+                "623",
+                "1816"
               ]
             ],
             "emphasis": [
@@ -9668,10 +10022,10 @@
               ],
               [
                 false,
-                false,
-                false,
-                false,
-                false
+                true,
+                true,
+                true,
+                true
               ],
               [
                 true,
@@ -9725,10 +10079,69 @@
                 false,
                 false
               ]
-            ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "591"
+              },
+              {
+                "handicapSeries": "642"
+              },
+              {
+                "handicapSeries": "592"
+              },
+              {
+                "handicapSeries": "615"
+              },
+              {
+                "handicapSeries": "2440",
+                "handicapGames": [
+                  "769",
+                  "841",
+                  "830"
+                ],
+                "teamPoints": [
+                  "2.0",
+                  "2.0",
+                  "2.0",
+                  "8.0",
+                  "8.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "602"
+              },
+              {
+                "handicapSeries": "614"
+              },
+              {
+                "handicapSeries": "515"
+              },
+              {
+                "handicapSeries": "550"
+              },
+              {
+                "handicapSeries": "2281",
+                "handicapGames": [
+                  "757",
+                  "746",
+                  "778"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/3/6343609092026f202603reprnt00.pdf"
           },
           {
-            "title": "Tazmania Devils matchup",
+            "title": "Off The Sheeters matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -9739,53 +10152,6 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 1",
-                "Lane 19 points won: 0"
-              ],
-              [
-                "Ondarick, Marge",
-                "81",
-                "107",
-                "80",
-                "100",
-                "131",
-                "311"
-              ],
-              [
-                "Collins, John",
-                "110",
-                "81",
-                "67",
-                "115",
-                "75",
-                "257"
-              ],
-              [
-                "Mlarnik, Joe",
-                "108",
-                "82",
-                "103",
-                "102",
-                "125",
-                "330"
-              ],
-              [
-                "Perry, Corina",
-                "133",
-                "60",
-                "137",
-                "112",
-                "143",
-                "392"
-              ],
-              [
-                "Total",
-                "387",
-                "429",
-                "474",
-                "1290"
-              ],
               [
                 "Team 8",
                 "Lane 20 points won: 8"
@@ -9832,6 +10198,53 @@
                 "687",
                 "715",
                 "2070"
+              ],
+              [
+                "Team 1",
+                "Lane 19 points won: 0"
+              ],
+              [
+                "Ondarick, Marge",
+                "81",
+                "107",
+                "80",
+                "100",
+                "131",
+                "311"
+              ],
+              [
+                "Collins, John",
+                "110",
+                "81",
+                "67",
+                "115",
+                "75",
+                "257"
+              ],
+              [
+                "Mlarnik, Joe",
+                "108",
+                "82",
+                "103",
+                "102",
+                "125",
+                "330"
+              ],
+              [
+                "Perry, Corina",
+                "133",
+                "60",
+                "137",
+                "112",
+                "143",
+                "392"
+              ],
+              [
+                "Total",
+                "387",
+                "429",
+                "474",
+                "1290"
               ]
             ],
             "emphasis": [
@@ -9882,10 +10295,10 @@
               ],
               [
                 false,
-                false,
-                false,
-                false,
-                false
+                true,
+                true,
+                true,
+                true
               ],
               [
                 true,
@@ -9939,7 +10352,66 @@
                 false,
                 false
               ]
-            ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "548"
+              },
+              {
+                "handicapSeries": "616"
+              },
+              {
+                "handicapSeries": "544"
+              },
+              {
+                "handicapSeries": "674"
+              },
+              {
+                "handicapSeries": "2382",
+                "handicapGames": [
+                  "772",
+                  "791",
+                  "819"
+                ],
+                "teamPoints": [
+                  "2.0",
+                  "2.0",
+                  "2.0",
+                  "8.0",
+                  "8.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "632"
+              },
+              {
+                "handicapSeries": "500"
+              },
+              {
+                "handicapSeries": "576"
+              },
+              {
+                "handicapSeries": "572"
+              },
+              {
+                "handicapSeries": "2280",
+                "handicapGames": [
+                  "717",
+                  "759",
+                  "804"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/3/6343609092026f202603reprnt00.pdf"
           }
         ],
         "lanes": [
@@ -10798,5 +11270,6 @@
       }
     }
   ],
-  "lastCheckedAt": "2026-09-15T14:54:09.946Z"
+  "lastCheckedAt": "2026-09-15T18:42:02.575Z",
+  "lastAttemptedAt": null
 }

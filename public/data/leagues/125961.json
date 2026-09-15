@@ -15,10 +15,10 @@
   "centerSlug": "parkway-lanes---lincoln-lincoln-nebraska",
   "area": "Lincoln",
   "sourceUpdated": "Aug 6, 2026",
-  "syncedAt": "2026-09-15T15:35:12.419Z",
+  "syncedAt": "2026-09-15T18:59:58.041Z",
   "status": "awaiting-results",
   "week": "13",
-  "fingerprint": "5f52b15ccd0bb1c7ff9fa92be292beb5f2182437ba419d764e94781e6be19e50",
+  "fingerprint": "20484034d922b09f1049bac797e50f3779dbc69e7180cef223e42376e352e60f",
   "lastCompletedCycle": null,
   "views": {
     "standings": [
@@ -1773,7 +1773,7 @@
     ],
     "recaps": [
       {
-        "title": "BOWLING ARTWORKS matchup",
+        "title": "BOHUNK THUNDER matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -1784,53 +1784,6 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 2",
-            "Lane 3 points won: 0"
-          ],
-          [
-            "Othling, Angel",
-            "113",
-            "87",
-            "95",
-            "122",
-            "72",
-            "289"
-          ],
-          [
-            "Patten, Joy",
-            "128",
-            "73",
-            "136",
-            "99",
-            "113",
-            "348"
-          ],
-          [
-            "Austin, John",
-            "169",
-            "36",
-            "200",
-            "160",
-            "182",
-            "542"
-          ],
-          [
-            "Patten, John",
-            "179",
-            "27",
-            "148",
-            "174",
-            "193",
-            "515"
-          ],
-          [
-            "Total",
-            "579",
-            "555",
-            "560",
-            "1694"
-          ],
           [
             "Team 3",
             "Lane 4 points won: 4"
@@ -1877,6 +1830,53 @@
             "710",
             "687",
             "2089"
+          ],
+          [
+            "Team 2",
+            "Lane 3 points won: 0"
+          ],
+          [
+            "Othling, Angel",
+            "113",
+            "87",
+            "95",
+            "122",
+            "72",
+            "289"
+          ],
+          [
+            "Patten, Joy",
+            "128",
+            "73",
+            "136",
+            "99",
+            "113",
+            "348"
+          ],
+          [
+            "Austin, John",
+            "169",
+            "36",
+            "200",
+            "160",
+            "182",
+            "542"
+          ],
+          [
+            "Patten, John",
+            "179",
+            "27",
+            "148",
+            "174",
+            "193",
+            "515"
+          ],
+          [
+            "Total",
+            "579",
+            "555",
+            "560",
+            "1694"
           ]
         ],
         "emphasis": [
@@ -1927,10 +1927,10 @@
           ],
           [
             false,
-            false,
-            false,
-            false,
-            false
+            true,
+            true,
+            true,
+            true
           ],
           [
             true,
@@ -1984,10 +1984,69 @@
             false,
             false
           ]
-        ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "608"
+          },
+          {
+            "handicapSeries": "585"
+          },
+          {
+            "handicapSeries": "626"
+          },
+          {
+            "handicapSeries": "624"
+          },
+          {
+            "handicapSeries": "2089",
+            "handicapGames": [
+              "692",
+              "710",
+              "687"
+            ],
+            "teamPoints": [
+              "1.0",
+              "1.0",
+              "1.0",
+              "4.0",
+              "4.0"
+            ]
+          },
+          {},
+          {
+            "handicapSeries": "550"
+          },
+          {
+            "handicapSeries": "567"
+          },
+          {
+            "handicapSeries": "650"
+          },
+          {
+            "handicapSeries": "596"
+          },
+          {
+            "handicapSeries": "2012",
+            "handicapGames": [
+              "685",
+              "661",
+              "666"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/u/13/12596108062026u202613reprnt00.pdf"
       },
       {
-        "title": "TUCKING FENPINS matchup",
+        "title": "GUTTERFINGERS matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -1998,53 +2057,6 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 4",
-            "Lane 6 points won: 1"
-          ],
-          [
-            "Haberman, Kassidy",
-            "179",
-            "27",
-            "169",
-            "169",
-            "169",
-            "507"
-          ],
-          [
-            "Gonzales, Peyton",
-            "153",
-            "51",
-            "126",
-            "127",
-            "132",
-            "385"
-          ],
-          [
-            "Maas, Gavin",
-            "157",
-            "47",
-            "172",
-            "156",
-            "177",
-            "505"
-          ],
-          [
-            "Yates, Abby",
-            "165",
-            "40",
-            "157",
-            "191",
-            "158",
-            "506"
-          ],
-          [
-            "Total",
-            "624",
-            "643",
-            "636",
-            "1903"
-          ],
           [
             "Team 5",
             "Lane 5 points won: 3"
@@ -2091,6 +2103,53 @@
             "595",
             "541",
             "1625"
+          ],
+          [
+            "Team 4",
+            "Lane 6 points won: 1"
+          ],
+          [
+            "Haberman, Kassidy",
+            "179",
+            "27",
+            "169",
+            "169",
+            "169",
+            "507"
+          ],
+          [
+            "Gonzales, Peyton",
+            "153",
+            "51",
+            "126",
+            "127",
+            "132",
+            "385"
+          ],
+          [
+            "Maas, Gavin",
+            "157",
+            "47",
+            "172",
+            "156",
+            "177",
+            "505"
+          ],
+          [
+            "Yates, Abby",
+            "165",
+            "40",
+            "157",
+            "191",
+            "158",
+            "506"
+          ],
+          [
+            "Total",
+            "624",
+            "643",
+            "636",
+            "1903"
           ]
         ],
         "emphasis": [
@@ -2142,9 +2201,9 @@
           [
             false,
             false,
-            false,
-            false,
-            false
+            true,
+            true,
+            true
           ],
           [
             true,
@@ -2193,15 +2252,74 @@
           ],
           [
             false,
-            false,
+            true,
             false,
             false,
             false
           ]
-        ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "635"
+          },
+          {
+            "handicapSeries": "670"
+          },
+          {
+            "handicapSeries": "602"
+          },
+          {
+            "handicapSeries": "606"
+          },
+          {
+            "handicapSeries": "2015",
+            "handicapGames": [
+              "619",
+              "725",
+              "671"
+            ],
+            "teamPoints": [
+              "0.0",
+              "1.0",
+              "1.0",
+              "3.0",
+              "3.0"
+            ]
+          },
+          {},
+          {
+            "handicapSeries": "588"
+          },
+          {
+            "handicapSeries": "538"
+          },
+          {
+            "handicapSeries": "646"
+          },
+          {
+            "handicapSeries": "626"
+          },
+          {
+            "handicapSeries": "1903",
+            "handicapGames": [
+              "624",
+              "643",
+              "636"
+            ],
+            "teamPoints": [
+              "1.0",
+              "0.0",
+              "0.0",
+              "1.0",
+              "1.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/u/13/12596108062026u202613reprnt00.pdf"
       },
       {
-        "title": "MERRILL matchup",
+        "title": "JUST 4 FUN matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -2212,53 +2330,6 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 6",
-            "Lane 1 points won: 4"
-          ],
-          [
-            "Merrill, Jeff",
-            "167",
-            "38",
-            "204",
-            "181",
-            "175",
-            "560"
-          ],
-          [
-            "Merrill, Dale",
-            "130",
-            "72",
-            "104",
-            "143",
-            "125",
-            "372"
-          ],
-          [
-            "Mcshane, Mike",
-            "116",
-            "84",
-            "121",
-            "167",
-            "176",
-            "464"
-          ],
-          [
-            "Westring, Aurora",
-            "100",
-            "99",
-            "109",
-            "90",
-            "95",
-            "294"
-          ],
-          [
-            "Total",
-            "538",
-            "581",
-            "571",
-            "1690"
-          ],
           [
             "Team 1",
             "Lane 2 points won: 0"
@@ -2305,6 +2376,53 @@
             "561",
             "659",
             "1771"
+          ],
+          [
+            "Team 6",
+            "Lane 1 points won: 4"
+          ],
+          [
+            "Merrill, Jeff",
+            "167",
+            "38",
+            "204",
+            "181",
+            "175",
+            "560"
+          ],
+          [
+            "Merrill, Dale",
+            "130",
+            "72",
+            "104",
+            "143",
+            "125",
+            "372"
+          ],
+          [
+            "Mcshane, Mike",
+            "116",
+            "84",
+            "121",
+            "167",
+            "176",
+            "464"
+          ],
+          [
+            "Westring, Aurora",
+            "100",
+            "99",
+            "109",
+            "90",
+            "95",
+            "294"
+          ],
+          [
+            "Total",
+            "538",
+            "581",
+            "571",
+            "1690"
           ]
         ],
         "emphasis": [
@@ -2407,12 +2525,71 @@
           ],
           [
             false,
-            false,
-            false,
-            false,
-            false
+            true,
+            true,
+            true,
+            true
           ]
-        ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "588"
+          },
+          {
+            "handicapSeries": "535"
+          },
+          {
+            "handicapSeries": "613"
+          },
+          {
+            "handicapSeries": "605"
+          },
+          {
+            "handicapSeries": "1771",
+            "handicapGames": [
+              "551",
+              "561",
+              "659"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0"
+            ]
+          },
+          {},
+          {
+            "handicapSeries": "674"
+          },
+          {
+            "handicapSeries": "588"
+          },
+          {
+            "handicapSeries": "716"
+          },
+          {
+            "handicapSeries": "591"
+          },
+          {
+            "handicapSeries": "1996",
+            "handicapGames": [
+              "640",
+              "683",
+              "673"
+            ],
+            "teamPoints": [
+              "1.0",
+              "1.0",
+              "1.0",
+              "4.0",
+              "4.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/u/13/12596108062026u202613reprnt00.pdf"
       }
     ],
     "lanes": [
@@ -3314,13 +3491,13 @@
     ]
   },
   "lastAttemptedAt": null,
-  "lastCheckedAt": "2026-09-15T15:35:12.419Z",
+  "lastCheckedAt": "2026-09-15T18:59:58.041Z",
   "sourceFingerprint": "0fda160e8777b6ae9b0f1022da6b17fa18d6e4b7453d71747066fe75da33e5f9",
   "history": [
     {
       "week": "13",
       "sourceUpdated": "Aug 6, 2026",
-      "syncedAt": "2026-09-15T15:35:12.419Z",
+      "syncedAt": "2026-09-15T18:59:58.041Z",
       "views": {
         "standings": [
           {
@@ -5074,7 +5251,7 @@
         ],
         "recaps": [
           {
-            "title": "BOWLING ARTWORKS matchup",
+            "title": "BOHUNK THUNDER matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -5085,53 +5262,6 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 2",
-                "Lane 3 points won: 0"
-              ],
-              [
-                "Othling, Angel",
-                "113",
-                "87",
-                "95",
-                "122",
-                "72",
-                "289"
-              ],
-              [
-                "Patten, Joy",
-                "128",
-                "73",
-                "136",
-                "99",
-                "113",
-                "348"
-              ],
-              [
-                "Austin, John",
-                "169",
-                "36",
-                "200",
-                "160",
-                "182",
-                "542"
-              ],
-              [
-                "Patten, John",
-                "179",
-                "27",
-                "148",
-                "174",
-                "193",
-                "515"
-              ],
-              [
-                "Total",
-                "579",
-                "555",
-                "560",
-                "1694"
-              ],
               [
                 "Team 3",
                 "Lane 4 points won: 4"
@@ -5178,6 +5308,53 @@
                 "710",
                 "687",
                 "2089"
+              ],
+              [
+                "Team 2",
+                "Lane 3 points won: 0"
+              ],
+              [
+                "Othling, Angel",
+                "113",
+                "87",
+                "95",
+                "122",
+                "72",
+                "289"
+              ],
+              [
+                "Patten, Joy",
+                "128",
+                "73",
+                "136",
+                "99",
+                "113",
+                "348"
+              ],
+              [
+                "Austin, John",
+                "169",
+                "36",
+                "200",
+                "160",
+                "182",
+                "542"
+              ],
+              [
+                "Patten, John",
+                "179",
+                "27",
+                "148",
+                "174",
+                "193",
+                "515"
+              ],
+              [
+                "Total",
+                "579",
+                "555",
+                "560",
+                "1694"
               ]
             ],
             "emphasis": [
@@ -5228,10 +5405,10 @@
               ],
               [
                 false,
-                false,
-                false,
-                false,
-                false
+                true,
+                true,
+                true,
+                true
               ],
               [
                 true,
@@ -5285,10 +5462,69 @@
                 false,
                 false
               ]
-            ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "608"
+              },
+              {
+                "handicapSeries": "585"
+              },
+              {
+                "handicapSeries": "626"
+              },
+              {
+                "handicapSeries": "624"
+              },
+              {
+                "handicapSeries": "2089",
+                "handicapGames": [
+                  "692",
+                  "710",
+                  "687"
+                ],
+                "teamPoints": [
+                  "1.0",
+                  "1.0",
+                  "1.0",
+                  "4.0",
+                  "4.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "550"
+              },
+              {
+                "handicapSeries": "567"
+              },
+              {
+                "handicapSeries": "650"
+              },
+              {
+                "handicapSeries": "596"
+              },
+              {
+                "handicapSeries": "2012",
+                "handicapGames": [
+                  "685",
+                  "661",
+                  "666"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/u/13/12596108062026u202613reprnt00.pdf"
           },
           {
-            "title": "TUCKING FENPINS matchup",
+            "title": "GUTTERFINGERS matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -5299,53 +5535,6 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 4",
-                "Lane 6 points won: 1"
-              ],
-              [
-                "Haberman, Kassidy",
-                "179",
-                "27",
-                "169",
-                "169",
-                "169",
-                "507"
-              ],
-              [
-                "Gonzales, Peyton",
-                "153",
-                "51",
-                "126",
-                "127",
-                "132",
-                "385"
-              ],
-              [
-                "Maas, Gavin",
-                "157",
-                "47",
-                "172",
-                "156",
-                "177",
-                "505"
-              ],
-              [
-                "Yates, Abby",
-                "165",
-                "40",
-                "157",
-                "191",
-                "158",
-                "506"
-              ],
-              [
-                "Total",
-                "624",
-                "643",
-                "636",
-                "1903"
-              ],
               [
                 "Team 5",
                 "Lane 5 points won: 3"
@@ -5392,6 +5581,53 @@
                 "595",
                 "541",
                 "1625"
+              ],
+              [
+                "Team 4",
+                "Lane 6 points won: 1"
+              ],
+              [
+                "Haberman, Kassidy",
+                "179",
+                "27",
+                "169",
+                "169",
+                "169",
+                "507"
+              ],
+              [
+                "Gonzales, Peyton",
+                "153",
+                "51",
+                "126",
+                "127",
+                "132",
+                "385"
+              ],
+              [
+                "Maas, Gavin",
+                "157",
+                "47",
+                "172",
+                "156",
+                "177",
+                "505"
+              ],
+              [
+                "Yates, Abby",
+                "165",
+                "40",
+                "157",
+                "191",
+                "158",
+                "506"
+              ],
+              [
+                "Total",
+                "624",
+                "643",
+                "636",
+                "1903"
               ]
             ],
             "emphasis": [
@@ -5443,9 +5679,9 @@
               [
                 false,
                 false,
-                false,
-                false,
-                false
+                true,
+                true,
+                true
               ],
               [
                 true,
@@ -5494,15 +5730,74 @@
               ],
               [
                 false,
-                false,
+                true,
                 false,
                 false,
                 false
               ]
-            ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "635"
+              },
+              {
+                "handicapSeries": "670"
+              },
+              {
+                "handicapSeries": "602"
+              },
+              {
+                "handicapSeries": "606"
+              },
+              {
+                "handicapSeries": "2015",
+                "handicapGames": [
+                  "619",
+                  "725",
+                  "671"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "1.0",
+                  "1.0",
+                  "3.0",
+                  "3.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "588"
+              },
+              {
+                "handicapSeries": "538"
+              },
+              {
+                "handicapSeries": "646"
+              },
+              {
+                "handicapSeries": "626"
+              },
+              {
+                "handicapSeries": "1903",
+                "handicapGames": [
+                  "624",
+                  "643",
+                  "636"
+                ],
+                "teamPoints": [
+                  "1.0",
+                  "0.0",
+                  "0.0",
+                  "1.0",
+                  "1.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/u/13/12596108062026u202613reprnt00.pdf"
           },
           {
-            "title": "MERRILL matchup",
+            "title": "JUST 4 FUN matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -5513,53 +5808,6 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 6",
-                "Lane 1 points won: 4"
-              ],
-              [
-                "Merrill, Jeff",
-                "167",
-                "38",
-                "204",
-                "181",
-                "175",
-                "560"
-              ],
-              [
-                "Merrill, Dale",
-                "130",
-                "72",
-                "104",
-                "143",
-                "125",
-                "372"
-              ],
-              [
-                "Mcshane, Mike",
-                "116",
-                "84",
-                "121",
-                "167",
-                "176",
-                "464"
-              ],
-              [
-                "Westring, Aurora",
-                "100",
-                "99",
-                "109",
-                "90",
-                "95",
-                "294"
-              ],
-              [
-                "Total",
-                "538",
-                "581",
-                "571",
-                "1690"
-              ],
               [
                 "Team 1",
                 "Lane 2 points won: 0"
@@ -5606,6 +5854,53 @@
                 "561",
                 "659",
                 "1771"
+              ],
+              [
+                "Team 6",
+                "Lane 1 points won: 4"
+              ],
+              [
+                "Merrill, Jeff",
+                "167",
+                "38",
+                "204",
+                "181",
+                "175",
+                "560"
+              ],
+              [
+                "Merrill, Dale",
+                "130",
+                "72",
+                "104",
+                "143",
+                "125",
+                "372"
+              ],
+              [
+                "Mcshane, Mike",
+                "116",
+                "84",
+                "121",
+                "167",
+                "176",
+                "464"
+              ],
+              [
+                "Westring, Aurora",
+                "100",
+                "99",
+                "109",
+                "90",
+                "95",
+                "294"
+              ],
+              [
+                "Total",
+                "538",
+                "581",
+                "571",
+                "1690"
               ]
             ],
             "emphasis": [
@@ -5708,12 +6003,71 @@
               ],
               [
                 false,
-                false,
-                false,
-                false,
-                false
+                true,
+                true,
+                true,
+                true
               ]
-            ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "588"
+              },
+              {
+                "handicapSeries": "535"
+              },
+              {
+                "handicapSeries": "613"
+              },
+              {
+                "handicapSeries": "605"
+              },
+              {
+                "handicapSeries": "1771",
+                "handicapGames": [
+                  "551",
+                  "561",
+                  "659"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "674"
+              },
+              {
+                "handicapSeries": "588"
+              },
+              {
+                "handicapSeries": "716"
+              },
+              {
+                "handicapSeries": "591"
+              },
+              {
+                "handicapSeries": "1996",
+                "handicapGames": [
+                  "640",
+                  "683",
+                  "673"
+                ],
+                "teamPoints": [
+                  "1.0",
+                  "1.0",
+                  "1.0",
+                  "4.0",
+                  "4.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/u/13/12596108062026u202613reprnt00.pdf"
           }
         ],
         "lanes": [

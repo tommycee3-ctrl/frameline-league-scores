@@ -15,10 +15,10 @@
   "centerSlug": "papio-bowl-papillion-nebraska",
   "area": "Omaha",
   "sourceUpdated": "Sep 10, 2026",
-  "syncedAt": "2026-09-13T06:56:38.454Z",
+  "syncedAt": "2026-09-15T18:37:09.865Z",
   "status": "current",
   "week": "5",
-  "fingerprint": "bc337249e3905283481dbfd1b785d6ae5b425497b9581570f6fb02813400b469",
+  "fingerprint": "1c94e1e2a258b3a4e2440455203020b9c1c606ead5d8c0c6b74a36d923f59bc3",
   "lastCompletedCycle": "2026-09-10",
   "views": {
     "standings": [
@@ -1177,7 +1177,7 @@
     ],
     "recaps": [
       {
-        "title": "Breakfast Gang matchup",
+        "title": "BFF's matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -1188,44 +1188,6 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 4",
-            "Lane 5 points won: 4"
-          ],
-          [
-            "Ladabie, Mary",
-            "102",
-            "78",
-            "115",
-            "93",
-            "111",
-            "319"
-          ],
-          [
-            "Kettleson, Deb",
-            "138",
-            "49",
-            "155",
-            "151",
-            "180",
-            "486"
-          ],
-          [
-            "Williamson, Fran",
-            "133",
-            "53",
-            "146",
-            "114",
-            "116",
-            "376"
-          ],
-          [
-            "Total",
-            "416",
-            "358",
-            "407",
-            "1181"
-          ],
           [
             "Team 2",
             "Lane 6 points won: 0"
@@ -1263,6 +1225,44 @@
             "342",
             "366",
             "1133"
+          ],
+          [
+            "Team 4",
+            "Lane 5 points won: 4"
+          ],
+          [
+            "Ladabie, Mary",
+            "102",
+            "78",
+            "115",
+            "93",
+            "111",
+            "319"
+          ],
+          [
+            "Kettleson, Deb",
+            "138",
+            "49",
+            "155",
+            "151",
+            "180",
+            "486"
+          ],
+          [
+            "Williamson, Fran",
+            "133",
+            "53",
+            "146",
+            "114",
+            "116",
+            "376"
+          ],
+          [
+            "Total",
+            "416",
+            "358",
+            "407",
+            "1181"
           ]
         ],
         "emphasis": [
@@ -1347,15 +1347,68 @@
           ],
           [
             false,
-            false,
-            false,
-            false,
-            false
+            true,
+            true,
+            true,
+            true
           ]
-        ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "530"
+          },
+          {
+            "handicapSeries": "546"
+          },
+          {
+            "handicapSeries": "537"
+          },
+          {
+            "handicapSeries": "1613",
+            "handicapGames": [
+              "585",
+              "502",
+              "526"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0"
+            ]
+          },
+          {},
+          {
+            "handicapSeries": "553"
+          },
+          {
+            "handicapSeries": "633"
+          },
+          {
+            "handicapSeries": "535"
+          },
+          {
+            "handicapSeries": "1721",
+            "handicapGames": [
+              "596",
+              "538",
+              "587"
+            ],
+            "teamPoints": [
+              "1.0",
+              "1.0",
+              "1.0",
+              "4.0",
+              "4.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/5/11603309102026f202605reprnt00.pdf"
       },
       {
-        "title": "Golden Girls matchup",
+        "title": "Bowling 4 Fun matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -1366,44 +1419,6 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 1",
-            "Lane 1 points won: 4"
-          ],
-          [
-            "Dickey, Margie",
-            "144",
-            "44",
-            "161",
-            "177",
-            "157",
-            "495"
-          ],
-          [
-            "Grieb, Perri",
-            "132",
-            "54",
-            "118",
-            "132",
-            "139",
-            "389"
-          ],
-          [
-            "Manrose, Sandy",
-            "120",
-            "64",
-            "146",
-            "134",
-            "120",
-            "400"
-          ],
-          [
-            "Total",
-            "425",
-            "443",
-            "416",
-            "1284"
-          ],
           [
             "Team 5",
             "Lane 2 points won: 0"
@@ -1441,6 +1456,44 @@
             "388",
             "378",
             "1130"
+          ],
+          [
+            "Team 1",
+            "Lane 1 points won: 4"
+          ],
+          [
+            "Dickey, Margie",
+            "144",
+            "44",
+            "161",
+            "177",
+            "157",
+            "495"
+          ],
+          [
+            "Grieb, Perri",
+            "132",
+            "54",
+            "118",
+            "132",
+            "139",
+            "389"
+          ],
+          [
+            "Manrose, Sandy",
+            "120",
+            "64",
+            "146",
+            "134",
+            "120",
+            "400"
+          ],
+          [
+            "Total",
+            "425",
+            "443",
+            "416",
+            "1284"
           ]
         ],
         "emphasis": [
@@ -1525,15 +1578,68 @@
           ],
           [
             false,
-            false,
-            false,
-            false,
-            false
+            true,
+            true,
+            true,
+            true
           ]
-        ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "560"
+          },
+          {
+            "handicapSeries": "570"
+          },
+          {
+            "handicapSeries": "597"
+          },
+          {
+            "handicapSeries": "1727",
+            "handicapGames": [
+              "563",
+              "587",
+              "577"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0"
+            ]
+          },
+          {},
+          {
+            "handicapSeries": "627"
+          },
+          {
+            "handicapSeries": "551"
+          },
+          {
+            "handicapSeries": "592"
+          },
+          {
+            "handicapSeries": "1770",
+            "handicapGames": [
+              "587",
+              "605",
+              "578"
+            ],
+            "teamPoints": [
+              "1.0",
+              "1.0",
+              "1.0",
+              "4.0",
+              "4.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/5/11603309102026f202605reprnt00.pdf"
       },
       {
-        "title": "Sunshine matchup",
+        "title": "Lucky Ladies matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -1544,44 +1650,6 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 6",
-            "Lane 3 points won: 0"
-          ],
-          [
-            "Iske, Di",
-            "137",
-            "50",
-            "74",
-            "101",
-            "96",
-            "271"
-          ],
-          [
-            "Chauncey, Peggy",
-            "118",
-            "65",
-            "100",
-            "92",
-            "125",
-            "317"
-          ],
-          [
-            "Cummings, Wanda",
-            "122",
-            "62",
-            "112",
-            "139",
-            "123",
-            "374"
-          ],
-          [
-            "Total",
-            "286",
-            "332",
-            "344",
-            "962"
-          ],
           [
             "Team 3",
             "Lane 4 points won: 4"
@@ -1619,6 +1687,44 @@
             "341",
             "361",
             "1005"
+          ],
+          [
+            "Team 6",
+            "Lane 3 points won: 0"
+          ],
+          [
+            "Iske, Di",
+            "137",
+            "50",
+            "74",
+            "101",
+            "96",
+            "271"
+          ],
+          [
+            "Chauncey, Peggy",
+            "118",
+            "65",
+            "100",
+            "92",
+            "125",
+            "317"
+          ],
+          [
+            "Cummings, Wanda",
+            "122",
+            "62",
+            "112",
+            "139",
+            "123",
+            "374"
+          ],
+          [
+            "Total",
+            "286",
+            "332",
+            "344",
+            "962"
           ]
         ],
         "emphasis": [
@@ -1660,10 +1766,10 @@
           ],
           [
             false,
-            false,
-            false,
-            false,
-            false
+            true,
+            true,
+            true,
+            true
           ],
           [
             true,
@@ -1708,7 +1814,60 @@
             false,
             false
           ]
-        ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "496"
+          },
+          {
+            "handicapSeries": "582"
+          },
+          {
+            "handicapSeries": "515"
+          },
+          {
+            "handicapSeries": "1593",
+            "handicapGames": [
+              "499",
+              "537",
+              "557"
+            ],
+            "teamPoints": [
+              "1.0",
+              "1.0",
+              "1.0",
+              "4.0",
+              "4.0"
+            ]
+          },
+          {},
+          {
+            "handicapSeries": "421"
+          },
+          {
+            "handicapSeries": "512"
+          },
+          {
+            "handicapSeries": "560"
+          },
+          {
+            "handicapSeries": "1493",
+            "handicapGames": [
+              "463",
+              "509",
+              "521"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/5/11603309102026f202605reprnt00.pdf"
       }
     ],
     "lanes": [
@@ -2376,7 +2535,7 @@
       }
     ]
   },
-  "sourceFingerprint": "ff37634539dfffd68f9291558731d56d9c1f97035f3006932bcb58bf8609904b",
+  "sourceFingerprint": "8fcb8440aed320fffe6ed688cd3a5d41b144a9602ed54ab8e607c3d7c9b0252c",
   "history": [
     {
       "week": "4",
@@ -4757,7 +4916,7 @@
     {
       "week": "5",
       "sourceUpdated": "Sep 10, 2026",
-      "syncedAt": "2026-09-13T06:56:38.454Z",
+      "syncedAt": "2026-09-15T18:37:09.865Z",
       "views": {
         "standings": [
           {
@@ -5915,7 +6074,7 @@
         ],
         "recaps": [
           {
-            "title": "Breakfast Gang matchup",
+            "title": "BFF's matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -5926,44 +6085,6 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 4",
-                "Lane 5 points won: 4"
-              ],
-              [
-                "Ladabie, Mary",
-                "102",
-                "78",
-                "115",
-                "93",
-                "111",
-                "319"
-              ],
-              [
-                "Kettleson, Deb",
-                "138",
-                "49",
-                "155",
-                "151",
-                "180",
-                "486"
-              ],
-              [
-                "Williamson, Fran",
-                "133",
-                "53",
-                "146",
-                "114",
-                "116",
-                "376"
-              ],
-              [
-                "Total",
-                "416",
-                "358",
-                "407",
-                "1181"
-              ],
               [
                 "Team 2",
                 "Lane 6 points won: 0"
@@ -6001,6 +6122,44 @@
                 "342",
                 "366",
                 "1133"
+              ],
+              [
+                "Team 4",
+                "Lane 5 points won: 4"
+              ],
+              [
+                "Ladabie, Mary",
+                "102",
+                "78",
+                "115",
+                "93",
+                "111",
+                "319"
+              ],
+              [
+                "Kettleson, Deb",
+                "138",
+                "49",
+                "155",
+                "151",
+                "180",
+                "486"
+              ],
+              [
+                "Williamson, Fran",
+                "133",
+                "53",
+                "146",
+                "114",
+                "116",
+                "376"
+              ],
+              [
+                "Total",
+                "416",
+                "358",
+                "407",
+                "1181"
               ]
             ],
             "emphasis": [
@@ -6085,15 +6244,68 @@
               ],
               [
                 false,
-                false,
-                false,
-                false,
-                false
+                true,
+                true,
+                true,
+                true
               ]
-            ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "530"
+              },
+              {
+                "handicapSeries": "546"
+              },
+              {
+                "handicapSeries": "537"
+              },
+              {
+                "handicapSeries": "1613",
+                "handicapGames": [
+                  "585",
+                  "502",
+                  "526"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "553"
+              },
+              {
+                "handicapSeries": "633"
+              },
+              {
+                "handicapSeries": "535"
+              },
+              {
+                "handicapSeries": "1721",
+                "handicapGames": [
+                  "596",
+                  "538",
+                  "587"
+                ],
+                "teamPoints": [
+                  "1.0",
+                  "1.0",
+                  "1.0",
+                  "4.0",
+                  "4.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/5/11603309102026f202605reprnt00.pdf"
           },
           {
-            "title": "Golden Girls matchup",
+            "title": "Bowling 4 Fun matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -6104,44 +6316,6 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 1",
-                "Lane 1 points won: 4"
-              ],
-              [
-                "Dickey, Margie",
-                "144",
-                "44",
-                "161",
-                "177",
-                "157",
-                "495"
-              ],
-              [
-                "Grieb, Perri",
-                "132",
-                "54",
-                "118",
-                "132",
-                "139",
-                "389"
-              ],
-              [
-                "Manrose, Sandy",
-                "120",
-                "64",
-                "146",
-                "134",
-                "120",
-                "400"
-              ],
-              [
-                "Total",
-                "425",
-                "443",
-                "416",
-                "1284"
-              ],
               [
                 "Team 5",
                 "Lane 2 points won: 0"
@@ -6179,6 +6353,44 @@
                 "388",
                 "378",
                 "1130"
+              ],
+              [
+                "Team 1",
+                "Lane 1 points won: 4"
+              ],
+              [
+                "Dickey, Margie",
+                "144",
+                "44",
+                "161",
+                "177",
+                "157",
+                "495"
+              ],
+              [
+                "Grieb, Perri",
+                "132",
+                "54",
+                "118",
+                "132",
+                "139",
+                "389"
+              ],
+              [
+                "Manrose, Sandy",
+                "120",
+                "64",
+                "146",
+                "134",
+                "120",
+                "400"
+              ],
+              [
+                "Total",
+                "425",
+                "443",
+                "416",
+                "1284"
               ]
             ],
             "emphasis": [
@@ -6263,15 +6475,68 @@
               ],
               [
                 false,
-                false,
-                false,
-                false,
-                false
+                true,
+                true,
+                true,
+                true
               ]
-            ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "560"
+              },
+              {
+                "handicapSeries": "570"
+              },
+              {
+                "handicapSeries": "597"
+              },
+              {
+                "handicapSeries": "1727",
+                "handicapGames": [
+                  "563",
+                  "587",
+                  "577"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "627"
+              },
+              {
+                "handicapSeries": "551"
+              },
+              {
+                "handicapSeries": "592"
+              },
+              {
+                "handicapSeries": "1770",
+                "handicapGames": [
+                  "587",
+                  "605",
+                  "578"
+                ],
+                "teamPoints": [
+                  "1.0",
+                  "1.0",
+                  "1.0",
+                  "4.0",
+                  "4.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/5/11603309102026f202605reprnt00.pdf"
           },
           {
-            "title": "Sunshine matchup",
+            "title": "Lucky Ladies matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -6282,44 +6547,6 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 6",
-                "Lane 3 points won: 0"
-              ],
-              [
-                "Iske, Di",
-                "137",
-                "50",
-                "74",
-                "101",
-                "96",
-                "271"
-              ],
-              [
-                "Chauncey, Peggy",
-                "118",
-                "65",
-                "100",
-                "92",
-                "125",
-                "317"
-              ],
-              [
-                "Cummings, Wanda",
-                "122",
-                "62",
-                "112",
-                "139",
-                "123",
-                "374"
-              ],
-              [
-                "Total",
-                "286",
-                "332",
-                "344",
-                "962"
-              ],
               [
                 "Team 3",
                 "Lane 4 points won: 4"
@@ -6357,6 +6584,44 @@
                 "341",
                 "361",
                 "1005"
+              ],
+              [
+                "Team 6",
+                "Lane 3 points won: 0"
+              ],
+              [
+                "Iske, Di",
+                "137",
+                "50",
+                "74",
+                "101",
+                "96",
+                "271"
+              ],
+              [
+                "Chauncey, Peggy",
+                "118",
+                "65",
+                "100",
+                "92",
+                "125",
+                "317"
+              ],
+              [
+                "Cummings, Wanda",
+                "122",
+                "62",
+                "112",
+                "139",
+                "123",
+                "374"
+              ],
+              [
+                "Total",
+                "286",
+                "332",
+                "344",
+                "962"
               ]
             ],
             "emphasis": [
@@ -6398,10 +6663,10 @@
               ],
               [
                 false,
-                false,
-                false,
-                false,
-                false
+                true,
+                true,
+                true,
+                true
               ],
               [
                 true,
@@ -6446,7 +6711,60 @@
                 false,
                 false
               ]
-            ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "496"
+              },
+              {
+                "handicapSeries": "582"
+              },
+              {
+                "handicapSeries": "515"
+              },
+              {
+                "handicapSeries": "1593",
+                "handicapGames": [
+                  "499",
+                  "537",
+                  "557"
+                ],
+                "teamPoints": [
+                  "1.0",
+                  "1.0",
+                  "1.0",
+                  "4.0",
+                  "4.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "421"
+              },
+              {
+                "handicapSeries": "512"
+              },
+              {
+                "handicapSeries": "560"
+              },
+              {
+                "handicapSeries": "1493",
+                "handicapGames": [
+                  "463",
+                  "509",
+                  "521"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/5/11603309102026f202605reprnt00.pdf"
           }
         ],
         "lanes": [
@@ -7116,5 +7434,7 @@
       }
     }
   ],
-  "officialRecapVersion": 1
+  "officialRecapVersion": 1,
+  "lastAttemptedAt": null,
+  "lastCheckedAt": "2026-09-15T18:37:09.865Z"
 }
