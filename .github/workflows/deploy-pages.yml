@@ -29,6 +29,8 @@ jobs:
       - run: npm ci
       - name: Check bowler discovery
         run: node --test tests/bowler-identity.test.cjs
+      - name: Check official recap results
+        run: node --experimental-strip-types --test tests/recap-results.test.mjs
       - name: Build public app
         env:
           NEXT_PUBLIC_BASE_PATH: /frameline-league-scores

@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { officialScoreClass } from "./recap-results";
 import { nationalsRosterByTeam } from "./nationals-rosters";
 
 export type Table = {
@@ -52,46 +53,7 @@ const personName = (name: string) => {
   return [given, family, formattedSuffix].filter(Boolean).join(" ");
 };
 const score = (row: string[], game: number) => Number(row[3 + game] ?? 0);
-const series = (row: string[]) => Number(row.at(-1) ?? 0);
-const handicap = (row: string[]) => Number(row[2] ?? 0);
-const pointScore = (row: string[], game: number) => score(row, game) + handicap(row);
-const pointSeries = (row: string[]) => series(row) + handicap(row) * 3;
 const laneNumber = (value = "") => Number(value.match(/\d+/)?.[0] ?? Number.MAX_SAFE_INTEGER);
-const resultClass = (left: number, right: number) =>
-  left > right ? "winner-score" : left < right ? "loser-score" : "tie-score";
-const individualPoints = (bowler: string[], opponent: string[]) =>
-  [0, 1, 2].reduce(
-    (points, game) =>
-      points +
-      (pointScore(bowler, game) > pointScore(opponent, game)
-        ? 1
-        : pointScore(bowler, game) === pointScore(opponent, game)
-          ? 0.5
-          : 0),
-    0,
-  ) +
-  (pointSeries(bowler) > pointSeries(opponent)
-    ? 1
-    : pointSeries(bowler) === pointSeries(opponent)
-      ? 0.5
-      : 0);
-const teamResult = (
-  team: string[],
-  opponent: string[],
-  game: number,
-  pointsForWin = 2,
-) => {
-  const left =
-      game < 3 ? Number(team[1 + game] ?? 0) : Number(team.at(-1) ?? 0),
-    right =
-      game < 3 ? Number(opponent[1 + game] ?? 0) : Number(opponent.at(-1) ?? 0);
-  return {
-    left,
-    right,
-    points:
-      left > right ? pointsForWin : left === right ? pointsForWin / 2 : 0,
-  };
-};
 type RecapTeam = {
   team: string;
   lane: string;
@@ -296,7 +258,6 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
     return parseRecapMatchups(activeViews.recaps ?? []);
   }, [activeViews.recaps]);
   const selectedRecapMatchups = recapMatchups;
-  const selectedRecapBowlerTable = bowlerTable;
   const officialWeekPoints = (name: string, team: string, table?: Table) => {
     if (!table) return null;
     const row = table.rows.find(
@@ -308,20 +269,7 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
     const value = cell(table, row, "WON");
     return value === "" || Number.isNaN(Number(value)) ? null : Number(value);
   };
-  const recapWeekPoints = (recapTeam: RecapTeam, rowIndex: number) => {
-    const flags = recapTeam.emphasis[rowIndex] ?? [];
-    if (!flags.some(Boolean)) return 0;
-    return [3, 4, 5, flags.length - 1].reduce(
-      (points, column) => points + (flags[column] ? 1 : 0),
-      0,
-    );
-  };
-  const recapHasOfficialIndividualPoints = (matchups: RecapTeam[][]) =>
-    matchups.some((matchup) =>
-      matchup.some((team) => team.emphasis.some((row) => row.slice(3).some(Boolean))),
-    );
   const hasIndividualPoints = useMemo(() => {
-    if (recapHasOfficialIndividualPoints(recapMatchups)) return true;
     if (!bowlerTable) return false;
     const wonIndex = bowlerTable.headers.findIndex(
       (header) => header.toLowerCase() === "won",
@@ -330,7 +278,7 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
       wonIndex >= 0 &&
       bowlerTable.rows.some((row) => Number(row[wonIndex]) > 0)
     );
-  }, [bowlerTable, recapMatchups]);
+  }, [bowlerTable]);
   const leagueHonors = useMemo(() => {
     if (!bowlerTable) return [];
     const isScratchLeague = data.type?.toLowerCase().includes("scratch");
@@ -435,7 +383,7 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
         );
         let scoreRow: string[] | undefined;
         const reportedWeekPoints = officialWeekPoints(name, team, table);
-        let weekPoints: number | null = null;
+        const weekPoints = reportedWeekPoints;
         for (const matchup of parseRecapMatchups(snapshot.views.recaps ?? [])) {
           const side = matchup.findIndex((entry) => entry.team === team);
           if (side < 0) continue;
@@ -444,13 +392,6 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
           );
           if (rowIndex < 0) continue;
           scoreRow = matchup[side].rows[rowIndex];
-          const officialFlags = matchup[side].emphasis[rowIndex] ?? [];
-          if (officialFlags.some(Boolean)) weekPoints = recapWeekPoints(matchup[side], rowIndex);
-          else {
-            const opponent = matchup[side === 0 ? 1 : 0];
-            const opponentRow = opponent?.rows[rowIndex];
-            weekPoints = opponentRow ? individualPoints(scoreRow, opponentRow) : null;
-          }
           break;
         }
         if (!row && !scoreRow) return null;
@@ -468,16 +409,8 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
       .sort((left, right) => Number(left.week) - Number(right.week));
     let runningTotal = 0;
     return entries.map((entry) => {
-      // LeagueSecretary's WON column is the official individual-points result
-      // for that selected week. It is not a season-to-date total.
-      // Some LeagueSecretary bowler tables report zero even when the recap
-      // scorecard clearly identifies one or more head-to-head wins. In that
-      // case, use the same handicap comparison that highlights the winning
-      // games in the recap so the points and highlights cannot disagree.
-      const resolvedWeekPoints =
-        entry.reportedWeekPoints === 0 && (entry.weekPoints ?? 0) > 0
-          ? entry.weekPoints
-          : entry.reportedWeekPoints ?? entry.weekPoints;
+      // Source WON values are authoritative, including zero.
+      const resolvedWeekPoints = entry.reportedWeekPoints;
       if (resolvedWeekPoints !== null) {
         entry.weekPoints = resolvedWeekPoints;
         runningTotal += resolvedWeekPoints;
@@ -495,8 +428,6 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
   const q = query.trim().toLowerCase();
   const week = selectedWeek;
   const laneTable = activeViews.lanes?.[0] ?? data.views.lanes?.[0];
-  const teamPointValue = (game: number) =>
-    data.id === "132277" ? (game < 3 ? 4 : 5) : 2;
   const sortStanding = (key: typeof standingSort.key) =>
     setStandingSort((current) =>
       current.key === key
@@ -950,9 +881,9 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                       <b>No opponent scorecard posted</b>
                     </span>}
                   </header>
+                  <p>Scores are scratch. Win highlights follow source markings; points follow the official report.</p>
                   <div className="recap-scroll">
-                    {matchup.map((team, teamIndex) => {
-                      const opponent = matchup[teamIndex === 0 ? 1 : 0];
+                    {matchup.map((team) => {
                       return (
                         <table key={team.team}>
                           <thead>
@@ -963,15 +894,13 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                               <th>Game 1</th>
                               <th>Game 2</th>
                               <th>Game 3</th>
-                              <th>Series</th>
+                              <th>Scratch series</th>
                               {hasIndividualPoints && <th>Individual pts</th>}
                             </tr>
                           </thead>
                           <tbody>
                             {team.rows.map((row, r) => {
-                              const versus = opponent?.rows[r] ?? [];
                               const officialFlags = team.emphasis[r] ?? [];
-                              const hasOfficialMarkers = recapHasOfficialIndividualPoints([matchup]);
                               return (
                                 <tr key={r}>
                                   <td>
@@ -982,21 +911,13 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                                   {[0, 1, 2].map((game) => (
                                     <td
                                       key={game}
-                                      className={hasOfficialMarkers
-                                        ? (officialFlags[3 + game] ? "winner-score" : "loser-score")
-                                        : opponent
-                                          ? resultClass(pointScore(row, game), pointScore(versus, game))
-                                          : "loser-score"}
+                                      className={officialScoreClass(officialFlags[3 + game])}
                                     >
                                       {row[3 + game]}
                                     </td>
                                   ))}
                                   <td
-                                    className={hasOfficialMarkers
-                                      ? (officialFlags[officialFlags.length - 1] ? "winner-score" : "loser-score")
-                                      : opponent
-                                        ? resultClass(pointSeries(row), pointSeries(versus))
-                                        : "loser-score"}
+                                    className={officialScoreClass(officialFlags[6])}
                                   >
                                     <b>{row.at(-1)}</b>
                                   </td>
@@ -1007,96 +928,14 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                                 </tr>
                               );
                             })}
-                            {team.total.length > 0 &&
-                              opponent?.total.length > 0 && (
-                                <tr className="recap-total">
-                                  <td>Team total</td>
-                                  <td></td>
-                                  <td></td>
-                                  {[0, 1, 2].map((game) => {
-                                    const result = teamResult(
-                                      team.total,
-                                      opponent.total,
-                                      game,
-                                      teamPointValue(game),
-                                    );
-                                    return (
-                                      <td
-                                        key={game}
-                                        className={resultClass(
-                                          result.left,
-                                          result.right,
-                                        )}
-                                      >
-                                        {result.left}
-                                        <small>{result.points} team pts</small>
-                                      </td>
-                                    );
-                                  })}
-                                  {(() => {
-                                    const result = teamResult(
-                                      team.total,
-                                      opponent.total,
-                                      3,
-                                      teamPointValue(3),
-                                    );
-                                    return (
-                                      <td
-                                        className={resultClass(
-                                          result.left,
-                                          result.right,
-                                        )}
-                                      >
-                                        <b>{result.left}</b>
-                                        <small>{result.points} team pts</small>
-                                      </td>
-                                    );
-                                  })()}
-                                  {hasIndividualPoints && <td className="team-points-cell">
-                                    <b>
-                                      {[0, 1, 2, 3].reduce(
-                                        (sum, game) =>
-                                          sum +
-                                          teamResult(
-                                            team.total,
-                                            opponent.total,
-                                            game,
-                                            teamPointValue(game),
-                                          ).points,
-                                        0,
-                                      )}
-                                    </b>
-                                    <small>team pts</small>
-                                  </td>}
-                                </tr>
-                              )}
-                            {team.total.length > 0 && !opponent && (
-                              (() => {
-                                const blindGame = team.rows.reduce(
-                                  (sum, row) => sum + Math.max(Number(row[1] ?? 0) - 10, 0),
-                                  0,
-                                );
-                                return <tr className="recap-total">
-                                <td>Team total</td>
-                                <td></td>
-                                <td></td>
-                                {[1, 2, 3].map((index) => {
-                                  const won = Number(team.total[index] ?? 0) > blindGame;
-                                  return <td className={resultClass(Number(team.total[index] ?? 0), blindGame)} key={index}>
-                                    {team.total[index]}
-                                    <small>{won ? `${teamPointValue(index - 1)} team pts` : "0 team pts"}</small>
-                                  </td>;
-                                })}
-                                <td className={resultClass(Number(team.total.at(-1) ?? 0), blindGame * 3)}>
-                                  <b>{team.total.at(-1)}</b>
-                                  <small>{Number(team.total.at(-1) ?? 0) > blindGame * 3 ? `${teamPointValue(3)} team pts` : "0 team pts"}</small>
-                                </td>
-                                {hasIndividualPoints && <td className="team-points-cell">
-                                  <b>{team.points || "â€”"}</b>
-                                  <small>official pts</small>
-                                </td>}
-                              </tr>;
-                              })()
+                            {team.total.length > 0 && (
+                              <tr className="recap-total">
+                                <td>Team total</td><td></td><td></td>
+                                {[1, 2, 3, 4].map((column) => (
+                                  <td key={column} className={officialScoreClass(team.totalEmphasis[column])}>{team.total[column]}</td>
+                                ))}
+                                {hasIndividualPoints && <td className="team-points-cell"><b>—</b><small>not reported separately</small></td>}
+                              </tr>
                             )}
                           </tbody>
                         </table>
