@@ -7,33 +7,33 @@
   "bowlsOn": "Wednesday",
   "startTime": "6:30 PM",
   "type": "Handicap Adult Mixed",
-  "updated": "09/03/2026",
+  "updated": "Sep 10, 2026",
   "startDate": "Fall 2026",
   "bowlDay": 3,
   "centerId": "2208",
   "centerName": "Western Bowl",
   "centerSlug": "western-bowl-omaha",
   "area": "Omaha",
-  "sourceUpdated": "09/03/2026",
-  "syncedAt": "2026-09-10T10:04:06.111Z",
+  "sourceUpdated": "Sep 10, 2026",
+  "syncedAt": "2026-09-15T20:22:07.106Z",
   "status": "current",
-  "week": "2",
-  "fingerprint": "c88768af502a5a66daf6806bda28f55428a6ec189955594fac6d2bf69cbf98a2",
+  "week": "3",
+  "fingerprint": "958799e9932a94449066a4828d99847aa5731181e37f51dc744fd4d5f9cccf0d",
   "lastCompletedCycle": "2026-09-09",
   "views": {
     "standings": [
       {
-        "title": "Table 3",
+        "title": "League standings",
         "headers": [
-          "Division",
           "Place",
-          "Team#",
           "Team",
-          "Won",
-          "Lost",
-          "% Won",
-          "YTD Won",
-          "Avg",
+          "Team#",
+          "Div",
+          "WON",
+          "LOST",
+          "%",
+          "YTD WON",
+          "AVG",
           "Pins",
           "HSG",
           "HSS"
@@ -41,115 +41,115 @@
         "rows": [
           [
             "1",
-            "1",
-            "7",
             "RINGING 10'S",
-            "46",
-            "16",
-            "74 %",
-            "46",
-            "631",
-            "3874",
-            "701",
-            "1947"
+            "7",
+            "1",
+            "72",
+            "21",
+            "77 %",
+            "72",
+            "685",
+            "6021",
+            "753",
+            "2147"
           ],
           [
-            "1",
             "2",
-            "3",
-            "PIN TICKLERS",
-            "43",
-            "19",
-            "69 %",
-            "43",
-            "521",
-            "2914",
-            "512",
-            "1467"
-          ],
-          [
-            "1",
-            "3",
-            "1",
             "THE REPLACEMENTS",
-            "36",
-            "26",
-            "58 %",
-            "36",
-            "730",
-            "4084",
+            "1",
+            "1",
+            "62",
+            "31",
+            "67 %",
+            "62",
+            "611",
+            "5885",
             "752",
             "2136"
           ],
           [
-            "1",
-            "4",
-            "5",
+            "3",
             "PIN ME DADDY",
-            "34",
-            "28",
-            "55 %",
-            "34",
-            "608",
-            "3546",
+            "5",
+            "1",
+            "53",
+            "40",
+            "57 %",
+            "53",
+            "572",
+            "5316",
             "668",
             "1897"
           ],
           [
+            "4",
+            "PIN TICKLERS",
+            "3",
             "1",
+            "48",
+            "45",
+            "52 %",
+            "48",
+            "507",
+            "4392",
+            "522",
+            "1478"
+          ],
+          [
             "5",
-            "2",
             "TRIPLE X",
-            "26",
-            "36",
-            "42 %",
-            "26",
-            "567",
-            "3638",
+            "2",
+            "1",
+            "46",
+            "47",
+            "49 %",
+            "46",
+            "592",
+            "5527",
             "688",
             "2042"
           ],
           [
-            "1",
-            "6",
-            "8",
-            "PINS & SPLITS",
-            "22",
-            "40",
-            "35 %",
-            "22",
-            "602",
-            "3487",
-            "671",
-            "1775"
-          ],
-          [
-            "1",
-            "7",
             "6",
             "WESTERN BOWL",
-            "22",
-            "40",
+            "6",
+            "1",
+            "33",
+            "60",
             "35 %",
-            "22",
-            "645",
-            "3458",
-            "669",
+            "33",
+            "627",
+            "5321",
+            "688",
             "1863"
           ],
           [
-            "1",
-            "8",
-            "4",
+            "7",
             "THREE FINGERS DEEP",
-            "19",
-            "43",
-            "31 %",
-            "19",
-            "654",
-            "3472",
-            "628",
-            "1752"
+            "4",
+            "1",
+            "31",
+            "62",
+            "33 %",
+            "31",
+            "595",
+            "5323",
+            "681",
+            "1851"
+          ],
+          [
+            "8",
+            "PINS & SPLITS",
+            "8",
+            "1",
+            "27",
+            "66",
+            "29 %",
+            "27",
+            "602",
+            "5187",
+            "671",
+            "1775"
           ]
         ],
         "emphasis": [
@@ -160,23 +160,9 @@
             false,
             false,
             false,
+            true,
             false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
+            true,
             false,
             false,
             false
@@ -188,23 +174,9 @@
             false,
             false,
             false,
+            true,
             false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
+            true,
             false,
             false,
             false
@@ -216,23 +188,9 @@
             false,
             false,
             false,
+            true,
             false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
+            true,
             false,
             false,
             false
@@ -244,9 +202,9 @@
             false,
             false,
             false,
+            true,
             false,
-            false,
-            false,
+            true,
             false,
             false,
             false
@@ -258,9 +216,51 @@
             false,
             false,
             false,
+            true,
+            false,
+            true,
+            false,
+            false,
+            false
+          ],
+          [
             false,
             false,
             false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            true,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            true,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            true,
             false,
             false,
             false
@@ -270,7 +270,7 @@
     ],
     "bowlers": [
       {
-        "title": "Table 3",
+        "title": "Bowlers and season statistics",
         "headers": [
           "Name",
           "Team#",
@@ -296,44 +296,44 @@
             "2",
             "WESTERN BOWL",
             "W",
-            "863",
-            "6",
+            "1290",
+            "9",
+            "143",
             "162",
-            "162",
-            "52",
-            "217",
+            "69",
+            "220",
             "639",
-            "165",
+            "168",
             "483",
             "0",
-            "3"
+            "0"
           ],
           [
             "Bazemore, Steve",
             "3",
-            "3",
+            "4",
             "PIN TICKLERS",
             "M",
-            "390",
-            "3",
-            "130",
+            "742",
+            "6",
+            "123",
             "0",
-            "81",
+            "87",
             "231",
             "633",
             "150",
             "390",
             "0",
-            "3"
+            "1"
           ],
           [
             "Benson, Amy",
             "5",
-            "6",
+            "3",
             "PIN ME DADDY",
             "W",
-            "503",
-            "3",
+            "952",
+            "6",
             "158",
             "158",
             "55",
@@ -347,7 +347,7 @@
           [
             "Benson, Trevor",
             "5",
-            "4",
+            "6",
             "PIN ME DADDY",
             "M",
             "461",
@@ -360,12 +360,12 @@
             "188",
             "461",
             "0",
-            "1"
+            "0"
           ],
           [
             "Berge, Brian",
             "5",
-            "3",
+            "5",
             "PIN ME DADDY",
             "M",
             "528",
@@ -378,7 +378,7 @@
             "196",
             "528",
             "0",
-            "1"
+            "0"
           ],
           [
             "Berge, Katie",
@@ -386,22 +386,22 @@
             "1",
             "PIN ME DADDY",
             "W",
-            "838",
-            "6",
+            "1335",
+            "9",
+            "148",
             "133",
-            "133",
-            "78",
-            "236",
-            "680",
-            "158",
-            "446",
+            "64",
+            "258",
+            "731",
+            "180",
+            "497",
             "0",
-            "3"
+            "4"
           ],
           [
             "Bonacci, Dawn",
             "8",
-            "4",
+            "6",
             "PINS & SPLITS",
             "W",
             "449",
@@ -414,12 +414,12 @@
             "176",
             "449",
             "0",
-            "2"
+            "0"
           ],
           [
             "Bonacci, John",
             "8",
-            "3",
+            "5",
             "PINS & SPLITS",
             "M",
             "430",
@@ -432,25 +432,25 @@
             "177",
             "430",
             "0",
-            "3"
+            "0"
           ],
           [
             "Borsh, Tom",
             "6",
-            "5",
+            "3",
             "WESTERN BOWL",
             "M",
-            "406",
-            "3",
-            "135",
+            "901",
+            "6",
+            "150",
             "0",
-            "76",
-            "222",
-            "634",
-            "146",
-            "406",
+            "63",
+            "276",
+            "723",
+            "200",
+            "495",
             "0",
-            "0"
+            "3"
           ],
           [
             "Burns, Dene'",
@@ -458,15 +458,15 @@
             "1",
             "PINS & SPLITS",
             "W",
-            "848",
-            "6",
+            "1293",
+            "9",
+            "143",
             "144",
-            "144",
-            "68",
-            "215",
-            "630",
-            "147",
-            "426",
+            "69",
+            "220",
+            "649",
+            "152",
+            "445",
             "0",
             "1"
           ],
@@ -476,44 +476,44 @@
             "2",
             "PINS & SPLITS",
             "M",
-            "826",
-            "6",
+            "1210",
+            "9",
+            "134",
             "145",
-            "145",
-            "67",
+            "77",
             "230",
             "616",
             "163",
             "415",
             "0",
-            "1"
+            "0"
           ],
           [
             "Carper, Julie",
             "4",
-            "5",
+            "1",
             "THREE FINGERS DEEP",
             "W",
-            "302",
-            "3",
+            "628",
+            "6",
             "123",
             "123",
             "87",
-            "201",
-            "563",
-            "114",
-            "302",
+            "209",
+            "587",
+            "122",
+            "326",
             "0",
             "0"
           ],
           [
             "Carrell, Monica",
             "3",
-            "4",
+            "1",
             "PIN TICKLERS",
             "W",
-            "374",
-            "3",
+            "711",
+            "6",
             "127",
             "127",
             "83",
@@ -522,7 +522,7 @@
             "146",
             "374",
             "0",
-            "3"
+            "1"
           ],
           [
             "Casselberry, Charity",
@@ -530,89 +530,125 @@
             "3",
             "THREE FINGERS DEEP",
             "W",
-            "951",
-            "6",
+            "1525",
+            "9",
+            "169",
             "163",
-            "163",
-            "51",
-            "275",
-            "716",
-            "224",
-            "563",
+            "45",
+            "284",
+            "727",
+            "233",
+            "574",
             "0",
-            "0"
+            "4"
+          ],
+          [
+            "Clifton, Greg",
+            "1",
+            "2",
+            "THE REPLACEMENTS",
+            "M",
+            "402",
+            "3",
+            "134",
+            "0",
+            "77",
+            "220",
+            "633",
+            "143",
+            "402",
+            "0",
+            "4"
           ],
           [
             "Clifton, Rebecca",
             "1",
-            "5",
+            "1",
             "THE REPLACEMENTS",
             "W",
-            "418",
-            "3",
+            "849",
+            "6",
             "134",
             "134",
             "77",
-            "235",
-            "649",
-            "158",
-            "418",
+            "244",
+            "662",
+            "167",
+            "431",
             "0",
-            "0"
+            "3"
           ],
           [
-            "Davis, Jennifer",
+            "Davis, Dixie",
             "8",
-            "5",
-            "PINS & SPLITS",
-            "W",
-            "438",
-            "3",
-            "157",
-            "157",
-            "56",
-            "239",
-            "606",
-            "183",
-            "438",
-            "0",
-            "0"
-          ],
-          [
-            "Day, Quinton",
             "4",
-            "1",
-            "THREE FINGERS DEEP",
+            "PINS & SPLITS",
             "M",
-            "736",
-            "6",
+            "415",
+            "3",
+            "168",
+            "168",
+            "46",
+            "199",
+            "553",
             "153",
-            "153",
-            "60",
-            "209",
-            "558",
-            "149",
-            "378",
+            "415",
             "0",
             "1"
           ],
           [
-            "Erickson, Patrick",
-            "7",
-            "2",
-            "RINGING 10'S",
-            "M",
-            "965",
+            "Davis, Jennifer",
+            "8",
+            "3",
+            "PINS & SPLITS",
+            "W",
+            "894",
             "6",
-            "160",
+            "157",
+            "157",
+            "56",
+            "239",
+            "624",
+            "183",
+            "456",
             "0",
-            "54",
-            "255",
-            "697",
-            "193",
-            "511",
+            "3"
+          ],
+          [
+            "Day, Quinton",
+            "4",
+            "2",
+            "THREE FINGERS DEEP",
+            "M",
+            "1162",
+            "9",
+            "129",
+            "153",
+            "81",
+            "213",
+            "606",
+            "153",
+            "426",
             "0",
             "4"
+          ],
+          [
+            "Erickson, Patrick",
+            "7",
+            "1",
+            "RINGING 10'S",
+            "M",
+            "1526",
+            "9",
+            "169",
+            "0",
+            "45",
+            "277",
+            "723",
+            "223",
+            "561",
+            "0",
+            "3"
           ],
           [
             "Geneski, Dave",
@@ -620,11 +656,11 @@
             "2",
             "PIN ME DADDY",
             "M",
-            "637",
-            "6",
+            "930",
+            "9",
+            "103",
             "120",
-            "120",
-            "90",
+            "105",
             "226",
             "639",
             "136",
@@ -653,7 +689,7 @@
           [
             "Liebentritt, Amber",
             "6",
-            "4",
+            "6",
             "WESTERN BOWL",
             "W",
             "452",
@@ -666,43 +702,43 @@
             "168",
             "452",
             "0",
-            "2"
+            "0"
           ],
           [
             "Matherly, Logan",
             "1",
-            "2",
+            "3",
             "THE REPLACEMENTS",
             "M",
-            "450",
-            "3",
+            "902",
+            "6",
             "167",
             "167",
             "47",
             "223",
-            "591",
+            "593",
             "176",
-            "450",
+            "452",
             "0",
-            "2"
+            "1"
           ],
           [
             "Mcclaren, Joseph",
             "1",
-            "3",
+            "4",
             "THE REPLACEMENTS",
             "M",
-            "1074",
-            "6",
+            "1590",
+            "9",
+            "176",
             "178",
-            "178",
-            "37",
+            "39",
             "271",
             "703",
             "234",
             "592",
             "0",
-            "1"
+            "3"
           ],
           [
             "Mills, Shane",
@@ -710,11 +746,11 @@
             "4",
             "TRIPLE X",
             "M",
-            "1138",
-            "6",
+            "1703",
+            "9",
+            "189",
             "202",
-            "202",
-            "16",
+            "27",
             "241",
             "648",
             "225",
@@ -725,20 +761,20 @@
           [
             "Moskovits, Sue",
             "2",
-            "5",
+            "1",
             "TRIPLE X",
             "W",
-            "377",
-            "3",
+            "725",
+            "6",
             "126",
             "126",
             "84",
-            "216",
+            "228",
             "629",
-            "132",
+            "144",
             "377",
             "0",
-            "0"
+            "2"
           ],
           [
             "Muckey, Bill",
@@ -746,51 +782,51 @@
             "3",
             "TRIPLE X",
             "M",
-            "1014",
-            "6",
+            "1609",
+            "9",
+            "178",
             "189",
-            "189",
-            "27",
-            "227",
-            "637",
-            "200",
-            "556",
+            "37",
+            "238",
+            "676",
+            "211",
+            "595",
             "0",
-            "4"
+            "1"
           ],
           [
             "Mullen, Matthew",
             "7",
-            "4",
+            "3",
             "RINGING 10'S",
             "M",
-            "906",
-            "6",
+            "1451",
+            "9",
+            "161",
             "163",
-            "163",
-            "51",
-            "224",
-            "625",
-            "173",
-            "472",
+            "53",
+            "269",
+            "698",
+            "218",
+            "545",
             "0",
             "3"
           ],
           [
             "Priborsky, Julie",
             "3",
-            "1",
+            "2",
             "PIN TICKLERS",
             "W",
-            "703",
-            "6",
+            "1092",
+            "9",
+            "121",
             "128",
-            "128",
-            "82",
-            "214",
-            "601",
-            "132",
-            "355",
+            "89",
+            "239",
+            "635",
+            "157",
+            "389",
             "0",
             "2"
           ],
@@ -800,22 +836,22 @@
             "4",
             "THREE FINGERS DEEP",
             "M",
-            "1042",
-            "6",
+            "1567",
+            "9",
+            "174",
             "191",
-            "191",
-            "26",
+            "41",
             "224",
             "623",
             "198",
             "545",
             "0",
-            "2"
+            "0"
           ],
           [
             "Reed-Ball, Michele",
             "4",
-            "2",
+            "5",
             "THREE FINGERS DEEP",
             "W",
             "441",
@@ -828,7 +864,7 @@
             "162",
             "441",
             "0",
-            "3"
+            "0"
           ],
           [
             "Roux, Jenny",
@@ -836,22 +872,22 @@
             "2",
             "TRIPLE X",
             "W",
-            "218",
-            "3",
-            "72",
+            "599",
+            "6",
+            "99",
             "0",
-            "133",
-            "207",
-            "617",
-            "74",
-            "218",
+            "108",
+            "295",
+            "780",
+            "162",
+            "381",
             "0",
-            "1"
+            "4"
           ],
           [
             "Russell, James",
             "8",
-            "6",
+            "7",
             "PINS & SPLITS",
             "M",
             "496",
@@ -869,20 +905,20 @@
           [
             "Steffens, Laura",
             "5",
-            "5",
+            "4",
             "PIN ME DADDY",
             "W",
-            "579",
-            "3",
+            "1110",
+            "6",
             "163",
             "163",
             "51",
-            "252",
+            "255",
             "732",
-            "201",
+            "204",
             "579",
             "0",
-            "0"
+            "4"
           ],
           [
             "Stohlmann, Ron",
@@ -890,22 +926,22 @@
             "1",
             "WESTERN BOWL",
             "M",
-            "928",
-            "6",
+            "1333",
+            "9",
+            "148",
             "150",
-            "150",
-            "63",
+            "64",
             "257",
             "701",
             "194",
             "512",
             "0",
-            "3"
+            "2"
           ],
           [
             "Teneyck, Chris",
             "7",
-            "3",
+            "5",
             "RINGING 10'S",
             "M",
             "547",
@@ -918,48 +954,48 @@
             "202",
             "547",
             "0",
-            "3"
+            "0"
           ],
           [
             "Teneyck, Hayley",
             "7",
-            "1",
+            "2",
             "RINGING 10'S",
             "W",
-            "921",
-            "6",
+            "1354",
+            "9",
+            "150",
             "142",
-            "142",
-            "70",
+            "63",
             "246",
             "734",
             "176",
             "524",
             "0",
-            "1"
+            "2"
           ],
           [
             "Teneyck, Steve",
             "7",
-            "5",
+            "4",
             "RINGING 10'S",
             "M",
-            "535",
-            "3",
+            "1143",
+            "6",
             "205",
             "205",
             "13",
-            "197",
-            "574",
-            "184",
-            "535",
+            "256",
+            "647",
+            "243",
+            "608",
             "0",
-            "0"
+            "3"
           ],
           [
             "Trayer, Deaun",
             "2",
-            "1",
+            "5",
             "TRIPLE X",
             "W",
             "284",
@@ -972,12 +1008,12 @@
             "106",
             "284",
             "0",
-            "3"
+            "0"
           ],
           [
             "Tyrrel, David",
             "1",
-            "4",
+            "6",
             "THE REPLACEMENTS",
             "M",
             "1165",
@@ -990,12 +1026,12 @@
             "225",
             "635",
             "0",
-            "1"
+            "0"
           ],
           [
             "Tyrrel, Sheri",
             "1",
-            "1",
+            "5",
             "THE REPLACEMENTS",
             "W",
             "977",
@@ -1007,6 +1043,24 @@
             "620",
             "193",
             "491",
+            "0",
+            "0"
+          ],
+          [
+            "Vossler, Bryce",
+            "6",
+            "4",
+            "WESTERN BOWL",
+            "M",
+            "536",
+            "3",
+            "186",
+            "186",
+            "30",
+            "227",
+            "626",
+            "197",
+            "536",
             "0",
             "2"
           ],
@@ -1031,25 +1085,25 @@
           [
             "Wintle, Jami",
             "3",
-            "2",
+            "3",
             "PIN TICKLERS",
             "W",
-            "386",
-            "3",
+            "786",
+            "6",
             "136",
             "136",
             "75",
             "234",
-            "611",
+            "625",
             "159",
-            "386",
+            "400",
             "0",
-            "2"
+            "1"
           ],
           [
             "Yocum, Lee",
             "6",
-            "3",
+            "5",
             "WESTERN BOWL",
             "W",
             "809",
@@ -1062,10 +1116,64 @@
             "147",
             "416",
             "0",
-            "1"
+            "0"
           ]
         ],
         "emphasis": [
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
           [
             false,
             false,
@@ -1845,794 +1953,115 @@
     ],
     "recaps": [
       {
-        "title": "RINGING 10'S matchup",
+        "title": "PIN ME DADDY matchup",
         "headers": [
           "Bowler",
-          "AVG",
-          "HDCP",
-          "GM1",
-          "GM2",
-          "GM3",
-          "GM4",
-          "GM5",
-          "GM6",
-          "Total"
+          "Average",
+          "Handicap",
+          "Game 1",
+          "Game 2",
+          "Game 3",
+          "Scratch series"
         ],
         "rows": [
           [
-            "Team 7",
-            "Lane 18 | Team points won: 26"
-          ],
-          [
-            "Teneyck, Hayley",
-            "142",
-            "70",
-            "144",
-            "133",
-            "120",
-            "397"
-          ],
-          [
-            "Erickson, Patrick",
-            "151",
-            "62",
-            "139",
-            "193",
-            "179",
-            "511"
-          ],
-          [
-            "Teneyck, Chris",
-            "166",
-            "48",
-            "202",
-            "202",
-            "143",
-            "547"
-          ],
-          [
-            "Mullen, Matthew",
-            "163",
-            "51",
-            "155",
-            "173",
-            "144",
-            "472"
-          ],
-          [
-            "Total",
-            "640",
-            "701",
-            "586",
-            "0",
-            "0",
-            "0",
-            "1927"
-          ],
-          [
             "Team 5",
-            "Lane 17 | Team points won: 5"
+            "Lane 15 points won: 19"
           ],
           [
             "Berge, Katie",
             "133",
             "78",
-            "137",
-            "120",
-            "135",
-            "392"
+            "153",
+            "164",
+            "180",
+            "497"
           ],
           [
             "Geneski, Dave",
             "120",
             "90",
-            "99",
-            "89",
-            "80",
-            "268"
+            "104",
+            "88",
+            "101",
+            "293"
           ],
           [
-            "Berge, Brian",
-            "180",
-            "36",
-            "167",
-            "165",
-            "196",
-            "528"
-          ],
-          [
-            "Benson, Trevor",
-            "175",
-            "40",
-            "139",
-            "188",
-            "134",
-            "461"
-          ],
-          [
-            "Total",
-            "542",
-            "562",
-            "545",
-            "0",
-            "0",
-            "0",
-            "1649"
-          ]
-        ],
-        "emphasis": [
-          [
-            true,
-            true
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
-          ],
-          [
-            true,
-            true
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
-          ]
-        ]
-      },
-      {
-        "title": "THE REPLACEMENTS matchup",
-        "headers": [
-          "Bowler",
-          "AVG",
-          "HDCP",
-          "GM1",
-          "GM2",
-          "GM3",
-          "GM4",
-          "GM5",
-          "GM6",
-          "Total"
-        ],
-        "rows": [
-          [
-            "Team 1",
-            "Lane 21 | Team points won: 10"
-          ],
-          [
-            "Tyrrel, Sheri",
-            "172",
-            "43",
-            "126",
-            "167",
-            "193",
-            "486"
-          ],
-          [
-            "Matherly, Logan",
-            "167",
-            "47",
-            "157",
-            "117",
-            "176",
-            "450"
-          ],
-          [
-            "Mcclaren, Joseph",
-            "178",
-            "37",
-            "183",
-            "139",
-            "160",
-            "482"
-          ],
-          [
-            "Tyrrel, David",
-            "213",
-            "6",
-            "127",
-            "222",
-            "181",
-            "530"
-          ],
-          [
-            "Total",
-            "593",
-            "645",
-            "710",
-            "0",
-            "0",
-            "0",
-            "1948"
-          ],
-          [
-            "Team 3",
-            "Lane 22 | Team points won: 21"
-          ],
-          [
-            "Priborsky, Julie",
-            "128",
-            "82",
-            "120",
-            "132",
-            "103",
-            "355"
-          ],
-          [
-            "Wintle, Jami",
-            "136",
-            "75",
-            "126",
-            "126",
-            "126",
-            "378"
-          ],
-          [
-            "Bazemore, Steve",
-            "130",
-            "81",
-            "120",
-            "120",
-            "120",
-            "360"
-          ],
-          [
-            "Carrell, Monica",
-            "127",
-            "83",
-            "146",
-            "100",
-            "128",
-            "374"
-          ],
-          [
-            "Total",
-            "512",
-            "478",
-            "477",
-            "0",
-            "0",
-            "0",
-            "1467"
-          ]
-        ],
-        "emphasis": [
-          [
-            true,
-            true
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
-          ],
-          [
-            true,
-            true
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
-          ]
-        ]
-      },
-      {
-        "title": "WESTERN BOWL matchup",
-        "headers": [
-          "Bowler",
-          "AVG",
-          "HDCP",
-          "GM1",
-          "GM2",
-          "GM3",
-          "GM4",
-          "GM5",
-          "GM6",
-          "Total"
-        ],
-        "rows": [
-          [
-            "Team 6",
-            "Lane 15 | Team points won: 20"
-          ],
-          [
-            "Stohlmann, Ron",
-            "150",
-            "63",
-            "182",
-            "136",
-            "194",
-            "512"
-          ],
-          [
-            "Angle, Bonnie",
-            "162",
-            "52",
-            "165",
-            "157",
-            "161",
-            "483"
-          ],
-          [
-            "Yocum, Lee",
+            "Benson, Amy",
             "158",
             "55",
-            "139",
-            "131",
-            "146",
-            "416"
-          ],
-          [
-            "Liebentritt, Amber",
-            "175",
-            "40",
-            "153",
-            "131",
-            "168",
-            "452"
-          ],
-          [
-            "Total",
-            "639",
-            "555",
-            "669",
-            "0",
-            "0",
-            "0",
-            "1863"
-          ],
-          [
-            "Team 8",
-            "Lane 16 | Team points won: 11"
-          ],
-          [
-            "Burns, Dene'",
-            "144",
-            "68",
+            "169",
             "142",
-            "134",
-            "146",
-            "422"
-          ],
-          [
-            "Burns, Jim",
-            "145",
-            "67",
-            "136",
-            "154",
-            "121",
-            "411"
-          ],
-          [
-            "Bonacci, John",
-            "150",
-            "63",
-            "129",
-            "124",
-            "177",
-            "430"
-          ],
-          [
-            "Bonacci, Dawn",
-            "163",
-            "51",
-            "141",
-            "176",
-            "132",
+            "138",
             "449"
           ],
           [
-            "Total",
-            "548",
-            "588",
-            "576",
-            "0",
-            "0",
-            "0",
-            "1712"
-          ]
-        ],
-        "emphasis": [
-          [
-            true,
-            true
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
-          ],
-          [
-            true,
-            true
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
-          ]
-        ]
-      },
-      {
-        "title": "TRIPLE X matchup",
-        "headers": [
-          "Bowler",
-          "AVG",
-          "HDCP",
-          "GM1",
-          "GM2",
-          "GM3",
-          "GM4",
-          "GM5",
-          "GM6",
-          "Total"
-        ],
-        "rows": [
-          [
-            "Team 2",
-            "Lane 19 | Team points won: 21"
-          ],
-          [
-            "Trayer, Deaun",
-            "104",
-            "104",
-            "106",
-            "99",
-            "79",
-            "284"
-          ],
-          [
-            "Roux, Jenny",
-            "72",
-            "133",
-            "70",
-            "74",
-            "74",
-            "218"
-          ],
-          [
-            "Muckey, Bill",
-            "189",
-            "27",
-            "194",
-            "162",
-            "200",
-            "556"
-          ],
-          [
-            "Mills, Shane",
-            "202",
-            "16",
-            "224",
-            "164",
-            "150",
-            "538"
+            "Steffens, Laura",
+            "163",
+            "51",
+            "179",
+            "148",
+            "204",
+            "531"
           ],
           [
             "Total",
-            "594",
-            "499",
-            "503",
-            "0",
-            "0",
-            "0",
-            "1596"
+            "605",
+            "542",
+            "623",
+            "1770"
           ],
           [
             "Team 4",
-            "Lane 20 | Team points won: 10"
+            "Lane 16 points won: 12"
+          ],
+          [
+            "Carper, Julie",
+            "123",
+            "87",
+            "115",
+            "89",
+            "122",
+            "326"
           ],
           [
             "Day, Quinton",
             "153",
             "60",
-            "109",
-            "129",
-            "140",
-            "378"
-          ],
-          [
-            "Reed-Ball, Michele",
-            "147",
-            "65",
-            "143",
-            "136",
-            "162",
-            "441"
+            "141",
+            "153",
+            "132",
+            "426"
           ],
           [
             "Casselberry, Charity",
             "163",
             "51",
-            "130",
-            "135",
-            "123",
-            "388"
+            "192",
+            "149",
+            "233",
+            "574"
           ],
           [
             "Ramsey, Joe",
             "191",
             "26",
-            "198",
-            "153",
+            "187",
+            "144",
             "194",
-            "545"
+            "525"
           ],
           [
             "Total",
-            "580",
-            "553",
-            "619",
-            "0",
-            "0",
-            "0",
-            "1752"
+            "635",
+            "535",
+            "681",
+            "1851"
           ]
         ],
         "emphasis": [
           [
             true,
-            true
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
             false,
             false,
             false,
@@ -2644,31 +2073,8 @@
             false,
             false,
             false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
             true,
             true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
-          ],
-          [
             true,
             true
           ],
@@ -2694,6 +2100,22 @@
             false,
             false,
             false,
+            true,
+            true,
+            true,
+            true
+          ],
+          [
+            false,
+            true,
+            true,
+            false,
+            true
+          ],
+          [
+            true,
+            false,
+            false,
             false,
             false,
             false,
@@ -2709,21 +2131,979 @@
             false
           ],
           [
+            false,
+            false,
+            false,
             true,
             true,
             true,
+            true
+          ],
+          [
+            false,
+            false,
+            false,
             true,
+            true,
+            true,
+            true
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            true,
+            false
+          ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "731"
+          },
+          {
+            "handicapSeries": "563"
+          },
+          {
+            "handicapSeries": "614"
+          },
+          {
+            "handicapSeries": "684"
+          },
+          {
+            "handicapSeries": "2592",
+            "handicapGames": [
+              "879",
+              "816",
+              "897"
+            ],
+            "teamPoints": [
+              "4.0",
+              "4.0",
+              "0.0",
+              "11.0",
+              "11.0"
+            ],
+            "matchPoints": [
+              "2.0",
+              "2.0",
+              "2.0",
+              "8.0",
+              "8.0"
+            ]
+          },
+          {},
+          {
+            "handicapSeries": "587"
+          },
+          {
+            "handicapSeries": "606"
+          },
+          {
+            "handicapSeries": "727"
+          },
+          {
+            "handicapSeries": "603"
+          },
+          {
+            "handicapSeries": "2523",
+            "handicapGames": [
+              "859",
+              "759",
+              "905"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "4.0",
+              "4.0",
+              "4.0"
+            ],
+            "matchPoints": [
+              "2.0",
+              "2.0",
+              "2.0",
+              "8.0",
+              "8.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/3/3288409092026f202603reprnt00.pdf"
+      },
+      {
+        "title": "PIN TICKLERS matchup",
+        "headers": [
+          "Bowler",
+          "Average",
+          "Handicap",
+          "Game 1",
+          "Game 2",
+          "Game 3",
+          "Scratch series"
+        ],
+        "rows": [
+          [
+            "Team 3",
+            "Lane 20 points won: 5"
+          ],
+          [
+            "Carrell, Monica",
+            "127",
+            "83",
+            "105",
+            "102",
+            "130",
+            "337"
+          ],
+          [
+            "Priborsky, Julie",
+            "128",
+            "82",
+            "123",
+            "157",
+            "109",
+            "389"
+          ],
+          [
+            "Wintle, Jami",
+            "136",
+            "75",
+            "119",
+            "140",
+            "141",
+            "400"
+          ],
+          [
+            "Bazemore, Steve",
+            "130",
+            "81",
+            "133",
+            "123",
+            "96",
+            "352"
+          ],
+          [
+            "Total",
+            "480",
+            "522",
+            "476",
+            "1478"
+          ],
+          [
+            "Team 7",
+            "Lane 19 points won: 26"
+          ],
+          [
+            "Erickson, Patrick",
+            "160",
+            "54",
+            "223",
+            "193",
+            "145",
+            "561"
+          ],
+          [
+            "Teneyck, Hayley",
+            "142",
+            "70",
+            "130",
+            "157",
+            "146",
+            "433"
+          ],
+          [
+            "Mullen, Matthew",
+            "163",
+            "51",
+            "167",
+            "160",
+            "218",
+            "545"
+          ],
+          [
+            "Teneyck, Steve",
+            "205",
+            "13",
+            "195",
+            "243",
+            "170",
+            "608"
+          ],
+          [
+            "Total",
+            "715",
+            "753",
+            "679",
+            "2147"
+          ]
+        ],
+        "emphasis": [
+          [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            true,
+            true,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            true,
+            true,
+            false,
+            true
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            true
+          ],
+          [
+            false,
+            false,
+            false,
+            true,
+            false,
+            true,
+            true
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          [
+            false,
             true,
             true,
             true,
             true
           ]
-        ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "586"
+          },
+          {
+            "handicapSeries": "635"
+          },
+          {
+            "handicapSeries": "625"
+          },
+          {
+            "handicapSeries": "595"
+          },
+          {
+            "handicapSeries": "2441",
+            "handicapGames": [
+              "801",
+              "843",
+              "797"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0"
+            ],
+            "matchPoints": [
+              "2.0",
+              "2.0",
+              "1.0",
+              "5.0",
+              "5.0"
+            ]
+          },
+          {},
+          {
+            "handicapSeries": "723"
+          },
+          {
+            "handicapSeries": "643"
+          },
+          {
+            "handicapSeries": "698"
+          },
+          {
+            "handicapSeries": "647"
+          },
+          {
+            "handicapSeries": "2711",
+            "handicapGames": [
+              "903",
+              "941",
+              "867"
+            ],
+            "teamPoints": [
+              "4.0",
+              "4.0",
+              "4.0",
+              "15.0",
+              "15.0"
+            ],
+            "matchPoints": [
+              "2.0",
+              "2.0",
+              "3.0",
+              "11.0",
+              "11.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/3/3288409092026f202603reprnt00.pdf"
+      },
+      {
+        "title": "PINS & SPLITS matchup",
+        "headers": [
+          "Bowler",
+          "Average",
+          "Handicap",
+          "Game 1",
+          "Game 2",
+          "Game 3",
+          "Scratch series"
+        ],
+        "rows": [
+          [
+            "Team 8",
+            "Lane 18 points won: 5"
+          ],
+          [
+            "Burns, Dene'",
+            "144",
+            "68",
+            "146",
+            "152",
+            "147",
+            "445"
+          ],
+          [
+            "Burns, Jim",
+            "145",
+            "67",
+            "131",
+            "119",
+            "134",
+            "384"
+          ],
+          [
+            "Davis, Jennifer",
+            "157",
+            "56",
+            "154",
+            "168",
+            "134",
+            "456"
+          ],
+          [
+            "Davis, Dixie",
+            "168",
+            "46",
+            "153",
+            "114",
+            "148",
+            "415"
+          ],
+          [
+            "Total",
+            "584",
+            "553",
+            "563",
+            "1700"
+          ],
+          [
+            "Team 1",
+            "Lane 17 points won: 26"
+          ],
+          [
+            "Clifton, Rebecca",
+            "134",
+            "77",
+            "167",
+            "121",
+            "143",
+            "431"
+          ],
+          [
+            "Clifton, Greg",
+            "134",
+            "77",
+            "127",
+            "132",
+            "143",
+            "402"
+          ],
+          [
+            "Matherly, Logan",
+            "167",
+            "47",
+            "136",
+            "158",
+            "158",
+            "452"
+          ],
+          [
+            "Mcclaren, Joseph",
+            "178",
+            "37",
+            "203",
+            "167",
+            "146",
+            "516"
+          ],
+          [
+            "Total",
+            "633",
+            "578",
+            "590",
+            "1801"
+          ]
+        ],
+        "emphasis": [
+          [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            true,
+            true,
+            false,
+            true
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            true,
+            false,
+            true,
+            true
+          ],
+          [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true,
+            true
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            true,
+            true,
+            false,
+            true
+          ],
+          [
+            false,
+            true,
+            true,
+            true,
+            true
+          ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "649"
+          },
+          {
+            "handicapSeries": "585"
+          },
+          {
+            "handicapSeries": "624"
+          },
+          {
+            "handicapSeries": "553"
+          },
+          {
+            "handicapSeries": "2411",
+            "handicapGames": [
+              "821",
+              "790",
+              "800"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0"
+            ],
+            "matchPoints": [
+              "1.0",
+              "2.0",
+              "1.0",
+              "5.0",
+              "5.0"
+            ]
+          },
+          {},
+          {
+            "handicapSeries": "662"
+          },
+          {
+            "handicapSeries": "633"
+          },
+          {
+            "handicapSeries": "593"
+          },
+          {
+            "handicapSeries": "627"
+          },
+          {
+            "handicapSeries": "2515",
+            "handicapGames": [
+              "871",
+              "816",
+              "828"
+            ],
+            "teamPoints": [
+              "4.0",
+              "4.0",
+              "4.0",
+              "15.0",
+              "15.0"
+            ],
+            "matchPoints": [
+              "3.0",
+              "2.0",
+              "3.0",
+              "11.0",
+              "11.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/3/3288409092026f202603reprnt00.pdf"
+      },
+      {
+        "title": "TRIPLE X matchup",
+        "headers": [
+          "Bowler",
+          "Average",
+          "Handicap",
+          "Game 1",
+          "Game 2",
+          "Game 3",
+          "Scratch series"
+        ],
+        "rows": [
+          [
+            "Team 2",
+            "Lane 21 points won: 20"
+          ],
+          [
+            "Moskovits, Sue",
+            "126",
+            "84",
+            "113",
+            "144",
+            "91",
+            "348"
+          ],
+          [
+            "Roux, Jenny",
+            "72",
+            "133",
+            "121",
+            "98",
+            "162",
+            "381"
+          ],
+          [
+            "Muckey, Bill",
+            "189",
+            "27",
+            "199",
+            "211",
+            "185",
+            "595"
+          ],
+          [
+            "Mills, Shane",
+            "202",
+            "16",
+            "205",
+            "170",
+            "190",
+            "565"
+          ],
+          [
+            "Total",
+            "638",
+            "623",
+            "628",
+            "1889"
+          ],
+          [
+            "Team 6",
+            "Lane 22 points won: 11"
+          ],
+          [
+            "Stohlmann, Ron",
+            "150",
+            "63",
+            "136",
+            "150",
+            "119",
+            "405"
+          ],
+          [
+            "Angle, Bonnie",
+            "162",
+            "52",
+            "168",
+            "150",
+            "109",
+            "427"
+          ],
+          [
+            "Borsh, Tom",
+            "135",
+            "76",
+            "200",
+            "150",
+            "145",
+            "495"
+          ],
+          [
+            "Vossler, Bryce",
+            "186",
+            "30",
+            "184",
+            "197",
+            "155",
+            "536"
+          ],
+          [
+            "Total",
+            "688",
+            "647",
+            "528",
+            "1863"
+          ]
+        ],
+        "emphasis": [
+          [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            true
+          ],
+          [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true,
+            true
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            true,
+            false,
+            true,
+            false
+          ],
+          [
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            true,
+            false,
+            true,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            true,
+            false,
+            true,
+            true
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            true
+          ],
+          [
+            false,
+            true,
+            false,
+            false,
+            false
+          ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "600"
+          },
+          {
+            "handicapSeries": "780"
+          },
+          {
+            "handicapSeries": "676"
+          },
+          {
+            "handicapSeries": "613"
+          },
+          {
+            "handicapSeries": "2669",
+            "handicapGames": [
+              "898",
+              "883",
+              "888"
+            ],
+            "teamPoints": [
+              "0.0",
+              "4.0",
+              "4.0",
+              "11.0",
+              "11.0"
+            ],
+            "matchPoints": [
+              "2.0",
+              "3.0",
+              "2.0",
+              "9.0",
+              "9.0"
+            ]
+          },
+          {},
+          {
+            "handicapSeries": "594"
+          },
+          {
+            "handicapSeries": "583"
+          },
+          {
+            "handicapSeries": "723"
+          },
+          {
+            "handicapSeries": "626"
+          },
+          {
+            "handicapSeries": "2526",
+            "handicapGames": [
+              "909",
+              "868",
+              "749"
+            ],
+            "teamPoints": [
+              "4.0",
+              "0.0",
+              "0.0",
+              "4.0",
+              "4.0"
+            ],
+            "matchPoints": [
+              "2.0",
+              "1.0",
+              "2.0",
+              "7.0",
+              "7.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/3/3288409092026f202603reprnt00.pdf"
       }
     ],
     "lanes": [
       {
-        "title": "Table 3",
+        "title": "All scheduled teams",
         "headers": [
           "Lane",
           "Team#",
@@ -2773,42 +3153,42 @@
         ],
         "emphasis": [
           [
-            false,
-            false,
-            false
-          ],
-          [
-            false,
+            true,
             false,
             false
           ],
           [
-            false,
-            false,
-            false
-          ],
-          [
-            false,
+            true,
             false,
             false
           ],
           [
-            false,
-            false,
-            false
-          ],
-          [
-            false,
+            true,
             false,
             false
           ],
           [
-            false,
+            true,
             false,
             false
           ],
           [
+            true,
             false,
+            false
+          ],
+          [
+            true,
+            false,
+            false
+          ],
+          [
+            true,
+            false,
+            false
+          ],
+          [
+            true,
             false,
             false
           ]
@@ -2825,29 +3205,47 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
             "1",
             "Berge, Katie",
             "W",
-            "78",
-            "6",
-            "838",
-            "133"
+            "64",
+            "9",
+            "1335",
+            "148"
           ],
           [
             "2",
             "Geneski, Dave",
             "M",
-            "90",
-            "6",
-            "637",
-            "120"
+            "105",
+            "9",
+            "930",
+            "103"
           ],
           [
             "3",
+            "Benson, Amy",
+            "W",
+            "55",
+            "6",
+            "952",
+            "158"
+          ],
+          [
+            "4",
+            "Steffens, Laura",
+            "W",
+            "51",
+            "6",
+            "1110",
+            "163"
+          ],
+          [
+            "5",
             "Berge, Brian",
             "M",
             "36",
@@ -2856,31 +3254,13 @@
             "180"
           ],
           [
-            "4",
+            "6",
             "Benson, Trevor",
             "M",
             "40",
             "3",
             "461",
             "175"
-          ],
-          [
-            "5",
-            "Steffens, Laura",
-            "W",
-            "51",
-            "3",
-            "579",
-            "163"
-          ],
-          [
-            "6",
-            "Benson, Amy",
-            "W",
-            "55",
-            "3",
-            "503",
-            "158"
           ],
           [
             "7",
@@ -2986,44 +3366,44 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
-            "3",
+            "4",
             "Bazemore, Steve",
             "M",
-            "81",
-            "3",
-            "390",
-            "130"
+            "87",
+            "6",
+            "742",
+            "123"
           ],
           [
             "1",
-            "Priborsky, Julie",
-            "W",
-            "82",
-            "6",
-            "703",
-            "128"
-          ],
-          [
-            "2",
-            "Wintle, Jami",
-            "W",
-            "75",
-            "3",
-            "386",
-            "136"
-          ],
-          [
-            "4",
             "Carrell, Monica",
             "W",
             "83",
-            "3",
-            "374",
+            "6",
+            "711",
             "127"
+          ],
+          [
+            "2",
+            "Priborsky, Julie",
+            "W",
+            "89",
+            "9",
+            "1092",
+            "121"
+          ],
+          [
+            "3",
+            "Wintle, Jami",
+            "W",
+            "75",
+            "6",
+            "786",
+            "136"
           ],
           [
             "5",
@@ -3120,29 +3500,47 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
             "1",
             "Burns, Dene'",
             "W",
-            "68",
-            "6",
-            "848",
-            "144"
+            "69",
+            "9",
+            "1293",
+            "143"
           ],
           [
             "2",
             "Burns, Jim",
             "M",
-            "67",
-            "6",
-            "826",
-            "145"
+            "77",
+            "9",
+            "1210",
+            "134"
           ],
           [
             "3",
+            "Davis, Jennifer",
+            "W",
+            "56",
+            "6",
+            "894",
+            "157"
+          ],
+          [
+            "4",
+            "Davis, Dixie",
+            "M",
+            "46",
+            "3",
+            "415",
+            "168"
+          ],
+          [
+            "5",
             "Bonacci, John",
             "M",
             "63",
@@ -3151,7 +3549,7 @@
             "150"
           ],
           [
-            "4",
+            "6",
             "Bonacci, Dawn",
             "W",
             "51",
@@ -3160,31 +3558,13 @@
             "163"
           ],
           [
-            "5",
-            "Davis, Jennifer",
-            "W",
-            "56",
-            "3",
-            "438",
-            "157"
-          ],
-          [
-            "6",
+            "7",
             "Russell, James",
             "M",
             "32",
             "3",
             "496",
             "184"
-          ],
-          [
-            "7",
-            "Davis, Dixie",
-            "M",
-            "46",
-            "0",
-            "0",
-            "168"
           ],
           [
             "8",
@@ -3317,53 +3697,53 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
             "1",
-            "Teneyck, Hayley",
-            "W",
-            "70",
-            "6",
-            "921",
-            "142"
+            "Erickson, Patrick",
+            "M",
+            "45",
+            "9",
+            "1526",
+            "169"
           ],
           [
             "2",
-            "Erickson, Patrick",
-            "M",
-            "54",
-            "6",
-            "965",
-            "160"
+            "Teneyck, Hayley",
+            "W",
+            "63",
+            "9",
+            "1354",
+            "150"
           ],
           [
             "3",
+            "Mullen, Matthew",
+            "M",
+            "53",
+            "9",
+            "1451",
+            "161"
+          ],
+          [
+            "4",
+            "Teneyck, Steve",
+            "M",
+            "13",
+            "6",
+            "1143",
+            "205"
+          ],
+          [
+            "5",
             "Teneyck, Chris",
             "M",
             "48",
             "3",
             "547",
             "166"
-          ],
-          [
-            "4",
-            "Mullen, Matthew",
-            "M",
-            "51",
-            "6",
-            "906",
-            "163"
-          ],
-          [
-            "5",
-            "Teneyck, Steve",
-            "M",
-            "13",
-            "3",
-            "535",
-            "205"
           ],
           [
             "6",
@@ -3478,11 +3858,47 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
             "1",
+            "Clifton, Rebecca",
+            "W",
+            "77",
+            "6",
+            "849",
+            "134"
+          ],
+          [
+            "2",
+            "Clifton, Greg",
+            "M",
+            "77",
+            "3",
+            "402",
+            "134"
+          ],
+          [
+            "3",
+            "Matherly, Logan",
+            "M",
+            "47",
+            "6",
+            "902",
+            "167"
+          ],
+          [
+            "4",
+            "Mcclaren, Joseph",
+            "M",
+            "39",
+            "9",
+            "1590",
+            "176"
+          ],
+          [
+            "5",
             "Tyrrel, Sheri",
             "W",
             "43",
@@ -3491,25 +3907,7 @@
             "172"
           ],
           [
-            "2",
-            "Matherly, Logan",
-            "M",
-            "47",
-            "3",
-            "450",
-            "167"
-          ],
-          [
-            "3",
-            "Mcclaren, Joseph",
-            "M",
-            "37",
             "6",
-            "1074",
-            "178"
-          ],
-          [
-            "4",
             "Tyrrel, David",
             "M",
             "6",
@@ -3518,16 +3916,7 @@
             "213"
           ],
           [
-            "5",
-            "Clifton, Rebecca",
-            "W",
-            "77",
-            "3",
-            "418",
-            "134"
-          ],
-          [
-            "6",
+            "7",
             "Renshaw, Kevin",
             "M",
             "11",
@@ -3536,7 +3925,7 @@
             "207"
           ],
           [
-            "7",
+            "8",
             "Renshaw, Joshua",
             "M",
             "18",
@@ -3546,6 +3935,15 @@
           ]
         ],
         "emphasis": [
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
           [
             false,
             false,
@@ -3621,53 +4019,53 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
             "1",
-            "Day, Quinton",
-            "M",
-            "60",
+            "Carper, Julie",
+            "W",
+            "87",
             "6",
-            "736",
-            "153"
+            "628",
+            "123"
           ],
           [
             "2",
+            "Day, Quinton",
+            "M",
+            "81",
+            "9",
+            "1162",
+            "129"
+          ],
+          [
+            "3",
+            "Casselberry, Charity",
+            "W",
+            "45",
+            "9",
+            "1525",
+            "169"
+          ],
+          [
+            "4",
+            "Ramsey, Joe",
+            "M",
+            "41",
+            "9",
+            "1567",
+            "174"
+          ],
+          [
+            "5",
             "Reed-Ball, Michele",
             "W",
             "65",
             "3",
             "441",
             "147"
-          ],
-          [
-            "3",
-            "Casselberry, Charity",
-            "W",
-            "51",
-            "6",
-            "951",
-            "163"
-          ],
-          [
-            "4",
-            "Ramsey, Joe",
-            "M",
-            "26",
-            "6",
-            "1042",
-            "191"
-          ],
-          [
-            "5",
-            "Carper, Julie",
-            "W",
-            "87",
-            "3",
-            "302",
-            "123"
           ],
           [
             "6",
@@ -3746,53 +4144,53 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
             "1",
+            "Moskovits, Sue",
+            "W",
+            "84",
+            "6",
+            "725",
+            "126"
+          ],
+          [
+            "2",
+            "Roux, Jenny",
+            "W",
+            "108",
+            "6",
+            "599",
+            "99"
+          ],
+          [
+            "3",
+            "Muckey, Bill",
+            "M",
+            "37",
+            "9",
+            "1609",
+            "178"
+          ],
+          [
+            "4",
+            "Mills, Shane",
+            "M",
+            "27",
+            "9",
+            "1703",
+            "189"
+          ],
+          [
+            "5",
             "Trayer, Deaun",
             "W",
             "104",
             "3",
             "284",
             "104"
-          ],
-          [
-            "2",
-            "Roux, Jenny",
-            "W",
-            "133",
-            "3",
-            "218",
-            "72"
-          ],
-          [
-            "3",
-            "Muckey, Bill",
-            "M",
-            "27",
-            "6",
-            "1014",
-            "189"
-          ],
-          [
-            "4",
-            "Mills, Shane",
-            "M",
-            "16",
-            "6",
-            "1138",
-            "202"
-          ],
-          [
-            "5",
-            "Moskovits, Sue",
-            "W",
-            "84",
-            "3",
-            "377",
-            "126"
           ],
           [
             "6",
@@ -3907,29 +4305,47 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
             "1",
             "Stohlmann, Ron",
             "M",
-            "63",
-            "6",
-            "928",
-            "150"
+            "64",
+            "9",
+            "1333",
+            "148"
           ],
           [
             "2",
             "Angle, Bonnie",
             "W",
-            "52",
-            "6",
-            "863",
-            "162"
+            "69",
+            "9",
+            "1290",
+            "143"
           ],
           [
             "3",
+            "Borsh, Tom",
+            "M",
+            "63",
+            "6",
+            "901",
+            "150"
+          ],
+          [
+            "4",
+            "Vossler, Bryce",
+            "M",
+            "30",
+            "3",
+            "536",
+            "186"
+          ],
+          [
+            "5",
             "Yocum, Lee",
             "W",
             "55",
@@ -3938,31 +4354,13 @@
             "158"
           ],
           [
-            "4",
+            "6",
             "Liebentritt, Amber",
             "W",
             "40",
             "3",
             "452",
             "175"
-          ],
-          [
-            "5",
-            "Borsh, Tom",
-            "M",
-            "76",
-            "3",
-            "406",
-            "135"
-          ],
-          [
-            "6",
-            "Vossler, Bryce",
-            "M",
-            "30",
-            "0",
-            "0",
-            "186"
           ],
           [
             "7",
@@ -9736,9 +10134,4436 @@
           }
         ]
       }
+    },
+    {
+      "week": "3",
+      "sourceUpdated": "Sep 10, 2026",
+      "syncedAt": "2026-09-15T20:22:07.106Z",
+      "views": {
+        "standings": [
+          {
+            "title": "League standings",
+            "headers": [
+              "Place",
+              "Team",
+              "Team#",
+              "Div",
+              "WON",
+              "LOST",
+              "%",
+              "YTD WON",
+              "AVG",
+              "Pins",
+              "HSG",
+              "HSS"
+            ],
+            "rows": [
+              [
+                "1",
+                "RINGING 10'S",
+                "7",
+                "1",
+                "72",
+                "21",
+                "77 %",
+                "72",
+                "685",
+                "6021",
+                "753",
+                "2147"
+              ],
+              [
+                "2",
+                "THE REPLACEMENTS",
+                "1",
+                "1",
+                "62",
+                "31",
+                "67 %",
+                "62",
+                "611",
+                "5885",
+                "752",
+                "2136"
+              ],
+              [
+                "3",
+                "PIN ME DADDY",
+                "5",
+                "1",
+                "53",
+                "40",
+                "57 %",
+                "53",
+                "572",
+                "5316",
+                "668",
+                "1897"
+              ],
+              [
+                "4",
+                "PIN TICKLERS",
+                "3",
+                "1",
+                "48",
+                "45",
+                "52 %",
+                "48",
+                "507",
+                "4392",
+                "522",
+                "1478"
+              ],
+              [
+                "5",
+                "TRIPLE X",
+                "2",
+                "1",
+                "46",
+                "47",
+                "49 %",
+                "46",
+                "592",
+                "5527",
+                "688",
+                "2042"
+              ],
+              [
+                "6",
+                "WESTERN BOWL",
+                "6",
+                "1",
+                "33",
+                "60",
+                "35 %",
+                "33",
+                "627",
+                "5321",
+                "688",
+                "1863"
+              ],
+              [
+                "7",
+                "THREE FINGERS DEEP",
+                "4",
+                "1",
+                "31",
+                "62",
+                "33 %",
+                "31",
+                "595",
+                "5323",
+                "681",
+                "1851"
+              ],
+              [
+                "8",
+                "PINS & SPLITS",
+                "8",
+                "1",
+                "27",
+                "66",
+                "29 %",
+                "27",
+                "602",
+                "5187",
+                "671",
+                "1775"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ]
+            ]
+          }
+        ],
+        "bowlers": [
+          {
+            "title": "Bowlers and season statistics",
+            "headers": [
+              "Name",
+              "Team#",
+              "Pos#",
+              "Team",
+              "Gndr",
+              "Pins",
+              "Games",
+              "Avg",
+              "EnteringAvg",
+              "HCP",
+              "HHG",
+              "HHS",
+              "HSG",
+              "HSS",
+              "MIB",
+              "WON"
+            ],
+            "rows": [
+              [
+                "Angle, Bonnie",
+                "6",
+                "2",
+                "WESTERN BOWL",
+                "W",
+                "1290",
+                "9",
+                "143",
+                "162",
+                "69",
+                "220",
+                "639",
+                "168",
+                "483",
+                "0",
+                "0"
+              ],
+              [
+                "Bazemore, Steve",
+                "3",
+                "4",
+                "PIN TICKLERS",
+                "M",
+                "742",
+                "6",
+                "123",
+                "0",
+                "87",
+                "231",
+                "633",
+                "150",
+                "390",
+                "0",
+                "1"
+              ],
+              [
+                "Benson, Amy",
+                "5",
+                "3",
+                "PIN ME DADDY",
+                "W",
+                "952",
+                "6",
+                "158",
+                "158",
+                "55",
+                "246",
+                "668",
+                "191",
+                "503",
+                "0",
+                "0"
+              ],
+              [
+                "Benson, Trevor",
+                "5",
+                "6",
+                "PIN ME DADDY",
+                "M",
+                "461",
+                "3",
+                "175",
+                "175",
+                "40",
+                "228",
+                "581",
+                "188",
+                "461",
+                "0",
+                "0"
+              ],
+              [
+                "Berge, Brian",
+                "5",
+                "5",
+                "PIN ME DADDY",
+                "M",
+                "528",
+                "3",
+                "180",
+                "180",
+                "36",
+                "232",
+                "636",
+                "196",
+                "528",
+                "0",
+                "0"
+              ],
+              [
+                "Berge, Katie",
+                "5",
+                "1",
+                "PIN ME DADDY",
+                "W",
+                "1335",
+                "9",
+                "148",
+                "133",
+                "64",
+                "258",
+                "731",
+                "180",
+                "497",
+                "0",
+                "4"
+              ],
+              [
+                "Bonacci, Dawn",
+                "8",
+                "6",
+                "PINS & SPLITS",
+                "W",
+                "449",
+                "3",
+                "163",
+                "163",
+                "51",
+                "227",
+                "602",
+                "176",
+                "449",
+                "0",
+                "0"
+              ],
+              [
+                "Bonacci, John",
+                "8",
+                "5",
+                "PINS & SPLITS",
+                "M",
+                "430",
+                "3",
+                "150",
+                "150",
+                "63",
+                "240",
+                "619",
+                "177",
+                "430",
+                "0",
+                "0"
+              ],
+              [
+                "Borsh, Tom",
+                "6",
+                "3",
+                "WESTERN BOWL",
+                "M",
+                "901",
+                "6",
+                "150",
+                "0",
+                "63",
+                "276",
+                "723",
+                "200",
+                "495",
+                "0",
+                "3"
+              ],
+              [
+                "Burns, Dene'",
+                "8",
+                "1",
+                "PINS & SPLITS",
+                "W",
+                "1293",
+                "9",
+                "143",
+                "144",
+                "69",
+                "220",
+                "649",
+                "152",
+                "445",
+                "0",
+                "1"
+              ],
+              [
+                "Burns, Jim",
+                "8",
+                "2",
+                "PINS & SPLITS",
+                "M",
+                "1210",
+                "9",
+                "134",
+                "145",
+                "77",
+                "230",
+                "616",
+                "163",
+                "415",
+                "0",
+                "0"
+              ],
+              [
+                "Carper, Julie",
+                "4",
+                "1",
+                "THREE FINGERS DEEP",
+                "W",
+                "628",
+                "6",
+                "123",
+                "123",
+                "87",
+                "209",
+                "587",
+                "122",
+                "326",
+                "0",
+                "0"
+              ],
+              [
+                "Carrell, Monica",
+                "3",
+                "1",
+                "PIN TICKLERS",
+                "W",
+                "711",
+                "6",
+                "127",
+                "127",
+                "83",
+                "229",
+                "623",
+                "146",
+                "374",
+                "0",
+                "1"
+              ],
+              [
+                "Casselberry, Charity",
+                "4",
+                "3",
+                "THREE FINGERS DEEP",
+                "W",
+                "1525",
+                "9",
+                "169",
+                "163",
+                "45",
+                "284",
+                "727",
+                "233",
+                "574",
+                "0",
+                "4"
+              ],
+              [
+                "Clifton, Greg",
+                "1",
+                "2",
+                "THE REPLACEMENTS",
+                "M",
+                "402",
+                "3",
+                "134",
+                "0",
+                "77",
+                "220",
+                "633",
+                "143",
+                "402",
+                "0",
+                "4"
+              ],
+              [
+                "Clifton, Rebecca",
+                "1",
+                "1",
+                "THE REPLACEMENTS",
+                "W",
+                "849",
+                "6",
+                "134",
+                "134",
+                "77",
+                "244",
+                "662",
+                "167",
+                "431",
+                "0",
+                "3"
+              ],
+              [
+                "Davis, Dixie",
+                "8",
+                "4",
+                "PINS & SPLITS",
+                "M",
+                "415",
+                "3",
+                "168",
+                "168",
+                "46",
+                "199",
+                "553",
+                "153",
+                "415",
+                "0",
+                "1"
+              ],
+              [
+                "Davis, Jennifer",
+                "8",
+                "3",
+                "PINS & SPLITS",
+                "W",
+                "894",
+                "6",
+                "157",
+                "157",
+                "56",
+                "239",
+                "624",
+                "183",
+                "456",
+                "0",
+                "3"
+              ],
+              [
+                "Day, Quinton",
+                "4",
+                "2",
+                "THREE FINGERS DEEP",
+                "M",
+                "1162",
+                "9",
+                "129",
+                "153",
+                "81",
+                "213",
+                "606",
+                "153",
+                "426",
+                "0",
+                "4"
+              ],
+              [
+                "Erickson, Patrick",
+                "7",
+                "1",
+                "RINGING 10'S",
+                "M",
+                "1526",
+                "9",
+                "169",
+                "0",
+                "45",
+                "277",
+                "723",
+                "223",
+                "561",
+                "0",
+                "3"
+              ],
+              [
+                "Geneski, Dave",
+                "5",
+                "2",
+                "PIN ME DADDY",
+                "M",
+                "930",
+                "9",
+                "103",
+                "120",
+                "105",
+                "226",
+                "639",
+                "136",
+                "369",
+                "0",
+                "0"
+              ],
+              [
+                "Hough, Richard",
+                "2",
+                "6",
+                "TRIPLE X",
+                "M",
+                "607",
+                "3",
+                "204",
+                "204",
+                "14",
+                "226",
+                "649",
+                "212",
+                "607",
+                "0",
+                "0"
+              ],
+              [
+                "Liebentritt, Amber",
+                "6",
+                "6",
+                "WESTERN BOWL",
+                "W",
+                "452",
+                "3",
+                "175",
+                "175",
+                "40",
+                "208",
+                "572",
+                "168",
+                "452",
+                "0",
+                "0"
+              ],
+              [
+                "Matherly, Logan",
+                "1",
+                "3",
+                "THE REPLACEMENTS",
+                "M",
+                "902",
+                "6",
+                "167",
+                "167",
+                "47",
+                "223",
+                "593",
+                "176",
+                "452",
+                "0",
+                "1"
+              ],
+              [
+                "Mcclaren, Joseph",
+                "1",
+                "4",
+                "THE REPLACEMENTS",
+                "M",
+                "1590",
+                "9",
+                "176",
+                "178",
+                "39",
+                "271",
+                "703",
+                "234",
+                "592",
+                "0",
+                "3"
+              ],
+              [
+                "Mills, Shane",
+                "2",
+                "4",
+                "TRIPLE X",
+                "M",
+                "1703",
+                "9",
+                "189",
+                "202",
+                "27",
+                "241",
+                "648",
+                "225",
+                "600",
+                "0",
+                "2"
+              ],
+              [
+                "Moskovits, Sue",
+                "2",
+                "1",
+                "TRIPLE X",
+                "W",
+                "725",
+                "6",
+                "126",
+                "126",
+                "84",
+                "228",
+                "629",
+                "144",
+                "377",
+                "0",
+                "2"
+              ],
+              [
+                "Muckey, Bill",
+                "2",
+                "3",
+                "TRIPLE X",
+                "M",
+                "1609",
+                "9",
+                "178",
+                "189",
+                "37",
+                "238",
+                "676",
+                "211",
+                "595",
+                "0",
+                "1"
+              ],
+              [
+                "Mullen, Matthew",
+                "7",
+                "3",
+                "RINGING 10'S",
+                "M",
+                "1451",
+                "9",
+                "161",
+                "163",
+                "53",
+                "269",
+                "698",
+                "218",
+                "545",
+                "0",
+                "3"
+              ],
+              [
+                "Priborsky, Julie",
+                "3",
+                "2",
+                "PIN TICKLERS",
+                "W",
+                "1092",
+                "9",
+                "121",
+                "128",
+                "89",
+                "239",
+                "635",
+                "157",
+                "389",
+                "0",
+                "2"
+              ],
+              [
+                "Ramsey, Joe",
+                "4",
+                "4",
+                "THREE FINGERS DEEP",
+                "M",
+                "1567",
+                "9",
+                "174",
+                "191",
+                "41",
+                "224",
+                "623",
+                "198",
+                "545",
+                "0",
+                "0"
+              ],
+              [
+                "Reed-Ball, Michele",
+                "4",
+                "5",
+                "THREE FINGERS DEEP",
+                "W",
+                "441",
+                "3",
+                "147",
+                "0",
+                "65",
+                "227",
+                "636",
+                "162",
+                "441",
+                "0",
+                "0"
+              ],
+              [
+                "Roux, Jenny",
+                "2",
+                "2",
+                "TRIPLE X",
+                "W",
+                "599",
+                "6",
+                "99",
+                "0",
+                "108",
+                "295",
+                "780",
+                "162",
+                "381",
+                "0",
+                "4"
+              ],
+              [
+                "Russell, James",
+                "8",
+                "7",
+                "PINS & SPLITS",
+                "M",
+                "496",
+                "3",
+                "184",
+                "184",
+                "32",
+                "210",
+                "592",
+                "178",
+                "496",
+                "0",
+                "0"
+              ],
+              [
+                "Steffens, Laura",
+                "5",
+                "4",
+                "PIN ME DADDY",
+                "W",
+                "1110",
+                "6",
+                "163",
+                "163",
+                "51",
+                "255",
+                "732",
+                "204",
+                "579",
+                "0",
+                "4"
+              ],
+              [
+                "Stohlmann, Ron",
+                "6",
+                "1",
+                "WESTERN BOWL",
+                "M",
+                "1333",
+                "9",
+                "148",
+                "150",
+                "64",
+                "257",
+                "701",
+                "194",
+                "512",
+                "0",
+                "2"
+              ],
+              [
+                "Teneyck, Chris",
+                "7",
+                "5",
+                "RINGING 10'S",
+                "M",
+                "547",
+                "3",
+                "166",
+                "166",
+                "48",
+                "250",
+                "691",
+                "202",
+                "547",
+                "0",
+                "0"
+              ],
+              [
+                "Teneyck, Hayley",
+                "7",
+                "2",
+                "RINGING 10'S",
+                "W",
+                "1354",
+                "9",
+                "150",
+                "142",
+                "63",
+                "246",
+                "734",
+                "176",
+                "524",
+                "0",
+                "2"
+              ],
+              [
+                "Teneyck, Steve",
+                "7",
+                "4",
+                "RINGING 10'S",
+                "M",
+                "1143",
+                "6",
+                "205",
+                "205",
+                "13",
+                "256",
+                "647",
+                "243",
+                "608",
+                "0",
+                "3"
+              ],
+              [
+                "Trayer, Deaun",
+                "2",
+                "5",
+                "TRIPLE X",
+                "W",
+                "284",
+                "3",
+                "104",
+                "104",
+                "104",
+                "210",
+                "596",
+                "106",
+                "284",
+                "0",
+                "0"
+              ],
+              [
+                "Tyrrel, David",
+                "1",
+                "6",
+                "THE REPLACEMENTS",
+                "M",
+                "1165",
+                "6",
+                "213",
+                "213",
+                "6",
+                "231",
+                "653",
+                "225",
+                "635",
+                "0",
+                "0"
+              ],
+              [
+                "Tyrrel, Sheri",
+                "1",
+                "5",
+                "THE REPLACEMENTS",
+                "W",
+                "977",
+                "6",
+                "172",
+                "172",
+                "43",
+                "236",
+                "620",
+                "193",
+                "491",
+                "0",
+                "0"
+              ],
+              [
+                "Vossler, Bryce",
+                "6",
+                "4",
+                "WESTERN BOWL",
+                "M",
+                "536",
+                "3",
+                "186",
+                "186",
+                "30",
+                "227",
+                "626",
+                "197",
+                "536",
+                "0",
+                "2"
+              ],
+              [
+                "Wendt, Deb",
+                "3",
+                "5",
+                "PIN TICKLERS",
+                "W",
+                "323",
+                "3",
+                "124",
+                "124",
+                "86",
+                "211",
+                "581",
+                "125",
+                "323",
+                "0",
+                "0"
+              ],
+              [
+                "Wintle, Jami",
+                "3",
+                "3",
+                "PIN TICKLERS",
+                "W",
+                "786",
+                "6",
+                "136",
+                "136",
+                "75",
+                "234",
+                "625",
+                "159",
+                "400",
+                "0",
+                "1"
+              ],
+              [
+                "Yocum, Lee",
+                "6",
+                "5",
+                "WESTERN BOWL",
+                "W",
+                "809",
+                "6",
+                "158",
+                "158",
+                "55",
+                "202",
+                "581",
+                "147",
+                "416",
+                "0",
+                "0"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ]
+          }
+        ],
+        "recaps": [
+          {
+            "title": "PIN ME DADDY matchup",
+            "headers": [
+              "Bowler",
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
+            ],
+            "rows": [
+              [
+                "Team 5",
+                "Lane 15 points won: 19"
+              ],
+              [
+                "Berge, Katie",
+                "133",
+                "78",
+                "153",
+                "164",
+                "180",
+                "497"
+              ],
+              [
+                "Geneski, Dave",
+                "120",
+                "90",
+                "104",
+                "88",
+                "101",
+                "293"
+              ],
+              [
+                "Benson, Amy",
+                "158",
+                "55",
+                "169",
+                "142",
+                "138",
+                "449"
+              ],
+              [
+                "Steffens, Laura",
+                "163",
+                "51",
+                "179",
+                "148",
+                "204",
+                "531"
+              ],
+              [
+                "Total",
+                "605",
+                "542",
+                "623",
+                "1770"
+              ],
+              [
+                "Team 4",
+                "Lane 16 points won: 12"
+              ],
+              [
+                "Carper, Julie",
+                "123",
+                "87",
+                "115",
+                "89",
+                "122",
+                "326"
+              ],
+              [
+                "Day, Quinton",
+                "153",
+                "60",
+                "141",
+                "153",
+                "132",
+                "426"
+              ],
+              [
+                "Casselberry, Charity",
+                "163",
+                "51",
+                "192",
+                "149",
+                "233",
+                "574"
+              ],
+              [
+                "Ramsey, Joe",
+                "191",
+                "26",
+                "187",
+                "144",
+                "194",
+                "525"
+              ],
+              [
+                "Total",
+                "635",
+                "535",
+                "681",
+                "1851"
+              ]
+            ],
+            "emphasis": [
+              [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true
+              ],
+              [
+                false,
+                true,
+                true,
+                false,
+                true
+              ],
+              [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true
+              ],
+              [
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                true,
+                false
+              ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "731"
+              },
+              {
+                "handicapSeries": "563"
+              },
+              {
+                "handicapSeries": "614"
+              },
+              {
+                "handicapSeries": "684"
+              },
+              {
+                "handicapSeries": "2592",
+                "handicapGames": [
+                  "879",
+                  "816",
+                  "897"
+                ],
+                "teamPoints": [
+                  "4.0",
+                  "4.0",
+                  "0.0",
+                  "11.0",
+                  "11.0"
+                ],
+                "matchPoints": [
+                  "2.0",
+                  "2.0",
+                  "2.0",
+                  "8.0",
+                  "8.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "587"
+              },
+              {
+                "handicapSeries": "606"
+              },
+              {
+                "handicapSeries": "727"
+              },
+              {
+                "handicapSeries": "603"
+              },
+              {
+                "handicapSeries": "2523",
+                "handicapGames": [
+                  "859",
+                  "759",
+                  "905"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "4.0",
+                  "4.0",
+                  "4.0"
+                ],
+                "matchPoints": [
+                  "2.0",
+                  "2.0",
+                  "2.0",
+                  "8.0",
+                  "8.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/3/3288409092026f202603reprnt00.pdf"
+          },
+          {
+            "title": "PIN TICKLERS matchup",
+            "headers": [
+              "Bowler",
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
+            ],
+            "rows": [
+              [
+                "Team 3",
+                "Lane 20 points won: 5"
+              ],
+              [
+                "Carrell, Monica",
+                "127",
+                "83",
+                "105",
+                "102",
+                "130",
+                "337"
+              ],
+              [
+                "Priborsky, Julie",
+                "128",
+                "82",
+                "123",
+                "157",
+                "109",
+                "389"
+              ],
+              [
+                "Wintle, Jami",
+                "136",
+                "75",
+                "119",
+                "140",
+                "141",
+                "400"
+              ],
+              [
+                "Bazemore, Steve",
+                "130",
+                "81",
+                "133",
+                "123",
+                "96",
+                "352"
+              ],
+              [
+                "Total",
+                "480",
+                "522",
+                "476",
+                "1478"
+              ],
+              [
+                "Team 7",
+                "Lane 19 points won: 26"
+              ],
+              [
+                "Erickson, Patrick",
+                "160",
+                "54",
+                "223",
+                "193",
+                "145",
+                "561"
+              ],
+              [
+                "Teneyck, Hayley",
+                "142",
+                "70",
+                "130",
+                "157",
+                "146",
+                "433"
+              ],
+              [
+                "Mullen, Matthew",
+                "163",
+                "51",
+                "167",
+                "160",
+                "218",
+                "545"
+              ],
+              [
+                "Teneyck, Steve",
+                "205",
+                "13",
+                "195",
+                "243",
+                "170",
+                "608"
+              ],
+              [
+                "Total",
+                "715",
+                "753",
+                "679",
+                "2147"
+              ]
+            ],
+            "emphasis": [
+              [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                true,
+                true,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                true,
+                true,
+                false,
+                true
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true
+              ],
+              [
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                true
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true
+              ],
+              [
+                false,
+                true,
+                true,
+                true,
+                true
+              ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "586"
+              },
+              {
+                "handicapSeries": "635"
+              },
+              {
+                "handicapSeries": "625"
+              },
+              {
+                "handicapSeries": "595"
+              },
+              {
+                "handicapSeries": "2441",
+                "handicapGames": [
+                  "801",
+                  "843",
+                  "797"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0"
+                ],
+                "matchPoints": [
+                  "2.0",
+                  "2.0",
+                  "1.0",
+                  "5.0",
+                  "5.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "723"
+              },
+              {
+                "handicapSeries": "643"
+              },
+              {
+                "handicapSeries": "698"
+              },
+              {
+                "handicapSeries": "647"
+              },
+              {
+                "handicapSeries": "2711",
+                "handicapGames": [
+                  "903",
+                  "941",
+                  "867"
+                ],
+                "teamPoints": [
+                  "4.0",
+                  "4.0",
+                  "4.0",
+                  "15.0",
+                  "15.0"
+                ],
+                "matchPoints": [
+                  "2.0",
+                  "2.0",
+                  "3.0",
+                  "11.0",
+                  "11.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/3/3288409092026f202603reprnt00.pdf"
+          },
+          {
+            "title": "PINS & SPLITS matchup",
+            "headers": [
+              "Bowler",
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
+            ],
+            "rows": [
+              [
+                "Team 8",
+                "Lane 18 points won: 5"
+              ],
+              [
+                "Burns, Dene'",
+                "144",
+                "68",
+                "146",
+                "152",
+                "147",
+                "445"
+              ],
+              [
+                "Burns, Jim",
+                "145",
+                "67",
+                "131",
+                "119",
+                "134",
+                "384"
+              ],
+              [
+                "Davis, Jennifer",
+                "157",
+                "56",
+                "154",
+                "168",
+                "134",
+                "456"
+              ],
+              [
+                "Davis, Dixie",
+                "168",
+                "46",
+                "153",
+                "114",
+                "148",
+                "415"
+              ],
+              [
+                "Total",
+                "584",
+                "553",
+                "563",
+                "1700"
+              ],
+              [
+                "Team 1",
+                "Lane 17 points won: 26"
+              ],
+              [
+                "Clifton, Rebecca",
+                "134",
+                "77",
+                "167",
+                "121",
+                "143",
+                "431"
+              ],
+              [
+                "Clifton, Greg",
+                "134",
+                "77",
+                "127",
+                "132",
+                "143",
+                "402"
+              ],
+              [
+                "Matherly, Logan",
+                "167",
+                "47",
+                "136",
+                "158",
+                "158",
+                "452"
+              ],
+              [
+                "Mcclaren, Joseph",
+                "178",
+                "37",
+                "203",
+                "167",
+                "146",
+                "516"
+              ],
+              [
+                "Total",
+                "633",
+                "578",
+                "590",
+                "1801"
+              ]
+            ],
+            "emphasis": [
+              [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                true,
+                true,
+                false,
+                true
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                true
+              ],
+              [
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                true,
+                true,
+                false,
+                true
+              ],
+              [
+                false,
+                true,
+                true,
+                true,
+                true
+              ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "649"
+              },
+              {
+                "handicapSeries": "585"
+              },
+              {
+                "handicapSeries": "624"
+              },
+              {
+                "handicapSeries": "553"
+              },
+              {
+                "handicapSeries": "2411",
+                "handicapGames": [
+                  "821",
+                  "790",
+                  "800"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0"
+                ],
+                "matchPoints": [
+                  "1.0",
+                  "2.0",
+                  "1.0",
+                  "5.0",
+                  "5.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "662"
+              },
+              {
+                "handicapSeries": "633"
+              },
+              {
+                "handicapSeries": "593"
+              },
+              {
+                "handicapSeries": "627"
+              },
+              {
+                "handicapSeries": "2515",
+                "handicapGames": [
+                  "871",
+                  "816",
+                  "828"
+                ],
+                "teamPoints": [
+                  "4.0",
+                  "4.0",
+                  "4.0",
+                  "15.0",
+                  "15.0"
+                ],
+                "matchPoints": [
+                  "3.0",
+                  "2.0",
+                  "3.0",
+                  "11.0",
+                  "11.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/3/3288409092026f202603reprnt00.pdf"
+          },
+          {
+            "title": "TRIPLE X matchup",
+            "headers": [
+              "Bowler",
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
+            ],
+            "rows": [
+              [
+                "Team 2",
+                "Lane 21 points won: 20"
+              ],
+              [
+                "Moskovits, Sue",
+                "126",
+                "84",
+                "113",
+                "144",
+                "91",
+                "348"
+              ],
+              [
+                "Roux, Jenny",
+                "72",
+                "133",
+                "121",
+                "98",
+                "162",
+                "381"
+              ],
+              [
+                "Muckey, Bill",
+                "189",
+                "27",
+                "199",
+                "211",
+                "185",
+                "595"
+              ],
+              [
+                "Mills, Shane",
+                "202",
+                "16",
+                "205",
+                "170",
+                "190",
+                "565"
+              ],
+              [
+                "Total",
+                "638",
+                "623",
+                "628",
+                "1889"
+              ],
+              [
+                "Team 6",
+                "Lane 22 points won: 11"
+              ],
+              [
+                "Stohlmann, Ron",
+                "150",
+                "63",
+                "136",
+                "150",
+                "119",
+                "405"
+              ],
+              [
+                "Angle, Bonnie",
+                "162",
+                "52",
+                "168",
+                "150",
+                "109",
+                "427"
+              ],
+              [
+                "Borsh, Tom",
+                "135",
+                "76",
+                "200",
+                "150",
+                "145",
+                "495"
+              ],
+              [
+                "Vossler, Bryce",
+                "186",
+                "30",
+                "184",
+                "197",
+                "155",
+                "536"
+              ],
+              [
+                "Total",
+                "688",
+                "647",
+                "528",
+                "1863"
+              ]
+            ],
+            "emphasis": [
+              [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true
+              ],
+              [
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false
+              ],
+              [
+                false,
+                false,
+                true,
+                true,
+                true
+              ],
+              [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                true
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true
+              ],
+              [
+                false,
+                true,
+                false,
+                false,
+                false
+              ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "600"
+              },
+              {
+                "handicapSeries": "780"
+              },
+              {
+                "handicapSeries": "676"
+              },
+              {
+                "handicapSeries": "613"
+              },
+              {
+                "handicapSeries": "2669",
+                "handicapGames": [
+                  "898",
+                  "883",
+                  "888"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "4.0",
+                  "4.0",
+                  "11.0",
+                  "11.0"
+                ],
+                "matchPoints": [
+                  "2.0",
+                  "3.0",
+                  "2.0",
+                  "9.0",
+                  "9.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "594"
+              },
+              {
+                "handicapSeries": "583"
+              },
+              {
+                "handicapSeries": "723"
+              },
+              {
+                "handicapSeries": "626"
+              },
+              {
+                "handicapSeries": "2526",
+                "handicapGames": [
+                  "909",
+                  "868",
+                  "749"
+                ],
+                "teamPoints": [
+                  "4.0",
+                  "0.0",
+                  "0.0",
+                  "4.0",
+                  "4.0"
+                ],
+                "matchPoints": [
+                  "2.0",
+                  "1.0",
+                  "2.0",
+                  "7.0",
+                  "7.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/3/3288409092026f202603reprnt00.pdf"
+          }
+        ],
+        "lanes": [
+          {
+            "title": "All scheduled teams",
+            "headers": [
+              "Lane",
+              "Team#",
+              "Team"
+            ],
+            "rows": [
+              [
+                "15",
+                "3",
+                "PIN TICKLERS"
+              ],
+              [
+                "16",
+                "6",
+                "WESTERN BOWL"
+              ],
+              [
+                "17",
+                "7",
+                "RINGING 10'S"
+              ],
+              [
+                "18",
+                "2",
+                "TRIPLE X"
+              ],
+              [
+                "19",
+                "1",
+                "THE REPLACEMENTS"
+              ],
+              [
+                "20",
+                "5",
+                "PIN ME DADDY"
+              ],
+              [
+                "21",
+                "8",
+                "PINS & SPLITS"
+              ],
+              [
+                "22",
+                "4",
+                "THREE FINGERS DEEP"
+              ]
+            ],
+            "emphasis": [
+              [
+                true,
+                false,
+                false
+              ],
+              [
+                true,
+                false,
+                false
+              ],
+              [
+                true,
+                false,
+                false
+              ],
+              [
+                true,
+                false,
+                false
+              ],
+              [
+                true,
+                false,
+                false
+              ],
+              [
+                true,
+                false,
+                false
+              ],
+              [
+                true,
+                false,
+                false
+              ],
+              [
+                true,
+                false,
+                false
+              ]
+            ]
+          }
+        ],
+        "rosters": [
+          {
+            "title": "Team 5 · PIN ME DADDY roster",
+            "headers": [
+              "Pos",
+              "Name",
+              "Gndr",
+              "HCP",
+              "Gms",
+              "Pins",
+              "AVG"
+            ],
+            "rows": [
+              [
+                "1",
+                "Berge, Katie",
+                "W",
+                "64",
+                "9",
+                "1335",
+                "148"
+              ],
+              [
+                "2",
+                "Geneski, Dave",
+                "M",
+                "105",
+                "9",
+                "930",
+                "103"
+              ],
+              [
+                "3",
+                "Benson, Amy",
+                "W",
+                "55",
+                "6",
+                "952",
+                "158"
+              ],
+              [
+                "4",
+                "Steffens, Laura",
+                "W",
+                "51",
+                "6",
+                "1110",
+                "163"
+              ],
+              [
+                "5",
+                "Berge, Brian",
+                "M",
+                "36",
+                "3",
+                "528",
+                "180"
+              ],
+              [
+                "6",
+                "Benson, Trevor",
+                "M",
+                "40",
+                "3",
+                "461",
+                "175"
+              ],
+              [
+                "7",
+                "Russell, Joe",
+                "M",
+                "18",
+                "0",
+                "0",
+                "200"
+              ],
+              [
+                "8",
+                "Pedigo, Laura",
+                "W",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "team": "5"
+          },
+          {
+            "title": "Team 3 · PIN TICKLERS roster",
+            "headers": [
+              "Pos",
+              "Name",
+              "Gndr",
+              "HCP",
+              "Gms",
+              "Pins",
+              "AVG"
+            ],
+            "rows": [
+              [
+                "4",
+                "Bazemore, Steve",
+                "M",
+                "87",
+                "6",
+                "742",
+                "123"
+              ],
+              [
+                "1",
+                "Carrell, Monica",
+                "W",
+                "83",
+                "6",
+                "711",
+                "127"
+              ],
+              [
+                "2",
+                "Priborsky, Julie",
+                "W",
+                "89",
+                "9",
+                "1092",
+                "121"
+              ],
+              [
+                "3",
+                "Wintle, Jami",
+                "W",
+                "75",
+                "6",
+                "786",
+                "136"
+              ],
+              [
+                "5",
+                "Wendt, Deb",
+                "W",
+                "86",
+                "3",
+                "323",
+                "124"
+              ],
+              [
+                "6",
+                "Young, Chad",
+                "M",
+                "45",
+                "0",
+                "0",
+                "170"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "team": "3"
+          },
+          {
+            "title": "Team 8 · PINS & SPLITS roster",
+            "headers": [
+              "Pos",
+              "Name",
+              "Gndr",
+              "HCP",
+              "Gms",
+              "Pins",
+              "AVG"
+            ],
+            "rows": [
+              [
+                "1",
+                "Burns, Dene'",
+                "W",
+                "69",
+                "9",
+                "1293",
+                "143"
+              ],
+              [
+                "2",
+                "Burns, Jim",
+                "M",
+                "77",
+                "9",
+                "1210",
+                "134"
+              ],
+              [
+                "3",
+                "Davis, Jennifer",
+                "W",
+                "56",
+                "6",
+                "894",
+                "157"
+              ],
+              [
+                "4",
+                "Davis, Dixie",
+                "M",
+                "46",
+                "3",
+                "415",
+                "168"
+              ],
+              [
+                "5",
+                "Bonacci, John",
+                "M",
+                "63",
+                "3",
+                "430",
+                "150"
+              ],
+              [
+                "6",
+                "Bonacci, Dawn",
+                "W",
+                "51",
+                "3",
+                "449",
+                "163"
+              ],
+              [
+                "7",
+                "Russell, James",
+                "M",
+                "32",
+                "3",
+                "496",
+                "184"
+              ],
+              [
+                "8",
+                "Smith, Tristan",
+                "M",
+                "0",
+                "0",
+                "0",
+                "225"
+              ],
+              [
+                "9",
+                "Smith, Andrea",
+                "W",
+                "44",
+                "0",
+                "0",
+                "171"
+              ],
+              [
+                "10",
+                "Schroeder, Alexandra",
+                "W",
+                "102",
+                "0",
+                "0",
+                "106"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "team": "8"
+          },
+          {
+            "title": "Team 7 · RINGING 10'S roster",
+            "headers": [
+              "Pos",
+              "Name",
+              "Gndr",
+              "HCP",
+              "Gms",
+              "Pins",
+              "AVG"
+            ],
+            "rows": [
+              [
+                "1",
+                "Erickson, Patrick",
+                "M",
+                "45",
+                "9",
+                "1526",
+                "169"
+              ],
+              [
+                "2",
+                "Teneyck, Hayley",
+                "W",
+                "63",
+                "9",
+                "1354",
+                "150"
+              ],
+              [
+                "3",
+                "Mullen, Matthew",
+                "M",
+                "53",
+                "9",
+                "1451",
+                "161"
+              ],
+              [
+                "4",
+                "Teneyck, Steve",
+                "M",
+                "13",
+                "6",
+                "1143",
+                "205"
+              ],
+              [
+                "5",
+                "Teneyck, Chris",
+                "M",
+                "48",
+                "3",
+                "547",
+                "166"
+              ],
+              [
+                "6",
+                "Teneyck, Duane",
+                "M",
+                "52",
+                "0",
+                "0",
+                "162"
+              ],
+              [
+                "7",
+                "Teneyck, Bill",
+                "M",
+                "99",
+                "0",
+                "0",
+                "110"
+              ],
+              [
+                "8",
+                "Teneyck, William Jr",
+                "M",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "team": "7"
+          },
+          {
+            "title": "Team 1 · THE REPLACEMENTS roster",
+            "headers": [
+              "Pos",
+              "Name",
+              "Gndr",
+              "HCP",
+              "Gms",
+              "Pins",
+              "AVG"
+            ],
+            "rows": [
+              [
+                "1",
+                "Clifton, Rebecca",
+                "W",
+                "77",
+                "6",
+                "849",
+                "134"
+              ],
+              [
+                "2",
+                "Clifton, Greg",
+                "M",
+                "77",
+                "3",
+                "402",
+                "134"
+              ],
+              [
+                "3",
+                "Matherly, Logan",
+                "M",
+                "47",
+                "6",
+                "902",
+                "167"
+              ],
+              [
+                "4",
+                "Mcclaren, Joseph",
+                "M",
+                "39",
+                "9",
+                "1590",
+                "176"
+              ],
+              [
+                "5",
+                "Tyrrel, Sheri",
+                "W",
+                "43",
+                "6",
+                "977",
+                "172"
+              ],
+              [
+                "6",
+                "Tyrrel, David",
+                "M",
+                "6",
+                "6",
+                "1165",
+                "213"
+              ],
+              [
+                "7",
+                "Renshaw, Kevin",
+                "M",
+                "11",
+                "0",
+                "0",
+                "207"
+              ],
+              [
+                "8",
+                "Renshaw, Joshua",
+                "M",
+                "18",
+                "0",
+                "0",
+                "200"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "team": "1"
+          },
+          {
+            "title": "Team 4 · THREE FINGERS DEEP roster",
+            "headers": [
+              "Pos",
+              "Name",
+              "Gndr",
+              "HCP",
+              "Gms",
+              "Pins",
+              "AVG"
+            ],
+            "rows": [
+              [
+                "1",
+                "Carper, Julie",
+                "W",
+                "87",
+                "6",
+                "628",
+                "123"
+              ],
+              [
+                "2",
+                "Day, Quinton",
+                "M",
+                "81",
+                "9",
+                "1162",
+                "129"
+              ],
+              [
+                "3",
+                "Casselberry, Charity",
+                "W",
+                "45",
+                "9",
+                "1525",
+                "169"
+              ],
+              [
+                "4",
+                "Ramsey, Joe",
+                "M",
+                "41",
+                "9",
+                "1567",
+                "174"
+              ],
+              [
+                "5",
+                "Reed-Ball, Michele",
+                "W",
+                "65",
+                "3",
+                "441",
+                "147"
+              ],
+              [
+                "6",
+                "Carper, Matt",
+                "M",
+                "38",
+                "0",
+                "0",
+                "177"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "team": "4"
+          },
+          {
+            "title": "Team 2 · TRIPLE X roster",
+            "headers": [
+              "Pos",
+              "Name",
+              "Gndr",
+              "HCP",
+              "Gms",
+              "Pins",
+              "AVG"
+            ],
+            "rows": [
+              [
+                "1",
+                "Moskovits, Sue",
+                "W",
+                "84",
+                "6",
+                "725",
+                "126"
+              ],
+              [
+                "2",
+                "Roux, Jenny",
+                "W",
+                "108",
+                "6",
+                "599",
+                "99"
+              ],
+              [
+                "3",
+                "Muckey, Bill",
+                "M",
+                "37",
+                "9",
+                "1609",
+                "178"
+              ],
+              [
+                "4",
+                "Mills, Shane",
+                "M",
+                "27",
+                "9",
+                "1703",
+                "189"
+              ],
+              [
+                "5",
+                "Trayer, Deaun",
+                "W",
+                "104",
+                "3",
+                "284",
+                "104"
+              ],
+              [
+                "6",
+                "Hough, Richard",
+                "M",
+                "14",
+                "3",
+                "607",
+                "204"
+              ],
+              [
+                "7",
+                "Harpster, Kyle",
+                "M",
+                "21",
+                "0",
+                "0",
+                "196"
+              ],
+              [
+                "8",
+                "Harpster, Amanda",
+                "W",
+                "19",
+                "0",
+                "0",
+                "198"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "team": "2"
+          },
+          {
+            "title": "Team 6 · WESTERN BOWL roster",
+            "headers": [
+              "Pos",
+              "Name",
+              "Gndr",
+              "HCP",
+              "Gms",
+              "Pins",
+              "AVG"
+            ],
+            "rows": [
+              [
+                "1",
+                "Stohlmann, Ron",
+                "M",
+                "64",
+                "9",
+                "1333",
+                "148"
+              ],
+              [
+                "2",
+                "Angle, Bonnie",
+                "W",
+                "69",
+                "9",
+                "1290",
+                "143"
+              ],
+              [
+                "3",
+                "Borsh, Tom",
+                "M",
+                "63",
+                "6",
+                "901",
+                "150"
+              ],
+              [
+                "4",
+                "Vossler, Bryce",
+                "M",
+                "30",
+                "3",
+                "536",
+                "186"
+              ],
+              [
+                "5",
+                "Yocum, Lee",
+                "W",
+                "55",
+                "6",
+                "809",
+                "158"
+              ],
+              [
+                "6",
+                "Liebentritt, Amber",
+                "W",
+                "40",
+                "3",
+                "452",
+                "175"
+              ],
+              [
+                "7",
+                "Vossler, Elizabeth",
+                "W",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "team": "6"
+          }
+        ]
+      }
     }
   ],
-  "sourceFingerprint": "64d344324bd54619d5447d6ff67cfba3cfdeb4379e97167b134067278b5a66e0",
+  "sourceFingerprint": "4afc1ca096352f6923d727820f9b3c2dc3295c68bd8656fec0a5bd0110f5e525",
   "officialRecapVersion": 1,
-  "lastAttemptedAt": "2026-09-15T19:32:04.807Z"
+  "lastAttemptedAt": null,
+  "lastCheckedAt": "2026-09-15T20:22:07.106Z"
 }

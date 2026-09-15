@@ -15,10 +15,10 @@
   "centerSlug": "sun-valley-lanes-lincoln-nebraska",
   "area": "Lincoln",
   "sourceUpdated": "Sep 9, 2026",
-  "syncedAt": "2026-09-15T15:29:13.748Z",
+  "syncedAt": "2026-09-15T20:43:46.177Z",
   "status": "awaiting-results",
   "week": "1",
-  "fingerprint": "99ae9ca0b64e8a05f119c215a508d632880cfbccde3f6bbd4692e1075e6d3a0e",
+  "fingerprint": "760f00a5a1fe21d2ef6f7a69637bcdc9b66d1921a649c1b033f034db3c70cba3",
   "lastCompletedCycle": null,
   "views": {
     "standings": [
@@ -929,7 +929,7 @@
     ],
     "recaps": [
       {
-        "title": "Misfits matchup",
+        "title": "Bucket Heads matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -940,35 +940,6 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 6",
-            "Lane 6 points won: 1"
-          ],
-          [
-            "Lee, Susan",
-            "163",
-            "31",
-            "117",
-            "153",
-            "127",
-            "397"
-          ],
-          [
-            "Damoude, Toni",
-            "129",
-            "60",
-            "124",
-            "123",
-            "111",
-            "358"
-          ],
-          [
-            "Total",
-            "241",
-            "276",
-            "238",
-            "755"
-          ],
           [
             "Team 5",
             "Lane 5 points won: 3"
@@ -997,6 +968,35 @@
             "274",
             "274",
             "865"
+          ],
+          [
+            "Team 6",
+            "Lane 6 points won: 1"
+          ],
+          [
+            "Lee, Susan",
+            "163",
+            "31",
+            "117",
+            "153",
+            "127",
+            "397"
+          ],
+          [
+            "Damoude, Toni",
+            "129",
+            "60",
+            "124",
+            "123",
+            "111",
+            "358"
+          ],
+          [
+            "Total",
+            "241",
+            "276",
+            "238",
+            "755"
           ]
         ],
         "emphasis": [
@@ -1029,10 +1029,10 @@
           ],
           [
             false,
+            true,
             false,
-            false,
-            false,
-            false
+            true,
+            true
           ],
           [
             true,
@@ -1064,14 +1064,61 @@
           [
             false,
             false,
-            false,
+            true,
             false,
             false
           ]
-        ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "542"
+          },
+          {
+            "handicapSeries": "584"
+          },
+          {
+            "handicapSeries": "865",
+            "handicapGames": [
+              "317",
+              "274",
+              "274"
+            ],
+            "teamPoints": [
+              "1.0",
+              "0.0",
+              "1.0",
+              "3.0",
+              "3.0"
+            ]
+          },
+          {},
+          {
+            "handicapSeries": "490"
+          },
+          {
+            "handicapSeries": "538"
+          },
+          {
+            "handicapSeries": "764",
+            "handicapGames": [
+              "244",
+              "279",
+              "241"
+            ],
+            "teamPoints": [
+              "0.0",
+              "1.0",
+              "0.0",
+              "1.0",
+              "1.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/1/12828109092026f202601reprnt00.pdf"
       },
       {
-        "title": "Girls w/Balls matchup",
+        "title": "Confused & Dangerous matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -1082,35 +1129,6 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 1",
-            "Lane 1 points won: 4"
-          ],
-          [
-            "Hart, Kristine",
-            "144",
-            "47",
-            "132",
-            "169",
-            "167",
-            "468"
-          ],
-          [
-            "Bonebright Lh, Pam",
-            "91",
-            "92",
-            "88",
-            "77",
-            "125",
-            "290"
-          ],
-          [
-            "Total",
-            "220",
-            "246",
-            "292",
-            "758"
-          ],
           [
             "Team 2",
             "Lane 2 points won: 0"
@@ -1139,6 +1157,35 @@
             "204",
             "202",
             "572"
+          ],
+          [
+            "Team 1",
+            "Lane 1 points won: 4"
+          ],
+          [
+            "Hart, Kristine",
+            "144",
+            "47",
+            "132",
+            "169",
+            "167",
+            "468"
+          ],
+          [
+            "Bonebright Lh, Pam",
+            "91",
+            "92",
+            "88",
+            "77",
+            "125",
+            "290"
+          ],
+          [
+            "Total",
+            "220",
+            "246",
+            "292",
+            "758"
           ]
         ],
         "emphasis": [
@@ -1205,15 +1252,62 @@
           ],
           [
             false,
-            false,
-            false,
-            false,
-            false
+            true,
+            true,
+            true,
+            true
           ]
-        ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "487"
+          },
+          {
+            "handicapSeries": "541"
+          },
+          {
+            "handicapSeries": "608",
+            "handicapGames": [
+              "178",
+              "216",
+              "214"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0"
+            ]
+          },
+          {},
+          {
+            "handicapSeries": "609"
+          },
+          {
+            "handicapSeries": "566"
+          },
+          {
+            "handicapSeries": "758",
+            "handicapGames": [
+              "220",
+              "246",
+              "292"
+            ],
+            "teamPoints": [
+              "1.0",
+              "1.0",
+              "1.0",
+              "4.0",
+              "4.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/1/12828109092026f202601reprnt00.pdf"
       },
       {
-        "title": "UnBowlievable matchup",
+        "title": "Hotflashes matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -1224,35 +1318,6 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 3",
-            "Lane 3 points won: 1"
-          ],
-          [
-            "Thornton, Peggy",
-            "129",
-            "60",
-            "104",
-            "131",
-            "130",
-            "365"
-          ],
-          [
-            "Atkinson, Robyn",
-            "102",
-            "83",
-            "96",
-            "84",
-            "105",
-            "285"
-          ],
-          [
-            "Total",
-            "200",
-            "215",
-            "235",
-            "650"
-          ],
           [
             "Team 4",
             "Lane 4 points won: 3"
@@ -1281,6 +1346,35 @@
             "244",
             "187",
             "723"
+          ],
+          [
+            "Team 3",
+            "Lane 3 points won: 1"
+          ],
+          [
+            "Thornton, Peggy",
+            "129",
+            "60",
+            "104",
+            "131",
+            "130",
+            "365"
+          ],
+          [
+            "Atkinson, Robyn",
+            "102",
+            "83",
+            "96",
+            "84",
+            "105",
+            "285"
+          ],
+          [
+            "Total",
+            "200",
+            "215",
+            "235",
+            "650"
           ]
         ],
         "emphasis": [
@@ -1313,10 +1407,10 @@
           ],
           [
             false,
+            true,
+            true,
             false,
-            false,
-            false,
-            false
+            true
           ],
           [
             true,
@@ -1349,10 +1443,57 @@
             false,
             false,
             false,
-            false,
+            true,
             false
           ]
-        ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "538"
+          },
+          {
+            "handicapSeries": "566"
+          },
+          {
+            "handicapSeries": "723",
+            "handicapGames": [
+              "292",
+              "244",
+              "187"
+            ],
+            "teamPoints": [
+              "1.0",
+              "1.0",
+              "0.0",
+              "3.0",
+              "3.0"
+            ]
+          },
+          {},
+          {
+            "handicapSeries": "545"
+          },
+          {
+            "handicapSeries": "534"
+          },
+          {
+            "handicapSeries": "698",
+            "handicapGames": [
+              "216",
+              "231",
+              "251"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "1.0",
+              "1.0",
+              "1.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/1/12828109092026f202601reprnt00.pdf"
       },
       {
         "title": "Mines In The Gutter matchup",
@@ -1426,12 +1567,37 @@
           ],
           [
             false,
+            true,
             false,
-            false,
-            false,
-            false
+            true,
+            true
           ]
-        ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "512"
+          },
+          {
+            "handicapSeries": "607"
+          },
+          {
+            "handicapSeries": "756",
+            "handicapGames": [
+              "252",
+              "228",
+              "276"
+            ],
+            "teamPoints": [
+              "1.0",
+              "0.0",
+              "1.0",
+              "3.0",
+              "3.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/1/12828109092026f202601reprnt00.pdf"
       },
       {
         "title": "Strike 3 matchup",
@@ -1510,7 +1676,32 @@
             false,
             false
           ]
-        ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "511"
+          },
+          {
+            "handicapSeries": "519"
+          },
+          {
+            "handicapSeries": "724",
+            "handicapGames": [
+              "246",
+              "244",
+              "234"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/1/12828109092026f202601reprnt00.pdf"
       }
     ],
     "lanes": [
@@ -2233,14 +2424,14 @@
       }
     ]
   },
-  "lastAttemptedAt": "2026-09-15T19:49:35.336Z",
-  "lastCheckedAt": "2026-09-15T15:29:13.748Z",
+  "lastAttemptedAt": null,
+  "lastCheckedAt": "2026-09-15T20:43:46.177Z",
   "sourceFingerprint": "1b36f77ccf6fefa94896b764a1ea16e94d84814d26480234dc8bd67315848d4a",
   "history": [
     {
       "week": "1",
       "sourceUpdated": "Sep 9, 2026",
-      "syncedAt": "2026-09-15T15:29:13.748Z",
+      "syncedAt": "2026-09-15T20:43:46.177Z",
       "views": {
         "standings": [
           {
@@ -3150,7 +3341,7 @@
         ],
         "recaps": [
           {
-            "title": "Misfits matchup",
+            "title": "Bucket Heads matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -3161,35 +3352,6 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 6",
-                "Lane 6 points won: 1"
-              ],
-              [
-                "Lee, Susan",
-                "163",
-                "31",
-                "117",
-                "153",
-                "127",
-                "397"
-              ],
-              [
-                "Damoude, Toni",
-                "129",
-                "60",
-                "124",
-                "123",
-                "111",
-                "358"
-              ],
-              [
-                "Total",
-                "241",
-                "276",
-                "238",
-                "755"
-              ],
               [
                 "Team 5",
                 "Lane 5 points won: 3"
@@ -3218,6 +3380,35 @@
                 "274",
                 "274",
                 "865"
+              ],
+              [
+                "Team 6",
+                "Lane 6 points won: 1"
+              ],
+              [
+                "Lee, Susan",
+                "163",
+                "31",
+                "117",
+                "153",
+                "127",
+                "397"
+              ],
+              [
+                "Damoude, Toni",
+                "129",
+                "60",
+                "124",
+                "123",
+                "111",
+                "358"
+              ],
+              [
+                "Total",
+                "241",
+                "276",
+                "238",
+                "755"
               ]
             ],
             "emphasis": [
@@ -3250,10 +3441,10 @@
               ],
               [
                 false,
+                true,
                 false,
-                false,
-                false,
-                false
+                true,
+                true
               ],
               [
                 true,
@@ -3285,14 +3476,61 @@
               [
                 false,
                 false,
-                false,
+                true,
                 false,
                 false
               ]
-            ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "542"
+              },
+              {
+                "handicapSeries": "584"
+              },
+              {
+                "handicapSeries": "865",
+                "handicapGames": [
+                  "317",
+                  "274",
+                  "274"
+                ],
+                "teamPoints": [
+                  "1.0",
+                  "0.0",
+                  "1.0",
+                  "3.0",
+                  "3.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "490"
+              },
+              {
+                "handicapSeries": "538"
+              },
+              {
+                "handicapSeries": "764",
+                "handicapGames": [
+                  "244",
+                  "279",
+                  "241"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "1.0",
+                  "0.0",
+                  "1.0",
+                  "1.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/1/12828109092026f202601reprnt00.pdf"
           },
           {
-            "title": "Girls w/Balls matchup",
+            "title": "Confused & Dangerous matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -3303,35 +3541,6 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 1",
-                "Lane 1 points won: 4"
-              ],
-              [
-                "Hart, Kristine",
-                "144",
-                "47",
-                "132",
-                "169",
-                "167",
-                "468"
-              ],
-              [
-                "Bonebright Lh, Pam",
-                "91",
-                "92",
-                "88",
-                "77",
-                "125",
-                "290"
-              ],
-              [
-                "Total",
-                "220",
-                "246",
-                "292",
-                "758"
-              ],
               [
                 "Team 2",
                 "Lane 2 points won: 0"
@@ -3360,6 +3569,35 @@
                 "204",
                 "202",
                 "572"
+              ],
+              [
+                "Team 1",
+                "Lane 1 points won: 4"
+              ],
+              [
+                "Hart, Kristine",
+                "144",
+                "47",
+                "132",
+                "169",
+                "167",
+                "468"
+              ],
+              [
+                "Bonebright Lh, Pam",
+                "91",
+                "92",
+                "88",
+                "77",
+                "125",
+                "290"
+              ],
+              [
+                "Total",
+                "220",
+                "246",
+                "292",
+                "758"
               ]
             ],
             "emphasis": [
@@ -3426,15 +3664,62 @@
               ],
               [
                 false,
-                false,
-                false,
-                false,
-                false
+                true,
+                true,
+                true,
+                true
               ]
-            ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "487"
+              },
+              {
+                "handicapSeries": "541"
+              },
+              {
+                "handicapSeries": "608",
+                "handicapGames": [
+                  "178",
+                  "216",
+                  "214"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "609"
+              },
+              {
+                "handicapSeries": "566"
+              },
+              {
+                "handicapSeries": "758",
+                "handicapGames": [
+                  "220",
+                  "246",
+                  "292"
+                ],
+                "teamPoints": [
+                  "1.0",
+                  "1.0",
+                  "1.0",
+                  "4.0",
+                  "4.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/1/12828109092026f202601reprnt00.pdf"
           },
           {
-            "title": "UnBowlievable matchup",
+            "title": "Hotflashes matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -3445,35 +3730,6 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 3",
-                "Lane 3 points won: 1"
-              ],
-              [
-                "Thornton, Peggy",
-                "129",
-                "60",
-                "104",
-                "131",
-                "130",
-                "365"
-              ],
-              [
-                "Atkinson, Robyn",
-                "102",
-                "83",
-                "96",
-                "84",
-                "105",
-                "285"
-              ],
-              [
-                "Total",
-                "200",
-                "215",
-                "235",
-                "650"
-              ],
               [
                 "Team 4",
                 "Lane 4 points won: 3"
@@ -3502,6 +3758,35 @@
                 "244",
                 "187",
                 "723"
+              ],
+              [
+                "Team 3",
+                "Lane 3 points won: 1"
+              ],
+              [
+                "Thornton, Peggy",
+                "129",
+                "60",
+                "104",
+                "131",
+                "130",
+                "365"
+              ],
+              [
+                "Atkinson, Robyn",
+                "102",
+                "83",
+                "96",
+                "84",
+                "105",
+                "285"
+              ],
+              [
+                "Total",
+                "200",
+                "215",
+                "235",
+                "650"
               ]
             ],
             "emphasis": [
@@ -3534,10 +3819,10 @@
               ],
               [
                 false,
+                true,
+                true,
                 false,
-                false,
-                false,
-                false
+                true
               ],
               [
                 true,
@@ -3570,10 +3855,57 @@
                 false,
                 false,
                 false,
-                false,
+                true,
                 false
               ]
-            ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "538"
+              },
+              {
+                "handicapSeries": "566"
+              },
+              {
+                "handicapSeries": "723",
+                "handicapGames": [
+                  "292",
+                  "244",
+                  "187"
+                ],
+                "teamPoints": [
+                  "1.0",
+                  "1.0",
+                  "0.0",
+                  "3.0",
+                  "3.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "545"
+              },
+              {
+                "handicapSeries": "534"
+              },
+              {
+                "handicapSeries": "698",
+                "handicapGames": [
+                  "216",
+                  "231",
+                  "251"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "1.0",
+                  "1.0",
+                  "1.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/1/12828109092026f202601reprnt00.pdf"
           },
           {
             "title": "Mines In The Gutter matchup",
@@ -3647,12 +3979,37 @@
               ],
               [
                 false,
+                true,
                 false,
-                false,
-                false,
-                false
+                true,
+                true
               ]
-            ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "512"
+              },
+              {
+                "handicapSeries": "607"
+              },
+              {
+                "handicapSeries": "756",
+                "handicapGames": [
+                  "252",
+                  "228",
+                  "276"
+                ],
+                "teamPoints": [
+                  "1.0",
+                  "0.0",
+                  "1.0",
+                  "3.0",
+                  "3.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/1/12828109092026f202601reprnt00.pdf"
           },
           {
             "title": "Strike 3 matchup",
@@ -3731,7 +4088,32 @@
                 false,
                 false
               ]
-            ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "511"
+              },
+              {
+                "handicapSeries": "519"
+              },
+              {
+                "handicapSeries": "724",
+                "handicapGames": [
+                  "246",
+                  "244",
+                  "234"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/1/12828109092026f202601reprnt00.pdf"
           }
         ],
         "lanes": [
