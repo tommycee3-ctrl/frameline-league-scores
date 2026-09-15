@@ -334,6 +334,7 @@ for(const league of discoveryOnly?[]:leagues.filter(league=>recentlyUpdated(leag
   // Historical backfills belong to the nightly maintenance workflow. The
   // frequent known-league refresh must remain small enough to finish before
   // its next two-hour cycle.
+  const needsOfficialRecap = (current.views?.recaps ?? []).some(table => table.rows?.length && !table.sourceReport);
   const needsHistoryBackfill=!knownOnly&&!currentOnly&&Number(current.week)>1&&historyWeeks.size<Number(current.week);
   // Standings, recaps, and lane assignments are not always published at the
   // same time.  A standings-only fingerprint can therefore remain unchanged
@@ -341,7 +342,7 @@ for(const league of discoveryOnly?[]:leagues.filter(league=>recentlyUpdated(leag
   // league's normal posting window, refresh the complete league so those
   // later-published views are not left behind.
   const postingWindowRefresh=isInPostingWindow(league)||!current.syncedAt||Date.now()-Date.parse(current.lastCheckedAt??current.syncedAt)>24*60*60*1000;
-  if(isWindowOpen(league,current)&&(force||!hasRows||sourceChanged||fingerprintChanged||needsInitialRecentCheck||needsHistoryBackfill||postingWindowRefresh)) candidates.push({league,file,current,sourceFingerprint});
+  if(isWindowOpen(league,current)&&(force||!hasRows||sourceChanged||fingerprintChanged||needsInitialRecentCheck||needsHistoryBackfill||needsOfficialRecap||postingWindowRefresh)) candidates.push({league,file,current,sourceFingerprint});
 }
 candidates.sort((a,b)=>Date.parse(a.current.lastAttemptedAt??a.current.lastCheckedAt??a.current.syncedAt??"1970-01-01")-Date.parse(b.current.lastAttemptedAt??b.current.lastCheckedAt??b.current.syncedAt??"1970-01-01"));
 await markerPage.close();
