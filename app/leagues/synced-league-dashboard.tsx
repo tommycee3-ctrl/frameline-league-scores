@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { officialScoreClass } from "./recap-results";
+import { officialScoreClass, reportedPointTotals } from "./recap-results";
 import { nationalsRosterByTeam } from "./nationals-rosters";
 
 export type Table = {
@@ -10,6 +10,8 @@ export type Table = {
   rows: string[][];
   emphasis?: boolean[][];
   team?: string;
+  sourceReport?: string;
+  recapDetails?: Array<{ handicapSeries?: string; handicapGames?: string[]; teamPoints?: string[]; matchPoints?: string[] }>;
 };
 export type LeagueSnapshot = {
   id: string;
@@ -62,6 +64,8 @@ type RecapTeam = {
   emphasis: boolean[][];
   total: string[];
   totalEmphasis: boolean[];
+  details: NonNullable<Table["recapDetails"]>;
+  totalDetails?: NonNullable<Table["recapDetails"]>[number];
 };
 const parseRecapMatchups = (tables: Table[] = []) =>
   tables
@@ -80,14 +84,17 @@ const parseRecapMatchups = (tables: Table[] = []) =>
             emphasis: [],
             total: [],
             totalEmphasis: [],
+            details: [],
           };
           teams.push(active);
         } else if (active && row[0]?.toLowerCase() === "total") {
           active.total = row;
           active.totalEmphasis = table.emphasis?.[rowIndex] ?? [];
+          active.totalDetails = table.recapDetails?.[rowIndex];
         } else if (active) {
           active.rows.push(row);
           active.emphasis.push(table.emphasis?.[rowIndex] ?? []);
+          active.details.push(table.recapDetails?.[rowIndex] ?? {});
         }
       }
       return teams;
@@ -407,23 +414,15 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
       })
       .filter((entry): entry is NonNullable<typeof entry> => Boolean(entry))
       .sort((left, right) => Number(left.week) - Number(right.week));
-    let runningTotal = 0;
-    return entries.map((entry) => {
-      // Source WON values are authoritative, including zero.
-      const resolvedWeekPoints = entry.reportedWeekPoints;
-      if (resolvedWeekPoints !== null) {
-        entry.weekPoints = resolvedWeekPoints;
-        runningTotal += resolvedWeekPoints;
-      }
-      return {
-        ...entry,
-        totalPoints: hasIndividualPoints && resolvedWeekPoints !== null ? String(runningTotal) : "",
-      };
-    });
+    const totals = reportedPointTotals(entries.map(entry => ({ ...entry, week: String(entry.week) })));
+    return entries.map((entry, index) => ({
+      ...entry,
+      totalPoints: hasIndividualPoints ? totals[index] : "",
+    }));
   };
   const bowlerPointTotal = (name: string, team: string) => {
     const history = bowlerHistory(name, team);
-    return history.at(-1)?.totalPoints || "0";
+    return history.at(-1)?.totalPoints || "—";
   };
   const q = query.trim().toLowerCase();
   const week = selectedWeek;
@@ -881,7 +880,7 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                       <b>No opponent scorecard posted</b>
                     </span>}
                   </header>
-                  <p>Scores are scratch. Win highlights follow source markings; points follow the official report.</p>
+                  <p>Scores are scratch. Win highlights follow the official recap, including handicap series. Points follow the official report.</p>
                   <div className="recap-scroll">
                     {matchup.map((team) => {
                       return (
@@ -894,7 +893,7 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                               <th>Game 1</th>
                               <th>Game 2</th>
                               <th>Game 3</th>
-                              <th>Scratch series</th>
+                              <th>Series</th>
                               {hasIndividualPoints && <th>Individual pts</th>}
                             </tr>
                           </thead>
@@ -914,12 +913,14 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                                       className={officialScoreClass(officialFlags[3 + game])}
                                     >
                                       {row[3 + game]}
+                                      {team.details[r]?.handicapSeries && Number(row[2]) > 0 && <small>{Number(row[3 + game]) + Number(row[2])} with handicap</small>}
                                     </td>
                                   ))}
                                   <td
                                     className={officialScoreClass(officialFlags[6])}
                                   >
                                     <b>{row.at(-1)}</b>
+                                    {team.details[r]?.handicapSeries && <small>{team.details[r].handicapSeries} with handicap</small>}
                                   </td>
                                   {hasIndividualPoints && <td className="individual-points">
                                     <b>{bowlerHistory(personName(row[0]), team.team).find((entry) => String(entry.week) === selectedWeek)?.weekPoints ?? "—"}</b>
@@ -932,9 +933,14 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                               <tr className="recap-total">
                                 <td>Team total</td><td></td><td></td>
                                 {[1, 2, 3, 4].map((column) => (
-                                  <td key={column} className={officialScoreClass(team.totalEmphasis[column])}>{team.total[column]}</td>
+                                  <td key={column} className={officialScoreClass(team.totalEmphasis[column])}>
+                                    {team.total[column]}
+                                    {column < 4 && team.totalDetails?.handicapGames?.[column - 1] && <small>{team.totalDetails.handicapGames[column - 1]} with handicap</small>}
+                                    {column === 4 && team.totalDetails?.handicapSeries && <small>{team.totalDetails.handicapSeries} with handicap</small>}
+                                    {column < 4 && team.totalDetails?.teamPoints?.[column - 1] && <small>{Number(team.totalDetails.teamPoints[column - 1])} team pts</small>}
+                                  </td>
                                 ))}
-                                {hasIndividualPoints && <td className="team-points-cell"><b>—</b><small>not reported separately</small></td>}
+                                {hasIndividualPoints && <td className="team-points-cell"><b>{team.totalDetails?.teamPoints?.at(-1) ? Number(team.totalDetails.teamPoints.at(-1)) : "—"}</b><small>official team pts</small></td>}
                               </tr>
                             )}
                           </tbody>

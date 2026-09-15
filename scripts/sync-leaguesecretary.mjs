@@ -1,3 +1,4 @@
+import { enrichOfficialRecaps } from "./official-recap.mjs";
 import { runImportQueue } from "./import-queue.mjs";
 import { withSourceRetry } from "./source-retry.mjs";
 import { validateSourceView, selectRosterTable } from "./source-contract.mjs";
@@ -187,7 +188,10 @@ async function extractAllRecaps(page,standings) {
     })).filter(option=>option.label&&option.value);
   }).catch(()=>[]);
   const uniqueOptions=[...new Map(options.map(option=>[option.value,option])).values()];
+  const seenTeams = new Set();
   for(const option of uniqueOptions) {
+    const number = standings?.rows.find(row => clean(cellValue(standings,row,"Team")).toLowerCase() === clean(option.label).toLowerCase());
+    if (number && seenTeams.has(cellValue(standings,number,"Team#"))) continue;
     await page.locator("#ddTeam, #leagueRecapTeam").first().evaluate((element,target)=>{
       const widget=window.jQuery?.(element).data("kendoDropDownList");
       if(!widget) { element.value=target; element.dispatchEvent(new Event("change",{bubbles:true})); return; }
@@ -199,10 +203,11 @@ async function extractAllRecaps(page,standings) {
     if(!matchup[0]) continue;
     const normalized=normalizeRecap(matchup[0],standings);
     const teams=normalized.rows.map(row=>row[0]?.match(/^Team\s+(\d+)$/i)?.[1]).filter(Boolean).sort((a,b)=>Number(a)-Number(b));
+    for (const team of teams) seenTeams.add(team.replace(/^Team\s+/i,""));
     const signature=teams.join("-")||option.value;
     collected.set(signature,{...normalized,title:`${option.label} matchup`});
   }
-  return collected.size?[...collected.values()]:(await extractTables(page)).map(table=>normalizeRecap(table,standings));
+  return enrichOfficialRecaps(page, collected.size?[...collected.values()]:(await extractTables(page)).map(table=>normalizeRecap(table,standings))).catch(error => { error.code = "SOURCE_OFFICIAL_RECAP"; throw error; });
 }
 function normalizeRecap(table,standings) {
   if(!table||!standings) return table;
@@ -387,6 +392,7 @@ try {
         try {
           views[view]=await extractAllRecaps(page,views.standings?.[0]);
         } catch(error) {
+          if (error.code === "SOURCE_OFFICIAL_RECAP") throw error;
           console.warn(`Could not enumerate every recap for ${league.displayName}: ${error.message}`);
           views[view]=(await extractTables(page)).map(table=>normalizeRecap(table,views.standings?.[0]));
         }
@@ -396,14 +402,14 @@ try {
     // history feature was introduced. LeagueSecretary exposes the archived
     // week list on both the bowler and recap views.
     if(!knownOnly&&!currentOnly) {
-      const existingWeeks=new Set((current.history??[]).filter(entry=>entry.views?.standings?.length&&entry.views?.recaps?.length).map(entry=>String(entry.week)));
+      const existingWeeks=new Set((current.history??[]).filter(entry=>entry.views?.standings?.length&&entry.views?.recaps?.length&&entry.views.recaps.every(table=>table.sourceReport)).map(entry=>String(entry.week)));
       const recapUrl=`https://www.leaguesecretary.com/bowling-centers/${league.centerSlug}/bowling-leagues/${league.slug}/${viewPaths.recaps}/${league.id}`;
       await withSourceRetry(()=>page.goto(recapUrl,{waitUntil:"domcontentloaded",timeout:90000}),{onRetry:error=>console.warn(`Retrying source page: ${error.message}`)});
       await page.waitForTimeout(3000);
       const weekOptions=await leagueWeekOptions(page);
       for(const option of weekOptions.filter(item=>item.week!==String(week)&&!existingWeeks.has(item.week))) {
         await selectLeagueWeek(page,option.value);
-        const recaps=await extractAllRecaps(page,views.standings?.[0]).catch(()=>[]);
+        const recaps=await extractAllRecaps(page,views.standings?.[0]);
         const archivedViews={recaps};
         for(const view of ["standings","bowlers","lanes"]) {
           const archiveUrl=`https://www.leaguesecretary.com/bowling-centers/${league.centerSlug}/bowling-leagues/${league.slug}/${viewPaths[view]}/${league.id}`;
@@ -418,6 +424,7 @@ try {
       }
     }
     await page.close();
+    if ((current.views?.recaps ?? []).some(table => table.sourceReport) && !(views.recaps ?? []).every(table => table.sourceReport)) throw new Error("Official recap PDF markings are missing; preserving prior verified results.");
     for(const view of Object.keys(viewPaths)) validateSourceView(view,views[view],{required:(current.views?.[view]??[]).some(table=>table.rows?.length)});
     for(const view of Object.keys(viewPaths)) {
       const nextRows=(views[view]??[]).reduce((sum,table)=>sum+table.rows.length,0);

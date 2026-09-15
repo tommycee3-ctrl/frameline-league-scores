@@ -1,19 +1,12 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync, readdirSync } from "node:fs";
-import { officialScoreClass } from "../app/leagues/recap-results.ts";
+import { officialScoreClass, reportedPointTotals } from "../app/leagues/recap-results.ts";
 
 test("unmarked scores never imply wins, losses or ties", () => {
   assert.equal(officialScoreClass(false), "");
   assert.equal(officialScoreClass(undefined), "");
   assert.equal(officialScoreClass(true), "winner-score");
-});
-test("Nationals lower scratch series gets no inferred handicap win", () => {
-  const league = JSON.parse(readFileSync("public/data/leagues/132277.json"));
-  const table = league.views.recaps.find(t => t.rows.some(r => r[0] === "Casella, James"));
-  const index = table.rows.findIndex(r => r[0] === "Casella, James");
-  assert.equal(table.rows[index][6], "482");
-  assert.equal(officialScoreClass(table.emphasis[index][6]), "");
 });
 test("all stored leagues render unmarked recap scores neutrally", () => {
   let checked = 0;
@@ -30,6 +23,12 @@ test("all stored leagues render unmarked recap scores neutrally", () => {
 });
 test("dashboard never replaces official zero points or calculates result classes", () => {
   const source = readFileSync("app/leagues/synced-league-dashboard.tsx", "utf8");
-  assert.ok(source.includes("const resolvedWeekPoints = entry.reportedWeekPoints;"));
+  assert.ok(source.includes("const weekPoints = reportedWeekPoints;"));
   assert.ok(!/pointSeries|individualPoints\(|teamResult\(|resultClass\(/.test(source));
+});
+
+test("missing weeks never produce a falsely complete season point total", () => {
+  assert.deepEqual(reportedPointTotals([{week:"2",reportedWeekPoints:4},{week:"3",reportedWeekPoints:4}]), ["", ""]);
+  assert.deepEqual(reportedPointTotals([{week:"1",reportedWeekPoints:0},{week:"2",reportedWeekPoints:4}]), ["0", "4"]);
+  assert.deepEqual(reportedPointTotals([{week:"1",reportedWeekPoints:4},{week:"2",reportedWeekPoints:null},{week:"3",reportedWeekPoints:4}]), ["4", "", ""]);
 });

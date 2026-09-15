@@ -7,6 +7,8 @@ on:
     branches: [main]
     paths:
       - 'scripts/sync-leaguesecretary.mjs'
+      - 'scripts/official-recap.mjs'
+      - 'scripts/parse-recap-pdf.py'
       - 'scripts/source-contract.mjs'
       - 'scripts/import-queue.mjs'
       - '.github/workflows/source-compatibility.yml'
@@ -26,6 +28,11 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install pdfplumber==0.11.7
+      - run: node --test tests/official-recap.test.mjs
       - run: npx playwright install --with-deps chromium
       - name: Check importer and cache regressions
         run: node --test tests/reconcile-refresh.test.mjs tests/import-queue.test.mjs tests/source-retry.test.mjs tests/source-contract.test.mjs tests/sync-layout.test.mjs tests/service-worker-data.test.mjs
