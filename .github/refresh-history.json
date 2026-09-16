@@ -1,5 +1,17 @@
 [
   {
+    "startedAt": "2026-09-16T20:26:50.926Z",
+    "finishedAt": "2026-09-16T20:27:43.690Z",
+    "durationSeconds": 53,
+    "mode": "directory discovery",
+    "scope": "all",
+    "leaguesChecked": 170,
+    "changeCount": 0,
+    "changes": [],
+    "deferredLeagues": [],
+    "failures": []
+  },
+  {
     "startedAt": "2026-09-16T20:20:37.969Z",
     "finishedAt": "2026-09-16T20:21:30.414Z",
     "durationSeconds": 52,
@@ -11231,39 +11243,5 @@
     "leaguesChecked": 6,
     "changeCount": 0,
     "changes": []
-  },
-  {
-    "startedAt": "2026-09-01T14:54:01.527Z",
-    "finishedAt": "2026-09-01T15:30:58.572Z",
-    "durationSeconds": 2217,
-    "mode": "known leagues",
-    "leaguesChecked": 66,
-    "changeCount": 3,
-    "changes": [
-      {
-        "id": "45883",
-        "name": "Alley Cats 26-27",
-        "area": "Omaha",
-        "center": "Maplewood Lanes",
-        "week": "2",
-        "sourceUpdated": "09/01/2026"
-      },
-      {
-        "id": "45885",
-        "name": "Monday Maniacs 26-27",
-        "area": "Omaha",
-        "center": "Maplewood Lanes",
-        "week": "2",
-        "sourceUpdated": "09/01/2026"
-      },
-      {
-        "id": "55974",
-        "name": "Monday Early Open 2026-2027",
-        "area": "Omaha",
-        "center": "Mockingbird Lanes",
-        "week": "3",
-        "sourceUpdated": "09/01/2026"
-      }
-    ]
   }
 ]
