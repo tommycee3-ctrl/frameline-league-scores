@@ -1,5 +1,417 @@
 [
   {
+    "startedAt": "2026-09-16T13:08:22.439Z",
+    "finishedAt": "2026-09-16T13:08:59.094Z",
+    "durationSeconds": 37,
+    "mode": "LeaguePals leagues",
+    "leaguesChecked": 9,
+    "changeCount": 0,
+    "changes": []
+  },
+  {
+    "startedAt": "2026-09-16T12:18:29.949Z",
+    "finishedAt": "2026-09-16T13:08:22.361Z",
+    "durationSeconds": 2992,
+    "mode": "league discovery",
+    "scope": "all",
+    "leaguesChecked": 170,
+    "changeCount": 0,
+    "changes": [],
+    "deferredLeagues": [],
+    "failures": [
+      {
+        "id": "121705",
+        "name": "Centennial 26",
+        "error": "Cannot safely match official recap bowler , Vacant in team 10; scores 170|45|170|170|170|510; PDF candidates []"
+      },
+      {
+        "id": "129141",
+        "name": "900 Global Scratch Draft 2026",
+        "error": "Command failed: python /home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py /tmp/frameline-recap-Ok3q5H/recap.pdf\nTraceback (most recent call last):\n  File \"/home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py\", line 65, in <module>\n    print(json.dumps(parse(sys.argv[1])))\n                     ^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py\", line 61, in parse\n    raise ValueError(\"Unsupported or empty official recap PDF; no results inferred\")\nValueError: Unsupported or empty official recap PDF; no results inferred\n"
+      },
+      {
+        "id": "55974",
+        "name": "Monday Early Open 2026-2027",
+        "error": "Cannot safely match official recap bowler Dees, Dee in team 9; scores 146|80|134|111|132|377; PDF candidates []"
+      },
+      {
+        "id": "45885",
+        "name": "Monday Maniacs 26-27",
+        "error": "Cannot safely match official recap bowler Roberts, Bill R.J in team 9; scores 193|42|189|205|129|523; PDF candidates []"
+      },
+      {
+        "id": "121300",
+        "name": "Leisure Pearls 26",
+        "error": "Cannot safely match official recap bowler , Vacant in team 6; scores 120|72|120|120|120|360; PDF candidates [{\"name\":\"Grace Barnes\",\"values\":[\"107\",\"83\",\"101\",\"94\",\"109\",\"304\"],\"handicapSeries\":\"553\",\"wins\":[false,false,false,false]},{\"name\":\"Peggy Harker\",\"values\":[\"117\",\"74\",\"97\",\"110\",\"96\",\"303\"],\"handicapSeries\":\"525\",\"wins\":[false,false,false,false]},{\"name\":\"Betty Williams\",\"values\":[\"110\",\"81\",\"102\",\"101\",\"104\",\"307\"],\"handicapSeries\":\"550\",\"wins\":[false,false,false,false]}]"
+      },
+      {
+        "id": "130990",
+        "name": "Triple Trouble 2026",
+        "error": "Cannot safely match official recap bowler H, R in team 5; scores 127|73|117|117|117|351; PDF candidates [{\"name\":\"Roman Hansen\",\"values\":[\"127\",\"73\",\"117\",\"117\",\"117\",\"351\"],\"handicapSeries\":\"570\",\"wins\":[false,false,false,false]}]"
+      },
+      {
+        "id": "145181",
+        "name": "Madonna Youth 26",
+        "error": "Command failed: python /home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py /tmp/frameline-recap-fTPjYT/recap.pdf\nTraceback (most recent call last):\n  File \"/home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py\", line 65, in <module>\n    print(json.dumps(parse(sys.argv[1])))\n                     ^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py\", line 61, in parse\n    raise ValueError(\"Unsupported or empty official recap PDF; no results inferred\")\nValueError: Unsupported or empty official recap PDF; no results inferred\n"
+      },
+      {
+        "id": "144538",
+        "name": "Madonna Adult 26",
+        "error": "Cannot safely match official recap bowler Placek, Sarah in team 15; scores 60|0|78|76||154; PDF candidates []"
+      },
+      {
+        "id": "121706",
+        "name": "Tues. FunDay 26",
+        "error": "Cannot safely match official recap bowler , Vacant in team 18; scores 120|72|120|120|120|360; PDF candidates []"
+      },
+      {
+        "id": "55982",
+        "name": "Tuesday Men 2026-2027",
+        "error": "Cannot safely match official recap bowler Reiss (R), Ed in team 4; scores 208|15|168|200|198|566; PDF candidates []"
+      },
+      {
+        "id": "45895",
+        "name": "Lane Lovers 26-27",
+        "error": "Cannot safely match official recap bowler , Vacant in team 9; scores 130|85|130|130|130|390; PDF candidates [{\"name\":\"Bron Smith\",\"values\":[\"110\",\"103\",\"100\",\"100\",\"100\",\"300\"],\"handicapSeries\":\"609\",\"wins\":[false,false,false,false]},{\"name\":\"Brett Eggert\",\"values\":[\"116\",\"98\",\"97\",\"107\",\"106\",\"310\"],\"handicapSeries\":\"604\",\"wins\":[true,true,false,true]},{\"name\":\"Jantzen Mason\",\"values\":[\"141\",\"75\",\"124\",\"129\",\"131\",\"384\"],\"handicapSeries\":\"609\",\"wins\":[true,true,false,true]},{\"name\":\"Brad Eggert\",\"values\":[\"161\",\"57\",\"139\",\"142\",\"176\",\"457\"],\"handicapSeries\":\"628\",\"wins\":[false,true,true,true]}]"
+      },
+      {
+        "id": "121280",
+        "name": "Wed. A.M. Ladies 26",
+        "error": "Cannot safely match official recap bowler , Vacant in team 8; scores 120|80|120|120|120|360; PDF candidates []"
+      },
+      {
+        "id": "45892",
+        "name": "Young At Heart 26-27",
+        "error": "Cannot safely match official recap bowler , Vacant in team 2; scores 120|90|120|120|120|360; PDF candidates [{\"name\":\"Debbie Titus\",\"values\":[\"117\",\"92\",\"111\",\"105\",\"75\",\"291\"],\"handicapSeries\":\"567\",\"wins\":[false,false,false,false]},{\"name\":\"Connie Cramer\",\"values\":[\"132\",\"79\",\"142\",\"130\",\"135\",\"407\"],\"handicapSeries\":\"644\",\"wins\":[true,false,false,false]},{\"name\":\"Perri Grieb\",\"values\":[\"141\",\"71\",\"116\",\"134\",\"137\",\"387\"],\"handicapSeries\":\"600\",\"wins\":[true,true,false,false]}]"
+      },
+      {
+        "id": "45889",
+        "name": "New Frontier 26-27",
+        "error": "Cannot safely match official recap bowler Hawkes, Dan in team 16; scores 180|40|150|191|174|515; PDF candidates []"
+      },
+      {
+        "id": "51731",
+        "name": "Beta Sigma Phi 26-27",
+        "error": "Cannot safely match official recap bowler , Vacant in team 4; scores 120|0|120|120|120|360; PDF candidates [{\"name\":\"Jan Stamp\",\"values\":[\"95\",\"0\",\"121\",\"85\",\"111\",\"317\"],\"handicapSeries\":\"317\",\"wins\":[false,false,false,false]},{\"name\":\"Jo Sperry\",\"values\":[\"127\",\"0\",\"117\",\"117\",\"117\",\"351\"],\"handicapSeries\":\"351\",\"wins\":[false,false,false,false]}]"
+      },
+      {
+        "id": "45890",
+        "name": "Classy Ladies 26-27",
+        "error": "Cannot safely match official recap bowler , Vacant in team 2; scores 110|99|110|110|110|330; PDF candidates [{\"name\":\"Tracey Payne\",\"values\":[\"120\",\"90\",\"128\",\"118\",\"106\",\"352\"],\"handicapSeries\":\"622\",\"wins\":[true,true,true,true]},{\"name\":\"Amy Hart\",\"values\":[\"122\",\"88\",\"125\",\"141\",\"156\",\"422\"],\"handicapSeries\":\"686\",\"wins\":[false,true,true,true]},{\"name\":\"Kristina Beiermann-T\",\"values\":[\"127\",\"83\",\"139\",\"108\",\"134\",\"381\"],\"handicapSeries\":\"630\",\"wins\":[true,false,true,false]},{\"name\":\"Melissa Bratcher\",\"values\":[\"102\",\"106\",\"131\",\"116\",\"120\",\"367\"],\"handicapSeries\":\"685\",\"wins\":[true,false,true,true]}]"
+      },
+      {
+        "id": "45899",
+        "name": "Boozer Snoozers 26-27",
+        "error": "Cannot safely match official recap bowler Nelson, Dave in team 7; scores 135|76|147|157|156|460; PDF candidates []"
+      },
+      {
+        "id": "45894",
+        "name": "Wednesday Men 26-27",
+        "error": "Cannot safely match official recap bowler Marvin, Rachel in team 24; scores 65|132|50|50|50|150; PDF candidates []"
+      },
+      {
+        "id": "121295",
+        "name": "Royal 26",
+        "error": "Cannot safely match official recap bowler , Vacant in team 5; scores 120|68|120|120|120|360; PDF candidates [{\"name\":\"Krista Burton\",\"values\":[\"113\",\"73\",\"179\",\"123\",\"124\",\"426\"],\"handicapSeries\":\"645\",\"wins\":[false,false,false,false]},{\"name\":\"Nancy Myers\",\"values\":[\"107\",\"79\",\"95\",\"94\",\"126\",\"315\"],\"handicapSeries\":\"552\",\"wins\":[false,false,false,false]},{\"name\":\"Kathy Hall\",\"values\":[\"120\",\"68\",\"99\",\"145\",\"126\",\"370\"],\"handicapSeries\":\"574\",\"wins\":[false,false,false,false]}]"
+      },
+      {
+        "id": "121373",
+        "name": "Industrial 26",
+        "error": "Cannot safely match official recap bowler , Vacant in team 3; scores 150|63|150|150|150|450; PDF candidates []"
+      },
+      {
+        "id": "103772",
+        "name": "PVA 2026-2027",
+        "error": "Cannot safely match official recap bowler , Lanna in team 14; scores 103|77|83|93|93|269; PDF candidates [{\"name\":\"Lanna\",\"values\":[\"103\",\"77\",\"83\",\"93\",\"93\",\"269\"],\"handicapSeries\":\"500\",\"wins\":[false,false,false,false]}]"
+      },
+      {
+        "id": "127516",
+        "name": "Thirsty Thursday 2026",
+        "error": "Cannot safely match official recap bowler Escobar, Pistol in team 17; scores 181|44|121|137|176|434; PDF candidates []"
+      },
+      {
+        "id": "146916",
+        "name": "GUTTER DUSTERS:26-27",
+        "error": "Cannot safely match official recap bowler , Vacant in team 3; scores 120|72|120|120|120|360; PDF candidates [{\"name\":\"TONI HENDERSON\",\"values\":[\"141\",\"53\",\"157\",\"147\",\"172\",\"476\"],\"handicapSeries\":\"635\",\"wins\":[false,false,false,false]}]"
+      },
+      {
+        "id": "112159",
+        "name": "Friday Senior Crazy Mixed 26-27",
+        "error": "Cannot safely match official recap bowler , Vacant in team 12; scores 140|54|140|140|140|420; PDF candidates [{\"name\":\"MIKE FOISEY\",\"values\":[\"149\",\"45\",\"162\",\"161\",\"144\",\"467\"],\"handicapSeries\":\"602\",\"wins\":[false,false,false,false]},{\"name\":\"SALLY FOISEY\",\"values\":[\"84\",\"104\",\"85\",\"91\",\"113\",\"289\"],\"handicapSeries\":\"601\",\"wins\":[false,false,false,false]},{\"name\":\"ANDY POWELL\",\"values\":[\"132\",\"61\",\"187\",\"166\",\"193\",\"546\"],\"handicapSeries\":\"729\",\"wins\":[false,false,false,false]}]"
+      },
+      {
+        "id": "45897",
+        "name": "Yesterdays Kids 26-27",
+        "error": "Cannot safely match official recap bowler , Vacant in team 5; scores 120|90|120|120|120|360; PDF candidates [{\"name\":\"Terri Mahan\",\"values\":[\"121\",\"89\",\"104\",\"87\",\"167\",\"358\"],\"handicapSeries\":\"625\",\"wins\":[false,false,true,false]},{\"name\":\"Pete Mahan\",\"values\":[\"124\",\"86\",\"114\",\"114\",\"114\",\"342\"],\"handicapSeries\":\"600\",\"wins\":[false,false,false,false]},{\"name\":\"Sagda Flowers\",\"values\":[\"139\",\"72\",\"144\",\"154\",\"147\",\"445\"],\"handicapSeries\":\"661\",\"wins\":[false,true,true,true]}]"
+      },
+      {
+        "id": "45901",
+        "name": "Thursday Night Mixed 26-27",
+        "error": "Cannot safely match official recap bowler Baratta, Jj in team 16; scores 178|37|132|193|137|462; PDF candidates []"
+      },
+      {
+        "id": "148625",
+        "name": "Wednesday Scratch Draft League",
+        "error": "Command failed: python /home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py /tmp/frameline-recap-sCuClx/recap.pdf\nTraceback (most recent call last):\n  File \"/home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py\", line 65, in <module>\n    print(json.dumps(parse(sys.argv[1])))\n                     ^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py\", line 61, in parse\n    raise ValueError(\"Unsupported or empty official recap PDF; no results inferred\")\nValueError: Unsupported or empty official recap PDF; no results inferred\n"
+      },
+      {
+        "id": "111725",
+        "name": "LADIES GREATER OMAHA 27",
+        "error": "Cannot safely match official recap bowler , Vacant in team 9; scores 160|45|160|160|160|480; PDF candidates []"
+      },
+      {
+        "id": "50719",
+        "name": "Double Trouble 2026",
+        "error": "Cannot safely match official recap bowler , Vacant in team 6; scores 125|95|125|125|125|375; PDF candidates [{\"name\":\"Damien L. Christianson\",\"values\":[\"157\",\"63\",\"169\",\"148\",\"155\",\"472\"],\"handicapSeries\":\"661\",\"wins\":[false,false,false,false]},{\"name\":\"Kylie Christianson\",\"values\":[\"148\",\"72\",\"131\",\"164\",\"150\",\"445\"],\"handicapSeries\":\"661\",\"wins\":[false,false,false,false]}]"
+      },
+      {
+        "id": "122058",
+        "name": "Mon. 1pm Srs. 26",
+        "error": "Cannot safely match official recap bowler , Vacant in team 4; scores 120|90|120|120|120|360; PDF candidates [{\"name\":\"DENNIS WITFOTH\",\"values\":[\"126\",\"84\",\"126\",\"126\",\"126\",\"378\"],\"handicapSeries\":\"630\",\"wins\":[false,false,false,false]}]"
+      },
+      {
+        "id": "51861",
+        "name": "2 x 2 26",
+        "error": "Cannot safely match official recap bowler F, C in team 1; scores 111|114|141|151|122|414; PDF candidates [{\"name\":\"Camden Fuchs\",\"values\":[\"113\",\"112\",\"100\",\"111\",\"119\",\"330\"],\"handicapSeries\":\"666\",\"wins\":[false,false,false,false]},{\"name\":\"Carter Fuchs\",\"values\":[\"111\",\"114\",\"141\",\"151\",\"122\",\"414\"],\"handicapSeries\":\"756\",\"wins\":[false,false,false,false]},{\"name\":\"Heather Fuchs\",\"values\":[\"123\",\"102\",\"131\",\"121\",\"133\",\"385\"],\"handicapSeries\":\"691\",\"wins\":[false,false,false,false]},{\"name\":\"Matt Fuchs\",\"values\":[\"158\",\"67\",\"164\",\"147\",\"154\",\"465\"],\"handicapSeries\":\"666\",\"wins\":[false,false,false,false]}]"
+      },
+      {
+        "id": "64208",
+        "name": "Graphic Arts Bowling League 26-27",
+        "error": "Cannot safely match official recap bowler Espinoza, Miggy in team 9; scores 207|11|212|202|199|613; PDF candidates [{\"name\":\"MIGGY ESPINOZA JR\",\"values\":[\"207\",\"11\",\"212\",\"202\",\"199\",\"613\"],\"handicapSeries\":\"646\",\"wins\":[false,false,false,false]}]"
+      },
+      {
+        "id": "122059",
+        "name": "University 26",
+        "error": "Command failed: python /home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py /tmp/frameline-recap-BJ5Bfk/recap.pdf\nTraceback (most recent call last):\n  File \"/home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py\", line 65, in <module>\n    print(json.dumps(parse(sys.argv[1])))\n                     ^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py\", line 61, in parse\n    raise ValueError(\"Unsupported or empty official recap PDF; no results inferred\")\nValueError: Unsupported or empty official recap PDF; no results inferred\n"
+      },
+      {
+        "id": "122056",
+        "name": "Mon AM Srs. 26",
+        "error": "Cannot safely match official recap bowler , Vacant in team 10; scores 150|56|150|150|150|450; PDF candidates []"
+      },
+      {
+        "id": "143398",
+        "name": "Sunday 9 Pin 26",
+        "error": "Command failed: python /home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py /tmp/frameline-recap-Lw8WSw/recap.pdf\nTraceback (most recent call last):\n  File \"/home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py\", line 65, in <module>\n    print(json.dumps(parse(sys.argv[1])))\n                     ^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py\", line 61, in parse\n    raise ValueError(\"Unsupported or empty official recap PDF; no results inferred\")\nValueError: Unsupported or empty official recap PDF; no results inferred\n"
+      },
+      {
+        "id": "130952",
+        "name": "Hot Shots Sport Fall 2026",
+        "error": "Cannot safely match official recap bowler B, A in team 10; scores 61|143|78|70|31|179; PDF candidates [{\"name\":\"Adam Becher\",\"values\":[\"61\",\"143\",\"78\",\"70\",\"31\",\"179\"],\"handicapSeries\":\"608\",\"wins\":[false,false,false,false]},{\"name\":\"Gabby Becher\",\"values\":[\"83\",\"123\",\"118\",\"82\",\"101\",\"301\"],\"handicapSeries\":\"670\",\"wins\":[true,false,true,false]}]"
+      },
+      {
+        "id": "51850",
+        "name": "Manic Mondays 2026",
+        "error": "Cannot safely match official recap bowler , Vacant in team 15; scores 120|90|120|120|120|360; PDF candidates [{\"name\":\"Phyllis Miller\",\"values\":[\"104\",\"104\",\"137\",\"128\",\"102\",\"367\"],\"handicapSeries\":\"679\",\"wins\":[true,true,true,true]},{\"name\":\"Cyndi Pokorny\",\"values\":[\"116\",\"93\",\"97\",\"98\",\"97\",\"292\"],\"handicapSeries\":\"571\",\"wins\":[true,false,false,false]},{\"name\":\"Donna Ferrin\",\"values\":[\"136\",\"75\",\"111\",\"163\",\"134\",\"408\"],\"handicapSeries\":\"633\",\"wins\":[true,true,true,true]}]"
+      },
+      {
+        "id": "118566",
+        "name": "2026 Family Two some",
+        "error": "Cannot safely match official recap bowler , Chase in team 11; scores 88|118|56|63|74|193; PDF candidates [{\"name\":\"Chase\",\"values\":[\"88\",\"118\",\"56\",\"63\",\"74\",\"193\"],\"handicapSeries\":\"547\",\"wins\":[false,false,false,false]},{\"name\":\"Scott\",\"values\":[\"129\",\"81\",\"116\",\"188\",\"155\",\"459\"],\"handicapSeries\":\"702\",\"wins\":[false,false,false,false]}]"
+      },
+      {
+        "id": "128706",
+        "name": "Triple Take 2026",
+        "error": "Cannot safely match official recap bowler , Vacant in team 17; scores 140|76|140|140|140|420; PDF candidates [{\"name\":\"Clint Bundy\",\"values\":[\"162\",\"57\",\"188\",\"130\",\"166\",\"484\"],\"handicapSeries\":\"655\",\"wins\":[false,false,false,false]},{\"name\":\"Hannah Steyer\",\"values\":[\"82\",\"125\",\"104\",\"54\",\"89\",\"247\"],\"handicapSeries\":\"622\",\"wins\":[false,false,false,false]},{\"name\":\"Nick Steyer\",\"values\":[\"166\",\"54\",\"172\",\"125\",\"203\",\"500\"],\"handicapSeries\":\"662\",\"wins\":[false,false,false,false]}]"
+      },
+      {
+        "id": "121897",
+        "name": "Pky. Wed. Srs. 26",
+        "error": "Cannot safely match official recap bowler Ballengee, Linda in team 3; scores 143|57|95|133|133|361; PDF candidates []"
+      },
+      {
+        "id": "128282",
+        "name": "SVL Seniors 2026",
+        "error": "Cannot safely match official recap bowler , Vacant in team 11; scores 20|180|20|20|20|60; PDF candidates [{\"name\":\"Pam Unger\",\"values\":[\"139\",\"72\",\"135\",\"114\",\"159\",\"408\"],\"handicapSeries\":\"624\",\"wins\":[false,false,false,false]},{\"name\":\"John Bruns\",\"values\":[\"162\",\"52\",\"187\",\"122\",\"124\",\"433\"],\"handicapSeries\":\"589\",\"wins\":[false,false,false,false]},{\"name\":\"Clyde Street Sr\",\"values\":[\"156\",\"57\",\"165\",\"134\",\"129\",\"428\"],\"handicapSeries\":\"599\",\"wins\":[false,false,false,false]}]"
+      },
+      {
+        "id": "51851",
+        "name": "Sunday Mixed 2026",
+        "error": "Cannot safely match official recap bowler Janik, Mike in team 1; scores 167|47|159|154|180|493; PDF candidates []"
+      },
+      {
+        "id": "68076",
+        "name": "Summer Doubles 2026",
+        "error": "Cannot safely match official recap bowler Petersen, Line 1 in team 47; scores 214|8|201|158|203|562; PDF candidates []"
+      },
+      {
+        "id": "55979",
+        "name": "Wednesday Pinspinners 2026-2027",
+        "error": "Cannot safely match official recap bowler Montgomery, Lita in team 3; scores 120|72|120|120|120|360; PDF candidates []"
+      },
+      {
+        "id": "45887",
+        "name": "89.7 The River Fall 26",
+        "error": "Cannot safely match official recap bowler , Vacant in team 10; scores 135|68|135|135|135|405; PDF candidates [{\"name\":\"Janessa Mackey\",\"values\":[\"118\",\"81\",\"116\",\"117\",\"123\",\"356\"],\"handicapSeries\":\"599\",\"wins\":[false,false,false,false]},{\"name\":\"Taylor McNutt\",\"values\":[\"133\",\"69\",\"179\",\"121\",\"99\",\"399\"],\"handicapSeries\":\"606\",\"wins\":[false,false,false,false]},{\"name\":\"Zach Kurmel\",\"values\":[\"132\",\"70\",\"154\",\"114\",\"130\",\"398\"],\"handicapSeries\":\"608\",\"wins\":[false,false,false,false]}]"
+      },
+      {
+        "id": "51847",
+        "name": "Tuesday 9 Pin No Tap 2026",
+        "error": "Command failed: python /home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py /tmp/frameline-recap-HR9NWH/recap.pdf\nTraceback (most recent call last):\n  File \"/home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py\", line 65, in <module>\n    print(json.dumps(parse(sys.argv[1])))\n                     ^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py\", line 61, in parse\n    raise ValueError(\"Unsupported or empty official recap PDF; no results inferred\")\nValueError: Unsupported or empty official recap PDF; no results inferred\n"
+      },
+      {
+        "id": "81627",
+        "name": "Tuesday Doubles Classic 2026",
+        "error": "Command failed: python /home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py /tmp/frameline-recap-aOByI2/recap.pdf\nTraceback (most recent call last):\n  File \"/home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py\", line 65, in <module>\n    print(json.dumps(parse(sys.argv[1])))\n                     ^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py\", line 61, in parse\n    raise ValueError(\"Unsupported or empty official recap PDF; no results inferred\")\nValueError: Unsupported or empty official recap PDF; no results inferred\n"
+      },
+      {
+        "id": "122053",
+        "name": "Shooters 26",
+        "error": "Cannot safely match official recap bowler , Vacant in team 10; scores 150|54|150|150|150|450; PDF candidates []"
+      },
+      {
+        "id": "137930",
+        "name": "Sum. Wed. Srs. 26",
+        "error": "Cannot safely match official recap bowler , Vacant in team 1; scores 120|90|120|120|120|360; PDF candidates [{\"name\":\"BARB SHAW\",\"values\":[\"117\",\"93\",\"105\",\"102\",\"88\",\"295\"],\"handicapSeries\":\"574\",\"wins\":[false,false,false,false]},{\"name\":\"MIKE ELROD\",\"values\":[\"144\",\"66\",\"151\",\"134\",\"183\",\"468\"],\"handicapSeries\":\"666\",\"wins\":[false,false,false,false]}]"
+      },
+      {
+        "id": "122054",
+        "name": "Wed. Srs. 26",
+        "error": "Cannot safely match official recap bowler Sigrist, Michele in team 8; scores 129|81|112|138|129|379; PDF candidates [{\"name\":\"BRUCE SIGRIST\",\"values\":[\"126\",\"84\",\"101\",\"86\",\"126\",\"313\"],\"handicapSeries\":\"565\",\"wins\":[false,false,false,false]}]"
+      },
+      {
+        "id": "122315",
+        "name": "F.A.C. 26",
+        "error": "Cannot safely match official recap bowler S, G in team 1; scores 51|149|40|55|58|153; PDF candidates [{\"name\":\"GOLDIE SWENSON\",\"values\":[\"51\",\"149\",\"40\",\"55\",\"58\",\"153\"],\"handicapSeries\":\"600\",\"wins\":[false,false,false,false]},{\"name\":\"ADDY BRISON\",\"values\":[\"101\",\"99\",\"104\",\"119\",\"82\",\"305\"],\"handicapSeries\":\"602\",\"wins\":[false,false,false,false]}]"
+      },
+      {
+        "id": "118772",
+        "name": "Odd Mixers 2026",
+        "error": "Cannot safely match official recap bowler Marion, Felands in team 2; scores 153|69|166|153|143|462; PDF candidates []"
+      },
+      {
+        "id": "138652",
+        "name": "Wacky Junior Gold Sport 2026",
+        "error": "Cannot safely match official recap bowler B, J in team 8; scores 102|88|134|105|124|363; PDF candidates [{\"name\":\"Jacob Bender\",\"values\":[\"102\",\"88\",\"134\",\"105\",\"124\",\"363\"],\"handicapSeries\":\"627\",\"wins\":[false,false,false,false]}]"
+      },
+      {
+        "id": "79460",
+        "name": "Century Eagles 2026-2027",
+        "error": "Source layout check: recaps returned no rows"
+      },
+      {
+        "id": "145372",
+        "name": "Special Oly Ben Buffalos Fall 26",
+        "error": "Command failed: python /home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py /tmp/frameline-recap-oSWGmA/recap.pdf\nTraceback (most recent call last):\n  File \"/home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py\", line 65, in <module>\n    print(json.dumps(parse(sys.argv[1])))\n                     ^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py\", line 61, in parse\n    raise ValueError(\"Unsupported or empty official recap PDF; no results inferred\")\nValueError: Unsupported or empty official recap PDF; no results inferred\n"
+      },
+      {
+        "id": "118842",
+        "name": "Scratch Draft 2026",
+        "error": "Command failed: python /home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py /tmp/frameline-recap-LPw6zm/recap.pdf\nTraceback (most recent call last):\n  File \"/home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py\", line 65, in <module>\n    print(json.dumps(parse(sys.argv[1])))\n                     ^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py\", line 61, in parse\n    raise ValueError(\"Unsupported or empty official recap PDF; no results inferred\")\nValueError: Unsupported or empty official recap PDF; no results inferred\n"
+      },
+      {
+        "id": "125993",
+        "name": "Sport Shot Challenge 2026",
+        "error": "Command failed: python /home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py /tmp/frameline-recap-aebptc/recap.pdf\nTraceback (most recent call last):\n  File \"/home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py\", line 65, in <module>\n    print(json.dumps(parse(sys.argv[1])))\n                     ^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py\", line 61, in parse\n    raise ValueError(\"Unsupported or empty official recap PDF; no results inferred\")\nValueError: Unsupported or empty official recap PDF; no results inferred\n"
+      },
+      {
+        "id": "51846",
+        "name": "Wednesday 9 Pin 2026",
+        "error": "Command failed: python /home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py /tmp/frameline-recap-5Ojpwy/recap.pdf\nTraceback (most recent call last):\n  File \"/home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py\", line 65, in <module>\n    print(json.dumps(parse(sys.argv[1])))\n                     ^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py\", line 61, in parse\n    raise ValueError(\"Unsupported or empty official recap PDF; no results inferred\")\nValueError: Unsupported or empty official recap PDF; no results inferred\n"
+      },
+      {
+        "id": "45911",
+        "name": "Pee Wee I 26-27",
+        "error": "Command failed: python /home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py /tmp/frameline-recap-sHgwzD/recap.pdf\nTraceback (most recent call last):\n  File \"/home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py\", line 65, in <module>\n    print(json.dumps(parse(sys.argv[1])))\n                     ^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py\", line 61, in parse\n    raise ValueError(\"Unsupported or empty official recap PDF; no results inferred\")\nValueError: Unsupported or empty official recap PDF; no results inferred\n"
+      },
+      {
+        "id": "121898",
+        "name": "Friday 4Fers 26",
+        "error": "Cannot safely match official recap bowler , Vacant in team 3; scores 120|80|120|120|120|360; PDF candidates [{\"name\":\"NORMA HAAS\",\"values\":[\"116\",\"84\",\"116\",\"116\",\"116\",\"348\"],\"handicapSeries\":\"600\",\"wins\":[false,false,false,false]}]"
+      },
+      {
+        "id": "145373",
+        "name": "Special Olympics Alumni Fall 26",
+        "error": "Command failed: python /home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py /tmp/frameline-recap-dMRBeF/recap.pdf\nTraceback (most recent call last):\n  File \"/home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py\", line 65, in <module>\n    print(json.dumps(parse(sys.argv[1])))\n                     ^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py\", line 61, in parse\n    raise ValueError(\"Unsupported or empty official recap PDF; no results inferred\")\nValueError: Unsupported or empty official recap PDF; no results inferred\n"
+      },
+      {
+        "id": "131150",
+        "name": "Family 9's Youth/Adult 2026",
+        "error": "Cannot safely match official recap bowler G, R in team 5; scores 110|110|115|104|88|307; PDF candidates [{\"name\":\"Ryker Gulley\",\"values\":[\"110\",\"110\",\"115\",\"104\",\"88\",\"307\"],\"handicapSeries\":\"637\",\"wins\":[false,false,false,false]},{\"name\":\"Joseph Gulley\",\"values\":[\"162\",\"58\",\"127\",\"178\",\"202\",\"507\"],\"handicapSeries\":\"681\",\"wins\":[false,false,false,false]}]"
+      },
+      {
+        "id": "83578",
+        "name": "Oaks I 26-27",
+        "error": "Cannot safely match official recap bowler D, A in team 2; scores 120|90|156|138|141|435; PDF candidates [{\"name\":\"Daltyn Petersen\",\"values\":[\"82\",\"124\",\"62\",\"101\",\"91\",\"254\"],\"handicapSeries\":\"626\",\"wins\":[false,false,false,false]},{\"name\":\"Arielle Drake\",\"values\":[\"120\",\"90\",\"156\",\"138\",\"141\",\"435\"],\"handicapSeries\":\"705\",\"wins\":[false,false,false,false]}]"
+      },
+      {
+        "id": "121318",
+        "name": "Electric Service League",
+        "error": "Cannot safely match official recap bowler , Vacant in team 11; scores 120|90|120|120|120|360; PDF candidates [{\"name\":\"Mary J. Birkentall\",\"values\":[\"92\",\"115\",\"100\",\"100\",\"69\",\"269\"],\"handicapSeries\":\"614\",\"wins\":[true,true,false,false]},{\"name\":\"Don C. Birkentall\",\"values\":[\"188\",\"28\",\"210\",\"198\",\"185\",\"593\"],\"handicapSeries\":\"677\",\"wins\":[false,true,false,false]},{\"name\":\"VACANT\",\"values\":[\"120\",\"90\",\"120\",\"120\",\"120\",\"360\"],\"handicapSeries\":\"630\",\"wins\":[false,false,false,false]},{\"name\":\"VACANT\",\"values\":[\"120\",\"90\",\"120\",\"120\",\"120\",\"360\"],\"handicapSeries\":\"630\",\"wins\":[false,false,false,false]}]"
+      },
+      {
+        "id": "123191",
+        "name": "Parks & Rec Fall 26",
+        "error": "Cannot safely match official recap bowler , Vacant in team 13; scores 100|0|100|100|100|300; PDF candidates [{\"name\":\"RANDEE RIDGLEY\",\"values\":[\"91\",\"0\",\"96\",\"74\",\"104\",\"274\"],\"handicapSeries\":\"274\",\"wins\":[false,false,false,false]},{\"name\":\"MARK TRAVIS\",\"values\":[\"108\",\"0\",\"122\",\"94\",\"109\",\"325\"],\"handicapSeries\":\"325\",\"wins\":[false,false,false,false]},{\"name\":\"MARK BRITTON\",\"values\":[\"116\",\"0\",\"122\",\"118\",\"110\",\"350\"],\"handicapSeries\":\"350\",\"wins\":[false,false,false,false]}]"
+      },
+      {
+        "id": "62696",
+        "name": "Friday Morning Summer 2026",
+        "error": "Command failed: python /home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py /tmp/frameline-recap-G8S6uq/recap.pdf\nTraceback (most recent call last):\n  File \"/home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py\", line 65, in <module>\n    print(json.dumps(parse(sys.argv[1])))\n                     ^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py\", line 61, in parse\n    raise ValueError(\"Unsupported or empty official recap PDF; no results inferred\")\nValueError: Unsupported or empty official recap PDF; no results inferred\n"
+      },
+      {
+        "id": "145599",
+        "name": "Tornados",
+        "error": "Command failed: python /home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py /tmp/frameline-recap-ODyVx4/recap.pdf\nTraceback (most recent call last):\n  File \"/home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py\", line 65, in <module>\n    print(json.dumps(parse(sys.argv[1])))\n                     ^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py\", line 61, in parse\n    raise ValueError(\"Unsupported or empty official recap PDF; no results inferred\")\nValueError: Unsupported or empty official recap PDF; no results inferred\n"
+      },
+      {
+        "id": "133536",
+        "name": "Special Olympics Fall 26",
+        "error": "Command failed: python /home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py /tmp/frameline-recap-O55rr0/recap.pdf\nTraceback (most recent call last):\n  File \"/home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py\", line 65, in <module>\n    print(json.dumps(parse(sys.argv[1])))\n                     ^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py\", line 61, in parse\n    raise ValueError(\"Unsupported or empty official recap PDF; no results inferred\")\nValueError: Unsupported or empty official recap PDF; no results inferred\n"
+      },
+      {
+        "id": "55992",
+        "name": "Friday Commercial 2026-2027",
+        "error": "Cannot safely match official recap bowler Berlett-Wakefiel, Aaron in team 16; scores 159|63|168|155|157|480; PDF candidates []"
+      },
+      {
+        "id": "45909",
+        "name": "Misfits Plus 26-27",
+        "error": "Cannot safely match official recap bowler Synowicki, Thomas in team 2; scores 146|75|138|160|166|464; PDF candidates []"
+      },
+      {
+        "id": "145573",
+        "name": "Cyclones",
+        "error": "Cannot safely match official recap bowler C, N in team 3; scores 75|112|64|64|69|197; PDF candidates [{\"name\":\"Noah Crawford\",\"values\":[\"75\",\"112\",\"64\",\"64\",\"69\",\"197\"],\"handicapSeries\":\"533\",\"wins\":[false,false,false,false]}]"
+      },
+      {
+        "id": "145370",
+        "name": "Blair Special Olympics 26-27",
+        "error": "Command failed: python /home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py /tmp/frameline-recap-FQrKMf/recap.pdf\nTraceback (most recent call last):\n  File \"/home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py\", line 65, in <module>\n    print(json.dumps(parse(sys.argv[1])))\n                     ^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py\", line 61, in parse\n    raise ValueError(\"Unsupported or empty official recap PDF; no results inferred\")\nValueError: Unsupported or empty official recap PDF; no results inferred\n"
+      },
+      {
+        "id": "145572",
+        "name": "Thunderbolts",
+        "error": "Cannot safely match official recap bowler D, M in team 9; scores 216|0|206|206|206|618; PDF candidates [{\"name\":\"Max Dailey\",\"values\":[\"216\",\"0\",\"206\",\"206\",\"206\",\"618\"],\"handicapSeries\":\"618\",\"wins\":[false,false,false,false]}]"
+      },
+      {
+        "id": "45904",
+        "name": "Redwoods 1 26",
+        "error": "Cannot safely match official recap bowler , Vacant in team 17; scores 125|67|125|125|125|375; PDF candidates [{\"name\":\"Ben Hauptman\",\"values\":[\"113\",\"96\",\"94\",\"122\",\"114\",\"330\"],\"handicapSeries\":\"618\",\"wins\":[false,true,true,true]},{\"name\":\"Cory Wernimont\",\"values\":[\"98\",\"109\",\"106\",\"97\",\"137\",\"340\"],\"handicapSeries\":\"667\",\"wins\":[true,false,false,false]},{\"name\":\"Bryce M. Everts\",\"values\":[\"76\",\"129\",\"26\",\"52\",\"62\",\"140\"],\"handicapSeries\":\"527\",\"wins\":[false,false,false,false]}]"
+      },
+      {
+        "id": "144775",
+        "name": "Sunday Nite Mixed 2026-2027",
+        "error": "Cannot safely match official recap bowler Team 1, Vacant in team 1; scores 120|81|120|120|120|360; PDF candidates []"
+      },
+      {
+        "id": "131214",
+        "name": "Sunrise Strikers Fall 2026",
+        "error": "Cannot safely match official recap bowler , Vacant in team 5; scores 120|80|120|120|120|360; PDF candidates [{\"name\":\"Aurora Weiss\",\"values\":[\"132\",\"68\",\"166\",\"122\",\"130\",\"418\"],\"handicapSeries\":\"622\",\"wins\":[false,false,false,false]},{\"name\":\"Roland Howser\",\"values\":[\"161\",\"39\",\"188\",\"140\",\"134\",\"462\"],\"handicapSeries\":\"579\",\"wins\":[false,false,false,false]}]"
+      },
+      {
+        "id": "48511",
+        "name": "Sunday Mixers Fall 2026-2027",
+        "error": "Cannot safely match official recap bowler , Vacant in team 3; scores 150|67|150|150|150|450; PDF candidates [{\"name\":\"Rich Brown\",\"values\":[\"148\",\"69\",\"123\",\"156\",\"145\",\"424\"],\"handicapSeries\":\"631\",\"wins\":[false,true,false,false]},{\"name\":\"Quinlan Sullivan\",\"values\":[\"162\",\"56\",\"193\",\"222\",\"170\",\"585\"],\"handicapSeries\":\"753\",\"wins\":[true,true,true,true]},{\"name\":\"Nicolas Whitehill\",\"values\":[\"166\",\"53\",\"147\",\"218\",\"212\",\"577\"],\"handicapSeries\":\"736\",\"wins\":[false,false,false,false]}]"
+      },
+      {
+        "id": "45881",
+        "name": "Sunday Funnies 26-27",
+        "error": "Cannot safely match official recap bowler Janik, Mike in team 6; scores 179|41|163|155|170|488; PDF candidates []"
+      }
+    ]
+  },
+  {
     "startedAt": "2026-09-16T12:14:40.939Z",
     "finishedAt": "2026-09-16T12:15:30.645Z",
     "durationSeconds": 50,
@@ -10427,185 +10839,5 @@
     "leaguesChecked": 6,
     "changeCount": 0,
     "changes": []
-  },
-  {
-    "startedAt": "2026-09-01T07:45:51.068Z",
-    "finishedAt": "2026-09-01T08:21:48.233Z",
-    "durationSeconds": 2157,
-    "mode": "known leagues",
-    "leaguesChecked": 66,
-    "changeCount": 19,
-    "changes": [
-      {
-        "id": "45883",
-        "name": "Alley Cats 26-27",
-        "area": "Omaha",
-        "center": "Maplewood Lanes",
-        "week": "1",
-        "sourceUpdated": "08/28/2026"
-      },
-      {
-        "id": "121705",
-        "name": "Centennial 26",
-        "area": "Lincoln",
-        "center": "Parkway Lanes",
-        "week": "1",
-        "sourceUpdated": "08/25/2026"
-      },
-      {
-        "id": "45885",
-        "name": "Monday Maniacs 26-27",
-        "area": "Omaha",
-        "center": "Maplewood Lanes",
-        "week": "1",
-        "sourceUpdated": "08/25/2026"
-      },
-      {
-        "id": "55974",
-        "name": "Monday Early Open 2026-2027",
-        "area": "Omaha",
-        "center": "Mockingbird Lanes",
-        "week": "2",
-        "sourceUpdated": "08/25/2026"
-      },
-      {
-        "id": "51731",
-        "name": "Beta Sigma Phi 26-27",
-        "area": "Omaha",
-        "center": "Maplewood Lanes",
-        "week": "2",
-        "sourceUpdated": "08/25/2026"
-      },
-      {
-        "id": "55980",
-        "name": "Tuesday Seniors 2026-2027",
-        "area": "Omaha",
-        "center": "Mockingbird Lanes",
-        "week": "2",
-        "sourceUpdated": "08/25/2026"
-      },
-      {
-        "id": "144538",
-        "name": "Madonna Adult 26",
-        "area": "Omaha",
-        "center": "Maplewood Lanes",
-        "week": "3",
-        "sourceUpdated": "08/29/2026"
-      },
-      {
-        "id": "55982",
-        "name": "Tuesday Men 2026-2027",
-        "area": "Omaha",
-        "center": "Mockingbird Lanes",
-        "week": "2",
-        "sourceUpdated": "08/26/2026"
-      },
-      {
-        "id": "55981",
-        "name": "Tuesday Foxy Ladies 2026-2027",
-        "area": "Omaha",
-        "center": "Mockingbird Lanes",
-        "week": "2",
-        "sourceUpdated": "08/26/2026"
-      },
-      {
-        "id": "88381",
-        "name": "WORKSERVICE 2026-27",
-        "area": "Omaha",
-        "center": "Western Bowl",
-        "week": "2",
-        "sourceUpdated": "08/25/2026"
-      },
-      {
-        "id": "127514",
-        "name": "Tuesday Foursomes 2026",
-        "area": "Lincoln",
-        "center": "Sun Valley Lanes",
-        "week": "2",
-        "sourceUpdated": "08/25/2026"
-      },
-      {
-        "id": "121706",
-        "name": "Tues. FunDay 26",
-        "area": "Lincoln",
-        "center": "Parkway Lanes",
-        "week": "1",
-        "sourceUpdated": "08/31/2026"
-      },
-      {
-        "id": "132507",
-        "name": "Schneider Memorial 26",
-        "area": "Lincoln",
-        "center": "Hollywood Bowl",
-        "week": "2",
-        "sourceUpdated": "08/26/2026"
-      },
-      {
-        "id": "45889",
-        "name": "New Frontier 26-27",
-        "area": "Omaha",
-        "center": "Maplewood Lanes",
-        "week": "1",
-        "sourceUpdated": "08/26/2026"
-      },
-      {
-        "id": "45890",
-        "name": "Classy Ladies 26-27",
-        "area": "Omaha",
-        "center": "Maplewood Lanes",
-        "week": "1",
-        "sourceUpdated": "08/26/2026"
-      },
-      {
-        "id": "111723",
-        "name": "Mike Canuso Open Classic League 26-27",
-        "area": "Omaha",
-        "center": "West Lanes",
-        "week": "2",
-        "sourceUpdated": "08/25/2026"
-      },
-      {
-        "id": "96414",
-        "name": "Heartland LGBT League 26-27",
-        "area": "Omaha",
-        "center": "West Lanes",
-        "week": "1",
-        "sourceUpdated": "08/16/2026"
-      },
-      {
-        "id": "121300",
-        "name": "Leisure Pearls 26",
-        "area": "Lincoln",
-        "center": "Parkway Lanes",
-        "week": "2",
-        "sourceUpdated": "08/25/2026"
-      },
-      {
-        "id": "121418",
-        "name": "Elks 80-26",
-        "area": "Lincoln",
-        "center": "Parkway Lanes",
-        "week": "2",
-        "sourceUpdated": "08/26/2026"
-      }
-    ]
-  },
-  {
-    "startedAt": "2026-09-01T07:33:09.986Z",
-    "finishedAt": "2026-09-01T07:35:34.071Z",
-    "durationSeconds": 144,
-    "mode": "known leagues",
-    "leaguesChecked": 1,
-    "changeCount": 1,
-    "changes": [
-      {
-        "id": "132277",
-        "name": "Nationals League 26-27",
-        "area": "Omaha",
-        "center": "West Lanes",
-        "week": "3",
-        "sourceUpdated": "08/31/2026"
-      }
-    ]
   }
 ]
