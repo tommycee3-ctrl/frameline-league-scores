@@ -565,6 +565,11 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                 const team = cell(standings, row, "Team#"),
                   name = cell(standings, row, "Team") || `Team ${team}`,
                   roster = rosterForTeam(team),
+                  rosterNames = roster.map((person) =>
+                    personName(cell(bowlerTable!, person, "Name")),
+                  ),
+                  hasSeparateSourceEntries =
+                    new Set(rosterNames).size < rosterNames.length,
                   verifiedFallback = fallbackRoster(team),
                   recap = recapByTeam[team],
                   expanded = openTeam === team;
@@ -620,7 +625,7 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                           </span>
                         </div>
                         <div className="team-roster">
-                          {recap?.rows.length
+                          {recap?.rows.length && !hasSeparateSourceEntries
                             ? recap.rows.map((person, index) => {
                                 const n = personName(person[0]),
                                   source = roster.find(
@@ -688,7 +693,9 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                                       <span>
                                         <button className="bowler-history-trigger" onClick={() => setSelectedBowler({ name: n, team })}>{n}</button>
                                         <small>
-                                          Game scores pending full recap
+                                          {cell(bowlerTable!, person, "Games")
+                                            ? `${cell(bowlerTable!, person, "Games")} games${cell(bowlerTable!, person, "Pins") ? ` · ${Number(cell(bowlerTable!, person, "Pins")).toLocaleString()} pins` : ""}`
+                                            : "Game scores pending full recap"}
                                         </small>
                                       </span>
                                       {hasIndividualPoints && <span>
