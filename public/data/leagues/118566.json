@@ -15,10 +15,10 @@
   "centerSlug": "western-bowl-omaha",
   "area": "Omaha",
   "sourceUpdated": "Aug 2, 2026",
-  "syncedAt": "2026-09-15T15:07:50.240Z",
+  "syncedAt": "2026-09-17T02:56:48.289Z",
   "status": "awaiting-results",
   "week": "13",
-  "fingerprint": "18ea1558805fe8c362291b32caf92a9442a85150bd31ed8c3bfe04b29fbcc3bf",
+  "fingerprint": "f836b15d365e2cc5e0a3cf32fe60ed62b340e3c5dfe37a3133519ff461aeff89",
   "lastCompletedCycle": null,
   "views": {
     "standings": [
@@ -2885,7 +2885,7 @@
     ],
     "recaps": [
       {
-        "title": "The Strikers matchup",
+        "title": "Bowled Strategy matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -2896,35 +2896,6 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 6",
-            "Lane 8 points won: 2"
-          ],
-          [
-            "Warta, Cassie",
-            "103",
-            "105",
-            "78",
-            "101",
-            "129",
-            "308"
-          ],
-          [
-            "Warta, Maddie",
-            "79",
-            "126",
-            "73",
-            "96",
-            "85",
-            "254"
-          ],
-          [
-            "Total",
-            "151",
-            "197",
-            "214",
-            "562"
-          ],
           [
             "Team 1",
             "Lane 7 points won: 6"
@@ -2953,6 +2924,35 @@
             "355",
             "300",
             "940"
+          ],
+          [
+            "Team 6",
+            "Lane 8 points won: 2"
+          ],
+          [
+            "Warta, Cassie",
+            "103",
+            "105",
+            "78",
+            "101",
+            "129",
+            "308"
+          ],
+          [
+            "Warta, Maddie",
+            "79",
+            "126",
+            "73",
+            "96",
+            "85",
+            "254"
+          ],
+          [
+            "Total",
+            "151",
+            "197",
+            "214",
+            "562"
           ]
         ],
         "emphasis": [
@@ -2985,10 +2985,10 @@
           ],
           [
             false,
+            true,
+            true,
             false,
-            false,
-            false,
-            false
+            true
           ],
           [
             true,
@@ -3021,13 +3021,60 @@
             false,
             false,
             false,
-            false,
+            true,
             false
           ]
-        ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "702"
+          },
+          {
+            "handicapSeries": "643"
+          },
+          {
+            "handicapSeries": "1345",
+            "handicapGames": [
+              "420",
+              "490",
+              "435"
+            ],
+            "teamPoints": [
+              "2.0",
+              "2.0",
+              "0.0",
+              "6.0",
+              "6.0"
+            ]
+          },
+          {},
+          {
+            "handicapSeries": "623"
+          },
+          {
+            "handicapSeries": "632"
+          },
+          {
+            "handicapSeries": "1255",
+            "handicapGames": [
+              "382",
+              "428",
+              "445"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "2.0",
+              "2.0",
+              "2.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/u/13/11856607262026u202613reprnt00.pdf"
       },
       {
-        "title": "Open Frames matchup",
+        "title": "Convoy matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -3038,35 +3085,6 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 7",
-            "Lane 18 points won: 2"
-          ],
-          [
-            "Mullen, Dominic",
-            "104",
-            "104",
-            "103",
-            "104",
-            "91",
-            "298"
-          ],
-          [
-            "Mullen, Matt",
-            "172",
-            "43",
-            "167",
-            "174",
-            "136",
-            "477"
-          ],
-          [
-            "Total",
-            "270",
-            "278",
-            "227",
-            "775"
-          ],
           [
             "Team 11",
             "Lane 17 points won: 6"
@@ -3095,6 +3113,35 @@
             "251",
             "229",
             "652"
+          ],
+          [
+            "Team 7",
+            "Lane 18 points won: 2"
+          ],
+          [
+            "Mullen, Dominic",
+            "104",
+            "104",
+            "103",
+            "104",
+            "91",
+            "298"
+          ],
+          [
+            "Mullen, Matt",
+            "172",
+            "43",
+            "167",
+            "174",
+            "136",
+            "477"
+          ],
+          [
+            "Total",
+            "270",
+            "278",
+            "227",
+            "775"
           ]
         ],
         "emphasis": [
@@ -3128,9 +3175,9 @@
           [
             false,
             false,
-            false,
-            false,
-            false
+            true,
+            true,
+            true
           ],
           [
             true,
@@ -3161,15 +3208,62 @@
           ],
           [
             false,
-            false,
+            true,
             false,
             false,
             false
           ]
-        ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "547"
+          },
+          {
+            "handicapSeries": "702"
+          },
+          {
+            "handicapSeries": "1249",
+            "handicapGames": [
+              "371",
+              "450",
+              "428"
+            ],
+            "teamPoints": [
+              "0.0",
+              "2.0",
+              "2.0",
+              "6.0",
+              "6.0"
+            ]
+          },
+          {},
+          {
+            "handicapSeries": "610"
+          },
+          {
+            "handicapSeries": "606"
+          },
+          {
+            "handicapSeries": "1216",
+            "handicapGames": [
+              "417",
+              "425",
+              "374"
+            ],
+            "teamPoints": [
+              "2.0",
+              "0.0",
+              "0.0",
+              "2.0",
+              "2.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/u/13/11856607262026u202613reprnt00.pdf"
       },
       {
-        "title": "Goldfingers matchup",
+        "title": "Doubel A Girls matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -3180,35 +3274,6 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 14",
-            "Lane 15 points won: 8"
-          ],
-          [
-            ", Peter",
-            "143",
-            "69",
-            "172",
-            "154",
-            "163",
-            "489"
-          ],
-          [
-            ", Dave",
-            "125",
-            "85",
-            "214",
-            "127",
-            "193",
-            "534"
-          ],
-          [
-            "Total",
-            "386",
-            "281",
-            "356",
-            "1023"
-          ],
           [
             "Team 10",
             "Lane 16 points won: 0"
@@ -3237,6 +3302,35 @@
             "189",
             "257",
             "643"
+          ],
+          [
+            "Team 14",
+            "Lane 15 points won: 8"
+          ],
+          [
+            ", Peter",
+            "143",
+            "69",
+            "172",
+            "154",
+            "163",
+            "489"
+          ],
+          [
+            ", Dave",
+            "125",
+            "85",
+            "214",
+            "127",
+            "193",
+            "534"
+          ],
+          [
+            "Total",
+            "386",
+            "281",
+            "356",
+            "1023"
           ]
         ],
         "emphasis": [
@@ -3303,12 +3397,59 @@
           ],
           [
             false,
-            false,
-            false,
-            false,
-            false
+            true,
+            true,
+            true,
+            true
           ]
-        ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "617"
+          },
+          {
+            "handicapSeries": "644"
+          },
+          {
+            "handicapSeries": "1261",
+            "handicapGames": [
+              "403",
+              "395",
+              "463"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0"
+            ]
+          },
+          {},
+          {
+            "handicapSeries": "696"
+          },
+          {
+            "handicapSeries": "789"
+          },
+          {
+            "handicapSeries": "1485",
+            "handicapGames": [
+              "540",
+              "435",
+              "510"
+            ],
+            "teamPoints": [
+              "2.0",
+              "2.0",
+              "2.0",
+              "8.0",
+              "8.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/u/13/11856607262026u202613reprnt00.pdf"
       },
       {
         "title": "Double A matchup",
@@ -3382,15 +3523,40 @@
           ],
           [
             false,
+            true,
+            true,
             false,
-            false,
-            false,
-            false
+            true
           ]
-        ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "587"
+          },
+          {
+            "handicapSeries": "607"
+          },
+          {
+            "handicapSeries": "1194",
+            "handicapGames": [
+              "422",
+              "398",
+              "374"
+            ],
+            "teamPoints": [
+              "2.0",
+              "2.0",
+              "0.0",
+              "6.0",
+              "6.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/u/13/11856607262026u202613reprnt00.pdf"
       },
       {
-        "title": "Pro-Crastinators matchup",
+        "title": "Flipping Unicorn matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -3401,35 +3567,6 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 3",
-            "Lane 11 points won: 8"
-          ],
-          [
-            ", Jerrod",
-            "163",
-            "51",
-            "169",
-            "187",
-            "199",
-            "555"
-          ],
-          [
-            "Schroeder, Evelyn",
-            "124",
-            "86",
-            "142",
-            "122",
-            "114",
-            "378"
-          ],
-          [
-            "Total",
-            "311",
-            "309",
-            "313",
-            "933"
-          ],
           [
             "Team 5",
             "Lane 12 points won: 0"
@@ -3458,6 +3595,35 @@
             "179",
             "185",
             "501"
+          ],
+          [
+            "Team 3",
+            "Lane 11 points won: 8"
+          ],
+          [
+            ", Jerrod",
+            "163",
+            "51",
+            "169",
+            "187",
+            "199",
+            "555"
+          ],
+          [
+            "Schroeder, Evelyn",
+            "124",
+            "86",
+            "142",
+            "122",
+            "114",
+            "378"
+          ],
+          [
+            "Total",
+            "311",
+            "309",
+            "313",
+            "933"
           ]
         ],
         "emphasis": [
@@ -3524,15 +3690,62 @@
           ],
           [
             false,
-            false,
-            false,
-            false,
-            false
+            true,
+            true,
+            true,
+            true
           ]
-        ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "675"
+          },
+          {
+            "handicapSeries": "546"
+          },
+          {
+            "handicapSeries": "1221",
+            "handicapGames": [
+              "377",
+              "419",
+              "425"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0"
+            ]
+          },
+          {},
+          {
+            "handicapSeries": "708"
+          },
+          {
+            "handicapSeries": "636"
+          },
+          {
+            "handicapSeries": "1344",
+            "handicapGames": [
+              "448",
+              "446",
+              "450"
+            ],
+            "teamPoints": [
+              "2.0",
+              "2.0",
+              "2.0",
+              "8.0",
+              "8.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/u/13/11856607262026u202613reprnt00.pdf"
       },
       {
-        "title": "The Giants matchup",
+        "title": "I M Striking matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -3543,35 +3756,6 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 9",
-            "Lane 2 points won: 8"
-          ],
-          [
-            ", Connor",
-            "127",
-            "83",
-            "176",
-            "173",
-            "143",
-            "492"
-          ],
-          [
-            ", Aowyn",
-            "114",
-            "95",
-            "108",
-            "142",
-            "127",
-            "377"
-          ],
-          [
-            "Total",
-            "284",
-            "315",
-            "270",
-            "869"
-          ],
           [
             "Team 17",
             "Lane 1 points won: 0"
@@ -3600,6 +3784,35 @@
             "318",
             "248",
             "838"
+          ],
+          [
+            "Team 9",
+            "Lane 2 points won: 8"
+          ],
+          [
+            ", Connor",
+            "127",
+            "83",
+            "176",
+            "173",
+            "143",
+            "492"
+          ],
+          [
+            ", Aowyn",
+            "114",
+            "95",
+            "108",
+            "142",
+            "127",
+            "377"
+          ],
+          [
+            "Total",
+            "284",
+            "315",
+            "270",
+            "869"
           ]
         ],
         "emphasis": [
@@ -3666,15 +3879,62 @@
           ],
           [
             false,
-            false,
-            false,
-            false,
-            false
+            true,
+            true,
+            true,
+            true
           ]
-        ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "596"
+          },
+          {
+            "handicapSeries": "689"
+          },
+          {
+            "handicapSeries": "1285",
+            "handicapGames": [
+              "421",
+              "467",
+              "397"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0"
+            ]
+          },
+          {},
+          {
+            "handicapSeries": "741"
+          },
+          {
+            "handicapSeries": "662"
+          },
+          {
+            "handicapSeries": "1403",
+            "handicapGames": [
+              "462",
+              "493",
+              "448"
+            ],
+            "teamPoints": [
+              "2.0",
+              "2.0",
+              "2.0",
+              "8.0",
+              "8.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/u/13/11856607262026u202613reprnt00.pdf"
       },
       {
-        "title": "The Froggy Frogs matchup",
+        "title": "Kings matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -3685,35 +3945,6 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 22",
-            "Lane 19 points won: 6"
-          ],
-          [
-            "Martinez, Ashley",
-            "80",
-            "126",
-            "112",
-            "102",
-            "62",
-            "276"
-          ],
-          [
-            "Tellez, Steve",
-            "187",
-            "29",
-            "189",
-            "198",
-            "136",
-            "523"
-          ],
-          [
-            "Total",
-            "301",
-            "300",
-            "198",
-            "799"
-          ],
           [
             "Team 12",
             "Lane 20 points won: 2"
@@ -3742,6 +3973,35 @@
             "288",
             "325",
             "935"
+          ],
+          [
+            "Team 22",
+            "Lane 19 points won: 6"
+          ],
+          [
+            "Martinez, Ashley",
+            "80",
+            "126",
+            "112",
+            "102",
+            "62",
+            "276"
+          ],
+          [
+            "Tellez, Steve",
+            "187",
+            "29",
+            "189",
+            "198",
+            "136",
+            "523"
+          ],
+          [
+            "Total",
+            "301",
+            "300",
+            "198",
+            "799"
           ]
         ],
         "emphasis": [
@@ -3776,7 +4036,7 @@
             false,
             false,
             false,
-            false,
+            true,
             false
           ],
           [
@@ -3808,12 +4068,59 @@
           ],
           [
             false,
+            true,
+            true,
             false,
-            false,
-            false,
-            false
+            true
           ]
-        ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "570"
+          },
+          {
+            "handicapSeries": "602"
+          },
+          {
+            "handicapSeries": "1172",
+            "handicapGames": [
+              "401",
+              "367",
+              "404"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "2.0",
+              "2.0",
+              "2.0"
+            ]
+          },
+          {},
+          {
+            "handicapSeries": "654"
+          },
+          {
+            "handicapSeries": "610"
+          },
+          {
+            "handicapSeries": "1264",
+            "handicapGames": [
+              "456",
+              "455",
+              "353"
+            ],
+            "teamPoints": [
+              "2.0",
+              "2.0",
+              "0.0",
+              "6.0",
+              "6.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/u/13/11856607262026u202613reprnt00.pdf"
       },
       {
         "title": "Ready Player 2 matchup",
@@ -3887,12 +4194,37 @@
           ],
           [
             false,
-            false,
-            false,
-            false,
-            false
+            true,
+            true,
+            true,
+            true
           ]
-        ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "740"
+          },
+          {
+            "handicapSeries": "759"
+          },
+          {
+            "handicapSeries": "1499",
+            "handicapGames": [
+              "517",
+              "460",
+              "522"
+            ],
+            "teamPoints": [
+              "2.0",
+              "2.0",
+              "2.0",
+              "8.0",
+              "8.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/u/13/11856607262026u202613reprnt00.pdf"
       },
       {
         "title": "Sisters matchup",
@@ -3967,14 +4299,39 @@
           [
             false,
             false,
-            false,
+            true,
             false,
             false
           ]
-        ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "638"
+          },
+          {
+            "handicapSeries": "556"
+          },
+          {
+            "handicapSeries": "1194",
+            "handicapGames": [
+              "380",
+              "414",
+              "400"
+            ],
+            "teamPoints": [
+              "0.0",
+              "2.0",
+              "0.0",
+              "2.0",
+              "2.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/u/13/11856607262026u202613reprnt00.pdf"
       },
       {
-        "title": "The Bradys matchup",
+        "title": "Team 4 matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -3985,35 +4342,6 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 13",
-            "Lane 10 points won: 2"
-          ],
-          [
-            "Brady, Parker",
-            "152",
-            "61",
-            "163",
-            "214",
-            "203",
-            "580"
-          ],
-          [
-            "Brady, Jaymeson",
-            "201",
-            "17",
-            "175",
-            "247",
-            "164",
-            "586"
-          ],
-          [
-            "Total",
-            "338",
-            "461",
-            "367",
-            "1166"
-          ],
           [
             "Team 4",
             "Lane 9 points won: 6"
@@ -4042,6 +4370,35 @@
             "437",
             "405",
             "1234"
+          ],
+          [
+            "Team 13",
+            "Lane 10 points won: 2"
+          ],
+          [
+            "Brady, Parker",
+            "152",
+            "61",
+            "163",
+            "214",
+            "203",
+            "580"
+          ],
+          [
+            "Brady, Jaymeson",
+            "201",
+            "17",
+            "175",
+            "247",
+            "164",
+            "586"
+          ],
+          [
+            "Total",
+            "338",
+            "461",
+            "367",
+            "1166"
           ]
         ],
         "emphasis": [
@@ -4074,10 +4431,10 @@
           ],
           [
             false,
+            true,
             false,
-            false,
-            false,
-            false
+            true,
+            true
           ],
           [
             true,
@@ -4109,11 +4466,58 @@
           [
             false,
             false,
-            false,
+            true,
             false,
             false
           ]
-        ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "754"
+          },
+          {
+            "handicapSeries": "717"
+          },
+          {
+            "handicapSeries": "1471",
+            "handicapGames": [
+              "471",
+              "516",
+              "484"
+            ],
+            "teamPoints": [
+              "2.0",
+              "0.0",
+              "2.0",
+              "6.0",
+              "6.0"
+            ]
+          },
+          {},
+          {
+            "handicapSeries": "763"
+          },
+          {
+            "handicapSeries": "637"
+          },
+          {
+            "handicapSeries": "1400",
+            "handicapGames": [
+              "416",
+              "539",
+              "445"
+            ],
+            "teamPoints": [
+              "0.0",
+              "2.0",
+              "0.0",
+              "2.0",
+              "2.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/u/13/11856607262026u202613reprnt00.pdf"
       }
     ],
     "lanes": [
@@ -5771,14 +6175,14 @@
       }
     ]
   },
-  "lastAttemptedAt": "2026-09-17T01:24:59.594Z",
-  "lastCheckedAt": "2026-09-15T15:07:50.240Z",
+  "lastAttemptedAt": null,
+  "lastCheckedAt": "2026-09-17T02:56:48.289Z",
   "sourceFingerprint": "061f072d131f4f918e1a35a7e5326df061d148aeb9d3aabb3930f43d4f431746",
   "history": [
     {
       "week": "13",
       "sourceUpdated": "Aug 2, 2026",
-      "syncedAt": "2026-09-15T15:07:50.240Z",
+      "syncedAt": "2026-09-17T02:56:48.289Z",
       "views": {
         "standings": [
           {
@@ -8644,7 +9048,7 @@
         ],
         "recaps": [
           {
-            "title": "The Strikers matchup",
+            "title": "Bowled Strategy matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -8655,35 +9059,6 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 6",
-                "Lane 8 points won: 2"
-              ],
-              [
-                "Warta, Cassie",
-                "103",
-                "105",
-                "78",
-                "101",
-                "129",
-                "308"
-              ],
-              [
-                "Warta, Maddie",
-                "79",
-                "126",
-                "73",
-                "96",
-                "85",
-                "254"
-              ],
-              [
-                "Total",
-                "151",
-                "197",
-                "214",
-                "562"
-              ],
               [
                 "Team 1",
                 "Lane 7 points won: 6"
@@ -8712,6 +9087,35 @@
                 "355",
                 "300",
                 "940"
+              ],
+              [
+                "Team 6",
+                "Lane 8 points won: 2"
+              ],
+              [
+                "Warta, Cassie",
+                "103",
+                "105",
+                "78",
+                "101",
+                "129",
+                "308"
+              ],
+              [
+                "Warta, Maddie",
+                "79",
+                "126",
+                "73",
+                "96",
+                "85",
+                "254"
+              ],
+              [
+                "Total",
+                "151",
+                "197",
+                "214",
+                "562"
               ]
             ],
             "emphasis": [
@@ -8744,10 +9148,10 @@
               ],
               [
                 false,
+                true,
+                true,
                 false,
-                false,
-                false,
-                false
+                true
               ],
               [
                 true,
@@ -8780,13 +9184,60 @@
                 false,
                 false,
                 false,
-                false,
+                true,
                 false
               ]
-            ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "702"
+              },
+              {
+                "handicapSeries": "643"
+              },
+              {
+                "handicapSeries": "1345",
+                "handicapGames": [
+                  "420",
+                  "490",
+                  "435"
+                ],
+                "teamPoints": [
+                  "2.0",
+                  "2.0",
+                  "0.0",
+                  "6.0",
+                  "6.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "623"
+              },
+              {
+                "handicapSeries": "632"
+              },
+              {
+                "handicapSeries": "1255",
+                "handicapGames": [
+                  "382",
+                  "428",
+                  "445"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "2.0",
+                  "2.0",
+                  "2.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/u/13/11856607262026u202613reprnt00.pdf"
           },
           {
-            "title": "Open Frames matchup",
+            "title": "Convoy matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -8797,35 +9248,6 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 7",
-                "Lane 18 points won: 2"
-              ],
-              [
-                "Mullen, Dominic",
-                "104",
-                "104",
-                "103",
-                "104",
-                "91",
-                "298"
-              ],
-              [
-                "Mullen, Matt",
-                "172",
-                "43",
-                "167",
-                "174",
-                "136",
-                "477"
-              ],
-              [
-                "Total",
-                "270",
-                "278",
-                "227",
-                "775"
-              ],
               [
                 "Team 11",
                 "Lane 17 points won: 6"
@@ -8854,6 +9276,35 @@
                 "251",
                 "229",
                 "652"
+              ],
+              [
+                "Team 7",
+                "Lane 18 points won: 2"
+              ],
+              [
+                "Mullen, Dominic",
+                "104",
+                "104",
+                "103",
+                "104",
+                "91",
+                "298"
+              ],
+              [
+                "Mullen, Matt",
+                "172",
+                "43",
+                "167",
+                "174",
+                "136",
+                "477"
+              ],
+              [
+                "Total",
+                "270",
+                "278",
+                "227",
+                "775"
               ]
             ],
             "emphasis": [
@@ -8887,9 +9338,9 @@
               [
                 false,
                 false,
-                false,
-                false,
-                false
+                true,
+                true,
+                true
               ],
               [
                 true,
@@ -8920,15 +9371,62 @@
               ],
               [
                 false,
-                false,
+                true,
                 false,
                 false,
                 false
               ]
-            ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "547"
+              },
+              {
+                "handicapSeries": "702"
+              },
+              {
+                "handicapSeries": "1249",
+                "handicapGames": [
+                  "371",
+                  "450",
+                  "428"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "2.0",
+                  "2.0",
+                  "6.0",
+                  "6.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "610"
+              },
+              {
+                "handicapSeries": "606"
+              },
+              {
+                "handicapSeries": "1216",
+                "handicapGames": [
+                  "417",
+                  "425",
+                  "374"
+                ],
+                "teamPoints": [
+                  "2.0",
+                  "0.0",
+                  "0.0",
+                  "2.0",
+                  "2.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/u/13/11856607262026u202613reprnt00.pdf"
           },
           {
-            "title": "Goldfingers matchup",
+            "title": "Doubel A Girls matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -8939,35 +9437,6 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 14",
-                "Lane 15 points won: 8"
-              ],
-              [
-                ", Peter",
-                "143",
-                "69",
-                "172",
-                "154",
-                "163",
-                "489"
-              ],
-              [
-                ", Dave",
-                "125",
-                "85",
-                "214",
-                "127",
-                "193",
-                "534"
-              ],
-              [
-                "Total",
-                "386",
-                "281",
-                "356",
-                "1023"
-              ],
               [
                 "Team 10",
                 "Lane 16 points won: 0"
@@ -8996,6 +9465,35 @@
                 "189",
                 "257",
                 "643"
+              ],
+              [
+                "Team 14",
+                "Lane 15 points won: 8"
+              ],
+              [
+                ", Peter",
+                "143",
+                "69",
+                "172",
+                "154",
+                "163",
+                "489"
+              ],
+              [
+                ", Dave",
+                "125",
+                "85",
+                "214",
+                "127",
+                "193",
+                "534"
+              ],
+              [
+                "Total",
+                "386",
+                "281",
+                "356",
+                "1023"
               ]
             ],
             "emphasis": [
@@ -9062,12 +9560,59 @@
               ],
               [
                 false,
-                false,
-                false,
-                false,
-                false
+                true,
+                true,
+                true,
+                true
               ]
-            ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "617"
+              },
+              {
+                "handicapSeries": "644"
+              },
+              {
+                "handicapSeries": "1261",
+                "handicapGames": [
+                  "403",
+                  "395",
+                  "463"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "696"
+              },
+              {
+                "handicapSeries": "789"
+              },
+              {
+                "handicapSeries": "1485",
+                "handicapGames": [
+                  "540",
+                  "435",
+                  "510"
+                ],
+                "teamPoints": [
+                  "2.0",
+                  "2.0",
+                  "2.0",
+                  "8.0",
+                  "8.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/u/13/11856607262026u202613reprnt00.pdf"
           },
           {
             "title": "Double A matchup",
@@ -9141,15 +9686,40 @@
               ],
               [
                 false,
+                true,
+                true,
                 false,
-                false,
-                false,
-                false
+                true
               ]
-            ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "587"
+              },
+              {
+                "handicapSeries": "607"
+              },
+              {
+                "handicapSeries": "1194",
+                "handicapGames": [
+                  "422",
+                  "398",
+                  "374"
+                ],
+                "teamPoints": [
+                  "2.0",
+                  "2.0",
+                  "0.0",
+                  "6.0",
+                  "6.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/u/13/11856607262026u202613reprnt00.pdf"
           },
           {
-            "title": "Pro-Crastinators matchup",
+            "title": "Flipping Unicorn matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -9160,35 +9730,6 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 3",
-                "Lane 11 points won: 8"
-              ],
-              [
-                ", Jerrod",
-                "163",
-                "51",
-                "169",
-                "187",
-                "199",
-                "555"
-              ],
-              [
-                "Schroeder, Evelyn",
-                "124",
-                "86",
-                "142",
-                "122",
-                "114",
-                "378"
-              ],
-              [
-                "Total",
-                "311",
-                "309",
-                "313",
-                "933"
-              ],
               [
                 "Team 5",
                 "Lane 12 points won: 0"
@@ -9217,6 +9758,35 @@
                 "179",
                 "185",
                 "501"
+              ],
+              [
+                "Team 3",
+                "Lane 11 points won: 8"
+              ],
+              [
+                ", Jerrod",
+                "163",
+                "51",
+                "169",
+                "187",
+                "199",
+                "555"
+              ],
+              [
+                "Schroeder, Evelyn",
+                "124",
+                "86",
+                "142",
+                "122",
+                "114",
+                "378"
+              ],
+              [
+                "Total",
+                "311",
+                "309",
+                "313",
+                "933"
               ]
             ],
             "emphasis": [
@@ -9283,15 +9853,62 @@
               ],
               [
                 false,
-                false,
-                false,
-                false,
-                false
+                true,
+                true,
+                true,
+                true
               ]
-            ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "675"
+              },
+              {
+                "handicapSeries": "546"
+              },
+              {
+                "handicapSeries": "1221",
+                "handicapGames": [
+                  "377",
+                  "419",
+                  "425"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "708"
+              },
+              {
+                "handicapSeries": "636"
+              },
+              {
+                "handicapSeries": "1344",
+                "handicapGames": [
+                  "448",
+                  "446",
+                  "450"
+                ],
+                "teamPoints": [
+                  "2.0",
+                  "2.0",
+                  "2.0",
+                  "8.0",
+                  "8.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/u/13/11856607262026u202613reprnt00.pdf"
           },
           {
-            "title": "The Giants matchup",
+            "title": "I M Striking matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -9302,35 +9919,6 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 9",
-                "Lane 2 points won: 8"
-              ],
-              [
-                ", Connor",
-                "127",
-                "83",
-                "176",
-                "173",
-                "143",
-                "492"
-              ],
-              [
-                ", Aowyn",
-                "114",
-                "95",
-                "108",
-                "142",
-                "127",
-                "377"
-              ],
-              [
-                "Total",
-                "284",
-                "315",
-                "270",
-                "869"
-              ],
               [
                 "Team 17",
                 "Lane 1 points won: 0"
@@ -9359,6 +9947,35 @@
                 "318",
                 "248",
                 "838"
+              ],
+              [
+                "Team 9",
+                "Lane 2 points won: 8"
+              ],
+              [
+                ", Connor",
+                "127",
+                "83",
+                "176",
+                "173",
+                "143",
+                "492"
+              ],
+              [
+                ", Aowyn",
+                "114",
+                "95",
+                "108",
+                "142",
+                "127",
+                "377"
+              ],
+              [
+                "Total",
+                "284",
+                "315",
+                "270",
+                "869"
               ]
             ],
             "emphasis": [
@@ -9425,15 +10042,62 @@
               ],
               [
                 false,
-                false,
-                false,
-                false,
-                false
+                true,
+                true,
+                true,
+                true
               ]
-            ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "596"
+              },
+              {
+                "handicapSeries": "689"
+              },
+              {
+                "handicapSeries": "1285",
+                "handicapGames": [
+                  "421",
+                  "467",
+                  "397"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "741"
+              },
+              {
+                "handicapSeries": "662"
+              },
+              {
+                "handicapSeries": "1403",
+                "handicapGames": [
+                  "462",
+                  "493",
+                  "448"
+                ],
+                "teamPoints": [
+                  "2.0",
+                  "2.0",
+                  "2.0",
+                  "8.0",
+                  "8.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/u/13/11856607262026u202613reprnt00.pdf"
           },
           {
-            "title": "The Froggy Frogs matchup",
+            "title": "Kings matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -9444,35 +10108,6 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 22",
-                "Lane 19 points won: 6"
-              ],
-              [
-                "Martinez, Ashley",
-                "80",
-                "126",
-                "112",
-                "102",
-                "62",
-                "276"
-              ],
-              [
-                "Tellez, Steve",
-                "187",
-                "29",
-                "189",
-                "198",
-                "136",
-                "523"
-              ],
-              [
-                "Total",
-                "301",
-                "300",
-                "198",
-                "799"
-              ],
               [
                 "Team 12",
                 "Lane 20 points won: 2"
@@ -9501,6 +10136,35 @@
                 "288",
                 "325",
                 "935"
+              ],
+              [
+                "Team 22",
+                "Lane 19 points won: 6"
+              ],
+              [
+                "Martinez, Ashley",
+                "80",
+                "126",
+                "112",
+                "102",
+                "62",
+                "276"
+              ],
+              [
+                "Tellez, Steve",
+                "187",
+                "29",
+                "189",
+                "198",
+                "136",
+                "523"
+              ],
+              [
+                "Total",
+                "301",
+                "300",
+                "198",
+                "799"
               ]
             ],
             "emphasis": [
@@ -9535,7 +10199,7 @@
                 false,
                 false,
                 false,
-                false,
+                true,
                 false
               ],
               [
@@ -9567,12 +10231,59 @@
               ],
               [
                 false,
+                true,
+                true,
                 false,
-                false,
-                false,
-                false
+                true
               ]
-            ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "570"
+              },
+              {
+                "handicapSeries": "602"
+              },
+              {
+                "handicapSeries": "1172",
+                "handicapGames": [
+                  "401",
+                  "367",
+                  "404"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "2.0",
+                  "2.0",
+                  "2.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "654"
+              },
+              {
+                "handicapSeries": "610"
+              },
+              {
+                "handicapSeries": "1264",
+                "handicapGames": [
+                  "456",
+                  "455",
+                  "353"
+                ],
+                "teamPoints": [
+                  "2.0",
+                  "2.0",
+                  "0.0",
+                  "6.0",
+                  "6.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/u/13/11856607262026u202613reprnt00.pdf"
           },
           {
             "title": "Ready Player 2 matchup",
@@ -9646,12 +10357,37 @@
               ],
               [
                 false,
-                false,
-                false,
-                false,
-                false
+                true,
+                true,
+                true,
+                true
               ]
-            ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "740"
+              },
+              {
+                "handicapSeries": "759"
+              },
+              {
+                "handicapSeries": "1499",
+                "handicapGames": [
+                  "517",
+                  "460",
+                  "522"
+                ],
+                "teamPoints": [
+                  "2.0",
+                  "2.0",
+                  "2.0",
+                  "8.0",
+                  "8.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/u/13/11856607262026u202613reprnt00.pdf"
           },
           {
             "title": "Sisters matchup",
@@ -9726,14 +10462,39 @@
               [
                 false,
                 false,
-                false,
+                true,
                 false,
                 false
               ]
-            ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "638"
+              },
+              {
+                "handicapSeries": "556"
+              },
+              {
+                "handicapSeries": "1194",
+                "handicapGames": [
+                  "380",
+                  "414",
+                  "400"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "2.0",
+                  "0.0",
+                  "2.0",
+                  "2.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/u/13/11856607262026u202613reprnt00.pdf"
           },
           {
-            "title": "The Bradys matchup",
+            "title": "Team 4 matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -9744,35 +10505,6 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 13",
-                "Lane 10 points won: 2"
-              ],
-              [
-                "Brady, Parker",
-                "152",
-                "61",
-                "163",
-                "214",
-                "203",
-                "580"
-              ],
-              [
-                "Brady, Jaymeson",
-                "201",
-                "17",
-                "175",
-                "247",
-                "164",
-                "586"
-              ],
-              [
-                "Total",
-                "338",
-                "461",
-                "367",
-                "1166"
-              ],
               [
                 "Team 4",
                 "Lane 9 points won: 6"
@@ -9801,6 +10533,35 @@
                 "437",
                 "405",
                 "1234"
+              ],
+              [
+                "Team 13",
+                "Lane 10 points won: 2"
+              ],
+              [
+                "Brady, Parker",
+                "152",
+                "61",
+                "163",
+                "214",
+                "203",
+                "580"
+              ],
+              [
+                "Brady, Jaymeson",
+                "201",
+                "17",
+                "175",
+                "247",
+                "164",
+                "586"
+              ],
+              [
+                "Total",
+                "338",
+                "461",
+                "367",
+                "1166"
               ]
             ],
             "emphasis": [
@@ -9833,10 +10594,10 @@
               ],
               [
                 false,
+                true,
                 false,
-                false,
-                false,
-                false
+                true,
+                true
               ],
               [
                 true,
@@ -9868,11 +10629,58 @@
               [
                 false,
                 false,
-                false,
+                true,
                 false,
                 false
               ]
-            ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "754"
+              },
+              {
+                "handicapSeries": "717"
+              },
+              {
+                "handicapSeries": "1471",
+                "handicapGames": [
+                  "471",
+                  "516",
+                  "484"
+                ],
+                "teamPoints": [
+                  "2.0",
+                  "0.0",
+                  "2.0",
+                  "6.0",
+                  "6.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "763"
+              },
+              {
+                "handicapSeries": "637"
+              },
+              {
+                "handicapSeries": "1400",
+                "handicapGames": [
+                  "416",
+                  "539",
+                  "445"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "2.0",
+                  "0.0",
+                  "2.0",
+                  "2.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/u/13/11856607262026u202613reprnt00.pdf"
           }
         ],
         "lanes": [
