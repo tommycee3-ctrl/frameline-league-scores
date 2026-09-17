@@ -8,6 +8,10 @@ const numeric = value => String(value ?? "").replace(/^(?:bk|[abp])/i, "");
 const tokens = name => String(name).toLowerCase().replace(/\b111\b/g,"iii").replace(/\b11\b/g,"ii").replace(/\b1v\b/g,"iv").split(/[^a-z0-9]+/).filter(Boolean);
 const sameName = (sourceName, pdfName) => {
   const source = tokens(sourceName), pdf = tokens(pdfName);
+  // Some source records contain one legal/display name only. Score columns are
+  // still required to match uniquely before this name check is accepted.
+  if (source.length === 1 || pdf.length === 1)
+    return source.length === 1 && pdf.length === 1 && source[0] === pdf[0];
   // BLS prints middle initials that the interactive report can omit.
   // Require both primary names; numeric row matching still must be unique.
   const primary = pdf.length > 2 ? pdf.filter((token, index) => token.length > 1 || index === 0 || index === pdf.length - 1) : pdf;

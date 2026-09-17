@@ -71,3 +71,11 @@ test("PDF middle initials omitted by the interactive report retain a unique exac
   pdf[0].bowlers[0].name="Daniel M. Gilpin";
   assert.throws(()=>applyOfficialRecap(source,pdf,"5","official.pdf"), /Cannot safely match/);
 });
+
+test("an exact single-name bowler retains a unique exact-score match", () => {
+  const source=[{rows:[["Team 3", ""],[", Ibrahim","127","80","146","124","112","382"]]}];
+  const pdf=[{team:"3",week:"4",bowlers:[{name:"Ibrahim",values:["127","80","146","124","112","382"],handicapSeries:"622",wins:[false,true,false,true]}]}];
+  assert.equal(applyOfficialRecap(source,pdf,"4","official.pdf")[0].recapDetails[1].handicapSeries,"622");
+  pdf[0].bowlers[0].name="Abraham";
+  assert.throws(()=>applyOfficialRecap(source,pdf,"4","official.pdf"), /Cannot safely match/);
+});
