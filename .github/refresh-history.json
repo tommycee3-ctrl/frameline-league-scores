@@ -1,5 +1,17 @@
 [
   {
+    "startedAt": "2026-09-18T16:44:43.342Z",
+    "finishedAt": "2026-09-18T16:45:36.943Z",
+    "durationSeconds": 54,
+    "mode": "directory discovery",
+    "scope": "all",
+    "leaguesChecked": 170,
+    "changeCount": 0,
+    "changes": [],
+    "deferredLeagues": [],
+    "failures": []
+  },
+  {
     "startedAt": "2026-09-18T16:38:23.100Z",
     "finishedAt": "2026-09-18T16:39:18.197Z",
     "durationSeconds": 55,
@@ -15699,31 +15711,5 @@
     "leaguesChecked": 6,
     "changeCount": 0,
     "changes": []
-  },
-  {
-    "startedAt": "2026-09-04T18:24:40.580Z",
-    "finishedAt": "2026-09-04T19:03:26.988Z",
-    "durationSeconds": 2326,
-    "mode": "known leagues",
-    "leaguesChecked": 77,
-    "changeCount": 2,
-    "changes": [
-      {
-        "id": "144527",
-        "name": "Thursday Nite Mixed 2026-2027",
-        "area": "Omaha",
-        "center": "Western Bowl",
-        "week": "2",
-        "sourceUpdated": "09/04/2026"
-      },
-      {
-        "id": "68466",
-        "name": "Friday Morning Men 2026-2027",
-        "area": "Omaha",
-        "center": "Mockingbird Lanes",
-        "week": "3",
-        "sourceUpdated": "09/04/2026"
-      }
-    ]
   }
 ]
