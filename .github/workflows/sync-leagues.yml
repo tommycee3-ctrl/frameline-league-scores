@@ -2,11 +2,8 @@ name: Sync league results
 
 on:
   schedule:
-    # GitHub warns that jobs at the start of an hour can be delayed or dropped.
-    # Run at :17 with a :37 fallback. Freshness, rather than the wall clock,
-    # decides whether delayed jobs need to refresh the data.
-    - cron: "17 * * * *"
-    - cron: "37 * * * *"
+    # Backend-only refresh every two hours, offset from the start of the hour.
+    - cron: "17 */2 * * *"
   workflow_dispatch:
   push:
     branches: [main]

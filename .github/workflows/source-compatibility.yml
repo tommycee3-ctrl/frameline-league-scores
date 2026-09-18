@@ -1,7 +1,8 @@
 name: Check bowling source compatibility
 on:
   schedule:
-    - cron: '9 * * * *'
+    # Backend-only source check every two hours.
+    - cron: '9 */2 * * *'
   workflow_dispatch:
   push:
     branches: [main]
