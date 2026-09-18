@@ -15,10 +15,10 @@
   "centerSlug": "west-lanes-bowl-omaha-nebraska",
   "area": "Omaha",
   "sourceUpdated": "Sep 14, 2026",
-  "syncedAt": "2026-09-15T14:50:18.817Z",
+  "syncedAt": "2026-09-18T02:44:30.104Z",
   "status": "current",
   "week": "1",
-  "fingerprint": "b4f77afbbbabaf01ca24ecb0b602e08611bcfff0c5af95101dfb0eb2463d2396",
+  "fingerprint": "68837d544fb1c72082214d9b83d65706ac76446f226f5235ad9a81214c67245b",
   "lastCompletedCycle": "2026-09-14",
   "views": {
     "standings": [
@@ -601,7 +601,7 @@
     ],
     "recaps": [
       {
-        "title": "TEAM 6 matchup",
+        "title": "GO GET EM matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -612,35 +612,6 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 6",
-            "Lane 24 points won: 0"
-          ],
-          [
-            "Strange, Linda",
-            "115",
-            "76",
-            "83",
-            "109",
-            "87",
-            "279"
-          ],
-          [
-            "Hanson, Dawn",
-            "134",
-            "59",
-            "108",
-            "98",
-            "158",
-            "364"
-          ],
-          [
-            "Total",
-            "191",
-            "207",
-            "245",
-            "643"
-          ],
           [
             "Team 5",
             "Lane 23 points won: 7"
@@ -669,6 +640,35 @@
             "248",
             "256",
             "755"
+          ],
+          [
+            "Team 6",
+            "Lane 24 points won: 0"
+          ],
+          [
+            "Strange, Linda",
+            "115",
+            "76",
+            "83",
+            "109",
+            "87",
+            "279"
+          ],
+          [
+            "Hanson, Dawn",
+            "134",
+            "59",
+            "108",
+            "98",
+            "158",
+            "364"
+          ],
+          [
+            "Total",
+            "191",
+            "207",
+            "245",
+            "643"
           ]
         ],
         "emphasis": [
@@ -701,10 +701,10 @@
           ],
           [
             false,
-            false,
-            false,
-            false,
-            false
+            true,
+            true,
+            true,
+            true
           ],
           [
             true,
@@ -740,10 +740,57 @@
             false,
             false
           ]
-        ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "599"
+          },
+          {
+            "handicapSeries": "591"
+          },
+          {
+            "handicapSeries": "785",
+            "handicapGames": [
+              "261",
+              "258",
+              "266"
+            ],
+            "teamPoints": [
+              "2.0",
+              "2.0",
+              "2.0",
+              "7.0",
+              "7.0"
+            ]
+          },
+          {},
+          {
+            "handicapSeries": "507"
+          },
+          {
+            "handicapSeries": "541"
+          },
+          {
+            "handicapSeries": "643",
+            "handicapGames": [
+              "191",
+              "207",
+              "245"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/1/14691609142026f202601reprnt00.pdf"
       },
       {
-        "title": "TROUBLE MAKERS matchup",
+        "title": "SPARE US matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -754,35 +801,6 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 3",
-            "Lane 21 points won: 5"
-          ],
-          [
-            ", Vacant",
-            "120",
-            "72",
-            "120",
-            "120",
-            "120",
-            "360"
-          ],
-          [
-            "Henderson, Toni",
-            "141",
-            "53",
-            "157",
-            "147",
-            "172",
-            "476"
-          ],
-          [
-            "Total",
-            "277",
-            "267",
-            "292",
-            "836"
-          ],
           [
             "Team 4",
             "Lane 22 points won: 2"
@@ -811,6 +829,35 @@
             "275",
             "245",
             "761"
+          ],
+          [
+            "Team 3",
+            "Lane 21 points won: 5"
+          ],
+          [
+            ", Vacant",
+            "120",
+            "72",
+            "120",
+            "120",
+            "120",
+            "360"
+          ],
+          [
+            "Henderson, Toni",
+            "141",
+            "53",
+            "157",
+            "147",
+            "172",
+            "476"
+          ],
+          [
+            "Total",
+            "277",
+            "267",
+            "292",
+            "836"
           ]
         ],
         "emphasis": [
@@ -844,7 +891,7 @@
           [
             false,
             false,
-            false,
+            true,
             false,
             false
           ],
@@ -877,15 +924,60 @@
           ],
           [
             false,
+            true,
             false,
-            false,
-            false,
-            false
+            true,
+            true
           ]
-        ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "586"
+          },
+          {
+            "handicapSeries": "526"
+          },
+          {
+            "handicapSeries": "761",
+            "handicapGames": [
+              "241",
+              "275",
+              "245"
+            ],
+            "teamPoints": [
+              "0.0",
+              "2.0",
+              "0.0",
+              "2.0",
+              "2.0"
+            ]
+          },
+          {},
+          {},
+          {
+            "handicapSeries": "635"
+          },
+          {
+            "handicapSeries": "857",
+            "handicapGames": [
+              "284",
+              "274",
+              "299"
+            ],
+            "teamPoints": [
+              "2.0",
+              "0.0",
+              "2.0",
+              "5.0",
+              "5.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/1/14691609142026f202601reprnt00.pdf"
       },
       {
-        "title": "TEAM 2 matchup",
+        "title": "TEAM 1 matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -896,35 +988,6 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 2",
-            "Lane 20 points won: 2"
-          ],
-          [
-            "Anderson, Morgan",
-            "126",
-            "66",
-            "135",
-            "131",
-            "109",
-            "375"
-          ],
-          [
-            "Bell, Patti",
-            "165",
-            "31",
-            "154",
-            "140",
-            "123",
-            "417"
-          ],
-          [
-            "Total",
-            "289",
-            "271",
-            "232",
-            "792"
-          ],
           [
             "Team 1",
             "Lane 19 points won: 5"
@@ -953,6 +1016,35 @@
             "273",
             "296",
             "793"
+          ],
+          [
+            "Team 2",
+            "Lane 20 points won: 2"
+          ],
+          [
+            "Anderson, Morgan",
+            "126",
+            "66",
+            "135",
+            "131",
+            "109",
+            "375"
+          ],
+          [
+            "Bell, Patti",
+            "165",
+            "31",
+            "154",
+            "140",
+            "123",
+            "417"
+          ],
+          [
+            "Total",
+            "289",
+            "271",
+            "232",
+            "792"
           ]
         ],
         "emphasis": [
@@ -986,9 +1078,9 @@
           [
             false,
             false,
-            false,
-            false,
-            false
+            true,
+            true,
+            true
           ],
           [
             true,
@@ -1019,12 +1111,59 @@
           ],
           [
             false,
-            false,
+            true,
             false,
             false,
             false
           ]
-        ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "625"
+          },
+          {
+            "handicapSeries": "546"
+          },
+          {
+            "handicapSeries": "877",
+            "handicapGames": [
+              "252",
+              "301",
+              "324"
+            ],
+            "teamPoints": [
+              "0.0",
+              "2.0",
+              "2.0",
+              "5.0",
+              "5.0"
+            ]
+          },
+          {},
+          {
+            "handicapSeries": "573"
+          },
+          {
+            "handicapSeries": "510"
+          },
+          {
+            "handicapSeries": "792",
+            "handicapGames": [
+              "289",
+              "271",
+              "232"
+            ],
+            "teamPoints": [
+              "2.0",
+              "0.0",
+              "0.0",
+              "2.0",
+              "2.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/1/14691609142026f202601reprnt00.pdf"
       }
     ],
     "lanes": [
@@ -1413,13 +1552,13 @@
       }
     ]
   },
-  "lastCheckedAt": "2026-09-15T14:50:18.817Z",
+  "lastCheckedAt": "2026-09-18T02:44:30.104Z",
   "sourceFingerprint": "11b3d785d3f2abbfcc60c99fcf0a832c6eafafe262c1956d2a877f241427eb6c",
   "history": [
     {
       "week": "1",
       "sourceUpdated": "Sep 14, 2026",
-      "syncedAt": "2026-09-15T14:50:18.817Z",
+      "syncedAt": "2026-09-18T02:44:30.104Z",
       "views": {
         "standings": [
           {
@@ -2001,7 +2140,7 @@
         ],
         "recaps": [
           {
-            "title": "TEAM 6 matchup",
+            "title": "GO GET EM matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -2012,35 +2151,6 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 6",
-                "Lane 24 points won: 0"
-              ],
-              [
-                "Strange, Linda",
-                "115",
-                "76",
-                "83",
-                "109",
-                "87",
-                "279"
-              ],
-              [
-                "Hanson, Dawn",
-                "134",
-                "59",
-                "108",
-                "98",
-                "158",
-                "364"
-              ],
-              [
-                "Total",
-                "191",
-                "207",
-                "245",
-                "643"
-              ],
               [
                 "Team 5",
                 "Lane 23 points won: 7"
@@ -2069,6 +2179,35 @@
                 "248",
                 "256",
                 "755"
+              ],
+              [
+                "Team 6",
+                "Lane 24 points won: 0"
+              ],
+              [
+                "Strange, Linda",
+                "115",
+                "76",
+                "83",
+                "109",
+                "87",
+                "279"
+              ],
+              [
+                "Hanson, Dawn",
+                "134",
+                "59",
+                "108",
+                "98",
+                "158",
+                "364"
+              ],
+              [
+                "Total",
+                "191",
+                "207",
+                "245",
+                "643"
               ]
             ],
             "emphasis": [
@@ -2101,10 +2240,10 @@
               ],
               [
                 false,
-                false,
-                false,
-                false,
-                false
+                true,
+                true,
+                true,
+                true
               ],
               [
                 true,
@@ -2140,10 +2279,57 @@
                 false,
                 false
               ]
-            ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "599"
+              },
+              {
+                "handicapSeries": "591"
+              },
+              {
+                "handicapSeries": "785",
+                "handicapGames": [
+                  "261",
+                  "258",
+                  "266"
+                ],
+                "teamPoints": [
+                  "2.0",
+                  "2.0",
+                  "2.0",
+                  "7.0",
+                  "7.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "507"
+              },
+              {
+                "handicapSeries": "541"
+              },
+              {
+                "handicapSeries": "643",
+                "handicapGames": [
+                  "191",
+                  "207",
+                  "245"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/1/14691609142026f202601reprnt00.pdf"
           },
           {
-            "title": "TROUBLE MAKERS matchup",
+            "title": "SPARE US matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -2154,35 +2340,6 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 3",
-                "Lane 21 points won: 5"
-              ],
-              [
-                ", Vacant",
-                "120",
-                "72",
-                "120",
-                "120",
-                "120",
-                "360"
-              ],
-              [
-                "Henderson, Toni",
-                "141",
-                "53",
-                "157",
-                "147",
-                "172",
-                "476"
-              ],
-              [
-                "Total",
-                "277",
-                "267",
-                "292",
-                "836"
-              ],
               [
                 "Team 4",
                 "Lane 22 points won: 2"
@@ -2211,6 +2368,35 @@
                 "275",
                 "245",
                 "761"
+              ],
+              [
+                "Team 3",
+                "Lane 21 points won: 5"
+              ],
+              [
+                ", Vacant",
+                "120",
+                "72",
+                "120",
+                "120",
+                "120",
+                "360"
+              ],
+              [
+                "Henderson, Toni",
+                "141",
+                "53",
+                "157",
+                "147",
+                "172",
+                "476"
+              ],
+              [
+                "Total",
+                "277",
+                "267",
+                "292",
+                "836"
               ]
             ],
             "emphasis": [
@@ -2244,7 +2430,7 @@
               [
                 false,
                 false,
-                false,
+                true,
                 false,
                 false
               ],
@@ -2277,15 +2463,60 @@
               ],
               [
                 false,
+                true,
                 false,
-                false,
-                false,
-                false
+                true,
+                true
               ]
-            ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "586"
+              },
+              {
+                "handicapSeries": "526"
+              },
+              {
+                "handicapSeries": "761",
+                "handicapGames": [
+                  "241",
+                  "275",
+                  "245"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "2.0",
+                  "0.0",
+                  "2.0",
+                  "2.0"
+                ]
+              },
+              {},
+              {},
+              {
+                "handicapSeries": "635"
+              },
+              {
+                "handicapSeries": "857",
+                "handicapGames": [
+                  "284",
+                  "274",
+                  "299"
+                ],
+                "teamPoints": [
+                  "2.0",
+                  "0.0",
+                  "2.0",
+                  "5.0",
+                  "5.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/1/14691609142026f202601reprnt00.pdf"
           },
           {
-            "title": "TEAM 2 matchup",
+            "title": "TEAM 1 matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -2296,35 +2527,6 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 2",
-                "Lane 20 points won: 2"
-              ],
-              [
-                "Anderson, Morgan",
-                "126",
-                "66",
-                "135",
-                "131",
-                "109",
-                "375"
-              ],
-              [
-                "Bell, Patti",
-                "165",
-                "31",
-                "154",
-                "140",
-                "123",
-                "417"
-              ],
-              [
-                "Total",
-                "289",
-                "271",
-                "232",
-                "792"
-              ],
               [
                 "Team 1",
                 "Lane 19 points won: 5"
@@ -2353,6 +2555,35 @@
                 "273",
                 "296",
                 "793"
+              ],
+              [
+                "Team 2",
+                "Lane 20 points won: 2"
+              ],
+              [
+                "Anderson, Morgan",
+                "126",
+                "66",
+                "135",
+                "131",
+                "109",
+                "375"
+              ],
+              [
+                "Bell, Patti",
+                "165",
+                "31",
+                "154",
+                "140",
+                "123",
+                "417"
+              ],
+              [
+                "Total",
+                "289",
+                "271",
+                "232",
+                "792"
               ]
             ],
             "emphasis": [
@@ -2386,9 +2617,9 @@
               [
                 false,
                 false,
-                false,
-                false,
-                false
+                true,
+                true,
+                true
               ],
               [
                 true,
@@ -2419,12 +2650,59 @@
               ],
               [
                 false,
-                false,
+                true,
                 false,
                 false,
                 false
               ]
-            ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "625"
+              },
+              {
+                "handicapSeries": "546"
+              },
+              {
+                "handicapSeries": "877",
+                "handicapGames": [
+                  "252",
+                  "301",
+                  "324"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "2.0",
+                  "2.0",
+                  "5.0",
+                  "5.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "573"
+              },
+              {
+                "handicapSeries": "510"
+              },
+              {
+                "handicapSeries": "792",
+                "handicapGames": [
+                  "289",
+                  "271",
+                  "232"
+                ],
+                "teamPoints": [
+                  "2.0",
+                  "0.0",
+                  "0.0",
+                  "2.0",
+                  "2.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/1/14691609142026f202601reprnt00.pdf"
           }
         ],
         "lanes": [
@@ -2815,5 +3093,5 @@
       }
     }
   ],
-  "lastAttemptedAt": "2026-09-18T00:51:45.799Z"
+  "lastAttemptedAt": null
 }

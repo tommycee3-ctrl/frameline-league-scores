@@ -15,10 +15,10 @@
   "centerSlug": "maplewood-lanes-omaha-nebraska",
   "area": "Omaha",
   "sourceUpdated": "Sep 13, 2026",
-  "syncedAt": "2026-09-15T15:41:06.726Z",
+  "syncedAt": "2026-09-18T03:04:31.035Z",
   "status": "current",
   "week": "2",
-  "fingerprint": "425d72a0df8f7922275aebd6032faa7fd59915e95113f43f186fb3fc2a664400",
+  "fingerprint": "dd00efb71585986e8c80f1bd73d4dd6958ab9a7fc8e958531d4ea38303ade9fb",
   "lastCompletedCycle": "2026-09-12",
   "views": {
     "standings": [
@@ -1321,7 +1321,7 @@
     ],
     "recaps": [
       {
-        "title": "Team 2 matchup",
+        "title": "Team 1 matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -1332,53 +1332,6 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 2",
-            "Lane 2 points won: 0"
-          ],
-          [
-            "Meurrens, Adam",
-            "101",
-            "0",
-            "90",
-            "124",
-            "108",
-            "322"
-          ],
-          [
-            "Meurrens, Aiden",
-            "100",
-            "0",
-            "109",
-            "76",
-            "111",
-            "296"
-          ],
-          [
-            "Rotherham, Connar",
-            "121",
-            "0",
-            "72",
-            "89",
-            "119",
-            "280"
-          ],
-          [
-            "Soula, James",
-            "138",
-            "0",
-            "187",
-            "197",
-            "173",
-            "557"
-          ],
-          [
-            "Total",
-            "458",
-            "486",
-            "511",
-            "1455"
-          ],
           [
             "Team 1",
             "Lane 1 points won: 0"
@@ -1452,15 +1405,57 @@
             "647",
             "654",
             "1912"
+          ],
+          [
+            "Team 2",
+            "Lane 2 points won: 0"
+          ],
+          [
+            "Meurrens, Adam",
+            "101",
+            "0",
+            "90",
+            "124",
+            "108",
+            "322"
+          ],
+          [
+            "Meurrens, Aiden",
+            "100",
+            "0",
+            "109",
+            "76",
+            "111",
+            "296"
+          ],
+          [
+            "Rotherham, Connar",
+            "121",
+            "0",
+            "72",
+            "89",
+            "119",
+            "280"
+          ],
+          [
+            "Soula, James",
+            "138",
+            "0",
+            "187",
+            "197",
+            "173",
+            "557"
+          ],
+          [
+            "Total",
+            "458",
+            "486",
+            "511",
+            "1455"
           ]
         ],
         "emphasis": [
           [
-            true,
-            false,
-            false,
-            false,
-            false,
             false,
             false
           ],
@@ -1505,13 +1500,6 @@
             false,
             false,
             false,
-            false
-          ],
-          [
-            true,
-            false,
-            false,
-            false,
             false,
             false,
             false
@@ -1539,7 +1527,9 @@
             false,
             false,
             false,
-            false,
+            false
+          ],
+          [
             false,
             false
           ],
@@ -1586,10 +1576,27 @@
             false,
             false
           ]
+        ],
+        "recapDetails": [
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {}
         ]
       },
       {
-        "title": "Team 4 matchup",
+        "title": "Team 3 matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -1600,44 +1607,6 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 4",
-            "Lane 4 points won: 0"
-          ],
-          [
-            "Hannah, Janet",
-            "76",
-            "0",
-            "80",
-            "97",
-            "90",
-            "267"
-          ],
-          [
-            "Eikmeier, Barry",
-            "199",
-            "0",
-            "195",
-            "183",
-            "192",
-            "570"
-          ],
-          [
-            "Roberts, Sam",
-            "128",
-            "0",
-            "113",
-            "123",
-            "142",
-            "378"
-          ],
-          [
-            "Total",
-            "388",
-            "403",
-            "424",
-            "1215"
-          ],
           [
             "Team 3",
             "Lane 3 points won: 0"
@@ -1684,15 +1653,48 @@
             "496",
             "427",
             "1377"
+          ],
+          [
+            "Team 4",
+            "Lane 4 points won: 0"
+          ],
+          [
+            "Hannah, Janet",
+            "76",
+            "0",
+            "80",
+            "97",
+            "90",
+            "267"
+          ],
+          [
+            "Eikmeier, Barry",
+            "199",
+            "0",
+            "195",
+            "183",
+            "192",
+            "570"
+          ],
+          [
+            "Roberts, Sam",
+            "128",
+            "0",
+            "113",
+            "123",
+            "142",
+            "378"
+          ],
+          [
+            "Total",
+            "388",
+            "403",
+            "424",
+            "1215"
           ]
         ],
         "emphasis": [
           [
-            true,
-            false,
-            false,
-            false,
-            false,
             false,
             false
           ],
@@ -1728,13 +1730,6 @@
             false,
             false,
             false,
-            false
-          ],
-          [
-            true,
-            false,
-            false,
-            false,
             false,
             false,
             false
@@ -1744,7 +1739,9 @@
             false,
             false,
             false,
-            false,
+            false
+          ],
+          [
             false,
             false
           ],
@@ -1782,10 +1779,23 @@
             false,
             false
           ]
+        ],
+        "recapDetails": [
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {}
         ]
       },
       {
-        "title": "Team 6 matchup",
+        "title": "Team 5 matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -1796,44 +1806,6 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 6",
-            "Lane 6 points won: 0"
-          ],
-          [
-            "Brandon, Connor",
-            "113",
-            "0",
-            "86",
-            "90",
-            "118",
-            "294"
-          ],
-          [
-            "Howard, Mercedes",
-            "94",
-            "0",
-            "67",
-            "107",
-            "97",
-            "271"
-          ],
-          [
-            "Williams, Tj",
-            "103",
-            "0",
-            "122",
-            "100",
-            "85",
-            "307"
-          ],
-          [
-            "Total",
-            "275",
-            "297",
-            "300",
-            "872"
-          ],
           [
             "Team 5",
             "Lane 5 points won: 0"
@@ -1871,15 +1843,48 @@
             "310",
             "343",
             "936"
+          ],
+          [
+            "Team 6",
+            "Lane 6 points won: 0"
+          ],
+          [
+            "Brandon, Connor",
+            "113",
+            "0",
+            "86",
+            "90",
+            "118",
+            "294"
+          ],
+          [
+            "Howard, Mercedes",
+            "94",
+            "0",
+            "67",
+            "107",
+            "97",
+            "271"
+          ],
+          [
+            "Williams, Tj",
+            "103",
+            "0",
+            "122",
+            "100",
+            "85",
+            "307"
+          ],
+          [
+            "Total",
+            "275",
+            "297",
+            "300",
+            "872"
           ]
         ],
         "emphasis": [
           [
-            true,
-            false,
-            false,
-            false,
-            false,
             false,
             false
           ],
@@ -1918,11 +1923,6 @@
             false
           ],
           [
-            true,
-            false,
-            false,
-            false,
-            false,
             false,
             false
           ],
@@ -1960,6 +1960,18 @@
             false,
             false
           ]
+        ],
+        "recapDetails": [
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {}
         ]
       }
     ],
@@ -2754,14 +2766,14 @@
       }
     ]
   },
-  "lastAttemptedAt": "2026-09-18T01:00:27.328Z",
-  "lastCheckedAt": "2026-09-15T15:41:06.726Z",
+  "lastAttemptedAt": null,
+  "lastCheckedAt": "2026-09-18T03:04:31.035Z",
   "sourceFingerprint": "724891ab4218737faf5013294014a66cde0bd8bb75de3c7bbecaa2330e75b76b",
   "history": [
     {
       "week": "2",
       "sourceUpdated": "Sep 13, 2026",
-      "syncedAt": "2026-09-15T15:41:06.726Z",
+      "syncedAt": "2026-09-18T03:04:31.035Z",
       "views": {
         "standings": [
           {
@@ -4063,7 +4075,7 @@
         ],
         "recaps": [
           {
-            "title": "Team 2 matchup",
+            "title": "Team 1 matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -4074,53 +4086,6 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 2",
-                "Lane 2 points won: 0"
-              ],
-              [
-                "Meurrens, Adam",
-                "101",
-                "0",
-                "90",
-                "124",
-                "108",
-                "322"
-              ],
-              [
-                "Meurrens, Aiden",
-                "100",
-                "0",
-                "109",
-                "76",
-                "111",
-                "296"
-              ],
-              [
-                "Rotherham, Connar",
-                "121",
-                "0",
-                "72",
-                "89",
-                "119",
-                "280"
-              ],
-              [
-                "Soula, James",
-                "138",
-                "0",
-                "187",
-                "197",
-                "173",
-                "557"
-              ],
-              [
-                "Total",
-                "458",
-                "486",
-                "511",
-                "1455"
-              ],
               [
                 "Team 1",
                 "Lane 1 points won: 0"
@@ -4194,15 +4159,57 @@
                 "647",
                 "654",
                 "1912"
+              ],
+              [
+                "Team 2",
+                "Lane 2 points won: 0"
+              ],
+              [
+                "Meurrens, Adam",
+                "101",
+                "0",
+                "90",
+                "124",
+                "108",
+                "322"
+              ],
+              [
+                "Meurrens, Aiden",
+                "100",
+                "0",
+                "109",
+                "76",
+                "111",
+                "296"
+              ],
+              [
+                "Rotherham, Connar",
+                "121",
+                "0",
+                "72",
+                "89",
+                "119",
+                "280"
+              ],
+              [
+                "Soula, James",
+                "138",
+                "0",
+                "187",
+                "197",
+                "173",
+                "557"
+              ],
+              [
+                "Total",
+                "458",
+                "486",
+                "511",
+                "1455"
               ]
             ],
             "emphasis": [
               [
-                true,
-                false,
-                false,
-                false,
-                false,
                 false,
                 false
               ],
@@ -4247,13 +4254,6 @@
                 false,
                 false,
                 false,
-                false
-              ],
-              [
-                true,
-                false,
-                false,
-                false,
                 false,
                 false,
                 false
@@ -4281,7 +4281,9 @@
                 false,
                 false,
                 false,
-                false,
+                false
+              ],
+              [
                 false,
                 false
               ],
@@ -4328,10 +4330,27 @@
                 false,
                 false
               ]
+            ],
+            "recapDetails": [
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {}
             ]
           },
           {
-            "title": "Team 4 matchup",
+            "title": "Team 3 matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -4342,44 +4361,6 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 4",
-                "Lane 4 points won: 0"
-              ],
-              [
-                "Hannah, Janet",
-                "76",
-                "0",
-                "80",
-                "97",
-                "90",
-                "267"
-              ],
-              [
-                "Eikmeier, Barry",
-                "199",
-                "0",
-                "195",
-                "183",
-                "192",
-                "570"
-              ],
-              [
-                "Roberts, Sam",
-                "128",
-                "0",
-                "113",
-                "123",
-                "142",
-                "378"
-              ],
-              [
-                "Total",
-                "388",
-                "403",
-                "424",
-                "1215"
-              ],
               [
                 "Team 3",
                 "Lane 3 points won: 0"
@@ -4426,15 +4407,48 @@
                 "496",
                 "427",
                 "1377"
+              ],
+              [
+                "Team 4",
+                "Lane 4 points won: 0"
+              ],
+              [
+                "Hannah, Janet",
+                "76",
+                "0",
+                "80",
+                "97",
+                "90",
+                "267"
+              ],
+              [
+                "Eikmeier, Barry",
+                "199",
+                "0",
+                "195",
+                "183",
+                "192",
+                "570"
+              ],
+              [
+                "Roberts, Sam",
+                "128",
+                "0",
+                "113",
+                "123",
+                "142",
+                "378"
+              ],
+              [
+                "Total",
+                "388",
+                "403",
+                "424",
+                "1215"
               ]
             ],
             "emphasis": [
               [
-                true,
-                false,
-                false,
-                false,
-                false,
                 false,
                 false
               ],
@@ -4470,13 +4484,6 @@
                 false,
                 false,
                 false,
-                false
-              ],
-              [
-                true,
-                false,
-                false,
-                false,
                 false,
                 false,
                 false
@@ -4486,7 +4493,9 @@
                 false,
                 false,
                 false,
-                false,
+                false
+              ],
+              [
                 false,
                 false
               ],
@@ -4524,10 +4533,23 @@
                 false,
                 false
               ]
+            ],
+            "recapDetails": [
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {}
             ]
           },
           {
-            "title": "Team 6 matchup",
+            "title": "Team 5 matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -4538,44 +4560,6 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 6",
-                "Lane 6 points won: 0"
-              ],
-              [
-                "Brandon, Connor",
-                "113",
-                "0",
-                "86",
-                "90",
-                "118",
-                "294"
-              ],
-              [
-                "Howard, Mercedes",
-                "94",
-                "0",
-                "67",
-                "107",
-                "97",
-                "271"
-              ],
-              [
-                "Williams, Tj",
-                "103",
-                "0",
-                "122",
-                "100",
-                "85",
-                "307"
-              ],
-              [
-                "Total",
-                "275",
-                "297",
-                "300",
-                "872"
-              ],
               [
                 "Team 5",
                 "Lane 5 points won: 0"
@@ -4613,15 +4597,48 @@
                 "310",
                 "343",
                 "936"
+              ],
+              [
+                "Team 6",
+                "Lane 6 points won: 0"
+              ],
+              [
+                "Brandon, Connor",
+                "113",
+                "0",
+                "86",
+                "90",
+                "118",
+                "294"
+              ],
+              [
+                "Howard, Mercedes",
+                "94",
+                "0",
+                "67",
+                "107",
+                "97",
+                "271"
+              ],
+              [
+                "Williams, Tj",
+                "103",
+                "0",
+                "122",
+                "100",
+                "85",
+                "307"
+              ],
+              [
+                "Total",
+                "275",
+                "297",
+                "300",
+                "872"
               ]
             ],
             "emphasis": [
               [
-                true,
-                false,
-                false,
-                false,
-                false,
                 false,
                 false
               ],
@@ -4660,11 +4677,6 @@
                 false
               ],
               [
-                true,
-                false,
-                false,
-                false,
-                false,
                 false,
                 false
               ],
@@ -4702,6 +4714,18 @@
                 false,
                 false
               ]
+            ],
+            "recapDetails": [
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {}
             ]
           }
         ],

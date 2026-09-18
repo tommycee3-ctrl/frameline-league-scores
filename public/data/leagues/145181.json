@@ -7,33 +7,33 @@
   "bowlsOn": "Wednesday",
   "startTime": "3:30 PM",
   "type": "Scratch Youth Mixed",
-  "updated": "09/09/2026",
+  "updated": "Sep 16, 2026",
   "startDate": "Fall 2026",
   "bowlDay": 3,
   "centerId": "2119",
   "centerName": "Maplewood Lanes",
   "centerSlug": "maplewood-lanes-omaha-nebraska",
   "area": "Omaha",
-  "sourceUpdated": "09/09/2026",
-  "syncedAt": "2026-09-09T19:09:13.861Z",
+  "sourceUpdated": "Sep 16, 2026",
+  "syncedAt": "2026-09-18T02:37:02.544Z",
   "status": "current",
-  "week": "3",
-  "fingerprint": "e60f0e5377c6d6c3e848738f8ac48036ae58ec953f747f1632f9678dc140d3c3",
-  "lastCompletedCycle": "2026-09-09",
+  "week": "4",
+  "fingerprint": "da7b35534122e05c7f69785335d2ba5b2674c25ccf07662511ab1ac0125f8ce0",
+  "lastCompletedCycle": "2026-09-16",
   "views": {
     "standings": [
       {
-        "title": "Table 1",
+        "title": "League standings",
         "headers": [
-          "Division",
           "Place",
-          "Team#",
           "Team",
-          "Won",
-          "Lost",
-          "% Won",
-          "YTD Won",
-          "Avg",
+          "Team#",
+          "Div",
+          "WON",
+          "LOST",
+          "%",
+          "YTD WON",
+          "AVG",
           "Pins",
           "HSG",
           "HSS"
@@ -41,87 +41,87 @@
         "rows": [
           [
             "1",
-            "1",
-            "3",
             "Team 3",
+            "3",
+            "1",
             "0",
             "0",
             "100 %",
             "0",
-            "353",
-            "3343",
+            "296",
+            "4287",
             "420",
             "1145"
           ],
           [
-            "1",
-            "2",
             "2",
             "Team 2",
+            "2",
+            "1",
             "0",
             "0",
             "100 %",
             "0",
-            "352",
-            "2873",
+            "330",
+            "3889",
             "441",
             "1159"
           ],
           [
-            "1",
             "3",
-            "4",
             "Team 4",
-            "0",
-            "0",
-            "100 %",
-            "0",
-            "301",
-            "2476",
-            "331",
-            "874"
-          ],
-          [
-            "1",
             "4",
-            "6",
+            "1",
+            "0",
+            "0",
+            "100 %",
+            "0",
+            "329",
+            "3536",
+            "370",
+            "1060"
+          ],
+          [
+            "4",
             "Team 6",
-            "0",
-            "0",
-            "100 %",
-            "0",
-            "328",
-            "2378",
-            "349",
-            "928"
-          ],
-          [
-            "1",
-            "5",
-            "1",
-            "Team 1",
-            "0",
-            "0",
-            "100 %",
-            "0",
-            "251",
-            "2175",
-            "0",
-            "0"
-          ],
-          [
-            "1",
             "6",
-            "5",
-            "Team 5",
+            "1",
             "0",
             "0",
             "100 %",
             "0",
-            "310",
-            "2046",
+            "343",
+            "3437",
+            "392",
+            "1059"
+          ],
+          [
+            "5",
+            "Team 1",
+            "1",
+            "1",
+            "0",
+            "0",
+            "100 %",
+            "0",
             "320",
-            "857"
+            "3180",
+            "363",
+            "1005"
+          ],
+          [
+            "6",
+            "Team 5",
+            "5",
+            "1",
+            "0",
+            "0",
+            "100 %",
+            "0",
+            "312",
+            "3084",
+            "418",
+            "1038"
           ]
         ],
         "emphasis": [
@@ -132,23 +132,9 @@
             false,
             false,
             false,
+            true,
             false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
+            true,
             false,
             false,
             false
@@ -160,23 +146,9 @@
             false,
             false,
             false,
+            true,
             false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
+            true,
             false,
             false,
             false
@@ -188,9 +160,9 @@
             false,
             false,
             false,
+            true,
             false,
-            false,
-            false,
+            true,
             false,
             false,
             false
@@ -202,9 +174,37 @@
             false,
             false,
             false,
+            true,
+            false,
+            true,
+            false,
+            false,
+            false
+          ],
+          [
             false,
             false,
             false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            true,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            true,
             false,
             false,
             false
@@ -214,7 +214,7 @@
     ],
     "bowlers": [
       {
-        "title": "Table 1",
+        "title": "Bowlers and season statistics",
         "headers": [
           "Name",
           "Team#",
@@ -236,9 +236,9 @@
         "rows": [
           [
             "Andersen, Dexter",
-            "5",
+            "4",
             "1",
-            "Team 5",
+            "Team 4",
             "M",
             "594",
             "8",
@@ -255,12 +255,12 @@
           [
             "Bilotta, Anthony",
             "2",
-            "2",
+            "1",
             "Team 2",
             "M",
-            "470",
-            "6",
-            "78",
+            "688",
+            "9",
+            "76",
             "0",
             "0",
             "108",
@@ -272,19 +272,19 @@
           ],
           [
             "Chambers, Dorian",
-            "5",
+            "3",
             "2",
-            "Team 5",
+            "Team 3",
             "M",
-            "319",
-            "8",
-            "39",
+            "484",
+            "11",
+            "44",
             "0",
             "0",
-            "61",
-            "134",
-            "61",
-            "134",
+            "77",
+            "165",
+            "77",
+            "165",
             "0",
             "0"
           ],
@@ -294,27 +294,27 @@
             "1",
             "Team 1",
             "M",
-            "849",
-            "9",
-            "94",
+            "1208",
+            "12",
+            "100",
             "0",
             "0",
-            "133",
-            "303",
-            "133",
-            "303",
-            "0",
+            "137",
+            "359",
+            "137",
+            "359",
+            "0.67",
             "0"
           ],
           [
             "Diaz, Elijiah",
-            "5",
-            "4",
-            "Team 5",
+            "6",
+            "3",
+            "Team 6",
             "M",
-            "848",
-            "8",
-            "106",
+            "1150",
+            "11",
+            "104",
             "0",
             "0",
             "140",
@@ -326,13 +326,13 @@
           ],
           [
             "Forbes, Paul",
-            "6",
-            "3",
-            "Team 6",
+            "2",
+            "2",
+            "Team 2",
             "M",
-            "668",
-            "8",
-            "83",
+            "868",
+            "11",
+            "78",
             "0",
             "0",
             "115",
@@ -344,19 +344,19 @@
           ],
           [
             "Goebel, Max",
-            "6",
             "4",
-            "Team 6",
+            "4",
+            "Team 4",
             "M",
-            "510",
-            "6",
-            "85",
+            "812",
+            "9",
+            "90",
             "0",
             "0",
             "115",
-            "230",
+            "302",
             "115",
-            "230",
+            "302",
             "0",
             "0"
           ],
@@ -366,51 +366,51 @@
             "3",
             "Team 3",
             "M",
-            "1165",
-            "9",
-            "129",
+            "1619",
+            "12",
+            "134",
             "0",
             "0",
-            "162",
-            "433",
-            "162",
-            "433",
-            "0",
+            "163",
+            "454",
+            "163",
+            "454",
+            "0.92",
             "0"
           ],
           [
             "Krenmayr, Lilly",
+            "5",
             "4",
-            "3",
-            "Team 4",
+            "Team 5",
             "W",
-            "536",
-            "9",
-            "59",
+            "771",
+            "12",
+            "64",
             "0",
             "0",
-            "70",
-            "196",
-            "70",
-            "196",
-            "0",
+            "105",
+            "235",
+            "105",
+            "235",
+            "0.25",
             "0"
           ],
           [
             "Malone, Ben",
-            "5",
+            "2",
             "3",
-            "Team 5",
+            "Team 2",
             "M",
-            "729",
-            "8",
-            "91",
+            "1103",
+            "11",
+            "100",
             "0",
             "0",
-            "138",
-            "325",
-            "138",
-            "325",
+            "157",
+            "374",
+            "157",
+            "374",
             "0",
             "0"
           ],
@@ -420,9 +420,9 @@
             "2",
             "Team 1",
             "M",
-            "443",
-            "6",
-            "73",
+            "650",
+            "9",
+            "72",
             "0",
             "0",
             "110",
@@ -434,13 +434,13 @@
           ],
           [
             "Mcdonald, Blaise",
-            "2",
-            "4",
-            "Team 2",
+            "3",
+            "1",
+            "Team 3",
             "M",
-            "739",
-            "6",
-            "123",
+            "1064",
+            "9",
+            "118",
             "0",
             "0",
             "182",
@@ -452,26 +452,26 @@
           ],
           [
             "Mcdonald, Carter",
-            "3",
             "4",
-            "Team 3",
+            "3",
+            "Team 4",
             "M",
-            "591",
-            "6",
-            "98",
+            "937",
+            "9",
+            "104",
             "0",
             "0",
-            "113",
-            "315",
-            "113",
-            "315",
+            "125",
+            "346",
+            "125",
+            "346",
             "0",
             "0"
           ],
           [
             "Munoz, Rodrigo",
             "6",
-            "2",
+            "4",
             "Team 6",
             "M",
             "199",
@@ -488,27 +488,27 @@
           ],
           [
             "Penning, Ethan",
-            "2",
+            "6",
             "1",
-            "Team 2",
+            "Team 6",
             "M",
-            "681",
-            "9",
-            "75",
+            "958",
+            "12",
+            "79",
             "0",
             "0",
             "110",
             "280",
             "110",
             "280",
-            "0",
+            "0.83",
             "0"
           ],
           [
             "Quiel, Charlott",
-            "4",
+            "5",
             "2",
-            "Team 4",
+            "Team 5",
             "W",
             "618",
             "9",
@@ -524,26 +524,26 @@
           ],
           [
             "Robb, Molly",
-            "4",
-            "4",
-            "Team 4",
+            "5",
+            "3",
+            "Team 5",
             "W",
-            "868",
-            "9",
-            "96",
+            "1238",
+            "12",
+            "103",
             "0",
             "0",
-            "129",
-            "310",
-            "129",
-            "310",
-            "0",
+            "167",
+            "370",
+            "167",
+            "370",
+            "0.17",
             "0"
           ],
           [
             "Robinson, Leo",
             "6",
-            "1",
+            "2",
             "Team 6",
             "M",
             "188",
@@ -564,26 +564,26 @@
             "3",
             "Team 1",
             "M",
-            "760",
-            "9",
-            "84",
+            "1025",
+            "12",
+            "85",
             "0",
             "0",
             "110",
             "277",
             "110",
             "277",
-            "0",
+            "0.42",
             "0"
           ],
           [
             "Rozmajzl, Michael",
-            "3",
-            "1",
-            "Team 3",
+            "4",
+            "2",
+            "Team 4",
             "M",
-            "550",
-            "9",
+            "740",
+            "12",
             "61",
             "0",
             "0",
@@ -591,18 +591,18 @@
             "197",
             "83",
             "197",
-            "0",
+            "0.67",
             "0"
           ],
           [
             "Scherr, Olivia",
-            "4",
+            "5",
             "1",
-            "Team 4",
+            "Team 5",
             "W",
-            "469",
-            "6",
-            "78",
+            "698",
+            "9",
+            "77",
             "0",
             "0",
             "92",
@@ -616,6 +616,7 @@
             "Sehr, Wyatt",
             "0",
             "0",
+            "",
             "M",
             "274",
             "3",
@@ -632,11 +633,11 @@
           [
             "Steiner, Will",
             "2",
-            "3",
+            "4",
             "Team 2",
             "M",
-            "690",
-            "9",
+            "914",
+            "12",
             "76",
             "0",
             "0",
@@ -644,25 +645,25 @@
             "304",
             "115",
             "304",
-            "0",
+            "0.17",
             "0"
           ],
           [
             "Watz, Ben",
-            "3",
-            "2",
-            "Team 3",
+            "1",
+            "4",
+            "Team 1",
             "M",
-            "587",
-            "9",
-            "65",
+            "761",
+            "12",
+            "63",
             "0",
             "0",
             "91",
             "239",
             "91",
             "239",
-            "0",
+            "0.42",
             "0"
           ]
         ],
@@ -1046,6 +1047,7 @@
             false
           ],
           [
+            false,
             false,
             false,
             false,
@@ -1103,333 +1105,323 @@
     ],
     "recaps": [
       {
-        "title": "Team 2 matchup",
+        "title": "Team 1 matchup",
         "headers": [
           "Bowler",
-          "AVG",
-          "HDCP",
-          "GM1",
-          "GM2",
-          "GM3",
-          "GM4",
-          "GM5",
-          "GM6",
-          "Total"
+          "Average",
+          "Handicap",
+          "Game 1",
+          "Game 2",
+          "Game 3",
+          "Scratch series"
         ],
         "rows": [
           [
-            "Team 2",
-            "Lane 12 | Team points won: 0"
+            "Team 1",
+            "Lane 11 points won: 0"
           ],
           [
-            "Penning, Ethan",
-            "79",
+            "Daub, Grayson",
+            "94",
             "0",
-            "76",
-            "69",
-            "60",
-            "205"
+            "103",
+            "137",
+            "119",
+            "359"
+          ],
+          [
+            "Mccolgan, Declan",
+            "73",
+            "0",
+            "57",
+            "87",
+            "63",
+            "207"
+          ],
+          [
+            "Robinson, Zane",
+            "84",
+            "0",
+            "104",
+            "58",
+            "103",
+            "265"
+          ],
+          [
+            "Watz, Ben",
+            "65",
+            "0",
+            "37",
+            "59",
+            "78",
+            "174"
+          ],
+          [
+            "Total",
+            "301",
+            "341",
+            "363",
+            "1005"
+          ],
+          [
+            "Team 2",
+            "Lane 12 points won: 0"
           ],
           [
             "Bilotta, Anthony",
             "78",
             "0",
-            "78",
-            "78",
-            "78",
-            "234"
+            "77",
+            "71",
+            "70",
+            "218"
+          ],
+          [
+            "Forbes, Paul",
+            "83",
+            "0",
+            "85",
+            "66",
+            "49",
+            "200"
+          ],
+          [
+            "Malone, Ben",
+            "91",
+            "0",
+            "157",
+            "101",
+            "116",
+            "374"
           ],
           [
             "Steiner, Will",
-            "80",
-            "0",
             "76",
-            "55",
-            "75",
-            "206"
+            "0",
+            "68",
+            "42",
+            "114",
+            "224"
+          ],
+          [
+            "Total",
+            "387",
+            "280",
+            "349",
+            "1016"
+          ]
+        ],
+        "emphasis": [
+          [
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        ],
+        "recapDetails": [
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {}
+        ]
+      },
+      {
+        "title": "Team 3 matchup",
+        "headers": [
+          "Bowler",
+          "Average",
+          "Handicap",
+          "Game 1",
+          "Game 2",
+          "Game 3",
+          "Scratch series"
+        ],
+        "rows": [
+          [
+            "Team 3",
+            "Lane 13 points won: 0"
           ],
           [
             "Mcdonald, Blaise",
-            "126",
+            "123",
             "0",
-            "119",
-            "124",
-            "118",
-            "361"
+            "105",
+            "108",
+            "112",
+            "325"
           ],
           [
-            "Total",
-            "349",
-            "326",
-            "331",
+            "Chambers, Dorian",
+            "39",
             "0",
-            "0",
-            "0",
-            "1006"
-          ],
-          [
-            "Team 1",
-            "Lane 11 | Team points won: 0"
-          ],
-          [
-            "Daub, Grayson",
-            "96",
-            "0",
-            "111",
-            "62",
-            "98",
-            "271"
-          ],
-          [
-            "Mccolgan, Declan",
-            "60",
-            "0",
-            "71",
-            "81",
-            "110",
-            "262"
-          ],
-          [
-            "Robinson, Zane",
-            "88",
-            "0",
-            "74",
-            "84",
-            "72",
-            "230"
-          ],
-          [
-            "Total",
-            "256",
-            "227",
-            "280",
-            "0",
-            "0",
-            "0",
-            "763"
-          ]
-        ],
-        "emphasis": [
-          [
-            true,
-            true
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
-          ],
-          [
-            true,
-            true
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
-          ]
-        ]
-      },
-      {
-        "title": "Team 4 matchup",
-        "headers": [
-          "Bowler",
-          "AVG",
-          "HDCP",
-          "GM1",
-          "GM2",
-          "GM3",
-          "GM4",
-          "GM5",
-          "GM6",
-          "Total"
-        ],
-        "rows": [
-          [
-            "Team 4",
-            "Lane 14 | Team points won: 0"
-          ],
-          [
-            "Scherr, Olivia",
-            "85",
-            "0",
-            "58",
-            "87",
-            "67",
-            "212"
-          ],
-          [
-            "Quiel, Charlott",
-            "72",
-            "0",
-            "55",
-            "51",
-            "79",
-            "185"
-          ],
-          [
-            "Krenmayr, Lilly",
-            "56",
-            "0",
-            "56",
-            "70",
-            "70",
-            "196"
-          ],
-          [
-            "Robb, Molly",
-            "97",
-            "0",
+            "52",
+            "36",
             "77",
-            "89",
-            "115",
-            "281"
-          ],
-          [
-            "Total",
-            "246",
-            "297",
-            "331",
-            "0",
-            "0",
-            "0",
-            "874"
-          ],
-          [
-            "Team 3",
-            "Lane 13 | Team points won: 0"
-          ],
-          [
-            "Rozmajzl, Michael",
-            "58",
-            "0",
-            "56",
-            "83",
-            "58",
-            "197"
-          ],
-          [
-            "Watz, Ben",
-            "58",
-            "0",
-            "76",
-            "91",
-            "72",
-            "239"
+            "165"
           ],
           [
             "Hayden-Harness, Paxton",
-            "122",
+            "129",
             "0",
-            "159",
-            "148",
-            "126",
-            "433"
-          ],
-          [
-            "Mcdonald, Carter",
-            "105",
-            "0",
-            "88",
-            "98",
-            "90",
-            "276"
+            "163",
+            "158",
+            "133",
+            "454"
           ],
           [
             "Total",
-            "379",
-            "420",
-            "346",
+            "320",
+            "302",
+            "322",
+            "944"
+          ],
+          [
+            "Team 4",
+            "Lane 14 points won: 0"
+          ],
+          [
+            "Andersen, Dexter",
+            "74",
             "0",
+            "74",
+            "74",
+            "74",
+            "222"
+          ],
+          [
+            "Rozmajzl, Michael",
+            "61",
             "0",
+            "67",
+            "49",
+            "74",
+            "190"
+          ],
+          [
+            "Mcdonald, Carter",
+            "98",
             "0",
-            "1145"
+            "114",
+            "125",
+            "107",
+            "346"
+          ],
+          [
+            "Goebel, Max",
+            "85",
+            "0",
+            "115",
+            "106",
+            "81",
+            "302"
+          ],
+          [
+            "Total",
+            "370",
+            "354",
+            "336",
+            "1060"
           ]
         ],
         "emphasis": [
           [
-            true,
-            true
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
             false,
             false
           ],
@@ -1461,18 +1453,15 @@
             false
           ],
           [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
+            false,
+            false,
+            false,
+            false,
+            false
           ],
           [
-            true,
-            true
+            false,
+            false
           ],
           [
             false,
@@ -1511,35 +1500,98 @@
             false
           ],
           [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
+            false,
+            false,
+            false,
+            false,
+            false
           ]
+        ],
+        "recapDetails": [
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {}
         ]
       },
       {
-        "title": "Team 6 matchup",
+        "title": "Team 5 matchup",
         "headers": [
           "Bowler",
-          "AVG",
-          "HDCP",
-          "GM1",
-          "GM2",
-          "GM3",
-          "GM4",
-          "GM5",
-          "GM6",
-          "Total"
+          "Average",
+          "Handicap",
+          "Game 1",
+          "Game 2",
+          "Game 3",
+          "Scratch series"
         ],
         "rows": [
           [
+            "Team 5",
+            "Lane 15 points won: 0"
+          ],
+          [
+            "Scherr, Olivia",
+            "78",
+            "0",
+            "79",
+            "78",
+            "72",
+            "229"
+          ],
+          [
+            "Quiel, Charlott",
+            "68",
+            "0",
+            "68",
+            "68",
+            "68",
+            "204"
+          ],
+          [
+            "Robb, Molly",
+            "96",
+            "0",
+            "118",
+            "167",
+            "85",
+            "370"
+          ],
+          [
+            "Krenmayr, Lilly",
+            "59",
+            "0",
+            "61",
+            "105",
+            "69",
+            "235"
+          ],
+          [
+            "Total",
+            "326",
+            "418",
+            "294",
+            "1038"
+          ],
+          [
             "Team 6",
-            "Lane 16 | Team points won: 0"
+            "Lane 16 points won: 0"
+          ],
+          [
+            "Penning, Ethan",
+            "75",
+            "0",
+            "74",
+            "103",
+            "100",
+            "277"
           ],
           [
             "Robinson, Leo",
@@ -1551,6 +1603,15 @@
             "282"
           ],
           [
+            "Diaz, Elijiah",
+            "106",
+            "0",
+            "82",
+            "88",
+            "132",
+            "302"
+          ],
+          [
             "Munoz, Rodrigo",
             "66",
             "0",
@@ -1560,138 +1621,17 @@
             "198"
           ],
           [
-            "Forbes, Paul",
-            "90",
-            "0",
-            "63",
-            "59",
-            "96",
-            "218"
-          ],
-          [
-            "Goebel, Max",
-            "93",
-            "0",
-            "62",
-            "75",
-            "93",
-            "230"
-          ],
-          [
             "Total",
-            "285",
-            "294",
-            "349",
-            "0",
-            "0",
-            "0",
-            "928"
-          ],
-          [
-            "Team 5",
-            "Lane 15 | Team points won: 0"
-          ],
-          [
-            "Andersen, Dexter",
-            "87",
-            "0",
-            "44",
-            "46",
-            "67",
-            "157"
-          ],
-          [
-            "Chambers, Dorian",
-            "37",
-            "0",
-            "46",
-            "51",
-            "37",
-            "134"
-          ],
-          [
-            "Malone, Ben",
-            "100",
-            "0",
-            "73",
-            "69",
-            "86",
-            "228"
-          ],
-          [
-            "Diaz, Elijiah",
-            "102",
-            "0",
-            "101",
-            "107",
-            "130",
-            "338"
-          ],
-          [
-            "Total",
-            "264",
-            "273",
-            "320",
-            "0",
-            "0",
-            "0",
-            "857"
+            "316",
+            "351",
+            "392",
+            "1059"
           ]
         ],
         "emphasis": [
           [
-            true,
-            true
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
             false,
             false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
-          ],
-          [
-            true,
-            true
           ],
           [
             false,
@@ -1730,21 +1670,79 @@
             false
           ],
           [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false
           ]
+        ],
+        "recapDetails": [
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {}
         ]
       }
     ],
     "lanes": [
       {
-        "title": "Table 1",
+        "title": "All scheduled teams",
         "headers": [
           "Lane",
           "Team#",
@@ -1784,32 +1782,32 @@
         ],
         "emphasis": [
           [
-            false,
-            false,
-            false
-          ],
-          [
-            false,
+            true,
             false,
             false
           ],
           [
-            false,
-            false,
-            false
-          ],
-          [
-            false,
+            true,
             false,
             false
           ],
           [
-            false,
+            true,
             false,
             false
           ],
           [
+            true,
             false,
+            false
+          ],
+          [
+            true,
+            false,
+            false
+          ],
+          [
+            true,
             false,
             false
           ]
@@ -1826,7 +1824,7 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
@@ -1834,30 +1832,48 @@
             "Daub, Grayson",
             "M",
             "0",
-            "9",
-            "849",
-            "94"
+            "12",
+            "1208",
+            "100"
           ],
           [
             "2",
             "Mccolgan, Declan",
             "M",
             "0",
-            "6",
-            "443",
-            "73"
+            "9",
+            "650",
+            "72"
           ],
           [
             "3",
             "Robinson, Zane",
             "M",
             "0",
-            "9",
-            "760",
-            "84"
+            "12",
+            "1025",
+            "85"
+          ],
+          [
+            "4",
+            "Watz, Ben",
+            "M",
+            "0",
+            "12",
+            "761",
+            "63"
           ]
         ],
         "emphasis": [
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
           [
             false,
             false,
@@ -1897,44 +1913,44 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
             "1",
-            "Penning, Ethan",
-            "M",
-            "0",
-            "9",
-            "681",
-            "75"
-          ],
-          [
-            "2",
             "Bilotta, Anthony",
             "M",
             "0",
-            "6",
-            "470",
+            "9",
+            "688",
+            "76"
+          ],
+          [
+            "2",
+            "Forbes, Paul",
+            "M",
+            "0",
+            "11",
+            "868",
             "78"
           ],
           [
             "3",
-            "Steiner, Will",
+            "Malone, Ben",
             "M",
             "0",
-            "9",
-            "690",
-            "76"
+            "11",
+            "1103",
+            "100"
           ],
           [
             "4",
-            "Mcdonald, Blaise",
+            "Steiner, Will",
             "M",
             "0",
-            "6",
-            "739",
-            "123"
+            "12",
+            "914",
+            "76"
           ]
         ],
         "emphasis": [
@@ -1986,56 +2002,38 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
             "1",
-            "Rozmajzl, Michael",
+            "Mcdonald, Blaise",
             "M",
             "0",
             "9",
-            "550",
-            "61"
+            "1064",
+            "118"
           ],
           [
             "2",
-            "Watz, Ben",
+            "Chambers, Dorian",
             "M",
             "0",
-            "9",
-            "587",
-            "65"
+            "11",
+            "484",
+            "44"
           ],
           [
             "3",
             "Hayden-Harness, Paxton",
             "M",
             "0",
-            "9",
-            "1165",
-            "129"
-          ],
-          [
-            "4",
-            "Mcdonald, Carter",
-            "M",
-            "0",
-            "6",
-            "591",
-            "98"
+            "12",
+            "1619",
+            "134"
           ]
         ],
         "emphasis": [
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
           [
             false,
             false,
@@ -2075,44 +2073,44 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
             "1",
-            "Scherr, Olivia",
-            "W",
+            "Andersen, Dexter",
+            "M",
             "0",
-            "6",
-            "469",
-            "78"
+            "8",
+            "594",
+            "74"
           ],
           [
             "2",
-            "Quiel, Charlott",
-            "W",
+            "Rozmajzl, Michael",
+            "M",
             "0",
-            "9",
-            "618",
-            "68"
+            "12",
+            "740",
+            "61"
           ],
           [
             "3",
-            "Krenmayr, Lilly",
-            "W",
+            "Mcdonald, Carter",
+            "M",
             "0",
             "9",
-            "536",
-            "59"
+            "937",
+            "104"
           ],
           [
             "4",
-            "Robb, Molly",
-            "W",
+            "Goebel, Max",
+            "M",
             "0",
             "9",
-            "868",
-            "96"
+            "812",
+            "90"
           ]
         ],
         "emphasis": [
@@ -2164,44 +2162,44 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
             "1",
-            "Andersen, Dexter",
-            "M",
+            "Scherr, Olivia",
+            "W",
             "0",
-            "8",
-            "594",
-            "74"
+            "9",
+            "698",
+            "77"
           ],
           [
             "2",
-            "Chambers, Dorian",
-            "M",
+            "Quiel, Charlott",
+            "W",
             "0",
-            "8",
-            "319",
-            "39"
+            "9",
+            "618",
+            "68"
           ],
           [
             "3",
-            "Malone, Ben",
-            "M",
+            "Robb, Molly",
+            "W",
             "0",
-            "8",
-            "729",
-            "91"
+            "12",
+            "1238",
+            "103"
           ],
           [
             "4",
-            "Diaz, Elijiah",
-            "M",
+            "Krenmayr, Lilly",
+            "W",
             "0",
-            "8",
-            "848",
-            "106"
+            "12",
+            "771",
+            "64"
           ]
         ],
         "emphasis": [
@@ -2253,11 +2251,20 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
             "1",
+            "Penning, Ethan",
+            "M",
+            "0",
+            "12",
+            "958",
+            "79"
+          ],
+          [
+            "2",
             "Robinson, Leo",
             "M",
             "0",
@@ -2266,31 +2273,22 @@
             "94"
           ],
           [
-            "2",
+            "3",
+            "Diaz, Elijiah",
+            "M",
+            "0",
+            "11",
+            "1150",
+            "104"
+          ],
+          [
+            "4",
             "Munoz, Rodrigo",
             "M",
             "0",
             "3",
             "199",
             "66"
-          ],
-          [
-            "3",
-            "Forbes, Paul",
-            "M",
-            "0",
-            "8",
-            "668",
-            "83"
-          ],
-          [
-            "4",
-            "Goebel, Max",
-            "M",
-            "0",
-            "6",
-            "510",
-            "85"
           ]
         ],
         "emphasis": [
@@ -8005,9 +8003,2328 @@
           }
         ]
       }
+    },
+    {
+      "week": "4",
+      "sourceUpdated": "Sep 16, 2026",
+      "syncedAt": "2026-09-18T02:37:02.544Z",
+      "views": {
+        "standings": [
+          {
+            "title": "League standings",
+            "headers": [
+              "Place",
+              "Team",
+              "Team#",
+              "Div",
+              "WON",
+              "LOST",
+              "%",
+              "YTD WON",
+              "AVG",
+              "Pins",
+              "HSG",
+              "HSS"
+            ],
+            "rows": [
+              [
+                "1",
+                "Team 3",
+                "3",
+                "1",
+                "0",
+                "0",
+                "100 %",
+                "0",
+                "296",
+                "4287",
+                "420",
+                "1145"
+              ],
+              [
+                "2",
+                "Team 2",
+                "2",
+                "1",
+                "0",
+                "0",
+                "100 %",
+                "0",
+                "330",
+                "3889",
+                "441",
+                "1159"
+              ],
+              [
+                "3",
+                "Team 4",
+                "4",
+                "1",
+                "0",
+                "0",
+                "100 %",
+                "0",
+                "329",
+                "3536",
+                "370",
+                "1060"
+              ],
+              [
+                "4",
+                "Team 6",
+                "6",
+                "1",
+                "0",
+                "0",
+                "100 %",
+                "0",
+                "343",
+                "3437",
+                "392",
+                "1059"
+              ],
+              [
+                "5",
+                "Team 1",
+                "1",
+                "1",
+                "0",
+                "0",
+                "100 %",
+                "0",
+                "320",
+                "3180",
+                "363",
+                "1005"
+              ],
+              [
+                "6",
+                "Team 5",
+                "5",
+                "1",
+                "0",
+                "0",
+                "100 %",
+                "0",
+                "312",
+                "3084",
+                "418",
+                "1038"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ]
+            ]
+          }
+        ],
+        "bowlers": [
+          {
+            "title": "Bowlers and season statistics",
+            "headers": [
+              "Name",
+              "Team#",
+              "Pos#",
+              "Team",
+              "Gndr",
+              "Pins",
+              "Games",
+              "Avg",
+              "EnteringAvg",
+              "HCP",
+              "HHG",
+              "HHS",
+              "HSG",
+              "HSS",
+              "MIB",
+              "WON"
+            ],
+            "rows": [
+              [
+                "Andersen, Dexter",
+                "4",
+                "1",
+                "Team 4",
+                "M",
+                "594",
+                "8",
+                "74",
+                "0",
+                "0",
+                "126",
+                "284",
+                "126",
+                "284",
+                "0",
+                "0"
+              ],
+              [
+                "Bilotta, Anthony",
+                "2",
+                "1",
+                "Team 2",
+                "M",
+                "688",
+                "9",
+                "76",
+                "0",
+                "0",
+                "108",
+                "273",
+                "108",
+                "273",
+                "0",
+                "0"
+              ],
+              [
+                "Chambers, Dorian",
+                "3",
+                "2",
+                "Team 3",
+                "M",
+                "484",
+                "11",
+                "44",
+                "0",
+                "0",
+                "77",
+                "165",
+                "77",
+                "165",
+                "0",
+                "0"
+              ],
+              [
+                "Daub, Grayson",
+                "1",
+                "1",
+                "Team 1",
+                "M",
+                "1208",
+                "12",
+                "100",
+                "0",
+                "0",
+                "137",
+                "359",
+                "137",
+                "359",
+                "0.67",
+                "0"
+              ],
+              [
+                "Diaz, Elijiah",
+                "6",
+                "3",
+                "Team 6",
+                "M",
+                "1150",
+                "11",
+                "104",
+                "0",
+                "0",
+                "140",
+                "352",
+                "140",
+                "352",
+                "0",
+                "0"
+              ],
+              [
+                "Forbes, Paul",
+                "2",
+                "2",
+                "Team 2",
+                "M",
+                "868",
+                "11",
+                "78",
+                "0",
+                "0",
+                "115",
+                "291",
+                "115",
+                "291",
+                "0",
+                "0"
+              ],
+              [
+                "Goebel, Max",
+                "4",
+                "4",
+                "Team 4",
+                "M",
+                "812",
+                "9",
+                "90",
+                "0",
+                "0",
+                "115",
+                "302",
+                "115",
+                "302",
+                "0",
+                "0"
+              ],
+              [
+                "Hayden-Harness, Paxton",
+                "3",
+                "3",
+                "Team 3",
+                "M",
+                "1619",
+                "12",
+                "134",
+                "0",
+                "0",
+                "163",
+                "454",
+                "163",
+                "454",
+                "0.92",
+                "0"
+              ],
+              [
+                "Krenmayr, Lilly",
+                "5",
+                "4",
+                "Team 5",
+                "W",
+                "771",
+                "12",
+                "64",
+                "0",
+                "0",
+                "105",
+                "235",
+                "105",
+                "235",
+                "0.25",
+                "0"
+              ],
+              [
+                "Malone, Ben",
+                "2",
+                "3",
+                "Team 2",
+                "M",
+                "1103",
+                "11",
+                "100",
+                "0",
+                "0",
+                "157",
+                "374",
+                "157",
+                "374",
+                "0",
+                "0"
+              ],
+              [
+                "Mccolgan, Declan",
+                "1",
+                "2",
+                "Team 1",
+                "M",
+                "650",
+                "9",
+                "72",
+                "0",
+                "0",
+                "110",
+                "262",
+                "110",
+                "262",
+                "0",
+                "0"
+              ],
+              [
+                "Mcdonald, Blaise",
+                "3",
+                "1",
+                "Team 3",
+                "M",
+                "1064",
+                "9",
+                "118",
+                "0",
+                "0",
+                "182",
+                "378",
+                "182",
+                "378",
+                "0",
+                "0"
+              ],
+              [
+                "Mcdonald, Carter",
+                "4",
+                "3",
+                "Team 4",
+                "M",
+                "937",
+                "9",
+                "104",
+                "0",
+                "0",
+                "125",
+                "346",
+                "125",
+                "346",
+                "0",
+                "0"
+              ],
+              [
+                "Munoz, Rodrigo",
+                "6",
+                "4",
+                "Team 6",
+                "M",
+                "199",
+                "3",
+                "66",
+                "0",
+                "0",
+                "89",
+                "199",
+                "89",
+                "199",
+                "0",
+                "0"
+              ],
+              [
+                "Penning, Ethan",
+                "6",
+                "1",
+                "Team 6",
+                "M",
+                "958",
+                "12",
+                "79",
+                "0",
+                "0",
+                "110",
+                "280",
+                "110",
+                "280",
+                "0.83",
+                "0"
+              ],
+              [
+                "Quiel, Charlott",
+                "5",
+                "2",
+                "Team 5",
+                "W",
+                "618",
+                "9",
+                "68",
+                "0",
+                "0",
+                "89",
+                "242",
+                "89",
+                "242",
+                "0",
+                "0"
+              ],
+              [
+                "Robb, Molly",
+                "5",
+                "3",
+                "Team 5",
+                "W",
+                "1238",
+                "12",
+                "103",
+                "0",
+                "0",
+                "167",
+                "370",
+                "167",
+                "370",
+                "0.17",
+                "0"
+              ],
+              [
+                "Robinson, Leo",
+                "6",
+                "2",
+                "Team 6",
+                "M",
+                "188",
+                "2",
+                "94",
+                "0",
+                "0",
+                "103",
+                "188",
+                "103",
+                "188",
+                "0",
+                "0"
+              ],
+              [
+                "Robinson, Zane",
+                "1",
+                "3",
+                "Team 1",
+                "M",
+                "1025",
+                "12",
+                "85",
+                "0",
+                "0",
+                "110",
+                "277",
+                "110",
+                "277",
+                "0.42",
+                "0"
+              ],
+              [
+                "Rozmajzl, Michael",
+                "4",
+                "2",
+                "Team 4",
+                "M",
+                "740",
+                "12",
+                "61",
+                "0",
+                "0",
+                "83",
+                "197",
+                "83",
+                "197",
+                "0.67",
+                "0"
+              ],
+              [
+                "Scherr, Olivia",
+                "5",
+                "1",
+                "Team 5",
+                "W",
+                "698",
+                "9",
+                "77",
+                "0",
+                "0",
+                "92",
+                "257",
+                "92",
+                "257",
+                "0",
+                "0"
+              ],
+              [
+                "Sehr, Wyatt",
+                "0",
+                "0",
+                "",
+                "M",
+                "274",
+                "3",
+                "91",
+                "0",
+                "0",
+                "106",
+                "274",
+                "106",
+                "274",
+                "0",
+                "0"
+              ],
+              [
+                "Steiner, Will",
+                "2",
+                "4",
+                "Team 2",
+                "M",
+                "914",
+                "12",
+                "76",
+                "0",
+                "0",
+                "115",
+                "304",
+                "115",
+                "304",
+                "0.17",
+                "0"
+              ],
+              [
+                "Watz, Ben",
+                "1",
+                "4",
+                "Team 1",
+                "M",
+                "761",
+                "12",
+                "63",
+                "0",
+                "0",
+                "91",
+                "239",
+                "91",
+                "239",
+                "0.42",
+                "0"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ]
+          }
+        ],
+        "recaps": [
+          {
+            "title": "Team 1 matchup",
+            "headers": [
+              "Bowler",
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
+            ],
+            "rows": [
+              [
+                "Team 1",
+                "Lane 11 points won: 0"
+              ],
+              [
+                "Daub, Grayson",
+                "94",
+                "0",
+                "103",
+                "137",
+                "119",
+                "359"
+              ],
+              [
+                "Mccolgan, Declan",
+                "73",
+                "0",
+                "57",
+                "87",
+                "63",
+                "207"
+              ],
+              [
+                "Robinson, Zane",
+                "84",
+                "0",
+                "104",
+                "58",
+                "103",
+                "265"
+              ],
+              [
+                "Watz, Ben",
+                "65",
+                "0",
+                "37",
+                "59",
+                "78",
+                "174"
+              ],
+              [
+                "Total",
+                "301",
+                "341",
+                "363",
+                "1005"
+              ],
+              [
+                "Team 2",
+                "Lane 12 points won: 0"
+              ],
+              [
+                "Bilotta, Anthony",
+                "78",
+                "0",
+                "77",
+                "71",
+                "70",
+                "218"
+              ],
+              [
+                "Forbes, Paul",
+                "83",
+                "0",
+                "85",
+                "66",
+                "49",
+                "200"
+              ],
+              [
+                "Malone, Ben",
+                "91",
+                "0",
+                "157",
+                "101",
+                "116",
+                "374"
+              ],
+              [
+                "Steiner, Will",
+                "76",
+                "0",
+                "68",
+                "42",
+                "114",
+                "224"
+              ],
+              [
+                "Total",
+                "387",
+                "280",
+                "349",
+                "1016"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "recapDetails": [
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {}
+            ]
+          },
+          {
+            "title": "Team 3 matchup",
+            "headers": [
+              "Bowler",
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
+            ],
+            "rows": [
+              [
+                "Team 3",
+                "Lane 13 points won: 0"
+              ],
+              [
+                "Mcdonald, Blaise",
+                "123",
+                "0",
+                "105",
+                "108",
+                "112",
+                "325"
+              ],
+              [
+                "Chambers, Dorian",
+                "39",
+                "0",
+                "52",
+                "36",
+                "77",
+                "165"
+              ],
+              [
+                "Hayden-Harness, Paxton",
+                "129",
+                "0",
+                "163",
+                "158",
+                "133",
+                "454"
+              ],
+              [
+                "Total",
+                "320",
+                "302",
+                "322",
+                "944"
+              ],
+              [
+                "Team 4",
+                "Lane 14 points won: 0"
+              ],
+              [
+                "Andersen, Dexter",
+                "74",
+                "0",
+                "74",
+                "74",
+                "74",
+                "222"
+              ],
+              [
+                "Rozmajzl, Michael",
+                "61",
+                "0",
+                "67",
+                "49",
+                "74",
+                "190"
+              ],
+              [
+                "Mcdonald, Carter",
+                "98",
+                "0",
+                "114",
+                "125",
+                "107",
+                "346"
+              ],
+              [
+                "Goebel, Max",
+                "85",
+                "0",
+                "115",
+                "106",
+                "81",
+                "302"
+              ],
+              [
+                "Total",
+                "370",
+                "354",
+                "336",
+                "1060"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "recapDetails": [
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {}
+            ]
+          },
+          {
+            "title": "Team 5 matchup",
+            "headers": [
+              "Bowler",
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
+            ],
+            "rows": [
+              [
+                "Team 5",
+                "Lane 15 points won: 0"
+              ],
+              [
+                "Scherr, Olivia",
+                "78",
+                "0",
+                "79",
+                "78",
+                "72",
+                "229"
+              ],
+              [
+                "Quiel, Charlott",
+                "68",
+                "0",
+                "68",
+                "68",
+                "68",
+                "204"
+              ],
+              [
+                "Robb, Molly",
+                "96",
+                "0",
+                "118",
+                "167",
+                "85",
+                "370"
+              ],
+              [
+                "Krenmayr, Lilly",
+                "59",
+                "0",
+                "61",
+                "105",
+                "69",
+                "235"
+              ],
+              [
+                "Total",
+                "326",
+                "418",
+                "294",
+                "1038"
+              ],
+              [
+                "Team 6",
+                "Lane 16 points won: 0"
+              ],
+              [
+                "Penning, Ethan",
+                "75",
+                "0",
+                "74",
+                "103",
+                "100",
+                "277"
+              ],
+              [
+                "Robinson, Leo",
+                "94",
+                "0",
+                "94",
+                "94",
+                "94",
+                "282"
+              ],
+              [
+                "Diaz, Elijiah",
+                "106",
+                "0",
+                "82",
+                "88",
+                "132",
+                "302"
+              ],
+              [
+                "Munoz, Rodrigo",
+                "66",
+                "0",
+                "66",
+                "66",
+                "66",
+                "198"
+              ],
+              [
+                "Total",
+                "316",
+                "351",
+                "392",
+                "1059"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "recapDetails": [
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {}
+            ]
+          }
+        ],
+        "lanes": [
+          {
+            "title": "All scheduled teams",
+            "headers": [
+              "Lane",
+              "Team#",
+              "Team"
+            ],
+            "rows": [
+              [
+                "11",
+                "1",
+                "Team 1"
+              ],
+              [
+                "12",
+                "2",
+                "Team 2"
+              ],
+              [
+                "13",
+                "3",
+                "Team 3"
+              ],
+              [
+                "14",
+                "4",
+                "Team 4"
+              ],
+              [
+                "15",
+                "5",
+                "Team 5"
+              ],
+              [
+                "16",
+                "6",
+                "Team 6"
+              ]
+            ],
+            "emphasis": [
+              [
+                true,
+                false,
+                false
+              ],
+              [
+                true,
+                false,
+                false
+              ],
+              [
+                true,
+                false,
+                false
+              ],
+              [
+                true,
+                false,
+                false
+              ],
+              [
+                true,
+                false,
+                false
+              ],
+              [
+                true,
+                false,
+                false
+              ]
+            ]
+          }
+        ],
+        "rosters": [
+          {
+            "title": "Team 1 · Team 1 roster",
+            "headers": [
+              "Pos",
+              "Name",
+              "Gndr",
+              "HCP",
+              "Gms",
+              "Pins",
+              "AVG"
+            ],
+            "rows": [
+              [
+                "1",
+                "Daub, Grayson",
+                "M",
+                "0",
+                "12",
+                "1208",
+                "100"
+              ],
+              [
+                "2",
+                "Mccolgan, Declan",
+                "M",
+                "0",
+                "9",
+                "650",
+                "72"
+              ],
+              [
+                "3",
+                "Robinson, Zane",
+                "M",
+                "0",
+                "12",
+                "1025",
+                "85"
+              ],
+              [
+                "4",
+                "Watz, Ben",
+                "M",
+                "0",
+                "12",
+                "761",
+                "63"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "team": "1"
+          },
+          {
+            "title": "Team 2 · Team 2 roster",
+            "headers": [
+              "Pos",
+              "Name",
+              "Gndr",
+              "HCP",
+              "Gms",
+              "Pins",
+              "AVG"
+            ],
+            "rows": [
+              [
+                "1",
+                "Bilotta, Anthony",
+                "M",
+                "0",
+                "9",
+                "688",
+                "76"
+              ],
+              [
+                "2",
+                "Forbes, Paul",
+                "M",
+                "0",
+                "11",
+                "868",
+                "78"
+              ],
+              [
+                "3",
+                "Malone, Ben",
+                "M",
+                "0",
+                "11",
+                "1103",
+                "100"
+              ],
+              [
+                "4",
+                "Steiner, Will",
+                "M",
+                "0",
+                "12",
+                "914",
+                "76"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "team": "2"
+          },
+          {
+            "title": "Team 3 · Team 3 roster",
+            "headers": [
+              "Pos",
+              "Name",
+              "Gndr",
+              "HCP",
+              "Gms",
+              "Pins",
+              "AVG"
+            ],
+            "rows": [
+              [
+                "1",
+                "Mcdonald, Blaise",
+                "M",
+                "0",
+                "9",
+                "1064",
+                "118"
+              ],
+              [
+                "2",
+                "Chambers, Dorian",
+                "M",
+                "0",
+                "11",
+                "484",
+                "44"
+              ],
+              [
+                "3",
+                "Hayden-Harness, Paxton",
+                "M",
+                "0",
+                "12",
+                "1619",
+                "134"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "team": "3"
+          },
+          {
+            "title": "Team 4 · Team 4 roster",
+            "headers": [
+              "Pos",
+              "Name",
+              "Gndr",
+              "HCP",
+              "Gms",
+              "Pins",
+              "AVG"
+            ],
+            "rows": [
+              [
+                "1",
+                "Andersen, Dexter",
+                "M",
+                "0",
+                "8",
+                "594",
+                "74"
+              ],
+              [
+                "2",
+                "Rozmajzl, Michael",
+                "M",
+                "0",
+                "12",
+                "740",
+                "61"
+              ],
+              [
+                "3",
+                "Mcdonald, Carter",
+                "M",
+                "0",
+                "9",
+                "937",
+                "104"
+              ],
+              [
+                "4",
+                "Goebel, Max",
+                "M",
+                "0",
+                "9",
+                "812",
+                "90"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "team": "4"
+          },
+          {
+            "title": "Team 5 · Team 5 roster",
+            "headers": [
+              "Pos",
+              "Name",
+              "Gndr",
+              "HCP",
+              "Gms",
+              "Pins",
+              "AVG"
+            ],
+            "rows": [
+              [
+                "1",
+                "Scherr, Olivia",
+                "W",
+                "0",
+                "9",
+                "698",
+                "77"
+              ],
+              [
+                "2",
+                "Quiel, Charlott",
+                "W",
+                "0",
+                "9",
+                "618",
+                "68"
+              ],
+              [
+                "3",
+                "Robb, Molly",
+                "W",
+                "0",
+                "12",
+                "1238",
+                "103"
+              ],
+              [
+                "4",
+                "Krenmayr, Lilly",
+                "W",
+                "0",
+                "12",
+                "771",
+                "64"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "team": "5"
+          },
+          {
+            "title": "Team 6 · Team 6 roster",
+            "headers": [
+              "Pos",
+              "Name",
+              "Gndr",
+              "HCP",
+              "Gms",
+              "Pins",
+              "AVG"
+            ],
+            "rows": [
+              [
+                "1",
+                "Penning, Ethan",
+                "M",
+                "0",
+                "12",
+                "958",
+                "79"
+              ],
+              [
+                "2",
+                "Robinson, Leo",
+                "M",
+                "0",
+                "2",
+                "188",
+                "94"
+              ],
+              [
+                "3",
+                "Diaz, Elijiah",
+                "M",
+                "0",
+                "11",
+                "1150",
+                "104"
+              ],
+              [
+                "4",
+                "Munoz, Rodrigo",
+                "M",
+                "0",
+                "3",
+                "199",
+                "66"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "team": "6"
+          }
+        ]
+      }
     }
   ],
-  "sourceFingerprint": "c4489db477daca403fd056014755d8b0a89eecbb9a219655302023c9ce5d6047",
+  "sourceFingerprint": "db2deb38802a7c759af3854a666ac74a5dfc9fb21f45315cd67a78f822fb13df",
   "officialRecapVersion": 1,
-  "lastAttemptedAt": "2026-09-18T00:46:03.710Z"
+  "lastAttemptedAt": null,
+  "lastCheckedAt": "2026-09-18T02:37:02.544Z"
 }

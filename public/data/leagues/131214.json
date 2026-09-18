@@ -15,10 +15,10 @@
   "centerSlug": "sun-valley-lanes-lincoln-nebraska",
   "area": "Lincoln",
   "sourceUpdated": "Sep 13, 2026",
-  "syncedAt": "2026-09-15T15:54:01.336Z",
+  "syncedAt": "2026-09-18T02:28:30.023Z",
   "status": "awaiting-results",
   "week": "4",
-  "fingerprint": "2e0877aeed0d6bb689fdec1e058a35333bdb53770cc02ed20d7e1063111c7b15",
+  "fingerprint": "a99e3b26792891c1b8dda2cb451264421371e5c6f19417960d5c33d48e9fb3ca",
   "lastCompletedCycle": null,
   "views": {
     "standings": [
@@ -1525,7 +1525,7 @@
     ],
     "recaps": [
       {
-        "title": "Transformer matchup",
+        "title": "Bionic matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -1536,44 +1536,6 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 5",
-            "Lane 26 points won: 3"
-          ],
-          [
-            "Weiss, Aurora",
-            "132",
-            "68",
-            "166",
-            "122",
-            "130",
-            "418"
-          ],
-          [
-            "Howser, Roland",
-            "161",
-            "39",
-            "188",
-            "140",
-            "134",
-            "462"
-          ],
-          [
-            ", Vacant",
-            "120",
-            "80",
-            "120",
-            "120",
-            "120",
-            "360"
-          ],
-          [
-            "Total",
-            "474",
-            "382",
-            "384",
-            "1240"
-          ],
           [
             "Team 9",
             "Lane 25 points won: 1"
@@ -1611,6 +1573,44 @@
             "413",
             "489",
             "1313"
+          ],
+          [
+            "Team 5",
+            "Lane 26 points won: 3"
+          ],
+          [
+            "Weiss, Aurora",
+            "132",
+            "68",
+            "166",
+            "122",
+            "130",
+            "418"
+          ],
+          [
+            "Howser, Roland",
+            "161",
+            "39",
+            "188",
+            "140",
+            "134",
+            "462"
+          ],
+          [
+            ", Vacant",
+            "120",
+            "80",
+            "120",
+            "120",
+            "120",
+            "360"
+          ],
+          [
+            "Total",
+            "474",
+            "382",
+            "384",
+            "1240"
           ]
         ],
         "emphasis": [
@@ -1654,7 +1654,7 @@
             false,
             false,
             false,
-            false,
+            true,
             false
           ],
           [
@@ -1695,15 +1695,66 @@
           ],
           [
             false,
+            true,
+            true,
             false,
-            false,
-            false,
-            false
+            true
           ]
-        ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "655"
+          },
+          {
+            "handicapSeries": "557"
+          },
+          {
+            "handicapSeries": "557"
+          },
+          {
+            "handicapSeries": "1769",
+            "handicapGames": [
+              "563",
+              "565",
+              "641"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "1.0",
+              "1.0",
+              "1.0"
+            ]
+          },
+          {},
+          {
+            "handicapSeries": "622"
+          },
+          {
+            "handicapSeries": "579"
+          },
+          {},
+          {
+            "handicapSeries": "1801",
+            "handicapGames": [
+              "661",
+              "569",
+              "571"
+            ],
+            "teamPoints": [
+              "1.0",
+              "1.0",
+              "0.0",
+              "3.0",
+              "3.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/4/13121409132026f202604reprnt00.pdf"
       },
       {
-        "title": "Viking matchup",
+        "title": "Concept matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -1714,44 +1765,6 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 6",
-            "Lane 16 points won: 0"
-          ],
-          [
-            "Ventry, Dwayne",
-            "125",
-            "75",
-            "139",
-            "123",
-            "103",
-            "365"
-          ],
-          [
-            "Cummings, Aj",
-            "163",
-            "37",
-            "165",
-            "125",
-            "160",
-            "450"
-          ],
-          [
-            "Ortiz, Jackson",
-            "163",
-            "37",
-            "145",
-            "173",
-            "171",
-            "489"
-          ],
-          [
-            "Total",
-            "449",
-            "421",
-            "434",
-            "1304"
-          ],
           [
             "Team 10",
             "Lane 15 points won: 4"
@@ -1789,6 +1802,44 @@
             "471",
             "447",
             "1398"
+          ],
+          [
+            "Team 6",
+            "Lane 16 points won: 0"
+          ],
+          [
+            "Ventry, Dwayne",
+            "125",
+            "75",
+            "139",
+            "123",
+            "103",
+            "365"
+          ],
+          [
+            "Cummings, Aj",
+            "163",
+            "37",
+            "165",
+            "125",
+            "160",
+            "450"
+          ],
+          [
+            "Ortiz, Jackson",
+            "163",
+            "37",
+            "145",
+            "173",
+            "171",
+            "489"
+          ],
+          [
+            "Total",
+            "449",
+            "421",
+            "434",
+            "1304"
           ]
         ],
         "emphasis": [
@@ -1830,10 +1881,10 @@
           ],
           [
             false,
-            false,
-            false,
-            false,
-            false
+            true,
+            true,
+            true,
+            true
           ],
           [
             true,
@@ -1878,7 +1929,60 @@
             false,
             false
           ]
-        ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "653"
+          },
+          {
+            "handicapSeries": "570"
+          },
+          {
+            "handicapSeries": "634"
+          },
+          {
+            "handicapSeries": "1857",
+            "handicapGames": [
+              "633",
+              "624",
+              "600"
+            ],
+            "teamPoints": [
+              "1.0",
+              "1.0",
+              "1.0",
+              "4.0",
+              "4.0"
+            ]
+          },
+          {},
+          {
+            "handicapSeries": "590"
+          },
+          {
+            "handicapSeries": "561"
+          },
+          {
+            "handicapSeries": "600"
+          },
+          {
+            "handicapSeries": "1751",
+            "handicapGames": [
+              "598",
+              "570",
+              "583"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/4/13121409132026f202604reprnt00.pdf"
       },
       {
         "title": "Gremlin matchup",
@@ -1970,15 +2074,43 @@
           ],
           [
             false,
-            false,
-            false,
-            false,
-            false
+            true,
+            true,
+            true,
+            true
           ]
-        ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "591"
+          },
+          {
+            "handicapSeries": "619"
+          },
+          {
+            "handicapSeries": "599"
+          },
+          {
+            "handicapSeries": "1809",
+            "handicapGames": [
+              "625",
+              "614",
+              "570"
+            ],
+            "teamPoints": [
+              "1.0",
+              "1.0",
+              "1.0",
+              "4.0",
+              "4.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/4/13121409132026f202604reprnt00.pdf"
       },
       {
-        "title": "Rocket AI matchup",
+        "title": "Ion Max matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -1989,44 +2121,6 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 4",
-            "Lane 24 points won: 1"
-          ],
-          [
-            "Kennedy, Carson",
-            "134",
-            "66",
-            "139",
-            "136",
-            "178",
-            "453"
-          ],
-          [
-            "Bahl, Asher",
-            "133",
-            "67",
-            "101",
-            "137",
-            "157",
-            "395"
-          ],
-          [
-            "Habel, Zachary",
-            "101",
-            "99",
-            "108",
-            "93",
-            "101",
-            "302"
-          ],
-          [
-            "Total",
-            "348",
-            "366",
-            "436",
-            "1150"
-          ],
           [
             "Team 7",
             "Lane 23 points won: 3"
@@ -2064,6 +2158,44 @@
             "551",
             "415",
             "1502"
+          ],
+          [
+            "Team 4",
+            "Lane 24 points won: 1"
+          ],
+          [
+            "Kennedy, Carson",
+            "134",
+            "66",
+            "139",
+            "136",
+            "178",
+            "453"
+          ],
+          [
+            "Bahl, Asher",
+            "133",
+            "67",
+            "101",
+            "137",
+            "157",
+            "395"
+          ],
+          [
+            "Habel, Zachary",
+            "101",
+            "99",
+            "108",
+            "93",
+            "101",
+            "302"
+          ],
+          [
+            "Total",
+            "348",
+            "366",
+            "436",
+            "1150"
           ]
         ],
         "emphasis": [
@@ -2105,10 +2237,10 @@
           ],
           [
             false,
+            true,
+            true,
             false,
-            false,
-            false,
-            false
+            true
           ],
           [
             true,
@@ -2150,13 +2282,66 @@
             false,
             false,
             false,
-            false,
+            true,
             false
           ]
-        ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "648"
+          },
+          {
+            "handicapSeries": "623"
+          },
+          {
+            "handicapSeries": "636"
+          },
+          {
+            "handicapSeries": "1907",
+            "handicapGames": [
+              "671",
+              "686",
+              "550"
+            ],
+            "teamPoints": [
+              "1.0",
+              "1.0",
+              "0.0",
+              "3.0",
+              "3.0"
+            ]
+          },
+          {},
+          {
+            "handicapSeries": "651"
+          },
+          {
+            "handicapSeries": "596"
+          },
+          {
+            "handicapSeries": "599"
+          },
+          {
+            "handicapSeries": "1846",
+            "handicapGames": [
+              "580",
+              "598",
+              "668"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "1.0",
+              "1.0",
+              "1.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/4/13121409132026f202604reprnt00.pdf"
       },
       {
-        "title": "Monsoon matchup",
+        "title": "IQ matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -2167,44 +2352,6 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 1",
-            "Lane 18 points won: 0"
-          ],
-          [
-            "Vanicek, Madi",
-            "138",
-            "62",
-            "124",
-            "117",
-            "159",
-            "400"
-          ],
-          [
-            "Bonebright, Avery",
-            "109",
-            "91",
-            "160",
-            "111",
-            "105",
-            "376"
-          ],
-          [
-            "Bohling, Brooklynn",
-            "120",
-            "80",
-            "110",
-            "110",
-            "110",
-            "330"
-          ],
-          [
-            "Total",
-            "394",
-            "338",
-            "374",
-            "1106"
-          ],
           [
             "Team 11",
             "Lane 17 points won: 4"
@@ -2242,6 +2389,44 @@
             "393",
             "414",
             "1255"
+          ],
+          [
+            "Team 1",
+            "Lane 18 points won: 0"
+          ],
+          [
+            "Vanicek, Madi",
+            "138",
+            "62",
+            "124",
+            "117",
+            "159",
+            "400"
+          ],
+          [
+            "Bonebright, Avery",
+            "109",
+            "91",
+            "160",
+            "111",
+            "105",
+            "376"
+          ],
+          [
+            "Bohling, Brooklynn",
+            "120",
+            "80",
+            "110",
+            "110",
+            "110",
+            "330"
+          ],
+          [
+            "Total",
+            "394",
+            "338",
+            "374",
+            "1106"
           ]
         ],
         "emphasis": [
@@ -2283,10 +2468,10 @@
           ],
           [
             false,
-            false,
-            false,
-            false,
-            false
+            true,
+            true,
+            true,
+            true
           ],
           [
             true,
@@ -2331,10 +2516,61 @@
             false,
             false
           ]
-        ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "700"
+          },
+          {
+            "handicapSeries": "717"
+          },
+          {},
+          {
+            "handicapSeries": "2017",
+            "handicapGames": [
+              "702",
+              "647",
+              "668"
+            ],
+            "teamPoints": [
+              "1.0",
+              "1.0",
+              "1.0",
+              "4.0",
+              "4.0"
+            ]
+          },
+          {},
+          {
+            "handicapSeries": "586"
+          },
+          {
+            "handicapSeries": "649"
+          },
+          {
+            "handicapSeries": "570"
+          },
+          {
+            "handicapSeries": "1805",
+            "handicapGames": [
+              "627",
+              "571",
+              "607"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/4/13121409132026f202604reprnt00.pdf"
       },
       {
-        "title": "Vengeance matchup",
+        "title": "Rockstar Amped matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -2345,44 +2581,6 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 3",
-            "Lane 19 points won: 4"
-          ],
-          [
-            "Cowan, Logan",
-            "176",
-            "24",
-            "166",
-            "166",
-            "166",
-            "498"
-          ],
-          [
-            "Wilke, Alexander",
-            "173",
-            "27",
-            "180",
-            "222",
-            "205",
-            "607"
-          ],
-          [
-            "Finke, Jaxson",
-            "203",
-            "0",
-            "193",
-            "193",
-            "193",
-            "579"
-          ],
-          [
-            "Total",
-            "539",
-            "581",
-            "564",
-            "1684"
-          ],
           [
             "Team 8",
             "Lane 20 points won: 0"
@@ -2420,6 +2618,44 @@
             "418",
             "417",
             "1209"
+          ],
+          [
+            "Team 3",
+            "Lane 19 points won: 4"
+          ],
+          [
+            "Cowan, Logan",
+            "176",
+            "24",
+            "166",
+            "166",
+            "166",
+            "498"
+          ],
+          [
+            "Wilke, Alexander",
+            "173",
+            "27",
+            "180",
+            "222",
+            "205",
+            "607"
+          ],
+          [
+            "Finke, Jaxson",
+            "203",
+            "0",
+            "193",
+            "193",
+            "193",
+            "579"
+          ],
+          [
+            "Total",
+            "539",
+            "581",
+            "564",
+            "1684"
           ]
         ],
         "emphasis": [
@@ -2504,12 +2740,65 @@
           ],
           [
             false,
-            false,
-            false,
-            false,
-            false
+            true,
+            true,
+            true,
+            true
           ]
-        ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "620"
+          },
+          {
+            "handicapSeries": "570"
+          },
+          {
+            "handicapSeries": "598"
+          },
+          {
+            "handicapSeries": "1788",
+            "handicapGames": [
+              "567",
+              "611",
+              "610"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0"
+            ]
+          },
+          {},
+          {
+            "handicapSeries": "570"
+          },
+          {
+            "handicapSeries": "688"
+          },
+          {
+            "handicapSeries": "579"
+          },
+          {
+            "handicapSeries": "1837",
+            "handicapGames": [
+              "590",
+              "632",
+              "615"
+            ],
+            "teamPoints": [
+              "1.0",
+              "1.0",
+              "1.0",
+              "4.0",
+              "4.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/4/13121409132026f202604reprnt00.pdf"
       }
     ],
     "lanes": [
@@ -12428,7 +12717,7 @@
     {
       "week": "4",
       "sourceUpdated": "Sep 13, 2026",
-      "syncedAt": "2026-09-15T15:54:01.336Z",
+      "syncedAt": "2026-09-18T02:28:30.023Z",
       "views": {
         "standings": [
           {
@@ -13934,7 +14223,7 @@
         ],
         "recaps": [
           {
-            "title": "Transformer matchup",
+            "title": "Bionic matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -13945,44 +14234,6 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 5",
-                "Lane 26 points won: 3"
-              ],
-              [
-                "Weiss, Aurora",
-                "132",
-                "68",
-                "166",
-                "122",
-                "130",
-                "418"
-              ],
-              [
-                "Howser, Roland",
-                "161",
-                "39",
-                "188",
-                "140",
-                "134",
-                "462"
-              ],
-              [
-                ", Vacant",
-                "120",
-                "80",
-                "120",
-                "120",
-                "120",
-                "360"
-              ],
-              [
-                "Total",
-                "474",
-                "382",
-                "384",
-                "1240"
-              ],
               [
                 "Team 9",
                 "Lane 25 points won: 1"
@@ -14020,6 +14271,44 @@
                 "413",
                 "489",
                 "1313"
+              ],
+              [
+                "Team 5",
+                "Lane 26 points won: 3"
+              ],
+              [
+                "Weiss, Aurora",
+                "132",
+                "68",
+                "166",
+                "122",
+                "130",
+                "418"
+              ],
+              [
+                "Howser, Roland",
+                "161",
+                "39",
+                "188",
+                "140",
+                "134",
+                "462"
+              ],
+              [
+                ", Vacant",
+                "120",
+                "80",
+                "120",
+                "120",
+                "120",
+                "360"
+              ],
+              [
+                "Total",
+                "474",
+                "382",
+                "384",
+                "1240"
               ]
             ],
             "emphasis": [
@@ -14063,7 +14352,7 @@
                 false,
                 false,
                 false,
-                false,
+                true,
                 false
               ],
               [
@@ -14104,15 +14393,66 @@
               ],
               [
                 false,
+                true,
+                true,
                 false,
-                false,
-                false,
-                false
+                true
               ]
-            ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "655"
+              },
+              {
+                "handicapSeries": "557"
+              },
+              {
+                "handicapSeries": "557"
+              },
+              {
+                "handicapSeries": "1769",
+                "handicapGames": [
+                  "563",
+                  "565",
+                  "641"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "1.0",
+                  "1.0",
+                  "1.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "622"
+              },
+              {
+                "handicapSeries": "579"
+              },
+              {},
+              {
+                "handicapSeries": "1801",
+                "handicapGames": [
+                  "661",
+                  "569",
+                  "571"
+                ],
+                "teamPoints": [
+                  "1.0",
+                  "1.0",
+                  "0.0",
+                  "3.0",
+                  "3.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/4/13121409132026f202604reprnt00.pdf"
           },
           {
-            "title": "Viking matchup",
+            "title": "Concept matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -14123,44 +14463,6 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 6",
-                "Lane 16 points won: 0"
-              ],
-              [
-                "Ventry, Dwayne",
-                "125",
-                "75",
-                "139",
-                "123",
-                "103",
-                "365"
-              ],
-              [
-                "Cummings, Aj",
-                "163",
-                "37",
-                "165",
-                "125",
-                "160",
-                "450"
-              ],
-              [
-                "Ortiz, Jackson",
-                "163",
-                "37",
-                "145",
-                "173",
-                "171",
-                "489"
-              ],
-              [
-                "Total",
-                "449",
-                "421",
-                "434",
-                "1304"
-              ],
               [
                 "Team 10",
                 "Lane 15 points won: 4"
@@ -14198,6 +14500,44 @@
                 "471",
                 "447",
                 "1398"
+              ],
+              [
+                "Team 6",
+                "Lane 16 points won: 0"
+              ],
+              [
+                "Ventry, Dwayne",
+                "125",
+                "75",
+                "139",
+                "123",
+                "103",
+                "365"
+              ],
+              [
+                "Cummings, Aj",
+                "163",
+                "37",
+                "165",
+                "125",
+                "160",
+                "450"
+              ],
+              [
+                "Ortiz, Jackson",
+                "163",
+                "37",
+                "145",
+                "173",
+                "171",
+                "489"
+              ],
+              [
+                "Total",
+                "449",
+                "421",
+                "434",
+                "1304"
               ]
             ],
             "emphasis": [
@@ -14239,10 +14579,10 @@
               ],
               [
                 false,
-                false,
-                false,
-                false,
-                false
+                true,
+                true,
+                true,
+                true
               ],
               [
                 true,
@@ -14287,7 +14627,60 @@
                 false,
                 false
               ]
-            ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "653"
+              },
+              {
+                "handicapSeries": "570"
+              },
+              {
+                "handicapSeries": "634"
+              },
+              {
+                "handicapSeries": "1857",
+                "handicapGames": [
+                  "633",
+                  "624",
+                  "600"
+                ],
+                "teamPoints": [
+                  "1.0",
+                  "1.0",
+                  "1.0",
+                  "4.0",
+                  "4.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "590"
+              },
+              {
+                "handicapSeries": "561"
+              },
+              {
+                "handicapSeries": "600"
+              },
+              {
+                "handicapSeries": "1751",
+                "handicapGames": [
+                  "598",
+                  "570",
+                  "583"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/4/13121409132026f202604reprnt00.pdf"
           },
           {
             "title": "Gremlin matchup",
@@ -14379,15 +14772,43 @@
               ],
               [
                 false,
-                false,
-                false,
-                false,
-                false
+                true,
+                true,
+                true,
+                true
               ]
-            ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "591"
+              },
+              {
+                "handicapSeries": "619"
+              },
+              {
+                "handicapSeries": "599"
+              },
+              {
+                "handicapSeries": "1809",
+                "handicapGames": [
+                  "625",
+                  "614",
+                  "570"
+                ],
+                "teamPoints": [
+                  "1.0",
+                  "1.0",
+                  "1.0",
+                  "4.0",
+                  "4.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/4/13121409132026f202604reprnt00.pdf"
           },
           {
-            "title": "Rocket AI matchup",
+            "title": "Ion Max matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -14398,44 +14819,6 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 4",
-                "Lane 24 points won: 1"
-              ],
-              [
-                "Kennedy, Carson",
-                "134",
-                "66",
-                "139",
-                "136",
-                "178",
-                "453"
-              ],
-              [
-                "Bahl, Asher",
-                "133",
-                "67",
-                "101",
-                "137",
-                "157",
-                "395"
-              ],
-              [
-                "Habel, Zachary",
-                "101",
-                "99",
-                "108",
-                "93",
-                "101",
-                "302"
-              ],
-              [
-                "Total",
-                "348",
-                "366",
-                "436",
-                "1150"
-              ],
               [
                 "Team 7",
                 "Lane 23 points won: 3"
@@ -14473,6 +14856,44 @@
                 "551",
                 "415",
                 "1502"
+              ],
+              [
+                "Team 4",
+                "Lane 24 points won: 1"
+              ],
+              [
+                "Kennedy, Carson",
+                "134",
+                "66",
+                "139",
+                "136",
+                "178",
+                "453"
+              ],
+              [
+                "Bahl, Asher",
+                "133",
+                "67",
+                "101",
+                "137",
+                "157",
+                "395"
+              ],
+              [
+                "Habel, Zachary",
+                "101",
+                "99",
+                "108",
+                "93",
+                "101",
+                "302"
+              ],
+              [
+                "Total",
+                "348",
+                "366",
+                "436",
+                "1150"
               ]
             ],
             "emphasis": [
@@ -14514,10 +14935,10 @@
               ],
               [
                 false,
+                true,
+                true,
                 false,
-                false,
-                false,
-                false
+                true
               ],
               [
                 true,
@@ -14559,13 +14980,66 @@
                 false,
                 false,
                 false,
-                false,
+                true,
                 false
               ]
-            ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "648"
+              },
+              {
+                "handicapSeries": "623"
+              },
+              {
+                "handicapSeries": "636"
+              },
+              {
+                "handicapSeries": "1907",
+                "handicapGames": [
+                  "671",
+                  "686",
+                  "550"
+                ],
+                "teamPoints": [
+                  "1.0",
+                  "1.0",
+                  "0.0",
+                  "3.0",
+                  "3.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "651"
+              },
+              {
+                "handicapSeries": "596"
+              },
+              {
+                "handicapSeries": "599"
+              },
+              {
+                "handicapSeries": "1846",
+                "handicapGames": [
+                  "580",
+                  "598",
+                  "668"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "1.0",
+                  "1.0",
+                  "1.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/4/13121409132026f202604reprnt00.pdf"
           },
           {
-            "title": "Monsoon matchup",
+            "title": "IQ matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -14576,44 +15050,6 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 1",
-                "Lane 18 points won: 0"
-              ],
-              [
-                "Vanicek, Madi",
-                "138",
-                "62",
-                "124",
-                "117",
-                "159",
-                "400"
-              ],
-              [
-                "Bonebright, Avery",
-                "109",
-                "91",
-                "160",
-                "111",
-                "105",
-                "376"
-              ],
-              [
-                "Bohling, Brooklynn",
-                "120",
-                "80",
-                "110",
-                "110",
-                "110",
-                "330"
-              ],
-              [
-                "Total",
-                "394",
-                "338",
-                "374",
-                "1106"
-              ],
               [
                 "Team 11",
                 "Lane 17 points won: 4"
@@ -14651,6 +15087,44 @@
                 "393",
                 "414",
                 "1255"
+              ],
+              [
+                "Team 1",
+                "Lane 18 points won: 0"
+              ],
+              [
+                "Vanicek, Madi",
+                "138",
+                "62",
+                "124",
+                "117",
+                "159",
+                "400"
+              ],
+              [
+                "Bonebright, Avery",
+                "109",
+                "91",
+                "160",
+                "111",
+                "105",
+                "376"
+              ],
+              [
+                "Bohling, Brooklynn",
+                "120",
+                "80",
+                "110",
+                "110",
+                "110",
+                "330"
+              ],
+              [
+                "Total",
+                "394",
+                "338",
+                "374",
+                "1106"
               ]
             ],
             "emphasis": [
@@ -14692,10 +15166,10 @@
               ],
               [
                 false,
-                false,
-                false,
-                false,
-                false
+                true,
+                true,
+                true,
+                true
               ],
               [
                 true,
@@ -14740,10 +15214,61 @@
                 false,
                 false
               ]
-            ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "700"
+              },
+              {
+                "handicapSeries": "717"
+              },
+              {},
+              {
+                "handicapSeries": "2017",
+                "handicapGames": [
+                  "702",
+                  "647",
+                  "668"
+                ],
+                "teamPoints": [
+                  "1.0",
+                  "1.0",
+                  "1.0",
+                  "4.0",
+                  "4.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "586"
+              },
+              {
+                "handicapSeries": "649"
+              },
+              {
+                "handicapSeries": "570"
+              },
+              {
+                "handicapSeries": "1805",
+                "handicapGames": [
+                  "627",
+                  "571",
+                  "607"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/4/13121409132026f202604reprnt00.pdf"
           },
           {
-            "title": "Vengeance matchup",
+            "title": "Rockstar Amped matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -14754,44 +15279,6 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 3",
-                "Lane 19 points won: 4"
-              ],
-              [
-                "Cowan, Logan",
-                "176",
-                "24",
-                "166",
-                "166",
-                "166",
-                "498"
-              ],
-              [
-                "Wilke, Alexander",
-                "173",
-                "27",
-                "180",
-                "222",
-                "205",
-                "607"
-              ],
-              [
-                "Finke, Jaxson",
-                "203",
-                "0",
-                "193",
-                "193",
-                "193",
-                "579"
-              ],
-              [
-                "Total",
-                "539",
-                "581",
-                "564",
-                "1684"
-              ],
               [
                 "Team 8",
                 "Lane 20 points won: 0"
@@ -14829,6 +15316,44 @@
                 "418",
                 "417",
                 "1209"
+              ],
+              [
+                "Team 3",
+                "Lane 19 points won: 4"
+              ],
+              [
+                "Cowan, Logan",
+                "176",
+                "24",
+                "166",
+                "166",
+                "166",
+                "498"
+              ],
+              [
+                "Wilke, Alexander",
+                "173",
+                "27",
+                "180",
+                "222",
+                "205",
+                "607"
+              ],
+              [
+                "Finke, Jaxson",
+                "203",
+                "0",
+                "193",
+                "193",
+                "193",
+                "579"
+              ],
+              [
+                "Total",
+                "539",
+                "581",
+                "564",
+                "1684"
               ]
             ],
             "emphasis": [
@@ -14913,12 +15438,65 @@
               ],
               [
                 false,
-                false,
-                false,
-                false,
-                false
+                true,
+                true,
+                true,
+                true
               ]
-            ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "620"
+              },
+              {
+                "handicapSeries": "570"
+              },
+              {
+                "handicapSeries": "598"
+              },
+              {
+                "handicapSeries": "1788",
+                "handicapGames": [
+                  "567",
+                  "611",
+                  "610"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "570"
+              },
+              {
+                "handicapSeries": "688"
+              },
+              {
+                "handicapSeries": "579"
+              },
+              {
+                "handicapSeries": "1837",
+                "handicapGames": [
+                  "590",
+                  "632",
+                  "615"
+                ],
+                "teamPoints": [
+                  "1.0",
+                  "1.0",
+                  "1.0",
+                  "4.0",
+                  "4.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/4/13121409132026f202604reprnt00.pdf"
           }
         ],
         "lanes": [
@@ -15824,6 +16402,6 @@
     }
   ],
   "sourceFingerprint": "95e716d817cd42d937203734b40d023a646561be8a23f81e12205afd54055c6b",
-  "lastAttemptedAt": "2026-09-18T00:38:03.317Z",
-  "lastCheckedAt": "2026-09-15T15:54:01.336Z"
+  "lastAttemptedAt": null,
+  "lastCheckedAt": "2026-09-18T02:28:30.023Z"
 }

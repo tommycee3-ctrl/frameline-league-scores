@@ -15,10 +15,10 @@
   "centerSlug": "maplewood-lanes-omaha-nebraska",
   "area": "Omaha",
   "sourceUpdated": "Sep 15, 2026",
-  "syncedAt": "2026-09-15T15:19:36.055Z",
+  "syncedAt": "2026-09-18T03:00:39.577Z",
   "status": "awaiting-results",
   "week": "1",
-  "fingerprint": "d75592f20e848cb8ef3fd41bc8daa87943ab3e47fd0e2e56738a0e06f1723e1e",
+  "fingerprint": "658ee93fae47006f50a76a75c0a66ec607d464fc96fdaf3ed27ca26969a7ab07",
   "lastCompletedCycle": null,
   "views": {
     "standings": [
@@ -2321,7 +2321,7 @@
     ],
     "recaps": [
       {
-        "title": "High Rollers matchup",
+        "title": "Big Bowling matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -2332,53 +2332,6 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 9",
-            "Lane 9 points won: 6"
-          ],
-          [
-            "Broyles, Matt",
-            "203",
-            "13",
-            "228",
-            "178",
-            "205",
-            "611"
-          ],
-          [
-            "Lalley, Paul",
-            "153",
-            "53",
-            "127",
-            "198",
-            "135",
-            "460"
-          ],
-          [
-            "Lalley, Carrie",
-            "108",
-            "89",
-            "109",
-            "119",
-            "96",
-            "324"
-          ],
-          [
-            "Lalley, Zach",
-            "132",
-            "70",
-            "103",
-            "157",
-            "138",
-            "398"
-          ],
-          [
-            "Total",
-            "567",
-            "652",
-            "574",
-            "1793"
-          ],
           [
             "Team 10",
             "Lane 10 points won: 2"
@@ -2425,15 +2378,57 @@
             "487",
             "487",
             "1558"
+          ],
+          [
+            "Team 9",
+            "Lane 9 points won: 6"
+          ],
+          [
+            "Broyles, Matt",
+            "203",
+            "13",
+            "228",
+            "178",
+            "205",
+            "611"
+          ],
+          [
+            "Lalley, Paul",
+            "153",
+            "53",
+            "127",
+            "198",
+            "135",
+            "460"
+          ],
+          [
+            "Lalley, Carrie",
+            "108",
+            "89",
+            "109",
+            "119",
+            "96",
+            "324"
+          ],
+          [
+            "Lalley, Zach",
+            "132",
+            "70",
+            "103",
+            "157",
+            "138",
+            "398"
+          ],
+          [
+            "Total",
+            "567",
+            "652",
+            "574",
+            "1793"
           ]
         ],
         "emphasis": [
           [
-            true,
-            false,
-            false,
-            false,
-            false,
             false,
             false
           ],
@@ -2481,11 +2476,6 @@
             false
           ],
           [
-            true,
-            false,
-            false,
-            false,
-            false,
             false,
             false
           ],
@@ -2532,10 +2522,24 @@
             false,
             false
           ]
+        ],
+        "recapDetails": [
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {}
         ]
       },
       {
-        "title": "Spare Bears matchup",
+        "title": "Boozy Bowlers matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -2546,53 +2550,6 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 14",
-            "Lane 14 points won: 4"
-          ],
-          [
-            "Cessna, Michael",
-            "160",
-            "48",
-            "125",
-            "176",
-            "180",
-            "481"
-          ],
-          [
-            "Watts, Aiden",
-            "148",
-            "57",
-            "135",
-            "180",
-            "129",
-            "444"
-          ],
-          [
-            "Felix, Dale",
-            "147",
-            "58",
-            "156",
-            "129",
-            "158",
-            "443"
-          ],
-          [
-            "Borys, Robert",
-            "100",
-            "96",
-            "56",
-            "121",
-            "123",
-            "300"
-          ],
-          [
-            "Total",
-            "472",
-            "606",
-            "590",
-            "1668"
-          ],
           [
             "Team 13",
             "Lane 13 points won: 4"
@@ -2639,15 +2596,57 @@
             "446",
             "583",
             "1526"
+          ],
+          [
+            "Team 14",
+            "Lane 14 points won: 4"
+          ],
+          [
+            "Cessna, Michael",
+            "160",
+            "48",
+            "125",
+            "176",
+            "180",
+            "481"
+          ],
+          [
+            "Watts, Aiden",
+            "148",
+            "57",
+            "135",
+            "180",
+            "129",
+            "444"
+          ],
+          [
+            "Felix, Dale",
+            "147",
+            "58",
+            "156",
+            "129",
+            "158",
+            "443"
+          ],
+          [
+            "Borys, Robert",
+            "100",
+            "96",
+            "56",
+            "121",
+            "123",
+            "300"
+          ],
+          [
+            "Total",
+            "472",
+            "606",
+            "590",
+            "1668"
           ]
         ],
         "emphasis": [
           [
-            true,
-            false,
-            false,
-            false,
-            false,
             false,
             false
           ],
@@ -2695,11 +2694,6 @@
             false
           ],
           [
-            true,
-            false,
-            false,
-            false,
-            false,
             false,
             false
           ],
@@ -2746,6 +2740,20 @@
             false,
             false
           ]
+        ],
+        "recapDetails": [
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {}
         ]
       },
       {
@@ -2810,11 +2818,6 @@
         ],
         "emphasis": [
           [
-            true,
-            false,
-            false,
-            false,
-            false,
             false,
             false
           ],
@@ -2861,10 +2864,18 @@
             false,
             false
           ]
+        ],
+        "recapDetails": [
+          {},
+          {},
+          {},
+          {},
+          {},
+          {}
         ]
       },
       {
-        "title": "Wildly Inconsistent matchup",
+        "title": "CREAM PIED DUCK matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -2875,53 +2886,6 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 1",
-            "Lane 1 points won: 2"
-          ],
-          [
-            "Eveleth, James",
-            "112",
-            "86",
-            "109",
-            "115",
-            "113",
-            "337"
-          ],
-          [
-            "Bond, Kim",
-            "104",
-            "92",
-            "112",
-            "87",
-            "113",
-            "312"
-          ],
-          [
-            "Bland, David",
-            "131",
-            "71",
-            "128",
-            "141",
-            "124",
-            "393"
-          ],
-          [
-            "Obrecht, Whitney",
-            "111",
-            "87",
-            "130",
-            "62",
-            "142",
-            "334"
-          ],
-          [
-            "Total",
-            "479",
-            "405",
-            "492",
-            "1376"
-          ],
           [
             "Team 2",
             "Lane 2 points won: 6"
@@ -2968,15 +2932,57 @@
             "565",
             "505",
             "1684"
+          ],
+          [
+            "Team 1",
+            "Lane 1 points won: 2"
+          ],
+          [
+            "Eveleth, James",
+            "112",
+            "86",
+            "109",
+            "115",
+            "113",
+            "337"
+          ],
+          [
+            "Bond, Kim",
+            "104",
+            "92",
+            "112",
+            "87",
+            "113",
+            "312"
+          ],
+          [
+            "Bland, David",
+            "131",
+            "71",
+            "128",
+            "141",
+            "124",
+            "393"
+          ],
+          [
+            "Obrecht, Whitney",
+            "111",
+            "87",
+            "130",
+            "62",
+            "142",
+            "334"
+          ],
+          [
+            "Total",
+            "479",
+            "405",
+            "492",
+            "1376"
           ]
         ],
         "emphasis": [
           [
-            true,
-            false,
-            false,
-            false,
-            false,
             false,
             false
           ],
@@ -3024,11 +3030,6 @@
             false
           ],
           [
-            true,
-            false,
-            false,
-            false,
-            false,
             false,
             false
           ],
@@ -3075,10 +3076,24 @@
             false,
             false
           ]
+        ],
+        "recapDetails": [
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {}
         ]
       },
       {
-        "title": "Grow a Spare matchup",
+        "title": "Degeneration XXX matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -3089,53 +3104,6 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 7",
-            "Lane 7 points won: 2"
-          ],
-          [
-            "Stiles, Tawnya",
-            "97",
-            "98",
-            "112",
-            "100",
-            "81",
-            "293"
-          ],
-          [
-            "Quinn, Rebecca",
-            "135",
-            "68",
-            "135",
-            "135",
-            "135",
-            "405"
-          ],
-          [
-            "Crouch, Donald",
-            "125",
-            "76",
-            "129",
-            "131",
-            "117",
-            "377"
-          ],
-          [
-            "Sedivy, Maddie",
-            "112",
-            "86",
-            "110",
-            "132",
-            "95",
-            "337"
-          ],
-          [
-            "Total",
-            "486",
-            "498",
-            "428",
-            "1412"
-          ],
           [
             "Team 8",
             "Lane 8 points won: 6"
@@ -3182,15 +3150,57 @@
             "578",
             "557",
             "1785"
+          ],
+          [
+            "Team 7",
+            "Lane 7 points won: 2"
+          ],
+          [
+            "Stiles, Tawnya",
+            "97",
+            "98",
+            "112",
+            "100",
+            "81",
+            "293"
+          ],
+          [
+            "Quinn, Rebecca",
+            "135",
+            "68",
+            "135",
+            "135",
+            "135",
+            "405"
+          ],
+          [
+            "Crouch, Donald",
+            "125",
+            "76",
+            "129",
+            "131",
+            "117",
+            "377"
+          ],
+          [
+            "Sedivy, Maddie",
+            "112",
+            "86",
+            "110",
+            "132",
+            "95",
+            "337"
+          ],
+          [
+            "Total",
+            "486",
+            "498",
+            "428",
+            "1412"
           ]
         ],
         "emphasis": [
           [
-            true,
-            false,
-            false,
-            false,
-            false,
             false,
             false
           ],
@@ -3238,11 +3248,6 @@
             false
           ],
           [
-            true,
-            false,
-            false,
-            false,
-            false,
             false,
             false
           ],
@@ -3289,10 +3294,24 @@
             false,
             false
           ]
+        ],
+        "recapDetails": [
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {}
         ]
       },
       {
-        "title": "Pocket Rockets matchup",
+        "title": "Nerf Herders matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -3303,53 +3322,6 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 3",
-            "Lane 3 points won: 4"
-          ],
-          [
-            "Randazzo, Joe",
-            "156",
-            "51",
-            "147",
-            "166",
-            "155",
-            "468"
-          ],
-          [
-            "Bultez, Rick",
-            "143",
-            "61",
-            "135",
-            "157",
-            "139",
-            "431"
-          ],
-          [
-            "Nun, Nick",
-            "142",
-            "62",
-            "134",
-            "141",
-            "152",
-            "427"
-          ],
-          [
-            "Kilawee, Ryan",
-            "147",
-            "58",
-            "138",
-            "154",
-            "151",
-            "443"
-          ],
-          [
-            "Total",
-            "554",
-            "618",
-            "597",
-            "1769"
-          ],
           [
             "Team 4",
             "Lane 4 points won: 4"
@@ -3396,15 +3368,57 @@
             "665",
             "746",
             "2026"
+          ],
+          [
+            "Team 3",
+            "Lane 3 points won: 4"
+          ],
+          [
+            "Randazzo, Joe",
+            "156",
+            "51",
+            "147",
+            "166",
+            "155",
+            "468"
+          ],
+          [
+            "Bultez, Rick",
+            "143",
+            "61",
+            "135",
+            "157",
+            "139",
+            "431"
+          ],
+          [
+            "Nun, Nick",
+            "142",
+            "62",
+            "134",
+            "141",
+            "152",
+            "427"
+          ],
+          [
+            "Kilawee, Ryan",
+            "147",
+            "58",
+            "138",
+            "154",
+            "151",
+            "443"
+          ],
+          [
+            "Total",
+            "554",
+            "618",
+            "597",
+            "1769"
           ]
         ],
         "emphasis": [
           [
-            true,
-            false,
-            false,
-            false,
-            false,
             false,
             false
           ],
@@ -3452,11 +3466,6 @@
             false
           ],
           [
-            true,
-            false,
-            false,
-            false,
-            false,
             false,
             false
           ],
@@ -3503,6 +3512,20 @@
             false,
             false
           ]
+        ],
+        "recapDetails": [
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {}
         ]
       },
       {
@@ -3567,11 +3590,6 @@
         ],
         "emphasis": [
           [
-            true,
-            false,
-            false,
-            false,
-            false,
             false,
             false
           ],
@@ -3618,10 +3636,18 @@
             false,
             false
           ]
+        ],
+        "recapDetails": [
+          {},
+          {},
+          {},
+          {},
+          {},
+          {}
         ]
       },
       {
-        "title": "Rockin' Rollers matchup",
+        "title": "Pretty Wrecked-Less matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -3632,53 +3658,6 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 5",
-            "Lane 5 points won: 6"
-          ],
-          [
-            "Tisher, Ellen",
-            "113",
-            "85",
-            "119",
-            "94",
-            "128",
-            "341"
-          ],
-          [
-            "Lang, Scott",
-            "166",
-            "43",
-            "146",
-            "144",
-            "209",
-            "499"
-          ],
-          [
-            "Clay, Triston",
-            "110",
-            "88",
-            "98",
-            "129",
-            "104",
-            "331"
-          ],
-          [
-            "Pulte, Bob",
-            "166",
-            "43",
-            "141",
-            "219",
-            "138",
-            "498"
-          ],
-          [
-            "Total",
-            "504",
-            "586",
-            "579",
-            "1669"
-          ],
           [
             "Team 6",
             "Lane 6 points won: 2"
@@ -3725,15 +3704,57 @@
             "477",
             "431",
             "1253"
+          ],
+          [
+            "Team 5",
+            "Lane 5 points won: 6"
+          ],
+          [
+            "Tisher, Ellen",
+            "113",
+            "85",
+            "119",
+            "94",
+            "128",
+            "341"
+          ],
+          [
+            "Lang, Scott",
+            "166",
+            "43",
+            "146",
+            "144",
+            "209",
+            "499"
+          ],
+          [
+            "Clay, Triston",
+            "110",
+            "88",
+            "98",
+            "129",
+            "104",
+            "331"
+          ],
+          [
+            "Pulte, Bob",
+            "166",
+            "43",
+            "141",
+            "219",
+            "138",
+            "498"
+          ],
+          [
+            "Total",
+            "504",
+            "586",
+            "579",
+            "1669"
           ]
         ],
         "emphasis": [
           [
-            true,
-            false,
-            false,
-            false,
-            false,
             false,
             false
           ],
@@ -3781,11 +3802,6 @@
             false
           ],
           [
-            true,
-            false,
-            false,
-            false,
-            false,
             false,
             false
           ],
@@ -3832,6 +3848,20 @@
             false,
             false
           ]
+        ],
+        "recapDetails": [
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {}
         ]
       }
     ],
@@ -5392,14 +5422,14 @@
       }
     ]
   },
-  "lastAttemptedAt": "2026-09-18T00:58:52.071Z",
-  "lastCheckedAt": "2026-09-15T15:19:36.055Z",
+  "lastAttemptedAt": null,
+  "lastCheckedAt": "2026-09-18T03:00:39.577Z",
   "sourceFingerprint": "62ffe5741a9743f6d07079a3b113a24256e9bf53b75da47cd83af3d029b0579b",
   "history": [
     {
       "week": "1",
       "sourceUpdated": "Sep 15, 2026",
-      "syncedAt": "2026-09-15T15:19:36.055Z",
+      "syncedAt": "2026-09-18T03:00:39.577Z",
       "views": {
         "standings": [
           {
@@ -7701,7 +7731,7 @@
         ],
         "recaps": [
           {
-            "title": "High Rollers matchup",
+            "title": "Big Bowling matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -7712,53 +7742,6 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 9",
-                "Lane 9 points won: 6"
-              ],
-              [
-                "Broyles, Matt",
-                "203",
-                "13",
-                "228",
-                "178",
-                "205",
-                "611"
-              ],
-              [
-                "Lalley, Paul",
-                "153",
-                "53",
-                "127",
-                "198",
-                "135",
-                "460"
-              ],
-              [
-                "Lalley, Carrie",
-                "108",
-                "89",
-                "109",
-                "119",
-                "96",
-                "324"
-              ],
-              [
-                "Lalley, Zach",
-                "132",
-                "70",
-                "103",
-                "157",
-                "138",
-                "398"
-              ],
-              [
-                "Total",
-                "567",
-                "652",
-                "574",
-                "1793"
-              ],
               [
                 "Team 10",
                 "Lane 10 points won: 2"
@@ -7805,15 +7788,57 @@
                 "487",
                 "487",
                 "1558"
+              ],
+              [
+                "Team 9",
+                "Lane 9 points won: 6"
+              ],
+              [
+                "Broyles, Matt",
+                "203",
+                "13",
+                "228",
+                "178",
+                "205",
+                "611"
+              ],
+              [
+                "Lalley, Paul",
+                "153",
+                "53",
+                "127",
+                "198",
+                "135",
+                "460"
+              ],
+              [
+                "Lalley, Carrie",
+                "108",
+                "89",
+                "109",
+                "119",
+                "96",
+                "324"
+              ],
+              [
+                "Lalley, Zach",
+                "132",
+                "70",
+                "103",
+                "157",
+                "138",
+                "398"
+              ],
+              [
+                "Total",
+                "567",
+                "652",
+                "574",
+                "1793"
               ]
             ],
             "emphasis": [
               [
-                true,
-                false,
-                false,
-                false,
-                false,
                 false,
                 false
               ],
@@ -7861,11 +7886,6 @@
                 false
               ],
               [
-                true,
-                false,
-                false,
-                false,
-                false,
                 false,
                 false
               ],
@@ -7912,10 +7932,24 @@
                 false,
                 false
               ]
+            ],
+            "recapDetails": [
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {}
             ]
           },
           {
-            "title": "Spare Bears matchup",
+            "title": "Boozy Bowlers matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -7926,53 +7960,6 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 14",
-                "Lane 14 points won: 4"
-              ],
-              [
-                "Cessna, Michael",
-                "160",
-                "48",
-                "125",
-                "176",
-                "180",
-                "481"
-              ],
-              [
-                "Watts, Aiden",
-                "148",
-                "57",
-                "135",
-                "180",
-                "129",
-                "444"
-              ],
-              [
-                "Felix, Dale",
-                "147",
-                "58",
-                "156",
-                "129",
-                "158",
-                "443"
-              ],
-              [
-                "Borys, Robert",
-                "100",
-                "96",
-                "56",
-                "121",
-                "123",
-                "300"
-              ],
-              [
-                "Total",
-                "472",
-                "606",
-                "590",
-                "1668"
-              ],
               [
                 "Team 13",
                 "Lane 13 points won: 4"
@@ -8019,15 +8006,57 @@
                 "446",
                 "583",
                 "1526"
+              ],
+              [
+                "Team 14",
+                "Lane 14 points won: 4"
+              ],
+              [
+                "Cessna, Michael",
+                "160",
+                "48",
+                "125",
+                "176",
+                "180",
+                "481"
+              ],
+              [
+                "Watts, Aiden",
+                "148",
+                "57",
+                "135",
+                "180",
+                "129",
+                "444"
+              ],
+              [
+                "Felix, Dale",
+                "147",
+                "58",
+                "156",
+                "129",
+                "158",
+                "443"
+              ],
+              [
+                "Borys, Robert",
+                "100",
+                "96",
+                "56",
+                "121",
+                "123",
+                "300"
+              ],
+              [
+                "Total",
+                "472",
+                "606",
+                "590",
+                "1668"
               ]
             ],
             "emphasis": [
               [
-                true,
-                false,
-                false,
-                false,
-                false,
                 false,
                 false
               ],
@@ -8075,11 +8104,6 @@
                 false
               ],
               [
-                true,
-                false,
-                false,
-                false,
-                false,
                 false,
                 false
               ],
@@ -8126,6 +8150,20 @@
                 false,
                 false
               ]
+            ],
+            "recapDetails": [
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {}
             ]
           },
           {
@@ -8190,11 +8228,6 @@
             ],
             "emphasis": [
               [
-                true,
-                false,
-                false,
-                false,
-                false,
                 false,
                 false
               ],
@@ -8241,10 +8274,18 @@
                 false,
                 false
               ]
+            ],
+            "recapDetails": [
+              {},
+              {},
+              {},
+              {},
+              {},
+              {}
             ]
           },
           {
-            "title": "Wildly Inconsistent matchup",
+            "title": "CREAM PIED DUCK matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -8255,53 +8296,6 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 1",
-                "Lane 1 points won: 2"
-              ],
-              [
-                "Eveleth, James",
-                "112",
-                "86",
-                "109",
-                "115",
-                "113",
-                "337"
-              ],
-              [
-                "Bond, Kim",
-                "104",
-                "92",
-                "112",
-                "87",
-                "113",
-                "312"
-              ],
-              [
-                "Bland, David",
-                "131",
-                "71",
-                "128",
-                "141",
-                "124",
-                "393"
-              ],
-              [
-                "Obrecht, Whitney",
-                "111",
-                "87",
-                "130",
-                "62",
-                "142",
-                "334"
-              ],
-              [
-                "Total",
-                "479",
-                "405",
-                "492",
-                "1376"
-              ],
               [
                 "Team 2",
                 "Lane 2 points won: 6"
@@ -8348,15 +8342,57 @@
                 "565",
                 "505",
                 "1684"
+              ],
+              [
+                "Team 1",
+                "Lane 1 points won: 2"
+              ],
+              [
+                "Eveleth, James",
+                "112",
+                "86",
+                "109",
+                "115",
+                "113",
+                "337"
+              ],
+              [
+                "Bond, Kim",
+                "104",
+                "92",
+                "112",
+                "87",
+                "113",
+                "312"
+              ],
+              [
+                "Bland, David",
+                "131",
+                "71",
+                "128",
+                "141",
+                "124",
+                "393"
+              ],
+              [
+                "Obrecht, Whitney",
+                "111",
+                "87",
+                "130",
+                "62",
+                "142",
+                "334"
+              ],
+              [
+                "Total",
+                "479",
+                "405",
+                "492",
+                "1376"
               ]
             ],
             "emphasis": [
               [
-                true,
-                false,
-                false,
-                false,
-                false,
                 false,
                 false
               ],
@@ -8404,11 +8440,6 @@
                 false
               ],
               [
-                true,
-                false,
-                false,
-                false,
-                false,
                 false,
                 false
               ],
@@ -8455,10 +8486,24 @@
                 false,
                 false
               ]
+            ],
+            "recapDetails": [
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {}
             ]
           },
           {
-            "title": "Grow a Spare matchup",
+            "title": "Degeneration XXX matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -8469,53 +8514,6 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 7",
-                "Lane 7 points won: 2"
-              ],
-              [
-                "Stiles, Tawnya",
-                "97",
-                "98",
-                "112",
-                "100",
-                "81",
-                "293"
-              ],
-              [
-                "Quinn, Rebecca",
-                "135",
-                "68",
-                "135",
-                "135",
-                "135",
-                "405"
-              ],
-              [
-                "Crouch, Donald",
-                "125",
-                "76",
-                "129",
-                "131",
-                "117",
-                "377"
-              ],
-              [
-                "Sedivy, Maddie",
-                "112",
-                "86",
-                "110",
-                "132",
-                "95",
-                "337"
-              ],
-              [
-                "Total",
-                "486",
-                "498",
-                "428",
-                "1412"
-              ],
               [
                 "Team 8",
                 "Lane 8 points won: 6"
@@ -8562,15 +8560,57 @@
                 "578",
                 "557",
                 "1785"
+              ],
+              [
+                "Team 7",
+                "Lane 7 points won: 2"
+              ],
+              [
+                "Stiles, Tawnya",
+                "97",
+                "98",
+                "112",
+                "100",
+                "81",
+                "293"
+              ],
+              [
+                "Quinn, Rebecca",
+                "135",
+                "68",
+                "135",
+                "135",
+                "135",
+                "405"
+              ],
+              [
+                "Crouch, Donald",
+                "125",
+                "76",
+                "129",
+                "131",
+                "117",
+                "377"
+              ],
+              [
+                "Sedivy, Maddie",
+                "112",
+                "86",
+                "110",
+                "132",
+                "95",
+                "337"
+              ],
+              [
+                "Total",
+                "486",
+                "498",
+                "428",
+                "1412"
               ]
             ],
             "emphasis": [
               [
-                true,
-                false,
-                false,
-                false,
-                false,
                 false,
                 false
               ],
@@ -8618,11 +8658,6 @@
                 false
               ],
               [
-                true,
-                false,
-                false,
-                false,
-                false,
                 false,
                 false
               ],
@@ -8669,10 +8704,24 @@
                 false,
                 false
               ]
+            ],
+            "recapDetails": [
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {}
             ]
           },
           {
-            "title": "Pocket Rockets matchup",
+            "title": "Nerf Herders matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -8683,53 +8732,6 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 3",
-                "Lane 3 points won: 4"
-              ],
-              [
-                "Randazzo, Joe",
-                "156",
-                "51",
-                "147",
-                "166",
-                "155",
-                "468"
-              ],
-              [
-                "Bultez, Rick",
-                "143",
-                "61",
-                "135",
-                "157",
-                "139",
-                "431"
-              ],
-              [
-                "Nun, Nick",
-                "142",
-                "62",
-                "134",
-                "141",
-                "152",
-                "427"
-              ],
-              [
-                "Kilawee, Ryan",
-                "147",
-                "58",
-                "138",
-                "154",
-                "151",
-                "443"
-              ],
-              [
-                "Total",
-                "554",
-                "618",
-                "597",
-                "1769"
-              ],
               [
                 "Team 4",
                 "Lane 4 points won: 4"
@@ -8776,15 +8778,57 @@
                 "665",
                 "746",
                 "2026"
+              ],
+              [
+                "Team 3",
+                "Lane 3 points won: 4"
+              ],
+              [
+                "Randazzo, Joe",
+                "156",
+                "51",
+                "147",
+                "166",
+                "155",
+                "468"
+              ],
+              [
+                "Bultez, Rick",
+                "143",
+                "61",
+                "135",
+                "157",
+                "139",
+                "431"
+              ],
+              [
+                "Nun, Nick",
+                "142",
+                "62",
+                "134",
+                "141",
+                "152",
+                "427"
+              ],
+              [
+                "Kilawee, Ryan",
+                "147",
+                "58",
+                "138",
+                "154",
+                "151",
+                "443"
+              ],
+              [
+                "Total",
+                "554",
+                "618",
+                "597",
+                "1769"
               ]
             ],
             "emphasis": [
               [
-                true,
-                false,
-                false,
-                false,
-                false,
                 false,
                 false
               ],
@@ -8832,11 +8876,6 @@
                 false
               ],
               [
-                true,
-                false,
-                false,
-                false,
-                false,
                 false,
                 false
               ],
@@ -8883,6 +8922,20 @@
                 false,
                 false
               ]
+            ],
+            "recapDetails": [
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {}
             ]
           },
           {
@@ -8947,11 +9000,6 @@
             ],
             "emphasis": [
               [
-                true,
-                false,
-                false,
-                false,
-                false,
                 false,
                 false
               ],
@@ -8998,10 +9046,18 @@
                 false,
                 false
               ]
+            ],
+            "recapDetails": [
+              {},
+              {},
+              {},
+              {},
+              {},
+              {}
             ]
           },
           {
-            "title": "Rockin' Rollers matchup",
+            "title": "Pretty Wrecked-Less matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -9012,53 +9068,6 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 5",
-                "Lane 5 points won: 6"
-              ],
-              [
-                "Tisher, Ellen",
-                "113",
-                "85",
-                "119",
-                "94",
-                "128",
-                "341"
-              ],
-              [
-                "Lang, Scott",
-                "166",
-                "43",
-                "146",
-                "144",
-                "209",
-                "499"
-              ],
-              [
-                "Clay, Triston",
-                "110",
-                "88",
-                "98",
-                "129",
-                "104",
-                "331"
-              ],
-              [
-                "Pulte, Bob",
-                "166",
-                "43",
-                "141",
-                "219",
-                "138",
-                "498"
-              ],
-              [
-                "Total",
-                "504",
-                "586",
-                "579",
-                "1669"
-              ],
               [
                 "Team 6",
                 "Lane 6 points won: 2"
@@ -9105,15 +9114,57 @@
                 "477",
                 "431",
                 "1253"
+              ],
+              [
+                "Team 5",
+                "Lane 5 points won: 6"
+              ],
+              [
+                "Tisher, Ellen",
+                "113",
+                "85",
+                "119",
+                "94",
+                "128",
+                "341"
+              ],
+              [
+                "Lang, Scott",
+                "166",
+                "43",
+                "146",
+                "144",
+                "209",
+                "499"
+              ],
+              [
+                "Clay, Triston",
+                "110",
+                "88",
+                "98",
+                "129",
+                "104",
+                "331"
+              ],
+              [
+                "Pulte, Bob",
+                "166",
+                "43",
+                "141",
+                "219",
+                "138",
+                "498"
+              ],
+              [
+                "Total",
+                "504",
+                "586",
+                "579",
+                "1669"
               ]
             ],
             "emphasis": [
               [
-                true,
-                false,
-                false,
-                false,
-                false,
                 false,
                 false
               ],
@@ -9161,11 +9212,6 @@
                 false
               ],
               [
-                true,
-                false,
-                false,
-                false,
-                false,
                 false,
                 false
               ],
@@ -9212,6 +9258,20 @@
                 false,
                 false
               ]
+            ],
+            "recapDetails": [
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {}
             ]
           }
         ],

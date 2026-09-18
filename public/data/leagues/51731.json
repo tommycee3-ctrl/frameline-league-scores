@@ -7,33 +7,33 @@
   "bowlsOn": "Tuesday",
   "startTime": "10:00 AM",
   "type": "Handicap Womens",
-  "updated": "09/10/2026",
+  "updated": "Sep 16, 2026",
   "startDate": "Fall 2026",
   "bowlDay": 2,
   "centerId": "2119",
   "centerName": "Maplewood Lanes",
   "centerSlug": "maplewood-lanes-omaha-nebraska",
   "area": "Omaha",
-  "sourceUpdated": "09/10/2026",
-  "syncedAt": "2026-09-10T14:29:08.202Z",
+  "sourceUpdated": "Sep 16, 2026",
+  "syncedAt": "2026-09-18T02:39:48.107Z",
   "status": "current",
-  "week": "4",
-  "fingerprint": "4d8394122975b8dece2c3ff22330cc1de840a746a88f43e4a15e707937e401f1",
-  "lastCompletedCycle": "2026-09-08",
+  "week": "5",
+  "fingerprint": "55ffa3c4cbe5d02d2ed026b9168620a0877079cf6c9f9df1678b3aff044f647a",
+  "lastCompletedCycle": "2026-09-15",
   "views": {
     "standings": [
       {
-        "title": "Table 1",
+        "title": "League standings",
         "headers": [
-          "Division",
           "Place",
-          "Team#",
           "Team",
-          "Won",
-          "Lost",
-          "% Won",
-          "YTD Won",
-          "Avg",
+          "Team#",
+          "Div",
+          "WON",
+          "LOST",
+          "%",
+          "YTD WON",
+          "AVG",
           "Pins",
           "HSG",
           "HSS"
@@ -41,57 +41,57 @@
         "rows": [
           [
             "1",
-            "1",
-            "2",
-            "Betas",
-            "20",
-            "12",
-            "63 %",
-            "20",
-            "332",
-            "3972",
-            "406",
-            "1083"
-          ],
-          [
-            "1",
-            "2",
-            "3",
             "Gammas",
-            "18",
+            "3",
+            "1",
+            "26",
             "14",
-            "56 %",
-            "18",
-            "353",
-            "4273",
+            "65 %",
+            "26",
+            "352",
+            "5327",
             "443",
             "1119"
           ],
           [
-            "1",
-            "3",
-            "4",
+            "2",
             "Delta",
-            "14",
+            "4",
+            "1",
+            "22",
             "18",
-            "44 %",
-            "14",
-            "345",
-            "4121",
+            "55 %",
+            "22",
+            "349",
+            "5216",
             "404",
-            "1061"
+            "1095"
           ],
           [
+            "3",
+            "Betas",
+            "2",
             "1",
-            "4",
-            "1",
-            "Alphas",
-            "12",
             "20",
-            "38 %",
+            "20",
+            "50 %",
+            "20",
+            "328",
+            "4899",
+            "406",
+            "1083"
+          ],
+          [
+            "4",
+            "Alphas",
+            "1",
+            "1",
             "12",
-            "307",
-            "3610",
+            "28",
+            "30 %",
+            "12",
+            "295",
+            "4364",
             "345",
             "996"
           ]
@@ -104,23 +104,9 @@
             false,
             false,
             false,
+            true,
             false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
+            true,
             false,
             false,
             false
@@ -132,9 +118,9 @@
             false,
             false,
             false,
+            true,
             false,
-            false,
-            false,
+            true,
             false,
             false,
             false
@@ -146,9 +132,23 @@
             false,
             false,
             false,
+            true,
+            false,
+            true,
+            false,
+            false,
+            false
+          ],
+          [
             false,
             false,
             false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            true,
             false,
             false,
             false
@@ -158,7 +158,7 @@
     ],
     "bowlers": [
       {
-        "title": "Table 1",
+        "title": "Bowlers and season statistics",
         "headers": [
           "Name",
           "Team#",
@@ -181,19 +181,19 @@
           [
             "Bencker, Judy",
             "1",
-            "3",
+            "2",
             "Alphas",
             "W",
-            "488",
-            "6",
-            "81",
+            "706",
+            "9",
+            "78",
             "103",
             "0",
             "106",
             "256",
             "106",
             "256",
-            "-21.67",
+            "-24.56",
             "0"
           ],
           [
@@ -202,16 +202,16 @@
             "1",
             "Betas",
             "W",
-            "842",
-            "9",
-            "93",
+            "1033",
+            "12",
+            "86",
             "106",
             "0",
             "115",
             "305",
             "115",
             "305",
-            "-12.44",
+            "-19.92",
             "0"
           ],
           [
@@ -220,8 +220,8 @@
             "2",
             "Gammas",
             "W",
-            "990",
-            "9",
+            "1331",
+            "12",
             "110",
             "118",
             "0",
@@ -229,7 +229,7 @@
             "361",
             "154",
             "361",
-            "-8",
+            "-7.08",
             "0"
           ],
           [
@@ -238,16 +238,16 @@
             "2",
             "Betas",
             "W",
-            "1384",
-            "12",
-            "115",
+            "1778",
+            "15",
+            "118",
             "124",
             "0",
-            "164",
-            "377",
-            "164",
-            "377",
-            "-8.67",
+            "173",
+            "394",
+            "173",
+            "394",
+            "-5.47",
             "0"
           ],
           [
@@ -274,16 +274,16 @@
             "1",
             "Gammas",
             "W",
-            "1243",
-            "12",
-            "103",
+            "1530",
+            "15",
+            "102",
             "109",
             "0",
             "150",
             "340",
             "150",
             "340",
-            "-5.42",
+            "-7",
             "0"
           ],
           [
@@ -292,34 +292,34 @@
             "1",
             "Alphas",
             "W",
-            "1106",
-            "12",
-            "92",
+            "1168",
+            "13",
+            "89",
             "118",
             "0",
             "121",
             "302",
             "121",
             "302",
-            "-25.83",
+            "-28.15",
             "0"
           ],
           [
             "Smith, Debbie",
             "1",
-            "4",
+            "3",
             "Alphas",
             "W",
-            "1211",
-            "9",
-            "134",
+            "1536",
+            "12",
+            "128",
             "135",
             "0",
             "149",
             "415",
             "149",
             "415",
-            "-0.44",
+            "-7",
             "0"
           ],
           [
@@ -328,16 +328,16 @@
             "3",
             "Delta",
             "W",
-            "1151",
-            "9",
-            "127",
+            "1567",
+            "12",
+            "130",
             "134",
             "0",
             "172",
             "419",
             "172",
             "419",
-            "-6.11",
+            "-3.42",
             "0"
           ],
           [
@@ -346,16 +346,16 @@
             "2",
             "Delta",
             "W",
-            "1179",
-            "12",
-            "98",
+            "1498",
+            "15",
+            "99",
             "108",
             "0",
-            "136",
+            "137",
             "333",
-            "136",
+            "137",
             "333",
-            "-9.75",
+            "-8.13",
             "0"
           ],
           [
@@ -364,8 +364,8 @@
             "3",
             "Gammas",
             "W",
-            "1680",
-            "12",
+            "2106",
+            "15",
             "140",
             "149",
             "0",
@@ -373,14 +373,14 @@
             "438",
             "169",
             "438",
-            "-9",
+            "-8.6",
             "0"
           ],
           [
             "Wrenn, Cindy",
-            "1",
-            "2",
-            "Alphas",
+            "0",
+            "0",
+            "",
             "W",
             "592",
             "6",
@@ -617,148 +617,98 @@
     ],
     "recaps": [
       {
-        "title": "Betas matchup",
+        "title": "Alphas matchup",
         "headers": [
           "Bowler",
-          "AVG",
-          "HDCP",
-          "GM1",
-          "GM2",
-          "GM3",
-          "GM4",
-          "GM5",
-          "GM6",
-          "Total"
+          "Average",
+          "Handicap",
+          "Game 1",
+          "Game 2",
+          "Game 3",
+          "Scratch series"
         ],
         "rows": [
           [
-            "Team 2",
-            "Lane 29 | Team points won: 8"
-          ],
-          [
-            "Carr, Connie",
-            "93",
-            "0",
-            "83",
-            "83",
-            "83",
-            "249"
-          ],
-          [
-            "Gabriel, Kathy",
-            "111",
-            "0",
-            "97",
-            "116",
-            "164",
-            "377"
-          ],
-          [
-            "Kennedy, Jane",
-            "115",
-            "0",
-            "140",
-            "158",
-            "159",
-            "457"
-          ],
-          [
-            "Total",
-            "320",
-            "357",
-            "406",
-            "0",
-            "0",
-            "0",
-            "1083"
-          ],
-          [
             "Team 1",
-            "Lane 30 | Team points won: 0"
+            "Lane 29 points won: 0"
           ],
           [
             "Murcek, Candy",
-            "95",
+            "92",
             "0",
-            "72",
-            "78",
-            "98",
-            "248"
-          ],
-          [
-            "Wrenn, Cindy",
-            "95",
-            "0",
-            "94",
-            "86",
-            "127",
-            "307"
+            "62",
+            "67",
+            "82",
+            "211"
           ],
           [
             "Bencker, Judy",
             "81",
             "0",
-            "71",
-            "71",
-            "71",
-            "213"
+            "54",
+            "76",
+            "88",
+            "218"
+          ],
+          [
+            "Smith, Debbie",
+            "134",
+            "0",
+            "120",
+            "84",
+            "121",
+            "325"
           ],
           [
             "Total",
-            "237",
-            "235",
-            "296",
+            "236",
+            "227",
+            "291",
+            "754"
+          ],
+          [
+            "Team 3",
+            "Lane 30 points won: 8"
+          ],
+          [
+            "Langfeldt, Tammy",
+            "103",
             "0",
+            "115",
+            "81",
+            "91",
+            "287"
+          ],
+          [
+            "Friend, Deb",
+            "110",
             "0",
+            "107",
+            "117",
+            "117",
+            "341"
+          ],
+          [
+            "Wetzel, Peggy",
+            "140",
             "0",
-            "768"
+            "139",
+            "128",
+            "159",
+            "426"
+          ],
+          [
+            "Total",
+            "361",
+            "326",
+            "367",
+            "1054"
           ]
         ],
         "emphasis": [
           [
-            true,
-            true
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
             false,
             false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
-          ],
-          [
-            true,
-            true
           ],
           [
             false,
@@ -788,76 +738,117 @@
             false
           ],
           [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false
           ]
+        ],
+        "recapDetails": [
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {}
         ]
       },
       {
-        "title": "Gammas matchup",
+        "title": "Betas matchup",
         "headers": [
           "Bowler",
-          "AVG",
-          "HDCP",
-          "GM1",
-          "GM2",
-          "GM3",
-          "GM4",
-          "GM5",
-          "GM6",
-          "Total"
+          "Average",
+          "Handicap",
+          "Game 1",
+          "Game 2",
+          "Game 3",
+          "Scratch series"
         ],
         "rows": [
           [
-            "Team 3",
-            "Lane 27 | Team points won: 2"
+            "Team 2",
+            "Lane 28 points won: 0"
           ],
           [
-            "Langfeldt, Tammy",
-            "107",
-            "0",
-            "94",
-            "90",
+            "Carr, Connie",
             "93",
-            "277"
+            "0",
+            "60",
+            "62",
+            "69",
+            "191"
           ],
           [
-            "Friend, Deb",
+            "Gabriel, Kathy",
+            "115",
+            "0",
+            "111",
+            "110",
+            "173",
+            "394"
+          ],
+          [
+            "Kennedy, Jane",
+            "124",
+            "0",
             "114",
-            "0",
-            "98",
-            "74",
-            "132",
-            "304"
-          ],
-          [
-            "Wetzel, Peggy",
-            "139",
-            "0",
-            "117",
-            "158",
-            "148",
-            "423"
+            "114",
+            "114",
+            "342"
           ],
           [
             "Total",
-            "309",
-            "322",
-            "373",
-            "0",
-            "0",
-            "0",
-            "1004"
+            "285",
+            "286",
+            "356",
+            "927"
           ],
           [
             "Team 4",
-            "Lane 28 | Team points won: 6"
+            "Lane 27 points won: 8"
           ],
           [
             ", Vacant",
@@ -870,78 +861,34 @@
           ],
           [
             "Stamp, Jan",
-            "95",
+            "98",
             "0",
-            "121",
-            "85",
-            "111",
-            "317"
+            "137",
+            "80",
+            "102",
+            "319"
           ],
           [
             "Sperry, Jo",
             "127",
             "0",
-            "117",
-            "117",
-            "117",
-            "351"
+            "139",
+            "106",
+            "171",
+            "416"
           ],
           [
             "Total",
-            "358",
-            "322",
-            "348",
-            "0",
-            "0",
-            "0",
-            "1028"
+            "396",
+            "306",
+            "393",
+            "1095"
           ]
         ],
         "emphasis": [
           [
-            true,
-            true
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
             false,
             false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
-          ],
-          [
-            true,
-            true
           ],
           [
             false,
@@ -971,21 +918,68 @@
             false
           ],
           [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false
           ]
+        ],
+        "recapDetails": [
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {}
         ]
       }
     ],
     "lanes": [
       {
-        "title": "Table 1",
+        "title": "All scheduled teams",
         "headers": [
           "Lane",
           "Team#",
@@ -994,43 +988,43 @@
         "rows": [
           [
             "27",
-            "4",
-            "Delta"
-          ],
-          [
-            "28",
-            "2",
-            "Betas"
-          ],
-          [
-            "29",
             "1",
             "Alphas"
           ],
           [
-            "30",
+            "28",
+            "4",
+            "Delta"
+          ],
+          [
+            "29",
             "3",
             "Gammas"
+          ],
+          [
+            "30",
+            "2",
+            "Betas"
           ]
         ],
         "emphasis": [
           [
-            false,
-            false,
-            false
-          ],
-          [
-            false,
+            true,
             false,
             false
           ],
           [
-            false,
+            true,
             false,
             false
           ],
           [
+            true,
             false,
+            false
+          ],
+          [
+            true,
             false,
             false
           ]
@@ -1047,7 +1041,7 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
@@ -1055,48 +1049,30 @@
             "Murcek, Candy",
             "W",
             "0",
-            "12",
-            "1106",
-            "92"
+            "13",
+            "1168",
+            "89"
           ],
           [
             "2",
-            "Wrenn, Cindy",
-            "W",
-            "0",
-            "6",
-            "592",
-            "98"
-          ],
-          [
-            "3",
             "Bencker, Judy",
             "W",
             "0",
-            "6",
-            "488",
-            "81"
+            "9",
+            "706",
+            "78"
           ],
           [
-            "4",
+            "3",
             "Smith, Debbie",
             "W",
             "0",
-            "9",
-            "1211",
-            "134"
+            "12",
+            "1536",
+            "128"
           ]
         ],
         "emphasis": [
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
           [
             false,
             false,
@@ -1136,7 +1112,7 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
@@ -1144,18 +1120,18 @@
             "Carr, Connie",
             "W",
             "0",
-            "9",
-            "842",
-            "93"
+            "12",
+            "1033",
+            "86"
           ],
           [
             "2",
             "Gabriel, Kathy",
             "W",
             "0",
-            "12",
-            "1384",
-            "115"
+            "15",
+            "1778",
+            "118"
           ],
           [
             "3",
@@ -1207,7 +1183,7 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
@@ -1215,18 +1191,18 @@
             "Stamp, Jan",
             "W",
             "0",
-            "12",
-            "1179",
-            "98"
+            "15",
+            "1498",
+            "99"
           ],
           [
             "3",
             "Sperry, Jo",
             "W",
             "0",
-            "9",
-            "1151",
-            "127"
+            "12",
+            "1567",
+            "130"
           ]
         ],
         "emphasis": [
@@ -1269,7 +1245,7 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
@@ -1277,17 +1253,17 @@
             "Langfeldt, Tammy",
             "W",
             "0",
-            "12",
-            "1243",
-            "103"
+            "15",
+            "1530",
+            "102"
           ],
           [
             "2",
             "Friend, Deb",
             "W",
             "0",
-            "9",
-            "990",
+            "12",
+            "1331",
             "110"
           ],
           [
@@ -1295,8 +1271,8 @@
             "Wetzel, Peggy",
             "W",
             "0",
-            "12",
-            "1680",
+            "15",
+            "2106",
             "140"
           ]
         ],
@@ -1333,7 +1309,7 @@
       }
     ]
   },
-  "sourceFingerprint": "301e68fe9666c5dd038524d81e8ec89bacd15f74c7e07667d487b2f4d2683408",
+  "sourceFingerprint": "32faf33ad8a237c21083a0acd4ddcfdc2dee15755798732bfcb93abc34f299fa",
   "history": [
     {
       "week": "2",
@@ -4451,7 +4427,1302 @@
           }
         ]
       }
+    },
+    {
+      "week": "5",
+      "sourceUpdated": "Sep 16, 2026",
+      "syncedAt": "2026-09-18T02:39:48.107Z",
+      "views": {
+        "standings": [
+          {
+            "title": "League standings",
+            "headers": [
+              "Place",
+              "Team",
+              "Team#",
+              "Div",
+              "WON",
+              "LOST",
+              "%",
+              "YTD WON",
+              "AVG",
+              "Pins",
+              "HSG",
+              "HSS"
+            ],
+            "rows": [
+              [
+                "1",
+                "Gammas",
+                "3",
+                "1",
+                "26",
+                "14",
+                "65 %",
+                "26",
+                "352",
+                "5327",
+                "443",
+                "1119"
+              ],
+              [
+                "2",
+                "Delta",
+                "4",
+                "1",
+                "22",
+                "18",
+                "55 %",
+                "22",
+                "349",
+                "5216",
+                "404",
+                "1095"
+              ],
+              [
+                "3",
+                "Betas",
+                "2",
+                "1",
+                "20",
+                "20",
+                "50 %",
+                "20",
+                "328",
+                "4899",
+                "406",
+                "1083"
+              ],
+              [
+                "4",
+                "Alphas",
+                "1",
+                "1",
+                "12",
+                "28",
+                "30 %",
+                "12",
+                "295",
+                "4364",
+                "345",
+                "996"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ]
+            ]
+          }
+        ],
+        "bowlers": [
+          {
+            "title": "Bowlers and season statistics",
+            "headers": [
+              "Name",
+              "Team#",
+              "Pos#",
+              "Team",
+              "Gndr",
+              "Pins",
+              "Games",
+              "Avg",
+              "EnteringAvg",
+              "HCP",
+              "HHG",
+              "HHS",
+              "HSG",
+              "HSS",
+              "MIB",
+              "WON"
+            ],
+            "rows": [
+              [
+                "Bencker, Judy",
+                "1",
+                "2",
+                "Alphas",
+                "W",
+                "706",
+                "9",
+                "78",
+                "103",
+                "0",
+                "106",
+                "256",
+                "106",
+                "256",
+                "-24.56",
+                "0"
+              ],
+              [
+                "Carr, Connie",
+                "2",
+                "1",
+                "Betas",
+                "W",
+                "1033",
+                "12",
+                "86",
+                "106",
+                "0",
+                "115",
+                "305",
+                "115",
+                "305",
+                "-19.92",
+                "0"
+              ],
+              [
+                "Friend, Deb",
+                "3",
+                "2",
+                "Gammas",
+                "W",
+                "1331",
+                "12",
+                "110",
+                "118",
+                "0",
+                "154",
+                "361",
+                "154",
+                "361",
+                "-7.08",
+                "0"
+              ],
+              [
+                "Gabriel, Kathy",
+                "2",
+                "2",
+                "Betas",
+                "W",
+                "1778",
+                "15",
+                "118",
+                "124",
+                "0",
+                "173",
+                "394",
+                "173",
+                "394",
+                "-5.47",
+                "0"
+              ],
+              [
+                "Kennedy, Jane",
+                "2",
+                "3",
+                "Betas",
+                "W",
+                "1497",
+                "12",
+                "124",
+                "0",
+                "0",
+                "159",
+                "457",
+                "159",
+                "457",
+                "0",
+                "0"
+              ],
+              [
+                "Langfeldt, Tammy",
+                "3",
+                "1",
+                "Gammas",
+                "W",
+                "1530",
+                "15",
+                "102",
+                "109",
+                "0",
+                "150",
+                "340",
+                "150",
+                "340",
+                "-7",
+                "0"
+              ],
+              [
+                "Murcek, Candy",
+                "1",
+                "1",
+                "Alphas",
+                "W",
+                "1168",
+                "13",
+                "89",
+                "118",
+                "0",
+                "121",
+                "302",
+                "121",
+                "302",
+                "-28.15",
+                "0"
+              ],
+              [
+                "Smith, Debbie",
+                "1",
+                "3",
+                "Alphas",
+                "W",
+                "1536",
+                "12",
+                "128",
+                "135",
+                "0",
+                "149",
+                "415",
+                "149",
+                "415",
+                "-7",
+                "0"
+              ],
+              [
+                "Sperry, Jo",
+                "4",
+                "3",
+                "Delta",
+                "W",
+                "1567",
+                "12",
+                "130",
+                "134",
+                "0",
+                "172",
+                "419",
+                "172",
+                "419",
+                "-3.42",
+                "0"
+              ],
+              [
+                "Stamp, Jan",
+                "4",
+                "2",
+                "Delta",
+                "W",
+                "1498",
+                "15",
+                "99",
+                "108",
+                "0",
+                "137",
+                "333",
+                "137",
+                "333",
+                "-8.13",
+                "0"
+              ],
+              [
+                "Wetzel, Peggy",
+                "3",
+                "3",
+                "Gammas",
+                "W",
+                "2106",
+                "15",
+                "140",
+                "149",
+                "0",
+                "169",
+                "438",
+                "169",
+                "438",
+                "-8.6",
+                "0"
+              ],
+              [
+                "Wrenn, Cindy",
+                "0",
+                "0",
+                "",
+                "W",
+                "592",
+                "6",
+                "98",
+                "0",
+                "0",
+                "127",
+                "307",
+                "127",
+                "307",
+                "0",
+                "0"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ]
+          }
+        ],
+        "recaps": [
+          {
+            "title": "Alphas matchup",
+            "headers": [
+              "Bowler",
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
+            ],
+            "rows": [
+              [
+                "Team 1",
+                "Lane 29 points won: 0"
+              ],
+              [
+                "Murcek, Candy",
+                "92",
+                "0",
+                "62",
+                "67",
+                "82",
+                "211"
+              ],
+              [
+                "Bencker, Judy",
+                "81",
+                "0",
+                "54",
+                "76",
+                "88",
+                "218"
+              ],
+              [
+                "Smith, Debbie",
+                "134",
+                "0",
+                "120",
+                "84",
+                "121",
+                "325"
+              ],
+              [
+                "Total",
+                "236",
+                "227",
+                "291",
+                "754"
+              ],
+              [
+                "Team 3",
+                "Lane 30 points won: 8"
+              ],
+              [
+                "Langfeldt, Tammy",
+                "103",
+                "0",
+                "115",
+                "81",
+                "91",
+                "287"
+              ],
+              [
+                "Friend, Deb",
+                "110",
+                "0",
+                "107",
+                "117",
+                "117",
+                "341"
+              ],
+              [
+                "Wetzel, Peggy",
+                "140",
+                "0",
+                "139",
+                "128",
+                "159",
+                "426"
+              ],
+              [
+                "Total",
+                "361",
+                "326",
+                "367",
+                "1054"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "recapDetails": [
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {}
+            ]
+          },
+          {
+            "title": "Betas matchup",
+            "headers": [
+              "Bowler",
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
+            ],
+            "rows": [
+              [
+                "Team 2",
+                "Lane 28 points won: 0"
+              ],
+              [
+                "Carr, Connie",
+                "93",
+                "0",
+                "60",
+                "62",
+                "69",
+                "191"
+              ],
+              [
+                "Gabriel, Kathy",
+                "115",
+                "0",
+                "111",
+                "110",
+                "173",
+                "394"
+              ],
+              [
+                "Kennedy, Jane",
+                "124",
+                "0",
+                "114",
+                "114",
+                "114",
+                "342"
+              ],
+              [
+                "Total",
+                "285",
+                "286",
+                "356",
+                "927"
+              ],
+              [
+                "Team 4",
+                "Lane 27 points won: 8"
+              ],
+              [
+                ", Vacant",
+                "120",
+                "0",
+                "120",
+                "120",
+                "120",
+                "360"
+              ],
+              [
+                "Stamp, Jan",
+                "98",
+                "0",
+                "137",
+                "80",
+                "102",
+                "319"
+              ],
+              [
+                "Sperry, Jo",
+                "127",
+                "0",
+                "139",
+                "106",
+                "171",
+                "416"
+              ],
+              [
+                "Total",
+                "396",
+                "306",
+                "393",
+                "1095"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "recapDetails": [
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {}
+            ]
+          }
+        ],
+        "lanes": [
+          {
+            "title": "All scheduled teams",
+            "headers": [
+              "Lane",
+              "Team#",
+              "Team"
+            ],
+            "rows": [
+              [
+                "27",
+                "1",
+                "Alphas"
+              ],
+              [
+                "28",
+                "4",
+                "Delta"
+              ],
+              [
+                "29",
+                "3",
+                "Gammas"
+              ],
+              [
+                "30",
+                "2",
+                "Betas"
+              ]
+            ],
+            "emphasis": [
+              [
+                true,
+                false,
+                false
+              ],
+              [
+                true,
+                false,
+                false
+              ],
+              [
+                true,
+                false,
+                false
+              ],
+              [
+                true,
+                false,
+                false
+              ]
+            ]
+          }
+        ],
+        "rosters": [
+          {
+            "title": "Team 1 · Alphas roster",
+            "headers": [
+              "Pos",
+              "Name",
+              "Gndr",
+              "HCP",
+              "Gms",
+              "Pins",
+              "AVG"
+            ],
+            "rows": [
+              [
+                "1",
+                "Murcek, Candy",
+                "W",
+                "0",
+                "13",
+                "1168",
+                "89"
+              ],
+              [
+                "2",
+                "Bencker, Judy",
+                "W",
+                "0",
+                "9",
+                "706",
+                "78"
+              ],
+              [
+                "3",
+                "Smith, Debbie",
+                "W",
+                "0",
+                "12",
+                "1536",
+                "128"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "team": "1"
+          },
+          {
+            "title": "Team 2 · Betas roster",
+            "headers": [
+              "Pos",
+              "Name",
+              "Gndr",
+              "HCP",
+              "Gms",
+              "Pins",
+              "AVG"
+            ],
+            "rows": [
+              [
+                "1",
+                "Carr, Connie",
+                "W",
+                "0",
+                "12",
+                "1033",
+                "86"
+              ],
+              [
+                "2",
+                "Gabriel, Kathy",
+                "W",
+                "0",
+                "15",
+                "1778",
+                "118"
+              ],
+              [
+                "3",
+                "Kennedy, Jane",
+                "W",
+                "0",
+                "12",
+                "1497",
+                "124"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "team": "2"
+          },
+          {
+            "title": "Team 4 · Delta roster",
+            "headers": [
+              "Pos",
+              "Name",
+              "Gndr",
+              "HCP",
+              "Gms",
+              "Pins",
+              "AVG"
+            ],
+            "rows": [
+              [
+                "2",
+                "Stamp, Jan",
+                "W",
+                "0",
+                "15",
+                "1498",
+                "99"
+              ],
+              [
+                "3",
+                "Sperry, Jo",
+                "W",
+                "0",
+                "12",
+                "1567",
+                "130"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "team": "4"
+          },
+          {
+            "title": "Team 3 · Gammas roster",
+            "headers": [
+              "Pos",
+              "Name",
+              "Gndr",
+              "HCP",
+              "Gms",
+              "Pins",
+              "AVG"
+            ],
+            "rows": [
+              [
+                "1",
+                "Langfeldt, Tammy",
+                "W",
+                "0",
+                "15",
+                "1530",
+                "102"
+              ],
+              [
+                "2",
+                "Friend, Deb",
+                "W",
+                "0",
+                "12",
+                "1331",
+                "110"
+              ],
+              [
+                "3",
+                "Wetzel, Peggy",
+                "W",
+                "0",
+                "15",
+                "2106",
+                "140"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "team": "3"
+          }
+        ]
+      }
     }
   ],
-  "lastAttemptedAt": "2026-09-18T00:48:47.675Z"
+  "lastAttemptedAt": null,
+  "lastCheckedAt": "2026-09-18T02:39:48.107Z"
 }

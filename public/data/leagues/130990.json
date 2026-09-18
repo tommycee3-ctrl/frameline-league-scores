@@ -7,33 +7,33 @@
   "bowlsOn": "Tuesday",
   "startTime": "5:30 PM",
   "type": "Handicap Youth Mixed",
-  "updated": "09/08/2026",
+  "updated": "Sep 15, 2026",
   "startDate": "Fall 2026",
   "bowlDay": 2,
   "centerId": "2118",
   "centerName": "Sun Valley Lanes",
   "centerSlug": "sun-valley-lanes-lincoln-nebraska",
   "area": "Lincoln",
-  "sourceUpdated": "09/08/2026",
-  "syncedAt": "2026-09-09T14:43:23.742Z",
+  "sourceUpdated": "Sep 15, 2026",
+  "syncedAt": "2026-09-18T02:35:21.730Z",
   "status": "current",
-  "week": "2",
-  "fingerprint": "0c5c029ce45c667e110caf63f60da7881711910bce9bb4b0f55babe42f9a90ed",
-  "lastCompletedCycle": "2026-09-08",
+  "week": "3",
+  "fingerprint": "a68f022bf73e0a35bd0ca61b5d09b06ba6eb78c7d2987c1c50c530377099f12c",
+  "lastCompletedCycle": "2026-09-15",
   "views": {
     "standings": [
       {
-        "title": "Table 1",
+        "title": "League standings",
         "headers": [
-          "Division",
           "Place",
-          "Team#",
           "Team",
-          "Won",
-          "Lost",
-          "% Won",
-          "YTD Won",
-          "Avg",
+          "Team#",
+          "Div",
+          "WON",
+          "LOST",
+          "%",
+          "YTD WON",
+          "AVG",
           "Pins",
           "HSG",
           "HSS"
@@ -41,85 +41,85 @@
         "rows": [
           [
             "1",
-            "1",
-            "4",
-            "CTRL-ALT-DEL",
-            "6",
+            "Huey, Dewey & Louie",
             "2",
-            "75 %",
-            "6",
-            "393",
-            "2364",
+            "1",
+            "10",
+            "2",
+            "83 %",
+            "10",
+            "212",
+            "1917",
+            "235",
+            "671"
+          ],
+          [
+            "2",
+            "CTRL-ALT-DEL",
+            "4",
+            "1",
+            "8",
+            "4",
+            "67 %",
+            "8",
+            "387",
+            "3499",
             "442",
             "1239"
           ],
           [
-            "1",
-            "2",
-            "2",
-            "Huey, Dewey & Louie",
-            "6",
-            "2",
-            "75 %",
-            "6",
-            "214",
-            "1290",
-            "233",
-            "671"
-          ],
-          [
-            "1",
             "3",
-            "6",
             "BLT",
+            "6",
+            "1",
+            "7",
             "5",
-            "3",
-            "63 %",
-            "5",
-            "237",
-            "1424",
+            "58 %",
+            "7",
+            "234",
+            "2113",
             "289",
             "738"
           ],
           [
-            "1",
             "4",
+            "Three's Company",
+            "3",
             "1",
-            "Ed, Edd & Eddy",
-            "3",
+            "6",
+            "6",
+            "50 %",
+            "6",
+            "225",
+            "1977",
+            "260",
+            "739"
+          ],
+          [
             "5",
-            "38 %",
+            "Ed, Edd & Eddy",
+            "1",
+            "1",
             "3",
-            "297",
-            "1763",
+            "9",
+            "25 %",
+            "3",
+            "278",
+            "2498",
             "349",
             "911"
           ],
           [
-            "1",
-            "5",
-            "3",
-            "Three's Company",
-            "2",
             "6",
-            "25 %",
-            "2",
-            "210",
-            "1238",
-            "219",
-            "631"
-          ],
-          [
-            "1",
-            "6",
-            "5",
             "3- Musketeers",
+            "5",
+            "1",
             "2",
-            "6",
-            "25 %",
+            "10",
+            "17 %",
             "2",
-            "344",
-            "2067",
+            "342",
+            "3057",
             "373",
             "1070"
           ]
@@ -132,23 +132,9 @@
             false,
             false,
             false,
+            true,
             false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
+            true,
             false,
             false,
             false
@@ -160,23 +146,9 @@
             false,
             false,
             false,
+            true,
             false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
+            true,
             false,
             false,
             false
@@ -188,9 +160,9 @@
             false,
             false,
             false,
+            true,
             false,
-            false,
-            false,
+            true,
             false,
             false,
             false
@@ -202,9 +174,37 @@
             false,
             false,
             false,
+            true,
+            false,
+            true,
+            false,
+            false,
+            false
+          ],
+          [
             false,
             false,
             false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            true,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            true,
             false,
             false,
             false
@@ -214,7 +214,7 @@
     ],
     "bowlers": [
       {
-        "title": "Table 1",
+        "title": "Bowlers and season statistics",
         "headers": [
           "Name",
           "Team#",
@@ -240,11 +240,11 @@
             "3",
             "CTRL-ALT-DEL",
             "M",
-            "692",
-            "6",
-            "115",
+            "1007",
+            "9",
+            "111",
             "98",
-            "85",
+            "89",
             "0",
             "0",
             "132",
@@ -258,11 +258,11 @@
             "1",
             "Ed, Edd & Eddy",
             "M",
-            "719",
-            "6",
-            "119",
+            "1029",
+            "9",
+            "114",
             "96",
-            "81",
+            "86",
             "0",
             "0",
             "137",
@@ -276,11 +276,11 @@
             "1",
             "CTRL-ALT-DEL",
             "M",
-            "780",
-            "6",
-            "130",
+            "1133",
+            "9",
+            "125",
             "106",
-            "70",
+            "75",
             "0",
             "0",
             "157",
@@ -294,11 +294,11 @@
             "1",
             "BLT",
             "M",
-            "420",
-            "6",
-            "70",
+            "600",
+            "9",
+            "66",
             "0",
-            "130",
+            "134",
             "0",
             "0",
             "110",
@@ -312,11 +312,11 @@
             "2",
             "BLT",
             "M",
-            "284",
-            "6",
-            "47",
+            "433",
+            "9",
+            "48",
             "0",
-            "153",
+            "152",
             "0",
             "0",
             "65",
@@ -330,11 +330,11 @@
             "2",
             "Huey, Dewey & Louie",
             "M",
-            "235",
-            "6",
-            "39",
+            "320",
+            "9",
+            "35",
             "41",
-            "161",
+            "165",
             "0",
             "0",
             "51",
@@ -348,15 +348,15 @@
             "2",
             "Three's Company",
             "W",
-            "478",
-            "6",
-            "79",
+            "796",
+            "9",
+            "88",
             "102",
-            "121",
+            "112",
             "0",
             "0",
-            "106",
-            "247",
+            "119",
+            "318",
             "0",
             "0"
           ],
@@ -366,8 +366,8 @@
             "2",
             "3- Musketeers",
             "M",
-            "649",
-            "6",
+            "978",
+            "9",
             "108",
             "0",
             "92",
@@ -384,11 +384,11 @@
             "3",
             "3- Musketeers",
             "M",
-            "656",
-            "6",
-            "109",
+            "966",
+            "9",
+            "107",
             "121",
-            "91",
+            "93",
             "0",
             "0",
             "115",
@@ -420,11 +420,11 @@
             "2",
             "Ed, Edd & Eddy",
             "M",
-            "242",
-            "3",
-            "80",
+            "446",
+            "6",
+            "74",
             "84",
-            "120",
+            "126",
             "0",
             "0",
             "106",
@@ -438,15 +438,15 @@
             "2",
             "CTRL-ALT-DEL",
             "M",
-            "892",
-            "6",
-            "148",
+            "1359",
+            "9",
+            "151",
             "0",
-            "52",
+            "49",
             "0",
             "0",
             "183",
-            "466",
+            "467",
             "0",
             "0"
           ],
@@ -456,15 +456,15 @@
             "1",
             "Huey, Dewey & Louie",
             "M",
-            "335",
-            "6",
-            "55",
+            "517",
+            "9",
             "57",
-            "145",
+            "57",
+            "143",
             "0",
             "0",
-            "70",
-            "178",
+            "89",
+            "182",
             "0",
             "0"
           ],
@@ -474,11 +474,11 @@
             "3",
             "Ed, Edd & Eddy",
             "M",
-            "592",
-            "6",
-            "98",
+            "813",
+            "9",
+            "90",
             "0",
-            "102",
+            "110",
             "0",
             "0",
             "124",
@@ -492,15 +492,15 @@
             "1",
             "Three's Company",
             "W",
-            "209",
-            "3",
-            "69",
+            "478",
+            "6",
+            "79",
             "0",
-            "131",
+            "121",
             "0",
             "0",
-            "74",
-            "209",
+            "111",
+            "269",
             "0",
             "0"
           ],
@@ -510,11 +510,11 @@
             "3",
             "Three's Company",
             "M",
-            "374",
-            "6",
-            "62",
+            "526",
+            "9",
+            "58",
             "0",
-            "138",
+            "142",
             "0",
             "0",
             "84",
@@ -817,148 +817,98 @@
     ],
     "recaps": [
       {
-        "title": "CTRL-ALT-DEL matchup",
+        "title": "3- Musketeers matchup",
         "headers": [
           "Bowler",
-          "AVG",
-          "HDCP",
-          "GM1",
-          "GM2",
-          "GM3",
-          "GM4",
-          "GM5",
-          "GM6",
-          "Total"
+          "Average",
+          "Handicap",
+          "Game 1",
+          "Game 2",
+          "Game 3",
+          "Scratch series"
         ],
         "rows": [
           [
-            "Team 4",
-            "Lane 28 | Team points won: 4"
-          ],
-          [
-            "Brestel, Cameron",
-            "121",
-            "79",
-            "157",
-            "132",
-            "127",
-            "416"
-          ],
-          [
-            "Isaacson, Caleb",
-            "142",
-            "58",
-            "146",
-            "183",
-            "137",
-            "466"
-          ],
-          [
-            "A, B",
-            "111",
-            "89",
-            "104",
-            "124",
-            "129",
-            "357"
-          ],
-          [
-            "Total",
-            "407",
-            "439",
-            "393",
-            "0",
-            "0",
-            "0",
-            "1239"
-          ],
-          [
             "Team 5",
-            "Lane 27 | Team points won: 0"
+            "Lane 30 points won: 0"
           ],
           [
             "H, R",
-            "135",
-            "65",
-            "110",
-            "116",
-            "131",
-            "357"
+            "127",
+            "73",
+            "117",
+            "117",
+            "117",
+            "351"
           ],
           [
             "Frye, Braydon",
-            "114",
-            "86",
-            "101",
-            "127",
-            "79",
-            "307"
+            "108",
+            "92",
+            "97",
+            "116",
+            "116",
+            "329"
           ],
           [
             "G, N Iv",
-            "107",
-            "93",
-            "107",
+            "109",
+            "91",
             "111",
-            "115",
-            "333"
+            "89",
+            "110",
+            "310"
           ],
           [
             "Total",
-            "318",
-            "354",
             "325",
-            "0",
-            "0",
-            "0",
-            "997"
+            "322",
+            "343",
+            "990"
+          ],
+          [
+            "Team 2",
+            "Lane 29 points won: 4"
+          ],
+          [
+            "J, C",
+            "55",
+            "145",
+            "53",
+            "40",
+            "89",
+            "182"
+          ],
+          [
+            "Dixon, Jayse",
+            "39",
+            "161",
+            "24",
+            "35",
+            "26",
+            "85"
+          ],
+          [
+            ", Vacant",
+            "120",
+            "80",
+            "120",
+            "120",
+            "120",
+            "360"
+          ],
+          [
+            "Total",
+            "197",
+            "195",
+            "235",
+            "627"
           ]
         ],
         "emphasis": [
           [
-            true,
-            true
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
             false,
             false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
-          ],
-          [
-            true,
-            true
           ],
           [
             false,
@@ -988,343 +938,337 @@
             false
           ],
           [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false
           ]
+        ],
+        "recapDetails": [
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {}
+        ]
+      },
+      {
+        "title": "BLT matchup",
+        "headers": [
+          "Bowler",
+          "Average",
+          "Handicap",
+          "Game 1",
+          "Game 2",
+          "Game 3",
+          "Scratch series"
+        ],
+        "rows": [
+          [
+            "Team 6",
+            "Lane 31 points won: 2"
+          ],
+          [
+            "Cyr, Oliver",
+            "70",
+            "130",
+            "54",
+            "66",
+            "60",
+            "180"
+          ],
+          [
+            "Cyr, Quinn",
+            "47",
+            "153",
+            "27",
+            "57",
+            "65",
+            "149"
+          ],
+          [
+            ", Vacant",
+            "120",
+            "80",
+            "120",
+            "120",
+            "120",
+            "360"
+          ],
+          [
+            "Total",
+            "201",
+            "243",
+            "245",
+            "689"
+          ],
+          [
+            "Team 4",
+            "Lane 32 points won: 2"
+          ],
+          [
+            "Brestel, Cameron",
+            "130",
+            "70",
+            "109",
+            "104",
+            "140",
+            "353"
+          ],
+          [
+            "Isaacson, Caleb",
+            "148",
+            "52",
+            "148",
+            "182",
+            "137",
+            "467"
+          ],
+          [
+            "A, B",
+            "115",
+            "85",
+            "111",
+            "76",
+            "128",
+            "315"
+          ],
+          [
+            "Total",
+            "368",
+            "362",
+            "405",
+            "1135"
+          ]
+        ],
+        "emphasis": [
+          [
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        ],
+        "recapDetails": [
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {}
         ]
       },
       {
         "title": "Ed, Edd & Eddy matchup",
         "headers": [
           "Bowler",
-          "AVG",
-          "HDCP",
-          "GM1",
-          "GM2",
-          "GM3",
-          "GM4",
-          "GM5",
-          "GM6",
-          "Total"
+          "Average",
+          "Handicap",
+          "Game 1",
+          "Game 2",
+          "Game 3",
+          "Scratch series"
         ],
         "rows": [
           [
             "Team 1",
-            "Lane 29 | Team points won: 1"
+            "Lane 28 points won: 0"
           ],
           [
             "B, S",
-            "115",
-            "85",
-            "124",
-            "137",
-            "111",
-            "372"
+            "119",
+            "81",
+            "101",
+            "86",
+            "123",
+            "310"
           ],
           [
             "Hanthorn, Nathan",
             "80",
             "120",
-            "70",
-            "70",
-            "70",
-            "210"
+            "59",
+            "73",
+            "72",
+            "204"
           ],
           [
             "Pospisil, Ashton",
-            "107",
-            "93",
-            "104",
-            "83",
-            "83",
-            "270"
+            "98",
+            "102",
+            "82",
+            "66",
+            "73",
+            "221"
           ],
           [
             "Total",
-            "298",
-            "290",
-            "264",
-            "0",
-            "0",
-            "0",
-            "852"
+            "242",
+            "225",
+            "268",
+            "735"
           ],
-          [
-            "Team 6",
-            "Lane 30 | Team points won: 3"
-          ],
-          [
-            "Cyr, Oliver",
-            "75",
-            "125",
-            "85",
-            "59",
-            "49",
-            "193"
-          ],
-          [
-            "Cyr, Quinn",
-            "50",
-            "150",
-            "45",
-            "42",
-            "46",
-            "133"
-          ],
-          [
-            ", Vacant",
-            "120",
-            "80",
-            "120",
-            "120",
-            "120",
-            "360"
-          ],
-          [
-            "Total",
-            "250",
-            "221",
-            "215",
-            "0",
-            "0",
-            "0",
-            "686"
-          ]
-        ],
-        "emphasis": [
-          [
-            true,
-            true
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
-          ],
-          [
-            true,
-            true
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
-          ]
-        ]
-      },
-      {
-        "title": "Three's Company matchup",
-        "headers": [
-          "Bowler",
-          "AVG",
-          "HDCP",
-          "GM1",
-          "GM2",
-          "GM3",
-          "GM4",
-          "GM5",
-          "GM6",
-          "Total"
-        ],
-        "rows": [
           [
             "Team 3",
-            "Lane 32 | Team points won: 0"
+            "Lane 27 points won: 4"
           ],
           [
             "Singleton, Ellie",
             "69",
             "131",
-            "59",
-            "59",
-            "59",
-            "177"
+            "111",
+            "80",
+            "78",
+            "269"
           ],
           [
             "F, K",
-            "82",
-            "118",
-            "81",
-            "85",
-            "65",
-            "231"
+            "79",
+            "121",
+            "99",
+            "119",
+            "100",
+            "318"
           ],
           [
             "Spale, Liam",
-            "58",
-            "142",
-            "73",
-            "69",
-            "57",
-            "199"
+            "62",
+            "138",
+            "50",
+            "49",
+            "53",
+            "152"
           ],
           [
             "Total",
-            "213",
-            "213",
-            "181",
-            "0",
-            "0",
-            "0",
-            "607"
-          ],
-          [
-            "Team 2",
-            "Lane 31 | Team points won: 4"
-          ],
-          [
-            "J, C",
-            "52",
-            "148",
-            "63",
-            "67",
-            "48",
-            "178"
-          ],
-          [
-            "Dixon, Jayse",
-            "34",
-            "166",
-            "36",
-            "46",
-            "51",
-            "133"
-          ],
-          [
-            ", Vacant",
-            "120",
-            "80",
-            "120",
-            "120",
-            "120",
-            "360"
-          ],
-          [
-            "Total",
-            "219",
-            "233",
-            "219",
-            "0",
-            "0",
-            "0",
-            "671"
+            "260",
+            "248",
+            "231",
+            "739"
           ]
         ],
         "emphasis": [
           [
-            true,
-            true
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
             false,
             false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
-          ],
-          [
-            true,
-            true
           ],
           [
             false,
@@ -1354,21 +1298,68 @@
             false
           ],
           [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false
           ]
+        ],
+        "recapDetails": [
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {}
         ]
       }
     ],
     "lanes": [
       {
-        "title": "Table 1",
+        "title": "All scheduled teams",
         "headers": [
           "Lane",
           "Team#",
@@ -1377,63 +1368,63 @@
         "rows": [
           [
             "27",
-            "3",
-            "Three's Company"
-          ],
-          [
-            "28",
-            "1",
-            "Ed, Edd & Eddy"
-          ],
-          [
-            "29",
             "2",
             "Huey, Dewey & Louie"
           ],
           [
-            "30",
-            "5",
-            "3- Musketeers"
-          ],
-          [
-            "31",
+            "28",
             "6",
             "BLT"
           ],
           [
-            "32",
+            "29",
             "4",
             "CTRL-ALT-DEL"
+          ],
+          [
+            "30",
+            "1",
+            "Ed, Edd & Eddy"
+          ],
+          [
+            "31",
+            "3",
+            "Three's Company"
+          ],
+          [
+            "32",
+            "5",
+            "3- Musketeers"
           ]
         ],
         "emphasis": [
           [
-            false,
-            false,
-            false
-          ],
-          [
-            false,
+            true,
             false,
             false
           ],
           [
-            false,
-            false,
-            false
-          ],
-          [
-            false,
+            true,
             false,
             false
           ],
           [
-            false,
+            true,
             false,
             false
           ],
           [
+            true,
             false,
+            false
+          ],
+          [
+            true,
+            false,
+            false
+          ],
+          [
+            true,
             false,
             false
           ]
@@ -1450,7 +1441,7 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
@@ -1467,18 +1458,18 @@
             "Frye, Braydon",
             "M",
             "92",
-            "6",
-            "649",
+            "9",
+            "978",
             "108"
           ],
           [
             "3",
             "G, N IV",
             "M",
-            "91",
-            "6",
-            "656",
-            "109"
+            "93",
+            "9",
+            "966",
+            "107"
           ]
         ],
         "emphasis": [
@@ -1521,26 +1512,26 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
             "1",
             "Cyr, Oliver",
             "M",
-            "130",
-            "6",
-            "420",
-            "70"
+            "134",
+            "9",
+            "600",
+            "66"
           ],
           [
             "2",
             "Cyr, Quinn",
             "M",
-            "153",
-            "6",
-            "284",
-            "47"
+            "152",
+            "9",
+            "433",
+            "48"
           ]
         ],
         "emphasis": [
@@ -1583,35 +1574,35 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
             "1",
             "Brestel, Cameron",
             "M",
-            "70",
-            "6",
-            "780",
-            "130"
+            "75",
+            "9",
+            "1133",
+            "125"
           ],
           [
             "2",
             "Isaacson, Caleb",
             "M",
-            "52",
-            "6",
-            "892",
-            "148"
+            "49",
+            "9",
+            "1359",
+            "151"
           ],
           [
             "3",
             "A, B",
             "M",
-            "85",
-            "6",
-            "692",
-            "115"
+            "89",
+            "9",
+            "1007",
+            "111"
           ]
         ],
         "emphasis": [
@@ -1654,35 +1645,35 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
             "1",
             "B, S",
             "M",
-            "81",
-            "6",
-            "719",
-            "119"
+            "86",
+            "9",
+            "1029",
+            "114"
           ],
           [
             "2",
             "Hanthorn, Nathan",
             "M",
-            "120",
-            "3",
-            "242",
-            "80"
+            "126",
+            "6",
+            "446",
+            "74"
           ],
           [
             "3",
             "Pospisil, Ashton",
             "M",
-            "102",
-            "6",
-            "592",
-            "98"
+            "110",
+            "9",
+            "813",
+            "90"
           ]
         ],
         "emphasis": [
@@ -1725,26 +1716,26 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
             "1",
             "J, C",
             "M",
-            "145",
-            "6",
-            "335",
-            "55"
+            "143",
+            "9",
+            "517",
+            "57"
           ],
           [
             "2",
             "Dixon, Jayse",
             "M",
-            "161",
-            "6",
-            "235",
-            "39"
+            "165",
+            "9",
+            "320",
+            "35"
           ]
         ],
         "emphasis": [
@@ -1787,21 +1778,12 @@
           "HCP",
           "Gms",
           "Pins",
-          "Avg"
+          "AVG"
         ],
         "rows": [
           [
             "1",
             "Singleton, Ellie",
-            "W",
-            "131",
-            "3",
-            "209",
-            "69"
-          ],
-          [
-            "2",
-            "F, K",
             "W",
             "121",
             "6",
@@ -1809,13 +1791,22 @@
             "79"
           ],
           [
+            "2",
+            "F, K",
+            "W",
+            "112",
+            "9",
+            "796",
+            "88"
+          ],
+          [
             "3",
             "Spale, Liam",
             "M",
-            "138",
-            "6",
-            "374",
-            "62"
+            "142",
+            "9",
+            "526",
+            "58"
           ]
         ],
         "emphasis": [
@@ -1852,7 +1843,7 @@
     ]
   },
   "officialRecapVersion": 1,
-  "sourceFingerprint": "5acf814bea188b357020c6720f49ea6fe5f2c9ab95a692f107728569caeeac56",
+  "sourceFingerprint": "7a20907f1ef510fb7119a54afafa969aeb19e828cf4a26d4f30d47016c2bc56d",
   "history": [
     {
       "week": "1",
@@ -5930,7 +5921,1835 @@
           }
         ]
       }
+    },
+    {
+      "week": "3",
+      "sourceUpdated": "Sep 15, 2026",
+      "syncedAt": "2026-09-18T02:35:21.730Z",
+      "views": {
+        "standings": [
+          {
+            "title": "League standings",
+            "headers": [
+              "Place",
+              "Team",
+              "Team#",
+              "Div",
+              "WON",
+              "LOST",
+              "%",
+              "YTD WON",
+              "AVG",
+              "Pins",
+              "HSG",
+              "HSS"
+            ],
+            "rows": [
+              [
+                "1",
+                "Huey, Dewey & Louie",
+                "2",
+                "1",
+                "10",
+                "2",
+                "83 %",
+                "10",
+                "212",
+                "1917",
+                "235",
+                "671"
+              ],
+              [
+                "2",
+                "CTRL-ALT-DEL",
+                "4",
+                "1",
+                "8",
+                "4",
+                "67 %",
+                "8",
+                "387",
+                "3499",
+                "442",
+                "1239"
+              ],
+              [
+                "3",
+                "BLT",
+                "6",
+                "1",
+                "7",
+                "5",
+                "58 %",
+                "7",
+                "234",
+                "2113",
+                "289",
+                "738"
+              ],
+              [
+                "4",
+                "Three's Company",
+                "3",
+                "1",
+                "6",
+                "6",
+                "50 %",
+                "6",
+                "225",
+                "1977",
+                "260",
+                "739"
+              ],
+              [
+                "5",
+                "Ed, Edd & Eddy",
+                "1",
+                "1",
+                "3",
+                "9",
+                "25 %",
+                "3",
+                "278",
+                "2498",
+                "349",
+                "911"
+              ],
+              [
+                "6",
+                "3- Musketeers",
+                "5",
+                "1",
+                "2",
+                "10",
+                "17 %",
+                "2",
+                "342",
+                "3057",
+                "373",
+                "1070"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ]
+            ]
+          }
+        ],
+        "bowlers": [
+          {
+            "title": "Bowlers and season statistics",
+            "headers": [
+              "Name",
+              "Team#",
+              "Pos#",
+              "Team",
+              "Gndr",
+              "Pins",
+              "Games",
+              "Avg",
+              "EnteringAvg",
+              "HCP",
+              "HHG",
+              "HHS",
+              "HSG",
+              "HSS",
+              "MIB",
+              "WON"
+            ],
+            "rows": [
+              [
+                "A, B",
+                "4",
+                "3",
+                "CTRL-ALT-DEL",
+                "M",
+                "1007",
+                "9",
+                "111",
+                "98",
+                "89",
+                "0",
+                "0",
+                "132",
+                "357",
+                "0",
+                "0"
+              ],
+              [
+                "B, S",
+                "1",
+                "1",
+                "Ed, Edd & Eddy",
+                "M",
+                "1029",
+                "9",
+                "114",
+                "96",
+                "86",
+                "0",
+                "0",
+                "137",
+                "372",
+                "0",
+                "0"
+              ],
+              [
+                "Brestel, Cameron",
+                "4",
+                "1",
+                "CTRL-ALT-DEL",
+                "M",
+                "1133",
+                "9",
+                "125",
+                "106",
+                "75",
+                "0",
+                "0",
+                "157",
+                "416",
+                "0",
+                "0"
+              ],
+              [
+                "Cyr, Oliver",
+                "6",
+                "1",
+                "BLT",
+                "M",
+                "600",
+                "9",
+                "66",
+                "0",
+                "134",
+                "0",
+                "0",
+                "110",
+                "227",
+                "0",
+                "0"
+              ],
+              [
+                "Cyr, Quinn",
+                "6",
+                "2",
+                "BLT",
+                "M",
+                "433",
+                "9",
+                "48",
+                "0",
+                "152",
+                "0",
+                "0",
+                "65",
+                "151",
+                "0",
+                "0"
+              ],
+              [
+                "Dixon, Jayse",
+                "2",
+                "2",
+                "Huey, Dewey & Louie",
+                "M",
+                "320",
+                "9",
+                "35",
+                "41",
+                "165",
+                "0",
+                "0",
+                "51",
+                "133",
+                "0",
+                "0"
+              ],
+              [
+                "F, K",
+                "3",
+                "2",
+                "Three's Company",
+                "W",
+                "796",
+                "9",
+                "88",
+                "102",
+                "112",
+                "0",
+                "0",
+                "119",
+                "318",
+                "0",
+                "0"
+              ],
+              [
+                "Frye, Braydon",
+                "5",
+                "2",
+                "3- Musketeers",
+                "M",
+                "978",
+                "9",
+                "108",
+                "0",
+                "92",
+                "0",
+                "0",
+                "135",
+                "342",
+                "0",
+                "0"
+              ],
+              [
+                "G, N Iv",
+                "5",
+                "3",
+                "3- Musketeers",
+                "M",
+                "966",
+                "9",
+                "107",
+                "121",
+                "93",
+                "0",
+                "0",
+                "115",
+                "333",
+                "0",
+                "0"
+              ],
+              [
+                "H, R",
+                "5",
+                "1",
+                "3- Musketeers",
+                "M",
+                "762",
+                "6",
+                "127",
+                "122",
+                "73",
+                "0",
+                "0",
+                "163",
+                "405",
+                "0",
+                "0"
+              ],
+              [
+                "Hanthorn, Nathan",
+                "1",
+                "2",
+                "Ed, Edd & Eddy",
+                "M",
+                "446",
+                "6",
+                "74",
+                "84",
+                "126",
+                "0",
+                "0",
+                "106",
+                "242",
+                "0",
+                "0"
+              ],
+              [
+                "Isaacson, Caleb",
+                "4",
+                "2",
+                "CTRL-ALT-DEL",
+                "M",
+                "1359",
+                "9",
+                "151",
+                "0",
+                "49",
+                "0",
+                "0",
+                "183",
+                "467",
+                "0",
+                "0"
+              ],
+              [
+                "J, C",
+                "2",
+                "1",
+                "Huey, Dewey & Louie",
+                "M",
+                "517",
+                "9",
+                "57",
+                "57",
+                "143",
+                "0",
+                "0",
+                "89",
+                "182",
+                "0",
+                "0"
+              ],
+              [
+                "Pospisil, Ashton",
+                "1",
+                "3",
+                "Ed, Edd & Eddy",
+                "M",
+                "813",
+                "9",
+                "90",
+                "0",
+                "110",
+                "0",
+                "0",
+                "124",
+                "322",
+                "0",
+                "0"
+              ],
+              [
+                "Singleton, Ellie",
+                "3",
+                "1",
+                "Three's Company",
+                "W",
+                "478",
+                "6",
+                "79",
+                "0",
+                "121",
+                "0",
+                "0",
+                "111",
+                "269",
+                "0",
+                "0"
+              ],
+              [
+                "Spale, Liam",
+                "3",
+                "3",
+                "Three's Company",
+                "M",
+                "526",
+                "9",
+                "58",
+                "0",
+                "142",
+                "0",
+                "0",
+                "84",
+                "199",
+                "0",
+                "0"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ]
+          }
+        ],
+        "recaps": [
+          {
+            "title": "3- Musketeers matchup",
+            "headers": [
+              "Bowler",
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
+            ],
+            "rows": [
+              [
+                "Team 5",
+                "Lane 30 points won: 0"
+              ],
+              [
+                "H, R",
+                "127",
+                "73",
+                "117",
+                "117",
+                "117",
+                "351"
+              ],
+              [
+                "Frye, Braydon",
+                "108",
+                "92",
+                "97",
+                "116",
+                "116",
+                "329"
+              ],
+              [
+                "G, N Iv",
+                "109",
+                "91",
+                "111",
+                "89",
+                "110",
+                "310"
+              ],
+              [
+                "Total",
+                "325",
+                "322",
+                "343",
+                "990"
+              ],
+              [
+                "Team 2",
+                "Lane 29 points won: 4"
+              ],
+              [
+                "J, C",
+                "55",
+                "145",
+                "53",
+                "40",
+                "89",
+                "182"
+              ],
+              [
+                "Dixon, Jayse",
+                "39",
+                "161",
+                "24",
+                "35",
+                "26",
+                "85"
+              ],
+              [
+                ", Vacant",
+                "120",
+                "80",
+                "120",
+                "120",
+                "120",
+                "360"
+              ],
+              [
+                "Total",
+                "197",
+                "195",
+                "235",
+                "627"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "recapDetails": [
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {}
+            ]
+          },
+          {
+            "title": "BLT matchup",
+            "headers": [
+              "Bowler",
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
+            ],
+            "rows": [
+              [
+                "Team 6",
+                "Lane 31 points won: 2"
+              ],
+              [
+                "Cyr, Oliver",
+                "70",
+                "130",
+                "54",
+                "66",
+                "60",
+                "180"
+              ],
+              [
+                "Cyr, Quinn",
+                "47",
+                "153",
+                "27",
+                "57",
+                "65",
+                "149"
+              ],
+              [
+                ", Vacant",
+                "120",
+                "80",
+                "120",
+                "120",
+                "120",
+                "360"
+              ],
+              [
+                "Total",
+                "201",
+                "243",
+                "245",
+                "689"
+              ],
+              [
+                "Team 4",
+                "Lane 32 points won: 2"
+              ],
+              [
+                "Brestel, Cameron",
+                "130",
+                "70",
+                "109",
+                "104",
+                "140",
+                "353"
+              ],
+              [
+                "Isaacson, Caleb",
+                "148",
+                "52",
+                "148",
+                "182",
+                "137",
+                "467"
+              ],
+              [
+                "A, B",
+                "115",
+                "85",
+                "111",
+                "76",
+                "128",
+                "315"
+              ],
+              [
+                "Total",
+                "368",
+                "362",
+                "405",
+                "1135"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "recapDetails": [
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {}
+            ]
+          },
+          {
+            "title": "Ed, Edd & Eddy matchup",
+            "headers": [
+              "Bowler",
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
+            ],
+            "rows": [
+              [
+                "Team 1",
+                "Lane 28 points won: 0"
+              ],
+              [
+                "B, S",
+                "119",
+                "81",
+                "101",
+                "86",
+                "123",
+                "310"
+              ],
+              [
+                "Hanthorn, Nathan",
+                "80",
+                "120",
+                "59",
+                "73",
+                "72",
+                "204"
+              ],
+              [
+                "Pospisil, Ashton",
+                "98",
+                "102",
+                "82",
+                "66",
+                "73",
+                "221"
+              ],
+              [
+                "Total",
+                "242",
+                "225",
+                "268",
+                "735"
+              ],
+              [
+                "Team 3",
+                "Lane 27 points won: 4"
+              ],
+              [
+                "Singleton, Ellie",
+                "69",
+                "131",
+                "111",
+                "80",
+                "78",
+                "269"
+              ],
+              [
+                "F, K",
+                "79",
+                "121",
+                "99",
+                "119",
+                "100",
+                "318"
+              ],
+              [
+                "Spale, Liam",
+                "62",
+                "138",
+                "50",
+                "49",
+                "53",
+                "152"
+              ],
+              [
+                "Total",
+                "260",
+                "248",
+                "231",
+                "739"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "recapDetails": [
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {}
+            ]
+          }
+        ],
+        "lanes": [
+          {
+            "title": "All scheduled teams",
+            "headers": [
+              "Lane",
+              "Team#",
+              "Team"
+            ],
+            "rows": [
+              [
+                "27",
+                "2",
+                "Huey, Dewey & Louie"
+              ],
+              [
+                "28",
+                "6",
+                "BLT"
+              ],
+              [
+                "29",
+                "4",
+                "CTRL-ALT-DEL"
+              ],
+              [
+                "30",
+                "1",
+                "Ed, Edd & Eddy"
+              ],
+              [
+                "31",
+                "3",
+                "Three's Company"
+              ],
+              [
+                "32",
+                "5",
+                "3- Musketeers"
+              ]
+            ],
+            "emphasis": [
+              [
+                true,
+                false,
+                false
+              ],
+              [
+                true,
+                false,
+                false
+              ],
+              [
+                true,
+                false,
+                false
+              ],
+              [
+                true,
+                false,
+                false
+              ],
+              [
+                true,
+                false,
+                false
+              ],
+              [
+                true,
+                false,
+                false
+              ]
+            ]
+          }
+        ],
+        "rosters": [
+          {
+            "title": "Team 5 · 3- Musketeers roster",
+            "headers": [
+              "Pos",
+              "Name",
+              "Gndr",
+              "HCP",
+              "Gms",
+              "Pins",
+              "AVG"
+            ],
+            "rows": [
+              [
+                "1",
+                "H, R",
+                "M",
+                "73",
+                "6",
+                "762",
+                "127"
+              ],
+              [
+                "2",
+                "Frye, Braydon",
+                "M",
+                "92",
+                "9",
+                "978",
+                "108"
+              ],
+              [
+                "3",
+                "G, N IV",
+                "M",
+                "93",
+                "9",
+                "966",
+                "107"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "team": "5"
+          },
+          {
+            "title": "Team 6 · BLT roster",
+            "headers": [
+              "Pos",
+              "Name",
+              "Gndr",
+              "HCP",
+              "Gms",
+              "Pins",
+              "AVG"
+            ],
+            "rows": [
+              [
+                "1",
+                "Cyr, Oliver",
+                "M",
+                "134",
+                "9",
+                "600",
+                "66"
+              ],
+              [
+                "2",
+                "Cyr, Quinn",
+                "M",
+                "152",
+                "9",
+                "433",
+                "48"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "team": "6"
+          },
+          {
+            "title": "Team 4 · CTRL-ALT-DEL roster",
+            "headers": [
+              "Pos",
+              "Name",
+              "Gndr",
+              "HCP",
+              "Gms",
+              "Pins",
+              "AVG"
+            ],
+            "rows": [
+              [
+                "1",
+                "Brestel, Cameron",
+                "M",
+                "75",
+                "9",
+                "1133",
+                "125"
+              ],
+              [
+                "2",
+                "Isaacson, Caleb",
+                "M",
+                "49",
+                "9",
+                "1359",
+                "151"
+              ],
+              [
+                "3",
+                "A, B",
+                "M",
+                "89",
+                "9",
+                "1007",
+                "111"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "team": "4"
+          },
+          {
+            "title": "Team 1 · Ed, Edd & Eddy roster",
+            "headers": [
+              "Pos",
+              "Name",
+              "Gndr",
+              "HCP",
+              "Gms",
+              "Pins",
+              "AVG"
+            ],
+            "rows": [
+              [
+                "1",
+                "B, S",
+                "M",
+                "86",
+                "9",
+                "1029",
+                "114"
+              ],
+              [
+                "2",
+                "Hanthorn, Nathan",
+                "M",
+                "126",
+                "6",
+                "446",
+                "74"
+              ],
+              [
+                "3",
+                "Pospisil, Ashton",
+                "M",
+                "110",
+                "9",
+                "813",
+                "90"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "team": "1"
+          },
+          {
+            "title": "Team 2 · Huey, Dewey & Louie roster",
+            "headers": [
+              "Pos",
+              "Name",
+              "Gndr",
+              "HCP",
+              "Gms",
+              "Pins",
+              "AVG"
+            ],
+            "rows": [
+              [
+                "1",
+                "J, C",
+                "M",
+                "143",
+                "9",
+                "517",
+                "57"
+              ],
+              [
+                "2",
+                "Dixon, Jayse",
+                "M",
+                "165",
+                "9",
+                "320",
+                "35"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "team": "2"
+          },
+          {
+            "title": "Team 3 · Three's Company roster",
+            "headers": [
+              "Pos",
+              "Name",
+              "Gndr",
+              "HCP",
+              "Gms",
+              "Pins",
+              "AVG"
+            ],
+            "rows": [
+              [
+                "1",
+                "Singleton, Ellie",
+                "W",
+                "121",
+                "6",
+                "478",
+                "79"
+              ],
+              [
+                "2",
+                "F, K",
+                "W",
+                "112",
+                "9",
+                "796",
+                "88"
+              ],
+              [
+                "3",
+                "Spale, Liam",
+                "M",
+                "142",
+                "9",
+                "526",
+                "58"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "team": "3"
+          }
+        ]
+      }
     }
   ],
-  "lastAttemptedAt": "2026-09-18T00:43:18.187Z"
+  "lastAttemptedAt": null,
+  "lastCheckedAt": "2026-09-18T02:35:21.730Z"
 }
