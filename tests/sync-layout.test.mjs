@@ -6,6 +6,7 @@ const source = await readFile(new URL('../scripts/sync-leaguesecretary.mjs', imp
 const section = (start, end) => source.slice(source.indexOf(start), source.indexOf(end));
 const extractTables = new Function(section('function validTable', 'async function readStandingsFingerprint') + ';return extractTables')();
 const normalizeRecap = new Function(section('function clean', 'function slugify') + section('function normalizeRecap', 'function rosterIdentity') + ';return normalizeRecap')();
+const currentSourceWeek = new Function(section('async function currentSourceWeek', 'async function extractAllRecaps') + ';return currentSourceWeek')();
 test('split report headers and empty cells retain their column positions', async () => {
   const browser = await chromium.launch();
   try {
@@ -25,6 +26,13 @@ test('new recap team labels and scratch totals retain the dashboard format', () 
   assert.deepEqual(result.rows[0], ['Team 6','Lane 16 points won: 4']);
   assert.deepEqual(result.rows[2], ['Total','383','353','376','1112']);
   assert.deepEqual(result.emphasis[2], [false,true,false,true,true]);
+});
+test('selected report period determines the current source week', async () => {
+  const page={evaluate:async callback=>callback(),};
+  const prior=globalThis.document;
+  globalThis.document={querySelector:selector=>selector.includes('select')?{value:'5|2026|f'}:{dataset:{week:'4'}}};
+  try { assert.equal(await currentSourceWeek(page),'5'); }
+  finally { globalThis.document=prior; }
 });
 test('an empty center scan is rejected instead of logged as a successful refresh', async () => {
   const discover = new Function('centers', 'requestedCenter', 'withSourceRetry', 'expandAllGridRows', section('async function discoverLeagues', 'function validTable') + ';return discoverLeagues')([{id:'2175',name:'Papio Bowl',slug:'papio-bowl'}], undefined, action=>action(),async()=>{});

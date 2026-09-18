@@ -175,6 +175,12 @@ async function selectLeagueWeek(page,value) {
   await page.waitForTimeout(2200);
   await expandAllGridRows(page);
 }
+async function currentSourceWeek(page) {
+  return page.evaluate(()=>{
+    const selected=document.querySelector("#ddLeagueSeasonYearWeek, select[id$=Period]")?.value?.split("|")[0];
+    return selected||document.querySelector(".div-main-grid")?.dataset.week||"";
+  }).catch(()=>"");
+}
 async function extractAllRecaps(page,standings) {
   const collected=new Map();
   const options=await page.locator("#ddTeam, #leagueRecapTeam").first().evaluate(element=>{
@@ -373,7 +379,9 @@ try {
       const text=clean(await page.locator("body").innerText());
       const updated=text.match(/Updated:\s*([^|]+?)(?:League Dashboard|Contact League Admin|$)/i)?.[1];
       if(updated) sourceUpdated=clean(updated);
-      const weekMatch=text.match(/Week\s+(\d+)/i); if(weekMatch&&view!=="lanes") week=weekMatch[1];
+      const selectedWeek=await currentSourceWeek(page);
+      const weekMatch=text.match(/Week\s+(\d+)/i);
+      if(view!=="lanes") week=selectedWeek||weekMatch?.[1]||week;
       if(view==="rosters") {
         const teamPages=await page.evaluate(()=>{
           const grid=window.jQuery?.(".grid_main").data("kendoGrid");
