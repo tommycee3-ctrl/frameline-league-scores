@@ -14,10 +14,10 @@
   "startDate": "09/11/2026",
   "sourceUpdated": "09/11/2026",
   "type": "Mixed",
-  "syncedAt": "2026-09-12T10:47:30.082Z",
-  "status": "awaiting-results",
+  "syncedAt": "2026-09-18T23:10:44.251Z",
+  "status": "current",
   "week": "1",
-  "fingerprint": "1ca7ebb04b9366d64654baa7a2a10b05225d8363d0e7df09298f5d825d207cd2",
+  "fingerprint": "74cb55f1701609ef764cf6073c2e90669220a4db7a64191ebf6e53ebdb8cfc2c",
   "views": {
     "standings": [
       {
@@ -37,26 +37,36 @@
             "1",
             "1",
             "Team 1",
+            "4",
             "0",
-            "0",
-            "0%",
-            "0",
-            "0"
+            "100%",
+            "113",
+            "1150"
           ],
           [
             "2",
             "2",
             "Team 2",
             "0",
-            "0",
+            "4",
             "0%",
-            "0",
-            "0"
+            "56",
+            "1073"
           ],
           [
             "3",
             "3",
             "Team 3",
+            "1",
+            "3",
+            "25%",
+            "249",
+            "1109"
+          ],
+          [
+            "4",
+            "4",
+            "Team 4",
             "0",
             "0",
             "0%",
@@ -104,14 +114,14 @@
             "Ryker Sward",
             "1",
             "Team 1",
+            "113",
             "0",
-            "0",
-            "0",
-            "0",
-            "0"
+            "3",
+            "339",
+            "120"
           ],
           [
-            "Jaxson Adams",
+            "Maevery Dailey",
             "1",
             "Team 1",
             "0",
@@ -124,26 +134,66 @@
             "Sophia Lorensen",
             "2",
             "Team 2",
+            "49",
             "0",
-            "0",
-            "0",
-            "0",
-            "0"
+            "3",
+            "148",
+            "58"
           ],
           [
             "Juneau Hotz",
             "2",
             "Team 2",
+            "7",
             "0",
-            "0",
-            "0",
-            "0",
-            "0"
+            "3",
+            "22",
+            "14"
           ],
           [
-            "Maevery Dailey",
-            "2",
-            "Team 2",
+            "Dominic Skokan",
+            "3",
+            "Team 3",
+            "87",
+            "0",
+            "3",
+            "262",
+            "102"
+          ],
+          [
+            "Blaze Runyon",
+            "3",
+            "Team 3",
+            "51",
+            "0",
+            "3",
+            "154",
+            "53"
+          ],
+          [
+            "Blu Hansen",
+            "3",
+            "Team 3",
+            "19",
+            "0",
+            "3",
+            "57",
+            "25"
+          ],
+          [
+            "Josh Study",
+            "3",
+            "Team 3",
+            "92",
+            "0",
+            "3",
+            "276",
+            "108"
+          ],
+          [
+            "Jett Caton",
+            "4",
+            "Team 4",
             "0",
             "0",
             "0",
@@ -152,8 +202,8 @@
           ],
           [
             "Noah Crawford",
-            "2",
-            "Team 2",
+            "4",
+            "Team 4",
             "0",
             "0",
             "0",
@@ -161,39 +211,9 @@
             "0"
           ],
           [
-            "Dominic Skokan",
-            "3",
-            "Team 3",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0"
-          ],
-          [
-            "Blaze Runyon",
-            "3",
-            "Team 3",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0"
-          ],
-          [
-            "Blu Hansen",
-            "3",
-            "Team 3",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0"
-          ],
-          [
-            "Jett Caton",
-            "3",
-            "Team 3",
+            "Jaxson Adams",
+            "4",
+            "Team 4",
             "0",
             "0",
             "0",
@@ -227,11 +247,11 @@
           ],
           [
             "Ryker Sward",
-            "0",
+            "113",
             "0"
           ],
           [
-            "Jaxson Adams",
+            "Maevery Dailey",
             "0",
             "0"
           ]
@@ -248,22 +268,12 @@
         "rows": [
           [
             "Sophia Lorensen",
-            "0",
+            "49",
             "0"
           ],
           [
             "Juneau Hotz",
-            "0",
-            "0"
-          ],
-          [
-            "Maevery Dailey",
-            "0",
-            "0"
-          ],
-          [
-            "Noah Crawford",
-            "0",
+            "7",
             "0"
           ]
         ]
@@ -279,21 +289,47 @@
         "rows": [
           [
             "Dominic Skokan",
-            "0",
+            "87",
             "0"
           ],
           [
             "Blaze Runyon",
-            "0",
+            "51",
             "0"
           ],
           [
             "Blu Hansen",
+            "19",
+            "0"
+          ],
+          [
+            "Josh Study",
+            "92",
+            "0"
+          ]
+        ]
+      },
+      {
+        "title": "Team 4 · Team 4 roster",
+        "team": "4",
+        "headers": [
+          "Name",
+          "Avg",
+          "HCP"
+        ],
+        "rows": [
+          [
+            "Jett Caton",
             "0",
             "0"
           ],
           [
-            "Jett Caton",
+            "Noah Crawford",
+            "0",
+            "0"
+          ],
+          [
+            "Jaxson Adams",
             "0",
             "0"
           ]
@@ -301,5 +337,161 @@
       }
     ]
   },
-  "history": []
+  "history": [
+    {
+      "week": "1",
+      "sourceUpdated": "09/11/2026",
+      "syncedAt": "2026-09-18T23:10:44.250Z",
+      "views": {
+        "bowlers": [
+          {
+            "title": "Week 1 bowlers",
+            "headers": [
+              "Name",
+              "Team#",
+              "Team",
+              "Avg",
+              "HCP",
+              "Games",
+              "HSS",
+              "HGS"
+            ],
+            "rows": [
+              [
+                "Knox Smyser",
+                "1",
+                "Team 1",
+                "0",
+                "",
+                "3",
+                "0",
+                "2"
+              ],
+              [
+                "Oaklyn White",
+                "1",
+                "Team 1",
+                "0",
+                "",
+                "3",
+                "0",
+                "2"
+              ],
+              [
+                "Ryker Sward",
+                "1",
+                "Team 1",
+                "113",
+                "",
+                "3",
+                "339",
+                "120"
+              ],
+              [
+                "Maevery Dailey",
+                "1",
+                "Team 1",
+                "0",
+                "",
+                "3",
+                "0",
+                "2"
+              ],
+              [
+                "Sophia Lorensen",
+                "2",
+                "Team 2",
+                "49",
+                "",
+                "3",
+                "148",
+                "58"
+              ],
+              [
+                "Juneau Hotz",
+                "2",
+                "Team 2",
+                "7",
+                "",
+                "3",
+                "22",
+                "14"
+              ],
+              [
+                "Dominic Skokan",
+                "3",
+                "Team 3",
+                "87",
+                "",
+                "3",
+                "262",
+                "102"
+              ],
+              [
+                "Blaze Runyon",
+                "3",
+                "Team 3",
+                "51",
+                "",
+                "3",
+                "154",
+                "53"
+              ],
+              [
+                "Blu Hansen",
+                "3",
+                "Team 3",
+                "19",
+                "",
+                "3",
+                "57",
+                "25"
+              ],
+              [
+                "Josh Study",
+                "3",
+                "Team 3",
+                "92",
+                "",
+                "3",
+                "276",
+                "108"
+              ],
+              [
+                "Jett Caton",
+                "4",
+                "Team 4",
+                "0",
+                "",
+                "3",
+                "0",
+                "2"
+              ],
+              [
+                "Noah Crawford",
+                "4",
+                "Team 4",
+                "0",
+                "",
+                "3",
+                "0",
+                "2"
+              ],
+              [
+                "Jaxson Adams",
+                "4",
+                "Team 4",
+                "0",
+                "",
+                "3",
+                "0",
+                "2"
+              ]
+            ]
+          }
+        ],
+        "recaps": []
+      }
+    }
+  ]
 }
