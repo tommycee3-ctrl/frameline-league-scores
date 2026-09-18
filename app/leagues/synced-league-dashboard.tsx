@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { officialScoreClass, reportedPointTotals } from "./recap-results";
+import { combinedReportedPoints, officialScoreClass, reportedPointTotals } from "./recap-results";
 import { nationalsRosterByTeam } from "./nationals-rosters";
 
 export type Table = {
@@ -376,30 +376,30 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
       return groups.length ? [{ ...division, groups }] : [];
     });
   }, [bowlerTable, data.type, recapMatchups]);
-  const bowlerHistory = (name: string, team: string) => {
+  const bowlerHistory = (name: string, _team?: string) => {
     const snapshots = data.history?.length
       ? data.history
       : [{ week: data.week, sourceUpdated: data.sourceUpdated, syncedAt: "", views: data.views }];
     const entries = snapshots
       .map((snapshot) => {
         const table = snapshot.views.bowlers?.[0];
-        const row = table?.rows.find(
-          (item) =>
-            personName(cell(table, item, "Name")) === name &&
-            cell(table, item, "Team#") === team,
-        );
+        const rows = table?.rows.filter(
+          (item) => personName(cell(table, item, "Name")) === name,
+        ) ?? [];
+        const row = [...rows].sort(
+          (left, right) => Number(cell(table!, right, "Games")) - Number(cell(table!, left, "Games")),
+        )[0];
         let scoreRow: string[] | undefined;
-        const reportedWeekPoints = officialWeekPoints(name, team, table);
+        const reportedWeekPoints = combinedReportedPoints(
+          rows.map((item) => cell(table!, item, "WON")),
+        );
         const weekPoints = reportedWeekPoints;
         for (const matchup of parseRecapMatchups(snapshot.views.recaps ?? [])) {
-          const side = matchup.findIndex((entry) => entry.team === team);
-          if (side < 0) continue;
-          const rowIndex = matchup[side].rows.findIndex(
-            (candidate) => personName(candidate[0]) === name,
-          );
-          if (rowIndex < 0) continue;
-          scoreRow = matchup[side].rows[rowIndex];
-          break;
+          for (const entry of matchup) {
+            const found = entry.rows.find((candidate) => personName(candidate[0]) === name);
+            if (found) { scoreRow = found; break; }
+          }
+          if (scoreRow) break;
         }
         if (!row && !scoreRow) return null;
         return {
@@ -420,10 +420,12 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
       totalPoints: hasIndividualPoints ? totals[index] : "",
     }));
   };
-  const bowlerPointTotal = (name: string, team: string) => {
-    const history = bowlerHistory(name, team);
+  const bowlerPointTotal = (name: string, _team?: string) => {
+    const history = bowlerHistory(name);
     return history.at(-1)?.totalPoints || "—";
   };
+  const bowlerAccountCount = (name: string) =>
+    bowlerTable?.rows.filter((row) => personName(cell(bowlerTable, row, "Name")) === name).length ?? 0;
   const q = query.trim().toLowerCase();
   const week = selectedWeek;
   const laneTable = activeViews.lanes?.[0] ?? data.views.lanes?.[0];
@@ -783,6 +785,7 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                   (r) => personName(r[0]) === name,
                 );
                 const games = scoreRow?.slice(3, 6).filter(Boolean) ?? [];
+                const seasonGames = cell(bowlerTable, row, "Games");
                 return (
                   <button className="bowler-row" key={`${team}-${name}-${index}`} onClick={() => setSelectedBowler({ name, team })}>
                     <span>
@@ -792,7 +795,9 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                     <span>
                       {games.length
                         ? games.join(" · ")
-                        : "Scores pending recap"}
+                        : seasonGames
+                          ? `${seasonGames} season games`
+                          : "Scores pending recap"}
                     </span>
                     <b>{scoreRow?.at(-1) || cell(bowlerTable, row, "HSS")}</b>
                     <span>{cell(bowlerTable, row, "Avg")}</span>
@@ -1047,7 +1052,7 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
         <div className="bowler-modal-backdrop" onMouseDown={() => setSelectedBowler(null)}>
           <section className="bowler-modal bowler-history-modal" onMouseDown={(event) => event.stopPropagation()} role="dialog" aria-modal="true" aria-label={`${selectedBowler.name} weekly results`}>
             <button className="modal-close" onClick={() => setSelectedBowler(null)} aria-label="Close">×</button>
-            <p className="eyebrow red">{teamName(selectedBowler.team)}</p>
+            <p className="eyebrow red">{bowlerAccountCount(selectedBowler.name) > 1 ? "Combined league record" : teamName(selectedBowler.team)}</p>
             <h2>{selectedBowler.name}</h2>
             <p>Week-by-week scores and current average.</p>
             <div className="bowler-week-history">

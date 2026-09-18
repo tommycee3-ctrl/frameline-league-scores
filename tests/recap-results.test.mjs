@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync, readdirSync } from "node:fs";
-import { officialScoreClass, reportedPointTotals } from "../app/leagues/recap-results.ts";
+import { combinedReportedPoints, officialScoreClass, reportedPointTotals } from "../app/leagues/recap-results.ts";
 
 test("unmarked scores never imply wins, losses or ties", () => {
   assert.equal(officialScoreClass(false), "");
@@ -31,4 +31,17 @@ test("missing weeks never produce a falsely complete season point total", () => 
   assert.deepEqual(reportedPointTotals([{week:"2",reportedWeekPoints:4},{week:"3",reportedWeekPoints:4}]), ["", ""]);
   assert.deepEqual(reportedPointTotals([{week:"1",reportedWeekPoints:0},{week:"2",reportedWeekPoints:4}]), ["0", "4"]);
   assert.deepEqual(reportedPointTotals([{week:"1",reportedWeekPoints:4},{week:"2",reportedWeekPoints:null},{week:"3",reportedWeekPoints:4}]), ["4", "", ""]);
+});
+
+test("duplicate League Secretary accounts combine their official wins", () => {
+  assert.equal(combinedReportedPoints(["1.5", "0"]), 1.5);
+  assert.equal(combinedReportedPoints(["0", "2"]), 2);
+  assert.equal(combinedReportedPoints(["", null]), null);
+  assert.deepEqual(reportedPointTotals([
+    {week:"1",reportedWeekPoints:.5},
+    {week:"2",reportedWeekPoints:2},
+    {week:"3",reportedWeekPoints:1},
+    {week:"4",reportedWeekPoints:0},
+    {week:"5",reportedWeekPoints:1.5},
+  ]), ["0.5", "2.5", "3.5", "3.5", "5"]);
 });
