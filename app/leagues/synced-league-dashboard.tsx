@@ -156,6 +156,18 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
     return result;
   }, [bowlerTable]);
   const rosterForTeam = (team: string) => bowlersByTeam[team] ?? [];
+  const currentBowlerRecord = (name: string) =>
+    [...(bowlerTable?.rows ?? [])]
+      .filter((row) => personName(cell(bowlerTable!, row, "Name")) === name)
+      .sort(
+        (left, right) =>
+          Number(cell(bowlerTable!, right, "Games")) -
+          Number(cell(bowlerTable!, left, "Games")),
+      )[0];
+  const currentBowlerAverage = (name: string, fallback = "—") => {
+    const record = currentBowlerRecord(name);
+    return (record && cell(bowlerTable!, record, "Avg")) || fallback;
+  };
   const fallbackRoster = (team: string) =>
     data.id === "132277" ? (nationalsRosterByTeam[team] ?? []) : [];
   const currentRosters = useMemo(
@@ -242,10 +254,7 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
       if (name)
         details.set(name, {
           name,
-          average:
-            cell(bowlerTable!, person, "Avg") ||
-            details.get(name)?.average ||
-            "—",
+          average: currentBowlerAverage(name, details.get(name)?.average || "—"),
           handicap:
             cell(bowlerTable!, person, "HCP") ||
             details.get(name)?.handicap ||
@@ -658,7 +667,7 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                                     </span>
                                     <span>
                                       <small>Average</small>
-                                      <strong>{source ? cell(bowlerTable!, source, "Avg") || person[1] || "—" : person[1] || "—"}</strong>
+                                      <strong>{currentBowlerAverage(n, source ? cell(bowlerTable!, source, "Avg") || person[1] || "—" : person[1] || "—")}</strong>
                                     </span>
                                     {hasIndividualPoints && <span>
                                       <small>Total pts</small>
@@ -806,7 +815,7 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                           : "Scores pending recap"}
                     </span>
                     <b>{scoreRow?.at(-1) || cell(bowlerTable, row, "HSS")}</b>
-                    <span>{cell(bowlerTable, row, "Avg")}</span>
+                    <span>{currentBowlerAverage(name, cell(bowlerTable, row, "Avg"))}</span>
                     {hasIndividualPoints && <span>{bowlerPointTotal(name, team)}</span>}
                   </button>
                 );
