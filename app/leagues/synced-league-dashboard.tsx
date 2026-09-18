@@ -213,27 +213,28 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
   }, [activeViews.recaps]);
   const rosterDetails = (team: string) => {
     const currentRoster = currentRosters[team];
-    if (currentRoster)
-      return currentRoster.rows
-        .map((person) => ({
-          name: personName(cell(currentRoster, person, "Name")),
-          average: cell(currentRoster, person, "Avg") || "—",
-          handicap: cell(currentRoster, person, "HCP"),
-        }))
-        .filter((person) => person.name && !/vacant/i.test(person.name));
     const recapRows = recapByTeam[team]?.rows ?? [];
     const liveRows = rosterForTeam(team);
     const details = new Map<
       string,
       { name: string; average: string; handicap: string }
     >();
+    for (const person of currentRoster?.rows ?? []) {
+      const name = personName(cell(currentRoster!, person, "Name"));
+      if (name && !/vacant/i.test(name))
+        details.set(name, {
+          name: personName(cell(currentRoster, person, "Name")),
+          average: cell(currentRoster, person, "Avg") || "—",
+          handicap: cell(currentRoster, person, "HCP"),
+        });
+    }
     for (const person of recapRows) {
       const name = personName(person[0]);
       if (name)
         details.set(name, {
           name,
-          average: person[1] || "—",
-          handicap: person[2] || "",
+          average: details.get(name)?.average || person[1] || "—",
+          handicap: details.get(name)?.handicap || person[2] || "",
         });
     }
     for (const person of liveRows) {
