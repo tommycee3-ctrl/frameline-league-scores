@@ -11,7 +11,7 @@ export type Table = {
   emphasis?: boolean[][];
   team?: string;
   sourceReport?: string;
-  recapDetails?: Array<{ handicapSeries?: string; handicapGames?: string[]; teamPoints?: string[]; matchPoints?: string[] }>;
+  recapDetails?: Array<{ handicapSeries?: string; handicapGames?: string[]; teamPoints?: string[]; matchPoints?: string[]; individualPoints?: number }>;
 };
 export type LeagueSnapshot = {
   id: string;
@@ -390,17 +390,22 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
           (left, right) => Number(cell(table!, right, "Games")) - Number(cell(table!, left, "Games")),
         )[0];
         let scoreRow: string[] | undefined;
+        let recapPoints: number | undefined;
         const reportedWeekPoints = combinedReportedPoints(
           rows.map((item) => cell(table!, item, "WON")),
         );
-        const weekPoints = reportedWeekPoints;
         for (const matchup of parseRecapMatchups(snapshot.views.recaps ?? [])) {
           for (const entry of matchup) {
-            const found = entry.rows.find((candidate) => personName(candidate[0]) === name);
-            if (found) { scoreRow = found; break; }
+            const foundIndex = entry.rows.findIndex((candidate) => personName(candidate[0]) === name);
+            if (foundIndex >= 0) {
+              scoreRow = entry.rows[foundIndex];
+              recapPoints = entry.details[foundIndex]?.individualPoints;
+              break;
+            }
           }
           if (scoreRow) break;
         }
+        const weekPoints = recapPoints ?? reportedWeekPoints;
         if (!row && !scoreRow) return null;
         return {
           week: snapshot.week ?? "—",
@@ -408,7 +413,7 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
           series: scoreRow?.at(-1) || (table && row ? cell(table, row, "HSS") : ""),
           average: table && row ? cell(table, row, "Avg") : scoreRow?.[1] || "—",
           weekPoints,
-          reportedWeekPoints,
+          reportedWeekPoints: weekPoints,
           totalPoints: "",
         };
       })

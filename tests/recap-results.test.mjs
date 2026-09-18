@@ -23,7 +23,7 @@ test("all stored leagues render unmarked recap scores neutrally", () => {
 });
 test("dashboard never replaces official zero points or calculates result classes", () => {
   const source = readFileSync("app/leagues/synced-league-dashboard.tsx", "utf8");
-  assert.ok(source.includes("const weekPoints = reportedWeekPoints;"));
+  assert.ok(source.includes("const weekPoints = recapPoints ?? reportedWeekPoints;"));
   assert.ok(!/pointSeries|individualPoints\(|teamResult\(|resultClass\(/.test(source));
 });
 
@@ -38,10 +38,10 @@ test("duplicate League Secretary accounts combine their official wins", () => {
   assert.equal(combinedReportedPoints(["0", "2"]), 2);
   assert.equal(combinedReportedPoints(["", null]), null);
   assert.deepEqual(reportedPointTotals([
-    {week:"1",reportedWeekPoints:.5},
+    {week:"1",reportedWeekPoints:1},
     {week:"2",reportedWeekPoints:2},
     {week:"3",reportedWeekPoints:1},
     {week:"4",reportedWeekPoints:0},
     {week:"5",reportedWeekPoints:1.5},
-  ]), ["0.5", "2.5", "3.5", "3.5", "5"]);
+  ]), ["1", "3", "4", "4", "5.5"]);
 });

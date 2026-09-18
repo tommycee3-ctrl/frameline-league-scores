@@ -20,6 +20,7 @@ const sameName = (sourceName, pdfName) => {
 export function applyOfficialRecap(tables, teams, week, sourceReport) {
   return tables.map(table => {
     const result = structuredClone(table);
+    const matched = new Map();
     result.recapDetails = result.rows.map(() => ({}));
     result.emphasis ??= result.rows.map(row => row.map(() => false));
     let team;
@@ -36,7 +37,7 @@ export function applyOfficialRecap(tables, teams, week, sourceReport) {
         if (!team.total || !team.scratchTotal) throw new Error(`Official recap team ${team.team} week ${week} totals are missing`);
         result.rows[index] = ["Total", ...team.scratchTotal.slice(0,4)];
         result.emphasis[index] = [false, ...team.totalWins.slice(0,3), team.totalWins[3]];
-        result.recapDetails[index] = { handicapSeries: team.total[4], handicapGames: team.total.slice(0,3), teamPoints: team.teamPoints, matchPoints: team.matchPoints };
+        result.recapDetails[index] = { handicapSeries: team.total.at(-1), handicapGames: team.total.slice(0,3), teamPoints: team.teamPoints, matchPoints: team.matchPoints };
       } else if (team) {
         // Vacant placeholders can appear only in the interactive report. They
         // have no official PDF row or win markings to attach.
@@ -45,9 +46,27 @@ export function applyOfficialRecap(tables, teams, week, sourceReport) {
         const candidates = team.bowlers.filter(b => b.values.map(numeric).join("|") === key && sameName(row[0], b.name));
         if (candidates.length !== 1) throw new Error(`Cannot safely match official recap bowler ${row[0]} in team ${team.team}; scores ${key}; PDF candidates ${JSON.stringify(team.bowlers.filter(b => b.name.includes(row[0].split(",")[0].split("-")[0].toUpperCase())))}`);
         const bowler = candidates[0];
+        if (!matched.has(team.team)) matched.set(team.team, new Set());
+        matched.get(team.team).add(bowler);
         result.emphasis[index] = [false, false, false, ...bowler.wins];
-        result.recapDetails[index] = { handicapSeries: bowler.handicapSeries };
+        result.recapDetails[index] = { handicapSeries: bowler.handicapSeries, individualPoints: bowler.points };
       }
+    }
+    // LeagueSecretary's interactive recap can omit bowlers even when their
+    // scores are present in the official PDF. Restore those official rows.
+    for (let index = result.rows.length - 1; index >= 0; index--) {
+      const header = result.rows[index]?.[0]?.match(/^Team (\d+)$/);
+      if (!header) continue;
+      const official = teams.find(t => t.team === header[1] && t.week === String(week));
+      if (!official) continue;
+      const present = matched.get(official.team) ?? new Set();
+      const missing = official.bowlers.filter(bowler => !present.has(bowler));
+      if (!missing.length) continue;
+      let insertAt = result.rows.findIndex((row, rowIndex) => rowIndex > index && (row[0] === "Total" || /^Team \d+$/.test(row[0] ?? "")));
+      if (insertAt < 0) insertAt = result.rows.length;
+      result.rows.splice(insertAt, 0, ...missing.map(bowler => [bowler.name, ...bowler.values]));
+      result.emphasis.splice(insertAt, 0, ...missing.map(bowler => [false, false, false, ...bowler.wins]));
+      result.recapDetails.splice(insertAt, 0, ...missing.map(bowler => ({ handicapSeries: bowler.handicapSeries, individualPoints: bowler.points })));
     }
     result.sourceReport = sourceReport;
     return result;

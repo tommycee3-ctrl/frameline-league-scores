@@ -14,6 +14,23 @@ test("PDF restores James's explicit game and handicap-series wins", () => {
   assert.equal(table.rows[index][6], "482");
   assert.equal(table.recapDetails[index].handicapSeries, "638");
 });
+test("scratch recap restores a bowler omitted by the interactive table", () => {
+  const scratchTeams = JSON.parse(execFileSync(process.env.FRAMELINE_PYTHON || "python", ["scripts/parse-recap-pdf.py", "tests/fixtures/wednesday-scratch-week5.pdf"], {encoding:"utf8"}));
+  const current = JSON.parse(readFileSync("public/data/leagues/148625.json"));
+  const source = current.views.recaps.filter(table => table.rows.some(row => row[0] === "Team 6"));
+  const result = applyOfficialRecap(source, scratchTeams, "5", "scratch.pdf")[0];
+  const index = result.rows.findIndex(row => row[0] === "James Casella");
+  assert.ok(index > 0);
+  assert.deepEqual(result.rows[index], ["James Casella", "184", "0", "211", "175", "182", "568"]);
+  assert.deepEqual(result.emphasis[index].slice(3), [true, false, true, false]);
+  assert.equal(result.recapDetails[index].individualPoints, 1.5);
+});
+
+test("scratch recap distinguishes a marked win from an equal-score half point", () => {
+  const week1 = JSON.parse(execFileSync(process.env.FRAMELINE_PYTHON || "python", ["scripts/parse-recap-pdf.py", "tests/fixtures/wednesday-scratch-week1.pdf"], {encoding:"utf8"}));
+  const james = week1.find(team => team.team === "6").bowlers.find(bowler => bowler.name === "James Casella");
+  assert.equal(james.points, 1);
+});
 test("official point subtotals and half points are preserved without scoring rules", () => {
   const result = applyOfficialRecap(league.views.recaps, teams, "4", "official.pdf");
   const ugly = result.flatMap(t => t.rows).find(r => r[0] === "Team 7");
