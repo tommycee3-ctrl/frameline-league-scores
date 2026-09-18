@@ -38,6 +38,9 @@ export function applyOfficialRecap(tables, teams, week, sourceReport) {
         result.emphasis[index] = [false, ...team.totalWins.slice(0,3), team.totalWins[3]];
         result.recapDetails[index] = { handicapSeries: team.total[4], handicapGames: team.total.slice(0,3), teamPoints: team.teamPoints, matchPoints: team.matchPoints };
       } else if (team) {
+        // Vacant placeholders can appear only in the interactive report. They
+        // have no official PDF row or win markings to attach.
+        if (/vacant/i.test(row[0] ?? "")) continue;
         const key = row.slice(1,7).map(numeric).join("|");
         const candidates = team.bowlers.filter(b => b.values.map(numeric).join("|") === key && sameName(row[0], b.name));
         if (candidates.length !== 1) throw new Error(`Cannot safely match official recap bowler ${row[0]} in team ${team.team}; scores ${key}; PDF candidates ${JSON.stringify(team.bowlers.filter(b => b.name.includes(row[0].split(",")[0].split("-")[0].toUpperCase())))}`);

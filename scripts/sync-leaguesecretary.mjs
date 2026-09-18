@@ -207,7 +207,16 @@ async function extractAllRecaps(page,standings) {
     const signature=teams.join("-")||option.value;
     collected.set(signature,{...normalized,title:`${option.label} matchup`});
   }
-  return enrichOfficialRecaps(page, collected.size?[...collected.values()]:(await extractTables(page)).map(table=>normalizeRecap(table,standings))).catch(error => { error.code = "SOURCE_OFFICIAL_RECAP"; throw error; });
+  const interactive=collected.size?[...collected.values()]:(await extractTables(page)).map(table=>normalizeRecap(table,standings));
+  return enrichOfficialRecaps(page,interactive).catch(error=>{
+    // Publish the new source week without win markings when BLS posts an
+    // unsupported PDF variant. The next refresh keeps retrying enrichment.
+    console.warn(`Official recap markings unavailable: ${error.message}`);
+    return interactive.map(table=>({...table,
+      emphasis:table.rows.map(row=>row.map(()=>false)),
+      recapDetails:table.rows.map(()=>({}))
+    }));
+  });
 }
 function normalizeRecap(table,standings) {
   if(!table||!standings) return table;
@@ -425,7 +434,7 @@ try {
       }
     }
     await page.close();
-    if ((current.views?.recaps ?? []).some(table => table.sourceReport) && !(views.recaps ?? []).every(table => table.sourceReport)) throw new Error("Official recap PDF markings are missing; preserving prior verified results.");
+    if (String(current.week)===String(week) && (current.views?.recaps ?? []).some(table => table.sourceReport) && !(views.recaps ?? []).every(table => table.sourceReport)) throw new Error("Official recap PDF markings are missing for the same week; preserving prior verified results.");
     for(const view of Object.keys(viewPaths)) validateSourceView(view,views[view],{required:(current.views?.[view]??[]).some(table=>table.rows?.length)});
     for(const view of Object.keys(viewPaths)) {
       const nextRows=(views[view]??[]).reduce((sum,table)=>sum+table.rows.length,0);

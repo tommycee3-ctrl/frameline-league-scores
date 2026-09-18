@@ -79,3 +79,12 @@ test("an exact single-name bowler retains a unique exact-score match", () => {
   pdf[0].bowlers[0].name="Abraham";
   assert.throws(()=>applyOfficialRecap(source,pdf,"4","official.pdf"), /Cannot safely match/);
 });
+
+test("interactive vacant placeholders do not block official rows", () => {
+  const source=[{rows:[["Team 6", ""],[", Vacant","125","95","125","125","125","375"],["Christianson, Damien L.","157","63","169","148","155","472"],["Total","294","273","280","847"]]}];
+  const pdf=[{team:"6",week:"1",bowlers:[{name:"Damien L. Christianson",values:["157","63","169","148","155","472"],handicapSeries:"661",wins:[false,false,false,false]}],scratchTotal:["294","273","280","847","847"],total:["484","463","470","847","1417"],totalWins:[false,false,false,false]}];
+  const result=applyOfficialRecap(source,pdf,"1","official.pdf")[0];
+  assert.equal(result.sourceReport,"official.pdf");
+  assert.deepEqual(result.recapDetails[1],{});
+  assert.equal(result.recapDetails[2].handicapSeries,"661");
+});
