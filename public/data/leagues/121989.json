@@ -7,18 +7,18 @@
   "bowlsOn": "Wednesday",
   "startTime": "6:30 PM",
   "type": "Handicap Adult Mixed",
-  "updated": "Sep 17, 2026",
+  "updated": "Sep 18, 2026",
   "startDate": "Fall 2026",
   "bowlDay": 3,
   "centerId": "2173",
   "centerName": "Parkway Lanes",
   "centerSlug": "parkway-lanes---lincoln-lincoln-nebraska",
   "area": "Lincoln",
-  "sourceUpdated": "Sep 10, 2026",
-  "syncedAt": "2026-09-17T18:23:47.361Z",
+  "sourceUpdated": "Sep 18, 2026",
+  "syncedAt": "2026-09-18T16:56:43.052Z",
   "status": "current",
   "week": "4",
-  "fingerprint": "d87c779eb5e40f1e8bc828ab897b8f9564107f536aa0b62dbc8074a14929f3c6",
+  "fingerprint": "a2e865cf46fef53e2b59a13b990e52adc09736c8657885045d19d7e4106d1140",
   "lastCompletedCycle": "2026-09-16",
   "views": {
     "standings": [
@@ -139,20 +139,6 @@
           ],
           [
             "8",
-            "WELLMANN PLBG. & HEAT",
-            "6",
-            "1",
-            "9",
-            "7",
-            "56 %",
-            "9",
-            "792",
-            "9529",
-            "863",
-            "2454"
-          ],
-          [
-            "9",
             "BREW DAWG",
             "1",
             "1",
@@ -164,6 +150,20 @@
             "8066",
             "765",
             "2152"
+          ],
+          [
+            "9",
+            "SWAMP DONKEYS",
+            "3",
+            "1",
+            "9",
+            "7",
+            "56 %",
+            "9",
+            "664",
+            "7997",
+            "746",
+            "2069"
           ],
           [
             "10",
@@ -181,6 +181,20 @@
           ],
           [
             "11",
+            "WELLMANN PLBG. & HEAT",
+            "6",
+            "1",
+            "8",
+            "8",
+            "50 %",
+            "8",
+            "792",
+            "9529",
+            "863",
+            "2454"
+          ],
+          [
+            "12",
             "GUTTER MINDED",
             "18",
             "1",
@@ -194,7 +208,7 @@
             "2030"
           ],
           [
-            "12",
+            "13",
             "PUBBERS",
             "10",
             "1",
@@ -208,7 +222,7 @@
             "2164"
           ],
           [
-            "13",
+            "14",
             "SEXY STRIKERS",
             "19",
             "1",
@@ -222,7 +236,7 @@
             "2062"
           ],
           [
-            "14",
+            "15",
             "BALLS & BABES",
             "11",
             "1",
@@ -234,20 +248,6 @@
             "7467",
             "689",
             "1924"
-          ],
-          [
-            "15",
-            "SWAMP DONKEYS",
-            "3",
-            "1",
-            "7",
-            "9",
-            "44 %",
-            "7",
-            "673",
-            "6075",
-            "746",
-            "2069"
           ],
           [
             "16",
@@ -2074,8 +2074,8 @@
             "1",
             "SWAMP DONKEYS",
             "M",
-            "1134",
-            "9",
+            "1516",
+            "12",
             "126",
             "0",
             "84",
@@ -2083,7 +2083,7 @@
             "683",
             "149",
             "412",
-            "0",
+            "0.33",
             "0"
           ],
           [
@@ -2218,16 +2218,16 @@
             "4",
             "SWAMP DONKEYS",
             "M",
-            "1226",
-            "9",
-            "136",
+            "1605",
+            "12",
+            "133",
             "148",
-            "75",
+            "78",
             "234",
-            "627",
+            "662",
             "170",
             "435",
-            "0",
+            "0.75",
             "0"
           ],
           [
@@ -2524,13 +2524,13 @@
             "3",
             "SWAMP DONKEYS",
             "M",
-            "1229",
-            "9",
-            "136",
+            "1620",
+            "12",
+            "135",
             "0",
-            "75",
-            "237",
-            "645",
+            "76",
+            "239",
+            "651",
             "161",
             "433",
             "0",
@@ -2542,16 +2542,16 @@
             "2",
             "SWAMP DONKEYS",
             "M",
-            "1061",
-            "9",
+            "1410",
+            "12",
             "117",
             "0",
             "92",
-            "251",
-            "659",
-            "156",
+            "267",
+            "656",
+            "172",
             "374",
-            "0",
+            "0.5",
             "0"
           ],
           [
@@ -3334,16 +3334,16 @@
             "5",
             "SWAMP DONKEYS",
             "M",
-            "1425",
-            "9",
-            "158",
+            "1846",
+            "12",
+            "153",
             "154",
-            "55",
+            "60",
             "250",
             "687",
             "191",
             "510",
-            "0",
+            "0.83",
             "0"
           ]
         ],
@@ -6268,19 +6268,24 @@
         "recapDetails": [
           {},
           {
-            "handicapSeries": "659"
+            "handicapSeries": "659",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "620"
+            "handicapSeries": "620",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "639"
+            "handicapSeries": "639",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "459"
+            "handicapSeries": "459",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "630"
+            "handicapSeries": "630",
+            "individualPoints": 0
           },
           {
             "handicapSeries": "2023",
@@ -6299,19 +6304,24 @@
           },
           {},
           {
-            "handicapSeries": "631"
+            "handicapSeries": "631",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "618"
+            "handicapSeries": "618",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "645"
+            "handicapSeries": "645",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "668"
+            "handicapSeries": "668",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "548"
+            "handicapSeries": "548",
+            "individualPoints": 0
           },
           {
             "handicapSeries": "2129",
@@ -6583,19 +6593,24 @@
         "recapDetails": [
           {},
           {
-            "handicapSeries": "655"
+            "handicapSeries": "655",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "674"
+            "handicapSeries": "674",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "610"
+            "handicapSeries": "610",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "705"
+            "handicapSeries": "705",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "603"
+            "handicapSeries": "603",
+            "individualPoints": 0
           },
           {
             "handicapSeries": "2569",
@@ -6614,19 +6629,24 @@
           },
           {},
           {
-            "handicapSeries": "605"
+            "handicapSeries": "605",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "643"
+            "handicapSeries": "643",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "607"
+            "handicapSeries": "607",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "612"
+            "handicapSeries": "612",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "603"
+            "handicapSeries": "603",
+            "individualPoints": 0
           },
           {
             "handicapSeries": "2392",
@@ -6898,19 +6918,24 @@
         "recapDetails": [
           {},
           {
-            "handicapSeries": "578"
+            "handicapSeries": "578",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "718"
+            "handicapSeries": "718",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "669"
+            "handicapSeries": "669",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "675"
+            "handicapSeries": "675",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "641"
+            "handicapSeries": "641",
+            "individualPoints": 0
           },
           {
             "handicapSeries": "2534",
@@ -6929,19 +6954,24 @@
           },
           {},
           {
-            "handicapSeries": "633"
+            "handicapSeries": "633",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "636"
+            "handicapSeries": "636",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "674"
+            "handicapSeries": "674",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "550"
+            "handicapSeries": "550",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "621"
+            "handicapSeries": "621",
+            "individualPoints": 0
           },
           {
             "handicapSeries": "2367",
@@ -7213,19 +7243,24 @@
         "recapDetails": [
           {},
           {
-            "handicapSeries": "619"
+            "handicapSeries": "619",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "598"
+            "handicapSeries": "598",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "574"
+            "handicapSeries": "574",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "558"
+            "handicapSeries": "558",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "689"
+            "handicapSeries": "689",
+            "individualPoints": 0
           },
           {
             "handicapSeries": "2216",
@@ -7244,19 +7279,24 @@
           },
           {},
           {
-            "handicapSeries": "544"
+            "handicapSeries": "544",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "690"
+            "handicapSeries": "690",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "623"
+            "handicapSeries": "623",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "612"
+            "handicapSeries": "612",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "629"
+            "handicapSeries": "629",
+            "individualPoints": 0
           },
           {
             "handicapSeries": "2273",
@@ -7528,19 +7568,24 @@
         "recapDetails": [
           {},
           {
-            "handicapSeries": "627"
+            "handicapSeries": "627",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "683"
+            "handicapSeries": "683",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "627"
+            "handicapSeries": "627",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "638"
+            "handicapSeries": "638",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "640"
+            "handicapSeries": "640",
+            "individualPoints": 0
           },
           {
             "handicapSeries": "2498",
@@ -7559,19 +7604,24 @@
           },
           {},
           {
-            "handicapSeries": "563"
+            "handicapSeries": "563",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "624"
+            "handicapSeries": "624",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "599"
+            "handicapSeries": "599",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "561"
+            "handicapSeries": "561",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "628"
+            "handicapSeries": "628",
+            "individualPoints": 0
           },
           {
             "handicapSeries": "2261",
@@ -7843,19 +7893,24 @@
         "recapDetails": [
           {},
           {
-            "handicapSeries": "593"
+            "handicapSeries": "593",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "637"
+            "handicapSeries": "637",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "582"
+            "handicapSeries": "582",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "678"
+            "handicapSeries": "678",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "667"
+            "handicapSeries": "667",
+            "individualPoints": 0
           },
           {
             "handicapSeries": "2416",
@@ -7874,19 +7929,24 @@
           },
           {},
           {
-            "handicapSeries": "603"
+            "handicapSeries": "603",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "657"
+            "handicapSeries": "657",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "632"
+            "handicapSeries": "632",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "728"
+            "handicapSeries": "728",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "636"
+            "handicapSeries": "636",
+            "individualPoints": 0
           },
           {
             "handicapSeries": "2518",
@@ -8158,19 +8218,24 @@
         "recapDetails": [
           {},
           {
-            "handicapSeries": "625"
+            "handicapSeries": "625",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "642"
+            "handicapSeries": "642",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "583"
+            "handicapSeries": "583",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "619"
+            "handicapSeries": "619",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "634"
+            "handicapSeries": "634",
+            "individualPoints": 0
           },
           {
             "handicapSeries": "2377",
@@ -8189,19 +8254,24 @@
           },
           {},
           {
-            "handicapSeries": "657"
+            "handicapSeries": "657",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "652"
+            "handicapSeries": "652",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "624"
+            "handicapSeries": "624",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "558"
+            "handicapSeries": "558",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "600"
+            "handicapSeries": "600",
+            "individualPoints": 0
           },
           {
             "handicapSeries": "2362",
@@ -8473,19 +8543,24 @@
         "recapDetails": [
           {},
           {
-            "handicapSeries": "662"
+            "handicapSeries": "662",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "602"
+            "handicapSeries": "602",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "556"
+            "handicapSeries": "556",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "652"
+            "handicapSeries": "652",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "594"
+            "handicapSeries": "594",
+            "individualPoints": 0
           },
           {
             "handicapSeries": "2460",
@@ -8504,19 +8579,24 @@
           },
           {},
           {
-            "handicapSeries": "689"
+            "handicapSeries": "689",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "628"
+            "handicapSeries": "628",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "585"
+            "handicapSeries": "585",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "656"
+            "handicapSeries": "656",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "629"
+            "handicapSeries": "629",
+            "individualPoints": 0
           },
           {
             "handicapSeries": "2584",
@@ -8788,19 +8868,24 @@
         "recapDetails": [
           {},
           {
-            "handicapSeries": "700"
+            "handicapSeries": "700",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "566"
+            "handicapSeries": "566",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "744"
+            "handicapSeries": "744",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "590"
+            "handicapSeries": "590",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "724"
+            "handicapSeries": "724",
+            "individualPoints": 0
           },
           {
             "handicapSeries": "2511",
@@ -8819,19 +8904,24 @@
           },
           {},
           {
-            "handicapSeries": "612"
+            "handicapSeries": "612",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "609"
+            "handicapSeries": "609",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "577"
+            "handicapSeries": "577",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "675"
+            "handicapSeries": "675",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "642"
+            "handicapSeries": "642",
+            "individualPoints": 0
           },
           {
             "handicapSeries": "2302",
@@ -8865,12 +8955,12 @@
         "rows": [
           [
             "Team 3",
-            "Lane 13 points won: 1"
+            "Lane 13 points won: 2"
           ],
           [
             "Lawler, Devin",
-            "120",
-            "90",
+            "122",
+            "88",
             "149",
             "135",
             "128",
@@ -8878,8 +8968,8 @@
           ],
           [
             "Ritchey, Dylan",
-            "114",
-            "95",
+            "115",
+            "94",
             "156",
             "74",
             "144",
@@ -8887,8 +8977,8 @@
           ],
           [
             "Ritchey, Cade",
-            "135",
-            "76",
+            "133",
+            "78",
             "133",
             "123",
             "161",
@@ -8896,8 +8986,8 @@
           ],
           [
             "Miller, Mike",
-            "148",
-            "64",
+            "131",
+            "80",
             "142",
             "154",
             "126",
@@ -8905,8 +8995,8 @@
           ],
           [
             "Zupancic, Bill",
-            "154",
-            "59",
+            "155",
+            "58",
             "166",
             "142",
             "136",
@@ -8921,7 +9011,7 @@
           ],
           [
             "Team 6",
-            "Lane 14 points won: 3"
+            "Lane 14 points won: 2"
           ],
           [
             "Bogdanovich, Nick",
@@ -9035,7 +9125,7 @@
             false,
             true,
             false,
-            false,
+            true,
             false
           ],
           [
@@ -9096,57 +9186,67 @@
             false,
             false,
             true,
-            true,
+            false,
             true
           ]
         ],
         "recapDetails": [
           {},
           {
-            "handicapSeries": "682"
+            "handicapSeries": "676",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "659"
+            "handicapSeries": "656",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "645"
+            "handicapSeries": "651",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "614"
+            "handicapSeries": "662",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "621"
+            "handicapSeries": "618",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "2366",
+            "handicapSeries": "2408",
             "handicapGames": [
-              "845",
-              "727",
-              "794"
+              "859",
+              "741",
+              "808"
             ],
             "teamPoints": [
               "1.0",
               "0.0",
-              "0.0",
               "1.0",
-              "1.0"
+              "2.0",
+              "2.0"
             ]
           },
           {},
           {
-            "handicapSeries": "612"
+            "handicapSeries": "612",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "594"
+            "handicapSeries": "594",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "704"
+            "handicapSeries": "704",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "650"
+            "handicapSeries": "650",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "746"
+            "handicapSeries": "746",
+            "individualPoints": 0
           },
           {
             "handicapSeries": "2454",
@@ -9158,9 +9258,9 @@
             "teamPoints": [
               "0.0",
               "1.0",
-              "1.0",
-              "3.0",
-              "3.0"
+              "0.0",
+              "2.0",
+              "2.0"
             ]
           }
         ],
@@ -9418,19 +9518,24 @@
         "recapDetails": [
           {},
           {
-            "handicapSeries": "625"
+            "handicapSeries": "625",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "679"
+            "handicapSeries": "679",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "615"
+            "handicapSeries": "615",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "719"
+            "handicapSeries": "719",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "627"
+            "handicapSeries": "627",
+            "individualPoints": 0
           },
           {
             "handicapSeries": "2572",
@@ -9449,19 +9554,24 @@
           },
           {},
           {
-            "handicapSeries": "665"
+            "handicapSeries": "665",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "730"
+            "handicapSeries": "730",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "683"
+            "handicapSeries": "683",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "682"
+            "handicapSeries": "682",
+            "individualPoints": 0
           },
           {
-            "handicapSeries": "651"
+            "handicapSeries": "651",
+            "individualPoints": 0
           },
           {
             "handicapSeries": "2718",
@@ -11701,8 +11811,8 @@
             "Lawler, Devin",
             "M",
             "84",
-            "9",
-            "1134",
+            "12",
+            "1516",
             "126"
           ],
           [
@@ -11710,36 +11820,36 @@
             "Ritchey, Dylan",
             "M",
             "92",
-            "9",
-            "1061",
+            "12",
+            "1410",
             "117"
           ],
           [
             "3",
             "Ritchey, Cade",
             "M",
-            "75",
-            "9",
-            "1229",
-            "136"
+            "76",
+            "12",
+            "1620",
+            "135"
           ],
           [
             "4",
             "Miller, Mike",
             "M",
-            "75",
-            "9",
-            "1226",
-            "136"
+            "78",
+            "12",
+            "1605",
+            "133"
           ],
           [
             "5",
             "Zupancic, Bill",
             "M",
-            "55",
-            "9",
-            "1425",
-            "158"
+            "60",
+            "12",
+            "1846",
+            "153"
           ],
           [
             "6",
@@ -41506,8 +41616,8 @@
     },
     {
       "week": "4",
-      "sourceUpdated": "Sep 10, 2026",
-      "syncedAt": "2026-09-17T18:23:47.361Z",
+      "sourceUpdated": "Sep 18, 2026",
+      "syncedAt": "2026-09-18T16:56:43.052Z",
       "views": {
         "standings": [
           {
@@ -41627,20 +41737,6 @@
               ],
               [
                 "8",
-                "WELLMANN PLBG. & HEAT",
-                "6",
-                "1",
-                "9",
-                "7",
-                "56 %",
-                "9",
-                "792",
-                "9529",
-                "863",
-                "2454"
-              ],
-              [
-                "9",
                 "BREW DAWG",
                 "1",
                 "1",
@@ -41652,6 +41748,20 @@
                 "8066",
                 "765",
                 "2152"
+              ],
+              [
+                "9",
+                "SWAMP DONKEYS",
+                "3",
+                "1",
+                "9",
+                "7",
+                "56 %",
+                "9",
+                "664",
+                "7997",
+                "746",
+                "2069"
               ],
               [
                 "10",
@@ -41669,6 +41779,20 @@
               ],
               [
                 "11",
+                "WELLMANN PLBG. & HEAT",
+                "6",
+                "1",
+                "8",
+                "8",
+                "50 %",
+                "8",
+                "792",
+                "9529",
+                "863",
+                "2454"
+              ],
+              [
+                "12",
                 "GUTTER MINDED",
                 "18",
                 "1",
@@ -41682,7 +41806,7 @@
                 "2030"
               ],
               [
-                "12",
+                "13",
                 "PUBBERS",
                 "10",
                 "1",
@@ -41696,7 +41820,7 @@
                 "2164"
               ],
               [
-                "13",
+                "14",
                 "SEXY STRIKERS",
                 "19",
                 "1",
@@ -41710,7 +41834,7 @@
                 "2062"
               ],
               [
-                "14",
+                "15",
                 "BALLS & BABES",
                 "11",
                 "1",
@@ -41722,20 +41846,6 @@
                 "7467",
                 "689",
                 "1924"
-              ],
-              [
-                "15",
-                "SWAMP DONKEYS",
-                "3",
-                "1",
-                "7",
-                "9",
-                "44 %",
-                "7",
-                "673",
-                "6075",
-                "746",
-                "2069"
               ],
               [
                 "16",
@@ -43562,8 +43672,8 @@
                 "1",
                 "SWAMP DONKEYS",
                 "M",
-                "1134",
-                "9",
+                "1516",
+                "12",
                 "126",
                 "0",
                 "84",
@@ -43571,7 +43681,7 @@
                 "683",
                 "149",
                 "412",
-                "0",
+                "0.33",
                 "0"
               ],
               [
@@ -43706,16 +43816,16 @@
                 "4",
                 "SWAMP DONKEYS",
                 "M",
-                "1226",
-                "9",
-                "136",
+                "1605",
+                "12",
+                "133",
                 "148",
-                "75",
+                "78",
                 "234",
-                "627",
+                "662",
                 "170",
                 "435",
-                "0",
+                "0.75",
                 "0"
               ],
               [
@@ -44012,13 +44122,13 @@
                 "3",
                 "SWAMP DONKEYS",
                 "M",
-                "1229",
-                "9",
-                "136",
+                "1620",
+                "12",
+                "135",
                 "0",
-                "75",
-                "237",
-                "645",
+                "76",
+                "239",
+                "651",
                 "161",
                 "433",
                 "0",
@@ -44030,16 +44140,16 @@
                 "2",
                 "SWAMP DONKEYS",
                 "M",
-                "1061",
-                "9",
+                "1410",
+                "12",
                 "117",
                 "0",
                 "92",
-                "251",
-                "659",
-                "156",
+                "267",
+                "656",
+                "172",
                 "374",
-                "0",
+                "0.5",
                 "0"
               ],
               [
@@ -44822,16 +44932,16 @@
                 "5",
                 "SWAMP DONKEYS",
                 "M",
-                "1425",
-                "9",
-                "158",
+                "1846",
+                "12",
+                "153",
                 "154",
-                "55",
+                "60",
                 "250",
                 "687",
                 "191",
                 "510",
-                "0",
+                "0.83",
                 "0"
               ]
             ],
@@ -47756,19 +47866,24 @@
             "recapDetails": [
               {},
               {
-                "handicapSeries": "659"
+                "handicapSeries": "659",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "620"
+                "handicapSeries": "620",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "639"
+                "handicapSeries": "639",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "459"
+                "handicapSeries": "459",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "630"
+                "handicapSeries": "630",
+                "individualPoints": 0
               },
               {
                 "handicapSeries": "2023",
@@ -47787,19 +47902,24 @@
               },
               {},
               {
-                "handicapSeries": "631"
+                "handicapSeries": "631",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "618"
+                "handicapSeries": "618",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "645"
+                "handicapSeries": "645",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "668"
+                "handicapSeries": "668",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "548"
+                "handicapSeries": "548",
+                "individualPoints": 0
               },
               {
                 "handicapSeries": "2129",
@@ -48071,19 +48191,24 @@
             "recapDetails": [
               {},
               {
-                "handicapSeries": "655"
+                "handicapSeries": "655",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "674"
+                "handicapSeries": "674",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "610"
+                "handicapSeries": "610",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "705"
+                "handicapSeries": "705",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "603"
+                "handicapSeries": "603",
+                "individualPoints": 0
               },
               {
                 "handicapSeries": "2569",
@@ -48102,19 +48227,24 @@
               },
               {},
               {
-                "handicapSeries": "605"
+                "handicapSeries": "605",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "643"
+                "handicapSeries": "643",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "607"
+                "handicapSeries": "607",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "612"
+                "handicapSeries": "612",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "603"
+                "handicapSeries": "603",
+                "individualPoints": 0
               },
               {
                 "handicapSeries": "2392",
@@ -48386,19 +48516,24 @@
             "recapDetails": [
               {},
               {
-                "handicapSeries": "578"
+                "handicapSeries": "578",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "718"
+                "handicapSeries": "718",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "669"
+                "handicapSeries": "669",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "675"
+                "handicapSeries": "675",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "641"
+                "handicapSeries": "641",
+                "individualPoints": 0
               },
               {
                 "handicapSeries": "2534",
@@ -48417,19 +48552,24 @@
               },
               {},
               {
-                "handicapSeries": "633"
+                "handicapSeries": "633",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "636"
+                "handicapSeries": "636",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "674"
+                "handicapSeries": "674",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "550"
+                "handicapSeries": "550",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "621"
+                "handicapSeries": "621",
+                "individualPoints": 0
               },
               {
                 "handicapSeries": "2367",
@@ -48701,19 +48841,24 @@
             "recapDetails": [
               {},
               {
-                "handicapSeries": "619"
+                "handicapSeries": "619",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "598"
+                "handicapSeries": "598",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "574"
+                "handicapSeries": "574",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "558"
+                "handicapSeries": "558",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "689"
+                "handicapSeries": "689",
+                "individualPoints": 0
               },
               {
                 "handicapSeries": "2216",
@@ -48732,19 +48877,24 @@
               },
               {},
               {
-                "handicapSeries": "544"
+                "handicapSeries": "544",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "690"
+                "handicapSeries": "690",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "623"
+                "handicapSeries": "623",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "612"
+                "handicapSeries": "612",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "629"
+                "handicapSeries": "629",
+                "individualPoints": 0
               },
               {
                 "handicapSeries": "2273",
@@ -49016,19 +49166,24 @@
             "recapDetails": [
               {},
               {
-                "handicapSeries": "627"
+                "handicapSeries": "627",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "683"
+                "handicapSeries": "683",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "627"
+                "handicapSeries": "627",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "638"
+                "handicapSeries": "638",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "640"
+                "handicapSeries": "640",
+                "individualPoints": 0
               },
               {
                 "handicapSeries": "2498",
@@ -49047,19 +49202,24 @@
               },
               {},
               {
-                "handicapSeries": "563"
+                "handicapSeries": "563",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "624"
+                "handicapSeries": "624",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "599"
+                "handicapSeries": "599",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "561"
+                "handicapSeries": "561",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "628"
+                "handicapSeries": "628",
+                "individualPoints": 0
               },
               {
                 "handicapSeries": "2261",
@@ -49331,19 +49491,24 @@
             "recapDetails": [
               {},
               {
-                "handicapSeries": "593"
+                "handicapSeries": "593",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "637"
+                "handicapSeries": "637",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "582"
+                "handicapSeries": "582",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "678"
+                "handicapSeries": "678",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "667"
+                "handicapSeries": "667",
+                "individualPoints": 0
               },
               {
                 "handicapSeries": "2416",
@@ -49362,19 +49527,24 @@
               },
               {},
               {
-                "handicapSeries": "603"
+                "handicapSeries": "603",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "657"
+                "handicapSeries": "657",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "632"
+                "handicapSeries": "632",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "728"
+                "handicapSeries": "728",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "636"
+                "handicapSeries": "636",
+                "individualPoints": 0
               },
               {
                 "handicapSeries": "2518",
@@ -49646,19 +49816,24 @@
             "recapDetails": [
               {},
               {
-                "handicapSeries": "625"
+                "handicapSeries": "625",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "642"
+                "handicapSeries": "642",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "583"
+                "handicapSeries": "583",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "619"
+                "handicapSeries": "619",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "634"
+                "handicapSeries": "634",
+                "individualPoints": 0
               },
               {
                 "handicapSeries": "2377",
@@ -49677,19 +49852,24 @@
               },
               {},
               {
-                "handicapSeries": "657"
+                "handicapSeries": "657",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "652"
+                "handicapSeries": "652",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "624"
+                "handicapSeries": "624",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "558"
+                "handicapSeries": "558",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "600"
+                "handicapSeries": "600",
+                "individualPoints": 0
               },
               {
                 "handicapSeries": "2362",
@@ -49961,19 +50141,24 @@
             "recapDetails": [
               {},
               {
-                "handicapSeries": "662"
+                "handicapSeries": "662",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "602"
+                "handicapSeries": "602",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "556"
+                "handicapSeries": "556",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "652"
+                "handicapSeries": "652",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "594"
+                "handicapSeries": "594",
+                "individualPoints": 0
               },
               {
                 "handicapSeries": "2460",
@@ -49992,19 +50177,24 @@
               },
               {},
               {
-                "handicapSeries": "689"
+                "handicapSeries": "689",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "628"
+                "handicapSeries": "628",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "585"
+                "handicapSeries": "585",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "656"
+                "handicapSeries": "656",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "629"
+                "handicapSeries": "629",
+                "individualPoints": 0
               },
               {
                 "handicapSeries": "2584",
@@ -50276,19 +50466,24 @@
             "recapDetails": [
               {},
               {
-                "handicapSeries": "700"
+                "handicapSeries": "700",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "566"
+                "handicapSeries": "566",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "744"
+                "handicapSeries": "744",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "590"
+                "handicapSeries": "590",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "724"
+                "handicapSeries": "724",
+                "individualPoints": 0
               },
               {
                 "handicapSeries": "2511",
@@ -50307,19 +50502,24 @@
               },
               {},
               {
-                "handicapSeries": "612"
+                "handicapSeries": "612",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "609"
+                "handicapSeries": "609",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "577"
+                "handicapSeries": "577",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "675"
+                "handicapSeries": "675",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "642"
+                "handicapSeries": "642",
+                "individualPoints": 0
               },
               {
                 "handicapSeries": "2302",
@@ -50353,12 +50553,12 @@
             "rows": [
               [
                 "Team 3",
-                "Lane 13 points won: 1"
+                "Lane 13 points won: 2"
               ],
               [
                 "Lawler, Devin",
-                "120",
-                "90",
+                "122",
+                "88",
                 "149",
                 "135",
                 "128",
@@ -50366,8 +50566,8 @@
               ],
               [
                 "Ritchey, Dylan",
-                "114",
-                "95",
+                "115",
+                "94",
                 "156",
                 "74",
                 "144",
@@ -50375,8 +50575,8 @@
               ],
               [
                 "Ritchey, Cade",
-                "135",
-                "76",
+                "133",
+                "78",
                 "133",
                 "123",
                 "161",
@@ -50384,8 +50584,8 @@
               ],
               [
                 "Miller, Mike",
-                "148",
-                "64",
+                "131",
+                "80",
                 "142",
                 "154",
                 "126",
@@ -50393,8 +50593,8 @@
               ],
               [
                 "Zupancic, Bill",
-                "154",
-                "59",
+                "155",
+                "58",
                 "166",
                 "142",
                 "136",
@@ -50409,7 +50609,7 @@
               ],
               [
                 "Team 6",
-                "Lane 14 points won: 3"
+                "Lane 14 points won: 2"
               ],
               [
                 "Bogdanovich, Nick",
@@ -50523,7 +50723,7 @@
                 false,
                 true,
                 false,
-                false,
+                true,
                 false
               ],
               [
@@ -50584,57 +50784,67 @@
                 false,
                 false,
                 true,
-                true,
+                false,
                 true
               ]
             ],
             "recapDetails": [
               {},
               {
-                "handicapSeries": "682"
+                "handicapSeries": "676",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "659"
+                "handicapSeries": "656",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "645"
+                "handicapSeries": "651",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "614"
+                "handicapSeries": "662",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "621"
+                "handicapSeries": "618",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "2366",
+                "handicapSeries": "2408",
                 "handicapGames": [
-                  "845",
-                  "727",
-                  "794"
+                  "859",
+                  "741",
+                  "808"
                 ],
                 "teamPoints": [
                   "1.0",
                   "0.0",
-                  "0.0",
                   "1.0",
-                  "1.0"
+                  "2.0",
+                  "2.0"
                 ]
               },
               {},
               {
-                "handicapSeries": "612"
+                "handicapSeries": "612",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "594"
+                "handicapSeries": "594",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "704"
+                "handicapSeries": "704",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "650"
+                "handicapSeries": "650",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "746"
+                "handicapSeries": "746",
+                "individualPoints": 0
               },
               {
                 "handicapSeries": "2454",
@@ -50646,9 +50856,9 @@
                 "teamPoints": [
                   "0.0",
                   "1.0",
-                  "1.0",
-                  "3.0",
-                  "3.0"
+                  "0.0",
+                  "2.0",
+                  "2.0"
                 ]
               }
             ],
@@ -50906,19 +51116,24 @@
             "recapDetails": [
               {},
               {
-                "handicapSeries": "625"
+                "handicapSeries": "625",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "679"
+                "handicapSeries": "679",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "615"
+                "handicapSeries": "615",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "719"
+                "handicapSeries": "719",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "627"
+                "handicapSeries": "627",
+                "individualPoints": 0
               },
               {
                 "handicapSeries": "2572",
@@ -50937,19 +51152,24 @@
               },
               {},
               {
-                "handicapSeries": "665"
+                "handicapSeries": "665",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "730"
+                "handicapSeries": "730",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "683"
+                "handicapSeries": "683",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "682"
+                "handicapSeries": "682",
+                "individualPoints": 0
               },
               {
-                "handicapSeries": "651"
+                "handicapSeries": "651",
+                "individualPoints": 0
               },
               {
                 "handicapSeries": "2718",
@@ -53189,8 +53409,8 @@
                 "Lawler, Devin",
                 "M",
                 "84",
-                "9",
-                "1134",
+                "12",
+                "1516",
                 "126"
               ],
               [
@@ -53198,36 +53418,36 @@
                 "Ritchey, Dylan",
                 "M",
                 "92",
-                "9",
-                "1061",
+                "12",
+                "1410",
                 "117"
               ],
               [
                 "3",
                 "Ritchey, Cade",
                 "M",
-                "75",
-                "9",
-                "1229",
-                "136"
+                "76",
+                "12",
+                "1620",
+                "135"
               ],
               [
                 "4",
                 "Miller, Mike",
                 "M",
-                "75",
-                "9",
-                "1226",
-                "136"
+                "78",
+                "12",
+                "1605",
+                "133"
               ],
               [
                 "5",
                 "Zupancic, Bill",
                 "M",
-                "55",
-                "9",
-                "1425",
-                "158"
+                "60",
+                "12",
+                "1846",
+                "153"
               ],
               [
                 "6",
@@ -54463,7 +54683,7 @@
       }
     }
   ],
-  "sourceFingerprint": "41735b93a400087289d7c4c948a27e3d9b292276a8834f0c6f89af6ba87e5591",
+  "sourceFingerprint": "45b4c8a2b60b1ebbcd4b191da2ba8b213946672d690db30cd8451d4f102ef660",
   "lastAttemptedAt": null,
-  "lastCheckedAt": "2026-09-18T02:38:12.711Z"
+  "lastCheckedAt": "2026-09-18T16:56:43.052Z"
 }
