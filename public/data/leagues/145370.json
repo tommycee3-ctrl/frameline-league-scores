@@ -15,10 +15,10 @@
   "centerSlug": "maplewood-lanes-omaha-nebraska",
   "area": "Omaha",
   "sourceUpdated": "Sep 13, 2026",
-  "syncedAt": "2026-09-18T02:25:55.274Z",
+  "syncedAt": "2026-09-18T06:19:56.678Z",
   "status": "awaiting-results",
   "week": "5",
-  "fingerprint": "96ad2d7b53b0afcea7a5e7b942da98ac891161391e58d57d335005bc59f88915",
+  "fingerprint": "515ba5ab37e3dfc4e06e55060cbd49a32b866e125f17700d82224709f6b32c67",
   "lastCompletedCycle": null,
   "views": {
     "standings": [
@@ -1053,20 +1053,7 @@
         ],
         "emphasis": [
           [
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
+            true,
             false,
             false,
             false,
@@ -1088,9 +1075,32 @@
             false,
             false,
             false,
+            false,
+            false,
             false
           ],
           [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            true,
+            true,
+            true,
+            true
+          ],
+          [
+            true,
+            false,
+            false,
+            false,
+            false,
             false,
             false
           ],
@@ -1113,14 +1123,53 @@
         ],
         "recapDetails": [
           {},
+          {
+            "handicapSeries": "398",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "350",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "656",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "1404",
+            "handicapGames": [
+              "423",
+              "499",
+              "482"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0"
+            ]
+          },
           {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {}
-        ]
+          {
+            "handicapSeries": "446",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "446",
+            "handicapGames": [
+              "143",
+              "134",
+              "169"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/5/14537009122026f202605reprnt00.pdf"
       },
       {
         "title": "Team 6 matchup",
@@ -1157,6 +1206,11 @@
         ],
         "emphasis": [
           [
+            true,
+            false,
+            false,
+            false,
+            false,
             false,
             false
           ],
@@ -1171,17 +1225,34 @@
           ],
           [
             false,
-            false,
-            false,
-            false,
-            false
+            true,
+            true,
+            true,
+            true
           ]
         ],
         "recapDetails": [
           {},
-          {},
-          {}
-        ]
+          {
+            "handicapSeries": "197",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "197",
+            "handicapGames": [
+              "52",
+              "65",
+              "80"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/5/14537009122026f202605reprnt00.pdf"
       }
     ],
     "lanes": [
@@ -6635,7 +6706,7 @@
     {
       "week": "5",
       "sourceUpdated": "Sep 13, 2026",
-      "syncedAt": "2026-09-18T02:25:55.274Z",
+      "syncedAt": "2026-09-18T06:19:56.678Z",
       "views": {
         "standings": [
           {
@@ -7669,20 +7740,7 @@
             ],
             "emphasis": [
               [
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
+                true,
                 false,
                 false,
                 false,
@@ -7704,9 +7762,32 @@
                 false,
                 false,
                 false,
+                false,
+                false,
                 false
               ],
               [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                true,
+                true,
+                true,
+                true
+              ],
+              [
+                true,
+                false,
+                false,
+                false,
+                false,
                 false,
                 false
               ],
@@ -7729,14 +7810,53 @@
             ],
             "recapDetails": [
               {},
+              {
+                "handicapSeries": "398",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "350",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "656",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "1404",
+                "handicapGames": [
+                  "423",
+                  "499",
+                  "482"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0"
+                ]
+              },
               {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {}
-            ]
+              {
+                "handicapSeries": "446",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "446",
+                "handicapGames": [
+                  "143",
+                  "134",
+                  "169"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/5/14537009122026f202605reprnt00.pdf"
           },
           {
             "title": "Team 6 matchup",
@@ -7773,6 +7893,11 @@
             ],
             "emphasis": [
               [
+                true,
+                false,
+                false,
+                false,
+                false,
                 false,
                 false
               ],
@@ -7787,17 +7912,34 @@
               ],
               [
                 false,
-                false,
-                false,
-                false,
-                false
+                true,
+                true,
+                true,
+                true
               ]
             ],
             "recapDetails": [
               {},
-              {},
-              {}
-            ]
+              {
+                "handicapSeries": "197",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "197",
+                "handicapGames": [
+                  "52",
+                  "65",
+                  "80"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://pdf.leaguesecretary.com/uploads/2026/f/5/14537009122026f202605reprnt00.pdf"
           }
         ],
         "lanes": [
@@ -8379,5 +8521,5 @@
   ],
   "sourceFingerprint": "cadc4d10a4618f1e41773b95555bf613bbd05926fc15299c42c514221d7b4b9e",
   "lastAttemptedAt": null,
-  "lastCheckedAt": "2026-09-18T02:25:55.274Z"
+  "lastCheckedAt": "2026-09-18T06:19:56.678Z"
 }

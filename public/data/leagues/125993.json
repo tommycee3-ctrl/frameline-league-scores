@@ -15,10 +15,10 @@
   "centerSlug": "mockingbird-lanes",
   "area": "Omaha",
   "sourceUpdated": "Aug 8, 2026",
-  "syncedAt": "2026-09-15T15:33:58.365Z",
+  "syncedAt": "2026-09-18T06:11:05.988Z",
   "status": "awaiting-results",
   "week": "11",
-  "fingerprint": "92ac342684cddf186ca740c66496d8ad86a7a7c3560ec663b35f38b5dea95417",
+  "fingerprint": "e74db9cff01c14b46feea8d3f6cf957e9795809aea0f9211bb6e6fb30719f6b9",
   "lastCompletedCycle": null,
   "views": {
     "standings": [
@@ -3169,7 +3169,7 @@
     ],
     "recaps": [
       {
-        "title": "Team 11 matchup",
+        "title": "Cool Dad matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -3180,6 +3180,35 @@
           "Scratch series"
         ],
         "rows": [
+          [
+            "Team 16",
+            "Lane 27 points won: 0"
+          ],
+          [
+            "Sutter, Anden",
+            "178",
+            "0",
+            "",
+            "183",
+            "191",
+            "374"
+          ],
+          [
+            "Beatty, Emily",
+            "162",
+            "0",
+            "",
+            "176",
+            "",
+            "176"
+          ],
+          [
+            "Total",
+            "0",
+            "359",
+            "191",
+            "550"
+          ],
           [
             "Team 11",
             "Lane 28 points won: 0"
@@ -3244,44 +3273,39 @@
             "272",
             "298",
             "915"
-          ],
-          [
-            "Team 16",
-            "Lane 27 points won: 0"
-          ],
-          [
-            "Sutter, Anden",
-            "178",
-            "0",
-            "",
-            "183",
-            "191",
-            "374"
-          ],
-          [
-            "Beatty, Emily",
-            "162",
-            "0",
-            "",
-            "176",
-            "",
-            "176"
-          ],
-          [
-            "Total",
-            "0",
-            "359",
-            "191",
-            "550"
           ]
         ],
         "emphasis": [
           [
-            true,
+            false,
+            false
+          ],
+          [
             false,
             false,
             false,
             false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
             false,
             false
           ],
@@ -3314,40 +3338,6 @@
           ],
           [
             false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            true,
             false,
             false,
             false,
@@ -3380,10 +3370,24 @@
             false,
             false
           ]
+        ],
+        "recapDetails": [
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {}
         ]
       },
       {
-        "title": "Team 18 matchup",
+        "title": "Team 1 matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -3394,44 +3398,6 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 18",
-            "Lane 23 points won: 0"
-          ],
-          [
-            "Che, The",
-            "144",
-            "0",
-            "142",
-            "157",
-            "",
-            "299"
-          ],
-          [
-            "Chism, Jimmy",
-            "157",
-            "0",
-            "127",
-            "",
-            "",
-            "127"
-          ],
-          [
-            "Tonniges, Tencie",
-            "142",
-            "0",
-            "132",
-            "",
-            "",
-            "132"
-          ],
-          [
-            "Total",
-            "401",
-            "157",
-            "0",
-            "558"
-          ],
           [
             "Team 1",
             "Lane 24 points won: 0"
@@ -3487,15 +3453,48 @@
             "310",
             "147",
             "976"
+          ],
+          [
+            "Team 18",
+            "Lane 23 points won: 0"
+          ],
+          [
+            "Che, The",
+            "144",
+            "0",
+            "142",
+            "157",
+            "",
+            "299"
+          ],
+          [
+            "Chism, Jimmy",
+            "157",
+            "0",
+            "127",
+            "",
+            "",
+            "127"
+          ],
+          [
+            "Tonniges, Tencie",
+            "142",
+            "0",
+            "132",
+            "",
+            "",
+            "132"
+          ],
+          [
+            "Total",
+            "401",
+            "157",
+            "0",
+            "558"
           ]
         ],
         "emphasis": [
           [
-            true,
-            false,
-            false,
-            false,
-            false,
             false,
             false
           ],
@@ -3531,13 +3530,6 @@
             false,
             false,
             false,
-            false
-          ],
-          [
-            true,
-            false,
-            false,
-            false,
             false,
             false,
             false
@@ -3556,7 +3548,9 @@
             false,
             false,
             false,
-            false,
+            false
+          ],
+          [
             false,
             false
           ],
@@ -3594,10 +3588,24 @@
             false,
             false
           ]
+        ],
+        "recapDetails": [
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {}
         ]
       },
       {
-        "title": "Team 4 matchup",
+        "title": "Team 13 matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -3608,6 +3616,44 @@
           "Scratch series"
         ],
         "rows": [
+          [
+            "Team 13",
+            "Lane 25 points won: 0"
+          ],
+          [
+            "Shepherd, Brendan",
+            "137",
+            "0",
+            "",
+            "171",
+            "133",
+            "304"
+          ],
+          [
+            "Che, Vu",
+            "166",
+            "0",
+            "",
+            "118",
+            "",
+            "118"
+          ],
+          [
+            "Dewerth, Theresa",
+            "166",
+            "0",
+            "",
+            "159",
+            "",
+            "159"
+          ],
+          [
+            "Total",
+            "0",
+            "448",
+            "133",
+            "581"
+          ],
           [
             "Team 4",
             "Lane 26 points won: 0"
@@ -3681,89 +3727,10 @@
             "594",
             "142",
             "1026"
-          ],
-          [
-            "Team 13",
-            "Lane 25 points won: 0"
-          ],
-          [
-            "Shepherd, Brendan",
-            "137",
-            "0",
-            "",
-            "171",
-            "133",
-            "304"
-          ],
-          [
-            "Che, Vu",
-            "166",
-            "0",
-            "",
-            "118",
-            "",
-            "118"
-          ],
-          [
-            "Dewerth, Theresa",
-            "166",
-            "0",
-            "",
-            "159",
-            "",
-            "159"
-          ],
-          [
-            "Total",
-            "0",
-            "448",
-            "133",
-            "581"
           ]
         ],
         "emphasis": [
           [
-            true,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
             false,
             false
           ],
@@ -3802,7 +3769,38 @@
             false
           ],
           [
-            true,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
             false,
             false,
             false,
@@ -3844,10 +3842,26 @@
             false,
             false
           ]
+        ],
+        "recapDetails": [
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {}
         ]
       },
       {
-        "title": "Team 9 matchup",
+        "title": "Team 14 matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -3858,6 +3872,35 @@
           "Scratch series"
         ],
         "rows": [
+          [
+            "Team 14",
+            "Lane 32 points won: 0"
+          ],
+          [
+            "Dieterich, Matthew",
+            "181",
+            "0",
+            "181",
+            "",
+            "",
+            "181"
+          ],
+          [
+            "Tuck, Nick",
+            "179",
+            "0",
+            "275",
+            "166",
+            "",
+            "441"
+          ],
+          [
+            "Total",
+            "456",
+            "166",
+            "0",
+            "622"
+          ],
           [
             "Team 9",
             "Lane 31 points won: 0"
@@ -3904,62 +3947,10 @@
             "364",
             "181",
             "933"
-          ],
-          [
-            "Team 14",
-            "Lane 32 points won: 0"
-          ],
-          [
-            "Dieterich, Matthew",
-            "181",
-            "0",
-            "181",
-            "",
-            "",
-            "181"
-          ],
-          [
-            "Tuck, Nick",
-            "179",
-            "0",
-            "275",
-            "166",
-            "",
-            "441"
-          ],
-          [
-            "Total",
-            "456",
-            "166",
-            "0",
-            "622"
           ]
         ],
         "emphasis": [
           [
-            true,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
             false,
             false
           ],
@@ -3989,7 +3980,20 @@
             false
           ],
           [
-            true,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
             false,
             false,
             false,
@@ -4022,10 +4026,22 @@
             false,
             false
           ]
+        ],
+        "recapDetails": [
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {}
         ]
       },
       {
-        "title": "Team 7 matchup",
+        "title": "Team 17 matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -4036,6 +4052,26 @@
           "Scratch series"
         ],
         "rows": [
+          [
+            "Team 17",
+            "Lane 29 points won: 0"
+          ],
+          [
+            "Schwiesow, Carter",
+            "179",
+            "0",
+            "",
+            "181",
+            "213",
+            "394"
+          ],
+          [
+            "Total",
+            "0",
+            "181",
+            "213",
+            "394"
+          ],
           [
             "Team 7",
             "Lane 30 points won: 0"
@@ -4091,35 +4127,30 @@
             "350",
             "220",
             "909"
-          ],
-          [
-            "Team 17",
-            "Lane 29 points won: 0"
-          ],
-          [
-            "Schwiesow, Carter",
-            "179",
-            "0",
-            "",
-            "181",
-            "213",
-            "394"
-          ],
-          [
-            "Total",
-            "0",
-            "181",
-            "213",
-            "394"
           ]
         ],
         "emphasis": [
           [
-            true,
+            false,
+            false
+          ],
+          [
             false,
             false,
             false,
             false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
             false,
             false
           ],
@@ -4152,31 +4183,6 @@
           ],
           [
             false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            true,
             false,
             false,
             false,
@@ -4200,6 +4206,18 @@
             false,
             false
           ]
+        ],
+        "recapDetails": [
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {}
         ]
       },
       {
@@ -4246,11 +4264,6 @@
         ],
         "emphasis": [
           [
-            true,
-            false,
-            false,
-            false,
-            false,
             false,
             false
           ],
@@ -4279,10 +4292,16 @@
             false,
             false
           ]
+        ],
+        "recapDetails": [
+          {},
+          {},
+          {},
+          {}
         ]
       },
       {
-        "title": "Team 8 matchup",
+        "title": "Team 3 matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -4293,26 +4312,6 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 8",
-            "Lane 19 points won: 0"
-          ],
-          [
-            "Kadlec, Evan",
-            "148",
-            "0",
-            "239",
-            "",
-            "",
-            "239"
-          ],
-          [
-            "Total",
-            "239",
-            "0",
-            "0",
-            "239"
-          ],
           [
             "Team 3",
             "Lane 20 points won: 0"
@@ -4341,15 +4340,30 @@
             "0",
             "0",
             "307"
+          ],
+          [
+            "Team 8",
+            "Lane 19 points won: 0"
+          ],
+          [
+            "Kadlec, Evan",
+            "148",
+            "0",
+            "239",
+            "",
+            "",
+            "239"
+          ],
+          [
+            "Total",
+            "239",
+            "0",
+            "0",
+            "239"
           ]
         ],
         "emphasis": [
           [
-            true,
-            false,
-            false,
-            false,
-            false,
             false,
             false
           ],
@@ -4367,13 +4381,6 @@
             false,
             false,
             false,
-            false
-          ],
-          [
-            true,
-            false,
-            false,
-            false,
             false,
             false,
             false
@@ -4383,7 +4390,9 @@
             false,
             false,
             false,
-            false,
+            false
+          ],
+          [
             false,
             false
           ],
@@ -4403,6 +4412,15 @@
             false,
             false
           ]
+        ],
+        "recapDetails": [
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {}
         ]
       },
       {
@@ -4485,11 +4503,6 @@
         ],
         "emphasis": [
           [
-            true,
-            false,
-            false,
-            false,
-            false,
             false,
             false
           ],
@@ -4554,6 +4567,16 @@
             false,
             false
           ]
+        ],
+        "recapDetails": [
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {}
         ]
       }
     ],
@@ -6195,14 +6218,14 @@
       }
     ]
   },
-  "lastAttemptedAt": "2026-09-18T01:07:06.131Z",
-  "lastCheckedAt": "2026-09-15T15:33:58.365Z",
+  "lastAttemptedAt": null,
+  "lastCheckedAt": "2026-09-18T06:11:05.988Z",
   "sourceFingerprint": "9ba4a2ee4a40dfeff1d04fc9db78fbbe0aa86b85ae1270e30fcacb21c3de5b9e",
   "history": [
     {
       "week": "11",
       "sourceUpdated": "Aug 8, 2026",
-      "syncedAt": "2026-09-15T15:33:58.365Z",
+      "syncedAt": "2026-09-18T06:11:05.988Z",
       "views": {
         "standings": [
           {
@@ -9352,7 +9375,7 @@
         ],
         "recaps": [
           {
-            "title": "Team 11 matchup",
+            "title": "Cool Dad matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -9363,6 +9386,35 @@
               "Scratch series"
             ],
             "rows": [
+              [
+                "Team 16",
+                "Lane 27 points won: 0"
+              ],
+              [
+                "Sutter, Anden",
+                "178",
+                "0",
+                "",
+                "183",
+                "191",
+                "374"
+              ],
+              [
+                "Beatty, Emily",
+                "162",
+                "0",
+                "",
+                "176",
+                "",
+                "176"
+              ],
+              [
+                "Total",
+                "0",
+                "359",
+                "191",
+                "550"
+              ],
               [
                 "Team 11",
                 "Lane 28 points won: 0"
@@ -9427,44 +9479,39 @@
                 "272",
                 "298",
                 "915"
-              ],
-              [
-                "Team 16",
-                "Lane 27 points won: 0"
-              ],
-              [
-                "Sutter, Anden",
-                "178",
-                "0",
-                "",
-                "183",
-                "191",
-                "374"
-              ],
-              [
-                "Beatty, Emily",
-                "162",
-                "0",
-                "",
-                "176",
-                "",
-                "176"
-              ],
-              [
-                "Total",
-                "0",
-                "359",
-                "191",
-                "550"
               ]
             ],
             "emphasis": [
               [
-                true,
+                false,
+                false
+              ],
+              [
                 false,
                 false,
                 false,
                 false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
                 false,
                 false
               ],
@@ -9497,40 +9544,6 @@
               ],
               [
                 false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                true,
                 false,
                 false,
                 false,
@@ -9563,10 +9576,24 @@
                 false,
                 false
               ]
+            ],
+            "recapDetails": [
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {}
             ]
           },
           {
-            "title": "Team 18 matchup",
+            "title": "Team 1 matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -9577,44 +9604,6 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 18",
-                "Lane 23 points won: 0"
-              ],
-              [
-                "Che, The",
-                "144",
-                "0",
-                "142",
-                "157",
-                "",
-                "299"
-              ],
-              [
-                "Chism, Jimmy",
-                "157",
-                "0",
-                "127",
-                "",
-                "",
-                "127"
-              ],
-              [
-                "Tonniges, Tencie",
-                "142",
-                "0",
-                "132",
-                "",
-                "",
-                "132"
-              ],
-              [
-                "Total",
-                "401",
-                "157",
-                "0",
-                "558"
-              ],
               [
                 "Team 1",
                 "Lane 24 points won: 0"
@@ -9670,15 +9659,48 @@
                 "310",
                 "147",
                 "976"
+              ],
+              [
+                "Team 18",
+                "Lane 23 points won: 0"
+              ],
+              [
+                "Che, The",
+                "144",
+                "0",
+                "142",
+                "157",
+                "",
+                "299"
+              ],
+              [
+                "Chism, Jimmy",
+                "157",
+                "0",
+                "127",
+                "",
+                "",
+                "127"
+              ],
+              [
+                "Tonniges, Tencie",
+                "142",
+                "0",
+                "132",
+                "",
+                "",
+                "132"
+              ],
+              [
+                "Total",
+                "401",
+                "157",
+                "0",
+                "558"
               ]
             ],
             "emphasis": [
               [
-                true,
-                false,
-                false,
-                false,
-                false,
                 false,
                 false
               ],
@@ -9714,13 +9736,6 @@
                 false,
                 false,
                 false,
-                false
-              ],
-              [
-                true,
-                false,
-                false,
-                false,
                 false,
                 false,
                 false
@@ -9739,7 +9754,9 @@
                 false,
                 false,
                 false,
-                false,
+                false
+              ],
+              [
                 false,
                 false
               ],
@@ -9777,10 +9794,24 @@
                 false,
                 false
               ]
+            ],
+            "recapDetails": [
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {}
             ]
           },
           {
-            "title": "Team 4 matchup",
+            "title": "Team 13 matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -9791,6 +9822,44 @@
               "Scratch series"
             ],
             "rows": [
+              [
+                "Team 13",
+                "Lane 25 points won: 0"
+              ],
+              [
+                "Shepherd, Brendan",
+                "137",
+                "0",
+                "",
+                "171",
+                "133",
+                "304"
+              ],
+              [
+                "Che, Vu",
+                "166",
+                "0",
+                "",
+                "118",
+                "",
+                "118"
+              ],
+              [
+                "Dewerth, Theresa",
+                "166",
+                "0",
+                "",
+                "159",
+                "",
+                "159"
+              ],
+              [
+                "Total",
+                "0",
+                "448",
+                "133",
+                "581"
+              ],
               [
                 "Team 4",
                 "Lane 26 points won: 0"
@@ -9864,89 +9933,10 @@
                 "594",
                 "142",
                 "1026"
-              ],
-              [
-                "Team 13",
-                "Lane 25 points won: 0"
-              ],
-              [
-                "Shepherd, Brendan",
-                "137",
-                "0",
-                "",
-                "171",
-                "133",
-                "304"
-              ],
-              [
-                "Che, Vu",
-                "166",
-                "0",
-                "",
-                "118",
-                "",
-                "118"
-              ],
-              [
-                "Dewerth, Theresa",
-                "166",
-                "0",
-                "",
-                "159",
-                "",
-                "159"
-              ],
-              [
-                "Total",
-                "0",
-                "448",
-                "133",
-                "581"
               ]
             ],
             "emphasis": [
               [
-                true,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
                 false,
                 false
               ],
@@ -9985,7 +9975,38 @@
                 false
               ],
               [
-                true,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
                 false,
                 false,
                 false,
@@ -10027,10 +10048,26 @@
                 false,
                 false
               ]
+            ],
+            "recapDetails": [
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {}
             ]
           },
           {
-            "title": "Team 9 matchup",
+            "title": "Team 14 matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -10041,6 +10078,35 @@
               "Scratch series"
             ],
             "rows": [
+              [
+                "Team 14",
+                "Lane 32 points won: 0"
+              ],
+              [
+                "Dieterich, Matthew",
+                "181",
+                "0",
+                "181",
+                "",
+                "",
+                "181"
+              ],
+              [
+                "Tuck, Nick",
+                "179",
+                "0",
+                "275",
+                "166",
+                "",
+                "441"
+              ],
+              [
+                "Total",
+                "456",
+                "166",
+                "0",
+                "622"
+              ],
               [
                 "Team 9",
                 "Lane 31 points won: 0"
@@ -10087,62 +10153,10 @@
                 "364",
                 "181",
                 "933"
-              ],
-              [
-                "Team 14",
-                "Lane 32 points won: 0"
-              ],
-              [
-                "Dieterich, Matthew",
-                "181",
-                "0",
-                "181",
-                "",
-                "",
-                "181"
-              ],
-              [
-                "Tuck, Nick",
-                "179",
-                "0",
-                "275",
-                "166",
-                "",
-                "441"
-              ],
-              [
-                "Total",
-                "456",
-                "166",
-                "0",
-                "622"
               ]
             ],
             "emphasis": [
               [
-                true,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
                 false,
                 false
               ],
@@ -10172,7 +10186,20 @@
                 false
               ],
               [
-                true,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
                 false,
                 false,
                 false,
@@ -10205,10 +10232,22 @@
                 false,
                 false
               ]
+            ],
+            "recapDetails": [
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {}
             ]
           },
           {
-            "title": "Team 7 matchup",
+            "title": "Team 17 matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -10219,6 +10258,26 @@
               "Scratch series"
             ],
             "rows": [
+              [
+                "Team 17",
+                "Lane 29 points won: 0"
+              ],
+              [
+                "Schwiesow, Carter",
+                "179",
+                "0",
+                "",
+                "181",
+                "213",
+                "394"
+              ],
+              [
+                "Total",
+                "0",
+                "181",
+                "213",
+                "394"
+              ],
               [
                 "Team 7",
                 "Lane 30 points won: 0"
@@ -10274,35 +10333,30 @@
                 "350",
                 "220",
                 "909"
-              ],
-              [
-                "Team 17",
-                "Lane 29 points won: 0"
-              ],
-              [
-                "Schwiesow, Carter",
-                "179",
-                "0",
-                "",
-                "181",
-                "213",
-                "394"
-              ],
-              [
-                "Total",
-                "0",
-                "181",
-                "213",
-                "394"
               ]
             ],
             "emphasis": [
               [
-                true,
+                false,
+                false
+              ],
+              [
                 false,
                 false,
                 false,
                 false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
                 false,
                 false
               ],
@@ -10335,31 +10389,6 @@
               ],
               [
                 false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                true,
                 false,
                 false,
                 false,
@@ -10383,6 +10412,18 @@
                 false,
                 false
               ]
+            ],
+            "recapDetails": [
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {}
             ]
           },
           {
@@ -10429,11 +10470,6 @@
             ],
             "emphasis": [
               [
-                true,
-                false,
-                false,
-                false,
-                false,
                 false,
                 false
               ],
@@ -10462,10 +10498,16 @@
                 false,
                 false
               ]
+            ],
+            "recapDetails": [
+              {},
+              {},
+              {},
+              {}
             ]
           },
           {
-            "title": "Team 8 matchup",
+            "title": "Team 3 matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -10476,26 +10518,6 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 8",
-                "Lane 19 points won: 0"
-              ],
-              [
-                "Kadlec, Evan",
-                "148",
-                "0",
-                "239",
-                "",
-                "",
-                "239"
-              ],
-              [
-                "Total",
-                "239",
-                "0",
-                "0",
-                "239"
-              ],
               [
                 "Team 3",
                 "Lane 20 points won: 0"
@@ -10524,15 +10546,30 @@
                 "0",
                 "0",
                 "307"
+              ],
+              [
+                "Team 8",
+                "Lane 19 points won: 0"
+              ],
+              [
+                "Kadlec, Evan",
+                "148",
+                "0",
+                "239",
+                "",
+                "",
+                "239"
+              ],
+              [
+                "Total",
+                "239",
+                "0",
+                "0",
+                "239"
               ]
             ],
             "emphasis": [
               [
-                true,
-                false,
-                false,
-                false,
-                false,
                 false,
                 false
               ],
@@ -10550,13 +10587,6 @@
                 false,
                 false,
                 false,
-                false
-              ],
-              [
-                true,
-                false,
-                false,
-                false,
                 false,
                 false,
                 false
@@ -10566,7 +10596,9 @@
                 false,
                 false,
                 false,
-                false,
+                false
+              ],
+              [
                 false,
                 false
               ],
@@ -10586,6 +10618,15 @@
                 false,
                 false
               ]
+            ],
+            "recapDetails": [
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {}
             ]
           },
           {
@@ -10668,11 +10709,6 @@
             ],
             "emphasis": [
               [
-                true,
-                false,
-                false,
-                false,
-                false,
                 false,
                 false
               ],
@@ -10737,6 +10773,16 @@
                 false,
                 false
               ]
+            ],
+            "recapDetails": [
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {}
             ]
           }
         ],

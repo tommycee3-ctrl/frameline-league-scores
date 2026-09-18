@@ -15,10 +15,10 @@
   "centerSlug": "hollywood-bowl-lincoln-nebraska",
   "area": "Lincoln",
   "sourceUpdated": "Sep 13, 2026",
-  "syncedAt": "2026-09-15T15:41:53.128Z",
+  "syncedAt": "2026-09-18T06:10:55.961Z",
   "status": "current",
   "week": "1",
-  "fingerprint": "5259934c011367ac92c4fbd09c32243bf58a7fee7570d80e88231a941856ac0d",
+  "fingerprint": "2621103e7c6f54f3c267f86e72442faa13c867710b6938c9d7fbfc5c8412d0f5",
   "lastCompletedCycle": "2026-09-12",
   "views": {
     "standings": [
@@ -2285,7 +2285,7 @@
     ],
     "recaps": [
       {
-        "title": "2 matchup",
+        "title": "1 matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -2296,53 +2296,6 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 2",
-            "Lane 2 points won: 1"
-          ],
-          [
-            "Beeck, Ethan",
-            "104",
-            "0",
-            "114",
-            "118",
-            "82",
-            "314"
-          ],
-          [
-            "Dickmeyer, Drew",
-            "108",
-            "0",
-            "113",
-            "105",
-            "107",
-            "325"
-          ],
-          [
-            "Spilman, Kyle",
-            "90",
-            "0",
-            "81",
-            "85",
-            "106",
-            "272"
-          ],
-          [
-            "Pleskac, Jacob",
-            "125",
-            "0",
-            "127",
-            "115",
-            "134",
-            "376"
-          ],
-          [
-            "Total",
-            "435",
-            "423",
-            "429",
-            "1287"
-          ],
           [
             "Team 1",
             "Lane 1 points won: 2"
@@ -2389,15 +2342,57 @@
             "341",
             "356",
             "968"
+          ],
+          [
+            "Team 2",
+            "Lane 2 points won: 1"
+          ],
+          [
+            "Beeck, Ethan",
+            "104",
+            "0",
+            "114",
+            "118",
+            "82",
+            "314"
+          ],
+          [
+            "Dickmeyer, Drew",
+            "108",
+            "0",
+            "113",
+            "105",
+            "107",
+            "325"
+          ],
+          [
+            "Spilman, Kyle",
+            "90",
+            "0",
+            "81",
+            "85",
+            "106",
+            "272"
+          ],
+          [
+            "Pleskac, Jacob",
+            "125",
+            "0",
+            "127",
+            "115",
+            "134",
+            "376"
+          ],
+          [
+            "Total",
+            "435",
+            "423",
+            "429",
+            "1287"
           ]
         ],
         "emphasis": [
           [
-            true,
-            false,
-            false,
-            false,
-            false,
             false,
             false
           ],
@@ -2445,11 +2440,6 @@
             false
           ],
           [
-            true,
-            false,
-            false,
-            false,
-            false,
             false,
             false
           ],
@@ -2496,10 +2486,24 @@
             false,
             false
           ]
+        ],
+        "recapDetails": [
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {}
         ]
       },
       {
-        "title": "9 matchup",
+        "title": "10 matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -2510,53 +2514,6 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 9",
-            "Lane 9 points won: 1"
-          ],
-          [
-            "Hoffer, Avery",
-            "100",
-            "0",
-            "90",
-            "90",
-            "90",
-            "270"
-          ],
-          [
-            "Hoffer, Kaden",
-            "100",
-            "0",
-            "90",
-            "90",
-            "90",
-            "270"
-          ],
-          [
-            "Phillips, Shawn",
-            "101",
-            "0",
-            "91",
-            "101",
-            "113",
-            "305"
-          ],
-          [
-            "Faith, Celia",
-            "94",
-            "0",
-            "122",
-            "69",
-            "92",
-            "283"
-          ],
-          [
-            "Total",
-            "393",
-            "350",
-            "385",
-            "1128"
-          ],
           [
             "Team 10",
             "Lane 10 points won: 2"
@@ -2603,15 +2560,57 @@
             "502",
             "383",
             "1330"
+          ],
+          [
+            "Team 9",
+            "Lane 9 points won: 1"
+          ],
+          [
+            "Hoffer, Avery",
+            "100",
+            "0",
+            "90",
+            "90",
+            "90",
+            "270"
+          ],
+          [
+            "Hoffer, Kaden",
+            "100",
+            "0",
+            "90",
+            "90",
+            "90",
+            "270"
+          ],
+          [
+            "Phillips, Shawn",
+            "101",
+            "0",
+            "91",
+            "101",
+            "113",
+            "305"
+          ],
+          [
+            "Faith, Celia",
+            "94",
+            "0",
+            "122",
+            "69",
+            "92",
+            "283"
+          ],
+          [
+            "Total",
+            "393",
+            "350",
+            "385",
+            "1128"
           ]
         ],
         "emphasis": [
           [
-            true,
-            false,
-            false,
-            false,
-            false,
             false,
             false
           ],
@@ -2659,11 +2658,6 @@
             false
           ],
           [
-            true,
-            false,
-            false,
-            false,
-            false,
             false,
             false
           ],
@@ -2710,10 +2704,24 @@
             false,
             false
           ]
+        ],
+        "recapDetails": [
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {}
         ]
       },
       {
-        "title": "12 matchup",
+        "title": "11 matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -2724,53 +2732,6 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 12",
-            "Lane 12 points won: 2"
-          ],
-          [
-            "Parish, Abigail",
-            "93",
-            "0",
-            "90",
-            "102",
-            "88",
-            "280"
-          ],
-          [
-            "Vondra, Sydney",
-            "100",
-            "0",
-            "84",
-            "105",
-            "113",
-            "302"
-          ],
-          [
-            "Smith, Isis",
-            "115",
-            "0",
-            "107",
-            "116",
-            "123",
-            "346"
-          ],
-          [
-            "Fisher, Jasmine",
-            "99",
-            "0",
-            "84",
-            "100",
-            "113",
-            "297"
-          ],
-          [
-            "Total",
-            "365",
-            "423",
-            "437",
-            "1225"
-          ],
           [
             "Team 11",
             "Lane 11 points won: 1"
@@ -2817,15 +2778,57 @@
             "378",
             "351",
             "1125"
+          ],
+          [
+            "Team 12",
+            "Lane 12 points won: 2"
+          ],
+          [
+            "Parish, Abigail",
+            "93",
+            "0",
+            "90",
+            "102",
+            "88",
+            "280"
+          ],
+          [
+            "Vondra, Sydney",
+            "100",
+            "0",
+            "84",
+            "105",
+            "113",
+            "302"
+          ],
+          [
+            "Smith, Isis",
+            "115",
+            "0",
+            "107",
+            "116",
+            "123",
+            "346"
+          ],
+          [
+            "Fisher, Jasmine",
+            "99",
+            "0",
+            "84",
+            "100",
+            "113",
+            "297"
+          ],
+          [
+            "Total",
+            "365",
+            "423",
+            "437",
+            "1225"
           ]
         ],
         "emphasis": [
           [
-            true,
-            false,
-            false,
-            false,
-            false,
             false,
             false
           ],
@@ -2873,11 +2876,6 @@
             false
           ],
           [
-            true,
-            false,
-            false,
-            false,
-            false,
             false,
             false
           ],
@@ -2924,10 +2922,24 @@
             false,
             false
           ]
+        ],
+        "recapDetails": [
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {}
         ]
       },
       {
-        "title": "14 matchup",
+        "title": "13 matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -2938,53 +2950,6 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 14",
-            "Lane 14 points won: 2"
-          ],
-          [
-            "Ziegelbein, Erin",
-            "127",
-            "0",
-            "122",
-            "125",
-            "134",
-            "381"
-          ],
-          [
-            "Drbal, Dexter",
-            "134",
-            "0",
-            "139",
-            "134",
-            "131",
-            "404"
-          ],
-          [
-            "Truax, Carson",
-            "117",
-            "0",
-            "108",
-            "134",
-            "110",
-            "352"
-          ],
-          [
-            "Barthleman, Cordell",
-            "137",
-            "0",
-            "162",
-            "129",
-            "120",
-            "411"
-          ],
-          [
-            "Total",
-            "531",
-            "522",
-            "495",
-            "1548"
-          ],
           [
             "Team 13",
             "Lane 13 points won: 1"
@@ -3031,15 +2996,57 @@
             "386",
             "423",
             "1249"
+          ],
+          [
+            "Team 14",
+            "Lane 14 points won: 2"
+          ],
+          [
+            "Ziegelbein, Erin",
+            "127",
+            "0",
+            "122",
+            "125",
+            "134",
+            "381"
+          ],
+          [
+            "Drbal, Dexter",
+            "134",
+            "0",
+            "139",
+            "134",
+            "131",
+            "404"
+          ],
+          [
+            "Truax, Carson",
+            "117",
+            "0",
+            "108",
+            "134",
+            "110",
+            "352"
+          ],
+          [
+            "Barthleman, Cordell",
+            "137",
+            "0",
+            "162",
+            "129",
+            "120",
+            "411"
+          ],
+          [
+            "Total",
+            "531",
+            "522",
+            "495",
+            "1548"
           ]
         ],
         "emphasis": [
           [
-            true,
-            false,
-            false,
-            false,
-            false,
             false,
             false
           ],
@@ -3087,11 +3094,6 @@
             false
           ],
           [
-            true,
-            false,
-            false,
-            false,
-            false,
             false,
             false
           ],
@@ -3138,10 +3140,24 @@
             false,
             false
           ]
+        ],
+        "recapDetails": [
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {}
         ]
       },
       {
-        "title": "16 matchup",
+        "title": "15 matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -3152,53 +3168,6 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 16",
-            "Lane 16 points won: 1"
-          ],
-          [
-            "Wrich Iii, Larry",
-            "100",
-            "0",
-            "90",
-            "90",
-            "90",
-            "270"
-          ],
-          [
-            "Asbury, Billy",
-            "102",
-            "0",
-            "74",
-            "117",
-            "116",
-            "307"
-          ],
-          [
-            "True, Donald",
-            "78",
-            "0",
-            "74",
-            "71",
-            "90",
-            "235"
-          ],
-          [
-            ", Vacant",
-            "100",
-            "0",
-            "100",
-            "100",
-            "100",
-            "300"
-          ],
-          [
-            "Total",
-            "338",
-            "378",
-            "396",
-            "1112"
-          ],
           [
             "Team 15",
             "Lane 15 points won: 2"
@@ -3245,133 +3214,13 @@
             "378",
             "373",
             "1101"
-          ]
-        ],
-        "emphasis": [
-          [
-            true,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
           ],
           [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
+            "Team 16",
+            "Lane 16 points won: 1"
           ],
           [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            true,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false
-          ]
-        ]
-      },
-      {
-        "title": "4 matchup",
-        "headers": [
-          "Bowler",
-          "Average",
-          "Handicap",
-          "Game 1",
-          "Game 2",
-          "Game 3",
-          "Scratch series"
-        ],
-        "rows": [
-          [
-            "Team 4",
-            "Lane 4 points won: 1"
-          ],
-          [
-            "Coffey, Angie",
+            "Wrich Iii, Larry",
             "100",
             "0",
             "90",
@@ -3380,22 +3229,22 @@
             "270"
           ],
           [
-            "Havel, Brandi",
-            "66",
+            "Asbury, Billy",
+            "102",
             "0",
-            "62",
-            "62",
-            "76",
-            "200"
+            "74",
+            "117",
+            "116",
+            "307"
           ],
           [
-            "Hassel, Ryan",
-            "86",
+            "True, Donald",
+            "78",
             "0",
-            "83",
-            "107",
-            "68",
-            "258"
+            "74",
+            "71",
+            "90",
+            "235"
           ],
           [
             ", Vacant",
@@ -3408,11 +3257,135 @@
           ],
           [
             "Total",
-            "335",
-            "359",
-            "334",
-            "1028"
+            "338",
+            "378",
+            "396",
+            "1112"
+          ]
+        ],
+        "emphasis": [
+          [
+            false,
+            false
           ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        ],
+        "recapDetails": [
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {}
+        ]
+      },
+      {
+        "title": "3 matchup",
+        "headers": [
+          "Bowler",
+          "Average",
+          "Handicap",
+          "Game 1",
+          "Game 2",
+          "Game 3",
+          "Scratch series"
+        ],
+        "rows": [
           [
             "Team 3",
             "Lane 3 points won: 2"
@@ -3459,15 +3432,57 @@
             "395",
             "404",
             "1201"
+          ],
+          [
+            "Team 4",
+            "Lane 4 points won: 1"
+          ],
+          [
+            "Coffey, Angie",
+            "100",
+            "0",
+            "90",
+            "90",
+            "90",
+            "270"
+          ],
+          [
+            "Havel, Brandi",
+            "66",
+            "0",
+            "62",
+            "62",
+            "76",
+            "200"
+          ],
+          [
+            "Hassel, Ryan",
+            "86",
+            "0",
+            "83",
+            "107",
+            "68",
+            "258"
+          ],
+          [
+            ", Vacant",
+            "100",
+            "0",
+            "100",
+            "100",
+            "100",
+            "300"
+          ],
+          [
+            "Total",
+            "335",
+            "359",
+            "334",
+            "1028"
           ]
         ],
         "emphasis": [
           [
-            true,
-            false,
-            false,
-            false,
-            false,
             false,
             false
           ],
@@ -3515,11 +3530,6 @@
             false
           ],
           [
-            true,
-            false,
-            false,
-            false,
-            false,
             false,
             false
           ],
@@ -3566,10 +3576,24 @@
             false,
             false
           ]
+        ],
+        "recapDetails": [
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {}
         ]
       },
       {
-        "title": "6 matchup",
+        "title": "5 matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -3580,53 +3604,6 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 6",
-            "Lane 6 points won: 2"
-          ],
-          [
-            "Duff, Arthur",
-            "114",
-            "0",
-            "127",
-            "119",
-            "98",
-            "344"
-          ],
-          [
-            "Roland, Willie",
-            "154",
-            "0",
-            "150",
-            "139",
-            "175",
-            "464"
-          ],
-          [
-            "Mansfield, Shane",
-            "107",
-            "0",
-            "94",
-            "114",
-            "113",
-            "321"
-          ],
-          [
-            "Greenberger, Anthony",
-            "98",
-            "0",
-            "102",
-            "93",
-            "100",
-            "295"
-          ],
-          [
-            "Total",
-            "473",
-            "465",
-            "486",
-            "1424"
-          ],
           [
             "Team 5",
             "Lane 5 points won: 1"
@@ -3673,15 +3650,57 @@
             "364",
             "312",
             "1007"
+          ],
+          [
+            "Team 6",
+            "Lane 6 points won: 2"
+          ],
+          [
+            "Duff, Arthur",
+            "114",
+            "0",
+            "127",
+            "119",
+            "98",
+            "344"
+          ],
+          [
+            "Roland, Willie",
+            "154",
+            "0",
+            "150",
+            "139",
+            "175",
+            "464"
+          ],
+          [
+            "Mansfield, Shane",
+            "107",
+            "0",
+            "94",
+            "114",
+            "113",
+            "321"
+          ],
+          [
+            "Greenberger, Anthony",
+            "98",
+            "0",
+            "102",
+            "93",
+            "100",
+            "295"
+          ],
+          [
+            "Total",
+            "473",
+            "465",
+            "486",
+            "1424"
           ]
         ],
         "emphasis": [
           [
-            true,
-            false,
-            false,
-            false,
-            false,
             false,
             false
           ],
@@ -3729,11 +3748,6 @@
             false
           ],
           [
-            true,
-            false,
-            false,
-            false,
-            false,
             false,
             false
           ],
@@ -3780,10 +3794,24 @@
             false,
             false
           ]
+        ],
+        "recapDetails": [
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {}
         ]
       },
       {
-        "title": "8 matchup",
+        "title": "7 matchup",
         "headers": [
           "Bowler",
           "Average",
@@ -3794,53 +3822,6 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 8",
-            "Lane 8 points won: 2"
-          ],
-          [
-            "Hakenewerth, Spencer",
-            "153",
-            "0",
-            "174",
-            "120",
-            "166",
-            "460"
-          ],
-          [
-            "Hansen, Jon",
-            "130",
-            "0",
-            "115",
-            "137",
-            "138",
-            "390"
-          ],
-          [
-            "Zimmerman, Tyler",
-            "146",
-            "0",
-            "169",
-            "124",
-            "145",
-            "438"
-          ],
-          [
-            ", Vacant",
-            "100",
-            "0",
-            "100",
-            "100",
-            "100",
-            "300"
-          ],
-          [
-            "Total",
-            "558",
-            "481",
-            "549",
-            "1588"
-          ],
           [
             "Team 7",
             "Lane 7 points won: 1"
@@ -3887,15 +3868,57 @@
             "314",
             "301",
             "927"
+          ],
+          [
+            "Team 8",
+            "Lane 8 points won: 2"
+          ],
+          [
+            "Hakenewerth, Spencer",
+            "153",
+            "0",
+            "174",
+            "120",
+            "166",
+            "460"
+          ],
+          [
+            "Hansen, Jon",
+            "130",
+            "0",
+            "115",
+            "137",
+            "138",
+            "390"
+          ],
+          [
+            "Zimmerman, Tyler",
+            "146",
+            "0",
+            "169",
+            "124",
+            "145",
+            "438"
+          ],
+          [
+            ", Vacant",
+            "100",
+            "0",
+            "100",
+            "100",
+            "100",
+            "300"
+          ],
+          [
+            "Total",
+            "558",
+            "481",
+            "549",
+            "1588"
           ]
         ],
         "emphasis": [
           [
-            true,
-            false,
-            false,
-            false,
-            false,
             false,
             false
           ],
@@ -3943,11 +3966,6 @@
             false
           ],
           [
-            true,
-            false,
-            false,
-            false,
-            false,
             false,
             false
           ],
@@ -3994,6 +4012,20 @@
             false,
             false
           ]
+        ],
+        "recapDetails": [
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {}
         ]
       }
     ],
@@ -5607,14 +5639,14 @@
       }
     ]
   },
-  "lastAttemptedAt": "2026-09-18T01:07:00.935Z",
-  "lastCheckedAt": "2026-09-15T15:41:53.128Z",
+  "lastAttemptedAt": null,
+  "lastCheckedAt": "2026-09-18T06:10:55.961Z",
   "sourceFingerprint": "008692cbdf46f32027b4fd60b4b1f93dc60e11be04f34d0339c73b7d3afb940d",
   "history": [
     {
       "week": "1",
       "sourceUpdated": "Sep 13, 2026",
-      "syncedAt": "2026-09-15T15:41:53.128Z",
+      "syncedAt": "2026-09-18T06:10:55.961Z",
       "views": {
         "standings": [
           {
@@ -7880,7 +7912,7 @@
         ],
         "recaps": [
           {
-            "title": "2 matchup",
+            "title": "1 matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -7891,53 +7923,6 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 2",
-                "Lane 2 points won: 1"
-              ],
-              [
-                "Beeck, Ethan",
-                "104",
-                "0",
-                "114",
-                "118",
-                "82",
-                "314"
-              ],
-              [
-                "Dickmeyer, Drew",
-                "108",
-                "0",
-                "113",
-                "105",
-                "107",
-                "325"
-              ],
-              [
-                "Spilman, Kyle",
-                "90",
-                "0",
-                "81",
-                "85",
-                "106",
-                "272"
-              ],
-              [
-                "Pleskac, Jacob",
-                "125",
-                "0",
-                "127",
-                "115",
-                "134",
-                "376"
-              ],
-              [
-                "Total",
-                "435",
-                "423",
-                "429",
-                "1287"
-              ],
               [
                 "Team 1",
                 "Lane 1 points won: 2"
@@ -7984,15 +7969,57 @@
                 "341",
                 "356",
                 "968"
+              ],
+              [
+                "Team 2",
+                "Lane 2 points won: 1"
+              ],
+              [
+                "Beeck, Ethan",
+                "104",
+                "0",
+                "114",
+                "118",
+                "82",
+                "314"
+              ],
+              [
+                "Dickmeyer, Drew",
+                "108",
+                "0",
+                "113",
+                "105",
+                "107",
+                "325"
+              ],
+              [
+                "Spilman, Kyle",
+                "90",
+                "0",
+                "81",
+                "85",
+                "106",
+                "272"
+              ],
+              [
+                "Pleskac, Jacob",
+                "125",
+                "0",
+                "127",
+                "115",
+                "134",
+                "376"
+              ],
+              [
+                "Total",
+                "435",
+                "423",
+                "429",
+                "1287"
               ]
             ],
             "emphasis": [
               [
-                true,
-                false,
-                false,
-                false,
-                false,
                 false,
                 false
               ],
@@ -8040,11 +8067,6 @@
                 false
               ],
               [
-                true,
-                false,
-                false,
-                false,
-                false,
                 false,
                 false
               ],
@@ -8091,10 +8113,24 @@
                 false,
                 false
               ]
+            ],
+            "recapDetails": [
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {}
             ]
           },
           {
-            "title": "9 matchup",
+            "title": "10 matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -8105,53 +8141,6 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 9",
-                "Lane 9 points won: 1"
-              ],
-              [
-                "Hoffer, Avery",
-                "100",
-                "0",
-                "90",
-                "90",
-                "90",
-                "270"
-              ],
-              [
-                "Hoffer, Kaden",
-                "100",
-                "0",
-                "90",
-                "90",
-                "90",
-                "270"
-              ],
-              [
-                "Phillips, Shawn",
-                "101",
-                "0",
-                "91",
-                "101",
-                "113",
-                "305"
-              ],
-              [
-                "Faith, Celia",
-                "94",
-                "0",
-                "122",
-                "69",
-                "92",
-                "283"
-              ],
-              [
-                "Total",
-                "393",
-                "350",
-                "385",
-                "1128"
-              ],
               [
                 "Team 10",
                 "Lane 10 points won: 2"
@@ -8198,15 +8187,57 @@
                 "502",
                 "383",
                 "1330"
+              ],
+              [
+                "Team 9",
+                "Lane 9 points won: 1"
+              ],
+              [
+                "Hoffer, Avery",
+                "100",
+                "0",
+                "90",
+                "90",
+                "90",
+                "270"
+              ],
+              [
+                "Hoffer, Kaden",
+                "100",
+                "0",
+                "90",
+                "90",
+                "90",
+                "270"
+              ],
+              [
+                "Phillips, Shawn",
+                "101",
+                "0",
+                "91",
+                "101",
+                "113",
+                "305"
+              ],
+              [
+                "Faith, Celia",
+                "94",
+                "0",
+                "122",
+                "69",
+                "92",
+                "283"
+              ],
+              [
+                "Total",
+                "393",
+                "350",
+                "385",
+                "1128"
               ]
             ],
             "emphasis": [
               [
-                true,
-                false,
-                false,
-                false,
-                false,
                 false,
                 false
               ],
@@ -8254,11 +8285,6 @@
                 false
               ],
               [
-                true,
-                false,
-                false,
-                false,
-                false,
                 false,
                 false
               ],
@@ -8305,10 +8331,24 @@
                 false,
                 false
               ]
+            ],
+            "recapDetails": [
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {}
             ]
           },
           {
-            "title": "12 matchup",
+            "title": "11 matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -8319,53 +8359,6 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 12",
-                "Lane 12 points won: 2"
-              ],
-              [
-                "Parish, Abigail",
-                "93",
-                "0",
-                "90",
-                "102",
-                "88",
-                "280"
-              ],
-              [
-                "Vondra, Sydney",
-                "100",
-                "0",
-                "84",
-                "105",
-                "113",
-                "302"
-              ],
-              [
-                "Smith, Isis",
-                "115",
-                "0",
-                "107",
-                "116",
-                "123",
-                "346"
-              ],
-              [
-                "Fisher, Jasmine",
-                "99",
-                "0",
-                "84",
-                "100",
-                "113",
-                "297"
-              ],
-              [
-                "Total",
-                "365",
-                "423",
-                "437",
-                "1225"
-              ],
               [
                 "Team 11",
                 "Lane 11 points won: 1"
@@ -8412,15 +8405,57 @@
                 "378",
                 "351",
                 "1125"
+              ],
+              [
+                "Team 12",
+                "Lane 12 points won: 2"
+              ],
+              [
+                "Parish, Abigail",
+                "93",
+                "0",
+                "90",
+                "102",
+                "88",
+                "280"
+              ],
+              [
+                "Vondra, Sydney",
+                "100",
+                "0",
+                "84",
+                "105",
+                "113",
+                "302"
+              ],
+              [
+                "Smith, Isis",
+                "115",
+                "0",
+                "107",
+                "116",
+                "123",
+                "346"
+              ],
+              [
+                "Fisher, Jasmine",
+                "99",
+                "0",
+                "84",
+                "100",
+                "113",
+                "297"
+              ],
+              [
+                "Total",
+                "365",
+                "423",
+                "437",
+                "1225"
               ]
             ],
             "emphasis": [
               [
-                true,
-                false,
-                false,
-                false,
-                false,
                 false,
                 false
               ],
@@ -8468,11 +8503,6 @@
                 false
               ],
               [
-                true,
-                false,
-                false,
-                false,
-                false,
                 false,
                 false
               ],
@@ -8519,10 +8549,24 @@
                 false,
                 false
               ]
+            ],
+            "recapDetails": [
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {}
             ]
           },
           {
-            "title": "14 matchup",
+            "title": "13 matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -8533,53 +8577,6 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 14",
-                "Lane 14 points won: 2"
-              ],
-              [
-                "Ziegelbein, Erin",
-                "127",
-                "0",
-                "122",
-                "125",
-                "134",
-                "381"
-              ],
-              [
-                "Drbal, Dexter",
-                "134",
-                "0",
-                "139",
-                "134",
-                "131",
-                "404"
-              ],
-              [
-                "Truax, Carson",
-                "117",
-                "0",
-                "108",
-                "134",
-                "110",
-                "352"
-              ],
-              [
-                "Barthleman, Cordell",
-                "137",
-                "0",
-                "162",
-                "129",
-                "120",
-                "411"
-              ],
-              [
-                "Total",
-                "531",
-                "522",
-                "495",
-                "1548"
-              ],
               [
                 "Team 13",
                 "Lane 13 points won: 1"
@@ -8626,15 +8623,57 @@
                 "386",
                 "423",
                 "1249"
+              ],
+              [
+                "Team 14",
+                "Lane 14 points won: 2"
+              ],
+              [
+                "Ziegelbein, Erin",
+                "127",
+                "0",
+                "122",
+                "125",
+                "134",
+                "381"
+              ],
+              [
+                "Drbal, Dexter",
+                "134",
+                "0",
+                "139",
+                "134",
+                "131",
+                "404"
+              ],
+              [
+                "Truax, Carson",
+                "117",
+                "0",
+                "108",
+                "134",
+                "110",
+                "352"
+              ],
+              [
+                "Barthleman, Cordell",
+                "137",
+                "0",
+                "162",
+                "129",
+                "120",
+                "411"
+              ],
+              [
+                "Total",
+                "531",
+                "522",
+                "495",
+                "1548"
               ]
             ],
             "emphasis": [
               [
-                true,
-                false,
-                false,
-                false,
-                false,
                 false,
                 false
               ],
@@ -8682,11 +8721,6 @@
                 false
               ],
               [
-                true,
-                false,
-                false,
-                false,
-                false,
                 false,
                 false
               ],
@@ -8733,10 +8767,24 @@
                 false,
                 false
               ]
+            ],
+            "recapDetails": [
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {}
             ]
           },
           {
-            "title": "16 matchup",
+            "title": "15 matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -8747,53 +8795,6 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 16",
-                "Lane 16 points won: 1"
-              ],
-              [
-                "Wrich Iii, Larry",
-                "100",
-                "0",
-                "90",
-                "90",
-                "90",
-                "270"
-              ],
-              [
-                "Asbury, Billy",
-                "102",
-                "0",
-                "74",
-                "117",
-                "116",
-                "307"
-              ],
-              [
-                "True, Donald",
-                "78",
-                "0",
-                "74",
-                "71",
-                "90",
-                "235"
-              ],
-              [
-                ", Vacant",
-                "100",
-                "0",
-                "100",
-                "100",
-                "100",
-                "300"
-              ],
-              [
-                "Total",
-                "338",
-                "378",
-                "396",
-                "1112"
-              ],
               [
                 "Team 15",
                 "Lane 15 points won: 2"
@@ -8840,133 +8841,13 @@
                 "378",
                 "373",
                 "1101"
-              ]
-            ],
-            "emphasis": [
-              [
-                true,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
               ],
               [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
+                "Team 16",
+                "Lane 16 points won: 1"
               ],
               [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                true,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false
-              ]
-            ]
-          },
-          {
-            "title": "4 matchup",
-            "headers": [
-              "Bowler",
-              "Average",
-              "Handicap",
-              "Game 1",
-              "Game 2",
-              "Game 3",
-              "Scratch series"
-            ],
-            "rows": [
-              [
-                "Team 4",
-                "Lane 4 points won: 1"
-              ],
-              [
-                "Coffey, Angie",
+                "Wrich Iii, Larry",
                 "100",
                 "0",
                 "90",
@@ -8975,22 +8856,22 @@
                 "270"
               ],
               [
-                "Havel, Brandi",
-                "66",
+                "Asbury, Billy",
+                "102",
                 "0",
-                "62",
-                "62",
-                "76",
-                "200"
+                "74",
+                "117",
+                "116",
+                "307"
               ],
               [
-                "Hassel, Ryan",
-                "86",
+                "True, Donald",
+                "78",
                 "0",
-                "83",
-                "107",
-                "68",
-                "258"
+                "74",
+                "71",
+                "90",
+                "235"
               ],
               [
                 ", Vacant",
@@ -9003,11 +8884,135 @@
               ],
               [
                 "Total",
-                "335",
-                "359",
-                "334",
-                "1028"
+                "338",
+                "378",
+                "396",
+                "1112"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false
               ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "recapDetails": [
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {}
+            ]
+          },
+          {
+            "title": "3 matchup",
+            "headers": [
+              "Bowler",
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
+            ],
+            "rows": [
               [
                 "Team 3",
                 "Lane 3 points won: 2"
@@ -9054,15 +9059,57 @@
                 "395",
                 "404",
                 "1201"
+              ],
+              [
+                "Team 4",
+                "Lane 4 points won: 1"
+              ],
+              [
+                "Coffey, Angie",
+                "100",
+                "0",
+                "90",
+                "90",
+                "90",
+                "270"
+              ],
+              [
+                "Havel, Brandi",
+                "66",
+                "0",
+                "62",
+                "62",
+                "76",
+                "200"
+              ],
+              [
+                "Hassel, Ryan",
+                "86",
+                "0",
+                "83",
+                "107",
+                "68",
+                "258"
+              ],
+              [
+                ", Vacant",
+                "100",
+                "0",
+                "100",
+                "100",
+                "100",
+                "300"
+              ],
+              [
+                "Total",
+                "335",
+                "359",
+                "334",
+                "1028"
               ]
             ],
             "emphasis": [
               [
-                true,
-                false,
-                false,
-                false,
-                false,
                 false,
                 false
               ],
@@ -9110,11 +9157,6 @@
                 false
               ],
               [
-                true,
-                false,
-                false,
-                false,
-                false,
                 false,
                 false
               ],
@@ -9161,10 +9203,24 @@
                 false,
                 false
               ]
+            ],
+            "recapDetails": [
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {}
             ]
           },
           {
-            "title": "6 matchup",
+            "title": "5 matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -9175,53 +9231,6 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 6",
-                "Lane 6 points won: 2"
-              ],
-              [
-                "Duff, Arthur",
-                "114",
-                "0",
-                "127",
-                "119",
-                "98",
-                "344"
-              ],
-              [
-                "Roland, Willie",
-                "154",
-                "0",
-                "150",
-                "139",
-                "175",
-                "464"
-              ],
-              [
-                "Mansfield, Shane",
-                "107",
-                "0",
-                "94",
-                "114",
-                "113",
-                "321"
-              ],
-              [
-                "Greenberger, Anthony",
-                "98",
-                "0",
-                "102",
-                "93",
-                "100",
-                "295"
-              ],
-              [
-                "Total",
-                "473",
-                "465",
-                "486",
-                "1424"
-              ],
               [
                 "Team 5",
                 "Lane 5 points won: 1"
@@ -9268,15 +9277,57 @@
                 "364",
                 "312",
                 "1007"
+              ],
+              [
+                "Team 6",
+                "Lane 6 points won: 2"
+              ],
+              [
+                "Duff, Arthur",
+                "114",
+                "0",
+                "127",
+                "119",
+                "98",
+                "344"
+              ],
+              [
+                "Roland, Willie",
+                "154",
+                "0",
+                "150",
+                "139",
+                "175",
+                "464"
+              ],
+              [
+                "Mansfield, Shane",
+                "107",
+                "0",
+                "94",
+                "114",
+                "113",
+                "321"
+              ],
+              [
+                "Greenberger, Anthony",
+                "98",
+                "0",
+                "102",
+                "93",
+                "100",
+                "295"
+              ],
+              [
+                "Total",
+                "473",
+                "465",
+                "486",
+                "1424"
               ]
             ],
             "emphasis": [
               [
-                true,
-                false,
-                false,
-                false,
-                false,
                 false,
                 false
               ],
@@ -9324,11 +9375,6 @@
                 false
               ],
               [
-                true,
-                false,
-                false,
-                false,
-                false,
                 false,
                 false
               ],
@@ -9375,10 +9421,24 @@
                 false,
                 false
               ]
+            ],
+            "recapDetails": [
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {}
             ]
           },
           {
-            "title": "8 matchup",
+            "title": "7 matchup",
             "headers": [
               "Bowler",
               "Average",
@@ -9389,53 +9449,6 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 8",
-                "Lane 8 points won: 2"
-              ],
-              [
-                "Hakenewerth, Spencer",
-                "153",
-                "0",
-                "174",
-                "120",
-                "166",
-                "460"
-              ],
-              [
-                "Hansen, Jon",
-                "130",
-                "0",
-                "115",
-                "137",
-                "138",
-                "390"
-              ],
-              [
-                "Zimmerman, Tyler",
-                "146",
-                "0",
-                "169",
-                "124",
-                "145",
-                "438"
-              ],
-              [
-                ", Vacant",
-                "100",
-                "0",
-                "100",
-                "100",
-                "100",
-                "300"
-              ],
-              [
-                "Total",
-                "558",
-                "481",
-                "549",
-                "1588"
-              ],
               [
                 "Team 7",
                 "Lane 7 points won: 1"
@@ -9482,15 +9495,57 @@
                 "314",
                 "301",
                 "927"
+              ],
+              [
+                "Team 8",
+                "Lane 8 points won: 2"
+              ],
+              [
+                "Hakenewerth, Spencer",
+                "153",
+                "0",
+                "174",
+                "120",
+                "166",
+                "460"
+              ],
+              [
+                "Hansen, Jon",
+                "130",
+                "0",
+                "115",
+                "137",
+                "138",
+                "390"
+              ],
+              [
+                "Zimmerman, Tyler",
+                "146",
+                "0",
+                "169",
+                "124",
+                "145",
+                "438"
+              ],
+              [
+                ", Vacant",
+                "100",
+                "0",
+                "100",
+                "100",
+                "100",
+                "300"
+              ],
+              [
+                "Total",
+                "558",
+                "481",
+                "549",
+                "1588"
               ]
             ],
             "emphasis": [
               [
-                true,
-                false,
-                false,
-                false,
-                false,
                 false,
                 false
               ],
@@ -9538,11 +9593,6 @@
                 false
               ],
               [
-                true,
-                false,
-                false,
-                false,
-                false,
                 false,
                 false
               ],
@@ -9589,6 +9639,20 @@
                 false,
                 false
               ]
+            ],
+            "recapDetails": [
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {}
             ]
           }
         ],
