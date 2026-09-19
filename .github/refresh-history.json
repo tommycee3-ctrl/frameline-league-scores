@@ -1,5 +1,60 @@
 [
   {
+    "startedAt": "2026-09-19T17:51:16.462Z",
+    "finishedAt": "2026-09-19T17:52:03.052Z",
+    "durationSeconds": 47,
+    "mode": "LeaguePals leagues",
+    "leaguesChecked": 9,
+    "changeCount": 3,
+    "changes": [
+      {
+        "id": "lp-6aa4f2c9895707167ebc13a6",
+        "name": "Tornadoes 26-27",
+        "area": "Council Bluffs",
+        "center": "Bowlero Council Bluffs - 763",
+        "week": "2",
+        "sourceUpdated": "09/11/2026"
+      },
+      {
+        "id": "lp-6aa4f192a11121a87b92a774",
+        "name": "Cyclones 26-27",
+        "area": "Council Bluffs",
+        "center": "Bowlero Council Bluffs - 763",
+        "week": "2",
+        "sourceUpdated": "09/11/2026"
+      },
+      {
+        "id": "lp-6aa4ee8999478ed11e5d3be5",
+        "name": "Thunderbolts 26-27",
+        "area": "Council Bluffs",
+        "center": "Bowlero Council Bluffs - 763",
+        "week": "2",
+        "sourceUpdated": "09/11/2026"
+      }
+    ]
+  },
+  {
+    "startedAt": "2026-09-19T16:50:33.764Z",
+    "finishedAt": "2026-09-19T17:51:16.376Z",
+    "durationSeconds": 3643,
+    "mode": "league discovery",
+    "scope": "all",
+    "leaguesChecked": 170,
+    "changeCount": 1,
+    "changes": [
+      {
+        "id": "45897",
+        "name": "Yesterdays Kids 26-27",
+        "area": "Omaha",
+        "center": "Maplewood Lanes",
+        "week": "5",
+        "sourceUpdated": "Sep 19, 2026"
+      }
+    ],
+    "deferredLeagues": [],
+    "failures": []
+  },
+  {
     "startedAt": "2026-09-19T16:49:17.833Z",
     "finishedAt": "2026-09-19T16:50:11.008Z",
     "durationSeconds": 53,
@@ -15904,32 +15959,5 @@
     "leaguesChecked": 77,
     "changeCount": 0,
     "changes": []
-  },
-  {
-    "startedAt": "2026-09-06T17:24:46.154Z",
-    "finishedAt": "2026-09-06T17:25:15.752Z",
-    "durationSeconds": 30,
-    "mode": "LeaguePals leagues",
-    "leaguesChecked": 6,
-    "changeCount": 0,
-    "changes": []
-  },
-  {
-    "startedAt": "2026-09-06T17:02:45.934Z",
-    "finishedAt": "2026-09-06T17:24:46.085Z",
-    "durationSeconds": 1320,
-    "mode": "known leagues",
-    "leaguesChecked": 77,
-    "changeCount": 1,
-    "changes": [
-      {
-        "id": "145370",
-        "name": "Blair Special Olympics 26-27",
-        "area": "Omaha",
-        "center": "Maplewood Lanes",
-        "week": "4",
-        "sourceUpdated": "09/06/2026"
-      }
-    ]
   }
 ]
