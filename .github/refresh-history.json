@@ -1,5 +1,205 @@
 [
   {
+    "startedAt": "2026-09-20T02:39:55.196Z",
+    "finishedAt": "2026-09-20T02:40:48.263Z",
+    "durationSeconds": 53,
+    "mode": "LeaguePals leagues",
+    "leaguesChecked": 9,
+    "changeCount": 0,
+    "changes": []
+  },
+  {
+    "startedAt": "2026-09-20T01:43:37.549Z",
+    "finishedAt": "2026-09-20T02:39:55.074Z",
+    "durationSeconds": 3378,
+    "mode": "league discovery",
+    "scope": "all",
+    "leaguesChecked": 170,
+    "changeCount": 9,
+    "changes": [
+      {
+        "id": "121280",
+        "name": "Wed. A.M. Ladies 26",
+        "area": "Lincoln",
+        "center": "Parkway Lanes",
+        "week": "5",
+        "sourceUpdated": "Sep 16, 2026"
+      },
+      {
+        "id": "111725",
+        "name": "LADIES GREATER OMAHA 27",
+        "area": "Omaha",
+        "center": "West Lanes",
+        "week": "3",
+        "sourceUpdated": "Sep 16, 2026"
+      },
+      {
+        "id": "121295",
+        "name": "Royal 26",
+        "area": "Lincoln",
+        "center": "Parkway Lanes",
+        "week": "5",
+        "sourceUpdated": "Sep 17, 2026"
+      },
+      {
+        "id": "64208",
+        "name": "Graphic Arts Bowling League 26-27",
+        "area": "Omaha",
+        "center": "West Lanes",
+        "week": "6",
+        "sourceUpdated": "Sep 18, 2026"
+      },
+      {
+        "id": "122315",
+        "name": "F.A.C. 26",
+        "area": "Lincoln",
+        "center": "Parkway Lanes",
+        "week": "1",
+        "sourceUpdated": "Sep 12, 2026"
+      },
+      {
+        "id": "121706",
+        "name": "Tues. FunDay 26",
+        "area": "Lincoln",
+        "center": "Parkway Lanes",
+        "week": "4",
+        "sourceUpdated": "Sep 16, 2026"
+      },
+      {
+        "id": "45897",
+        "name": "Yesterdays Kids 26-27",
+        "area": "Omaha",
+        "center": "Maplewood Lanes",
+        "week": "5",
+        "sourceUpdated": "Sep 19, 2026"
+      },
+      {
+        "id": "55988",
+        "name": "Thursday Seniors 2026-2027",
+        "area": "Omaha",
+        "center": "Mockingbird Lanes",
+        "week": "5",
+        "sourceUpdated": "Sep 17, 2026"
+      },
+      {
+        "id": "55974",
+        "name": "Monday Early Open 2026-2027",
+        "area": "Omaha",
+        "center": "Mockingbird Lanes",
+        "week": "4",
+        "sourceUpdated": "Sep 15, 2026"
+      }
+    ],
+    "deferredLeagues": [],
+    "failures": [
+      {
+        "id": "127517",
+        "name": "Apple Creek Ladies 2026",
+        "error": "Official recap PDF markings are missing for the same week; preserving prior verified results."
+      },
+      {
+        "id": "116033",
+        "name": "Daybreakers 2026-2027",
+        "error": "Official recap PDF markings are missing for the same week; preserving prior verified results."
+      },
+      {
+        "id": "116034",
+        "name": "Offutt Wives League (OWL) 2026-2027",
+        "error": "Official recap PDF markings are missing for the same week; preserving prior verified results."
+      },
+      {
+        "id": "125961",
+        "name": "Sum Esther Z 26",
+        "error": "Official recap PDF markings are missing for the same week; preserving prior verified results."
+      },
+      {
+        "id": "122055",
+        "name": "TTAC 26",
+        "error": "Official recap PDF markings are missing for the same week; preserving prior verified results."
+      },
+      {
+        "id": "144527",
+        "name": "Thursday Nite Mixed 2026-2027",
+        "error": "Official recap PDF markings are missing for the same week; preserving prior verified results."
+      },
+      {
+        "id": "148688",
+        "name": "Thirsty Thursday 2026-27",
+        "error": "Official recap PDF markings are missing for the same week; preserving prior verified results."
+      },
+      {
+        "id": "59988",
+        "name": "Thursday Night Crazy Mixed 2026-2027",
+        "error": "Official recap PDF markings are missing for the same week; preserving prior verified results."
+      },
+      {
+        "id": "121373",
+        "name": "Industrial 26",
+        "error": "Official recap PDF markings are missing for the same week; preserving prior verified results."
+      },
+      {
+        "id": "55990",
+        "name": "Country Gents 2026-2027",
+        "error": "Official recap PDF markings are missing for the same week; preserving prior verified results."
+      },
+      {
+        "id": "131630",
+        "name": "Craft Beer League 2026",
+        "error": "Official recap PDF markings are missing for the same week; preserving prior verified results."
+      },
+      {
+        "id": "112159",
+        "name": "Friday Senior Crazy Mixed 26-27",
+        "error": "Official recap PDF markings are missing for the same week; preserving prior verified results."
+      },
+      {
+        "id": "145370",
+        "name": "Blair Special Olympics 26-27",
+        "error": "Official recap PDF markings are missing for the same week; preserving prior verified results."
+      },
+      {
+        "id": "145373",
+        "name": "Special Olympics Alumni Fall 26",
+        "error": "Official recap PDF markings are missing for the same week; preserving prior verified results."
+      },
+      {
+        "id": "116670",
+        "name": "Saturday De-Light 26-27",
+        "error": "Official recap PDF markings are missing for the same week; preserving prior verified results."
+      },
+      {
+        "id": "63453",
+        "name": "A.D. Hill 2026-2027",
+        "error": "Official recap PDF markings are missing for the same week; preserving prior verified results."
+      },
+      {
+        "id": "115805",
+        "name": "Kevin Haynes Memorial 2026-27",
+        "error": "Official recap PDF markings are missing for the same week; preserving prior verified results."
+      },
+      {
+        "id": "111724",
+        "name": "FRIDAY'S WILD BUNCH 26-27",
+        "error": "Official recap PDF markings are missing for the same week; preserving prior verified results."
+      },
+      {
+        "id": "68466",
+        "name": "Friday Morning Men 2026-2027",
+        "error": "Official recap PDF markings are missing for the same week; preserving prior verified results."
+      },
+      {
+        "id": "127518",
+        "name": "The Twilight Zone 2026",
+        "error": "Official recap PDF markings are missing for the same week; preserving prior verified results."
+      },
+      {
+        "id": "55992",
+        "name": "Friday Commercial 2026-2027",
+        "error": "Official recap PDF markings are missing for the same week; preserving prior verified results."
+      }
+    ]
+  },
+  {
     "startedAt": "2026-09-20T01:40:50.956Z",
     "finishedAt": "2026-09-20T01:41:44.775Z",
     "durationSeconds": 54,
@@ -16288,65 +16488,6 @@
     "startedAt": "2026-09-07T16:27:43.562Z",
     "finishedAt": "2026-09-07T16:54:54.068Z",
     "durationSeconds": 1631,
-    "mode": "known leagues",
-    "leaguesChecked": 77,
-    "changeCount": 0,
-    "changes": []
-  },
-  {
-    "startedAt": "2026-09-07T13:30:19.131Z",
-    "finishedAt": "2026-09-07T13:46:45.643Z",
-    "durationSeconds": 987,
-    "mode": "LeaguePals leagues",
-    "leaguesChecked": 6,
-    "changeCount": 5,
-    "changes": [
-      {
-        "id": "lp-6a80c263a09d0e0071913c83",
-        "name": "Saturday Night Mixed 26",
-        "area": "Council Bluffs",
-        "center": "Bowlero Council Bluffs - 763",
-        "week": "4",
-        "sourceUpdated": "08/14/2026"
-      },
-      {
-        "id": "lp-6a830b98fb63f671392e5ce5",
-        "name": "Monday Senior Men 26",
-        "area": "Council Bluffs",
-        "center": "Bowlero Council Bluffs - 763",
-        "week": "4",
-        "sourceUpdated": "08/16/2026"
-      },
-      {
-        "id": "lp-6a970dff34a4afbf5c794a8f",
-        "name": "Friday Nighters 26",
-        "area": "Council Bluffs",
-        "center": "Bowlero Council Bluffs - 763",
-        "week": "3",
-        "sourceUpdated": "08/20/2026"
-      },
-      {
-        "id": "lp-6a8f046d53c5f51b7b86e8f1",
-        "name": "Cornbelt 26-27",
-        "area": "Council Bluffs",
-        "center": "Bowlero Council Bluffs - 763",
-        "week": "2",
-        "sourceUpdated": "08/25/2026"
-      },
-      {
-        "id": "lp-6a904a51f09b7f8443e10c94",
-        "name": "Senior Citizens Mixed 26-27",
-        "area": "Council Bluffs",
-        "center": "Bowlero Council Bluffs - 763",
-        "week": "2",
-        "sourceUpdated": "08/26/2026"
-      }
-    ]
-  },
-  {
-    "startedAt": "2026-09-07T13:03:35.319Z",
-    "finishedAt": "2026-09-07T13:30:19.075Z",
-    "durationSeconds": 1604,
     "mode": "known leagues",
     "leaguesChecked": 77,
     "changeCount": 0,
