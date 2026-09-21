@@ -4,18 +4,8 @@ on:
   schedule:
     # GitHub warns that jobs at the start of an hour can be delayed or dropped.
     # Read directories separately so slow report imports cannot block listings.
-    - cron: "27 * * * *"
-    - cron: "47 * * * *"
+    - cron: "27 */2 * * *"
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - ".github/workflows/discover-leagues.yml"
-      - "scripts/sync-leaguesecretary.mjs"
-      - "scripts/sync-leaguepals.mjs"
-      - "scripts/source-contract.mjs"
-      - "scripts/source-retry.mjs"
-      - "scripts/reconcile-refresh.mjs"
 
 permissions:
   contents: write

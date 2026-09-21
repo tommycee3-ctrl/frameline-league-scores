@@ -281,8 +281,33 @@ function currentRoster(table) {
   return {...table,rows:people};
 }
 
+async function assertLiveReportAccess(browser) {
+  const page=await browser.newPage();
+  const sample=existingCatalogEntries.find(league=>league.id===requestedLeague)
+    ?? existingCatalogEntries.find(league=>league.id==="148625");
+  if(!sample?.centerSlug||!sample.slug) {await page.close();return;}
+  let blocked=false;
+  try {
+    page.on("response",response=>{
+      if(response.status()===403 && /leaguesecretary\.com\/.*_Read(?:\?|$)/i.test(response.url())) blocked=true;
+    });
+    await page.goto("https://www.leaguesecretary.com/bowling-centers/"+sample.centerSlug+"/bowling-leagues/"+sample.slug+"/league/standings/"+sample.id,{waitUntil:"domcontentloaded",timeout:90000});
+    await page.waitForTimeout(6000);
+    if(blocked) throw new Error("League Secretary is blocking live report reads (HTTP 403); preserving published league data until access resumes.");
+  } finally {await page.close();}
+}
+
 const browser = await chromium.launch({headless:true});
-const listedLeagues=await discoverLeagues(browser);
+if(knownOnly) {
+  try {await assertLiveReportAccess(browser);}
+  catch(error) {await browser.close();throw error;}
+}
+// The two-hour score job uses the catalog refreshed independently by
+// directory discovery. This keeps known leagues eligible even when the
+// directory grid is temporarily unavailable.
+const listedLeagues=knownOnly
+  ? existingCatalogEntries.filter(league=>centers.some(center=>center.id===String(league.centerId)))
+  : await discoverLeagues(browser);
 if(process.argv.includes('--check-source')) {
   try {
     const samples=['48706','132277',listedLeagues.find(league=>league.centerId==='2118')?.id].filter(Boolean);
