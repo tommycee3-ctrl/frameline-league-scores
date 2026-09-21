@@ -442,6 +442,12 @@ try {
       }
     }
     await page.close();
+    if (String(current.week)===String(week) &&
+        !(views.recaps ?? []).some(table => table.rows?.length) &&
+        (current.views?.recaps ?? []).some(table => table.sourceReport)) {
+      console.warn("Retaining verified Week " + week + " recaps for " + league.displayName + "; LeagueSecretary returned no recap rows.");
+      views.recaps=current.views.recaps;
+    }
     if (String(current.week)===String(week) && (current.views?.recaps ?? []).some(table => table.sourceReport) && !(views.recaps ?? []).every(table => table.sourceReport)) throw new Error("Official recap PDF markings are missing for the same week; preserving prior verified results.");
     for(const view of Object.keys(viewPaths)) validateSourceView(view,views[view],{required:(current.views?.[view]??[]).some(table=>table.rows?.length)});
     for(const view of Object.keys(viewPaths)) {
