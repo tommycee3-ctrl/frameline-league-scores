@@ -6,6 +6,12 @@ import {runInNewContext} from "node:vm";
 import {applyOfficialRecap, enrichOfficialRecaps} from "../scripts/official-recap.mjs";
 const teams = JSON.parse(execFileSync(process.env.FRAMELINE_PYTHON || "python", ["scripts/parse-recap-pdf.py", "tests/fixtures/nationals-recap-week4.pdf"], {encoding:"utf8"}));
 const league = JSON.parse(readFileSync("tests/fixtures/nationals-recap-week4.json"));
+const scratchInteractive = [{rows:[
+  ["Team 6", "Lane 7 points won: 12"],
+  ["Burns, Jamie", "187", "0", "154", "201", "188", "543"],
+  ["Desimone, Anthony", "208", "0", "222", "256", "203", "681"],
+  ["Total", "376", "457", "391", "1224"],
+]}];
 test("PDF restores James's explicit game and handicap-series wins", () => {
   const result = applyOfficialRecap(league.views.recaps, teams, "4", "official.pdf");
   const table = result.find(t => t.rows.some(r => r[0] === "Casella, James"));
@@ -16,9 +22,7 @@ test("PDF restores James's explicit game and handicap-series wins", () => {
 });
 test("scratch recap restores a bowler omitted by the interactive table", () => {
   const scratchTeams = JSON.parse(execFileSync(process.env.FRAMELINE_PYTHON || "python", ["scripts/parse-recap-pdf.py", "tests/fixtures/wednesday-scratch-week5.pdf"], {encoding:"utf8"}));
-  const current = JSON.parse(readFileSync("public/data/leagues/148625.json"));
-  const source = current.views.recaps.filter(table => table.rows.some(row => row[0] === "Team 6"));
-  const result = applyOfficialRecap(source, scratchTeams, "5", "scratch.pdf")[0];
+  const result = applyOfficialRecap(scratchInteractive, scratchTeams, "5", "scratch.pdf")[0];
   const index = result.rows.findIndex(row => row[0] === "James Casella");
   assert.ok(index > 0);
   assert.deepEqual(result.rows[index], ["James Casella", "184", "0", "211", "175", "182", "568"]);
@@ -60,8 +64,6 @@ test("archived PDF selection follows the selected period, not stale page metadat
 
 test("new shared report links still attach official recap results", async () => {
   const pdf = readFileSync("tests/fixtures/wednesday-scratch-week5.pdf");
-  const source = JSON.parse(readFileSync("public/data/leagues/148625.json")).views.recaps
-    .filter(table => table.rows.some(row => row[0] === "Team 6"));
   let reportUrl = "";
   const page = {
     evaluate: callback => runInNewContext("(" + callback.toString() + ")()", {document:{querySelector: selector => selector === ".div-main-grid" ? {dataset:{league:"148625",week:"5",year:"2026",season:"f"}} : selector.includes("select") ? {value:"5|2026|f"} : {dataset:{urlprefix:"/bowling-centers/west-lanes/bowling-leagues/wednesday-fall-draft-league26"}}}}),
@@ -71,7 +73,7 @@ test("new shared report links still attach official recap results", async () => 
       return {ok:()=>true,body:async()=>pdf};
     }},
   };
-  const result = await enrichOfficialRecaps(page, source);
+  const result = await enrichOfficialRecaps(page, scratchInteractive);
   assert.match(reportUrl, /\/reports\/shared\?path=/);
   assert.ok(result.every(table => table.sourceReport === reportUrl));
   assert.ok(result.flatMap(table => table.rows).some(row => row[0] === "James Casella"));
