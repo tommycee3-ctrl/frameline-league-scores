@@ -12,6 +12,10 @@ const sameName = (sourceName, pdfName) => {
   // still required to match uniquely before this name check is accepted.
   if (source.length === 1 || pdf.length === 1)
     return source.length === 1 && pdf.length === 1 && source[0] === pdf[0];
+  // The interactive report can reduce "Xavier Harbeck" to "H, X".
+  // The score-row match below must still identify exactly one PDF bowler.
+  if (/^[^,]+,\s*[^,]+$/.test(sourceName) && source.every(part => part.length === 1))
+    return source[0] === pdf.at(-1)?.[0] && source[1] === pdf[0]?.[0];
   // BLS prints middle initials that the interactive report can omit.
   // Require both primary names; numeric row matching still must be unique.
   const primary = pdf.length > 2 ? pdf.filter((token, index) => token.length > 1 || index === 0 || index === pdf.length - 1) : pdf;
@@ -96,7 +100,12 @@ export async function enrichOfficialRecaps(page, tables) {
       (report.pathname === "/reports/shared" && /reprnt\d*\.pdf/i.test(report.searchParams.get("path") ?? ""));
   });
   if (!link) return tables;
-  const sourceReport = new URL(link, url).toString();
+  const shared = new URL(link, url);
+  // The new shared-report route renders an HTML viewer. Its path parameter
+  // points to the same-origin original PDF that the parser needs.
+  const pdfPath = shared.pathname === "/reports/shared" ? shared.searchParams.get("path") : null;
+  const sourceReport = pdfPath && /^\/uploads\/[\w/.-]+\.pdf$/i.test(pdfPath)
+    ? new URL(pdfPath, url).toString() : shared.toString();
   const pdf = await page.request.get(sourceReport, { timeout: 30000 });
   if (!pdf.ok()) throw new Error(`Official recap PDF returned ${pdf.status()}`);
   const directory = await mkdtemp(path.join(tmpdir(), "frameline-recap-"));

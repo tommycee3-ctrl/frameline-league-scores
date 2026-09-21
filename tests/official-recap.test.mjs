@@ -29,6 +29,13 @@ test("scratch recap restores a bowler omitted by the interactive table", () => {
   assert.deepEqual(result.emphasis[index].slice(3), [true, false, true, false]);
   assert.equal(result.recapDetails[index].individualPoints, 1.5);
 });
+test("an abbreviated interactive name matches only the exact-score official bowler", () => {
+  const official = [{team:"22",week:"1",lane:"22",bowlers:[{name:"Xavier Harbeck",values:["93","127","105","82","92","279"],wins:[false,false,false,false],handicapSeries:"660",points:0}],total:["0","0","0","0"],scratchTotal:["0","0","0","0"],totalWins:[false,false,false,false]}];
+  const table = [{rows:[["Team 22",""],["H, X","93","127","105","82","92","279"],["Total","0","0","0","0"]]}];
+  assert.equal(applyOfficialRecap(table,official,"1","official.pdf")[0].recapDetails[1].handicapSeries,"660");
+  table[0].rows[1][0]="H, Y";
+  assert.throws(() => applyOfficialRecap(table,official,"1","official.pdf"),/Cannot safely match/);
+});
 
 test("scratch recap distinguishes a marked win from an equal-score half point", () => {
   const week1 = JSON.parse(execFileSync(process.env.FRAMELINE_PYTHON || "python", ["scripts/parse-recap-pdf.py", "tests/fixtures/wednesday-scratch-week1.pdf"], {encoding:"utf8"}));
@@ -74,7 +81,7 @@ test("new shared report links still attach official recap results", async () => 
     }},
   };
   const result = await enrichOfficialRecaps(page, scratchInteractive);
-  assert.match(reportUrl, /\/reports\/shared\?path=/);
+  assert.match(reportUrl, /\/uploads\/2026\/f\/5\/recapreprnt00\.pdf$/);
   assert.ok(result.every(table => table.sourceReport === reportUrl));
   assert.ok(result.flatMap(table => table.rows).some(row => row[0] === "James Casella"));
 });
