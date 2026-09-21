@@ -58,6 +58,25 @@ test("archived PDF selection follows the selected period, not stale page metadat
   assert.match(requested,/132277\/2026\/f\/2$/);
 });
 
+test("new shared report links still attach official recap results", async () => {
+  const pdf = readFileSync("tests/fixtures/wednesday-scratch-week5.pdf");
+  const source = JSON.parse(readFileSync("public/data/leagues/148625.json")).views.recaps
+    .filter(table => table.rows.some(row => row[0] === "Team 6"));
+  let reportUrl = "";
+  const page = {
+    evaluate: callback => runInNewContext("(" + callback.toString() + ")()", {document:{querySelector: selector => selector === ".div-main-grid" ? {dataset:{league:"148625",week:"5",year:"2026",season:"f"}} : selector.includes("select") ? {value:"5|2026|f"} : {dataset:{urlprefix:"/bowling-centers/west-lanes/bowling-leagues/wednesday-fall-draft-league26"}}}}),
+    request:{get:async url => {
+      if (url.includes("/recaps-png/")) return {ok:()=>true,text:async()=>'<a href="/reports/shared?path=%2Fuploads%2F2026%2Ff%2F5%2Frecapreprnt00.pdf&amp;token=abc">Open PDF</a>'};
+      reportUrl = url;
+      return {ok:()=>true,body:async()=>pdf};
+    }},
+  };
+  const result = await enrichOfficialRecaps(page, source);
+  assert.match(reportUrl, /\/reports\/shared\?path=/);
+  assert.ok(result.every(table => table.sourceReport === reportUrl));
+  assert.ok(result.flatMap(table => table.rows).some(row => row[0] === "James Casella"));
+});
+
 test("book averages touching long names retain all score columns and markings", () => {
   const teams = JSON.parse(execFileSync(process.env.FRAMELINE_PYTHON || "python", ["scripts/parse-recap-pdf.py", "tests/fixtures/nationals-recap-week1.pdf"], {encoding:"utf8"}));
   const sarah=teams.find(t=>t.team==="5").bowlers.find(b=>b.name.includes("SARAH"));

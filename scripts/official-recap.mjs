@@ -89,8 +89,12 @@ export async function enrichOfficialRecaps(page, tables) {
   const response = await page.request.get(url.toString(), { timeout: 30000 });
   if (!response.ok()) throw new Error(`Official recap document returned ${response.status()}`);
   const html = await response.text();
-  const links = [...html.matchAll(/href="([^"]+\.pdf(?:\?[^"]*)?)"/g)].map(m => m[1].replaceAll("&amp;", "&"));
-  const link = links.find(link => /reprnt\d*\.pdf/i.test(link));
+  const links = [...html.matchAll(/href="([^"]+)"/g)].map(m => m[1].replaceAll("&amp;", "&"));
+  const link = links.find(link => {
+    const report = new URL(link, url);
+    return /reprnt\d*\.pdf/i.test(report.pathname) ||
+      (report.pathname === "/reports/shared" && /reprnt\d*\.pdf/i.test(report.searchParams.get("path") ?? ""));
+  });
   if (!link) return tables;
   const sourceReport = new URL(link, url).toString();
   const pdf = await page.request.get(sourceReport, { timeout: 30000 });
