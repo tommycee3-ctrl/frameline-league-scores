@@ -45,17 +45,25 @@ def parse(filename):
                     def number(v):
                         v = re.sub(r"^(?:bk|[a-z])", "", v, flags=re.I)
                         return v if re.fullmatch(r"\d+(?:\.\d+)?", v) else None
+                    def valid_bowler(name, values):
+                        return (bool(re.fullmatch(r"[A-Za-z][A-Za-z .,'&-]*", name.strip()))
+                                and all(v is not None for v in values)
+                                and int(float(values[0])) <= 300
+                                and all(int(float(v)) <= 900 for v in values[1:]))
                     if len(tokens) >= 8 and all(number(v) is not None for v in tokens[-7:]) and not text.startswith(("Scratch Total", "Total", "Handicap")):
                         values = [number(v) for v in tokens[-7:]]
+                        if not valid_bowler(" ".join(tokens[:-7]), values[:6]): continue
                         active["bowlers"].append({"name": " ".join(tokens[:-7]), "values": values[:6], "handicapSeries": values[6], "wins": ["Bold" in w["fontname"] for w in line[-7:]][2:5] + ["Bold" in line[-1]["fontname"]]})
                     elif len(tokens) >= 7 and all(number(v) is not None for v in tokens[-6:]) and not text.startswith(("Scratch Total", "Total", "Handicap", "Team Points", "Match Points")):
                         # Two-game leagues leave the third game column blank.
                         values = [number(v) for v in tokens[-6:]]
+                        if not valid_bowler(" ".join(tokens[:-6]), values[:5]): continue
                         active["bowlers"].append({"name": " ".join(tokens[:-6]), "values": [values[0], values[1], values[2], values[3], "0", values[4]], "handicapSeries": values[5], "wins": ["Bold" in line[-4]["fontname"], "Bold" in line[-3]["fontname"], False, "Bold" in line[-1]["fontname"]]})
                     elif len(tokens) >= 6 and all(number(v) is not None for v in tokens[-5:]) and not text.startswith(("Scratch Total", "Total", "Handicap", "Team Points", "Match Points")):
                         # Scratch leagues omit both handicap columns. Normalize
                         # them to the same six values used by the web recap.
                         values = [number(v) for v in tokens[-5:]]
+                        if not valid_bowler(" ".join(tokens[:-5]), values): continue
                         active["bowlers"].append({"name": " ".join(tokens[:-5]), "values": [values[0], "0", *values[1:]], "handicapSeries": values[-1], "wins": ["Bold" in w["fontname"] for w in line[-4:]]})
                     elif text.startswith("Scratch Total ") and len(tokens) in (6, 7) and all(number(v) for v in tokens[2:]):
                         active["scratchTotal"] = [number(v) for v in tokens[2:]]
@@ -65,8 +73,10 @@ def parse(filename):
                         active["totalWins"] = ["Bold" in w["fontname"] for w in line[1:4]] + ["Bold" in line[-1]["fontname"]]
                     else:
                         for label, field in [("Team Points Won", "teamPoints"), ("Match Points Won", "matchPoints"), ("Total Points Won", "points")]:
-                            if text.startswith(label + " ") and len(tokens) in (7, 8) and all(number(v) for v in tokens[3:]):
-                                active[field] = [number(v) for v in tokens[3:]]
+                            if text.startswith(label + " "):
+                                values = [number(v) for v in tokens[3:8]]
+                                if len(values) in (4, 5) and all(v is not None for v in values):
+                                    active[field] = values
     for team in teams:
         # A scratch recap has no separate handicap Total row.
         if not team.get("total") and team.get("scratchTotal"):

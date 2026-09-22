@@ -14,14 +14,20 @@ const catalog = JSON.parse(await readFile(catalogFile, "utf8"));
 const requested = process.argv.find(arg => arg.startsWith("--league="))?.slice(9);
 const dryRun = process.argv.includes("--dry-run");
 const seasonCode = { Fall: "f", Summer: "u", Spring: "s", Winter: "w" };
-const parserVersion = 4;
+const parserVersion = 5;
 let updated = 0, partial = 0, skipped = 0, unavailable = 0;
 
 async function reportFor(league) {
-  const year = league.startDate?.match(/\b20\d{2}\b/)?.[0];
-  const season = seasonCode[league.season];
-  if (!year || !season || !league.week || !league.slug || !league.centerSlug) return null;
-  const url = new URL(`https://www.leaguesecretary.com/bowling-centers/${league.centerSlug}/bowling-leagues/${league.slug}/league/recaps-png/${league.id}/${year}/${season}/${league.week}`);
+  if (!league.slug || !league.centerSlug) return null;
+  const pageUrl = new URL(`https://www.leaguesecretary.com/bowling-centers/${league.centerSlug}/bowling-leagues/${league.slug}/league/recaps/${league.id}`);
+  const pageResponse = await fetch(pageUrl, { signal: AbortSignal.timeout(30000) });
+  if (!pageResponse.ok) throw new Error(`recap page HTTP ${pageResponse.status}`);
+  const page = await pageResponse.text();
+  const selected = page.match(/<option\s+value="(\d+)\|(\d{4})\|([fsuw])"\s+selected="selected">([^<]*)/i);
+  if (!selected) return null;
+  const [, week, year, season] = selected;
+  if (season !== seasonCode[league.season] || Number(week) < Number(league.week)) return null;
+  const url = new URL(`https://www.leaguesecretary.com/bowling-centers/${league.centerSlug}/bowling-leagues/${league.slug}/league/recaps-png/${league.id}/${year}/${season}/${week}`);
   const response = await fetch(url, { signal: AbortSignal.timeout(30000) });
   if (!response.ok) throw new Error(`report page HTTP ${response.status}`);
   const html = await response.text();
@@ -35,7 +41,7 @@ async function reportFor(league) {
     if (!pdfResponse.ok) throw new Error(`report PDF HTTP ${pdfResponse.status}`);
     const pdf = Buffer.from(await pdfResponse.arrayBuffer());
     if (pdf.subarray(0, 4).toString() !== "%PDF") throw new Error("report is not a PDF");
-    return { pdf, reportUrl, hash: createHash("sha256").update(pdf).digest("hex") };
+    return { pdf, reportUrl, hash: createHash("sha256").update(pdf).digest("hex"), week, selectedLabel: selected[4] };
   }
   return null;
 }
@@ -49,7 +55,7 @@ for (const [index, listed] of candidates.entries()) {
     const league = JSON.parse(await readFile(file, "utf8"));
     const report = await reportFor(league);
     if (!report) { unavailable++; continue; }
-    if (report.hash === league.officialRecapHash && league.officialRecapParserVersion >= parserVersion && league.views.recaps.every(table => table.sourceReport)) { skipped++; continue; }
+    if (report.week === String(league.week) && report.hash === league.officialRecapHash && league.officialRecapParserVersion >= parserVersion && league.views.recaps.every(table => table.sourceReport)) { skipped++; continue; }
     const directory = await mkdtemp(path.join(tmpdir(), "frameline-static-recap-"));
     let teams;
     try {
@@ -58,12 +64,17 @@ for (const [index, listed] of candidates.entries()) {
       const { stdout } = await run(process.env.FRAMELINE_PYTHON || "python", [path.resolve("scripts/parse-recap-pdf.py"), pdfFile], { timeout: 30000, maxBuffer: 8 * 1024 * 1024 });
       teams = JSON.parse(stdout);
     } finally { await rm(directory, { recursive: true, force: true }); }
-    const recaps = buildOfficialRecaps(league.views.recaps, teams, league.week, report.reportUrl);
+    const newWeek = report.week !== String(league.week);
+    const recaps = buildOfficialRecaps(newWeek ? [] : league.views.recaps, teams, report.week, report.reportUrl);
     if (!recaps.length || recaps.some(table => !table.sourceReport)) throw new Error("official recap did not cover every table");
     const now = new Date().toISOString();
     const incomplete = recaps.some(table => table.officialTotalsComplete === false);
-    const next = { ...league, views: { ...league.views, recaps }, officialRecapHash: report.hash, officialRecapParserVersion: parserVersion, officialRecapSyncedAt: now };
-    if (Array.isArray(next.history)) next.history = next.history.map(entry => String(entry.week) === String(league.week) ? { ...entry, views: { ...entry.views, recaps } } : entry);
+    const next = { ...league, week: report.week, views: { ...league.views, recaps }, officialRecapHash: report.hash, officialRecapParserVersion: parserVersion, officialRecapSyncedAt: now };
+    if (Array.isArray(next.history)) {
+      next.history = newWeek
+        ? [...next.history.filter(entry => String(entry.week) !== report.week), { week: report.week, sourceUpdated: report.selectedLabel, syncedAt: now, views: { recaps } }]
+        : next.history.map(entry => String(entry.week) === report.week ? { ...entry, views: { ...entry.views, recaps } } : entry);
+    }
     if (!dryRun) {
       await writeFile(file, JSON.stringify(next, null, 2) + "\n");
       const catalogIndex = catalog.findIndex(item => item.id === league.id);
@@ -71,7 +82,7 @@ for (const [index, listed] of candidates.entries()) {
     }
     updated++;
     if (incomplete) partial++;
-    console.log(`${dryRun ? "Would update" : "Updated"} ${league.displayName} Week ${league.week} from official PDF${incomplete ? " (printed team totals clipped; interactive totals retained without win marks)" : ""}`);
+    console.log(`${dryRun ? "Would update" : "Updated"} ${league.displayName} Week ${report.week} from official PDF${incomplete ? " (printed team totals clipped; missing totals left unverified)" : ""}`);
   } catch (error) {
     skipped++;
     console.warn(`Skipped ${listed.displayName}: ${error.message}`);

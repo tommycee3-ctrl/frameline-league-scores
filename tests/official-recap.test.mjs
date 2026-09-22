@@ -29,6 +29,36 @@ test("scratch recap restores a bowler omitted by the interactive table", () => {
   assert.deepEqual(result.emphasis[index].slice(3), [true, false, true, false]);
   assert.equal(result.recapDetails[index].individualPoints, 1.5);
 });
+test("printed scratch totals exclude VACANT placeholders while retaining official wins", () => {
+  const printed = JSON.parse(execFileSync(process.env.FRAMELINE_PYTHON || "python", ["scripts/parse-recap-pdf.py", "tests/fixtures/wednesday-scratch-week5.pdf"], {encoding:"utf8"}));
+  const current = JSON.parse(readFileSync("public/data/leagues/148625.json"));
+  const result = buildOfficialRecaps(current.views.recaps, printed, "5", "official.pdf");
+  const vacantTeam = result.find(table => table.rows.some(row => row[0] === "Team 12"));
+  const start = vacantTeam.rows.findIndex(row => row[0] === "Team 12");
+  const total = vacantTeam.rows.find((row, index) => index > start && row[0] === "Total");
+  assert.deepEqual(total, ["Total", "0", "0", "0", "0"]);
+  assert.match(vacantTeam.rows[start][1], /^Lane 10 points won: 0(?:\.0)?$/);
+  assert.ok(result.flatMap(table => table.rows).some(row => row[0] === "James Casella"));
+});
+test("new Double Trouble Recap Sheet supplies Week 2 winner marks and team points", () => {
+  const printed = JSON.parse(execFileSync(process.env.FRAMELINE_PYTHON || "python", ["scripts/parse-recap-pdf.py", "tests/fixtures/double-trouble-recap-week2.pdf"], {encoding:"utf8"}));
+  const result = buildOfficialRecaps([], printed, "2", "official.pdf");
+  assert.equal(result.length, 11);
+  const team = result.find(table => table.rows.some(row => row[0] === "Team 20"));
+  assert.equal(team.rows.find(row => row[0] === "Team 20")[1], "Lane 1 points won: 7.0");
+  const totalIndex = team.rows.findIndex(row => row[0] === "Total");
+  assert.deepEqual(team.emphasis[totalIndex], [false, true, true, true, true]);
+  assert.ok(result.flatMap(table => table.rows).every(row => !row[0]?.includes("Page Handicap")));
+});
+test("new Nationals Recap Sheet supplies Week 5 official point totals", () => {
+  const printed = JSON.parse(execFileSync(process.env.FRAMELINE_PYTHON || "python", ["scripts/parse-recap-pdf.py", "tests/fixtures/nationals-recap-week5.pdf"], {encoding:"utf8"}));
+  const result = buildOfficialRecaps([], printed, "5", "official.pdf");
+  assert.equal(result.length, 8);
+  const team = result.find(table => table.rows.some(row => row[0] === "Team 8"));
+  assert.equal(team.rows.find(row => row[0] === "Team 8")[1], "Lane 3 points won: 33.0");
+  const totalIndex = team.rows.findIndex(row => row[0] === "Total");
+  assert.deepEqual(team.emphasis[totalIndex], [false, true, true, true, true]);
+});
 test("an abbreviated interactive name matches only the exact-score official bowler", () => {
   const official = [{team:"22",week:"1",lane:"22",bowlers:[{name:"Xavier Harbeck",values:["93","127","105","82","92","279"],wins:[false,false,false,false],handicapSeries:"660",points:0}],total:["0","0","0","0"],scratchTotal:["0","0","0","0"],totalWins:[false,false,false,false]}];
   const table = [{rows:[["Team 22",""],["H, X","93","127","105","82","92","279"],["Total","0","0","0","0"]]}];
