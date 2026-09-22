@@ -66,15 +66,16 @@ export function findBowlers(query: string): BowlerMatch[] {
         const averageIndex = valueIndex(table.headers, ["avg", "average"]);
         const teamIndex = valueIndex(table.headers, ["team#"]);
         const teamNumber = teamIndex >= 0 ? row[teamIndex] : "";
-        details.average = averageIndex >= 0 && row[averageIndex] ? row[averageIndex] : "—";
+        if (averageIndex >= 0 && row[averageIndex] && Number.isFinite(Number(row[averageIndex]))) details.average = row[averageIndex];
         const highSeriesIndex = valueIndex(table.headers, ["hss"]);
-        details.highSeries = highSeriesIndex >= 0 && row[highSeriesIndex] ? row[highSeriesIndex] : "—";
+        if (highSeriesIndex >= 0 && row[highSeriesIndex] && Number.isFinite(Number(row[highSeriesIndex]))) details.highSeries = row[highSeriesIndex];
         if (teamNumber && teamNumber !== "0") {
           const teammates = table.rows.filter((item) => item[teamIndex] === teamNumber).map((item) => ({
             name: item[nameIndex] ?? "Bowler",
             average: averageIndex >= 0 && item[averageIndex] ? item[averageIndex] : "—",
           }));
-          details.teammates = [...new Map(teammates.map((person) => [tokens(person.name).join(" "), person])).values()];
+          const usable = teammates.filter(person => Number.isFinite(Number(person.average)));
+          if (usable.length) details.teammates = [...new Map(usable.map((person) => [tokens(person.name).join(" "), person])).values()];
           const numeric = details.teammates.map((person) => Number(person.average)).filter(Number.isFinite);
           details.teamAverage = numeric.length ? numeric.reduce((sum, average) => sum + average, 0) : null;
         }

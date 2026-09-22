@@ -61,6 +61,7 @@ type RecapTeam = {
   team: string;
   lane: string;
   points: string;
+  gameCount: number;
   rows: string[][];
   emphasis: boolean[][];
   total: string[];
@@ -82,6 +83,7 @@ const parseRecapMatchups = (tables: Table[] = []) =>
             team: match[1],
             lane: detail.match(/Lane\s+\d+/i)?.[0] ?? "",
             points: detail.match(/points won:\s*([\d.]+)/i)?.[1] ?? "",
+            gameCount: table.headers.filter(header => /^Game \d+$/i.test(header)).length || 3,
             rows: [],
             emphasis: [],
             total: [],
@@ -911,7 +913,7 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                     </span>}
                   </header>
                   <p>Main scores are scratch; HDCP totals include handicap. Win highlights follow the official recap, including handicap series. Points follow the official report.</p>
-                  {matchup.some((team) => team.verificationPending) && <p>Part of this printed recap is cut off. Unverified rows and team totals have no win highlights.</p>}
+                  {matchup.some((team) => team.verificationPending) && <p>Some bowler rows could not be reconciled with the printed totals. Printed team points and marked winners are shown; uncertain bowler results remain unverified.</p>}
                   <div className="recap-scroll">
                     {matchup.map((team) => {
                       return (
@@ -921,9 +923,7 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                               <th>Bowler</th>
                               <th>Avg</th>
                               <th>HDCP</th>
-                              <th>Game 1</th>
-                              <th>Game 2</th>
-                              <th>Game 3</th>
+                              {Array.from({ length: team.gameCount }, (_, game) => <th key={game}>Game {game + 1}</th>)}
                               <th>Series</th>
                               {hasIndividualPoints && <th>Individual pts</th>}
                             </tr>
@@ -938,7 +938,7 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                                   </td>
                                   <td>{row[1]}</td>
                                   <td>{row[2]}</td>
-                                  {[0, 1, 2].map((game) => (
+                                  {Array.from({ length: team.gameCount }, (_, game) => game).map((game) => (
                                     <td
                                       key={game}
                                       className={officialScoreClass(officialFlags[3 + game])}
@@ -948,7 +948,7 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                                     </td>
                                   ))}
                                   <td
-                                    className={officialScoreClass(officialFlags[6])}
+                                    className={officialScoreClass(officialFlags[3 + team.gameCount])}
                                   >
                                     <b>{row.at(-1)}</b>
                                     {team.details[r]?.handicapSeries && <small className="recap-handicap">{team.details[r].handicapSeries} <span>HDCP</span></small>}
@@ -963,12 +963,12 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                             {team.total.length > 0 && (
                               <tr className="recap-total">
                                 <td>Team total</td><td></td><td></td>
-                                {[1, 2, 3, 4].map((column) => (
+                                {Array.from({ length: team.gameCount + 1 }, (_, index) => index + 1).map((column) => (
                                   <td key={column} className={officialScoreClass(team.totalEmphasis[column])}>
                                     {team.total[column]}
-                                    {column < 4 && team.totalDetails?.handicapGames?.[column - 1] && <small className="recap-handicap">{team.totalDetails.handicapGames[column - 1]} <span>HDCP</span></small>}
-                                    {column === 4 && team.totalDetails?.handicapSeries && <small className="recap-handicap">{team.totalDetails.handicapSeries} <span>HDCP</span></small>}
-                                    {column < 4 && team.totalDetails?.teamPoints?.[column - 1] && <small>{Number(team.totalDetails.teamPoints[column - 1])} team pts</small>}
+                                    {column <= team.gameCount && team.totalDetails?.handicapGames?.[column - 1] && <small className="recap-handicap">{team.totalDetails.handicapGames[column - 1]} <span>HDCP</span></small>}
+                                    {column === team.gameCount + 1 && team.totalDetails?.handicapSeries && <small className="recap-handicap">{team.totalDetails.handicapSeries} <span>HDCP</span></small>}
+                                    {column <= team.gameCount && team.totalDetails?.teamPoints?.[column - 1] && <small>{Number(team.totalDetails.teamPoints[column - 1])} team pts</small>}
                                   </td>
                                 ))}
                                 {hasIndividualPoints && <td className="team-points-cell"><b>{team.totalDetails?.teamPoints?.at(-1) ? Number(team.totalDetails.teamPoints.at(-1)) : "—"}</b><small>official team pts</small></td>}

@@ -14,10 +14,10 @@
   "centerName": "Maplewood Lanes",
   "centerSlug": "maplewood-lanes-omaha-nebraska",
   "area": "Omaha",
-  "sourceUpdated": "Sep 12, 2026",
+  "sourceUpdated": "Sep 19, 2026",
   "syncedAt": "2026-09-21T06:58:14.823Z",
   "status": "current",
-  "week": "4",
+  "week": "5",
   "fingerprint": "0c76a729a44a6e3658d79b6011aef874fc7201230d0b9379b609a83183db34a7",
   "lastCompletedCycle": "2026-09-19",
   "views": {
@@ -201,7 +201,7 @@
     ],
     "recaps": [
       {
-        "title": "Team Abu matchup",
+        "title": "Team Asher vs Team Abu",
         "headers": [
           "Bowler",
           "Average",
@@ -213,44 +213,40 @@
         ],
         "rows": [
           [
-            "Team 2",
-            "Lane 14 points won: 0"
-          ],
-          [
-            "K, A",
-            "70",
-            "0",
-            "81",
-            "71",
-            "",
-            "152"
-          ],
-          [
-            "Total",
-            "81",
-            "71",
-            "0",
-            "152"
-          ],
-          [
             "Team 1",
-            "Lane 13 points won: 0"
+            "Lane 13 points won: 0.0"
           ],
           [
-            "Kubes, Asher",
-            "64",
-            "0",
-            "60",
+            "Asher Kubes",
             "63",
-            "",
-            "123"
+            "0",
+            "70",
+            "62",
+            "132"
           ],
           [
             "Total",
-            "60",
-            "63",
+            "70",
+            "62",
+            "132"
+          ],
+          [
+            "Team 2",
+            "Lane 14 points won: 0.0"
+          ],
+          [
+            "Abu Khayitov",
+            "72",
             "0",
-            "123"
+            "80",
+            "85",
+            "165"
+          ],
+          [
+            "Total",
+            "80",
+            "85",
+            "165"
           ]
         ],
         "emphasis": [
@@ -264,6 +260,15 @@
             false,
             false,
             false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false
+          ],
+          [
             false,
             false
           ],
@@ -272,23 +277,10 @@
             false,
             false,
             false,
-            false
-          ],
-          [
             false,
             false
           ],
           [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
             false,
             false,
             false,
@@ -297,12 +289,43 @@
         ],
         "recapDetails": [
           {},
+          {
+            "handicapSeries": "132",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "132",
+            "handicapGames": [
+              "70",
+              "62",
+              "132"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "0.0"
+            ]
+          },
           {},
-          {},
-          {},
-          {},
-          {}
-        ]
+          {
+            "handicapSeries": "165",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "165",
+            "handicapGames": [
+              "80",
+              "85",
+              "165"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "0.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://www.leaguesecretary.com/uploads/2026/f/5/4591109192026f202605reprnt00.pdf"
       }
     ],
     "lanes": [
@@ -1210,8 +1233,147 @@
           }
         ]
       }
+    },
+    {
+      "week": "5",
+      "sourceUpdated": "Sep 19, 2026",
+      "syncedAt": "2026-09-22T20:51:30.408Z",
+      "views": {
+        "recaps": [
+          {
+            "title": "Team Asher vs Team Abu",
+            "headers": [
+              "Bowler",
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
+            ],
+            "rows": [
+              [
+                "Team 1",
+                "Lane 13 points won: 0.0"
+              ],
+              [
+                "Asher Kubes",
+                "63",
+                "0",
+                "70",
+                "62",
+                "132"
+              ],
+              [
+                "Total",
+                "70",
+                "62",
+                "132"
+              ],
+              [
+                "Team 2",
+                "Lane 14 points won: 0.0"
+              ],
+              [
+                "Abu Khayitov",
+                "72",
+                "0",
+                "80",
+                "85",
+                "165"
+              ],
+              [
+                "Total",
+                "80",
+                "85",
+                "165"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "132",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "132",
+                "handicapGames": [
+                  "70",
+                  "62",
+                  "132"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "0.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "165",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "165",
+                "handicapGames": [
+                  "80",
+                  "85",
+                  "165"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "0.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://www.leaguesecretary.com/uploads/2026/f/5/4591109192026f202605reprnt00.pdf"
+          }
+        ]
+      }
     }
   ],
   "lastAttemptedAt": null,
-  "lastCheckedAt": "2026-09-21T12:00:12.689Z"
+  "lastCheckedAt": "2026-09-21T12:00:12.689Z",
+  "officialRecapHash": "521c6bef45724ccb24b5758621f9c2f26e86a3b23c4b8ad9c36875e2bf415413",
+  "officialRecapParserVersion": 6,
+  "officialRecapSyncedAt": "2026-09-22T20:51:30.408Z"
 }

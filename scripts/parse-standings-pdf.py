@@ -6,10 +6,36 @@ def number(value):
     value = value.replace("½", ".5").replace("�", ".5")
     return value if re.fullmatch(r"\d+(?:\.\d+)?", value) else None
 
+def parse_rosters(pdf):
+    bowlers = []
+    for page in pdf.pages:
+        for left, right in ((0, page.width / 2), (page.width / 2, page.width)):
+            lines = (page.crop((left, 0, right, page.height)).dedupe_chars().extract_text() or "").splitlines()
+            active = None
+            for line in lines:
+                team = re.match(r"^(\d+)\s+-\s+(.+?)\s+Lane\s+(\d+)\s+HDCP=\d+\s+Avg=\d+", line)
+                if team:
+                    active = {"team": team[1], "teamName": team[2].strip()}
+                    continue
+                if not active or line.startswith(("Name Pins ", "Temporary Substitutes", "Team Rosters")):
+                    continue
+                tokens = line.split()
+                if len(tokens) < 7 or not all(number(token) is not None for token in tokens[-6:]):
+                    continue
+                name = " ".join(tokens[:-6]).strip()
+                if not name or name.startswith(("HDCP ", "High ")):
+                    continue
+                pins, games, average, handicap, high_game, high_series = tokens[-6:]
+                bowlers.append({"name": name, "team": active["team"], "teamName": active["teamName"],
+                                "pins": pins, "games": games, "average": average, "handicap": handicap,
+                                "highGame": high_game, "highSeries": high_series})
+    return bowlers
+
 def parse(filename):
     with pdfplumber.open(filename) as pdf:
         page = pdf.pages[0]
         text = page.extract_text() or ""
+        bowlers = parse_rosters(pdf)
     lines = text.splitlines()
     period = re.search(r"(\d{1,2}/\d{1,2}/\d{4})\s+Week\s+(\d+)\s+of\s+(\d+)", text)
     if period and text.count("Place # Team Name Won Lost %Won HDCP HDCP") >= 2:
@@ -34,9 +60,11 @@ def parse(filename):
                               "printedName": " ".join(tokens[2:-width]), "won": values[0], "lost": values[1],
                               "avg": None, "scratchPins": None, "hsg": None, "hss": None})
         if teams and len({team["team"] for team in teams}) == len(teams):
-            return {"date": period[1], "reportWeek": period[2], "teams": teams}
+            return {"date": period[1], "reportWeek": period[2], "teams": teams, "bowlers": bowlers}
     heading = next((i for i, line in enumerate(lines) if line.startswith("Team Standings")), None)
     if not period or heading is None:
+        if period and bowlers:
+            return {"date": period[1], "reportWeek": period[2], "teams": [], "bowlers": bowlers}
         raise ValueError("No recognizable team standings in official PDF")
     start = heading + 1
     stop = next((i for i in range(start, len(lines)) if lines[i].startswith(("Review of Last Week", "Lane Assignments", "Last Week's Top Scores", "Season High Scores"))), len(lines))
@@ -77,9 +105,11 @@ def parse(filename):
         teams.append({"place": tokens[0], "lane": None if no_lane else tokens[1], "team": tokens[1] if no_lane else tokens[2], "printedName": name,
                       "won": won, "lost": lost, "avg": avg, "scratchPins": scratch_pins,
                       "hsg": hsg, "hss": hss})
-    if not teams or len({team["team"] for team in teams}) != len(teams):
+    if (not teams or len({team["team"] for team in teams}) != len(teams)) and not bowlers:
         raise ValueError("Official PDF team standings are incomplete or duplicated")
-    return {"date": period[1], "reportWeek": period[2], "teams": teams}
+    if len({team["team"] for team in teams}) != len(teams):
+        teams = []
+    return {"date": period[1], "reportWeek": period[2], "teams": teams, "bowlers": bowlers}
 
 if __name__ == "__main__":
     print(json.dumps(parse(sys.argv[1])))

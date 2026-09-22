@@ -36,6 +36,10 @@ function findBowlerMatches(query: string): BowlerSearchMatch[] {
   return findBowlers(query).map(match => ({ key: match.key, name: match.name,
     leagues: match.leagues.map(league => ({id: league.id, teams: league.teams})) }));
 }
+function leagueBowlerDetails(league: LeagueSnapshot, name: string) {
+  const wanted = nameTokens(name).join(" ");
+  return findBowlers(name).find(match => nameTokens(match.name).join(" ") === wanted)?.leagues.find(detail => detail.id === league.id);
+}
 
 export function LeagueSwitcher({ manageOnly = false }: { manageOnly?: boolean }) {
   const router = useRouter();
@@ -217,10 +221,7 @@ export function LeagueSwitcher({ manageOnly = false }: { manageOnly?: boolean })
   const personalStats = savedLeagues.flatMap((league) => {
     const leagueBowler = leagueBowlers[league.id] || bowlerName;
     if (!leagueBowler) return [];
-    const profile = findBowlers(leagueBowler).find(
-      (match) => nameTokens(match.name).join(" ") === nameTokens(leagueBowler).join(" "),
-    );
-    const details = profile?.leagues.find((item) => item.id === league.id);
+    const details = leagueBowlerDetails(league, leagueBowler);
     return details ? [{ average: Number(details.average), highSeries: Number(details.highSeries) }] : [];
   });
   const highAverage = Math.max(0, ...personalStats.map((item) => item.average).filter(Number.isFinite));
@@ -249,8 +250,7 @@ export function LeagueSwitcher({ manageOnly = false }: { manageOnly?: boolean })
       {savedLeagues.length ? <div className="current-league-cards">
         {savedLeagues.map((item) => {
           const leagueBowler = leagueBowlers[item.id] || bowlerName;
-          const itemProfile = leagueBowler ? findBowlers(leagueBowler).find((match) => nameTokens(match.name).join(" ") === nameTokens(leagueBowler).join(" ")) : undefined;
-          const details = itemProfile?.leagues.find((league) => league.id === item.id) ?? bowlerProfile?.leagues.find((league) => league.id === item.id);
+          const details = leagueBowler ? leagueBowlerDetails(item, leagueBowler) : bowlerProfile?.leagues.find((league) => league.id === item.id);
           return <article key={item.id} className={leagueId === item.id ? "active" : ""}>
             <button className="league-card-main" onClick={() => openLeague(item.id)}>
               <small>{item.bowlsOn} · {item.startTime}</small>

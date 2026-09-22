@@ -59,6 +59,28 @@ test("new Nationals Recap Sheet supplies Week 5 official point totals", () => {
   const totalIndex = team.rows.findIndex(row => row[0] === "Total");
   assert.deepEqual(team.emphasis[totalIndex], [false, true, true, true, true]);
 });
+test("four-game Recap Sheets retain the fourth game, winner mark and printed points", () => {
+  const printed = JSON.parse(execFileSync(process.env.FRAMELINE_PYTHON || "python", ["scripts/parse-recap-pdf.py", "tests/fixtures/sunday-9-pin-week13.pdf"], {encoding:"utf8"}));
+  const result = buildOfficialRecaps([], printed, "13", "official.pdf");
+  assert.equal(result.length, 9);
+  assert.ok(result.every(table => table.headers.includes("Game 4")));
+  const first = result[0];
+  assert.equal(first.rows.find(row => row[0] === "James Coates")?.[6], "172");
+  assert.equal(first.rows.find(row => row[0] === "Team 2")?.[1], "Lane 19 points won: 8.0");
+});
+test("repeated lane numbers still pair the two printed recap columns", () => {
+  const printed = JSON.parse(execFileSync(process.env.FRAMELINE_PYTHON || "python", ["scripts/parse-recap-pdf.py", "tests/fixtures/pva-week5.pdf"], {encoding:"utf8"}));
+  const result = buildOfficialRecaps([], printed, "5", "official.pdf");
+  assert.equal(result.length, 8);
+  assert.deepEqual(result[0].rows.filter(row => /^Team \d+$/.test(row[0])).map(row => row[0]), ["Team 8", "Team 5"]);
+});
+test("four-game doubles with clipped rows keep their official team totals", () => {
+  const printed = JSON.parse(execFileSync(process.env.FRAMELINE_PYTHON || "python", ["scripts/parse-recap-pdf.py", "tests/fixtures/tuesday-doubles-week15.pdf"], {encoding:"utf8"}));
+  const result = buildOfficialRecaps([], printed, "15", "official.pdf");
+  assert.equal(result.length, 20);
+  assert.ok(result.every(table => table.headers.includes("Game 4")));
+  assert.deepEqual(result[0].rows.find(row => row[0] === "Total"), ["Total", "404", "308", "294", "313", "1319"]);
+});
 test("an abbreviated interactive name matches only the exact-score official bowler", () => {
   const official = [{team:"22",week:"1",lane:"22",bowlers:[{name:"Xavier Harbeck",values:["93","127","105","82","92","279"],wins:[false,false,false,false],handicapSeries:"660",points:0}],total:["0","0","0","0"],scratchTotal:["0","0","0","0"],totalWins:[false,false,false,false]}];
   const table = [{rows:[["Team 22",""],["H, X","93","127","105","82","92","279"],["Total","0","0","0","0"]]}];

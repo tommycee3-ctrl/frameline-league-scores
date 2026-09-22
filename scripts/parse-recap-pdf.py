@@ -5,9 +5,14 @@ import pdfplumber
 def parse(filename):
     teams = []
     with pdfplumber.open(filename) as pdf:
-        for page in pdf.pages:
+        for page_index, page in enumerate(pdf.pages):
             for left, right in [(0, page.width / 2), (page.width / 2, page.width)]:
                 cropped = page.crop((left, 0, right, page.height)).dedupe_chars()
+                header = next((row for row in (cropped.extract_text() or "").splitlines() if row.startswith("Name Avg")), "")
+                listed_games = [int(value) for value in re.findall(r"-([1-6])-", header)]
+                game_count = max(listed_games, default=3)
+                four_games = game_count == 4
+                has_handicap = "HDCP" in header
                 words = cropped.extract_words(extra_attrs=["fontname"])
                 # A long clipped name can touch the following average, including bk book averages.
                 expanded = []
@@ -38,7 +43,7 @@ def parse(filename):
                         dash, week = tokens.index("-"), tokens.index("Week")
                         if dash != 3 or not tokens[1].isdigit() or not tokens[2].isdigit():
                             active = None; continue
-                        active = {"team": tokens[2], "lane": tokens[1], "week": tokens[week + 1], "name": " ".join(tokens[4:week]), "bowlers": []}
+                        active = {"team": tokens[2], "lane": tokens[1], "week": tokens[week + 1], "name": " ".join(tokens[4:week]), "matchupKey": f"{page_index}:{round(line[0]['top'])}", "gameCount": game_count, "bowlers": []}
                         teams.append(active)
                         continue
                     if not active: continue
@@ -49,8 +54,30 @@ def parse(filename):
                         return (bool(re.fullmatch(r"[A-Za-z][A-Za-z .,'&-]*", name.strip()))
                                 and all(v is not None for v in values)
                                 and int(float(values[0])) <= 300
-                                and all(int(float(v)) <= 900 for v in values[1:]))
-                    if len(tokens) >= 8 and all(number(v) is not None for v in tokens[-7:]) and not text.startswith(("Scratch Total", "Total", "Handicap")):
+                                and all(int(float(v)) <= 300 for v in values[2:-1])
+                                and int(float(values[-1])) <= 1800)
+                    if game_count in (1, 2, 5, 6) and not text.startswith(("Scratch Total", "Total", "Handicap", "Team Points", "Match Points")):
+                        first = next((i for i, token in enumerate(tokens) if number(token) is not None), None)
+                        raw = [number(token) for token in tokens[first:]] if first is not None else []
+                        name = " ".join(tokens[:first]) if first is not None else ""
+                        minimum = 4 if has_handicap else 3
+                        if first is None or len(raw) < minimum or any(value is None for value in raw): continue
+                        average = raw[0]
+                        handicap = raw[1] if has_handicap else "0"
+                        games = raw[2:-2] if has_handicap else raw[1:-1]
+                        scratch_series = raw[-2] if has_handicap else raw[-1]
+                        handicap_series = raw[-1]
+                        if len(games) > game_count: continue
+                        values = [average, handicap, *games, *(["0"] * (game_count - len(games))), scratch_series]
+                        if not valid_bowler(name, values): continue
+                        score_words = line[first + (2 if has_handicap else 1):first + (2 if has_handicap else 1) + len(games)]
+                        series_mark = line[-1] if has_handicap else line[-1]
+                        active["bowlers"].append({"name": name, "values": values, "handicapSeries": handicap_series, "wins": ["Bold" in word["fontname"] for word in score_words] + [False] * (game_count - len(games)) + ["Bold" in series_mark["fontname"]]})
+                    elif four_games and len(tokens) >= 9 and all(number(v) is not None for v in tokens[-8:]) and not text.startswith(("Scratch Total", "Total", "Handicap", "Team Points", "Match Points")):
+                        values = [number(v) for v in tokens[-8:]]
+                        if not valid_bowler(" ".join(tokens[:-8]), values[:7]): continue
+                        active["bowlers"].append({"name": " ".join(tokens[:-8]), "values": values[:7], "handicapSeries": values[7], "wins": ["Bold" in w["fontname"] for w in line[-8:]][2:6] + ["Bold" in line[-1]["fontname"]]})
+                    elif len(tokens) >= 8 and all(number(v) is not None for v in tokens[-7:]) and not text.startswith(("Scratch Total", "Total", "Handicap")):
                         values = [number(v) for v in tokens[-7:]]
                         if not valid_bowler(" ".join(tokens[:-7]), values[:6]): continue
                         active["bowlers"].append({"name": " ".join(tokens[:-7]), "values": values[:6], "handicapSeries": values[6], "wins": ["Bold" in w["fontname"] for w in line[-7:]][2:5] + ["Bold" in line[-1]["fontname"]]})
@@ -65,17 +92,17 @@ def parse(filename):
                         values = [number(v) for v in tokens[-5:]]
                         if not valid_bowler(" ".join(tokens[:-5]), values): continue
                         active["bowlers"].append({"name": " ".join(tokens[:-5]), "values": [values[0], "0", *values[1:]], "handicapSeries": values[-1], "wins": ["Bold" in w["fontname"] for w in line[-4:]]})
-                    elif text.startswith("Scratch Total ") and len(tokens) in (6, 7) and all(number(v) for v in tokens[2:]):
+                    elif text.startswith("Scratch Total ") and len(tokens) >= 2 + game_count + 1 and all(number(v) for v in tokens[2:]):
                         active["scratchTotal"] = [number(v) for v in tokens[2:]]
                         active["scratchTotalWins"] = ["Bold" in w["fontname"] for w in line[2:]]
-                    elif text.startswith("Total ") and len(tokens) == 6 and all(number(v) for v in tokens[1:]):
+                    elif text.startswith("Total ") and len(tokens) >= 1 + game_count + 1 and all(number(v) for v in tokens[1:]):
                         active["total"] = tokens[1:]
-                        active["totalWins"] = ["Bold" in w["fontname"] for w in line[1:4]] + ["Bold" in line[-1]["fontname"]]
+                        active["totalWins"] = ["Bold" in w["fontname"] for w in line[1:-2]] + ["Bold" in line[-1]["fontname"]]
                     else:
                         for label, field in [("Team Points Won", "teamPoints"), ("Match Points Won", "matchPoints"), ("Total Points Won", "points")]:
                             if text.startswith(label + " "):
-                                values = [number(v) for v in tokens[3:8]]
-                                if len(values) in (4, 5) and all(v is not None for v in values):
+                                values = [number(v) for v in tokens[3:9]]
+                                if len(values) >= 3 and all(v is not None for v in values):
                                     active[field] = values
     for team in teams:
         # A scratch recap has no separate handicap Total row.
@@ -86,7 +113,7 @@ def parse(filename):
     # with the opposing position is worth half; every other marked cell is one.
     matchups = {}
     for team in teams:
-        key = (team.get("week"), (int(team["lane"]) + 1) // 2)
+        key = (team.get("week"), team.get("matchupKey") or (int(team["lane"]) + 1) // 2)
         matchups.setdefault(key, []).append(team)
     for pair in matchups.values():
         if len(pair) != 2: continue
@@ -97,7 +124,8 @@ def parse(filename):
                 points = 0
                 for result_index, marked in enumerate(bowler["wins"]):
                     if not marked: continue
-                    value_index = result_index + 2 if result_index < 3 else 5
+                    game_count = len(bowler["values"]) - 3
+                    value_index = result_index + 2 if result_index < game_count else game_count + 2
                     tied = opponent is not None and bowler["values"][value_index] == opponent["values"][value_index]
                     points += .5 if tied else 1
                 bowler["points"] = points

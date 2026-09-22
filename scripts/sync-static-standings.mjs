@@ -13,6 +13,7 @@ const requested = process.argv.find(arg => arg.startsWith("--league="))?.slice(9
 const dryRun = process.argv.includes("--dry-run");
 const seasonCode = { Fall: "f", Summer: "u", Spring: "s", Winter: "w" };
 let updated = 0, skipped = 0, unavailable = 0;
+const parserVersion = 2;
 
 async function reportFor(league) {
   const year = league.startDate?.match(/\b20\d{2}\b/)?.[0];
@@ -63,13 +64,30 @@ function mergeStandings(league, official) {
   return { standings: [{ ...original, rows }], ...(lanes ? { lanes: [{ title: league.views.lanes?.[0]?.title ?? "Lane assignments", headers: ["Lane", "Team#", "Team"], rows: lanes }] } : {}) };
 }
 
+function mergeBowlers(league, official) {
+  if (!official.bowlers?.length) return null;
+  const existing = league.views?.bowlers?.[0];
+  const prior = new Map((existing?.rows ?? []).map(row => {
+    const name = existing.headers.findIndex(header => header.toLowerCase() === "name");
+    return [String(row[name] ?? "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim(), row];
+  }));
+  return [{ title: existing?.title ?? "Bowler List",
+    headers: ["Name", "Team#", "Pos#", "Team", "Gndr", "Pins", "Games", "Avg", "EnteringAvg", "HCP", "HHG", "HHS", "HSG", "HSS", "MIB", "WON"],
+    rows: official.bowlers.map((bowler, index) => {
+      const key = String(bowler.name).toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+      const saved = prior.get(key) ?? [];
+      return [bowler.name, bowler.team, String(index + 1), bowler.teamName, saved[4] ?? "", bowler.pins, bowler.games, bowler.average,
+        saved[8] ?? "0", bowler.handicap, saved[10] ?? "0", saved[11] ?? "0", bowler.highGame, bowler.highSeries, saved[14] ?? "0", saved[15] ?? "0"];
+    }) }];
+}
+
 for (const listed of catalog.filter(league => (!requested || league.id === requested) && /^\d+$/.test(league.id) && league.views?.standings?.[0]?.rows?.length)) {
   const file = path.join(root, `${listed.id}.json`);
   try {
     const league = JSON.parse(await readFile(file, "utf8"));
     const report = await reportFor(league);
     if (!report) { unavailable++; continue; }
-    if (report.hash === league.officialStandingsHash) { skipped++; continue; }
+    if (report.hash === league.officialStandingsHash && league.officialStandingsParserVersion >= parserVersion) { skipped++; continue; }
     const directory = await mkdtemp(path.join(tmpdir(), "frameline-static-standings-"));
     let official;
     try {
@@ -78,8 +96,16 @@ for (const listed of catalog.filter(league => (!requested || league.id === reque
       const { stdout } = await run(process.env.FRAMELINE_PYTHON || "python", [path.resolve("scripts/parse-standings-pdf.py"), pdfFile], { timeout: 30000, maxBuffer: 8 * 1024 * 1024 });
       official = JSON.parse(stdout);
     } finally { await rm(directory, { recursive: true, force: true }); }
-    const views = mergeStandings(league, official);
-    const next = { ...league, views: { ...league.views, ...views }, officialStandingsHash: report.hash, officialStandingsSyncedAt: new Date().toISOString() };
+    const bowlers = mergeBowlers(league, official);
+    let views = bowlers ? { bowlers } : {};
+    let retainedReason = "";
+    try {
+      views = { ...views, ...mergeStandings(league, official) };
+    } catch (error) {
+      if (!bowlers) throw error;
+      retainedReason = error.message;
+    }
+    const next = { ...league, views: { ...league.views, ...views }, officialStandingsHash: report.hash, officialStandingsParserVersion: parserVersion, officialStandingsSyncedAt: new Date().toISOString() };
     if (Array.isArray(next.history)) next.history = next.history.map(entry => String(entry.week) === String(league.week) ? { ...entry, views: { ...entry.views, ...views } } : entry);
     if (!dryRun) {
       await writeFile(file, JSON.stringify(next, null, 2) + "\n");
@@ -87,7 +113,7 @@ for (const listed of catalog.filter(league => (!requested || league.id === reque
       catalog[index] = next;
     }
     updated++;
-    console.log(`${dryRun ? "Would update" : "Updated"} ${league.displayName} standings from published PDF`);
+    console.log(`${dryRun ? "Would update" : "Updated"} ${league.displayName} official report${retainedReason ? ` (Bowler List refreshed; standings retained: ${retainedReason})` : ""}`);
   } catch (error) { skipped++; console.warn(`Skipped ${listed.displayName} standings: ${error.message}`); }
 }
 if (updated && !dryRun) await writeFile(catalogFile, JSON.stringify(catalog, null, 2) + "\n");

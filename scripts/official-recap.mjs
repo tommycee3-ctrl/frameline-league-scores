@@ -85,7 +85,6 @@ export function applyOfficialRecap(tables, teams, week, sourceReport) {
 }
 export function buildOfficialRecaps(tables, teams, week, sourceReport) {
   const printed = teams.filter(team => team.week === String(week));
-  const byLane = new Map(printed.map(team => [String(team.lane), team]));
   const prior = new Map();
   for (const table of tables) {
     let lane;
@@ -95,29 +94,29 @@ export function buildOfficialRecaps(tables, teams, week, sourceReport) {
       else if (lane && prior.has(lane)) prior.get(lane).rows.push(row);
     }
   }
-  if (!printed.length || byLane.size !== printed.length ||
-      [...prior.keys()].some(lane => !byLane.has(lane)))
+  if (!printed.length || new Set(printed.map(team => String(team.team))).size !== printed.length)
     throw new Error(`Official recap lane set does not match the published Week ${week} matchup`);
   const pairs = new Map();
   for (const team of printed) {
-    const pair = Math.ceil(Number(team.lane) / 2);
-    if (!Number.isInteger(pair) || pair < 1) throw new Error(`Invalid official lane ${team.lane}`);
+    const pair = team.matchupKey ?? Math.ceil(Number(team.lane) / 2);
+    if (!pair) throw new Error(`Invalid official lane ${team.lane}`);
     if (!pairs.has(pair)) pairs.set(pair, []);
     pairs.get(pair).push(team);
   }
   if ([...pairs.values()].some(pair => pair.length !== 2)) throw new Error(`Incomplete official Week ${week} lane pair`);
-  return [...pairs.entries()].sort((a, b) => a[0] - b[0]).map(([, pair]) => {
+  const leagueGameCount = Math.max(...printed.flatMap(team => team.bowlers.map(bowler => bowler.values.length - 3)), 3);
+  return [...pairs.entries()].sort((a, b) => String(a[0]).localeCompare(String(b[0]), undefined, { numeric: true })).map(([, pair]) => {
     pair.sort((a, b) => Number(a.lane) - Number(b.lane));
-    const result = { title: `${pair[0].name} vs ${pair[1].name}`, headers: tables[0]?.headers ?? ["Bowler", "Average", "Handicap", "Game 1", "Game 2", "Game 3", "Scratch series"],
+    const gameCount = leagueGameCount;
+    const result = { title: `${pair[0].name} vs ${pair[1].name}`, headers: ["Bowler", "Average", "Handicap", ...Array.from({ length: gameCount }, (_, index) => `Game ${index + 1}`), "Scratch series"],
       rows: [], emphasis: [], recapDetails: [], sourceReport };
     for (const team of pair) {
-      if (team.scratchTotal && [0, 1, 2].some(game => {
+      const scoreMismatch = team.scratchTotal && Array.from({ length: gameCount }, (_, game) => game).some(game => {
         const printed = Number(team.scratchTotal[game]);
         const all = team.bowlers.reduce((sum, bowler) => sum + Number(bowler.values[game + 2] || 0), 0);
         const occupied = team.bowlers.filter(bowler => !/^vacant$/i.test(bowler.name.trim())).reduce((sum, bowler) => sum + Number(bowler.values[game + 2] || 0), 0);
         return all !== printed && occupied !== printed;
-      }))
-        throw new Error(`Official PDF bowler scores do not add up for team ${team.team}, lane ${team.lane}`);
+      });
       const saved = prior.get(String(team.lane)) ?? { header: [], rows: [] };
       const points = team.points?.at(-1) ?? team.teamPoints?.at(-1) ?? (!team.bowlers.length ? "0" : null);
       result.rows.push([`Team ${team.team}`, `Lane ${team.lane} points won: ${points ?? "unverified"}`]);
@@ -129,8 +128,8 @@ export function buildOfficialRecaps(tables, teams, week, sourceReport) {
         result.recapDetails.push({ handicapSeries: bowler.handicapSeries, individualPoints: bowler.points });
       }
       const knownScores = new Set(team.bowlers.map(bowler => bowler.values.join("|")));
-      const clipped = Boolean(team.bowlers.length && (!team.total || !team.scratchTotal));
-      if (clipped) {
+      const clipped = Boolean((team.bowlers.length && (!team.total || !team.scratchTotal)) || scoreMismatch);
+      if (!team.total || !team.scratchTotal) {
         for (const row of saved.rows.filter(row => row[0] !== "Total" && !/vacant/i.test(row[0] ?? ""))) {
           if (knownScores.has(row.slice(1, 7).map(numeric).join("|"))) continue;
           result.rows.push(row);
@@ -138,11 +137,11 @@ export function buildOfficialRecaps(tables, teams, week, sourceReport) {
           result.recapDetails.push({ officialRowUnavailable: true });
         }
       }
-      const total = team.scratchTotal ? ["Total", ...team.scratchTotal.slice(0, 4)] : saved.rows.find(row => row[0] === "Total") ?? (!team.bowlers.length ? ["Total", "0", "0", "0", "0"] : ["Total", "—", "—", "—", "—"]);
+      const total = team.scratchTotal ? ["Total", ...team.scratchTotal.slice(0, gameCount + 1)] : saved.rows.find(row => row[0] === "Total") ?? (!team.bowlers.length ? ["Total", ...Array(gameCount + 1).fill("0")] : ["Total", ...Array(gameCount + 1).fill("—")]);
       if (!total) throw new Error(`No total available for team ${team.team}, lane ${team.lane}`);
       result.rows.push(total);
-      result.emphasis.push(team.totalWins?.length >= 4 ? [false, ...team.totalWins.slice(0, 4)] : total.map(() => false));
-      result.recapDetails.push(team.total ? { handicapSeries: team.total.at(-1), handicapGames: team.total.slice(0, 3), teamPoints: team.teamPoints, matchPoints: team.matchPoints } : team.bowlers.length ? { officialTotalsUnavailable: true } : {});
+      result.emphasis.push(team.totalWins?.length >= gameCount + 1 ? [false, ...team.totalWins.slice(0, gameCount + 1)] : total.map(() => false));
+      result.recapDetails.push(team.total ? { handicapSeries: team.total.at(-1), handicapGames: team.total.slice(0, gameCount), teamPoints: team.teamPoints, matchPoints: team.matchPoints } : team.bowlers.length ? { officialTotalsUnavailable: true } : {});
       if (clipped) result.officialTotalsComplete = false;
     }
     return result;
