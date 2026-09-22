@@ -10,12 +10,15 @@ type AuditableLeague = LeagueSnapshot & {
   season?: string;
   updated?: string;
   syncedAt?: string | null;
+  officialRecapSyncedAt?: string;
+  officialStandingsSyncedAt?: string;
   status?: string;
 };
 
 const leagues = leagueCatalog as AuditableLeague[];
 const unique = (values: string[]) => [...new Set(values.filter(Boolean))].sort((a, b) => a.localeCompare(b));
 const formatChecked = (value?: string | null) => value ? new Intl.DateTimeFormat("en-US", { dateStyle: "medium", timeStyle: "short" }).format(new Date(value)) : "Not checked yet";
+const lastChecked = (league: AuditableLeague) => [league.syncedAt, league.officialRecapSyncedAt, league.officialStandingsSyncedAt].filter((value): value is string => Boolean(value)).sort().at(-1);
 
 export function LeagueView() {
   const [query, setQuery] = useState("");
@@ -57,7 +60,7 @@ export function LeagueView() {
           <button type="button" onClick={() => openLeague(league.id)}>
             <span><small>League ID {league.id}</small><strong>{league.displayName}</strong><em>{league.centerName ?? "Bowling center"} · {league.bowlsOn} at {league.startTime}</em></span>
             <span><small>Source updated</small><b>{league.updated || league.sourceUpdated || "Not posted"}</b></span>
-            <span><small>FrameLine checked</small><b>{formatChecked(league.syncedAt)}</b></span>
+            <span><small>FrameLine checked</small><b>{formatChecked(lastChecked(league))}</b></span>
             <span><small>Results</small><b>{league.week ? `Week ${league.week}` : "Awaiting Week 1"}</b></span>
             <strong>View league →</strong>
           </button>

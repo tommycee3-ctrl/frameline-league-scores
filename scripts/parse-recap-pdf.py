@@ -43,11 +43,15 @@ def parse(filename):
                         continue
                     if not active: continue
                     def number(v):
-                        v = re.sub(r"^(?:bk|[abpvy])", "", v, flags=re.I)
+                        v = re.sub(r"^(?:bk|[a-z])", "", v, flags=re.I)
                         return v if re.fullmatch(r"\d+(?:\.\d+)?", v) else None
                     if len(tokens) >= 8 and all(number(v) is not None for v in tokens[-7:]) and not text.startswith(("Scratch Total", "Total", "Handicap")):
                         values = [number(v) for v in tokens[-7:]]
                         active["bowlers"].append({"name": " ".join(tokens[:-7]), "values": values[:6], "handicapSeries": values[6], "wins": ["Bold" in w["fontname"] for w in line[-7:]][2:5] + ["Bold" in line[-1]["fontname"]]})
+                    elif len(tokens) >= 7 and all(number(v) is not None for v in tokens[-6:]) and not text.startswith(("Scratch Total", "Total", "Handicap", "Team Points", "Match Points")):
+                        # Two-game leagues leave the third game column blank.
+                        values = [number(v) for v in tokens[-6:]]
+                        active["bowlers"].append({"name": " ".join(tokens[:-6]), "values": [values[0], values[1], values[2], values[3], "0", values[4]], "handicapSeries": values[5], "wins": ["Bold" in line[-4]["fontname"], "Bold" in line[-3]["fontname"], False, "Bold" in line[-1]["fontname"]]})
                     elif len(tokens) >= 6 and all(number(v) is not None for v in tokens[-5:]) and not text.startswith(("Scratch Total", "Total", "Handicap", "Team Points", "Match Points")):
                         # Scratch leagues omit both handicap columns. Normalize
                         # them to the same six values used by the web recap.

@@ -4,7 +4,7 @@ import { mkdtemp, writeFile, rm } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import path from "node:path";
 const run = promisify(execFile);
-const numeric = value => String(value ?? "").replace(/^(?:bk|[abpvy])/i, "");
+const numeric = value => String(value ?? "").replace(/^(?:bk|[a-z])/i, "");
 const tokens = name => String(name).toLowerCase().replace(/\b111\b/g,"iii").replace(/\b11\b/g,"ii").replace(/\b1v\b/g,"iv").split(/[^a-z0-9]+/).filter(Boolean);
 const sameName = (sourceName, pdfName) => {
   const source = tokens(sourceName);

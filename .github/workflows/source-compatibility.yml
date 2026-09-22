@@ -41,7 +41,17 @@ jobs:
         shell: bash
         run: |
           set -o pipefail
+          set +e
           node scripts/sync-leaguesecretary.mjs --check-source 2>&1 | tee source-check.log
+          source_status=${PIPESTATUS[0]}
+          set -e
+          if (( source_status != 0 )); then
+            if grep -q 'blocking live report reads (HTTP 403)' source-check.log; then
+              echo 'Live report API is blocked; official PDF fallback is checked by the two-hour sync.' | tee -a source-check.log
+              exit 0
+            fi
+            exit "$source_status"
+          fi
       - name: Save compatibility report
         if: always()
         uses: actions/upload-artifact@v4

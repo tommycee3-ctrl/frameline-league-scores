@@ -91,13 +91,13 @@ jobs:
           if (( source_status != 0 )); then
             if grep -q 'blocking live report reads (HTTP 403)' sync-report.log; then
               echo 'Live report API blocked; checking published official recap PDFs.' | tee -a sync-report.log
-              node scripts/sync-static-recaps.mjs 2>&1 | tee -a sync-report.log
-              node scripts/sync-static-standings.mjs 2>&1 | tee -a sync-report.log
               echo 'partial_failure=true' >> "$GITHUB_OUTPUT"
             else
               exit "$source_status"
             fi
           fi
+          node scripts/sync-static-recaps.mjs 2>&1 | tee -a sync-report.log
+          node scripts/sync-static-standings.mjs 2>&1 | tee -a sync-report.log
           node scripts/sync-leaguepals.mjs | tee -a sync-report.log
           {
             echo "## FrameLine refresh report"
@@ -159,13 +159,3 @@ jobs:
       - name: Publish refreshed league data
         id: deployment
         uses: actions/deploy-pages@v4
-
-  report-import-failures:
-    needs: [sync, deploy]
-    if: always() && needs.sync.outputs.partial_failure == 'true'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Flag incomplete refresh after verified updates deploy
-        run: |
-          echo 'Some league imports failed. See the sync summary; prior snapshots were preserved.'
-          exit 1

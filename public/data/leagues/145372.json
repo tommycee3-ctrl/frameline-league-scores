@@ -1501,7 +1501,7 @@
     ],
     "recaps": [
       {
-        "title": "Team 3 matchup",
+        "title": "Team 3 vs Team 4",
         "headers": [
           "Bowler",
           "Average",
@@ -1514,10 +1514,10 @@
         "rows": [
           [
             "Team 1",
-            "Lane 3 points won: 0"
+            "Lane 3 points won: unverified"
           ],
           [
-            "Eikmeier, Barry",
+            "Barry Eikmeier",
             "194",
             "0",
             "168",
@@ -1526,7 +1526,7 @@
             "499"
           ],
           [
-            "Hammer, Klayton",
+            "Klayton Hammer",
             "67",
             "0",
             "73",
@@ -1535,7 +1535,7 @@
             "226"
           ],
           [
-            "Mawawa, Samantha",
+            "Samantha Mawawa",
             "121",
             "0",
             "110",
@@ -1544,7 +1544,7 @@
             "391"
           ],
           [
-            "Shipman, Joe",
+            "Joe Shipman",
             "60",
             "0",
             "97",
@@ -1553,7 +1553,7 @@
             "257"
           ],
           [
-            "Makinde, Monica",
+            "Monica Makinde",
             "79",
             "0",
             "79",
@@ -1562,7 +1562,7 @@
             "237"
           ],
           [
-            "Smith, Kolton",
+            "Kolton Smith",
             "185",
             "0",
             "150",
@@ -1579,10 +1579,10 @@
           ],
           [
             "Team 2",
-            "Lane 4 points won: 0"
+            "Lane 4 points won: unverified"
           ],
           [
-            "Meurrens, Adam",
+            "Adam Meurrens",
             "104",
             "0",
             "104",
@@ -1591,7 +1591,7 @@
             "312"
           ],
           [
-            "Meurrens, Aiden",
+            "Aiden Meurrens",
             "99",
             "0",
             "99",
@@ -1600,7 +1600,7 @@
             "297"
           ],
           [
-            "Rotherham, Connar",
+            "Connar Rotherham",
             "107",
             "0",
             "84",
@@ -1609,7 +1609,7 @@
             "268"
           ],
           [
-            "Soula, James",
+            "James Soula",
             "162",
             "0",
             "228",
@@ -1618,7 +1618,7 @@
             "554"
           ],
           [
-            "Rasmussen, Michael",
+            "Michael Rasmussen",
             "121",
             "0",
             "147",
@@ -1695,10 +1695,10 @@
           ],
           [
             false,
-            false,
-            false,
-            false,
-            false
+            true,
+            true,
+            true,
+            true
           ],
           [
             false,
@@ -1759,24 +1759,84 @@
         ],
         "recapDetails": [
           {},
+          {
+            "handicapSeries": "499",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "226",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "391",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "257",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "237",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "557",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "2167",
+            "handicapGames": [
+              "677",
+              "744",
+              "746"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0"
+            ]
+          },
           {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {}
-        ]
+          {
+            "handicapSeries": "312",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "297",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "268",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "554",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "365",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "1796",
+            "handicapGames": [
+              "662",
+              "536",
+              "598"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://www.leaguesecretary.com/uploads/2026/f/3/14537209192026f202603reprnt00.pdf"
       },
       {
-        "title": "Team 5 matchup",
+        "title": "Team 5 vs Team 6",
         "headers": [
           "Bowler",
           "Average",
@@ -1789,10 +1849,10 @@
         "rows": [
           [
             "Team 3",
-            "Lane 5 points won: 0"
+            "Lane 5 points won: unverified"
           ],
           [
-            "Howard, Mercedes",
+            "Mercedes Howard",
             "92",
             "0",
             "101",
@@ -1801,7 +1861,7 @@
             "291"
           ],
           [
-            "Wacholtz, Charlie",
+            "Charlie Wacholtz",
             "75",
             "0",
             "75",
@@ -1810,7 +1870,7 @@
             "225"
           ],
           [
-            "Campbell, Mariyka",
+            "Mariyka Campbell",
             "104",
             "0",
             "111",
@@ -1819,7 +1879,7 @@
             "316"
           ],
           [
-            "Tweed, Lauren",
+            "Lauren Tweed",
             "132",
             "0",
             "136",
@@ -1828,7 +1888,7 @@
             "464"
           ],
           [
-            "Hesse, Hailey",
+            "Hailey Hesse",
             "48",
             "0",
             "48",
@@ -1845,10 +1905,10 @@
           ],
           [
             "Team 4",
-            "Lane 6 points won: 0"
+            "Lane 6 points won: unverified"
           ],
           [
-            "Moldenhauer, Tessa",
+            "Tessa Moldenhauer",
             "81",
             "0",
             "81",
@@ -1857,7 +1917,7 @@
             "243"
           ],
           [
-            "Ridder Koch, Chayse",
+            "Chayse Ridder Koch",
             "103",
             "0",
             "99",
@@ -1866,7 +1926,7 @@
             "320"
           ],
           [
-            "Sudbeck, Cheryl",
+            "Cheryl Sudbeck",
             "95",
             "0",
             "95",
@@ -1875,7 +1935,7 @@
             "285"
           ],
           [
-            "Saunders, Josie",
+            "Josie Saunders",
             "93",
             "0",
             "96",
@@ -1884,7 +1944,7 @@
             "280"
           ],
           [
-            "Sullivan, Annie",
+            "Annie Sullivan",
             "103",
             "0",
             "122",
@@ -1893,7 +1953,7 @@
             "263"
           ],
           [
-            "Tedrow, Logan",
+            "Logan Tedrow",
             "122",
             "0",
             "101",
@@ -1963,7 +2023,7 @@
             false,
             false,
             false,
-            false,
+            true,
             false
           ],
           [
@@ -2026,32 +2086,92 @@
           ],
           [
             false,
+            true,
+            true,
             false,
-            false,
-            false,
-            false
+            true
           ]
         ],
         "recapDetails": [
           {},
+          {
+            "handicapSeries": "291",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "225",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "316",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "464",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "288",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "1584",
+            "handicapGames": [
+              "471",
+              "511",
+              "602"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0"
+            ]
+          },
           {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {}
-        ]
+          {
+            "handicapSeries": "243",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "320",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "285",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "280",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "263",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "336",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "1727",
+            "handicapGames": [
+              "594",
+              "560",
+              "573"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://www.leaguesecretary.com/uploads/2026/f/3/14537209192026f202603reprnt00.pdf"
       },
       {
-        "title": "Team 7 matchup",
+        "title": "Team 7 vs Team 8",
         "headers": [
           "Bowler",
           "Average",
@@ -2064,10 +2184,10 @@
         "rows": [
           [
             "Team 5",
-            "Lane 7 points won: 0"
+            "Lane 7 points won: unverified"
           ],
           [
-            "Fletcher, Chris",
+            "Chris Fletcher",
             "97",
             "0",
             "68",
@@ -2076,7 +2196,7 @@
             "275"
           ],
           [
-            "Hannah, Janet",
+            "Janet Hannah",
             "82",
             "0",
             "81",
@@ -2085,7 +2205,7 @@
             "267"
           ],
           [
-            "Roberts, Sam",
+            "Sam Roberts",
             "127",
             "0",
             "127",
@@ -2094,7 +2214,7 @@
             "381"
           ],
           [
-            "Blackman, Justin",
+            "Justin Blackman",
             "108",
             "0",
             "99",
@@ -2103,7 +2223,7 @@
             "320"
           ],
           [
-            "Phillips, John",
+            "John Phillips",
             "81",
             "0",
             "97",
@@ -2112,7 +2232,7 @@
             "271"
           ],
           [
-            "Hannah-Slayton, William",
+            "William Hannah-Slayton",
             "46",
             "0",
             "44",
@@ -2129,10 +2249,10 @@
           ],
           [
             "Team 6",
-            "Lane 8 points won: 0"
+            "Lane 8 points won: unverified"
           ],
           [
-            "Davis, Evan",
+            "Evan Davis",
             "148",
             "0",
             "139",
@@ -2141,7 +2261,7 @@
             "435"
           ],
           [
-            "Brandon, Connor",
+            "Connor Brandon",
             "105",
             "0",
             "111",
@@ -2150,7 +2270,7 @@
             "332"
           ],
           [
-            "Wallace, Jozef",
+            "Jozef Wallace",
             "119",
             "0",
             "148",
@@ -2159,7 +2279,7 @@
             "394"
           ],
           [
-            "Williams, Tj",
+            "TJ Williams",
             "103",
             "0",
             "86",
@@ -2168,7 +2288,7 @@
             "269"
           ],
           [
-            "Percival, Brandy",
+            "Brandy Percival",
             "55",
             "0",
             "55",
@@ -2177,7 +2297,7 @@
             "165"
           ],
           [
-            "Lacombe, Gabe",
+            "Gabe Lacombe",
             "106",
             "0",
             "106",
@@ -2319,30 +2439,93 @@
           ],
           [
             false,
-            false,
-            false,
-            false,
-            false
+            true,
+            true,
+            true,
+            true
           ]
         ],
         "recapDetails": [
           {},
+          {
+            "handicapSeries": "275",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "267",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "381",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "320",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "271",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "120",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "1634",
+            "handicapGames": [
+              "516",
+              "539",
+              "579"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0"
+            ]
+          },
           {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {}
-        ]
+          {
+            "handicapSeries": "435",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "332",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "394",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "269",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "165",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "318",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "1913",
+            "handicapGames": [
+              "645",
+              "640",
+              "628"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://www.leaguesecretary.com/uploads/2026/f/3/14537209192026f202603reprnt00.pdf"
       }
     ],
     "lanes": [
@@ -7382,7 +7565,7 @@
         ],
         "recaps": [
           {
-            "title": "Team 3 matchup",
+            "title": "Team 3 vs Team 4",
             "headers": [
               "Bowler",
               "Average",
@@ -7395,10 +7578,10 @@
             "rows": [
               [
                 "Team 1",
-                "Lane 3 points won: 0"
+                "Lane 3 points won: unverified"
               ],
               [
-                "Eikmeier, Barry",
+                "Barry Eikmeier",
                 "194",
                 "0",
                 "168",
@@ -7407,7 +7590,7 @@
                 "499"
               ],
               [
-                "Hammer, Klayton",
+                "Klayton Hammer",
                 "67",
                 "0",
                 "73",
@@ -7416,7 +7599,7 @@
                 "226"
               ],
               [
-                "Mawawa, Samantha",
+                "Samantha Mawawa",
                 "121",
                 "0",
                 "110",
@@ -7425,7 +7608,7 @@
                 "391"
               ],
               [
-                "Shipman, Joe",
+                "Joe Shipman",
                 "60",
                 "0",
                 "97",
@@ -7434,7 +7617,7 @@
                 "257"
               ],
               [
-                "Makinde, Monica",
+                "Monica Makinde",
                 "79",
                 "0",
                 "79",
@@ -7443,7 +7626,7 @@
                 "237"
               ],
               [
-                "Smith, Kolton",
+                "Kolton Smith",
                 "185",
                 "0",
                 "150",
@@ -7460,10 +7643,10 @@
               ],
               [
                 "Team 2",
-                "Lane 4 points won: 0"
+                "Lane 4 points won: unverified"
               ],
               [
-                "Meurrens, Adam",
+                "Adam Meurrens",
                 "104",
                 "0",
                 "104",
@@ -7472,7 +7655,7 @@
                 "312"
               ],
               [
-                "Meurrens, Aiden",
+                "Aiden Meurrens",
                 "99",
                 "0",
                 "99",
@@ -7481,7 +7664,7 @@
                 "297"
               ],
               [
-                "Rotherham, Connar",
+                "Connar Rotherham",
                 "107",
                 "0",
                 "84",
@@ -7490,7 +7673,7 @@
                 "268"
               ],
               [
-                "Soula, James",
+                "James Soula",
                 "162",
                 "0",
                 "228",
@@ -7499,7 +7682,7 @@
                 "554"
               ],
               [
-                "Rasmussen, Michael",
+                "Michael Rasmussen",
                 "121",
                 "0",
                 "147",
@@ -7576,10 +7759,10 @@
               ],
               [
                 false,
-                false,
-                false,
-                false,
-                false
+                true,
+                true,
+                true,
+                true
               ],
               [
                 false,
@@ -7640,24 +7823,84 @@
             ],
             "recapDetails": [
               {},
+              {
+                "handicapSeries": "499",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "226",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "391",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "257",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "237",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "557",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "2167",
+                "handicapGames": [
+                  "677",
+                  "744",
+                  "746"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0"
+                ]
+              },
               {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {}
-            ]
+              {
+                "handicapSeries": "312",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "297",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "268",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "554",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "365",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "1796",
+                "handicapGames": [
+                  "662",
+                  "536",
+                  "598"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://www.leaguesecretary.com/uploads/2026/f/3/14537209192026f202603reprnt00.pdf"
           },
           {
-            "title": "Team 5 matchup",
+            "title": "Team 5 vs Team 6",
             "headers": [
               "Bowler",
               "Average",
@@ -7670,10 +7913,10 @@
             "rows": [
               [
                 "Team 3",
-                "Lane 5 points won: 0"
+                "Lane 5 points won: unverified"
               ],
               [
-                "Howard, Mercedes",
+                "Mercedes Howard",
                 "92",
                 "0",
                 "101",
@@ -7682,7 +7925,7 @@
                 "291"
               ],
               [
-                "Wacholtz, Charlie",
+                "Charlie Wacholtz",
                 "75",
                 "0",
                 "75",
@@ -7691,7 +7934,7 @@
                 "225"
               ],
               [
-                "Campbell, Mariyka",
+                "Mariyka Campbell",
                 "104",
                 "0",
                 "111",
@@ -7700,7 +7943,7 @@
                 "316"
               ],
               [
-                "Tweed, Lauren",
+                "Lauren Tweed",
                 "132",
                 "0",
                 "136",
@@ -7709,7 +7952,7 @@
                 "464"
               ],
               [
-                "Hesse, Hailey",
+                "Hailey Hesse",
                 "48",
                 "0",
                 "48",
@@ -7726,10 +7969,10 @@
               ],
               [
                 "Team 4",
-                "Lane 6 points won: 0"
+                "Lane 6 points won: unverified"
               ],
               [
-                "Moldenhauer, Tessa",
+                "Tessa Moldenhauer",
                 "81",
                 "0",
                 "81",
@@ -7738,7 +7981,7 @@
                 "243"
               ],
               [
-                "Ridder Koch, Chayse",
+                "Chayse Ridder Koch",
                 "103",
                 "0",
                 "99",
@@ -7747,7 +7990,7 @@
                 "320"
               ],
               [
-                "Sudbeck, Cheryl",
+                "Cheryl Sudbeck",
                 "95",
                 "0",
                 "95",
@@ -7756,7 +7999,7 @@
                 "285"
               ],
               [
-                "Saunders, Josie",
+                "Josie Saunders",
                 "93",
                 "0",
                 "96",
@@ -7765,7 +8008,7 @@
                 "280"
               ],
               [
-                "Sullivan, Annie",
+                "Annie Sullivan",
                 "103",
                 "0",
                 "122",
@@ -7774,7 +8017,7 @@
                 "263"
               ],
               [
-                "Tedrow, Logan",
+                "Logan Tedrow",
                 "122",
                 "0",
                 "101",
@@ -7844,7 +8087,7 @@
                 false,
                 false,
                 false,
-                false,
+                true,
                 false
               ],
               [
@@ -7907,32 +8150,92 @@
               ],
               [
                 false,
+                true,
+                true,
                 false,
-                false,
-                false,
-                false
+                true
               ]
             ],
             "recapDetails": [
               {},
+              {
+                "handicapSeries": "291",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "225",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "316",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "464",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "288",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "1584",
+                "handicapGames": [
+                  "471",
+                  "511",
+                  "602"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0"
+                ]
+              },
               {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {}
-            ]
+              {
+                "handicapSeries": "243",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "320",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "285",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "280",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "263",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "336",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "1727",
+                "handicapGames": [
+                  "594",
+                  "560",
+                  "573"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://www.leaguesecretary.com/uploads/2026/f/3/14537209192026f202603reprnt00.pdf"
           },
           {
-            "title": "Team 7 matchup",
+            "title": "Team 7 vs Team 8",
             "headers": [
               "Bowler",
               "Average",
@@ -7945,10 +8248,10 @@
             "rows": [
               [
                 "Team 5",
-                "Lane 7 points won: 0"
+                "Lane 7 points won: unverified"
               ],
               [
-                "Fletcher, Chris",
+                "Chris Fletcher",
                 "97",
                 "0",
                 "68",
@@ -7957,7 +8260,7 @@
                 "275"
               ],
               [
-                "Hannah, Janet",
+                "Janet Hannah",
                 "82",
                 "0",
                 "81",
@@ -7966,7 +8269,7 @@
                 "267"
               ],
               [
-                "Roberts, Sam",
+                "Sam Roberts",
                 "127",
                 "0",
                 "127",
@@ -7975,7 +8278,7 @@
                 "381"
               ],
               [
-                "Blackman, Justin",
+                "Justin Blackman",
                 "108",
                 "0",
                 "99",
@@ -7984,7 +8287,7 @@
                 "320"
               ],
               [
-                "Phillips, John",
+                "John Phillips",
                 "81",
                 "0",
                 "97",
@@ -7993,7 +8296,7 @@
                 "271"
               ],
               [
-                "Hannah-Slayton, William",
+                "William Hannah-Slayton",
                 "46",
                 "0",
                 "44",
@@ -8010,10 +8313,10 @@
               ],
               [
                 "Team 6",
-                "Lane 8 points won: 0"
+                "Lane 8 points won: unverified"
               ],
               [
-                "Davis, Evan",
+                "Evan Davis",
                 "148",
                 "0",
                 "139",
@@ -8022,7 +8325,7 @@
                 "435"
               ],
               [
-                "Brandon, Connor",
+                "Connor Brandon",
                 "105",
                 "0",
                 "111",
@@ -8031,7 +8334,7 @@
                 "332"
               ],
               [
-                "Wallace, Jozef",
+                "Jozef Wallace",
                 "119",
                 "0",
                 "148",
@@ -8040,7 +8343,7 @@
                 "394"
               ],
               [
-                "Williams, Tj",
+                "TJ Williams",
                 "103",
                 "0",
                 "86",
@@ -8049,7 +8352,7 @@
                 "269"
               ],
               [
-                "Percival, Brandy",
+                "Brandy Percival",
                 "55",
                 "0",
                 "55",
@@ -8058,7 +8361,7 @@
                 "165"
               ],
               [
-                "Lacombe, Gabe",
+                "Gabe Lacombe",
                 "106",
                 "0",
                 "106",
@@ -8200,30 +8503,93 @@
               ],
               [
                 false,
-                false,
-                false,
-                false,
-                false
+                true,
+                true,
+                true,
+                true
               ]
             ],
             "recapDetails": [
               {},
+              {
+                "handicapSeries": "275",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "267",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "381",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "320",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "271",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "120",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "1634",
+                "handicapGames": [
+                  "516",
+                  "539",
+                  "579"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0"
+                ]
+              },
               {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {}
-            ]
+              {
+                "handicapSeries": "435",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "332",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "394",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "269",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "165",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "318",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "1913",
+                "handicapGames": [
+                  "645",
+                  "640",
+                  "628"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://www.leaguesecretary.com/uploads/2026/f/3/14537209192026f202603reprnt00.pdf"
           }
         ],
         "lanes": [
@@ -9036,5 +9402,8 @@
         ]
       }
     }
-  ]
+  ],
+  "officialRecapHash": "f6a405bb7b972102e3a98eb67e1d9abf15acd5dc78c775c373b72ea94715456c",
+  "officialRecapParserVersion": 4,
+  "officialRecapSyncedAt": "2026-09-22T04:38:25.800Z"
 }

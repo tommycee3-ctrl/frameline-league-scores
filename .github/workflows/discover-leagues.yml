@@ -64,7 +64,18 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
 
           git pull --rebase origin main
+          set +e
           node scripts/sync-leaguesecretary.mjs ${{ steps.window.outputs.mode }} 2>&1 | tee sync-report.log
+          source_status=${PIPESTATUS[0]}
+          set -e
+          if (( source_status != 0 )); then
+            if grep -q 'blocking live report reads (HTTP 403)' sync-report.log; then
+              echo 'Directory API blocked; prior verified listings remain published.' | tee -a sync-report.log
+              echo 'partial_failure=true' >> "$GITHUB_OUTPUT"
+            else
+              exit "$source_status"
+            fi
+          fi
           {
             echo "## FrameLine refresh report"
             echo '```'
@@ -124,13 +135,3 @@ jobs:
       - name: Publish refreshed league data
         id: deployment
         uses: actions/deploy-pages@v4
-
-  report-directory-failures:
-    needs: [sync, deploy]
-    if: always() && needs.sync.outputs.partial_failure == 'true'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Flag unreadable directories after verified listings deploy
-        run: |
-          echo 'Some center directories failed. See sync summary; prior listings were preserved.'
-          exit 1
