@@ -84,12 +84,25 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
 
           git pull --rebase origin main
+          set +e
           node scripts/sync-leaguesecretary.mjs ${{ steps.window.outputs.mode }} 2>&1 | tee sync-report.log
+          source_status=${PIPESTATUS[0]}
+          set -e
+          if (( source_status != 0 )); then
+            if grep -q 'blocking live report reads (HTTP 403)' sync-report.log; then
+              echo 'Live report API blocked; checking published official recap PDFs.' | tee -a sync-report.log
+              node scripts/sync-static-recaps.mjs 2>&1 | tee -a sync-report.log
+              node scripts/sync-static-standings.mjs 2>&1 | tee -a sync-report.log
+              echo 'partial_failure=true' >> "$GITHUB_OUTPUT"
+            else
+              exit "$source_status"
+            fi
+          fi
           node scripts/sync-leaguepals.mjs | tee -a sync-report.log
           {
             echo "## FrameLine refresh report"
             echo '```'
-            grep -E '^(SYNC|LEAGUEPALS) (SUMMARY|CHANGE)' sync-report.log || echo "No refresh summary was produced."
+            grep -E '^(SYNC|LEAGUEPALS) (SUMMARY|CHANGE)|^Official (recap|standings) pass:' sync-report.log || echo "No refresh summary was produced."
             echo '```'
           } >> "$GITHUB_STEP_SUMMARY"
 

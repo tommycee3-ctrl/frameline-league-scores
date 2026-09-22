@@ -1289,187 +1289,7 @@
     ],
     "recaps": [
       {
-        "title": "BROOKLYN BOMBERS matchup",
-        "headers": [
-          "Bowler",
-          "Average",
-          "Handicap",
-          "Game 1",
-          "Game 2",
-          "Game 3",
-          "Scratch series"
-        ],
-        "rows": [
-          [
-            "Team 8",
-            "Lane 12 points won: 3"
-          ],
-          [
-            "Larsen, Mike",
-            "170",
-            "40",
-            "157",
-            "189",
-            "139",
-            "485"
-          ],
-          [
-            "Kampsnider, Greg",
-            "153",
-            "53",
-            "139",
-            "122",
-            "161",
-            "422"
-          ],
-          [
-            "Szalawiga, George",
-            "136",
-            "67",
-            "127",
-            "162",
-            "114",
-            "403"
-          ],
-          [
-            "Total",
-            "423",
-            "473",
-            "414",
-            "1310"
-          ],
-          [
-            "Team 7",
-            "Lane 11 points won: 1"
-          ],
-          [
-            "Toby, Mike",
-            "160",
-            "48",
-            "127",
-            "143",
-            "155",
-            "425"
-          ],
-          [
-            "Hinrichs, Roger",
-            "199",
-            "16",
-            "170",
-            "156",
-            "190",
-            "516"
-          ],
-          [
-            "Bade, Jim",
-            "212",
-            "6",
-            "181",
-            "226",
-            "193",
-            "600"
-          ],
-          [
-            "Total",
-            "478",
-            "525",
-            "538",
-            "1541"
-          ]
-        ],
-        "emphasis": [
-          [
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false
-          ]
-        ],
-        "recapDetails": [
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {}
-        ]
-      },
-      {
-        "title": "BURLINGTON BOMBERS matchup",
+        "title": "BURLINGTON BOMBERS vs THREE AMIGOS",
         "headers": [
           "Bowler",
           "Average",
@@ -1482,10 +1302,10 @@
         "rows": [
           [
             "Team 1",
-            "Lane 5 points won: 4"
+            "Lane 5 points won: unverified"
           ],
           [
-            "Merck, Craig",
+            "CRAIG MERCK",
             "196",
             "19",
             "227",
@@ -1494,7 +1314,7 @@
             "607"
           ],
           [
-            "Slade, Pat",
+            "PAT SLADE",
             "176",
             "35",
             "154",
@@ -1503,7 +1323,7 @@
             "497"
           ],
           [
-            "Priess, Russ",
+            "RUSS PRIESS",
             "181",
             "31",
             "179",
@@ -1520,10 +1340,10 @@
           ],
           [
             "Team 2",
-            "Lane 6 points won: 0"
+            "Lane 6 points won: unverified"
           ],
           [
-            "Connell, Steve",
+            "STEVE CONNELL",
             "176",
             "35",
             "97",
@@ -1532,7 +1352,7 @@
             "366"
           ],
           [
-            "Addleman, Alan",
+            "ALAN ADDLEMAN",
             "155",
             "52",
             "173",
@@ -1541,7 +1361,7 @@
             "465"
           ],
           [
-            "Wunderlich, Keith",
+            "KEITH WUNDERLICH",
             "175",
             "36",
             "183",
@@ -1591,10 +1411,10 @@
           ],
           [
             false,
-            false,
-            false,
-            false,
-            false
+            true,
+            true,
+            true,
+            true
           ],
           [
             false,
@@ -1637,19 +1457,66 @@
         ],
         "recapDetails": [
           {},
+          {
+            "handicapSeries": "664",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "602",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "683",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "1949",
+            "handicapGames": [
+              "645",
+              "669",
+              "635"
+            ],
+            "teamPoints": [
+              "1.0",
+              "1.0",
+              "1.0",
+              "4.0",
+              "4.0"
+            ]
+          },
           {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {}
-        ]
+          {
+            "handicapSeries": "471",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "621",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "599",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "1691",
+            "handicapGames": [
+              "576",
+              "534",
+              "581"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://www.leaguesecretary.com/uploads/2026/f/1/12205609142026f202601reprnt00.pdf"
       },
       {
-        "title": "BYE matchup",
+        "title": "WOODSHANK'S vs ROLLIN LIFE",
         "headers": [
           "Bowler",
           "Average",
@@ -1660,410 +1527,12 @@
           "Scratch series"
         ],
         "rows": [
-          [
-            "Team 10",
-            "Lane 14 points won: 0"
-          ],
-          [
-            ", Vacant",
-            "150",
-            "56",
-            "150",
-            "150",
-            "150",
-            "450"
-          ],
-          [
-            ", Vacant",
-            "150",
-            "56",
-            "150",
-            "150",
-            "150",
-            "450"
-          ],
-          [
-            ", Vacant",
-            "150",
-            "56",
-            "150",
-            "150",
-            "150",
-            "450"
-          ],
-          [
-            "Total",
-            "450",
-            "450",
-            "450",
-            "1350"
-          ],
-          [
-            "Team 9",
-            "Lane 13 points won: 4"
-          ],
-          [
-            "Kreifels, Randy",
-            "163",
-            "45",
-            "166",
-            "180",
-            "190",
-            "536"
-          ],
-          [
-            "Kaiser, Dan",
-            "131",
-            "71",
-            "113",
-            "146",
-            "134",
-            "393"
-          ],
-          [
-            "Wirth, Don",
-            "114",
-            "84",
-            "123",
-            "116",
-            "103",
-            "342"
-          ],
-          [
-            "Total",
-            "402",
-            "442",
-            "427",
-            "1271"
-          ]
-        ],
-        "emphasis": [
-          [
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false
-          ]
-        ],
-        "recapDetails": [
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {}
-        ]
-      },
-      {
-        "title": "LIGHTNING STRIKES matchup",
-        "headers": [
-          "Bowler",
-          "Average",
-          "Handicap",
-          "Game 1",
-          "Game 2",
-          "Game 3",
-          "Scratch series"
-        ],
-        "rows": [
-          [
-            "Team 6",
-            "Lane 10 points won: 1"
-          ],
-          [
-            "Daniel, Dana",
-            "159",
-            "48",
-            "149",
-            "149",
-            "149",
-            "447"
-          ],
-          [
-            "Richard, Jon",
-            "177",
-            "34",
-            "208",
-            "154",
-            "128",
-            "490"
-          ],
-          [
-            "Dawkins, Rusty",
-            "194",
-            "20",
-            "168",
-            "211",
-            "148",
-            "527"
-          ],
-          [
-            "Total",
-            "525",
-            "514",
-            "425",
-            "1464"
-          ],
-          [
-            "Team 5",
-            "Lane 9 points won: 3"
-          ],
-          [
-            "Rhinehart, Stephen",
-            "177",
-            "34",
-            "174",
-            "199",
-            "158",
-            "531"
-          ],
-          [
-            "Kruhoff, Greg",
-            "143",
-            "61",
-            "124",
-            "177",
-            "128",
-            "429"
-          ],
-          [
-            "Bidrowski, Bob",
-            "196",
-            "19",
-            "167",
-            "173",
-            "207",
-            "547"
-          ],
-          [
-            "Total",
-            "465",
-            "549",
-            "493",
-            "1507"
-          ]
-        ],
-        "emphasis": [
-          [
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false
-          ]
-        ],
-        "recapDetails": [
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {}
-        ]
-      },
-      {
-        "title": "ROLLIN LIFE matchup",
-        "headers": [
-          "Bowler",
-          "Average",
-          "Handicap",
-          "Game 1",
-          "Game 2",
-          "Game 3",
-          "Scratch series"
-        ],
-        "rows": [
-          [
-            "Team 4",
-            "Lane 8 points won: 0"
-          ],
-          [
-            "Jeffrey, Randy",
-            "147",
-            "58",
-            "134",
-            "163",
-            "181",
-            "478"
-          ],
-          [
-            "Nekola, George",
-            "160",
-            "48",
-            "125",
-            "151",
-            "132",
-            "408"
-          ],
-          [
-            "Schrader, John",
-            "162",
-            "46",
-            "161",
-            "172",
-            "159",
-            "492"
-          ],
-          [
-            "Total",
-            "420",
-            "486",
-            "472",
-            "1378"
-          ],
           [
             "Team 3",
-            "Lane 7 points won: 4"
+            "Lane 7 points won: unverified"
           ],
           [
-            "Austin, John",
+            "JOHN AUSTIN",
             "189",
             "24",
             "175",
@@ -2072,7 +1541,7 @@
             "563"
           ],
           [
-            "Foreman, Milt",
+            "MILT FOREMAN",
             "179",
             "32",
             "205",
@@ -2081,7 +1550,7 @@
             "537"
           ],
           [
-            "Addleman, Mike",
+            "MIKE ADDLEMAN",
             "202",
             "14",
             "236",
@@ -2095,6 +1564,44 @@
             "572",
             "617",
             "1805"
+          ],
+          [
+            "Team 4",
+            "Lane 8 points won: unverified"
+          ],
+          [
+            "RANDY JEFFREY",
+            "147",
+            "58",
+            "134",
+            "163",
+            "181",
+            "478"
+          ],
+          [
+            "GEORGE NEKOLA",
+            "160",
+            "48",
+            "125",
+            "151",
+            "132",
+            "408"
+          ],
+          [
+            "JOHN SCHRADER",
+            "162",
+            "46",
+            "161",
+            "172",
+            "159",
+            "492"
+          ],
+          [
+            "Total",
+            "420",
+            "486",
+            "472",
+            "1378"
           ]
         ],
         "emphasis": [
@@ -2131,10 +1638,10 @@
           ],
           [
             false,
-            false,
-            false,
-            false,
-            false
+            true,
+            true,
+            true,
+            true
           ],
           [
             false,
@@ -2177,16 +1684,664 @@
         ],
         "recapDetails": [
           {},
+          {
+            "handicapSeries": "635",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "633",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "747",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "2015",
+            "handicapGames": [
+              "686",
+              "642",
+              "687"
+            ],
+            "teamPoints": [
+              "1.0",
+              "1.0",
+              "1.0",
+              "4.0",
+              "4.0"
+            ]
+          },
           {},
+          {
+            "handicapSeries": "652",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "552",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "630",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "1834",
+            "handicapGames": [
+              "572",
+              "638",
+              "624"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://www.leaguesecretary.com/uploads/2026/f/1/12205609142026f202601reprnt00.pdf"
+      },
+      {
+        "title": "WEBE vs LIGHTNING STRIKES",
+        "headers": [
+          "Bowler",
+          "Average",
+          "Handicap",
+          "Game 1",
+          "Game 2",
+          "Game 3",
+          "Scratch series"
+        ],
+        "rows": [
+          [
+            "Team 5",
+            "Lane 9 points won: unverified"
+          ],
+          [
+            "STEPHEN RHINEHART",
+            "177",
+            "34",
+            "174",
+            "199",
+            "158",
+            "531"
+          ],
+          [
+            "GREG KRUHOFF",
+            "143",
+            "61",
+            "124",
+            "177",
+            "128",
+            "429"
+          ],
+          [
+            "BOB BIDROWSKI",
+            "196",
+            "19",
+            "167",
+            "173",
+            "207",
+            "547"
+          ],
+          [
+            "Total",
+            "465",
+            "549",
+            "493",
+            "1507"
+          ],
+          [
+            "Team 6",
+            "Lane 10 points won: unverified"
+          ],
+          [
+            "DANA DANIEL",
+            "159",
+            "48",
+            "149",
+            "149",
+            "149",
+            "447"
+          ],
+          [
+            "JON RICHARD",
+            "177",
+            "34",
+            "208",
+            "154",
+            "128",
+            "490"
+          ],
+          [
+            "RUSTY DAWKINS",
+            "194",
+            "20",
+            "168",
+            "211",
+            "148",
+            "527"
+          ],
+          [
+            "Total",
+            "525",
+            "514",
+            "425",
+            "1464"
+          ]
+        ],
+        "emphasis": [
+          [
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          [
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            true,
+            false,
+            false,
+            false
+          ]
+        ],
+        "recapDetails": [
           {},
+          {
+            "handicapSeries": "633",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "612",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "604",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "1849",
+            "handicapGames": [
+              "579",
+              "663",
+              "607"
+            ],
+            "teamPoints": [
+              "0.0",
+              "1.0",
+              "1.0",
+              "3.0",
+              "3.0"
+            ]
+          },
           {},
+          {
+            "handicapSeries": "591",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "592",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "587",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "1770",
+            "handicapGames": [
+              "627",
+              "616",
+              "527"
+            ],
+            "teamPoints": [
+              "1.0",
+              "0.0",
+              "0.0",
+              "1.0",
+              "1.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://www.leaguesecretary.com/uploads/2026/f/1/12205609142026f202601reprnt00.pdf"
+      },
+      {
+        "title": "OFF CONSTANTLY vs BROOKLYN BOMBERS",
+        "headers": [
+          "Bowler",
+          "Average",
+          "Handicap",
+          "Game 1",
+          "Game 2",
+          "Game 3",
+          "Scratch series"
+        ],
+        "rows": [
+          [
+            "Team 7",
+            "Lane 11 points won: unverified"
+          ],
+          [
+            "MIKE TOBY",
+            "160",
+            "48",
+            "127",
+            "143",
+            "155",
+            "425"
+          ],
+          [
+            "ROGER HINRICHS",
+            "199",
+            "16",
+            "170",
+            "156",
+            "190",
+            "516"
+          ],
+          [
+            "JIM BADE",
+            "212",
+            "6",
+            "181",
+            "226",
+            "193",
+            "600"
+          ],
+          [
+            "Total",
+            "478",
+            "525",
+            "538",
+            "1541"
+          ],
+          [
+            "Team 8",
+            "Lane 12 points won: unverified"
+          ],
+          [
+            "MIKE LARSEN",
+            "170",
+            "40",
+            "157",
+            "189",
+            "139",
+            "485"
+          ],
+          [
+            "GREG KAMPSNIDER",
+            "153",
+            "53",
+            "139",
+            "122",
+            "161",
+            "422"
+          ],
+          [
+            "GEORGE SZALAWIGA",
+            "136",
+            "67",
+            "127",
+            "162",
+            "114",
+            "403"
+          ],
+          [
+            "Total",
+            "423",
+            "473",
+            "414",
+            "1310"
+          ]
+        ],
+        "emphasis": [
+          [
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            true,
+            false
+          ],
+          [
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            true,
+            true,
+            false,
+            true
+          ]
+        ],
+        "recapDetails": [
           {},
+          {
+            "handicapSeries": "569",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "564",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "618",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "1751",
+            "handicapGames": [
+              "548",
+              "595",
+              "608"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "1.0",
+              "1.0",
+              "1.0"
+            ]
+          },
           {},
+          {
+            "handicapSeries": "605",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "581",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "604",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "1790",
+            "handicapGames": [
+              "583",
+              "633",
+              "574"
+            ],
+            "teamPoints": [
+              "1.0",
+              "1.0",
+              "0.0",
+              "3.0",
+              "3.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://www.leaguesecretary.com/uploads/2026/f/1/12205609142026f202601reprnt00.pdf"
+      },
+      {
+        "title": "SEVEN TENS vs BYE",
+        "headers": [
+          "Bowler",
+          "Average",
+          "Handicap",
+          "Game 1",
+          "Game 2",
+          "Game 3",
+          "Scratch series"
+        ],
+        "rows": [
+          [
+            "Team 9",
+            "Lane 13 points won: unverified"
+          ],
+          [
+            "RANDY KREIFELS",
+            "163",
+            "45",
+            "166",
+            "180",
+            "190",
+            "536"
+          ],
+          [
+            "DAN KAISER",
+            "131",
+            "71",
+            "113",
+            "146",
+            "134",
+            "393"
+          ],
+          [
+            "DON WIRTH",
+            "114",
+            "84",
+            "123",
+            "116",
+            "103",
+            "342"
+          ],
+          [
+            "Total",
+            "402",
+            "442",
+            "427",
+            "1271"
+          ],
+          [
+            "Team 10",
+            "Lane 14 points won: 0"
+          ],
+          [
+            "Total",
+            "450",
+            "450",
+            "450",
+            "1350"
+          ]
+        ],
+        "emphasis": [
+          [
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            true,
+            true,
+            true,
+            true
+          ],
+          [
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        ],
+        "recapDetails": [
           {},
-          {},
+          {
+            "handicapSeries": "671",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "606",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "594",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "1871",
+            "handicapGames": [
+              "602",
+              "642",
+              "627"
+            ],
+            "teamPoints": [
+              "1.0",
+              "1.0",
+              "1.0",
+              "4.0",
+              "4.0"
+            ]
+          },
           {},
           {}
-        ]
+        ],
+        "sourceReport": "https://www.leaguesecretary.com/uploads/2026/f/1/12205609142026f202601reprnt00.pdf"
       }
     ],
     "lanes": [
@@ -4337,187 +4492,7 @@
         ],
         "recaps": [
           {
-            "title": "BROOKLYN BOMBERS matchup",
-            "headers": [
-              "Bowler",
-              "Average",
-              "Handicap",
-              "Game 1",
-              "Game 2",
-              "Game 3",
-              "Scratch series"
-            ],
-            "rows": [
-              [
-                "Team 8",
-                "Lane 12 points won: 3"
-              ],
-              [
-                "Larsen, Mike",
-                "170",
-                "40",
-                "157",
-                "189",
-                "139",
-                "485"
-              ],
-              [
-                "Kampsnider, Greg",
-                "153",
-                "53",
-                "139",
-                "122",
-                "161",
-                "422"
-              ],
-              [
-                "Szalawiga, George",
-                "136",
-                "67",
-                "127",
-                "162",
-                "114",
-                "403"
-              ],
-              [
-                "Total",
-                "423",
-                "473",
-                "414",
-                "1310"
-              ],
-              [
-                "Team 7",
-                "Lane 11 points won: 1"
-              ],
-              [
-                "Toby, Mike",
-                "160",
-                "48",
-                "127",
-                "143",
-                "155",
-                "425"
-              ],
-              [
-                "Hinrichs, Roger",
-                "199",
-                "16",
-                "170",
-                "156",
-                "190",
-                "516"
-              ],
-              [
-                "Bade, Jim",
-                "212",
-                "6",
-                "181",
-                "226",
-                "193",
-                "600"
-              ],
-              [
-                "Total",
-                "478",
-                "525",
-                "538",
-                "1541"
-              ]
-            ],
-            "emphasis": [
-              [
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false
-              ]
-            ],
-            "recapDetails": [
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {}
-            ]
-          },
-          {
-            "title": "BURLINGTON BOMBERS matchup",
+            "title": "BURLINGTON BOMBERS vs THREE AMIGOS",
             "headers": [
               "Bowler",
               "Average",
@@ -4530,10 +4505,10 @@
             "rows": [
               [
                 "Team 1",
-                "Lane 5 points won: 4"
+                "Lane 5 points won: unverified"
               ],
               [
-                "Merck, Craig",
+                "CRAIG MERCK",
                 "196",
                 "19",
                 "227",
@@ -4542,7 +4517,7 @@
                 "607"
               ],
               [
-                "Slade, Pat",
+                "PAT SLADE",
                 "176",
                 "35",
                 "154",
@@ -4551,7 +4526,7 @@
                 "497"
               ],
               [
-                "Priess, Russ",
+                "RUSS PRIESS",
                 "181",
                 "31",
                 "179",
@@ -4568,10 +4543,10 @@
               ],
               [
                 "Team 2",
-                "Lane 6 points won: 0"
+                "Lane 6 points won: unverified"
               ],
               [
-                "Connell, Steve",
+                "STEVE CONNELL",
                 "176",
                 "35",
                 "97",
@@ -4580,7 +4555,7 @@
                 "366"
               ],
               [
-                "Addleman, Alan",
+                "ALAN ADDLEMAN",
                 "155",
                 "52",
                 "173",
@@ -4589,7 +4564,7 @@
                 "465"
               ],
               [
-                "Wunderlich, Keith",
+                "KEITH WUNDERLICH",
                 "175",
                 "36",
                 "183",
@@ -4639,10 +4614,10 @@
               ],
               [
                 false,
-                false,
-                false,
-                false,
-                false
+                true,
+                true,
+                true,
+                true
               ],
               [
                 false,
@@ -4685,19 +4660,66 @@
             ],
             "recapDetails": [
               {},
+              {
+                "handicapSeries": "664",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "602",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "683",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "1949",
+                "handicapGames": [
+                  "645",
+                  "669",
+                  "635"
+                ],
+                "teamPoints": [
+                  "1.0",
+                  "1.0",
+                  "1.0",
+                  "4.0",
+                  "4.0"
+                ]
+              },
               {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {}
-            ]
+              {
+                "handicapSeries": "471",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "621",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "599",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "1691",
+                "handicapGames": [
+                  "576",
+                  "534",
+                  "581"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://www.leaguesecretary.com/uploads/2026/f/1/12205609142026f202601reprnt00.pdf"
           },
           {
-            "title": "BYE matchup",
+            "title": "WOODSHANK'S vs ROLLIN LIFE",
             "headers": [
               "Bowler",
               "Average",
@@ -4708,410 +4730,12 @@
               "Scratch series"
             ],
             "rows": [
-              [
-                "Team 10",
-                "Lane 14 points won: 0"
-              ],
-              [
-                ", Vacant",
-                "150",
-                "56",
-                "150",
-                "150",
-                "150",
-                "450"
-              ],
-              [
-                ", Vacant",
-                "150",
-                "56",
-                "150",
-                "150",
-                "150",
-                "450"
-              ],
-              [
-                ", Vacant",
-                "150",
-                "56",
-                "150",
-                "150",
-                "150",
-                "450"
-              ],
-              [
-                "Total",
-                "450",
-                "450",
-                "450",
-                "1350"
-              ],
-              [
-                "Team 9",
-                "Lane 13 points won: 4"
-              ],
-              [
-                "Kreifels, Randy",
-                "163",
-                "45",
-                "166",
-                "180",
-                "190",
-                "536"
-              ],
-              [
-                "Kaiser, Dan",
-                "131",
-                "71",
-                "113",
-                "146",
-                "134",
-                "393"
-              ],
-              [
-                "Wirth, Don",
-                "114",
-                "84",
-                "123",
-                "116",
-                "103",
-                "342"
-              ],
-              [
-                "Total",
-                "402",
-                "442",
-                "427",
-                "1271"
-              ]
-            ],
-            "emphasis": [
-              [
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false
-              ]
-            ],
-            "recapDetails": [
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {}
-            ]
-          },
-          {
-            "title": "LIGHTNING STRIKES matchup",
-            "headers": [
-              "Bowler",
-              "Average",
-              "Handicap",
-              "Game 1",
-              "Game 2",
-              "Game 3",
-              "Scratch series"
-            ],
-            "rows": [
-              [
-                "Team 6",
-                "Lane 10 points won: 1"
-              ],
-              [
-                "Daniel, Dana",
-                "159",
-                "48",
-                "149",
-                "149",
-                "149",
-                "447"
-              ],
-              [
-                "Richard, Jon",
-                "177",
-                "34",
-                "208",
-                "154",
-                "128",
-                "490"
-              ],
-              [
-                "Dawkins, Rusty",
-                "194",
-                "20",
-                "168",
-                "211",
-                "148",
-                "527"
-              ],
-              [
-                "Total",
-                "525",
-                "514",
-                "425",
-                "1464"
-              ],
-              [
-                "Team 5",
-                "Lane 9 points won: 3"
-              ],
-              [
-                "Rhinehart, Stephen",
-                "177",
-                "34",
-                "174",
-                "199",
-                "158",
-                "531"
-              ],
-              [
-                "Kruhoff, Greg",
-                "143",
-                "61",
-                "124",
-                "177",
-                "128",
-                "429"
-              ],
-              [
-                "Bidrowski, Bob",
-                "196",
-                "19",
-                "167",
-                "173",
-                "207",
-                "547"
-              ],
-              [
-                "Total",
-                "465",
-                "549",
-                "493",
-                "1507"
-              ]
-            ],
-            "emphasis": [
-              [
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false
-              ]
-            ],
-            "recapDetails": [
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {}
-            ]
-          },
-          {
-            "title": "ROLLIN LIFE matchup",
-            "headers": [
-              "Bowler",
-              "Average",
-              "Handicap",
-              "Game 1",
-              "Game 2",
-              "Game 3",
-              "Scratch series"
-            ],
-            "rows": [
-              [
-                "Team 4",
-                "Lane 8 points won: 0"
-              ],
-              [
-                "Jeffrey, Randy",
-                "147",
-                "58",
-                "134",
-                "163",
-                "181",
-                "478"
-              ],
-              [
-                "Nekola, George",
-                "160",
-                "48",
-                "125",
-                "151",
-                "132",
-                "408"
-              ],
-              [
-                "Schrader, John",
-                "162",
-                "46",
-                "161",
-                "172",
-                "159",
-                "492"
-              ],
-              [
-                "Total",
-                "420",
-                "486",
-                "472",
-                "1378"
-              ],
               [
                 "Team 3",
-                "Lane 7 points won: 4"
+                "Lane 7 points won: unverified"
               ],
               [
-                "Austin, John",
+                "JOHN AUSTIN",
                 "189",
                 "24",
                 "175",
@@ -5120,7 +4744,7 @@
                 "563"
               ],
               [
-                "Foreman, Milt",
+                "MILT FOREMAN",
                 "179",
                 "32",
                 "205",
@@ -5129,7 +4753,7 @@
                 "537"
               ],
               [
-                "Addleman, Mike",
+                "MIKE ADDLEMAN",
                 "202",
                 "14",
                 "236",
@@ -5143,6 +4767,44 @@
                 "572",
                 "617",
                 "1805"
+              ],
+              [
+                "Team 4",
+                "Lane 8 points won: unverified"
+              ],
+              [
+                "RANDY JEFFREY",
+                "147",
+                "58",
+                "134",
+                "163",
+                "181",
+                "478"
+              ],
+              [
+                "GEORGE NEKOLA",
+                "160",
+                "48",
+                "125",
+                "151",
+                "132",
+                "408"
+              ],
+              [
+                "JOHN SCHRADER",
+                "162",
+                "46",
+                "161",
+                "172",
+                "159",
+                "492"
+              ],
+              [
+                "Total",
+                "420",
+                "486",
+                "472",
+                "1378"
               ]
             ],
             "emphasis": [
@@ -5179,10 +4841,10 @@
               ],
               [
                 false,
-                false,
-                false,
-                false,
-                false
+                true,
+                true,
+                true,
+                true
               ],
               [
                 false,
@@ -5225,16 +4887,664 @@
             ],
             "recapDetails": [
               {},
+              {
+                "handicapSeries": "635",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "633",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "747",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "2015",
+                "handicapGames": [
+                  "686",
+                  "642",
+                  "687"
+                ],
+                "teamPoints": [
+                  "1.0",
+                  "1.0",
+                  "1.0",
+                  "4.0",
+                  "4.0"
+                ]
+              },
               {},
+              {
+                "handicapSeries": "652",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "552",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "630",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "1834",
+                "handicapGames": [
+                  "572",
+                  "638",
+                  "624"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://www.leaguesecretary.com/uploads/2026/f/1/12205609142026f202601reprnt00.pdf"
+          },
+          {
+            "title": "WEBE vs LIGHTNING STRIKES",
+            "headers": [
+              "Bowler",
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
+            ],
+            "rows": [
+              [
+                "Team 5",
+                "Lane 9 points won: unverified"
+              ],
+              [
+                "STEPHEN RHINEHART",
+                "177",
+                "34",
+                "174",
+                "199",
+                "158",
+                "531"
+              ],
+              [
+                "GREG KRUHOFF",
+                "143",
+                "61",
+                "124",
+                "177",
+                "128",
+                "429"
+              ],
+              [
+                "BOB BIDROWSKI",
+                "196",
+                "19",
+                "167",
+                "173",
+                "207",
+                "547"
+              ],
+              [
+                "Total",
+                "465",
+                "549",
+                "493",
+                "1507"
+              ],
+              [
+                "Team 6",
+                "Lane 10 points won: unverified"
+              ],
+              [
+                "DANA DANIEL",
+                "159",
+                "48",
+                "149",
+                "149",
+                "149",
+                "447"
+              ],
+              [
+                "JON RICHARD",
+                "177",
+                "34",
+                "208",
+                "154",
+                "128",
+                "490"
+              ],
+              [
+                "RUSTY DAWKINS",
+                "194",
+                "20",
+                "168",
+                "211",
+                "148",
+                "527"
+              ],
+              [
+                "Total",
+                "525",
+                "514",
+                "425",
+                "1464"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                true,
+                true,
+                true
+              ],
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                true,
+                false,
+                false,
+                false
+              ]
+            ],
+            "recapDetails": [
               {},
+              {
+                "handicapSeries": "633",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "612",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "604",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "1849",
+                "handicapGames": [
+                  "579",
+                  "663",
+                  "607"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "1.0",
+                  "1.0",
+                  "3.0",
+                  "3.0"
+                ]
+              },
               {},
+              {
+                "handicapSeries": "591",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "592",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "587",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "1770",
+                "handicapGames": [
+                  "627",
+                  "616",
+                  "527"
+                ],
+                "teamPoints": [
+                  "1.0",
+                  "0.0",
+                  "0.0",
+                  "1.0",
+                  "1.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://www.leaguesecretary.com/uploads/2026/f/1/12205609142026f202601reprnt00.pdf"
+          },
+          {
+            "title": "OFF CONSTANTLY vs BROOKLYN BOMBERS",
+            "headers": [
+              "Bowler",
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
+            ],
+            "rows": [
+              [
+                "Team 7",
+                "Lane 11 points won: unverified"
+              ],
+              [
+                "MIKE TOBY",
+                "160",
+                "48",
+                "127",
+                "143",
+                "155",
+                "425"
+              ],
+              [
+                "ROGER HINRICHS",
+                "199",
+                "16",
+                "170",
+                "156",
+                "190",
+                "516"
+              ],
+              [
+                "JIM BADE",
+                "212",
+                "6",
+                "181",
+                "226",
+                "193",
+                "600"
+              ],
+              [
+                "Total",
+                "478",
+                "525",
+                "538",
+                "1541"
+              ],
+              [
+                "Team 8",
+                "Lane 12 points won: unverified"
+              ],
+              [
+                "MIKE LARSEN",
+                "170",
+                "40",
+                "157",
+                "189",
+                "139",
+                "485"
+              ],
+              [
+                "GREG KAMPSNIDER",
+                "153",
+                "53",
+                "139",
+                "122",
+                "161",
+                "422"
+              ],
+              [
+                "GEORGE SZALAWIGA",
+                "136",
+                "67",
+                "127",
+                "162",
+                "114",
+                "403"
+              ],
+              [
+                "Total",
+                "423",
+                "473",
+                "414",
+                "1310"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                true,
+                false
+              ],
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                true,
+                true,
+                false,
+                true
+              ]
+            ],
+            "recapDetails": [
               {},
+              {
+                "handicapSeries": "569",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "564",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "618",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "1751",
+                "handicapGames": [
+                  "548",
+                  "595",
+                  "608"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "1.0",
+                  "1.0",
+                  "1.0"
+                ]
+              },
               {},
+              {
+                "handicapSeries": "605",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "581",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "604",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "1790",
+                "handicapGames": [
+                  "583",
+                  "633",
+                  "574"
+                ],
+                "teamPoints": [
+                  "1.0",
+                  "1.0",
+                  "0.0",
+                  "3.0",
+                  "3.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://www.leaguesecretary.com/uploads/2026/f/1/12205609142026f202601reprnt00.pdf"
+          },
+          {
+            "title": "SEVEN TENS vs BYE",
+            "headers": [
+              "Bowler",
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
+            ],
+            "rows": [
+              [
+                "Team 9",
+                "Lane 13 points won: unverified"
+              ],
+              [
+                "RANDY KREIFELS",
+                "163",
+                "45",
+                "166",
+                "180",
+                "190",
+                "536"
+              ],
+              [
+                "DAN KAISER",
+                "131",
+                "71",
+                "113",
+                "146",
+                "134",
+                "393"
+              ],
+              [
+                "DON WIRTH",
+                "114",
+                "84",
+                "123",
+                "116",
+                "103",
+                "342"
+              ],
+              [
+                "Total",
+                "402",
+                "442",
+                "427",
+                "1271"
+              ],
+              [
+                "Team 10",
+                "Lane 14 points won: 0"
+              ],
+              [
+                "Total",
+                "450",
+                "450",
+                "450",
+                "1350"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                true,
+                true,
+                true,
+                true
+              ],
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "recapDetails": [
               {},
-              {},
+              {
+                "handicapSeries": "671",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "606",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "594",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "1871",
+                "handicapGames": [
+                  "602",
+                  "642",
+                  "627"
+                ],
+                "teamPoints": [
+                  "1.0",
+                  "1.0",
+                  "1.0",
+                  "4.0",
+                  "4.0"
+                ]
+              },
               {},
               {}
-            ]
+            ],
+            "sourceReport": "https://www.leaguesecretary.com/uploads/2026/f/1/12205609142026f202601reprnt00.pdf"
           }
         ],
         "lanes": [
@@ -6109,5 +6419,8 @@
         ]
       }
     }
-  ]
+  ],
+  "officialRecapHash": "c36a67957d8c73bbe83032a35bdd634784148568c909f57b32d38a4c6487f8d9",
+  "officialRecapParserVersion": 4,
+  "officialRecapSyncedAt": "2026-09-21T20:21:47.486Z"
 }

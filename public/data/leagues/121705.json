@@ -1433,7 +1433,234 @@
     ],
     "recaps": [
       {
-        "title": "3 LEGS matchup",
+        "title": "B B AND J vs KOOPAS",
+        "headers": [
+          "Bowler",
+          "Average",
+          "Handicap",
+          "Game 1",
+          "Game 2",
+          "Game 3",
+          "Scratch series"
+        ],
+        "rows": [
+          [
+            "Team 4",
+            "Lane 1 points won: unverified"
+          ],
+          [
+            "JEFF BORER",
+            "105",
+            "103",
+            "103",
+            "152",
+            "116",
+            "371"
+          ],
+          [
+            "RANDY BORER",
+            "166",
+            "48",
+            "161",
+            "192",
+            "158",
+            "511"
+          ],
+          [
+            "DAVE JANECEK",
+            "137",
+            "74",
+            "157",
+            "180",
+            "126",
+            "463"
+          ],
+          [
+            "Total",
+            "421",
+            "524",
+            "400",
+            "1345"
+          ],
+          [
+            "Team 5",
+            "Lane 2 points won: unverified"
+          ],
+          [
+            "RILEY SHARP",
+            "178",
+            "37",
+            "155",
+            "201",
+            "161",
+            "517"
+          ],
+          [
+            "WILL PURTZER",
+            "136",
+            "75",
+            "133",
+            "154",
+            "198",
+            "485"
+          ],
+          [
+            "DANIEL RIEDEL",
+            "175",
+            "40",
+            "159",
+            "152",
+            "134",
+            "445"
+          ],
+          [
+            "Total",
+            "447",
+            "507",
+            "493",
+            "1447"
+          ]
+        ],
+        "emphasis": [
+          [
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            true,
+            true,
+            false,
+            true
+          ],
+          [
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            true,
+            false
+          ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "680",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "655",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "685",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "1561",
+            "handicapGames": [
+              "493",
+              "596",
+              "472"
+            ],
+            "teamPoints": [
+              "2.0",
+              "2.0",
+              "0.0",
+              "5.0",
+              "5.0"
+            ]
+          },
+          {},
+          {
+            "handicapSeries": "628",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "710",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "565",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "1447",
+            "handicapGames": [
+              "447",
+              "507",
+              "493"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "2.0",
+              "2.0",
+              "2.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://www.leaguesecretary.com/uploads/2026/f/3/12170509142026f202603reprnt00.pdf"
+      },
+      {
+        "title": "3 LEGS vs MILLS TRANSFER",
         "headers": [
           "Bowler",
           "Average",
@@ -1446,10 +1673,10 @@
         "rows": [
           [
             "Team 9",
-            "Lane 3 points won: 2"
+            "Lane 3 points won: unverified"
           ],
           [
-            "Brennan, Tom",
+            "TOM BRENNAN",
             "108",
             "100",
             "137",
@@ -1458,7 +1685,7 @@
             "405"
           ],
           [
-            "Cejka, John",
+            "JOHN CEJKA",
             "113",
             "96",
             "127",
@@ -1467,7 +1694,7 @@
             "396"
           ],
           [
-            "Smith, Malachi",
+            "MALACHI SMITH",
             "144",
             "68",
             "113",
@@ -1484,10 +1711,10 @@
           ],
           [
             "Team 8",
-            "Lane 4 points won: 5"
+            "Lane 4 points won: unverified"
           ],
           [
-            "Mills, Gary",
+            "GARY MILLS",
             "190",
             "27",
             "170",
@@ -1496,7 +1723,7 @@
             "583"
           ],
           [
-            "Mills, Greg",
+            "GREG MILLS",
             "199",
             "18",
             "189",
@@ -1505,7 +1732,7 @@
             "536"
           ],
           [
-            "Anderson, John",
+            "JOHN ANDERSON",
             "178",
             "37",
             "205",
@@ -1556,20 +1783,11 @@
           [
             false,
             false,
-            false,
-            false,
-            false
-          ],
-          [
+            true,
             false,
             false
           ],
           [
-            false,
-            false,
-            false,
-            false,
-            false,
             false,
             false
           ],
@@ -1596,204 +1814,80 @@
             false,
             false,
             false,
+            false,
+            false,
             false
+          ],
+          [
+            false,
+            true,
+            false,
+            true,
+            true
           ]
         ],
         "recapDetails": [
           {},
+          {
+            "handicapSeries": "705",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "684",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "542",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "1682",
+            "handicapGames": [
+              "558",
+              "580",
+              "544"
+            ],
+            "teamPoints": [
+              "0.0",
+              "2.0",
+              "0.0",
+              "2.0",
+              "2.0"
+            ]
+          },
           {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {}
-        ]
+          {
+            "handicapSeries": "664",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "590",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "687",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "1695",
+            "handicapGames": [
+              "564",
+              "495",
+              "636"
+            ],
+            "teamPoints": [
+              "2.0",
+              "0.0",
+              "2.0",
+              "5.0",
+              "5.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://www.leaguesecretary.com/uploads/2026/f/3/12170509142026f202603reprnt00.pdf"
       },
       {
-        "title": "B B AND J matchup",
-        "headers": [
-          "Bowler",
-          "Average",
-          "Handicap",
-          "Game 1",
-          "Game 2",
-          "Game 3",
-          "Scratch series"
-        ],
-        "rows": [
-          [
-            "Team 4",
-            "Lane 1 points won: 5"
-          ],
-          [
-            "Borer, Jeff",
-            "105",
-            "103",
-            "103",
-            "152",
-            "116",
-            "371"
-          ],
-          [
-            "Borer, Randy",
-            "166",
-            "48",
-            "161",
-            "192",
-            "158",
-            "511"
-          ],
-          [
-            "Janecek, Dave",
-            "137",
-            "74",
-            "157",
-            "180",
-            "126",
-            "463"
-          ],
-          [
-            "Total",
-            "421",
-            "524",
-            "400",
-            "1345"
-          ],
-          [
-            "Team 5",
-            "Lane 2 points won: 2"
-          ],
-          [
-            "Sharp, Riley",
-            "178",
-            "37",
-            "155",
-            "201",
-            "161",
-            "517"
-          ],
-          [
-            "Purtzer, Will",
-            "136",
-            "75",
-            "133",
-            "154",
-            "198",
-            "485"
-          ],
-          [
-            "Riedel, Daniel",
-            "175",
-            "40",
-            "159",
-            "152",
-            "134",
-            "445"
-          ],
-          [
-            "Total",
-            "447",
-            "507",
-            "493",
-            "1447"
-          ]
-        ],
-        "emphasis": [
-          [
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false
-          ]
-        ],
-        "recapDetails": [
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {}
-        ]
-      },
-      {
-        "title": "BYE matchup",
+        "title": "BYE vs WOODMEN LIFE",
         "headers": [
           "Bowler",
           "Average",
@@ -1809,33 +1903,6 @@
             "Lane 5 points won: 0"
           ],
           [
-            ", Vacant",
-            "170",
-            "45",
-            "170",
-            "170",
-            "170",
-            "510"
-          ],
-          [
-            ", Vacant",
-            "170",
-            "45",
-            "170",
-            "170",
-            "170",
-            "510"
-          ],
-          [
-            ", Vacant",
-            "170",
-            "45",
-            "170",
-            "170",
-            "170",
-            "510"
-          ],
-          [
             "Total",
             "510",
             "510",
@@ -1844,10 +1911,10 @@
           ],
           [
             "Team 1",
-            "Lane 6 points won: 2"
+            "Lane 6 points won: unverified"
           ],
           [
-            "Wehling, Sean",
+            "SEAN WEHLING",
             "182",
             "34",
             "118",
@@ -1856,7 +1923,7 @@
             "482"
           ],
           [
-            "Kadavy, Dave",
+            "DAVE KADAVY",
             "174",
             "41",
             "142",
@@ -1865,7 +1932,7 @@
             "462"
           ],
           [
-            "Rueter, Jon",
+            "JON RUETER",
             "191",
             "26",
             "164",
@@ -1891,33 +1958,6 @@
             false,
             false,
             false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
             false
           ],
           [
@@ -1955,7 +1995,7 @@
             false,
             false,
             false,
-            false,
+            true,
             false
           ]
         ],
@@ -1963,17 +2003,38 @@
           {},
           {},
           {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {}
-        ]
+          {
+            "handicapSeries": "584",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "585",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "578",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "1444",
+            "handicapGames": [
+              "424",
+              "451",
+              "569"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "2.0",
+              "2.0",
+              "2.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://www.leaguesecretary.com/uploads/2026/f/3/12170509142026f202603reprnt00.pdf"
       },
       {
-        "title": "NOVY FARMS matchup",
+        "title": "P.E.A.K. BOWLING vs NOVY FARMS",
         "headers": [
           "Bowler",
           "Average",
@@ -1985,49 +2046,11 @@
         ],
         "rows": [
           [
-            "Team 2",
-            "Lane 8 points won: 7"
-          ],
-          [
-            "Vuong, Austin",
-            "194",
-            "23",
-            "214",
-            "200",
-            "211",
-            "625"
-          ],
-          [
-            "Birdsall, John",
-            "166",
-            "48",
-            "162",
-            "148",
-            "189",
-            "499"
-          ],
-          [
-            "Connell, Steve",
-            "175",
-            "40",
-            "180",
-            "156",
-            "184",
-            "520"
-          ],
-          [
-            "Total",
-            "556",
-            "504",
-            "584",
-            "1644"
-          ],
-          [
             "Team 3",
-            "Lane 7 points won: 0"
+            "Lane 7 points won: unverified"
           ],
           [
-            "Peterson, Everix",
+            "EVERIX PETERSON",
             "99",
             "108",
             "129",
@@ -2036,7 +2059,7 @@
             "342"
           ],
           [
-            "Peterson, Alan",
+            "ALAN PETERSON",
             "173",
             "42",
             "98",
@@ -2045,7 +2068,7 @@
             "416"
           ],
           [
-            "Peterson, Kyle",
+            "KYLE PETERSON",
             "168",
             "46",
             "164",
@@ -2059,6 +2082,44 @@
             "395",
             "416",
             "1202"
+          ],
+          [
+            "Team 2",
+            "Lane 8 points won: unverified"
+          ],
+          [
+            "AUSTIN VUONG",
+            "194",
+            "23",
+            "214",
+            "200",
+            "211",
+            "625"
+          ],
+          [
+            "JOHN BIRDSALL",
+            "166",
+            "48",
+            "162",
+            "148",
+            "189",
+            "499"
+          ],
+          [
+            "STEVE CONNELL",
+            "175",
+            "40",
+            "180",
+            "156",
+            "184",
+            "520"
+          ],
+          [
+            "Total",
+            "556",
+            "504",
+            "584",
+            "1644"
           ]
         ],
         "emphasis": [
@@ -2133,27 +2194,74 @@
           ],
           [
             false,
-            false,
-            false,
-            false,
-            false
+            true,
+            true,
+            true,
+            true
           ]
         ],
         "recapDetails": [
           {},
+          {
+            "handicapSeries": "666",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "542",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "582",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "1457",
+            "handicapGames": [
+              "476",
+              "480",
+              "501"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0"
+            ]
+          },
           {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {}
-        ]
+          {
+            "handicapSeries": "694",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "643",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "640",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "1644",
+            "handicapGames": [
+              "556",
+              "504",
+              "584"
+            ],
+            "teamPoints": [
+              "2.0",
+              "2.0",
+              "2.0",
+              "7.0",
+              "7.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://www.leaguesecretary.com/uploads/2026/f/3/12170509142026f202603reprnt00.pdf"
       },
       {
-        "title": "SERVICE MASTER RESTORE matchup",
+        "title": "STAN'S CLAN vs SERVICE MASTER RESTORE",
         "headers": [
           "Bowler",
           "Average",
@@ -2165,49 +2273,11 @@
         ],
         "rows": [
           [
-            "Team 7",
-            "Lane 10 points won: 7"
-          ],
-          [
-            "Umshler, Tim",
-            "178",
-            "37",
-            "162",
-            "148",
-            "232",
-            "542"
-          ],
-          [
-            "Fields, Mike",
-            "190",
-            "27",
-            "147",
-            "202",
-            "190",
-            "539"
-          ],
-          [
-            "Kuntz, Jeff",
-            "169",
-            "45",
-            "159",
-            "159",
-            "159",
-            "477"
-          ],
-          [
-            "Total",
-            "468",
-            "509",
-            "581",
-            "1558"
-          ],
-          [
             "Team 6",
-            "Lane 9 points won: 0"
+            "Lane 9 points won: unverified"
           ],
           [
-            "Kreatz, Alicia",
+            "ALICIA KREATZ",
             "196",
             "21",
             "146",
@@ -2216,7 +2286,7 @@
             "486"
           ],
           [
-            "Nieman, Amber",
+            "AMBER NIEMAN",
             "181",
             "35",
             "159",
@@ -2225,7 +2295,7 @@
             "466"
           ],
           [
-            "Dority, Pat",
+            "PAT DORITY",
             "213",
             "6",
             "179",
@@ -2239,6 +2309,44 @@
             "499",
             "488",
             "1471"
+          ],
+          [
+            "Team 7",
+            "Lane 10 points won: unverified"
+          ],
+          [
+            "TIM UMSHLER",
+            "178",
+            "37",
+            "162",
+            "148",
+            "232",
+            "542"
+          ],
+          [
+            "MIKE FIELDS",
+            "190",
+            "27",
+            "147",
+            "202",
+            "190",
+            "539"
+          ],
+          [
+            "JEFF KUNTZ",
+            "169",
+            "45",
+            "159",
+            "159",
+            "159",
+            "477"
+          ],
+          [
+            "Total",
+            "468",
+            "509",
+            "581",
+            "1558"
           ]
         ],
         "emphasis": [
@@ -2313,24 +2421,71 @@
           ],
           [
             false,
-            false,
-            false,
-            false,
-            false
+            true,
+            true,
+            true,
+            true
           ]
         ],
         "recapDetails": [
           {},
+          {
+            "handicapSeries": "549",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "571",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "537",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "1471",
+            "handicapGames": [
+              "484",
+              "499",
+              "488"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0"
+            ]
+          },
           {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {}
-        ]
+          {
+            "handicapSeries": "653",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "620",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "612",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "1699",
+            "handicapGames": [
+              "515",
+              "556",
+              "628"
+            ],
+            "teamPoints": [
+              "2.0",
+              "2.0",
+              "2.0",
+              "7.0",
+              "7.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://www.leaguesecretary.com/uploads/2026/f/3/12170509142026f202603reprnt00.pdf"
       }
     ],
     "lanes": [
@@ -9490,7 +9645,234 @@
         ],
         "recaps": [
           {
-            "title": "3 LEGS matchup",
+            "title": "B B AND J vs KOOPAS",
+            "headers": [
+              "Bowler",
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
+            ],
+            "rows": [
+              [
+                "Team 4",
+                "Lane 1 points won: unverified"
+              ],
+              [
+                "JEFF BORER",
+                "105",
+                "103",
+                "103",
+                "152",
+                "116",
+                "371"
+              ],
+              [
+                "RANDY BORER",
+                "166",
+                "48",
+                "161",
+                "192",
+                "158",
+                "511"
+              ],
+              [
+                "DAVE JANECEK",
+                "137",
+                "74",
+                "157",
+                "180",
+                "126",
+                "463"
+              ],
+              [
+                "Total",
+                "421",
+                "524",
+                "400",
+                "1345"
+              ],
+              [
+                "Team 5",
+                "Lane 2 points won: unverified"
+              ],
+              [
+                "RILEY SHARP",
+                "178",
+                "37",
+                "155",
+                "201",
+                "161",
+                "517"
+              ],
+              [
+                "WILL PURTZER",
+                "136",
+                "75",
+                "133",
+                "154",
+                "198",
+                "485"
+              ],
+              [
+                "DANIEL RIEDEL",
+                "175",
+                "40",
+                "159",
+                "152",
+                "134",
+                "445"
+              ],
+              [
+                "Total",
+                "447",
+                "507",
+                "493",
+                "1447"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                true,
+                true,
+                false,
+                true
+              ],
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                true,
+                false
+              ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "680",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "655",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "685",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "1561",
+                "handicapGames": [
+                  "493",
+                  "596",
+                  "472"
+                ],
+                "teamPoints": [
+                  "2.0",
+                  "2.0",
+                  "0.0",
+                  "5.0",
+                  "5.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "628",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "710",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "565",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "1447",
+                "handicapGames": [
+                  "447",
+                  "507",
+                  "493"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "2.0",
+                  "2.0",
+                  "2.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://www.leaguesecretary.com/uploads/2026/f/3/12170509142026f202603reprnt00.pdf"
+          },
+          {
+            "title": "3 LEGS vs MILLS TRANSFER",
             "headers": [
               "Bowler",
               "Average",
@@ -9503,10 +9885,10 @@
             "rows": [
               [
                 "Team 9",
-                "Lane 3 points won: 2"
+                "Lane 3 points won: unverified"
               ],
               [
-                "Brennan, Tom",
+                "TOM BRENNAN",
                 "108",
                 "100",
                 "137",
@@ -9515,7 +9897,7 @@
                 "405"
               ],
               [
-                "Cejka, John",
+                "JOHN CEJKA",
                 "113",
                 "96",
                 "127",
@@ -9524,7 +9906,7 @@
                 "396"
               ],
               [
-                "Smith, Malachi",
+                "MALACHI SMITH",
                 "144",
                 "68",
                 "113",
@@ -9541,10 +9923,10 @@
               ],
               [
                 "Team 8",
-                "Lane 4 points won: 5"
+                "Lane 4 points won: unverified"
               ],
               [
-                "Mills, Gary",
+                "GARY MILLS",
                 "190",
                 "27",
                 "170",
@@ -9553,7 +9935,7 @@
                 "583"
               ],
               [
-                "Mills, Greg",
+                "GREG MILLS",
                 "199",
                 "18",
                 "189",
@@ -9562,7 +9944,7 @@
                 "536"
               ],
               [
-                "Anderson, John",
+                "JOHN ANDERSON",
                 "178",
                 "37",
                 "205",
@@ -9613,20 +9995,11 @@
               [
                 false,
                 false,
-                false,
-                false,
-                false
-              ],
-              [
+                true,
                 false,
                 false
               ],
               [
-                false,
-                false,
-                false,
-                false,
-                false,
                 false,
                 false
               ],
@@ -9653,204 +10026,80 @@
                 false,
                 false,
                 false,
+                false,
+                false,
                 false
+              ],
+              [
+                false,
+                true,
+                false,
+                true,
+                true
               ]
             ],
             "recapDetails": [
               {},
+              {
+                "handicapSeries": "705",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "684",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "542",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "1682",
+                "handicapGames": [
+                  "558",
+                  "580",
+                  "544"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "2.0",
+                  "0.0",
+                  "2.0",
+                  "2.0"
+                ]
+              },
               {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {}
-            ]
+              {
+                "handicapSeries": "664",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "590",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "687",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "1695",
+                "handicapGames": [
+                  "564",
+                  "495",
+                  "636"
+                ],
+                "teamPoints": [
+                  "2.0",
+                  "0.0",
+                  "2.0",
+                  "5.0",
+                  "5.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://www.leaguesecretary.com/uploads/2026/f/3/12170509142026f202603reprnt00.pdf"
           },
           {
-            "title": "B B AND J matchup",
-            "headers": [
-              "Bowler",
-              "Average",
-              "Handicap",
-              "Game 1",
-              "Game 2",
-              "Game 3",
-              "Scratch series"
-            ],
-            "rows": [
-              [
-                "Team 4",
-                "Lane 1 points won: 5"
-              ],
-              [
-                "Borer, Jeff",
-                "105",
-                "103",
-                "103",
-                "152",
-                "116",
-                "371"
-              ],
-              [
-                "Borer, Randy",
-                "166",
-                "48",
-                "161",
-                "192",
-                "158",
-                "511"
-              ],
-              [
-                "Janecek, Dave",
-                "137",
-                "74",
-                "157",
-                "180",
-                "126",
-                "463"
-              ],
-              [
-                "Total",
-                "421",
-                "524",
-                "400",
-                "1345"
-              ],
-              [
-                "Team 5",
-                "Lane 2 points won: 2"
-              ],
-              [
-                "Sharp, Riley",
-                "178",
-                "37",
-                "155",
-                "201",
-                "161",
-                "517"
-              ],
-              [
-                "Purtzer, Will",
-                "136",
-                "75",
-                "133",
-                "154",
-                "198",
-                "485"
-              ],
-              [
-                "Riedel, Daniel",
-                "175",
-                "40",
-                "159",
-                "152",
-                "134",
-                "445"
-              ],
-              [
-                "Total",
-                "447",
-                "507",
-                "493",
-                "1447"
-              ]
-            ],
-            "emphasis": [
-              [
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false
-              ]
-            ],
-            "recapDetails": [
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {}
-            ]
-          },
-          {
-            "title": "BYE matchup",
+            "title": "BYE vs WOODMEN LIFE",
             "headers": [
               "Bowler",
               "Average",
@@ -9866,33 +10115,6 @@
                 "Lane 5 points won: 0"
               ],
               [
-                ", Vacant",
-                "170",
-                "45",
-                "170",
-                "170",
-                "170",
-                "510"
-              ],
-              [
-                ", Vacant",
-                "170",
-                "45",
-                "170",
-                "170",
-                "170",
-                "510"
-              ],
-              [
-                ", Vacant",
-                "170",
-                "45",
-                "170",
-                "170",
-                "170",
-                "510"
-              ],
-              [
                 "Total",
                 "510",
                 "510",
@@ -9901,10 +10123,10 @@
               ],
               [
                 "Team 1",
-                "Lane 6 points won: 2"
+                "Lane 6 points won: unverified"
               ],
               [
-                "Wehling, Sean",
+                "SEAN WEHLING",
                 "182",
                 "34",
                 "118",
@@ -9913,7 +10135,7 @@
                 "482"
               ],
               [
-                "Kadavy, Dave",
+                "DAVE KADAVY",
                 "174",
                 "41",
                 "142",
@@ -9922,7 +10144,7 @@
                 "462"
               ],
               [
-                "Rueter, Jon",
+                "JON RUETER",
                 "191",
                 "26",
                 "164",
@@ -9948,33 +10170,6 @@
                 false,
                 false,
                 false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
                 false
               ],
               [
@@ -10012,7 +10207,7 @@
                 false,
                 false,
                 false,
-                false,
+                true,
                 false
               ]
             ],
@@ -10020,17 +10215,38 @@
               {},
               {},
               {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {}
-            ]
+              {
+                "handicapSeries": "584",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "585",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "578",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "1444",
+                "handicapGames": [
+                  "424",
+                  "451",
+                  "569"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "2.0",
+                  "2.0",
+                  "2.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://www.leaguesecretary.com/uploads/2026/f/3/12170509142026f202603reprnt00.pdf"
           },
           {
-            "title": "NOVY FARMS matchup",
+            "title": "P.E.A.K. BOWLING vs NOVY FARMS",
             "headers": [
               "Bowler",
               "Average",
@@ -10042,49 +10258,11 @@
             ],
             "rows": [
               [
-                "Team 2",
-                "Lane 8 points won: 7"
-              ],
-              [
-                "Vuong, Austin",
-                "194",
-                "23",
-                "214",
-                "200",
-                "211",
-                "625"
-              ],
-              [
-                "Birdsall, John",
-                "166",
-                "48",
-                "162",
-                "148",
-                "189",
-                "499"
-              ],
-              [
-                "Connell, Steve",
-                "175",
-                "40",
-                "180",
-                "156",
-                "184",
-                "520"
-              ],
-              [
-                "Total",
-                "556",
-                "504",
-                "584",
-                "1644"
-              ],
-              [
                 "Team 3",
-                "Lane 7 points won: 0"
+                "Lane 7 points won: unverified"
               ],
               [
-                "Peterson, Everix",
+                "EVERIX PETERSON",
                 "99",
                 "108",
                 "129",
@@ -10093,7 +10271,7 @@
                 "342"
               ],
               [
-                "Peterson, Alan",
+                "ALAN PETERSON",
                 "173",
                 "42",
                 "98",
@@ -10102,7 +10280,7 @@
                 "416"
               ],
               [
-                "Peterson, Kyle",
+                "KYLE PETERSON",
                 "168",
                 "46",
                 "164",
@@ -10116,6 +10294,44 @@
                 "395",
                 "416",
                 "1202"
+              ],
+              [
+                "Team 2",
+                "Lane 8 points won: unverified"
+              ],
+              [
+                "AUSTIN VUONG",
+                "194",
+                "23",
+                "214",
+                "200",
+                "211",
+                "625"
+              ],
+              [
+                "JOHN BIRDSALL",
+                "166",
+                "48",
+                "162",
+                "148",
+                "189",
+                "499"
+              ],
+              [
+                "STEVE CONNELL",
+                "175",
+                "40",
+                "180",
+                "156",
+                "184",
+                "520"
+              ],
+              [
+                "Total",
+                "556",
+                "504",
+                "584",
+                "1644"
               ]
             ],
             "emphasis": [
@@ -10190,27 +10406,74 @@
               ],
               [
                 false,
-                false,
-                false,
-                false,
-                false
+                true,
+                true,
+                true,
+                true
               ]
             ],
             "recapDetails": [
               {},
+              {
+                "handicapSeries": "666",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "542",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "582",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "1457",
+                "handicapGames": [
+                  "476",
+                  "480",
+                  "501"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0"
+                ]
+              },
               {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {}
-            ]
+              {
+                "handicapSeries": "694",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "643",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "640",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "1644",
+                "handicapGames": [
+                  "556",
+                  "504",
+                  "584"
+                ],
+                "teamPoints": [
+                  "2.0",
+                  "2.0",
+                  "2.0",
+                  "7.0",
+                  "7.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://www.leaguesecretary.com/uploads/2026/f/3/12170509142026f202603reprnt00.pdf"
           },
           {
-            "title": "SERVICE MASTER RESTORE matchup",
+            "title": "STAN'S CLAN vs SERVICE MASTER RESTORE",
             "headers": [
               "Bowler",
               "Average",
@@ -10222,49 +10485,11 @@
             ],
             "rows": [
               [
-                "Team 7",
-                "Lane 10 points won: 7"
-              ],
-              [
-                "Umshler, Tim",
-                "178",
-                "37",
-                "162",
-                "148",
-                "232",
-                "542"
-              ],
-              [
-                "Fields, Mike",
-                "190",
-                "27",
-                "147",
-                "202",
-                "190",
-                "539"
-              ],
-              [
-                "Kuntz, Jeff",
-                "169",
-                "45",
-                "159",
-                "159",
-                "159",
-                "477"
-              ],
-              [
-                "Total",
-                "468",
-                "509",
-                "581",
-                "1558"
-              ],
-              [
                 "Team 6",
-                "Lane 9 points won: 0"
+                "Lane 9 points won: unverified"
               ],
               [
-                "Kreatz, Alicia",
+                "ALICIA KREATZ",
                 "196",
                 "21",
                 "146",
@@ -10273,7 +10498,7 @@
                 "486"
               ],
               [
-                "Nieman, Amber",
+                "AMBER NIEMAN",
                 "181",
                 "35",
                 "159",
@@ -10282,7 +10507,7 @@
                 "466"
               ],
               [
-                "Dority, Pat",
+                "PAT DORITY",
                 "213",
                 "6",
                 "179",
@@ -10296,6 +10521,44 @@
                 "499",
                 "488",
                 "1471"
+              ],
+              [
+                "Team 7",
+                "Lane 10 points won: unverified"
+              ],
+              [
+                "TIM UMSHLER",
+                "178",
+                "37",
+                "162",
+                "148",
+                "232",
+                "542"
+              ],
+              [
+                "MIKE FIELDS",
+                "190",
+                "27",
+                "147",
+                "202",
+                "190",
+                "539"
+              ],
+              [
+                "JEFF KUNTZ",
+                "169",
+                "45",
+                "159",
+                "159",
+                "159",
+                "477"
+              ],
+              [
+                "Total",
+                "468",
+                "509",
+                "581",
+                "1558"
               ]
             ],
             "emphasis": [
@@ -10370,24 +10633,71 @@
               ],
               [
                 false,
-                false,
-                false,
-                false,
-                false
+                true,
+                true,
+                true,
+                true
               ]
             ],
             "recapDetails": [
               {},
+              {
+                "handicapSeries": "549",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "571",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "537",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "1471",
+                "handicapGames": [
+                  "484",
+                  "499",
+                  "488"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0"
+                ]
+              },
               {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {}
-            ]
+              {
+                "handicapSeries": "653",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "620",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "612",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "1699",
+                "handicapGames": [
+                  "515",
+                  "556",
+                  "628"
+                ],
+                "teamPoints": [
+                  "2.0",
+                  "2.0",
+                  "2.0",
+                  "7.0",
+                  "7.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://www.leaguesecretary.com/uploads/2026/f/3/12170509142026f202603reprnt00.pdf"
           }
         ],
         "lanes": [
@@ -11372,5 +11682,8 @@
     }
   ],
   "lastAttemptedAt": null,
-  "lastCheckedAt": "2026-09-21T11:26:45.987Z"
+  "lastCheckedAt": "2026-09-21T11:26:45.987Z",
+  "officialRecapHash": "f2a7660946c7d4be759ccb0d5fb22d281cb52d8650ed67f7fd07aa3aae4fc31d",
+  "officialRecapParserVersion": 4,
+  "officialRecapSyncedAt": "2026-09-21T20:20:08.598Z"
 }

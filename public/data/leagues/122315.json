@@ -601,7 +601,7 @@
     ],
     "recaps": [
       {
-        "title": "1 matchup",
+        "title": "1 vs 2",
         "headers": [
           "Bowler",
           "Average",
@@ -614,10 +614,10 @@
         "rows": [
           [
             "Team 1",
-            "Lane 1 points won: 3"
+            "Lane 1 points won: unverified"
           ],
           [
-            "S, G",
+            "GOLDIE SWENSON",
             "51",
             "149",
             "40",
@@ -626,7 +626,7 @@
             "153"
           ],
           [
-            "B, A",
+            "ADDY BRISON",
             "101",
             "99",
             "104",
@@ -643,10 +643,10 @@
           ],
           [
             "Team 2",
-            "Lane 2 points won: 4"
+            "Lane 2 points won: unverified"
           ],
           [
-            "V, H",
+            "HAZEL VLASNIK",
             "107",
             "93",
             "103",
@@ -655,7 +655,7 @@
             "322"
           ],
           [
-            ", Vacant",
+            "VACANT",
             "100",
             "100",
             "100",
@@ -697,9 +697,9 @@
           [
             false,
             false,
+            true,
             false,
-            false,
-            false
+            true
           ],
           [
             false,
@@ -725,25 +725,66 @@
           ],
           [
             false,
+            true,
             false,
-            false,
-            false,
+            true,
             false
           ]
         ],
         "recapDetails": [
           {},
+          {
+            "handicapSeries": "600",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "602",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "1202",
+            "handicapGames": [
+              "392",
+              "422",
+              "388"
+            ],
+            "teamPoints": [
+              "0.0",
+              "2.0",
+              "0.0",
+              "3.0",
+              "3.0"
+            ]
+          },
           {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {}
-        ]
+          {
+            "handicapSeries": "601",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "600",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "1201",
+            "handicapGames": [
+              "396",
+              "394",
+              "411"
+            ],
+            "teamPoints": [
+              "2.0",
+              "0.0",
+              "2.0",
+              "4.0",
+              "4.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://www.leaguesecretary.com/uploads/2026/f/1/12231509112026f202601reprnt00.pdf"
       },
       {
-        "title": "3 matchup",
+        "title": "3 vs 4",
         "headers": [
           "Bowler",
           "Average",
@@ -756,10 +797,10 @@
         "rows": [
           [
             "Team 3",
-            "Lane 3 points won: 5"
+            "Lane 3 points won: unverified"
           ],
           [
-            "S, K",
+            "KARSON SCHELLPEPER",
             "54",
             "146",
             "62",
@@ -768,7 +809,7 @@
             "164"
           ],
           [
-            "Schmidt, Eli",
+            "ELI SCHMIDT",
             "113",
             "87",
             "99",
@@ -785,10 +826,10 @@
           ],
           [
             "Team 4",
-            "Lane 4 points won: 2"
+            "Lane 4 points won: unverified"
           ],
           [
-            "O, W",
+            "GROSSENBA OTTLEY",
             "107",
             "93",
             "104",
@@ -797,7 +838,7 @@
             "322"
           ],
           [
-            "S, J",
+            "JACK SKINNER",
             "132",
             "68",
             "116",
@@ -838,10 +879,10 @@
           ],
           [
             false,
+            true,
+            true,
             false,
-            false,
-            false,
-            false
+            true
           ],
           [
             false,
@@ -869,23 +910,64 @@
             false,
             false,
             false,
-            false,
+            true,
             false
           ]
         ],
         "recapDetails": [
           {},
+          {
+            "handicapSeries": "602",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "602",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "1204",
+            "handicapGames": [
+              "394",
+              "441",
+              "369"
+            ],
+            "teamPoints": [
+              "2.0",
+              "2.0",
+              "0.0",
+              "5.0",
+              "5.0"
+            ]
+          },
           {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {}
-        ]
+          {
+            "handicapSeries": "601",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "602",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "1203",
+            "handicapGames": [
+              "381",
+              "421",
+              "401"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "2.0",
+              "2.0",
+              "2.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://www.leaguesecretary.com/uploads/2026/f/1/12231509112026f202601reprnt00.pdf"
       },
       {
-        "title": "5 matchup",
+        "title": "5 vs 6",
         "headers": [
           "Bowler",
           "Average",
@@ -898,10 +980,10 @@
         "rows": [
           [
             "Team 5",
-            "Lane 5 points won: 4"
+            "Lane 5 points won: unverified"
           ],
           [
-            "M, M",
+            "MILES MARUSHAK",
             "104",
             "96",
             "85",
@@ -910,7 +992,7 @@
             "314"
           ],
           [
-            "Marushak, Colin",
+            "COLIN MARUSHAK",
             "81",
             "119",
             "86",
@@ -927,10 +1009,10 @@
           ],
           [
             "Team 6",
-            "Lane 6 points won: 3"
+            "Lane 6 points won: unverified"
           ],
           [
-            "E, C",
+            "CRAYSON EMKEN",
             "125",
             "75",
             "104",
@@ -939,7 +1021,7 @@
             "377"
           ],
           [
-            ", Vacant",
+            "VACANT",
             "100",
             "100",
             "100",
@@ -980,10 +1062,10 @@
           ],
           [
             false,
+            true,
             false,
-            false,
-            false,
-            false
+            true,
+            true
           ],
           [
             false,
@@ -1010,21 +1092,62 @@
           [
             false,
             false,
-            false,
-            false,
+            true,
+            true,
             false
           ]
         ],
         "recapDetails": [
           {},
+          {
+            "handicapSeries": "602",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "601",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "1203",
+            "handicapGames": [
+              "386",
+              "398",
+              "419"
+            ],
+            "teamPoints": [
+              "2.0",
+              "0.0",
+              "1.0",
+              "4.0",
+              "4.0"
+            ]
+          },
           {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {}
-        ]
+          {
+            "handicapSeries": "602",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "600",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "1202",
+            "handicapGames": [
+              "379",
+              "404",
+              "419"
+            ],
+            "teamPoints": [
+              "0.0",
+              "2.0",
+              "1.0",
+              "3.0",
+              "3.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://www.leaguesecretary.com/uploads/2026/f/1/12231509112026f202601reprnt00.pdf"
       }
     ],
     "lanes": [
@@ -1993,7 +2116,7 @@
         ],
         "recaps": [
           {
-            "title": "1 matchup",
+            "title": "1 vs 2",
             "headers": [
               "Bowler",
               "Average",
@@ -2006,10 +2129,10 @@
             "rows": [
               [
                 "Team 1",
-                "Lane 1 points won: 3"
+                "Lane 1 points won: unverified"
               ],
               [
-                "S, G",
+                "GOLDIE SWENSON",
                 "51",
                 "149",
                 "40",
@@ -2018,7 +2141,7 @@
                 "153"
               ],
               [
-                "B, A",
+                "ADDY BRISON",
                 "101",
                 "99",
                 "104",
@@ -2035,10 +2158,10 @@
               ],
               [
                 "Team 2",
-                "Lane 2 points won: 4"
+                "Lane 2 points won: unverified"
               ],
               [
-                "V, H",
+                "HAZEL VLASNIK",
                 "107",
                 "93",
                 "103",
@@ -2047,7 +2170,7 @@
                 "322"
               ],
               [
-                ", Vacant",
+                "VACANT",
                 "100",
                 "100",
                 "100",
@@ -2089,9 +2212,9 @@
               [
                 false,
                 false,
+                true,
                 false,
-                false,
-                false
+                true
               ],
               [
                 false,
@@ -2117,25 +2240,66 @@
               ],
               [
                 false,
+                true,
                 false,
-                false,
-                false,
+                true,
                 false
               ]
             ],
             "recapDetails": [
               {},
+              {
+                "handicapSeries": "600",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "602",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "1202",
+                "handicapGames": [
+                  "392",
+                  "422",
+                  "388"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "2.0",
+                  "0.0",
+                  "3.0",
+                  "3.0"
+                ]
+              },
               {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {}
-            ]
+              {
+                "handicapSeries": "601",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "600",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "1201",
+                "handicapGames": [
+                  "396",
+                  "394",
+                  "411"
+                ],
+                "teamPoints": [
+                  "2.0",
+                  "0.0",
+                  "2.0",
+                  "4.0",
+                  "4.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://www.leaguesecretary.com/uploads/2026/f/1/12231509112026f202601reprnt00.pdf"
           },
           {
-            "title": "3 matchup",
+            "title": "3 vs 4",
             "headers": [
               "Bowler",
               "Average",
@@ -2148,10 +2312,10 @@
             "rows": [
               [
                 "Team 3",
-                "Lane 3 points won: 5"
+                "Lane 3 points won: unverified"
               ],
               [
-                "S, K",
+                "KARSON SCHELLPEPER",
                 "54",
                 "146",
                 "62",
@@ -2160,7 +2324,7 @@
                 "164"
               ],
               [
-                "Schmidt, Eli",
+                "ELI SCHMIDT",
                 "113",
                 "87",
                 "99",
@@ -2177,10 +2341,10 @@
               ],
               [
                 "Team 4",
-                "Lane 4 points won: 2"
+                "Lane 4 points won: unverified"
               ],
               [
-                "O, W",
+                "GROSSENBA OTTLEY",
                 "107",
                 "93",
                 "104",
@@ -2189,7 +2353,7 @@
                 "322"
               ],
               [
-                "S, J",
+                "JACK SKINNER",
                 "132",
                 "68",
                 "116",
@@ -2230,10 +2394,10 @@
               ],
               [
                 false,
+                true,
+                true,
                 false,
-                false,
-                false,
-                false
+                true
               ],
               [
                 false,
@@ -2261,23 +2425,64 @@
                 false,
                 false,
                 false,
-                false,
+                true,
                 false
               ]
             ],
             "recapDetails": [
               {},
+              {
+                "handicapSeries": "602",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "602",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "1204",
+                "handicapGames": [
+                  "394",
+                  "441",
+                  "369"
+                ],
+                "teamPoints": [
+                  "2.0",
+                  "2.0",
+                  "0.0",
+                  "5.0",
+                  "5.0"
+                ]
+              },
               {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {}
-            ]
+              {
+                "handicapSeries": "601",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "602",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "1203",
+                "handicapGames": [
+                  "381",
+                  "421",
+                  "401"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "2.0",
+                  "2.0",
+                  "2.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://www.leaguesecretary.com/uploads/2026/f/1/12231509112026f202601reprnt00.pdf"
           },
           {
-            "title": "5 matchup",
+            "title": "5 vs 6",
             "headers": [
               "Bowler",
               "Average",
@@ -2290,10 +2495,10 @@
             "rows": [
               [
                 "Team 5",
-                "Lane 5 points won: 4"
+                "Lane 5 points won: unverified"
               ],
               [
-                "M, M",
+                "MILES MARUSHAK",
                 "104",
                 "96",
                 "85",
@@ -2302,7 +2507,7 @@
                 "314"
               ],
               [
-                "Marushak, Colin",
+                "COLIN MARUSHAK",
                 "81",
                 "119",
                 "86",
@@ -2319,10 +2524,10 @@
               ],
               [
                 "Team 6",
-                "Lane 6 points won: 3"
+                "Lane 6 points won: unverified"
               ],
               [
-                "E, C",
+                "CRAYSON EMKEN",
                 "125",
                 "75",
                 "104",
@@ -2331,7 +2536,7 @@
                 "377"
               ],
               [
-                ", Vacant",
+                "VACANT",
                 "100",
                 "100",
                 "100",
@@ -2372,10 +2577,10 @@
               ],
               [
                 false,
+                true,
                 false,
-                false,
-                false,
-                false
+                true,
+                true
               ],
               [
                 false,
@@ -2402,21 +2607,62 @@
               [
                 false,
                 false,
-                false,
-                false,
+                true,
+                true,
                 false
               ]
             ],
             "recapDetails": [
               {},
+              {
+                "handicapSeries": "602",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "601",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "1203",
+                "handicapGames": [
+                  "386",
+                  "398",
+                  "419"
+                ],
+                "teamPoints": [
+                  "2.0",
+                  "0.0",
+                  "1.0",
+                  "4.0",
+                  "4.0"
+                ]
+              },
               {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {}
-            ]
+              {
+                "handicapSeries": "602",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "600",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "1202",
+                "handicapGames": [
+                  "379",
+                  "404",
+                  "419"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "2.0",
+                  "1.0",
+                  "3.0",
+                  "3.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://www.leaguesecretary.com/uploads/2026/f/1/12231509112026f202601reprnt00.pdf"
           }
         ],
         "lanes": [
@@ -2797,5 +3043,8 @@
         ]
       }
     }
-  ]
+  ],
+  "officialRecapHash": "a8ae9f0b69a3f33debf06008996081a97a6ac1348ab9d7995cbfa6bc7f564d66",
+  "officialRecapParserVersion": 4,
+  "officialRecapSyncedAt": "2026-09-21T20:22:08.198Z"
 }

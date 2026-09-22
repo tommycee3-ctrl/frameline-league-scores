@@ -11,7 +11,8 @@ export type Table = {
   emphasis?: boolean[][];
   team?: string;
   sourceReport?: string;
-  recapDetails?: Array<{ handicapSeries?: string; handicapGames?: string[]; teamPoints?: string[]; matchPoints?: string[]; individualPoints?: number }>;
+  officialTotalsComplete?: boolean;
+  recapDetails?: Array<{ handicapSeries?: string; handicapGames?: string[]; teamPoints?: string[]; matchPoints?: string[]; individualPoints?: number; officialTotalsUnavailable?: boolean; officialRowUnavailable?: boolean }>;
 };
 export type LeagueSnapshot = {
   id: string;
@@ -66,6 +67,7 @@ type RecapTeam = {
   totalEmphasis: boolean[];
   details: NonNullable<Table["recapDetails"]>;
   totalDetails?: NonNullable<Table["recapDetails"]>[number];
+  verificationPending?: boolean;
 };
 const parseRecapMatchups = (tables: Table[] = []) =>
   tables
@@ -85,6 +87,7 @@ const parseRecapMatchups = (tables: Table[] = []) =>
             total: [],
             totalEmphasis: [],
             details: [],
+            verificationPending: table.officialTotalsComplete === false,
           };
           teams.push(active);
         } else if (active && row[0]?.toLowerCase() === "total") {
@@ -908,6 +911,7 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                     </span>}
                   </header>
                   <p>Main scores are scratch; HDCP totals include handicap. Win highlights follow the official recap, including handicap series. Points follow the official report.</p>
+                  {matchup.some((team) => team.verificationPending) && <p>Part of this printed recap is cut off. Unverified rows and team totals have no win highlights.</p>}
                   <div className="recap-scroll">
                     {matchup.map((team) => {
                       return (

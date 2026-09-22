@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import {execFileSync} from "node:child_process";
 import {readFileSync} from "node:fs";
 import {runInNewContext} from "node:vm";
-import {applyOfficialRecap, enrichOfficialRecaps} from "../scripts/official-recap.mjs";
+import {applyOfficialRecap, buildOfficialRecaps, enrichOfficialRecaps} from "../scripts/official-recap.mjs";
 const teams = JSON.parse(execFileSync(process.env.FRAMELINE_PYTHON || "python", ["scripts/parse-recap-pdf.py", "tests/fixtures/nationals-recap-week4.pdf"], {encoding:"utf8"}));
 const league = JSON.parse(readFileSync("tests/fixtures/nationals-recap-week4.json"));
 const scratchInteractive = [{rows:[
@@ -35,6 +35,29 @@ test("an abbreviated interactive name matches only the exact-score official bowl
   assert.equal(applyOfficialRecap(table,official,"1","official.pdf")[0].recapDetails[1].handicapSeries,"660");
   table[0].rows[1][0]="H, Y";
   assert.throws(() => applyOfficialRecap(table,official,"1","official.pdf"),/Cannot safely match/);
+});
+test("an official suffix omitted by the interactive grid still matches exact scores", () => {
+  const official = [{team:"6",week:"3",lane:"6",bowlers:[{name:"Mike Janik Sr",values:["179","41","163","155","170","488"],wins:[false,false,true,false],handicapSeries:"611",points:1}],total:["0","0","0","0"],scratchTotal:["0","0","0","0"],totalWins:[false,false,false,false]}];
+  const table = [{rows:[["Team 6",""],["Janik, Mike","179","41","163","155","170","488"],["Total","0","0","0","0"]]}];
+  assert.equal(applyOfficialRecap(table,official,"3","official.pdf")[0].recapDetails[1].individualPoints,1);
+});
+test("the printed lane corrects a duplicate team-name number", () => {
+  const official = [{team:"2",week:"4",lane:"19",bowlers:[{name:"Dee Dees",values:["146","80","134","111","132","377"],wins:[true,false,false,true],handicapSeries:"617",points:2}],total:["0","0","0","0"],scratchTotal:["0","0","0","0"],totalWins:[false,false,false,false]}];
+  const table = [{rows:[["Team 9","Lane 19 points won: 2"],["Dees, Dee","146","80","134","111","132","377"],["Total","0","0","0","0"]]}];
+  const result = applyOfficialRecap(table,official,"4","official.pdf")[0];
+  assert.equal(result.rows[0][0],"Team 2");
+  assert.equal(result.recapDetails[1].handicapSeries,"617");
+});
+test("the published PDF replaces stale interactive scores without borrowing their win marks", () => {
+  const printed = [
+    {team:"2",week:"1",lane:"1",name:"Same Name",bowlers:[{name:"Dee Dees",values:["146","80","154","111","132","397"],wins:[true,false,false,true],handicapSeries:"637",points:2}],scratchTotal:["154","111","132","397","397"],total:["234","191","212","397","637"],totalWins:[true,false,false,true],points:["2","0","0","2","2"]},
+    {team:"9",week:"1",lane:"2",name:"Same Name",bowlers:[],scratchTotal:["0","0","0","0","0"],total:["0","0","0","0","0"],totalWins:[false,false,false,false],points:["0","0","0","0","0"]}
+  ];
+  const interactive = [{headers:["Bowler","Average","Handicap","Game 1","Game 2","Game 3","Scratch series"],rows:[["Team 9","Lane 1 points won: 1"],["Dees, Dee","146","80","134","111","132","377"],["Total","134","111","132","377"],["Team 9","Lane 2 points won: 0"],["Total","0","0","0","0"]]}];
+  const built = buildOfficialRecaps(interactive,printed,"1","official.pdf")[0];
+  assert.deepEqual(built.rows[1],["Dee Dees","146","80","154","111","132","397"]);
+  assert.deepEqual(built.rows[0],["Team 2","Lane 1 points won: 2"]);
+  assert.deepEqual(built.emphasis[1].slice(3),[true,false,false,true]);
 });
 
 test("scratch recap distinguishes a marked win from an equal-score half point", () => {

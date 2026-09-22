@@ -374,7 +374,7 @@ for(const league of discoveryOnly?[]:leagues.filter(league=>recentlyUpdated(leag
   // Historical backfills belong to the nightly maintenance workflow. The
   // frequent known-league refresh must remain small enough to finish before
   // its next two-hour cycle.
-  const needsOfficialRecap = (current.views?.recaps ?? []).some(table => table.rows?.length && !table.sourceReport);
+  const needsOfficialRecap = (current.views?.recaps ?? []).some(table => table.rows?.length && (!table.sourceReport || table.officialTotalsComplete === false));
   const needsHistoryBackfill=!knownOnly&&!currentOnly&&Number(current.week)>1&&historyWeeks.size<Number(current.week);
   // Standings, recaps, and lane assignments are not always published at the
   // same time.  A standings-only fingerprint can therefore remain unchanged

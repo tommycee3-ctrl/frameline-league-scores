@@ -43,7 +43,7 @@ def parse(filename):
                         continue
                     if not active: continue
                     def number(v):
-                        v = re.sub(r"^(?:bk|[abp])", "", v, flags=re.I)
+                        v = re.sub(r"^(?:bk|[abpvy])", "", v, flags=re.I)
                         return v if re.fullmatch(r"\d+(?:\.\d+)?", v) else None
                     if len(tokens) >= 8 and all(number(v) is not None for v in tokens[-7:]) and not text.startswith(("Scratch Total", "Total", "Handicap")):
                         values = [number(v) for v in tokens[-7:]]
