@@ -69,10 +69,12 @@ for (const [index, listed] of candidates.entries()) {
     if (!recaps.length || recaps.some(table => !table.sourceReport)) throw new Error("official recap did not cover every table");
     const now = new Date().toISOString();
     const incomplete = recaps.some(table => table.officialTotalsComplete === false);
-    const next = { ...league, week: report.week, views: { ...league.views, recaps }, officialRecapHash: report.hash, officialRecapParserVersion: parserVersion, officialRecapSyncedAt: now };
+    const printedDate = report.selectedLabel.match(/\b(\d{1,2})\/(\d{1,2})\/(\d{4})\b/);
+    const sourceUpdated = printedDate ? new Date(Date.UTC(Number(printedDate[3]), Number(printedDate[1]) - 1, Number(printedDate[2]))).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" }) : league.sourceUpdated;
+    const next = { ...league, week: report.week, sourceUpdated: newWeek ? sourceUpdated : league.sourceUpdated, views: { ...league.views, recaps }, officialRecapHash: report.hash, officialRecapParserVersion: parserVersion, officialRecapSyncedAt: now };
     if (Array.isArray(next.history)) {
       next.history = newWeek
-        ? [...next.history.filter(entry => String(entry.week) !== report.week), { week: report.week, sourceUpdated: report.selectedLabel, syncedAt: now, views: { recaps } }]
+        ? [...next.history.filter(entry => String(entry.week) !== report.week), { week: report.week, sourceUpdated, syncedAt: now, views: { recaps } }]
         : next.history.map(entry => String(entry.week) === report.week ? { ...entry, views: { ...entry.views, recaps } } : entry);
     }
     if (!dryRun) {
