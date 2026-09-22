@@ -69,8 +69,8 @@ jobs:
           source_status=${PIPESTATUS[0]}
           set -e
           if (( source_status != 0 )); then
-            if grep -q 'blocking live report reads (HTTP 403)' sync-report.log; then
-              echo 'Directory API blocked; prior verified listings remain published.' | tee -a sync-report.log
+            if grep -Eq 'blocking live report reads \(HTTP 403\)|No center directories could be read; preserving the prior catalog\.' sync-report.log; then
+              echo 'Directory source unavailable; prior verified listings remain published.' | tee -a sync-report.log
               echo 'partial_failure=true' >> "$GITHUB_OUTPUT"
             else
               exit "$source_status"

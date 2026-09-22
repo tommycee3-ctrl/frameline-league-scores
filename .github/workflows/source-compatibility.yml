@@ -1,18 +1,6 @@
 name: Check bowling source compatibility
 on:
-  schedule:
-    # Backend-only source check every two hours.
-    - cron: '9 */2 * * *'
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - 'scripts/sync-leaguesecretary.mjs'
-      - 'scripts/official-recap.mjs'
-      - 'scripts/parse-recap-pdf.py'
-      - 'scripts/source-contract.mjs'
-      - 'scripts/import-queue.mjs'
-      - '.github/workflows/source-compatibility.yml'
 permissions:
   contents: read
 concurrency:
