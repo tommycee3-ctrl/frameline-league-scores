@@ -12,11 +12,9 @@ export function combinedReportedPoints(values: Array<string | number | null | un
 }
 
 export function reportedPointTotals(entries: Array<{ week: string; reportedWeekPoints: number | null }>) {
-  let total = 0, previousWeek = 0, complete = true;
+  let total = 0;
   return entries.map(entry => {
-    complete = complete && Number(entry.week) === previousWeek + 1 && entry.reportedWeekPoints !== null;
-    previousWeek = Number(entry.week);
     total += entry.reportedWeekPoints ?? 0;
-    return complete ? String(total) : "";
+    return String(total);
   });
 }

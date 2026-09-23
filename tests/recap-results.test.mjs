@@ -25,14 +25,14 @@ test("dashboard uses only weekly recap rows for scores and individual points", (
   const source = readFileSync("app/leagues/synced-league-dashboard.tsx", "utf8");
   assert.ok(source.includes("const weekPoints = scoreRow ? (recapPoints ?? null) : 0;"));
   assert.ok(source.includes('series: scoreRow?.at(-1) || ""'));
-  assert.ok(source.includes('recap.details[index]?.individualPoints ?? "—"'));
+  assert.ok(source.includes('{bowlerPointTotal(n, team)}'));
   assert.ok(!/pointSeries|individualPoints\(|teamResult\(|resultClass\(/.test(source));
 });
 
-test("missing weeks never produce a falsely complete season point total", () => {
-  assert.deepEqual(reportedPointTotals([{week:"2",reportedWeekPoints:4},{week:"3",reportedWeekPoints:4}]), ["", ""]);
+test("season totals carry through missed weeks and late-starting bowlers", () => {
+  assert.deepEqual(reportedPointTotals([{week:"2",reportedWeekPoints:4},{week:"3",reportedWeekPoints:4}]), ["4", "8"]);
   assert.deepEqual(reportedPointTotals([{week:"1",reportedWeekPoints:0},{week:"2",reportedWeekPoints:4}]), ["0", "4"]);
-  assert.deepEqual(reportedPointTotals([{week:"1",reportedWeekPoints:4},{week:"2",reportedWeekPoints:null},{week:"3",reportedWeekPoints:4}]), ["4", "", ""]);
+  assert.deepEqual(reportedPointTotals([{week:"1",reportedWeekPoints:4},{week:"2",reportedWeekPoints:null},{week:"3",reportedWeekPoints:4}]), ["4", "4", "8"]);
 });
 
 test("duplicate League Secretary accounts combine their official wins", () => {

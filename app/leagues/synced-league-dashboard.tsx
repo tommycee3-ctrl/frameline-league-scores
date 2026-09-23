@@ -55,6 +55,7 @@ const personName = (name: string) => {
             : suffix;
   return [given, family, formattedSuffix].filter(Boolean).join(" ");
 };
+const personKey = (name: string) => personName(name).toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
 const score = (row: string[], game: number) => Number(row[3 + game] ?? 0);
 const laneNumber = (value = "") => Number(value.match(/\d+/)?.[0] ?? Number.MAX_SAFE_INTEGER);
 type RecapTeam = {
@@ -400,7 +401,7 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
       .map((snapshot) => {
         const table = snapshot.views.bowlers?.[0];
         const rows = table?.rows.filter(
-          (item) => personName(cell(table, item, "Name")) === name,
+          (item) => personKey(cell(table, item, "Name")) === personKey(name),
         ) ?? [];
         const row = [...rows].sort(
           (left, right) => Number(cell(table!, right, "Games")) - Number(cell(table!, left, "Games")),
@@ -409,7 +410,7 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
         let recapPoints: number | undefined;
         for (const matchup of parseRecapMatchups(snapshot.views.recaps ?? [])) {
           for (const entry of matchup) {
-            const foundIndex = entry.rows.findIndex((candidate) => personName(candidate[0]) === name);
+            const foundIndex = entry.rows.findIndex((candidate) => personKey(candidate[0]) === personKey(name));
             if (foundIndex >= 0) {
               scoreRow = entry.rows[foundIndex];
               recapPoints = entry.details[foundIndex]?.individualPoints;
@@ -675,9 +676,9 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                                       <strong>{currentBowlerAverage(n, source ? cell(bowlerTable!, source, "Avg") || person[1] || "—" : person[1] || "—")}</strong>
                                     </span>
                                     {hasIndividualPoints && <span>
-                                      <small>Week pts</small>
+                                      <small>Season pts</small>
                                       <strong className="week-points">
-                                        {recap.details[index]?.individualPoints ?? "—"}
+                                        {bowlerPointTotal(n, team)}
                                       </strong>
                                     </span>}
                                   </div>
