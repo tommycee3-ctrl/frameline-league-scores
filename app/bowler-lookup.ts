@@ -66,9 +66,14 @@ export function findBowlers(query: string): BowlerMatch[] {
         const averageIndex = valueIndex(table.headers, ["avg", "average"]);
         const teamIndex = valueIndex(table.headers, ["team#"]);
         const teamNumber = teamIndex >= 0 ? row[teamIndex] : "";
-        if (averageIndex >= 0 && row[averageIndex] && Number.isFinite(Number(row[averageIndex]))) details.average = row[averageIndex];
+        const publishedAverage = averageIndex >= 0 ? Number(row[averageIndex]) : NaN;
+        // Bowler List is first and contains the current official average. Do
+        // not let a later lane/roster placeholder or recap entering average
+        // replace it.
+        if (details.average === "—" && Number.isFinite(publishedAverage) && publishedAverage > 0) details.average = row[averageIndex];
         const highSeriesIndex = valueIndex(table.headers, ["hss"]);
-        if (highSeriesIndex >= 0 && row[highSeriesIndex] && Number.isFinite(Number(row[highSeriesIndex]))) details.highSeries = row[highSeriesIndex];
+        const publishedHighSeries = highSeriesIndex >= 0 ? Number(row[highSeriesIndex]) : NaN;
+        if (details.highSeries === "—" && Number.isFinite(publishedHighSeries) && publishedHighSeries > 0) details.highSeries = row[highSeriesIndex];
         if (teamNumber && teamNumber !== "0") {
           const teammates = table.rows.filter((item) => item[teamIndex] === teamNumber).map((item) => ({
             name: item[nameIndex] ?? "Bowler",

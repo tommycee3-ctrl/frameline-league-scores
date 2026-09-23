@@ -109,8 +109,9 @@ def parse(filename):
         if not team.get("total") and team.get("scratchTotal"):
             team["total"] = list(team["scratchTotal"])
             team["totalWins"] = list(team.get("scratchTotalWins", []))
-    # The official sheet's bold cells establish awards. A marked score tied
-    # with the opposing position is worth half; every other marked cell is one.
+    # The official sheet's bold cells establish awards. Games are compared
+    # with handicap. The printed Match Points totals establish the series
+    # value (commonly two points), so league scoring variations remain exact.
     matchups = {}
     for team in teams:
         key = (team.get("week"), team.get("matchupKey") or (int(team["lane"]) + 1) // 2)
@@ -119,15 +120,24 @@ def parse(filename):
         if len(pair) != 2: continue
         left, right = pair
         for first, second in ((left, right), (right, left)):
+            game_count = first.get("gameCount", 3)
+            series_winners = sum(1 for bowler in first["bowlers"] if len(bowler["wins"]) > game_count and bowler["wins"][game_count])
+            match_points = first.get("matchPoints", [])
+            series_pool = (float(match_points[game_count]) - sum(float(value) for value in match_points[:game_count])) if len(match_points) > game_count else series_winners
+            series_value = series_pool / series_winners if series_winners else 0
             for position, bowler in enumerate(first["bowlers"]):
                 opponent = second["bowlers"][position] if position < len(second["bowlers"]) else None
                 points = 0
                 for result_index, marked in enumerate(bowler["wins"]):
                     if not marked: continue
                     game_count = len(bowler["values"]) - 3
-                    value_index = result_index + 2 if result_index < game_count else game_count + 2
-                    tied = opponent is not None and bowler["values"][value_index] == opponent["values"][value_index]
-                    points += .5 if tied else 1
+                    if result_index < game_count:
+                        handicap_score = float(bowler["values"][result_index + 2]) + float(bowler["values"][1])
+                        opponent_score = (float(opponent["values"][result_index + 2]) + float(opponent["values"][1])) if opponent is not None else None
+                        points += .5 if opponent_score == handicap_score else 1
+                    else:
+                        tied = opponent is not None and bowler["handicapSeries"] == opponent["handicapSeries"]
+                        points += series_value / 2 if tied else series_value
                 bowler["points"] = points
     if not teams or not any(t.get("total") for t in teams):
         raise ValueError("Unsupported or empty official recap PDF; no results inferred")

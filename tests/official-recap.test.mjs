@@ -58,6 +58,9 @@ test("new Nationals Recap Sheet supplies Week 5 official point totals", () => {
   assert.equal(team.rows.find(row => row[0] === "Team 8")[1], "Lane 3 points won: 33.0");
   const totalIndex = team.rows.findIndex(row => row[0] === "Total");
   assert.deepEqual(team.emphasis[totalIndex], [false, true, true, true, true]);
+  const makeables = result.find(table => table.rows.some(row => row[0] === "TOM CASELLA"));
+  const tomIndex = makeables.rows.findIndex(row => row[0] === "TOM CASELLA");
+  assert.equal(makeables.recapDetails[tomIndex].individualPoints, 4);
 });
 test("four-game Recap Sheets retain the fourth game, winner mark and printed points", () => {
   const printed = JSON.parse(execFileSync(process.env.FRAMELINE_PYTHON || "python", ["scripts/parse-recap-pdf.py", "tests/fixtures/sunday-9-pin-week13.pdf"], {encoding:"utf8"}));

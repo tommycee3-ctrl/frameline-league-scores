@@ -13,7 +13,33 @@ const requested = process.argv.find(arg => arg.startsWith("--league="))?.slice(9
 const dryRun = process.argv.includes("--dry-run");
 const seasonCode = { Fall: "f", Summer: "u", Spring: "s", Winter: "w" };
 let updated = 0, skipped = 0, unavailable = 0;
-const parserVersion = 2;
+const parserVersion = 3;
+
+const nameKey = value => String(value ?? "").toLowerCase().replace(/\b(jr|sr|ii|iii|iv)\b/g, " ").replace(/[^a-z0-9]+/g, " ").trim().split(/\s+/).filter(Boolean).sort().join(" ");
+
+function includePostedRecap(league, bowler) {
+  const prior = [...(league.history ?? [])].filter(entry => Number(entry.week) < Number(league.week)).sort((a, b) => Number(b.week) - Number(a.week))[0];
+  const priorTable = prior?.views?.bowlers?.[0];
+  if (!priorTable) return bowler;
+  const priorName = priorTable.headers.findIndex(header => header.toLowerCase() === "name");
+  const priorPins = priorTable.headers.findIndex(header => header.toLowerCase() === "pins");
+  const priorGames = priorTable.headers.findIndex(header => ["games", "gms"].includes(header.toLowerCase()));
+  const previous = priorTable.rows.find(row => nameKey(row[priorName]) === nameKey(bowler.name));
+  if (!previous || previous[priorPins] !== String(bowler.pins) || previous[priorGames] !== String(bowler.games)) return bowler;
+  for (const table of league.views?.recaps ?? []) {
+    const name = table.headers.findIndex(header => ["bowler", "name"].includes(header.toLowerCase()));
+    const row = table.rows.find(row => nameKey(row[name]) === nameKey(bowler.name));
+    if (!row) continue;
+    const gameIndexes = table.headers.map((header, index) => /^game \d+$/i.test(header) ? index : -1).filter(index => index >= 0);
+    const scores = gameIndexes.map(index => Number(row[index])).filter(score => Number.isFinite(score) && score > 0);
+    if (!scores.length) return bowler;
+    const pins = Number(bowler.pins) + scores.reduce((sum, score) => sum + score, 0);
+    const games = Number(bowler.games) + scores.length;
+    return { ...bowler, pins: String(pins), games: String(games), average: String(Math.floor(pins / games)),
+      highGame: String(Math.max(Number(bowler.highGame) || 0, ...scores)), highSeries: String(Math.max(Number(bowler.highSeries) || 0, scores.reduce((sum, score) => sum + score, 0))) };
+  }
+  return bowler;
+}
 
 async function reportFor(league) {
   const year = league.startDate?.match(/\b20\d{2}\b/)?.[0];
@@ -65,15 +91,31 @@ function mergeStandings(league, official) {
 }
 
 function mergeBowlers(league, official) {
-  if (!official.bowlers?.length) return null;
   const existing = league.views?.bowlers?.[0];
+  if (!official.bowlers?.length) {
+    if (!existing) return null;
+    const at = label => existing.headers.findIndex(header => header.toLowerCase() === label);
+    const indexes = { name: at("name"), pins: at("pins"), games: existing.headers.findIndex(header => ["games", "gms"].includes(header.toLowerCase())), average: at("avg"), highGame: at("hsg"), highSeries: at("hss") };
+    let changed = false;
+    const rows = existing.rows.map(row => {
+      const updated = includePostedRecap(league, { name: row[indexes.name], pins: row[indexes.pins], games: row[indexes.games], average: row[indexes.average], highGame: row[indexes.highGame], highSeries: row[indexes.highSeries] });
+      if (updated.pins === row[indexes.pins] && updated.games === row[indexes.games]) return row;
+      changed = true;
+      const next = [...row];
+      next[indexes.pins] = updated.pins; next[indexes.games] = updated.games; next[indexes.average] = updated.average;
+      next[indexes.highGame] = updated.highGame; next[indexes.highSeries] = updated.highSeries;
+      return next;
+    });
+    return changed ? [{ ...existing, rows }] : null;
+  }
   const prior = new Map((existing?.rows ?? []).map(row => {
     const name = existing.headers.findIndex(header => header.toLowerCase() === "name");
     return [String(row[name] ?? "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim(), row];
   }));
   return [{ title: existing?.title ?? "Bowler List",
     headers: ["Name", "Team#", "Pos#", "Team", "Gndr", "Pins", "Games", "Avg", "EnteringAvg", "HCP", "HHG", "HHS", "HSG", "HSS", "MIB", "WON"],
-    rows: official.bowlers.map((bowler, index) => {
+    rows: official.bowlers.map((publishedBowler, index) => {
+      const bowler = includePostedRecap(league, publishedBowler);
       const key = String(bowler.name).toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
       const saved = prior.get(key) ?? [];
       return [bowler.name, bowler.team, String(index + 1), bowler.teamName, saved[4] ?? "", bowler.pins, bowler.games, bowler.average,

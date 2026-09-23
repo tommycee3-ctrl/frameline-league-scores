@@ -26,3 +26,10 @@ test('all Double Trouble roster names can be discovered including names missing 
  assert.ok(names.length>0);
  for(const name of names) assert.ok(lookup.findBowlers(name).some(match=>match.leagues.some(item=>item.id==='50719')),name+' should match Double Trouble');
 });
+
+test('current Bowler List averages win over zero-filled and older roster rows',()=>{
+ const catalog=[{id:'50719',displayName:'Double Trouble',views:{bowlers:[{headers:['Name','Team#','Avg'],rows:[['Tom Casella','2','209']]}],rosters:[{team:'2',headers:['Name','AVG'],rows:[['Casella, Tom','0']]}],lanes:[]}}];
+ const compiled=ts.transpileModule(fs.readFileSync('app/bowler-lookup.ts','utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2020}}).outputText;
+ const lookup={};new Function('exports','require',compiled)(lookup,name=>name.includes('identity')?exportsObject:{default:catalog});
+ assert.equal(lookup.findBowlers('Tom Casella')[0].leagues[0].average,'209');
+});

@@ -14,7 +14,7 @@ const catalog = JSON.parse(await readFile(catalogFile, "utf8"));
 const requested = process.argv.find(arg => arg.startsWith("--league="))?.slice(9);
 const dryRun = process.argv.includes("--dry-run");
 const seasonCode = { Fall: "f", Summer: "u", Spring: "s", Winter: "w" };
-const parserVersion = 6;
+const parserVersion = 7;
 let updated = 0, partial = 0, skipped = 0, unavailable = 0;
 
 async function reportFor(league) {
