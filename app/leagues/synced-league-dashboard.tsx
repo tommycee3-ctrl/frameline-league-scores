@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { combinedReportedPoints, officialScoreClass, reportedPointTotals } from "./recap-results";
+import { officialScoreClass, reportedPointTotals } from "./recap-results";
 import { nationalsRosterByTeam } from "./nationals-rosters";
 
 export type Table = {
@@ -208,11 +208,11 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
   const recapByTeam = useMemo(() => {
     const result: Record<
       string,
-      { lane: string; points: string; rows: string[][] }
+      { lane: string; points: string; rows: string[][]; details: NonNullable<Table["recapDetails"]> }
     > = {};
     for (const table of activeViews.recaps ?? []) {
       let current = "";
-      for (const row of table.rows) {
+      for (const [rowIndex, row] of table.rows.entries()) {
         const m = row[0]?.match(/^Team\s+(\d+)$/i);
         if (m) {
           current = m[1];
@@ -221,9 +221,10 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
             lane: detail.match(/Lane\s+\d+/i)?.[0] ?? "",
             points: detail.match(/points won:\s*([\d.]+)/i)?.[1] ?? "",
             rows: [],
+            details: [],
           };
         } else if (current && row[0]?.toLowerCase() !== "total")
-          result[current].rows.push(row);
+          { result[current].rows.push(row); result[current].details.push(table.recapDetails?.[rowIndex] ?? {}); }
       }
     }
     return result;
@@ -406,9 +407,6 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
         )[0];
         let scoreRow: string[] | undefined;
         let recapPoints: number | undefined;
-        const reportedWeekPoints = combinedReportedPoints(
-          rows.map((item) => cell(table!, item, "WON")),
-        );
         for (const matchup of parseRecapMatchups(snapshot.views.recaps ?? [])) {
           for (const entry of matchup) {
             const foundIndex = entry.rows.findIndex((candidate) => personName(candidate[0]) === name);
@@ -420,12 +418,14 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
           }
           if (scoreRow) break;
         }
-        const weekPoints = recapPoints ?? reportedWeekPoints;
+        // A Bowler List row proves roster membership, not participation that
+        // week. Only the selected week's recap may supply scores and points.
+        const weekPoints = scoreRow ? (recapPoints ?? null) : 0;
         if (!row && !scoreRow) return null;
         return {
           week: snapshot.week ?? "—",
           games: scoreRow?.slice(3, 6).filter(Boolean) ?? [],
-          series: scoreRow?.at(-1) || (table && row ? cell(table, row, "HSS") : ""),
+          series: scoreRow?.at(-1) || "",
           average: table && row ? cell(table, row, "Avg") : scoreRow?.[1] || "—",
           weekPoints,
           reportedWeekPoints: weekPoints,
@@ -675,9 +675,9 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                                       <strong>{currentBowlerAverage(n, source ? cell(bowlerTable!, source, "Avg") || person[1] || "—" : person[1] || "—")}</strong>
                                     </span>
                                     {hasIndividualPoints && <span>
-                                      <small>Total pts</small>
+                                      <small>Week pts</small>
                                       <strong className="week-points">
-                                        {bowlerPointTotal(n, team)}
+                                        {recap.details[index]?.individualPoints ?? "—"}
                                       </strong>
                                     </span>}
                                   </div>

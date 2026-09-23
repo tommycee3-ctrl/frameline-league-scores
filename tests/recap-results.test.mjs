@@ -21,9 +21,11 @@ test("all stored leagues render unmarked recap scores neutrally", () => {
   }
   assert.ok(checked > 100);
 });
-test("dashboard never replaces official zero points or calculates result classes", () => {
+test("dashboard uses only weekly recap rows for scores and individual points", () => {
   const source = readFileSync("app/leagues/synced-league-dashboard.tsx", "utf8");
-  assert.ok(source.includes("const weekPoints = recapPoints ?? reportedWeekPoints;"));
+  assert.ok(source.includes("const weekPoints = scoreRow ? (recapPoints ?? null) : 0;"));
+  assert.ok(source.includes('series: scoreRow?.at(-1) || ""'));
+  assert.ok(source.includes('recap.details[index]?.individualPoints ?? "—"'));
   assert.ok(!/pointSeries|individualPoints\(|teamResult\(|resultClass\(/.test(source));
 });
 
