@@ -14,10 +14,10 @@
   "centerName": "Hollywood Bowl",
   "centerSlug": "hollywood-bowl-lincoln-nebraska",
   "area": "Lincoln",
-  "sourceUpdated": "Sep 15, 2026",
+  "sourceUpdated": "Sep 28, 2026",
   "syncedAt": "2026-09-21T06:51:25.438Z",
   "status": "current",
-  "week": "1",
+  "week": "3",
   "fingerprint": "d7ab3b4c6060bb03f9524ef09b617de50a013b64686e665bfc4162b3f081a922",
   "lastCompletedCycle": "2026-09-21",
   "views": {
@@ -240,9 +240,9 @@
             "2",
             "M & M",
             "M",
-            "418",
-            "3",
-            "139",
+            "806",
+            "6",
+            "134",
             "137",
             "71",
             "240",
@@ -258,15 +258,15 @@
             "2",
             "B S -2",
             "M",
-            "444",
-            "3",
-            "148",
+            "948",
+            "6",
+            "158",
             "156",
             "62",
             "216",
             "606",
-            "162",
-            "444",
+            "179",
+            "504",
             "0",
             "0"
           ],
@@ -276,9 +276,9 @@
             "1",
             "ALLEY CATS",
             "W",
-            "428",
-            "3",
-            "142",
+            "781",
+            "6",
+            "130",
             "110",
             "68",
             "254",
@@ -294,9 +294,9 @@
             "1",
             "B S -2",
             "M",
-            "404",
-            "3",
-            "134",
+            "768",
+            "6",
+            "128",
             "136",
             "76",
             "236",
@@ -312,9 +312,9 @@
             "2",
             "STOKKE'S",
             "M",
-            "449",
-            "3",
-            "149",
+            "761",
+            "6",
+            "126",
             "145",
             "61",
             "241",
@@ -330,14 +330,14 @@
             "1",
             "STOKKE'S",
             "W",
-            "372",
-            "3",
-            "124",
+            "742",
+            "6",
+            "123",
             "118",
             "86",
             "225",
             "648",
-            "133",
+            "139",
             "372",
             "0",
             "0"
@@ -457,7 +457,190 @@
     ],
     "recaps": [
       {
-        "title": "M & M vs B S -2",
+        "title": "B S -2 vs ALLEY CATS",
+        "headers": [
+          "Bowler",
+          "Average",
+          "Handicap",
+          "Game 1",
+          "Game 2",
+          "Game 3",
+          "Scratch series"
+        ],
+        "rows": [
+          [
+            "Team 2",
+            "Lane 7 points won: 4.0"
+          ],
+          [
+            "BRUCE SIGRIST",
+            "121",
+            "89",
+            "111",
+            "135",
+            "118",
+            "364"
+          ],
+          [
+            "STEVE HEADLEE",
+            "152",
+            "58",
+            "179",
+            "149",
+            "176",
+            "504"
+          ],
+          [
+            "Total",
+            "290",
+            "284",
+            "294",
+            "868"
+          ],
+          [
+            "Team 3",
+            "Lane 8 points won: 0.0"
+          ],
+          [
+            "DEEANN LARSEN",
+            "134",
+            "76",
+            "124",
+            "127",
+            "102",
+            "353"
+          ],
+          [
+            "RHONDA BARTELS",
+            "88",
+            "122",
+            "108",
+            "52",
+            "106",
+            "266"
+          ],
+          [
+            "Total",
+            "232",
+            "179",
+            "208",
+            "619"
+          ]
+        ],
+        "emphasis": [
+          [
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            true,
+            true,
+            true,
+            true
+          ],
+          [
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "631",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "678",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "1309",
+            "handicapGames": [
+              "437",
+              "431",
+              "441"
+            ],
+            "teamPoints": [
+              "1.0",
+              "1.0",
+              "1.0",
+              "4.0",
+              "4.0"
+            ]
+          },
+          {},
+          {
+            "handicapSeries": "581",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "632",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "1213",
+            "handicapGames": [
+              "430",
+              "377",
+              "406"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://www.leaguesecretary.com/uploads/2026/f/3/12205809282026f202603reprnt00.pdf"
+      },
+      {
+        "title": "M & M vs STOKKE'S",
         "headers": [
           "Bowler",
           "Average",
@@ -470,61 +653,61 @@
         "rows": [
           [
             "Team 1",
-            "Lane 7 points won: 3.0"
+            "Lane 9 points won: 4.0"
           ],
           [
-            "MIKE ELROD",
-            "164",
-            "46",
-            "164",
-            "164",
-            "164",
-            "492"
+            "CHUCK DANLEY",
+            "165",
+            "45",
+            "148",
+            "190",
+            "158",
+            "496"
           ],
           [
             "MICHAEL DRAKE",
-            "137",
-            "73",
-            "124",
-            "167",
             "127",
-            "418"
+            "83",
+            "142",
+            "103",
+            "143",
+            "388"
           ],
           [
             "Total",
-            "288",
-            "331",
-            "291",
-            "910"
+            "290",
+            "293",
+            "301",
+            "884"
           ],
           [
-            "Team 2",
-            "Lane 8 points won: 1.0"
+            "Team 4",
+            "Lane 10 points won: 0.0"
           ],
           [
-            "BRUCE SIGRIST",
-            "136",
-            "74",
-            "115",
-            "127",
-            "162",
-            "404"
+            "MARILYN STOKKE",
+            "110",
+            "100",
+            "101",
+            "130",
+            "139",
+            "370"
           ],
           [
-            "STEVE HEADLEE",
-            "156",
-            "54",
-            "128",
-            "162",
-            "154",
-            "444"
+            "JAY STOKKE",
+            "145",
+            "65",
+            "97",
+            "94",
+            "121",
+            "312"
           ],
           [
             "Total",
-            "243",
-            "289",
-            "316",
-            "848"
+            "198",
+            "224",
+            "260",
+            "682"
           ]
         ],
         "emphasis": [
@@ -554,7 +737,7 @@
             false,
             true,
             true,
-            false,
+            true,
             true
           ],
           [
@@ -583,14 +766,14 @@
             false,
             false,
             false,
-            true,
+            false,
             false
           ]
         ],
         "recapDetails": [
           {},
           {
-            "handicapSeries": "630",
+            "handicapSeries": "631",
             "individualPoints": 0
           },
           {
@@ -598,194 +781,11 @@
             "individualPoints": 0
           },
           {
-            "handicapSeries": "1267",
+            "handicapSeries": "1268",
             "handicapGames": [
-              "407",
-              "450",
-              "410"
-            ],
-            "teamPoints": [
-              "1.0",
-              "1.0",
-              "0.0",
-              "3.0",
-              "3.0"
-            ]
-          },
-          {},
-          {
-            "handicapSeries": "626",
-            "individualPoints": 0
-          },
-          {
-            "handicapSeries": "606",
-            "individualPoints": 0
-          },
-          {
-            "handicapSeries": "1232",
-            "handicapGames": [
-              "371",
-              "417",
-              "444"
-            ],
-            "teamPoints": [
-              "0.0",
-              "0.0",
-              "1.0",
-              "1.0",
-              "1.0"
-            ]
-          }
-        ],
-        "sourceReport": "https://www.leaguesecretary.com/uploads/2026/f/1/12205809142026f202601reprnt00.pdf"
-      },
-      {
-        "title": "ALLEY CATS vs D.W.",
-        "headers": [
-          "Bowler",
-          "Average",
-          "Handicap",
-          "Game 1",
-          "Game 2",
-          "Game 3",
-          "Scratch series"
-        ],
-        "rows": [
-          [
-            "Team 3",
-            "Lane 9 points won: 4.0"
-          ],
-          [
-            "DEEANN LARSEN",
-            "110",
-            "100",
-            "147",
-            "127",
-            "154",
-            "428"
-          ],
-          [
-            "RHONDA BARTELS",
-            "120",
-            "90",
-            "120",
-            "120",
-            "120",
-            "360"
-          ],
-          [
-            "Total",
-            "267",
-            "247",
-            "274",
-            "788"
-          ],
-          [
-            "Team 4",
-            "Lane 10 points won: 0.0"
-          ],
-          [
-            "DENNIS WITFOTH",
-            "126",
-            "84",
-            "126",
-            "126",
-            "126",
-            "378"
-          ],
-          [
-            "VACANT",
-            "120",
-            "90",
-            "120",
-            "120",
-            "120",
-            "360"
-          ],
-          [
-            "Total",
-            "0",
-            "0",
-            "0",
-            "0"
-          ]
-        ],
-        "emphasis": [
-          [
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            true,
-            true,
-            true,
-            true
-          ],
-          [
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false
-          ]
-        ],
-        "recapDetails": [
-          {},
-          {
-            "handicapSeries": "728",
-            "individualPoints": 0
-          },
-          {
-            "handicapSeries": "630",
-            "individualPoints": 0
-          },
-          {
-            "handicapSeries": "1358",
-            "handicapGames": [
-              "457",
-              "437",
-              "464"
+              "418",
+              "421",
+              "429"
             ],
             "teamPoints": [
               "1.0",
@@ -797,19 +797,19 @@
           },
           {},
           {
-            "handicapSeries": "630",
+            "handicapSeries": "670",
             "individualPoints": 0
           },
           {
-            "handicapSeries": "630",
+            "handicapSeries": "507",
             "individualPoints": 0
           },
           {
-            "handicapSeries": "0",
+            "handicapSeries": "1177",
             "handicapGames": [
-              "0",
-              "0",
-              "0"
+              "363",
+              "389",
+              "425"
             ],
             "teamPoints": [
               "0.0",
@@ -820,133 +820,7 @@
             ]
           }
         ],
-        "sourceReport": "https://www.leaguesecretary.com/uploads/2026/f/1/12205809142026f202601reprnt00.pdf",
-        "officialTotalsComplete": false
-      },
-      {
-        "title": "STOKKE'S vs BYE",
-        "headers": [
-          "Bowler",
-          "Average",
-          "Handicap",
-          "Game 1",
-          "Game 2",
-          "Game 3",
-          "Scratch series"
-        ],
-        "rows": [
-          [
-            "Team 5",
-            "Lane 11 points won: 3.0"
-          ],
-          [
-            "MARILYN STOKKE",
-            "118",
-            "92",
-            "115",
-            "124",
-            "133",
-            "372"
-          ],
-          [
-            "JAY STOKKE",
-            "145",
-            "65",
-            "124",
-            "176",
-            "149",
-            "449"
-          ],
-          [
-            "Total",
-            "239",
-            "300",
-            "282",
-            "821"
-          ],
-          [
-            "Team 6",
-            "Lane 12 points won: 0"
-          ],
-          [
-            "Total",
-            "240",
-            "240",
-            "240",
-            "720"
-          ]
-        ],
-        "emphasis": [
-          [
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            true,
-            true,
-            true
-          ],
-          [
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false
-          ]
-        ],
-        "recapDetails": [
-          {},
-          {
-            "handicapSeries": "648",
-            "individualPoints": 0
-          },
-          {
-            "handicapSeries": "644",
-            "individualPoints": 0
-          },
-          {
-            "handicapSeries": "1292",
-            "handicapGames": [
-              "396",
-              "457",
-              "439"
-            ],
-            "teamPoints": [
-              "0.0",
-              "1.0",
-              "1.0",
-              "3.0",
-              "3.0"
-            ]
-          },
-          {},
-          {}
-        ],
-        "sourceReport": "https://www.leaguesecretary.com/uploads/2026/f/1/12205809142026f202601reprnt00.pdf"
+        "sourceReport": "https://www.leaguesecretary.com/uploads/2026/f/3/12205809282026f202603reprnt00.pdf"
       }
     ],
     "lanes": [
@@ -2620,10 +2494,631 @@
           }
         ]
       }
+    },
+    {
+      "week": "3",
+      "sourceUpdated": "Sep 28, 2026",
+      "syncedAt": "2026-09-29T16:11:30.154Z",
+      "views": {
+        "recaps": [
+          {
+            "title": "B S -2 vs ALLEY CATS",
+            "headers": [
+              "Bowler",
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
+            ],
+            "rows": [
+              [
+                "Team 2",
+                "Lane 7 points won: 4.0"
+              ],
+              [
+                "BRUCE SIGRIST",
+                "121",
+                "89",
+                "111",
+                "135",
+                "118",
+                "364"
+              ],
+              [
+                "STEVE HEADLEE",
+                "152",
+                "58",
+                "179",
+                "149",
+                "176",
+                "504"
+              ],
+              [
+                "Total",
+                "290",
+                "284",
+                "294",
+                "868"
+              ],
+              [
+                "Team 3",
+                "Lane 8 points won: 0.0"
+              ],
+              [
+                "DEEANN LARSEN",
+                "134",
+                "76",
+                "124",
+                "127",
+                "102",
+                "353"
+              ],
+              [
+                "RHONDA BARTELS",
+                "88",
+                "122",
+                "108",
+                "52",
+                "106",
+                "266"
+              ],
+              [
+                "Total",
+                "232",
+                "179",
+                "208",
+                "619"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                true,
+                true,
+                true,
+                true
+              ],
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "631",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "678",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "1309",
+                "handicapGames": [
+                  "437",
+                  "431",
+                  "441"
+                ],
+                "teamPoints": [
+                  "1.0",
+                  "1.0",
+                  "1.0",
+                  "4.0",
+                  "4.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "581",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "632",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "1213",
+                "handicapGames": [
+                  "430",
+                  "377",
+                  "406"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://www.leaguesecretary.com/uploads/2026/f/3/12205809282026f202603reprnt00.pdf"
+          },
+          {
+            "title": "M & M vs STOKKE'S",
+            "headers": [
+              "Bowler",
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
+            ],
+            "rows": [
+              [
+                "Team 1",
+                "Lane 9 points won: 4.0"
+              ],
+              [
+                "CHUCK DANLEY",
+                "165",
+                "45",
+                "148",
+                "190",
+                "158",
+                "496"
+              ],
+              [
+                "MICHAEL DRAKE",
+                "127",
+                "83",
+                "142",
+                "103",
+                "143",
+                "388"
+              ],
+              [
+                "Total",
+                "290",
+                "293",
+                "301",
+                "884"
+              ],
+              [
+                "Team 4",
+                "Lane 10 points won: 0.0"
+              ],
+              [
+                "MARILYN STOKKE",
+                "110",
+                "100",
+                "101",
+                "130",
+                "139",
+                "370"
+              ],
+              [
+                "JAY STOKKE",
+                "145",
+                "65",
+                "97",
+                "94",
+                "121",
+                "312"
+              ],
+              [
+                "Total",
+                "198",
+                "224",
+                "260",
+                "682"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                true,
+                true,
+                true,
+                true
+              ],
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "631",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "637",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "1268",
+                "handicapGames": [
+                  "418",
+                  "421",
+                  "429"
+                ],
+                "teamPoints": [
+                  "1.0",
+                  "1.0",
+                  "1.0",
+                  "4.0",
+                  "4.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "670",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "507",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "1177",
+                "handicapGames": [
+                  "363",
+                  "389",
+                  "425"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://www.leaguesecretary.com/uploads/2026/f/3/12205809282026f202603reprnt00.pdf"
+          }
+        ],
+        "bowlers": [
+          {
+            "title": "Bowlers and season statistics",
+            "headers": [
+              "Name",
+              "Team#",
+              "Pos#",
+              "Team",
+              "Gndr",
+              "Pins",
+              "Games",
+              "Avg",
+              "EnteringAvg",
+              "HCP",
+              "HHG",
+              "HHS",
+              "HSG",
+              "HSS",
+              "MIB",
+              "WON"
+            ],
+            "rows": [
+              [
+                "Drake, Michael",
+                "1",
+                "2",
+                "M & M",
+                "M",
+                "806",
+                "6",
+                "134",
+                "137",
+                "71",
+                "240",
+                "637",
+                "167",
+                "418",
+                "0",
+                "0"
+              ],
+              [
+                "Headlee, Steve",
+                "2",
+                "2",
+                "B S -2",
+                "M",
+                "948",
+                "6",
+                "158",
+                "156",
+                "62",
+                "216",
+                "606",
+                "179",
+                "504",
+                "0",
+                "0"
+              ],
+              [
+                "Larsen, Deeann",
+                "3",
+                "1",
+                "ALLEY CATS",
+                "W",
+                "781",
+                "6",
+                "130",
+                "110",
+                "68",
+                "254",
+                "728",
+                "154",
+                "428",
+                "0",
+                "0"
+              ],
+              [
+                "Sigrist, Bruce",
+                "2",
+                "1",
+                "B S -2",
+                "M",
+                "768",
+                "6",
+                "128",
+                "136",
+                "76",
+                "236",
+                "626",
+                "162",
+                "404",
+                "0",
+                "0"
+              ],
+              [
+                "Stokke, Jay",
+                "5",
+                "2",
+                "STOKKE'S",
+                "M",
+                "761",
+                "6",
+                "126",
+                "145",
+                "61",
+                "241",
+                "644",
+                "176",
+                "449",
+                "0",
+                "0"
+              ],
+              [
+                "Stokke, Marilyn",
+                "5",
+                "1",
+                "STOKKE'S",
+                "W",
+                "742",
+                "6",
+                "123",
+                "118",
+                "86",
+                "225",
+                "648",
+                "139",
+                "372",
+                "0",
+                "0"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ]
+          }
+        ]
+      }
     }
   ],
-  "officialRecapHash": "547cb921cd1d94582bae1528d6f6cbaf99141d22615d680bb427d2022f42730a",
+  "officialRecapHash": "f4d365ba615e753a824fbec1c345a9bd1662a7f0b24b5096d567ee36fc7ee7be",
   "officialRecapParserVersion": 7,
-  "officialRecapSyncedAt": "2026-09-23T02:08:39.416Z",
-  "officialRecapCheckedAt": "2026-09-29T02:05:11.588Z"
+  "officialRecapSyncedAt": "2026-09-29T16:11:30.154Z",
+  "officialRecapCheckedAt": "2026-09-29T16:11:30.154Z",
+  "officialStandingsHash": "a507014ff33d4b12bfbaeaf3d8e9a26b14ca0830b6c839be712fbeba92122bcf",
+  "officialStandingsParserVersion": 3,
+  "officialStandingsSyncedAt": "2026-09-29T16:12:48.654Z"
 }
