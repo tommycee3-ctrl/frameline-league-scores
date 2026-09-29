@@ -160,20 +160,6 @@
           ],
           [
             "10",
-            "OMAHA BOOKKEEPIN",
-            "10",
-            "1",
-            "104",
-            "106",
-            "50 %",
-            "104",
-            "778",
-            "9674",
-            "849",
-            "2437"
-          ],
-          [
-            "11",
             "THE MAKEABLES",
             "9",
             "1",
@@ -187,7 +173,7 @@
             "2419"
           ],
           [
-            "12",
+            "11",
             "ROTELLA'S SMOKERS",
             "2",
             "1",
@@ -201,7 +187,7 @@
             "2548"
           ],
           [
-            "13",
+            "12",
             "MIDLAND UNIVERSITY",
             "14",
             "1",
@@ -215,7 +201,35 @@
             "2438"
           ],
           [
+            "13",
+            "UGLY COUNTS",
+            "7",
+            "1",
+            "92",
+            "118",
+            "44 %",
+            "92",
+            "712",
+            "8654",
+            "886",
+            "2315"
+          ],
+          [
             "14",
+            "OMAHA BOOKKEEPIN",
+            "10",
+            "1",
+            "86",
+            "124",
+            "41 %",
+            "86",
+            "778",
+            "9674",
+            "849",
+            "2437"
+          ],
+          [
+            "15",
             "THE LUCKY KELLEY",
             "4",
             "1",
@@ -227,20 +241,6 @@
             "9590",
             "945",
             "2501"
-          ],
-          [
-            "15",
-            "UGLY COUNTS",
-            "7",
-            "1",
-            "74",
-            "131",
-            "36 %",
-            "74",
-            "712",
-            "8654",
-            "886",
-            "2315"
           ],
           [
             "16",
@@ -5934,7 +5934,7 @@
         "rows": [
           [
             "Team 10",
-            "Lane 15 points won: 30.0"
+            "Lane 15 points won: 12.0"
           ],
           [
             "FRED KREYNESKI",
@@ -5990,7 +5990,7 @@
           ],
           [
             "Team 7",
-            "Lane 16 points won: 12.0"
+            "Lane 16 points won: 30.0"
           ],
           [
             "KYLIE ORR",
@@ -6009,6 +6009,15 @@
             "156",
             "160",
             "440"
+          ],
+          [
+            "WILL CUMMINGS RH",
+            "187",
+            "26",
+            "204",
+            "209",
+            "149",
+            "562"
           ],
           [
             "TIFFANI SWARBRICK",
@@ -6030,10 +6039,10 @@
           ],
           [
             "Total",
-            "614",
-            "606",
-            "589",
-            "1809"
+            "818",
+            "815",
+            "738",
+            "2371"
           ]
         ],
         "emphasis": [
@@ -6074,26 +6083,6 @@
             false,
             false,
             false,
-            true,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            true,
-            true,
-            true,
-            true
-          ],
-          [
-            false,
-            true,
-            true,
-            true,
-            true
-          ],
-          [
             false,
             false
           ],
@@ -6110,35 +6099,64 @@
             false,
             false,
             false,
-            false,
-            false,
             true,
-            true
+            false
+          ],
+          [
+            false,
+            false
           ],
           [
             false,
             false,
-            false,
-            true,
-            true,
-            true,
-            true
-          ],
-          [
-            false,
-            false,
-            false,
-            true,
-            true,
-            false,
-            true
-          ],
-          [
             false,
             false,
             false,
             false,
             false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            true
+          ],
+          [
+            false,
+            false,
+            false,
+            true,
+            true,
+            false,
+            true
+          ],
+          [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true,
+            true
+          ],
+          [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true,
+            true
+          ],
+          [
+            false,
+            true,
+            true,
+            false,
+            true
           ]
         ],
         "recapDetails": [
@@ -6157,11 +6175,11 @@
           },
           {
             "handicapSeries": "596",
-            "individualPoints": 1
+            "individualPoints": 0
           },
           {
             "handicapSeries": "614",
-            "individualPoints": 5
+            "individualPoints": 0
           },
           {
             "handicapSeries": "3095",
@@ -6171,18 +6189,18 @@
               "1021"
             ],
             "teamPoints": [
+              "0.0",
+              "0.0",
               "4.0",
               "4.0",
-              "4.0",
-              "17.0",
-              "17.0"
+              "4.0"
             ],
             "matchPoints": [
-              "3.0",
-              "3.0",
-              "3.0",
-              "13.0",
-              "13.0"
+              "2.0",
+              "2.0",
+              "2.0",
+              "8.0",
+              "8.0"
             ]
           },
           {},
@@ -6195,33 +6213,37 @@
             "individualPoints": 3
           },
           {
+            "handicapSeries": "640",
+            "individualPoints": 4
+          },
+          {
             "handicapSeries": "679",
             "individualPoints": 5
           },
           {
             "handicapSeries": "673",
-            "individualPoints": 4
+            "individualPoints": 5
           },
           {
-            "handicapSeries": "2553",
+            "handicapSeries": "3193",
             "handicapGames": [
-              "862",
-              "854",
-              "837"
+              "1092",
+              "1089",
+              "1012"
             ],
             "teamPoints": [
+              "4.0",
+              "4.0",
               "0.0",
-              "0.0",
-              "0.0",
-              "0.0",
-              "0.0"
+              "13.0",
+              "13.0"
             ],
             "matchPoints": [
-              "2.0",
-              "2.0",
-              "2.0",
-              "12.0",
-              "12.0"
+              "3.0",
+              "3.0",
+              "3.0",
+              "17.0",
+              "17.0"
             ]
           }
         ],
@@ -6262,7 +6284,7 @@
             "473"
           ],
           [
-            "LAURA BEHRENS-MORRIS",
+            "LAURA BEHRENS-MORR",
             "149",
             "56",
             "148",
@@ -37981,7 +38003,7 @@
             "rows": [
               [
                 "Team 10",
-                "Lane 15 points won: 30.0"
+                "Lane 15 points won: 12.0"
               ],
               [
                 "FRED KREYNESKI",
@@ -38037,7 +38059,7 @@
               ],
               [
                 "Team 7",
-                "Lane 16 points won: 12.0"
+                "Lane 16 points won: 30.0"
               ],
               [
                 "KYLIE ORR",
@@ -38056,6 +38078,15 @@
                 "156",
                 "160",
                 "440"
+              ],
+              [
+                "WILL CUMMINGS RH",
+                "187",
+                "26",
+                "204",
+                "209",
+                "149",
+                "562"
               ],
               [
                 "TIFFANI SWARBRICK",
@@ -38077,10 +38108,10 @@
               ],
               [
                 "Total",
-                "614",
-                "606",
-                "589",
-                "1809"
+                "818",
+                "815",
+                "738",
+                "2371"
               ]
             ],
             "emphasis": [
@@ -38121,26 +38152,6 @@
                 false,
                 false,
                 false,
-                true,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                true,
-                true,
-                true,
-                true
-              ],
-              [
-                false,
-                true,
-                true,
-                true,
-                true
-              ],
-              [
                 false,
                 false
               ],
@@ -38157,35 +38168,64 @@
                 false,
                 false,
                 false,
-                false,
-                false,
                 true,
-                true
+                false
+              ],
+              [
+                false,
+                false
               ],
               [
                 false,
                 false,
-                false,
-                true,
-                true,
-                true,
-                true
-              ],
-              [
-                false,
-                false,
-                false,
-                true,
-                true,
-                false,
-                true
-              ],
-              [
                 false,
                 false,
                 false,
                 false,
                 false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true
+              ],
+              [
+                false,
+                false,
+                false,
+                true,
+                true,
+                false,
+                true
+              ],
+              [
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true
+              ],
+              [
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true
+              ],
+              [
+                false,
+                true,
+                true,
+                false,
+                true
               ]
             ],
             "recapDetails": [
@@ -38204,11 +38244,11 @@
               },
               {
                 "handicapSeries": "596",
-                "individualPoints": 1
+                "individualPoints": 0
               },
               {
                 "handicapSeries": "614",
-                "individualPoints": 5
+                "individualPoints": 0
               },
               {
                 "handicapSeries": "3095",
@@ -38218,18 +38258,18 @@
                   "1021"
                 ],
                 "teamPoints": [
+                  "0.0",
+                  "0.0",
                   "4.0",
                   "4.0",
-                  "4.0",
-                  "17.0",
-                  "17.0"
+                  "4.0"
                 ],
                 "matchPoints": [
-                  "3.0",
-                  "3.0",
-                  "3.0",
-                  "13.0",
-                  "13.0"
+                  "2.0",
+                  "2.0",
+                  "2.0",
+                  "8.0",
+                  "8.0"
                 ]
               },
               {},
@@ -38242,33 +38282,37 @@
                 "individualPoints": 3
               },
               {
+                "handicapSeries": "640",
+                "individualPoints": 4
+              },
+              {
                 "handicapSeries": "679",
                 "individualPoints": 5
               },
               {
                 "handicapSeries": "673",
-                "individualPoints": 4
+                "individualPoints": 5
               },
               {
-                "handicapSeries": "2553",
+                "handicapSeries": "3193",
                 "handicapGames": [
-                  "862",
-                  "854",
-                  "837"
+                  "1092",
+                  "1089",
+                  "1012"
                 ],
                 "teamPoints": [
+                  "4.0",
+                  "4.0",
                   "0.0",
-                  "0.0",
-                  "0.0",
-                  "0.0",
-                  "0.0"
+                  "13.0",
+                  "13.0"
                 ],
                 "matchPoints": [
-                  "2.0",
-                  "2.0",
-                  "2.0",
-                  "12.0",
-                  "12.0"
+                  "3.0",
+                  "3.0",
+                  "3.0",
+                  "17.0",
+                  "17.0"
                 ]
               }
             ],
@@ -38309,7 +38353,7 @@
                 "473"
               ],
               [
-                "LAURA BEHRENS-MORRIS",
+                "LAURA BEHRENS-MORR",
                 "149",
                 "56",
                 "148",
@@ -38750,20 +38794,6 @@
               ],
               [
                 "10",
-                "OMAHA BOOKKEEPIN",
-                "10",
-                "1",
-                "104",
-                "106",
-                "50 %",
-                "104",
-                "778",
-                "9674",
-                "849",
-                "2437"
-              ],
-              [
-                "11",
                 "THE MAKEABLES",
                 "9",
                 "1",
@@ -38777,7 +38807,7 @@
                 "2419"
               ],
               [
-                "12",
+                "11",
                 "ROTELLA'S SMOKERS",
                 "2",
                 "1",
@@ -38791,7 +38821,7 @@
                 "2548"
               ],
               [
-                "13",
+                "12",
                 "MIDLAND UNIVERSITY",
                 "14",
                 "1",
@@ -38805,7 +38835,35 @@
                 "2438"
               ],
               [
+                "13",
+                "UGLY COUNTS",
+                "7",
+                "1",
+                "92",
+                "118",
+                "44 %",
+                "92",
+                "712",
+                "8654",
+                "886",
+                "2315"
+              ],
+              [
                 "14",
+                "OMAHA BOOKKEEPIN",
+                "10",
+                "1",
+                "86",
+                "124",
+                "41 %",
+                "86",
+                "778",
+                "9674",
+                "849",
+                "2437"
+              ],
+              [
+                "15",
                 "THE LUCKY KELLEY",
                 "4",
                 "1",
@@ -38817,20 +38875,6 @@
                 "9590",
                 "945",
                 "2501"
-              ],
-              [
-                "15",
-                "UGLY COUNTS",
-                "7",
-                "1",
-                "74",
-                "131",
-                "36 %",
-                "74",
-                "712",
-                "8654",
-                "886",
-                "2315"
               ],
               [
                 "16",
@@ -42671,10 +42715,11 @@
   ],
   "lastCheckedAt": "2026-09-21T11:43:31.332Z",
   "lastAttemptedAt": null,
-  "officialRecapHash": "4db31696915dd2fef39edee3a81ba617e085bc37291216f3b58a7e4d12ea9aa2",
-  "officialRecapSyncedAt": "2026-09-22T21:31:49.100Z",
+  "officialRecapHash": "b15f5f84510d15b0a53f945760b2f24ffd2f626272f6d88ab077b55b1a918fff",
+  "officialRecapSyncedAt": "2026-09-29T01:37:23.285Z",
   "officialRecapParserVersion": 7,
-  "officialStandingsHash": "d558a01f89986423ec3f7a851f4575a732bdddeb9ba31c7c935b12e989c8a1c3",
-  "officialStandingsSyncedAt": "2026-09-23T02:06:37.203Z",
-  "officialStandingsParserVersion": 3
+  "officialStandingsHash": "470e06193364fba6c683d15584bd72818edacf698cbadb8d72a6966a7d3df08c",
+  "officialStandingsSyncedAt": "2026-09-29T01:37:25.788Z",
+  "officialStandingsParserVersion": 3,
+  "officialRecapCheckedAt": "2026-09-29T01:37:23.285Z"
 }

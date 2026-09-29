@@ -13,6 +13,7 @@ const catalogFile = path.join(root, "all.json");
 const catalog = JSON.parse(await readFile(catalogFile, "utf8"));
 const requested = process.argv.find(arg => arg.startsWith("--league="))?.slice(9);
 const dryRun = process.argv.includes("--dry-run");
+const force = process.argv.includes("--force");
 const seasonCode = { Fall: "f", Summer: "u", Spring: "s", Winter: "w" };
 const parserVersion = 7;
 let updated = 0, partial = 0, skipped = 0, unavailable = 0;
@@ -55,7 +56,20 @@ for (const [index, listed] of candidates.entries()) {
     const league = JSON.parse(await readFile(file, "utf8"));
     const report = await reportFor(league);
     if (!report) { unavailable++; continue; }
-    if (report.week === String(league.week) && report.hash === league.officialRecapHash && league.officialRecapParserVersion >= parserVersion && league.views.recaps.every(table => table.sourceReport)) { skipped++; continue; }
+    const unchanged = report.week === String(league.week) && report.hash === league.officialRecapHash && league.officialRecapParserVersion >= parserVersion && league.views.recaps.every(table => table.sourceReport);
+    if (unchanged && !force) {
+      const lastVerified = Date.parse(league.officialRecapCheckedAt ?? league.officialRecapSyncedAt ?? "");
+      if (Number.isFinite(lastVerified) && Date.now() - lastVerified < 24 * 60 * 60 * 1000) { skipped++; continue; }
+      const checked = { ...league, officialRecapCheckedAt: new Date().toISOString() };
+      if (!dryRun) {
+        await writeFile(file, JSON.stringify(checked, null, 2) + "\n");
+        const catalogIndex = catalog.findIndex(item => item.id === league.id);
+        catalog[catalogIndex] = checked;
+      }
+      updated++;
+      console.log(`${dryRun ? "Would verify" : "Verified"} ${league.displayName} Week ${report.week} official PDF is unchanged`);
+      continue;
+    }
     const directory = await mkdtemp(path.join(tmpdir(), "frameline-static-recap-"));
     let teams;
     try {
@@ -71,7 +85,7 @@ for (const [index, listed] of candidates.entries()) {
     const incomplete = recaps.some(table => table.officialTotalsComplete === false);
     const printedDate = report.selectedLabel.match(/\b(\d{1,2})\/(\d{1,2})\/(\d{4})\b/);
     const sourceUpdated = printedDate ? new Date(Date.UTC(Number(printedDate[3]), Number(printedDate[1]) - 1, Number(printedDate[2]))).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" }) : league.sourceUpdated;
-    const next = { ...league, week: report.week, sourceUpdated: newWeek ? sourceUpdated : league.sourceUpdated, views: { ...league.views, recaps }, officialRecapHash: report.hash, officialRecapParserVersion: parserVersion, officialRecapSyncedAt: now };
+    const next = { ...league, week: report.week, sourceUpdated: newWeek ? sourceUpdated : league.sourceUpdated, views: { ...league.views, recaps }, officialRecapHash: report.hash, officialRecapParserVersion: parserVersion, officialRecapSyncedAt: now, officialRecapCheckedAt: now };
     if (Array.isArray(next.history)) {
       next.history = newWeek
         ? [...next.history.filter(entry => String(entry.week) !== report.week), { week: report.week, sourceUpdated, syncedAt: now, views: { recaps } }]
