@@ -23,6 +23,8 @@ export type LeagueSnapshot = {
   startTime: string;
   sourceUpdated: string;
   week: string | null;
+  laneWeek?: string | null;
+  laneSourceUpdated?: string | null;
   views: Record<string, Table[]>;
   history?: Array<{
     week: string | null;
@@ -988,7 +990,10 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
           <div className="lane-assignments">
             <div className="recap-heading">
               <div>
-                <p className="eyebrow red">Week {Number(week) + 1}</p>
+                <p className="eyebrow red">
+                  Week {data.laneWeek ?? Number(week) + 1}
+                  {data.laneSourceUpdated ? ` · ${data.laneSourceUpdated}` : ""}
+                </p>
                 <h3>Lane assignments</h3>
               </div>
               <p>

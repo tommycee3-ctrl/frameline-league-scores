@@ -394,6 +394,8 @@ try {
     const archivedHistory=[];
     let sourceUpdated = league.updated || current.sourceUpdated;
     let week = current.week;
+    let laneWeek = current.laneWeek ?? null;
+    let laneSourceUpdated = current.laneSourceUpdated ?? null;
     const page = await browser.newPage({viewport:{width:1440,height:1100}});
     try {
     for (const [view,route] of Object.entries(viewPaths)) {
@@ -407,6 +409,11 @@ try {
       const selectedWeek=await currentSourceWeek(page);
       const weekMatch=text.match(/Week\s+(\d+)/i);
       if(view!=="lanes") week=selectedWeek||weekMatch?.[1]||week;
+      else {
+        laneWeek=selectedWeek||weekMatch?.[1]||laneWeek;
+        const selectedLabel=await page.locator("#leagueLanePeriod option:checked").textContent().catch(()=>null);
+        laneSourceUpdated=clean(selectedLabel?.match(/(\d{2}\/\d{2}\/\d{4})/)?.[1]??laneSourceUpdated);
+      }
       if(view==="rosters") {
         const teamPages=await page.evaluate(()=>{
           const grid=window.jQuery?.(".grid_main").data("kendoGrid");
@@ -519,7 +526,7 @@ try {
     for(const entry of archivedHistory) historyByWeek.set(String(entry.week),entry);
     historyByWeek.set(String(week),historyEntry);
     const history=[...historyByWeek.values()].sort((left,right)=>Number(left.week)-Number(right.week));
-    const next={...current,...league,lastAttemptedAt:null,lastCheckedAt:syncedAt,sourceUpdated,sourceFingerprint:sourceFingerprint??current.sourceFingerprint??null,syncedAt,status:complete?"current":"awaiting-results",week,fingerprint,lastCompletedCycle,views,history};
+    const next={...current,...league,lastAttemptedAt:null,lastCheckedAt:syncedAt,sourceUpdated,sourceFingerprint:sourceFingerprint??current.sourceFingerprint??null,syncedAt,status:complete?"current":"awaiting-results",week,laneWeek,laneSourceUpdated,fingerprint,lastCompletedCycle,views,history};
     await writeFile(file,JSON.stringify(next,null,2)+"\n","utf8");
     changed=true;
     refreshedLeagues.push({

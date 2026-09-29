@@ -85,9 +85,10 @@ function mergeStandings(league, official) {
     return [team.place, row[1], row[2], row[3], team.won, String(lost), percent,
       row[7] === row[4] ? team.won : row[7], team.avg ?? row[8], team.scratchPins ?? row[9], team.hsg ?? row[10], team.hss ?? row[11]];
   }).sort((a, b) => Number(a[3]) - Number(b[3]) || Number(a[0]) - Number(b[0]));
-  const names = new Map(original.rows.map(row => [row[2], row[1]]));
-  const lanes = official.teams.every(team => team.lane) ? official.teams.map(team => [team.lane, team.team, names.get(team.team)]).sort((a, b) => Number(a[0]) - Number(b[0])) : null;
-  return { standings: [{ ...original, rows }], ...(lanes ? { lanes: [{ title: league.views.lanes?.[0]?.title ?? "Lane assignments", headers: ["Lane", "Team#", "Team"], rows: lanes }] } : {}) };
+  // A standings sheet describes the lanes used for the completed score week.
+  // League Secretary can already have the next week's assignments posted, so
+  // replacing views.lanes here would roll the schedule back one week.
+  return { standings: [{ ...original, rows }] };
 }
 
 function mergeBowlers(league, official) {
