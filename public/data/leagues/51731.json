@@ -14,10 +14,10 @@
   "centerName": "Maplewood Lanes",
   "centerSlug": "maplewood-lanes-omaha-nebraska",
   "area": "Omaha",
-  "sourceUpdated": "Sep 22, 2026",
+  "sourceUpdated": "Sep 29, 2026",
   "syncedAt": "2026-09-21T06:48:35.626Z",
   "status": "current",
-  "week": "6",
+  "week": "7",
   "fingerprint": "55ffa3c4cbe5d02d2ed026b9168620a0877079cf6c9f9df1678b3aff044f647a",
   "lastCompletedCycle": "2026-09-15",
   "views": {
@@ -44,56 +44,56 @@
             "Gammas",
             "3",
             "1",
-            "26",
-            "14",
-            "65 %",
-            "26",
-            "352",
-            "5327",
+            "36",
+            "20",
+            "64 %",
+            "36",
+            "351",
+            "7423",
             "443",
             "1119"
           ],
           [
             "2",
-            "Delta",
-            "4",
-            "1",
-            "22",
-            "18",
-            "55 %",
-            "22",
-            "349",
-            "5216",
-            "404",
-            "1095"
-          ],
-          [
-            "3",
             "Betas",
             "2",
             "1",
-            "20",
-            "20",
-            "50 %",
-            "20",
-            "328",
-            "4899",
+            "30",
+            "26",
+            "54 %",
+            "30",
+            "331",
+            "6940",
             "406",
             "1083"
           ],
           [
-            "4",
+            "3",
             "Alphas",
             "1",
             "1",
-            "12",
-            "28",
-            "30 %",
-            "12",
-            "295",
-            "4364",
-            "345",
+            "24",
+            "32",
+            "43 %",
+            "24",
+            "303",
+            "6250",
+            "350",
             "996"
+          ],
+          [
+            "4",
+            "Delta",
+            "4",
+            "1",
+            "22",
+            "34",
+            "39 %",
+            "22",
+            "348",
+            "7232",
+            "404",
+            "1095"
           ]
         ],
         "emphasis": [
@@ -617,7 +617,7 @@
     ],
     "recaps": [
       {
-        "title": "Alphas vs Delta",
+        "title": "Betas vs Alphas",
         "headers": [
           "Bowler",
           "Average",
@@ -629,46 +629,235 @@
         ],
         "rows": [
           [
-            "Team 1",
-            "Lane 27 points won: 8.0"
+            "Team 2",
+            "Lane 27 points won: 4.0"
           ],
           [
-            "Candy Murcek",
-            "89",
+            "Connie Carr",
+            "88",
             "0",
-            "101",
-            "100",
-            "89",
-            "290"
+            "71",
+            "81",
+            "85",
+            "237"
           ],
           [
-            "Judy Bencker",
-            "78",
+            "Kathy Gabriel",
+            "116",
             "0",
-            "78",
-            "100",
-            "101",
-            "279"
+            "105",
+            "145",
+            "144",
+            "394"
           ],
           [
-            "Debbie Smith",
-            "128",
+            "Jane Kennedy",
+            "129",
             "0",
-            "120",
-            "133",
-            "160",
-            "413"
+            "122",
+            "125",
+            "110",
+            "357"
           ],
           [
             "Total",
-            "299",
-            "333",
-            "350",
-            "982"
+            "298",
+            "351",
+            "339",
+            "988"
           ],
           [
+            "Team 1",
+            "Lane 28 points won: 4.0"
+          ],
+          [
+            "Candy Murcek",
+            "91",
+            "0",
+            "75",
+            "104",
+            "90",
+            "269"
+          ],
+          [
+            "Judy Bencker",
+            "82",
+            "0",
+            "72",
+            "72",
+            "72",
+            "216"
+          ],
+          [
+            "Debbie Smith",
+            "129",
+            "0",
+            "139",
+            "124",
+            "156",
+            "419"
+          ],
+          [
+            "Total",
+            "286",
+            "300",
+            "318",
+            "904"
+          ]
+        ],
+        "emphasis": [
+          [
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            true,
+            false,
+            true
+          ],
+          [
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            true,
+            false,
+            true,
+            false
+          ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "237",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "394",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "357",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "1447",
+            "handicapGames": [
+              "451",
+              "504",
+              "492"
+            ],
+            "teamPoints": [
+              "0.0",
+              "2.0",
+              "0.0",
+              "4.0",
+              "4.0"
+            ]
+          },
+          {},
+          {
+            "handicapSeries": "269",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "216",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "419",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "1438",
+            "handicapGames": [
+              "464",
+              "478",
+              "496"
+            ],
+            "teamPoints": [
+              "2.0",
+              "0.0",
+              "2.0",
+              "4.0",
+              "4.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://www.leaguesecretary.com/uploads/2026/f/7/5173109292026f202607reprnt00.pdf"
+      },
+      {
+        "title": "Delta vs Gammas",
+        "headers": [
+          "Bowler",
+          "Average",
+          "Handicap",
+          "Game 1",
+          "Game 2",
+          "Game 3",
+          "Scratch series"
+        ],
+        "rows": [
+          [
             "Team 4",
-            "Lane 28 points won: 0.0"
+            "Lane 29 points won: 0.0"
           ],
           [
             "VACANT",
@@ -681,12 +870,12 @@
           ],
           [
             "Jan Stamp",
-            "99",
+            "100",
             "0",
-            "92",
-            "105",
-            "116",
-            "313"
+            "72",
+            "91",
+            "100",
+            "263"
           ],
           [
             "Jo Sperry",
@@ -699,13 +888,89 @@
           ],
           [
             "Total",
+            "312",
+            "331",
+            "340",
+            "983"
+          ],
+          [
+            "Team 3",
+            "Lane 30 points won: 8.0"
+          ],
+          [
+            "Tammy Langfeldt",
+            "105",
+            "0",
+            "108",
+            "100",
+            "93",
+            "301"
+          ],
+          [
+            "Deb Friend",
+            "109",
+            "0",
+            "117",
+            "121",
+            "136",
+            "374"
+          ],
+          [
+            "Peggy Wetzel",
+            "136",
+            "0",
+            "141",
+            "111",
+            "141",
+            "393"
+          ],
+          [
+            "Total",
+            "366",
             "332",
-            "345",
-            "356",
-            "1033"
+            "370",
+            "1068"
           ]
         ],
         "emphasis": [
+          [
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
           [
             false,
             false
@@ -743,82 +1008,16 @@
             true,
             true,
             true
-          ],
-          [
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false
           ]
         ],
         "recapDetails": [
           {},
           {
-            "handicapSeries": "290",
-            "individualPoints": 0
-          },
-          {
-            "handicapSeries": "279",
-            "individualPoints": 0
-          },
-          {
-            "handicapSeries": "413",
-            "individualPoints": 0
-          },
-          {
-            "handicapSeries": "1534",
-            "handicapGames": [
-              "483",
-              "517",
-              "534"
-            ],
-            "teamPoints": [
-              "2.0",
-              "2.0",
-              "2.0",
-              "8.0",
-              "8.0"
-            ]
-          },
-          {},
-          {
             "handicapSeries": "360",
             "individualPoints": 0
           },
           {
-            "handicapSeries": "313",
+            "handicapSeries": "263",
             "individualPoints": 0
           },
           {
@@ -826,11 +1025,11 @@
             "individualPoints": 0
           },
           {
-            "handicapSeries": "1453",
+            "handicapSeries": "1403",
             "handicapGames": [
-              "472",
-              "485",
-              "496"
+              "452",
+              "471",
+              "480"
             ],
             "teamPoints": [
               "0.0",
@@ -839,236 +1038,37 @@
               "0.0",
               "0.0"
             ]
-          }
-        ],
-        "sourceReport": "https://www.leaguesecretary.com/uploads/2026/f/6/5173109222026f202606reprnt00.pdf"
-      },
-      {
-        "title": "Gammas vs Betas",
-        "headers": [
-          "Bowler",
-          "Average",
-          "Handicap",
-          "Game 1",
-          "Game 2",
-          "Game 3",
-          "Scratch series"
-        ],
-        "rows": [
-          [
-            "Team 3",
-            "Lane 29 points won: 2.0"
-          ],
-          [
-            "Tammy Langfeldt",
-            "102",
-            "0",
-            "128",
-            "98",
-            "138",
-            "364"
-          ],
-          [
-            "Deb Friend",
-            "110",
-            "0",
-            "103",
-            "106",
-            "98",
-            "307"
-          ],
-          [
-            "Peggy Wetzel",
-            "140",
-            "0",
-            "129",
-            "128",
-            "100",
-            "357"
-          ],
-          [
-            "Total",
-            "360",
-            "332",
-            "336",
-            "1028"
-          ],
-          [
-            "Team 2",
-            "Lane 30 points won: 6.0"
-          ],
-          [
-            "Connie Carr",
-            "86",
-            "0",
-            "85",
-            "104",
-            "105",
-            "294"
-          ],
-          [
-            "Kathy Gabriel",
-            "118",
-            "0",
-            "121",
-            "87",
-            "113",
-            "321"
-          ],
-          [
-            "Jane Kennedy",
-            "124",
-            "0",
-            "126",
-            "183",
-            "129",
-            "438"
-          ],
-          [
-            "Total",
-            "332",
-            "374",
-            "347",
-            "1053"
-          ]
-        ],
-        "emphasis": [
-          [
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            true,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            true,
-            true,
-            true
-          ]
-        ],
-        "recapDetails": [
-          {},
-          {
-            "handicapSeries": "364",
-            "individualPoints": 0
-          },
-          {
-            "handicapSeries": "307",
-            "individualPoints": 0
-          },
-          {
-            "handicapSeries": "357",
-            "individualPoints": 0
-          },
-          {
-            "handicapSeries": "1442",
-            "handicapGames": [
-              "498",
-              "470",
-              "474"
-            ],
-            "teamPoints": [
-              "2.0",
-              "0.0",
-              "0.0",
-              "2.0",
-              "2.0"
-            ]
           },
           {},
           {
-            "handicapSeries": "294",
+            "handicapSeries": "301",
             "individualPoints": 0
           },
           {
-            "handicapSeries": "321",
+            "handicapSeries": "374",
             "individualPoints": 0
           },
           {
-            "handicapSeries": "438",
+            "handicapSeries": "393",
             "individualPoints": 0
           },
           {
-            "handicapSeries": "1524",
+            "handicapSeries": "1488",
             "handicapGames": [
-              "489",
-              "531",
-              "504"
+              "506",
+              "472",
+              "510"
             ],
             "teamPoints": [
-              "0.0",
               "2.0",
               "2.0",
-              "6.0",
-              "6.0"
+              "2.0",
+              "8.0",
+              "8.0"
             ]
           }
         ],
-        "sourceReport": "https://www.leaguesecretary.com/uploads/2026/f/6/5173109222026f202606reprnt00.pdf"
+        "sourceReport": "https://www.leaguesecretary.com/uploads/2026/f/7/5173109292026f202607reprnt00.pdf"
       }
     ],
     "lanes": [
@@ -6328,15 +6328,613 @@
           }
         ]
       }
+    },
+    {
+      "week": "7",
+      "sourceUpdated": "Sep 29, 2026",
+      "syncedAt": "2026-09-29T21:06:03.459Z",
+      "views": {
+        "recaps": [
+          {
+            "title": "Betas vs Alphas",
+            "headers": [
+              "Bowler",
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
+            ],
+            "rows": [
+              [
+                "Team 2",
+                "Lane 27 points won: 4.0"
+              ],
+              [
+                "Connie Carr",
+                "88",
+                "0",
+                "71",
+                "81",
+                "85",
+                "237"
+              ],
+              [
+                "Kathy Gabriel",
+                "116",
+                "0",
+                "105",
+                "145",
+                "144",
+                "394"
+              ],
+              [
+                "Jane Kennedy",
+                "129",
+                "0",
+                "122",
+                "125",
+                "110",
+                "357"
+              ],
+              [
+                "Total",
+                "298",
+                "351",
+                "339",
+                "988"
+              ],
+              [
+                "Team 1",
+                "Lane 28 points won: 4.0"
+              ],
+              [
+                "Candy Murcek",
+                "91",
+                "0",
+                "75",
+                "104",
+                "90",
+                "269"
+              ],
+              [
+                "Judy Bencker",
+                "82",
+                "0",
+                "72",
+                "72",
+                "72",
+                "216"
+              ],
+              [
+                "Debbie Smith",
+                "129",
+                "0",
+                "139",
+                "124",
+                "156",
+                "419"
+              ],
+              [
+                "Total",
+                "286",
+                "300",
+                "318",
+                "904"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                true,
+                false,
+                true
+              ],
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                true,
+                false,
+                true,
+                false
+              ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "237",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "394",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "357",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "1447",
+                "handicapGames": [
+                  "451",
+                  "504",
+                  "492"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "2.0",
+                  "0.0",
+                  "4.0",
+                  "4.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "269",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "216",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "419",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "1438",
+                "handicapGames": [
+                  "464",
+                  "478",
+                  "496"
+                ],
+                "teamPoints": [
+                  "2.0",
+                  "0.0",
+                  "2.0",
+                  "4.0",
+                  "4.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://www.leaguesecretary.com/uploads/2026/f/7/5173109292026f202607reprnt00.pdf"
+          },
+          {
+            "title": "Delta vs Gammas",
+            "headers": [
+              "Bowler",
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
+            ],
+            "rows": [
+              [
+                "Team 4",
+                "Lane 29 points won: 0.0"
+              ],
+              [
+                "VACANT",
+                "120",
+                "0",
+                "120",
+                "120",
+                "120",
+                "360"
+              ],
+              [
+                "Jan Stamp",
+                "100",
+                "0",
+                "72",
+                "91",
+                "100",
+                "263"
+              ],
+              [
+                "Jo Sperry",
+                "130",
+                "0",
+                "120",
+                "120",
+                "120",
+                "360"
+              ],
+              [
+                "Total",
+                "312",
+                "331",
+                "340",
+                "983"
+              ],
+              [
+                "Team 3",
+                "Lane 30 points won: 8.0"
+              ],
+              [
+                "Tammy Langfeldt",
+                "105",
+                "0",
+                "108",
+                "100",
+                "93",
+                "301"
+              ],
+              [
+                "Deb Friend",
+                "109",
+                "0",
+                "117",
+                "121",
+                "136",
+                "374"
+              ],
+              [
+                "Peggy Wetzel",
+                "136",
+                "0",
+                "141",
+                "111",
+                "141",
+                "393"
+              ],
+              [
+                "Total",
+                "366",
+                "332",
+                "370",
+                "1068"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                true,
+                true,
+                true,
+                true
+              ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "360",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "263",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "360",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "1403",
+                "handicapGames": [
+                  "452",
+                  "471",
+                  "480"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "301",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "374",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "393",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "1488",
+                "handicapGames": [
+                  "506",
+                  "472",
+                  "510"
+                ],
+                "teamPoints": [
+                  "2.0",
+                  "2.0",
+                  "2.0",
+                  "8.0",
+                  "8.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://www.leaguesecretary.com/uploads/2026/f/7/5173109292026f202607reprnt00.pdf"
+          }
+        ],
+        "standings": [
+          {
+            "title": "League standings",
+            "headers": [
+              "Place",
+              "Team",
+              "Team#",
+              "Div",
+              "WON",
+              "LOST",
+              "%",
+              "YTD WON",
+              "AVG",
+              "Pins",
+              "HSG",
+              "HSS"
+            ],
+            "rows": [
+              [
+                "1",
+                "Gammas",
+                "3",
+                "1",
+                "36",
+                "20",
+                "64 %",
+                "36",
+                "351",
+                "7423",
+                "443",
+                "1119"
+              ],
+              [
+                "2",
+                "Betas",
+                "2",
+                "1",
+                "30",
+                "26",
+                "54 %",
+                "30",
+                "331",
+                "6940",
+                "406",
+                "1083"
+              ],
+              [
+                "3",
+                "Alphas",
+                "1",
+                "1",
+                "24",
+                "32",
+                "43 %",
+                "24",
+                "303",
+                "6250",
+                "350",
+                "996"
+              ],
+              [
+                "4",
+                "Delta",
+                "4",
+                "1",
+                "22",
+                "34",
+                "39 %",
+                "22",
+                "348",
+                "7232",
+                "404",
+                "1095"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ]
+            ]
+          }
+        ]
+      }
     }
   ],
   "lastAttemptedAt": null,
   "lastCheckedAt": "2026-09-21T11:53:08.090Z",
-  "officialStandingsHash": "af08091356a6cf489c7af4798b686b7eb7d3b9964fac526725340a555f4a09f7",
-  "officialStandingsSyncedAt": "2026-09-22T20:47:14.158Z",
-  "officialRecapHash": "a9cad5a4a570a53a76c26822b73ff96eb0e40d377b678b6adad422b85d315fca",
+  "officialStandingsHash": "92fdcebe1b691e82a825b4d558d1f16ba661a1ed5c0a8e9a846e080183a87824",
+  "officialStandingsSyncedAt": "2026-09-29T21:07:11.924Z",
+  "officialRecapHash": "791b79a8f1b9d593bb9032ab1d95a5909429c6097adae889908a8d49abc77d3c",
   "officialRecapParserVersion": 7,
-  "officialRecapSyncedAt": "2026-09-23T02:07:01.018Z",
-  "officialStandingsParserVersion": 2,
-  "officialRecapCheckedAt": "2026-09-29T02:01:41.848Z"
+  "officialRecapSyncedAt": "2026-09-29T21:06:03.459Z",
+  "officialStandingsParserVersion": 3,
+  "officialRecapCheckedAt": "2026-09-29T21:06:03.459Z"
 }
