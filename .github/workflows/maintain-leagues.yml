@@ -60,6 +60,7 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           git pull --rebase origin main
           node scripts/sync-leaguesecretary.mjs | tee maintenance-report.log
+          node scripts/sync-static-lanes.mjs 2>&1 | tee -a maintenance-report.log
           node scripts/sync-leaguepals.mjs | tee -a maintenance-report.log
           {
             echo "## FrameLine maintenance report"

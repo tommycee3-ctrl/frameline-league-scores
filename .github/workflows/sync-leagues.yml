@@ -98,11 +98,12 @@ jobs:
           fi
           node scripts/sync-static-recaps.mjs 2>&1 | tee -a sync-report.log
           node scripts/sync-static-standings.mjs 2>&1 | tee -a sync-report.log
+          node scripts/sync-static-lanes.mjs 2>&1 | tee -a sync-report.log
           node scripts/sync-leaguepals.mjs | tee -a sync-report.log
           {
             echo "## FrameLine refresh report"
             echo '```'
-            grep -E '^(SYNC|LEAGUEPALS) (SUMMARY|CHANGE)|^Official (recap|standings) pass:' sync-report.log || echo "No refresh summary was produced."
+            grep -E '^(SYNC|LEAGUEPALS) (SUMMARY|CHANGE)|^Official (recap|standings|lane) pass:' sync-report.log || echo "No refresh summary was produced."
             echo '```'
           } >> "$GITHUB_STEP_SUMMARY"
 
