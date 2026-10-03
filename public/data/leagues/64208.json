@@ -94,12 +94,12 @@
             "BOWLING STONES",
             "6",
             "1",
-            "116.5",
-            "128.5",
+            "117.5",
+            "127.5",
             "48 %",
-            "116.5",
-            "775",
-            "15936",
+            "117.5",
+            "769",
+            "16626",
             "897",
             "2538"
           ],
@@ -119,20 +119,34 @@
           ],
           [
             "7",
+            "BALLZ 2 SPARE",
+            "10",
+            "1",
+            "111.5",
+            "133.5",
+            "46 %",
+            "111.5",
+            "876",
+            "16345",
+            "1120",
+            "2892"
+          ],
+          [
+            "8",
             "9---BALL",
             "4",
             "1",
-            "105",
-            "140",
-            "43 %",
-            "105",
+            "104",
+            "141",
+            "42 %",
+            "104",
             "792",
             "17131",
             "955",
             "2665"
           ],
           [
-            "8",
+            "9",
             "THE RAT PACK",
             "8",
             "1",
@@ -146,7 +160,7 @@
             "2447"
           ],
           [
-            "9",
+            "10",
             "EPPERSON AUTO",
             "7",
             "1",
@@ -158,20 +172,6 @@
             "19357",
             "1005",
             "2886"
-          ],
-          [
-            "10",
-            "BALLZ 2 SPARE",
-            "10",
-            "1",
-            "94.5",
-            "150.5",
-            "39 %",
-            "94.5",
-            "876",
-            "16345",
-            "1120",
-            "2892"
           ]
         ],
         "emphasis": [
@@ -2664,7 +2664,7 @@
         "rows": [
           [
             "Team 6",
-            "Lane 1 points won: 18.0"
+            "Lane 1 points won: 19.0"
           ],
           [
             "SHAWN COTHREN",
@@ -2680,9 +2680,9 @@
             "162",
             "52",
             "152",
-            "155",
-            "211",
-            "518"
+            "152",
+            "152",
+            "456"
           ],
           [
             "ERIC WOLF",
@@ -2713,14 +2713,14 @@
           ],
           [
             "Total",
-            "0",
-            "835",
-            "838",
-            "1673"
+            "752",
+            "832",
+            "779",
+            "2363"
           ],
           [
             "Team 4",
-            "Lane 2 points won: 17.0"
+            "Lane 2 points won: 16.0"
           ],
           [
             "LUKE PINKALL",
@@ -2794,40 +2794,40 @@
             false,
             false,
             false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
             true,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
             true,
             true
           ],
           [
             false,
             false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            true,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            true,
-            true
-          ],
-          [
-            false,
-            false,
             true,
             true,
             false
@@ -2851,25 +2851,7 @@
             false,
             false,
             false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
             true,
-            false,
-            true
-          ],
-          [
-            false,
-            false,
-            false,
-            true,
-            true,
-            false,
             true
           ],
           [
@@ -2879,11 +2861,29 @@
             false,
             true,
             false,
-            false
+            true
           ],
           [
             false,
             false,
+            false,
+            true,
+            true,
+            false,
+            true
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            false
+          ],
+          [
+            false,
+            true,
             false,
             false,
             true
@@ -2896,8 +2896,8 @@
             "individualPoints": 3
           },
           {
-            "handicapSeries": "674",
-            "individualPoints": 3
+            "handicapSeries": "612",
+            "individualPoints": 0
           },
           {
             "handicapSeries": "612",
@@ -2912,11 +2912,11 @@
             "individualPoints": 2
           },
           {
-            "handicapSeries": "2207",
+            "handicapSeries": "3164",
             "handicapGames": [
-              "0",
-              "1102",
-              "1105"
+              "1019",
+              "1099",
+              "1046"
             ],
             "teamPoints": [
               "0.0",
@@ -2926,11 +2926,11 @@
               "8.0"
             ],
             "matchPoints": [
-              "0.0",
+              "3.0",
               "2.0",
-              "5.0",
-              "10.0",
-              "10.0"
+              "4.0",
+              "11.0",
+              "11.0"
             ]
           },
           {},
@@ -2940,7 +2940,7 @@
           },
           {
             "handicapSeries": "631",
-            "individualPoints": 0
+            "individualPoints": 2
           },
           {
             "handicapSeries": "663",
@@ -2962,23 +2962,22 @@
               "1044"
             ],
             "teamPoints": [
+              "4.0",
               "0.0",
               "0.0",
-              "0.0",
-              "3.0",
-              "3.0"
+              "7.0",
+              "7.0"
             ],
             "matchPoints": [
               "2.0",
               "3.0",
-              "0.0",
-              "7.0",
-              "7.0"
+              "1.0",
+              "9.0",
+              "9.0"
             ]
           }
         ],
-        "sourceReport": "https://www.leaguesecretary.com/uploads/2026/f/7/6420809252026f202607reprnt00.pdf",
-        "officialTotalsComplete": false
+        "sourceReport": "https://www.leaguesecretary.com/uploads/2026/f/7/6420809252026f202607reprnt00.pdf"
       },
       {
         "title": "EPPERSON AUTO vs DUCK THE 10 PIN",
@@ -3652,7 +3651,7 @@
         "rows": [
           [
             "Team 10",
-            "Lane 7 points won: 0.0"
+            "Lane 7 points won: 17.0"
           ],
           [
             "JAMES FOGG",
@@ -3739,8 +3738,8 @@
           ],
           [
             "BRIAN SHAMBLEM",
-            "215",
-            "4",
+            "210",
+            "9",
             "183",
             "225",
             "223",
@@ -3935,7 +3934,7 @@
             "individualPoints": 3
           },
           {
-            "handicapSeries": "643",
+            "handicapSeries": "658",
             "individualPoints": 3
           },
           {
@@ -3943,11 +3942,11 @@
             "individualPoints": 1
           },
           {
-            "handicapSeries": "3109",
+            "handicapSeries": "3124",
             "handicapGames": [
-              "1004",
-              "1006",
-              "1099"
+              "1009",
+              "1011",
+              "1104"
             ],
             "teamPoints": [
               "0.0",
@@ -4339,23 +4338,23 @@
           ],
           [
             "7",
+            "10",
+            "BALLZ 2 SPARE"
+          ],
+          [
+            "8",
             "4",
             "9---BALL"
           ],
           [
-            "8",
+            "9",
             "8",
             "THE RAT PACK"
           ],
           [
-            "9",
+            "10",
             "7",
             "EPPERSON AUTO"
-          ],
-          [
-            "10",
-            "10",
-            "BALLZ 2 SPARE"
           ]
         ],
         "emphasis": [
@@ -29160,7 +29159,7 @@
             "rows": [
               [
                 "Team 6",
-                "Lane 1 points won: 18.0"
+                "Lane 1 points won: 19.0"
               ],
               [
                 "SHAWN COTHREN",
@@ -29176,9 +29175,9 @@
                 "162",
                 "52",
                 "152",
-                "155",
-                "211",
-                "518"
+                "152",
+                "152",
+                "456"
               ],
               [
                 "ERIC WOLF",
@@ -29209,14 +29208,14 @@
               ],
               [
                 "Total",
-                "0",
-                "835",
-                "838",
-                "1673"
+                "752",
+                "832",
+                "779",
+                "2363"
               ],
               [
                 "Team 4",
-                "Lane 2 points won: 17.0"
+                "Lane 2 points won: 16.0"
               ],
               [
                 "LUKE PINKALL",
@@ -29290,40 +29289,40 @@
                 false,
                 false,
                 false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
                 true,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
                 true,
                 true
               ],
               [
                 false,
                 false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                true,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
-                false,
-                true,
-                true
-              ],
-              [
-                false,
-                false,
                 true,
                 true,
                 false
@@ -29347,25 +29346,7 @@
                 false,
                 false,
                 false,
-                false,
-                false
-              ],
-              [
-                false,
-                false,
-                false,
-                false,
                 true,
-                false,
-                true
-              ],
-              [
-                false,
-                false,
-                false,
-                true,
-                true,
-                false,
                 true
               ],
               [
@@ -29375,11 +29356,29 @@
                 false,
                 true,
                 false,
-                false
+                true
               ],
               [
                 false,
                 false,
+                false,
+                true,
+                true,
+                false,
+                true
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                false
+              ],
+              [
+                false,
+                true,
                 false,
                 false,
                 true
@@ -29392,8 +29391,8 @@
                 "individualPoints": 3
               },
               {
-                "handicapSeries": "674",
-                "individualPoints": 3
+                "handicapSeries": "612",
+                "individualPoints": 0
               },
               {
                 "handicapSeries": "612",
@@ -29408,11 +29407,11 @@
                 "individualPoints": 2
               },
               {
-                "handicapSeries": "2207",
+                "handicapSeries": "3164",
                 "handicapGames": [
-                  "0",
-                  "1102",
-                  "1105"
+                  "1019",
+                  "1099",
+                  "1046"
                 ],
                 "teamPoints": [
                   "0.0",
@@ -29422,11 +29421,11 @@
                   "8.0"
                 ],
                 "matchPoints": [
-                  "0.0",
+                  "3.0",
                   "2.0",
-                  "5.0",
-                  "10.0",
-                  "10.0"
+                  "4.0",
+                  "11.0",
+                  "11.0"
                 ]
               },
               {},
@@ -29436,7 +29435,7 @@
               },
               {
                 "handicapSeries": "631",
-                "individualPoints": 0
+                "individualPoints": 2
               },
               {
                 "handicapSeries": "663",
@@ -29458,23 +29457,22 @@
                   "1044"
                 ],
                 "teamPoints": [
+                  "4.0",
                   "0.0",
                   "0.0",
-                  "0.0",
-                  "3.0",
-                  "3.0"
+                  "7.0",
+                  "7.0"
                 ],
                 "matchPoints": [
                   "2.0",
                   "3.0",
-                  "0.0",
-                  "7.0",
-                  "7.0"
+                  "1.0",
+                  "9.0",
+                  "9.0"
                 ]
               }
             ],
-            "sourceReport": "https://www.leaguesecretary.com/uploads/2026/f/7/6420809252026f202607reprnt00.pdf",
-            "officialTotalsComplete": false
+            "sourceReport": "https://www.leaguesecretary.com/uploads/2026/f/7/6420809252026f202607reprnt00.pdf"
           },
           {
             "title": "EPPERSON AUTO vs DUCK THE 10 PIN",
@@ -30148,7 +30146,7 @@
             "rows": [
               [
                 "Team 10",
-                "Lane 7 points won: 0.0"
+                "Lane 7 points won: 17.0"
               ],
               [
                 "JAMES FOGG",
@@ -30235,8 +30233,8 @@
               ],
               [
                 "BRIAN SHAMBLEM",
-                "215",
-                "4",
+                "210",
+                "9",
                 "183",
                 "225",
                 "223",
@@ -30431,7 +30429,7 @@
                 "individualPoints": 3
               },
               {
-                "handicapSeries": "643",
+                "handicapSeries": "658",
                 "individualPoints": 3
               },
               {
@@ -30439,11 +30437,11 @@
                 "individualPoints": 1
               },
               {
-                "handicapSeries": "3109",
+                "handicapSeries": "3124",
                 "handicapGames": [
-                  "1004",
-                  "1006",
-                  "1099"
+                  "1009",
+                  "1011",
+                  "1104"
                 ],
                 "teamPoints": [
                   "0.0",
@@ -33204,12 +33202,12 @@
                 "BOWLING STONES",
                 "6",
                 "1",
-                "116.5",
-                "128.5",
+                "117.5",
+                "127.5",
                 "48 %",
-                "116.5",
-                "775",
-                "15936",
+                "117.5",
+                "769",
+                "16626",
                 "897",
                 "2538"
               ],
@@ -33229,20 +33227,34 @@
               ],
               [
                 "7",
+                "BALLZ 2 SPARE",
+                "10",
+                "1",
+                "111.5",
+                "133.5",
+                "46 %",
+                "111.5",
+                "876",
+                "16345",
+                "1120",
+                "2892"
+              ],
+              [
+                "8",
                 "9---BALL",
                 "4",
                 "1",
-                "105",
-                "140",
-                "43 %",
-                "105",
+                "104",
+                "141",
+                "42 %",
+                "104",
                 "792",
                 "17131",
                 "955",
                 "2665"
               ],
               [
-                "8",
+                "9",
                 "THE RAT PACK",
                 "8",
                 "1",
@@ -33256,7 +33268,7 @@
                 "2447"
               ],
               [
-                "9",
+                "10",
                 "EPPERSON AUTO",
                 "7",
                 "1",
@@ -33268,20 +33280,6 @@
                 "19357",
                 "1005",
                 "2886"
-              ],
-              [
-                "10",
-                "BALLZ 2 SPARE",
-                "10",
-                "1",
-                "94.5",
-                "150.5",
-                "39 %",
-                "94.5",
-                "876",
-                "16345",
-                "1120",
-                "2892"
               ]
             ],
             "emphasis": [
@@ -33496,13 +33494,13 @@
   "officialRecapVersion": 1,
   "lastCheckedAt": "2026-09-21T11:51:44.849Z",
   "lastAttemptedAt": null,
-  "officialRecapHash": "c18b5747310de2cfa78b269b238f4a9cb45e8029f8f2b14e7bb8af67c24737b1",
-  "officialRecapSyncedAt": "2026-09-26T11:30:04.998Z",
+  "officialRecapHash": "99dea6202f29a4c49ae58587f6d14f6a3ab3abe576cc5090a404532b91e5addc",
+  "officialRecapSyncedAt": "2026-10-03T05:23:41.687Z",
   "officialRecapParserVersion": 7,
-  "officialStandingsHash": "9a5205acfe47a77f4b26366d95c06b3ee736debf5fe84bd31260573f0c2da1ba",
-  "officialStandingsSyncedAt": "2026-09-26T11:31:32.172Z",
+  "officialStandingsHash": "00cbf5f0f6fde416abb46538c67bbdf91ccaa1062682bd72201ec1b71aa4b1b1",
+  "officialStandingsSyncedAt": "2026-10-03T05:24:54.571Z",
   "officialStandingsParserVersion": 3,
-  "officialRecapCheckedAt": "2026-10-02T12:41:32.463Z",
+  "officialRecapCheckedAt": "2026-10-03T05:23:41.687Z",
   "laneWeek": "8",
   "laneSourceUpdated": "10/02/2026"
 }
