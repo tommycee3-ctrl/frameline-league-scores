@@ -2,8 +2,9 @@ name: Sync league results
 
 on:
   schedule:
-    # Backend-only refresh every two hours, offset from the start of the hour.
-    - cron: "17 */2 * * *"
+    # Check hourly. The freshness gate below performs a refresh once the last
+    # completed cycle is 105 minutes old, recovering quickly from missed cron.
+    - cron: "17 * * * *"
   workflow_dispatch:
 
 permissions:

@@ -3,6 +3,7 @@ import { execFile } from "node:child_process";
 import { promisify } from "node:util";
 import { tmpdir } from "node:os";
 import path from "node:path";
+import { createSourceSession } from "./source-fetch-session.mjs";
 
 const run = promisify(execFile);
 const root = path.resolve("public/data/leagues");
@@ -25,28 +26,32 @@ function teamNames(league) {
   return names;
 }
 
-async function fetchText(url) {
-  const response = await fetch(url, { headers: { "user-agent": "FrameLine/1.0 lane schedule refresh" }, signal: AbortSignal.timeout(30000) });
+async function fetchText(sourceFetch, url) {
+  const response = await sourceFetch(url, { headers: { "user-agent": "FrameLine/1.0 lane schedule refresh" }, signal: AbortSignal.timeout(30000) });
   if (!response.ok) throw new Error(`HTTP ${response.status}`);
   return response.text();
 }
 
 async function refresh(league) {
+  const sourceFetch = createSourceSession();
   const laneUrl = new URL(`https://www.leaguesecretary.com/bowling-centers/${league.centerSlug}/bowling-leagues/${league.slug}/league/lane-assignments/${league.id}`);
-  const laneHtml = await fetchText(laneUrl);
+  const laneHtml = await fetchText(sourceFetch, laneUrl);
   const selected = laneHtml.match(/<option\s+value="(\d+)\|(\d+)\|([^"]+)"\s+selected(?:="selected")?[^>]*>([^<]+)<\/option>/i);
   if (!selected) throw new Error("current lane period is unavailable");
   const [, week, year, season, label] = selected;
   const date = clean(label).match(/(\d{2}\/\d{2}\/\d{4})/)?.[1] ?? clean(label);
   const scheduleUrl = new URL(`https://www.leaguesecretary.com/bowling-centers/${league.centerSlug}/bowling-leagues/${league.slug}/league/schedule-png/${league.id}/${year}/${season}`);
-  const scheduleHtml = await fetchText(scheduleUrl);
-  const encodedPath = [...scheduleHtml.matchAll(/href="([^"]+)"/gi)]
-    .map(match => match[1].replaceAll("&amp;", "&"))
-    .map(link => new URL(link, scheduleUrl))
-    .map(link => link.pathname === "/reports/shared" ? link.searchParams.get("path") : link.pathname)
-    .find(value => value && /schdle00\.pdf$/i.test(value));
-  if (!encodedPath) throw new Error("official schedule PDF is unavailable");
-  const pdfResponse = await fetch(new URL(encodedPath, scheduleUrl), { signal: AbortSignal.timeout(30000) });
+  const scheduleHtml = await fetchText(sourceFetch, scheduleUrl);
+  const reportLink = [...scheduleHtml.matchAll(/href="([^"]+)"/gi)]
+    .map(match => new URL(match[1].replaceAll("&amp;", "&"), scheduleUrl))
+    .find(link => {
+      const reportPath = link.pathname === "/reports/shared" ? link.searchParams.get("path") : link.pathname;
+      return reportPath && /schdle00\.pdf$/i.test(reportPath);
+    });
+  if (!reportLink) throw new Error("official schedule PDF is unavailable");
+  const reportPath = reportLink.pathname === "/reports/shared" ? reportLink.searchParams.get("path") : reportLink.pathname;
+  const reportUrl = reportLink.pathname === "/reports/shared" ? reportLink : new URL(reportPath, scheduleUrl);
+  const pdfResponse = await sourceFetch(reportUrl, { signal: AbortSignal.timeout(30000) });
   if (!pdfResponse.ok) throw new Error(`schedule PDF HTTP ${pdfResponse.status}`);
   const directory = await mkdtemp(path.join(tmpdir(), "frameline-static-lanes-"));
   try {

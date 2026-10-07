@@ -6,6 +6,7 @@ import { tmpdir } from "node:os";
 import path from "node:path";
 import { createHash } from "node:crypto";
 import { buildOfficialRecaps } from "./official-recap.mjs";
+import { createSourceSession } from "./source-fetch-session.mjs";
 
 const run = promisify(execFile);
 const root = path.resolve("public/data/leagues");
@@ -19,9 +20,10 @@ const parserVersion = 7;
 let updated = 0, partial = 0, skipped = 0, unavailable = 0;
 
 async function reportFor(league) {
+  const sourceFetch = createSourceSession();
   if (!league.slug || !league.centerSlug) return null;
   const pageUrl = new URL(`https://www.leaguesecretary.com/bowling-centers/${league.centerSlug}/bowling-leagues/${league.slug}/league/recaps/${league.id}`);
-  const pageResponse = await fetch(pageUrl, { signal: AbortSignal.timeout(30000) });
+  const pageResponse = await sourceFetch(pageUrl, { signal: AbortSignal.timeout(30000) });
   if (!pageResponse.ok) throw new Error(`recap page HTTP ${pageResponse.status}`);
   const page = await pageResponse.text();
   const selected = page.match(/<option\s+value="(\d+)\|(\d{4})\|([fsuw])"\s+selected="selected">([^<]*)/i);
@@ -29,7 +31,7 @@ async function reportFor(league) {
   const [, week, year, season] = selected;
   if (season !== seasonCode[league.season] || Number(week) < Number(league.week)) return null;
   const url = new URL(`https://www.leaguesecretary.com/bowling-centers/${league.centerSlug}/bowling-leagues/${league.slug}/league/recaps-png/${league.id}/${year}/${season}/${week}`);
-  const response = await fetch(url, { signal: AbortSignal.timeout(30000) });
+  const response = await sourceFetch(url, { signal: AbortSignal.timeout(30000) });
   if (!response.ok) throw new Error(`report page HTTP ${response.status}`);
   const html = await response.text();
   const links = [...html.matchAll(/href="([^"]+)"/g)].map(match => match[1].replaceAll("&amp;", "&"));
@@ -37,8 +39,10 @@ async function reportFor(league) {
     const shared = new URL(link, url);
     const reportPath = shared.pathname === "/reports/shared" ? shared.searchParams.get("path") : shared.pathname;
     if (!reportPath || !/^\/uploads\/[\w/.-]*reprnt\d*\.pdf$/i.test(reportPath)) continue;
-    const reportUrl = new URL(reportPath, url).toString();
-    const pdfResponse = await fetch(reportUrl, { signal: AbortSignal.timeout(30000) });
+    // League Secretary now requires the signed /reports/shared URL. The raw
+    // /uploads path can return an HTML access page with a 200 response.
+    const reportUrl = shared.pathname === "/reports/shared" ? shared.toString() : new URL(reportPath, url).toString();
+    const pdfResponse = await sourceFetch(reportUrl, { signal: AbortSignal.timeout(30000) });
     if (!pdfResponse.ok) throw new Error(`report PDF HTTP ${pdfResponse.status}`);
     const pdf = Buffer.from(await pdfResponse.arrayBuffer());
     if (pdf.subarray(0, 4).toString() !== "%PDF") throw new Error("report is not a PDF");
