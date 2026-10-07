@@ -58,6 +58,12 @@ const personName = (name: string) => {
   return [given, family, formattedSuffix].filter(Boolean).join(" ");
 };
 const personKey = (name: string) => personName(name).toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+const preferredPersonName = (current: string | undefined, candidate: string) => {
+  if (!current) return candidate;
+  const letters = (value: string) => value.replace(/[^a-z]/gi, ""),
+    isAllCaps = (value: string) => Boolean(letters(value)) && letters(value) === letters(value).toUpperCase();
+  return isAllCaps(current) && !isAllCaps(candidate) ? candidate : current;
+};
 const score = (row: string[], game: number) => Number(row[3 + game] ?? 0);
 const laneNumber = (value = "") => Number(value.match(/\d+/)?.[0] ?? Number.MAX_SAFE_INTEGER);
 type RecapTeam = {
@@ -166,7 +172,7 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
   const rosterForTeam = (team: string) => bowlersByTeam[team] ?? [];
   const currentBowlerRecord = (name: string) =>
     [...(bowlerTable?.rows ?? [])]
-      .filter((row) => personName(cell(bowlerTable!, row, "Name")) === name)
+      .filter((row) => personKey(cell(bowlerTable!, row, "Name")) === personKey(name))
       .sort(
         (left, right) =>
           Number(cell(bowlerTable!, right, "Games")) -
@@ -240,43 +246,33 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
       string,
       { name: string; average: string; handicap: string }
     >();
+    const mergePerson = (name: string, average: string, handicap: string, replaceStats = false) => {
+      const key = personKey(name), prior = details.get(key);
+      if (!key) return;
+      details.set(key, {
+        name: preferredPersonName(prior?.name, name),
+        average: (replaceStats ? average : prior?.average) || average || prior?.average || "—",
+        handicap: (replaceStats ? handicap : prior?.handicap) || handicap || prior?.handicap || "",
+      });
+    };
     for (const person of currentRoster?.rows ?? []) {
       const name = personName(cell(currentRoster!, person, "Name"));
       if (name && !/vacant/i.test(name))
-        details.set(name, {
-          name: personName(cell(currentRoster, person, "Name")),
-          average: cell(currentRoster, person, "Avg") || "—",
-          handicap: cell(currentRoster, person, "HCP"),
-        });
+        mergePerson(name, cell(currentRoster, person, "Avg"), cell(currentRoster, person, "HCP"));
     }
     for (const person of recapRows) {
       const name = personName(person[0]);
       if (name)
-        details.set(name, {
-          name,
-          average: details.get(name)?.average || person[1] || "—",
-          handicap: details.get(name)?.handicap || person[2] || "",
-        });
+        mergePerson(name, person[1], person[2]);
     }
     for (const person of liveRows) {
       const name = personName(cell(bowlerTable!, person, "Name"));
       if (name)
-        details.set(name, {
-          name,
-          average: currentBowlerAverage(name, details.get(name)?.average || "—"),
-          handicap:
-            cell(bowlerTable!, person, "HCP") ||
-            details.get(name)?.handicap ||
-            "",
-        });
+        mergePerson(name, currentBowlerAverage(name), cell(bowlerTable!, person, "HCP"), true);
     }
     for (const person of fallbackRoster(team)) {
-      if (!details.has(person.name))
-        details.set(person.name, {
-          name: person.name,
-          average: String(person.average),
-          handicap: "",
-        });
+      if (!details.has(personKey(person.name)))
+        mergePerson(person.name, String(person.average), "");
     }
     return [...details.values()];
   };
