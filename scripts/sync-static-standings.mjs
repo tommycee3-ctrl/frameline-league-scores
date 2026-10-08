@@ -74,9 +74,13 @@ function mergeStandings(league, official) {
   if (reportWeek !== currentWeek && reportWeek !== currentWeek + 1)
     throw new Error(`standings PDF period ${reportWeek} does not match recap Week ${currentWeek}`);
   const byTeam = new Map(official.teams.map(team => [team.team, team]));
-  if (byTeam.size !== original.rows.length || original.rows.some(row => !byTeam.has(row[2])))
+  const publishedTeams = new Set(original.rows.map(row => row[2]));
+  const unknownOfficialTeam = [...byTeam.keys()].find(team => !publishedTeams.has(team));
+  const activeMissingTeam = original.rows.find(row => !byTeam.has(row[2]) &&
+    (Number(row[4]) > 0 || Number(row[7]) > 0 || Number(row[9]) > 0));
+  if (unknownOfficialTeam || activeMissingTeam)
     throw new Error("official standings team set differs from published league");
-  const rows = original.rows.map(row => {
+  const rows = original.rows.filter(row => byTeam.has(row[2])).map(row => {
     const team = byTeam.get(row[2]);
     const totalPoints = Number(row[4]) + Number(row[5]);
     const won = Number(team.won);

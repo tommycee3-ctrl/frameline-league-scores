@@ -138,7 +138,7 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
     team: string;
   } | null>(null);
   const [standingSort, setStandingSort] = useState<{
-    key: "place" | "team" | "won" | "lost" | "percent" | "average" | "pins";
+    key: "place" | "team" | "points" | "lost" | "average" | "pins";
     direction: "asc" | "desc";
   }>({ key: "place", direction: "asc" });
   const weekSnapshots = useMemo(() => {
@@ -463,15 +463,13 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
       : key === "team"
         ? cell(standings!, row, "Team") ||
           `Team ${cell(standings!, row, "Team#")}`
-        : key === "won"
-          ? cell(standings!, row, "Won")
+        : key === "points"
+          ? cell(standings!, row, "YTD WON") || cell(standings!, row, "Won")
           : key === "lost"
             ? cell(standings!, row, "Lost")
-            : key === "percent"
-              ? cell(standings!, row, "% Won")
-              : key === "average"
-                ? cell(standings!, row, "Avg")
-                : cell(standings!, row, "Pins");
+            : key === "average"
+              ? cell(standings!, row, "Avg")
+              : cell(standings!, row, "Pins");
   const sortedStandingRows = standings
     ? [...standings.rows].sort((a, b) => {
         const av = standingValue(a, standingSort.key),
@@ -547,9 +545,8 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                 [
                   ["place", "Place"],
                   ["team", "Team"],
-                  ["won", "Won"],
-                  ["lost", "Lost"],
-                  ["percent", "Win %"],
+                  ["points", "Points"],
+                  ["lost", "Points lost"],
                   ["average", "Average"],
                   ["pins", "Pins"],
                 ] as const
@@ -609,16 +606,12 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                         <b>{name}</b>
                       </span>
                       <span>
-                        {cell(standings, row, "Won")}
-                        <small className="mobile-label">Won</small>
+                        {cell(standings, row, "YTD WON") || cell(standings, row, "Won")}
+                        <small className="mobile-label">Points</small>
                       </span>
                       <span>
                         {cell(standings, row, "Lost")}
-                        <small className="mobile-label">Lost</small>
-                      </span>
-                      <span>
-                        {cell(standings, row, "% Won").replace(/\s*%/g, "%")}
-                        <small className="mobile-label">Win %</small>
+                        <small className="mobile-label">Points lost</small>
                       </span>
                       <span>
                         {cell(standings, row, "Avg")}
