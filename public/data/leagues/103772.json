@@ -14,10 +14,10 @@
   "centerName": "Mockingbird Lanes",
   "centerSlug": "mockingbird-lanes",
   "area": "Omaha",
-  "sourceUpdated": "Sep 30, 2026",
+  "sourceUpdated": "Oct 7, 2026",
   "syncedAt": "2026-09-21T06:21:09.940Z",
   "status": "awaiting-results",
-  "week": "7",
+  "week": "8",
   "fingerprint": "e0de471e93e8f868e140b6c7e0c23c20b801b839c5a14cfc74692a26b99b7d5d",
   "lastCompletedCycle": null,
   "views": {
@@ -1133,7 +1133,7 @@
     ],
     "recaps": [
       {
-        "title": "Team Bailor H vs Team Froendt",
+        "title": "Team Beav vs Team Squire",
         "headers": [
           "Bowler",
           "Average",
@@ -1145,44 +1145,183 @@
         ],
         "rows": [
           [
-            "Team 15",
-            "Lane 1 points won: 6.0"
+            "Team 6",
+            "Lane 1 points won: 0.0"
           ],
           [
-            "Bailor Henderson-Bryant",
-            "97",
-            "82",
-            "125",
-            "112",
-            "129",
-            "366"
+            "James Beversdorf",
+            "102",
+            "78",
+            "95",
+            "98",
+            "103",
+            "296"
           ],
           [
             "Total",
-            "125",
-            "112",
-            "129",
-            "366"
+            "95",
+            "98",
+            "103",
+            "296"
           ],
           [
+            "Team 7",
+            "Lane 2 points won: 8.0"
+          ],
+          [
+            "Randy Squire",
+            "124",
+            "60",
+            "143",
+            "144",
+            "131",
+            "418"
+          ],
+          [
+            "Total",
+            "143",
+            "144",
+            "131",
+            "418"
+          ]
+        ],
+        "emphasis": [
+          [
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            true,
+            true,
+            true,
+            true
+          ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "530",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "530",
+            "handicapGames": [
+              "173",
+              "176",
+              "181"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0"
+            ]
+          },
+          {},
+          {
+            "handicapSeries": "598",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "598",
+            "handicapGames": [
+              "203",
+              "204",
+              "191"
+            ],
+            "teamPoints": [
+              "2.0",
+              "2.0",
+              "2.0",
+              "8.0",
+              "8.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F8%2F10377210072026f202608reprnt00.pdf&token=CfDJ8Fc9E-9grVlDj4tX-da8J6vHotQTzDIRb9lZ3bgL1S7-Xc75uct-CWBGdbI_jdX_HzPG3CgU2GUuvOwEiQ5EpTPg935pTrLQGvBg2A4EqvrTPezBiGQWf9cfQLvMwcnj7ViVOliNu_dxgKNMMmP0NloqI_fPaf1PkNqsudlwLAgBCX5rwLRV-ASdmedd57ntOwOclMr5hAMyr6gHbeP3Qu-Xi9xsNv_t9bdh3JfR2Hbc"
+      },
+      {
+        "title": "Team Froendt vs Team Leavitt",
+        "headers": [
+          "Bowler",
+          "Average",
+          "Handicap",
+          "Game 1",
+          "Game 2",
+          "Game 3",
+          "Scratch series"
+        ],
+        "rows": [
+          [
             "Team 11",
-            "Lane 2 points won: 2.0"
+            "Lane 1 points won: 8.0"
           ],
           [
             "Bruce Froendt",
             "131",
             "55",
-            "110",
+            "115",
+            "124",
             "158",
-            "133",
-            "401"
+            "397"
           ],
           [
             "Total",
-            "110",
+            "115",
+            "124",
             "158",
-            "133",
-            "401"
+            "397"
+          ],
+          [
+            "Team 1",
+            "Lane 2 points won: 0.0"
+          ],
+          [
+            "Will Leavitt",
+            "153",
+            "37",
+            "126",
+            "138",
+            "113",
+            "377"
+          ],
+          [
+            "Total",
+            "126",
+            "138",
+            "113",
+            "377"
           ]
         ],
         "emphasis": [
@@ -1202,7 +1341,7 @@
           [
             false,
             true,
-            false,
+            true,
             true,
             true
           ],
@@ -1222,7 +1361,7 @@
           [
             false,
             false,
-            true,
+            false,
             false,
             false
           ]
@@ -1230,49 +1369,49 @@
         "recapDetails": [
           {},
           {
-            "handicapSeries": "612",
+            "handicapSeries": "562",
             "individualPoints": 0
           },
           {
-            "handicapSeries": "612",
+            "handicapSeries": "562",
             "handicapGames": [
-              "207",
-              "194",
-              "211"
+              "170",
+              "179",
+              "213"
             ],
             "teamPoints": [
               "2.0",
-              "0.0",
               "2.0",
-              "6.0",
-              "6.0"
+              "2.0",
+              "8.0",
+              "8.0"
             ]
           },
           {},
           {
-            "handicapSeries": "566",
+            "handicapSeries": "488",
             "individualPoints": 0
           },
           {
-            "handicapSeries": "566",
+            "handicapSeries": "488",
             "handicapGames": [
-              "165",
-              "213",
-              "188"
+              "163",
+              "175",
+              "150"
             ],
             "teamPoints": [
               "0.0",
-              "2.0",
               "0.0",
-              "2.0",
-              "2.0"
+              "0.0",
+              "0.0",
+              "0.0"
             ]
           }
         ],
-        "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F7%2F10377209302026f202607reprnt00.pdf&token=CfDJ8Fc9E-9grVlDj4tX-da8J6tK2KB-v1J0krxrvrtlrELy3sMEMegMSyQrypKY-Jy1whVhNRY3uiLz4s-7dtn-G76wuI8iPgzAzJDcAm0kNTLMnOyu6NLaQf-RPSkUiXLEX328wz8rcpWoz_YddaYSR9GLvBYyo16ayj1e5Bdm5VRRTHbSGf4VvpB8lV_i2i4T5RUqQ2xT2PDyDw0nchELBjiFHNk36Mdsj6Dah5t5Utsy"
+        "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F8%2F10377210072026f202608reprnt00.pdf&token=CfDJ8Fc9E-9grVlDj4tX-da8J6vHotQTzDIRb9lZ3bgL1S7-Xc75uct-CWBGdbI_jdX_HzPG3CgU2GUuvOwEiQ5EpTPg935pTrLQGvBg2A4EqvrTPezBiGQWf9cfQLvMwcnj7ViVOliNu_dxgKNMMmP0NloqI_fPaf1PkNqsudlwLAgBCX5rwLRV-ASdmedd57ntOwOclMr5hAMyr6gHbeP3Qu-Xi9xsNv_t9bdh3JfR2Hbc"
       },
       {
-        "title": "Team Squire vs CASPER",
+        "title": "Team Parnell vs Team Lanna",
         "headers": [
           "Bowler",
           "Average",
@@ -1284,28 +1423,234 @@
         ],
         "rows": [
           [
-            "Team 7",
-            "Lane 1 points won: 8.0"
+            "Team 2",
+            "Lane 3 points won: 8.0"
           ],
           [
-            "Randy Squire",
-            "119",
-            "64",
-            "131",
-            "147",
-            "150",
-            "428"
+            "Chris Parnell",
+            "151",
+            "39",
+            "168",
+            "200",
+            "177",
+            "545"
           ],
           [
             "Total",
-            "131",
-            "147",
-            "150",
-            "428"
+            "168",
+            "200",
+            "177",
+            "545"
           ],
           [
-            "Team 16",
-            "Lane 2 points won: 0"
+            "Team 14",
+            "Lane 4 points won: 0.0"
+          ],
+          [
+            "Lanna",
+            "99",
+            "80",
+            "76",
+            "104",
+            "84",
+            "264"
+          ],
+          [
+            "Total",
+            "76",
+            "104",
+            "84",
+            "264"
+          ]
+        ],
+        "emphasis": [
+          [
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            true,
+            true,
+            true,
+            true
+          ],
+          [
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "662",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "662",
+            "handicapGames": [
+              "207",
+              "239",
+              "216"
+            ],
+            "teamPoints": [
+              "2.0",
+              "2.0",
+              "2.0",
+              "8.0",
+              "8.0"
+            ]
+          },
+          {},
+          {
+            "handicapSeries": "504",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "504",
+            "handicapGames": [
+              "156",
+              "184",
+              "164"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F8%2F10377210072026f202608reprnt00.pdf&token=CfDJ8Fc9E-9grVlDj4tX-da8J6vHotQTzDIRb9lZ3bgL1S7-Xc75uct-CWBGdbI_jdX_HzPG3CgU2GUuvOwEiQ5EpTPg935pTrLQGvBg2A4EqvrTPezBiGQWf9cfQLvMwcnj7ViVOliNu_dxgKNMMmP0NloqI_fPaf1PkNqsudlwLAgBCX5rwLRV-ASdmedd57ntOwOclMr5hAMyr6gHbeP3Qu-Xi9xsNv_t9bdh3JfR2Hbc"
+      },
+      {
+        "title": "Team Borschel vs Team Lisa M",
+        "headers": [
+          "Bowler",
+          "Average",
+          "Handicap",
+          "Game 1",
+          "Game 2",
+          "Game 3",
+          "Scratch series"
+        ],
+        "rows": [
+          [
+            "Team 8",
+            "Lane 3 points won: 0"
+          ],
+          [
+            "Total",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "Team 9",
+            "Lane 4 points won: 0"
+          ],
+          [
+            "Total",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "emphasis": [
+          [
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        ],
+        "recapDetails": [
+          {},
+          {},
+          {},
+          {}
+        ],
+        "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F8%2F10377210072026f202608reprnt00.pdf&token=CfDJ8Fc9E-9grVlDj4tX-da8J6vHotQTzDIRb9lZ3bgL1S7-Xc75uct-CWBGdbI_jdX_HzPG3CgU2GUuvOwEiQ5EpTPg935pTrLQGvBg2A4EqvrTPezBiGQWf9cfQLvMwcnj7ViVOliNu_dxgKNMMmP0NloqI_fPaf1PkNqsudlwLAgBCX5rwLRV-ASdmedd57ntOwOclMr5hAMyr6gHbeP3Qu-Xi9xsNv_t9bdh3JfR2Hbc"
+      },
+      {
+        "title": "Team Peg Leg vs Team Scott",
+        "headers": [
+          "Bowler",
+          "Average",
+          "Handicap",
+          "Game 1",
+          "Game 2",
+          "Game 3",
+          "Scratch series"
+        ],
+        "rows": [
+          [
+            "Team 10",
+            "Lane 5 points won: 8.0"
+          ],
+          [
+            "Dave Nelson Jr.",
+            "147",
+            "42",
+            "158",
+            "170",
+            "178",
+            "506"
+          ],
+          [
+            "Total",
+            "158",
+            "170",
+            "178",
+            "506"
+          ],
+          [
+            "Team 12",
+            "Lane 6 points won: 0"
           ],
           [
             "Total",
@@ -1351,15 +1696,15 @@
         "recapDetails": [
           {},
           {
-            "handicapSeries": "620",
+            "handicapSeries": "632",
             "individualPoints": 0
           },
           {
-            "handicapSeries": "620",
+            "handicapSeries": "632",
             "handicapGames": [
-              "195",
-              "211",
-              "214"
+              "200",
+              "212",
+              "220"
             ],
             "teamPoints": [
               "2.0",
@@ -1372,10 +1717,10 @@
           {},
           {}
         ],
-        "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F7%2F10377209302026f202607reprnt00.pdf&token=CfDJ8Fc9E-9grVlDj4tX-da8J6tK2KB-v1J0krxrvrtlrELy3sMEMegMSyQrypKY-Jy1whVhNRY3uiLz4s-7dtn-G76wuI8iPgzAzJDcAm0kNTLMnOyu6NLaQf-RPSkUiXLEX328wz8rcpWoz_YddaYSR9GLvBYyo16ayj1e5Bdm5VRRTHbSGf4VvpB8lV_i2i4T5RUqQ2xT2PDyDw0nchELBjiFHNk36Mdsj6Dah5t5Utsy"
+        "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F8%2F10377210072026f202608reprnt00.pdf&token=CfDJ8Fc9E-9grVlDj4tX-da8J6vHotQTzDIRb9lZ3bgL1S7-Xc75uct-CWBGdbI_jdX_HzPG3CgU2GUuvOwEiQ5EpTPg935pTrLQGvBg2A4EqvrTPezBiGQWf9cfQLvMwcnj7ViVOliNu_dxgKNMMmP0NloqI_fPaf1PkNqsudlwLAgBCX5rwLRV-ASdmedd57ntOwOclMr5hAMyr6gHbeP3Qu-Xi9xsNv_t9bdh3JfR2Hbc"
       },
       {
-        "title": "Team Standley vs Team Lisa M",
+        "title": "Team Linquist vs Team Standley",
         "headers": [
           "Bowler",
           "Average",
@@ -1387,431 +1732,35 @@
         ],
         "rows": [
           [
-            "Team 4",
-            "Lane 3 points won: 6.0"
-          ],
-          [
-            "Gary Standley",
-            "100",
-            "80",
-            "150",
-            "70",
-            "107",
-            "327"
-          ],
-          [
-            "Total",
-            "150",
-            "70",
-            "107",
-            "327"
-          ],
-          [
-            "Team 9",
-            "Lane 4 points won: 0"
-          ],
-          [
-            "James Beversdorf",
-            "101",
-            "79",
-            "110",
-            "109",
-            "112",
-            "331"
-          ],
-          [
-            "Total",
-            "110",
-            "109",
-            "112",
-            "331"
-          ]
-        ],
-        "emphasis": [
-          [
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            true,
-            false,
-            true,
-            true
-          ],
-          [
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false
-          ]
-        ],
-        "recapDetails": [
-          {},
-          {
-            "handicapSeries": "567",
-            "individualPoints": 0
-          },
-          {
-            "handicapSeries": "567",
-            "handicapGames": [
-              "230",
-              "150",
-              "187"
-            ],
-            "teamPoints": [
-              "2.0",
-              "0.0",
-              "2.0",
-              "6.0",
-              "6.0"
-            ]
-          },
-          {},
-          {
-            "officialRowUnavailable": true
-          },
-          {}
-        ],
-        "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F7%2F10377209302026f202607reprnt00.pdf&token=CfDJ8Fc9E-9grVlDj4tX-da8J6tK2KB-v1J0krxrvrtlrELy3sMEMegMSyQrypKY-Jy1whVhNRY3uiLz4s-7dtn-G76wuI8iPgzAzJDcAm0kNTLMnOyu6NLaQf-RPSkUiXLEX328wz8rcpWoz_YddaYSR9GLvBYyo16ayj1e5Bdm5VRRTHbSGf4VvpB8lV_i2i4T5RUqQ2xT2PDyDw0nchELBjiFHNk36Mdsj6Dah5t5Utsy"
-      },
-      {
-        "title": "Team Scott vs Team Beav",
-        "headers": [
-          "Bowler",
-          "Average",
-          "Handicap",
-          "Game 1",
-          "Game 2",
-          "Game 3",
-          "Scratch series"
-        ],
-        "rows": [
-          [
-            "Team 12",
-            "Lane 3 points won: 0.0"
-          ],
-          [
-            "Bill Connor",
-            "109",
-            "72",
-            "98",
-            "100",
-            "98",
-            "296"
-          ],
-          [
-            "Total",
-            "98",
-            "100",
-            "98",
-            "296"
-          ],
-          [
-            "Team 6",
-            "Lane 4 points won: 8.0"
-          ],
-          [
-            "James Beversdorf",
-            "101",
-            "79",
-            "110",
-            "109",
-            "112",
-            "331"
-          ],
-          [
-            "Total",
-            "110",
-            "109",
-            "112",
-            "331"
-          ]
-        ],
-        "emphasis": [
-          [
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            true,
-            true,
-            true,
-            true
-          ]
-        ],
-        "recapDetails": [
-          {},
-          {
-            "handicapSeries": "512",
-            "individualPoints": 0
-          },
-          {
-            "handicapSeries": "512",
-            "handicapGames": [
-              "170",
-              "172",
-              "170"
-            ],
-            "teamPoints": [
-              "0.0",
-              "0.0",
-              "0.0",
-              "0.0",
-              "0.0"
-            ]
-          },
-          {},
-          {
-            "handicapSeries": "568",
-            "individualPoints": 0
-          },
-          {
-            "handicapSeries": "568",
-            "handicapGames": [
-              "189",
-              "188",
-              "191"
-            ],
-            "teamPoints": [
-              "2.0",
-              "2.0",
-              "2.0",
-              "8.0",
-              "8.0"
-            ]
-          }
-        ],
-        "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F7%2F10377209302026f202607reprnt00.pdf&token=CfDJ8Fc9E-9grVlDj4tX-da8J6tK2KB-v1J0krxrvrtlrELy3sMEMegMSyQrypKY-Jy1whVhNRY3uiLz4s-7dtn-G76wuI8iPgzAzJDcAm0kNTLMnOyu6NLaQf-RPSkUiXLEX328wz8rcpWoz_YddaYSR9GLvBYyo16ayj1e5Bdm5VRRTHbSGf4VvpB8lV_i2i4T5RUqQ2xT2PDyDw0nchELBjiFHNk36Mdsj6Dah5t5Utsy"
-      },
-      {
-        "title": "Team Borschel vs Team Leavitt",
-        "headers": [
-          "Bowler",
-          "Average",
-          "Handicap",
-          "Game 1",
-          "Game 2",
-          "Game 3",
-          "Scratch series"
-        ],
-        "rows": [
-          [
-            "Team 8",
+            "Team 5",
             "Lane 5 points won: 0"
           ],
           [
-            "Dave Nelson Jr.",
-            "150",
-            "40",
-            "109",
-            "133",
-            "166",
-            "408"
-          ],
-          [
             "Total",
-            "109",
-            "133",
-            "166",
-            "408"
-          ],
-          [
-            "Team 1",
-            "Lane 6 points won: 8.0"
-          ],
-          [
-            "Will Leavitt",
-            "151",
-            "39",
-            "162",
-            "161",
-            "162",
-            "485"
-          ],
-          [
-            "Total",
-            "162",
-            "161",
-            "162",
-            "485"
-          ]
-        ],
-        "emphasis": [
-          [
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            true,
-            true,
-            true,
-            true
-          ]
-        ],
-        "recapDetails": [
-          {},
-          {
-            "officialRowUnavailable": true
-          },
-          {},
-          {},
-          {
-            "handicapSeries": "602",
-            "individualPoints": 0
-          },
-          {
-            "handicapSeries": "602",
-            "handicapGames": [
-              "201",
-              "200",
-              "201"
-            ],
-            "teamPoints": [
-              "2.0",
-              "2.0",
-              "2.0",
-              "8.0",
-              "8.0"
-            ]
-          }
-        ],
-        "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F7%2F10377209302026f202607reprnt00.pdf&token=CfDJ8Fc9E-9grVlDj4tX-da8J6tK2KB-v1J0krxrvrtlrELy3sMEMegMSyQrypKY-Jy1whVhNRY3uiLz4s-7dtn-G76wuI8iPgzAzJDcAm0kNTLMnOyu6NLaQf-RPSkUiXLEX328wz8rcpWoz_YddaYSR9GLvBYyo16ayj1e5Bdm5VRRTHbSGf4VvpB8lV_i2i4T5RUqQ2xT2PDyDw0nchELBjiFHNk36Mdsj6Dah5t5Utsy"
-      },
-      {
-        "title": "Team Peg Leg vs Team Lanna",
-        "headers": [
-          "Bowler",
-          "Average",
-          "Handicap",
-          "Game 1",
-          "Game 2",
-          "Game 3",
-          "Scratch series"
-        ],
-        "rows": [
-          [
-            "Team 10",
-            "Lane 5 points won: 4.0"
-          ],
-          [
-            "Dave Nelson Jr.",
-            "150",
-            "40",
-            "109",
-            "133",
-            "166",
-            "408"
-          ],
-          [
-            "Total",
-            "109",
-            "133",
-            "166",
-            "408"
-          ],
-          [
-            "Team 14",
-            "Lane 6 points won: 4.0"
-          ],
-          [
-            "Lanna",
-            "98",
-            "81",
-            "101",
-            "111",
             "0",
-            "212"
-          ],
-          [
-            "Total",
-            "101",
-            "111",
             "0",
-            "212"
+            "0",
+            "0"
+          ],
+          [
+            "Team 4",
+            "Lane 6 points won: 6.0"
+          ],
+          [
+            "Gary Standley",
+            "102",
+            "78",
+            "84",
+            "94",
+            "100",
+            "278"
+          ],
+          [
+            "Total",
+            "84",
+            "94",
+            "100",
+            "278"
           ]
         ],
         "emphasis": [
@@ -1824,136 +1773,8 @@
             false,
             false,
             false,
-            false,
-            false,
             false
           ],
-          [
-            false,
-            false,
-            false,
-            true,
-            true
-          ],
-          [
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            true,
-            true,
-            false,
-            false
-          ]
-        ],
-        "recapDetails": [
-          {},
-          {
-            "handicapSeries": "528",
-            "individualPoints": 0
-          },
-          {
-            "handicapSeries": "528",
-            "handicapGames": [
-              "149",
-              "173",
-              "206"
-            ],
-            "teamPoints": [
-              "0.0",
-              "0.0",
-              "2.0",
-              "4.0",
-              "4.0"
-            ]
-          },
-          {},
-          {
-            "handicapSeries": "374",
-            "individualPoints": 0
-          },
-          {
-            "handicapSeries": "374",
-            "handicapGames": [
-              "182",
-              "192",
-              "0"
-            ],
-            "teamPoints": [
-              "2.0",
-              "2.0",
-              "0.0",
-              "4.0",
-              "4.0"
-            ]
-          }
-        ],
-        "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F7%2F10377209302026f202607reprnt00.pdf&token=CfDJ8Fc9E-9grVlDj4tX-da8J6tK2KB-v1J0krxrvrtlrELy3sMEMegMSyQrypKY-Jy1whVhNRY3uiLz4s-7dtn-G76wuI8iPgzAzJDcAm0kNTLMnOyu6NLaQf-RPSkUiXLEX328wz8rcpWoz_YddaYSR9GLvBYyo16ayj1e5Bdm5VRRTHbSGf4VvpB8lV_i2i4T5RUqQ2xT2PDyDw0nchELBjiFHNk36Mdsj6Dah5t5Utsy"
-      },
-      {
-        "title": "Team Kenneally vs Team Parnell",
-        "headers": [
-          "Bowler",
-          "Average",
-          "Handicap",
-          "Game 1",
-          "Game 2",
-          "Game 3",
-          "Scratch series"
-        ],
-        "rows": [
-          [
-            "Team 3",
-            "Lane 7 points won: 6.0"
-          ],
-          [
-            "Karen Kennelly",
-            "87",
-            "90",
-            "70",
-            "97",
-            "103",
-            "270"
-          ],
-          [
-            "Total",
-            "70",
-            "97",
-            "103",
-            "270"
-          ],
-          [
-            "Team 2",
-            "Lane 8 points won: 0"
-          ],
-          [
-            "Mark Linquist",
-            "106",
-            "75",
-            "88",
-            "90",
-            "86",
-            "264"
-          ],
-          [
-            "Total",
-            "88",
-            "90",
-            "86",
-            "264"
-          ]
-        ],
-        "emphasis": [
           [
             false,
             false
@@ -1973,40 +1794,22 @@
             true,
             true,
             true
-          ],
-          [
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false
           ]
         ],
         "recapDetails": [
           {},
+          {},
+          {},
           {
-            "handicapSeries": "540",
+            "handicapSeries": "512",
             "individualPoints": 0
           },
           {
-            "handicapSeries": "540",
+            "handicapSeries": "512",
             "handicapGames": [
-              "160",
-              "187",
-              "193"
+              "162",
+              "172",
+              "178"
             ],
             "teamPoints": [
               "0.0",
@@ -2015,17 +1818,12 @@
               "6.0",
               "6.0"
             ]
-          },
-          {},
-          {
-            "officialRowUnavailable": true
-          },
-          {}
+          }
         ],
-        "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F7%2F10377209302026f202607reprnt00.pdf&token=CfDJ8Fc9E-9grVlDj4tX-da8J6tK2KB-v1J0krxrvrtlrELy3sMEMegMSyQrypKY-Jy1whVhNRY3uiLz4s-7dtn-G76wuI8iPgzAzJDcAm0kNTLMnOyu6NLaQf-RPSkUiXLEX328wz8rcpWoz_YddaYSR9GLvBYyo16ayj1e5Bdm5VRRTHbSGf4VvpB8lV_i2i4T5RUqQ2xT2PDyDw0nchELBjiFHNk36Mdsj6Dah5t5Utsy"
+        "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F8%2F10377210072026f202608reprnt00.pdf&token=CfDJ8Fc9E-9grVlDj4tX-da8J6vHotQTzDIRb9lZ3bgL1S7-Xc75uct-CWBGdbI_jdX_HzPG3CgU2GUuvOwEiQ5EpTPg935pTrLQGvBg2A4EqvrTPezBiGQWf9cfQLvMwcnj7ViVOliNu_dxgKNMMmP0NloqI_fPaf1PkNqsudlwLAgBCX5rwLRV-ASdmedd57ntOwOclMr5hAMyr6gHbeP3Qu-Xi9xsNv_t9bdh3JfR2Hbc"
       },
       {
-        "title": "Team Farrish vs Team Linquist",
+        "title": "Team Bailor H vs Team Farrish",
         "headers": [
           "Bowler",
           "Average",
@@ -2037,44 +1835,44 @@
         ],
         "rows": [
           [
-            "Team 13",
+            "Team 15",
             "Lane 7 points won: 6.0"
+          ],
+          [
+            "Bailor Henderson-Bryant",
+            "101",
+            "79",
+            "116",
+            "83",
+            "121",
+            "320"
+          ],
+          [
+            "Total",
+            "116",
+            "83",
+            "121",
+            "320"
+          ],
+          [
+            "Team 13",
+            "Lane 8 points won: 2.0"
           ],
           [
             "Pete Farrish",
             "79",
             "96",
-            "70",
-            "68",
-            "99",
-            "237"
-          ],
-          [
-            "Total",
-            "70",
-            "68",
-            "99",
-            "237"
-          ],
-          [
-            "Team 5",
-            "Lane 8 points won: 2.0"
-          ],
-          [
-            "Mark Linquist",
-            "106",
-            "75",
             "88",
             "90",
-            "86",
-            "264"
+            "50",
+            "228"
           ],
           [
             "Total",
             "88",
             "90",
-            "86",
-            "264"
+            "50",
+            "228"
           ]
         ],
         "emphasis": [
@@ -2122,15 +1920,15 @@
         "recapDetails": [
           {},
           {
-            "handicapSeries": "525",
+            "handicapSeries": "557",
             "individualPoints": 0
           },
           {
-            "handicapSeries": "525",
+            "handicapSeries": "557",
             "handicapGames": [
-              "166",
-              "164",
-              "195"
+              "195",
+              "162",
+              "200"
             ],
             "teamPoints": [
               "2.0",
@@ -2142,15 +1940,15 @@
           },
           {},
           {
-            "handicapSeries": "489",
+            "handicapSeries": "516",
             "individualPoints": 0
           },
           {
-            "handicapSeries": "489",
+            "handicapSeries": "516",
             "handicapGames": [
-              "163",
-              "165",
-              "161"
+              "184",
+              "186",
+              "146"
             ],
             "teamPoints": [
               "0.0",
@@ -2161,7 +1959,110 @@
             ]
           }
         ],
-        "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F7%2F10377209302026f202607reprnt00.pdf&token=CfDJ8Fc9E-9grVlDj4tX-da8J6tK2KB-v1J0krxrvrtlrELy3sMEMegMSyQrypKY-Jy1whVhNRY3uiLz4s-7dtn-G76wuI8iPgzAzJDcAm0kNTLMnOyu6NLaQf-RPSkUiXLEX328wz8rcpWoz_YddaYSR9GLvBYyo16ayj1e5Bdm5VRRTHbSGf4VvpB8lV_i2i4T5RUqQ2xT2PDyDw0nchELBjiFHNk36Mdsj6Dah5t5Utsy"
+        "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F8%2F10377210072026f202608reprnt00.pdf&token=CfDJ8Fc9E-9grVlDj4tX-da8J6vHotQTzDIRb9lZ3bgL1S7-Xc75uct-CWBGdbI_jdX_HzPG3CgU2GUuvOwEiQ5EpTPg935pTrLQGvBg2A4EqvrTPezBiGQWf9cfQLvMwcnj7ViVOliNu_dxgKNMMmP0NloqI_fPaf1PkNqsudlwLAgBCX5rwLRV-ASdmedd57ntOwOclMr5hAMyr6gHbeP3Qu-Xi9xsNv_t9bdh3JfR2Hbc"
+      },
+      {
+        "title": "CASPER vs Team Kenneally",
+        "headers": [
+          "Bowler",
+          "Average",
+          "Handicap",
+          "Game 1",
+          "Game 2",
+          "Game 3",
+          "Scratch series"
+        ],
+        "rows": [
+          [
+            "Team 16",
+            "Lane 7 points won: 0"
+          ],
+          [
+            "Total",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "Team 3",
+            "Lane 8 points won: 8.0"
+          ],
+          [
+            "Karen Kennelly",
+            "88",
+            "89",
+            "108",
+            "97",
+            "105",
+            "310"
+          ],
+          [
+            "Total",
+            "108",
+            "97",
+            "105",
+            "310"
+          ]
+        ],
+        "emphasis": [
+          [
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            true,
+            true,
+            true,
+            true
+          ]
+        ],
+        "recapDetails": [
+          {},
+          {},
+          {},
+          {
+            "handicapSeries": "577",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "577",
+            "handicapGames": [
+              "197",
+              "186",
+              "194"
+            ],
+            "teamPoints": [
+              "2.0",
+              "2.0",
+              "2.0",
+              "8.0",
+              "8.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F8%2F10377210072026f202608reprnt00.pdf&token=CfDJ8Fc9E-9grVlDj4tX-da8J6vHotQTzDIRb9lZ3bgL1S7-Xc75uct-CWBGdbI_jdX_HzPG3CgU2GUuvOwEiQ5EpTPg935pTrLQGvBg2A4EqvrTPezBiGQWf9cfQLvMwcnj7ViVOliNu_dxgKNMMmP0NloqI_fPaf1PkNqsudlwLAgBCX5rwLRV-ASdmedd57ntOwOclMr5hAMyr6gHbeP3Qu-Xi9xsNv_t9bdh3JfR2Hbc"
       }
     ],
     "lanes": [
@@ -14685,15 +14586,956 @@
           }
         ]
       }
+    },
+    {
+      "week": "8",
+      "sourceUpdated": "Oct 7, 2026",
+      "syncedAt": "2026-10-08T14:06:42.274Z",
+      "views": {
+        "recaps": [
+          {
+            "title": "Team Beav vs Team Squire",
+            "headers": [
+              "Bowler",
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
+            ],
+            "rows": [
+              [
+                "Team 6",
+                "Lane 1 points won: 0.0"
+              ],
+              [
+                "James Beversdorf",
+                "102",
+                "78",
+                "95",
+                "98",
+                "103",
+                "296"
+              ],
+              [
+                "Total",
+                "95",
+                "98",
+                "103",
+                "296"
+              ],
+              [
+                "Team 7",
+                "Lane 2 points won: 8.0"
+              ],
+              [
+                "Randy Squire",
+                "124",
+                "60",
+                "143",
+                "144",
+                "131",
+                "418"
+              ],
+              [
+                "Total",
+                "143",
+                "144",
+                "131",
+                "418"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                true,
+                true,
+                true,
+                true
+              ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "530",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "530",
+                "handicapGames": [
+                  "173",
+                  "176",
+                  "181"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "598",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "598",
+                "handicapGames": [
+                  "203",
+                  "204",
+                  "191"
+                ],
+                "teamPoints": [
+                  "2.0",
+                  "2.0",
+                  "2.0",
+                  "8.0",
+                  "8.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F8%2F10377210072026f202608reprnt00.pdf&token=CfDJ8Fc9E-9grVlDj4tX-da8J6vHotQTzDIRb9lZ3bgL1S7-Xc75uct-CWBGdbI_jdX_HzPG3CgU2GUuvOwEiQ5EpTPg935pTrLQGvBg2A4EqvrTPezBiGQWf9cfQLvMwcnj7ViVOliNu_dxgKNMMmP0NloqI_fPaf1PkNqsudlwLAgBCX5rwLRV-ASdmedd57ntOwOclMr5hAMyr6gHbeP3Qu-Xi9xsNv_t9bdh3JfR2Hbc"
+          },
+          {
+            "title": "Team Froendt vs Team Leavitt",
+            "headers": [
+              "Bowler",
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
+            ],
+            "rows": [
+              [
+                "Team 11",
+                "Lane 1 points won: 8.0"
+              ],
+              [
+                "Bruce Froendt",
+                "131",
+                "55",
+                "115",
+                "124",
+                "158",
+                "397"
+              ],
+              [
+                "Total",
+                "115",
+                "124",
+                "158",
+                "397"
+              ],
+              [
+                "Team 1",
+                "Lane 2 points won: 0.0"
+              ],
+              [
+                "Will Leavitt",
+                "153",
+                "37",
+                "126",
+                "138",
+                "113",
+                "377"
+              ],
+              [
+                "Total",
+                "126",
+                "138",
+                "113",
+                "377"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                true,
+                true,
+                true,
+                true
+              ],
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "562",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "562",
+                "handicapGames": [
+                  "170",
+                  "179",
+                  "213"
+                ],
+                "teamPoints": [
+                  "2.0",
+                  "2.0",
+                  "2.0",
+                  "8.0",
+                  "8.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "488",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "488",
+                "handicapGames": [
+                  "163",
+                  "175",
+                  "150"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F8%2F10377210072026f202608reprnt00.pdf&token=CfDJ8Fc9E-9grVlDj4tX-da8J6vHotQTzDIRb9lZ3bgL1S7-Xc75uct-CWBGdbI_jdX_HzPG3CgU2GUuvOwEiQ5EpTPg935pTrLQGvBg2A4EqvrTPezBiGQWf9cfQLvMwcnj7ViVOliNu_dxgKNMMmP0NloqI_fPaf1PkNqsudlwLAgBCX5rwLRV-ASdmedd57ntOwOclMr5hAMyr6gHbeP3Qu-Xi9xsNv_t9bdh3JfR2Hbc"
+          },
+          {
+            "title": "Team Parnell vs Team Lanna",
+            "headers": [
+              "Bowler",
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
+            ],
+            "rows": [
+              [
+                "Team 2",
+                "Lane 3 points won: 8.0"
+              ],
+              [
+                "Chris Parnell",
+                "151",
+                "39",
+                "168",
+                "200",
+                "177",
+                "545"
+              ],
+              [
+                "Total",
+                "168",
+                "200",
+                "177",
+                "545"
+              ],
+              [
+                "Team 14",
+                "Lane 4 points won: 0.0"
+              ],
+              [
+                "Lanna",
+                "99",
+                "80",
+                "76",
+                "104",
+                "84",
+                "264"
+              ],
+              [
+                "Total",
+                "76",
+                "104",
+                "84",
+                "264"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                true,
+                true,
+                true,
+                true
+              ],
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "662",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "662",
+                "handicapGames": [
+                  "207",
+                  "239",
+                  "216"
+                ],
+                "teamPoints": [
+                  "2.0",
+                  "2.0",
+                  "2.0",
+                  "8.0",
+                  "8.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "504",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "504",
+                "handicapGames": [
+                  "156",
+                  "184",
+                  "164"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F8%2F10377210072026f202608reprnt00.pdf&token=CfDJ8Fc9E-9grVlDj4tX-da8J6vHotQTzDIRb9lZ3bgL1S7-Xc75uct-CWBGdbI_jdX_HzPG3CgU2GUuvOwEiQ5EpTPg935pTrLQGvBg2A4EqvrTPezBiGQWf9cfQLvMwcnj7ViVOliNu_dxgKNMMmP0NloqI_fPaf1PkNqsudlwLAgBCX5rwLRV-ASdmedd57ntOwOclMr5hAMyr6gHbeP3Qu-Xi9xsNv_t9bdh3JfR2Hbc"
+          },
+          {
+            "title": "Team Borschel vs Team Lisa M",
+            "headers": [
+              "Bowler",
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
+            ],
+            "rows": [
+              [
+                "Team 8",
+                "Lane 3 points won: 0"
+              ],
+              [
+                "Total",
+                "0",
+                "0",
+                "0",
+                "0"
+              ],
+              [
+                "Team 9",
+                "Lane 4 points won: 0"
+              ],
+              [
+                "Total",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "recapDetails": [
+              {},
+              {},
+              {},
+              {}
+            ],
+            "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F8%2F10377210072026f202608reprnt00.pdf&token=CfDJ8Fc9E-9grVlDj4tX-da8J6vHotQTzDIRb9lZ3bgL1S7-Xc75uct-CWBGdbI_jdX_HzPG3CgU2GUuvOwEiQ5EpTPg935pTrLQGvBg2A4EqvrTPezBiGQWf9cfQLvMwcnj7ViVOliNu_dxgKNMMmP0NloqI_fPaf1PkNqsudlwLAgBCX5rwLRV-ASdmedd57ntOwOclMr5hAMyr6gHbeP3Qu-Xi9xsNv_t9bdh3JfR2Hbc"
+          },
+          {
+            "title": "Team Peg Leg vs Team Scott",
+            "headers": [
+              "Bowler",
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
+            ],
+            "rows": [
+              [
+                "Team 10",
+                "Lane 5 points won: 8.0"
+              ],
+              [
+                "Dave Nelson Jr.",
+                "147",
+                "42",
+                "158",
+                "170",
+                "178",
+                "506"
+              ],
+              [
+                "Total",
+                "158",
+                "170",
+                "178",
+                "506"
+              ],
+              [
+                "Team 12",
+                "Lane 6 points won: 0"
+              ],
+              [
+                "Total",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                true,
+                true,
+                true,
+                true
+              ],
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "632",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "632",
+                "handicapGames": [
+                  "200",
+                  "212",
+                  "220"
+                ],
+                "teamPoints": [
+                  "2.0",
+                  "2.0",
+                  "2.0",
+                  "8.0",
+                  "8.0"
+                ]
+              },
+              {},
+              {}
+            ],
+            "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F8%2F10377210072026f202608reprnt00.pdf&token=CfDJ8Fc9E-9grVlDj4tX-da8J6vHotQTzDIRb9lZ3bgL1S7-Xc75uct-CWBGdbI_jdX_HzPG3CgU2GUuvOwEiQ5EpTPg935pTrLQGvBg2A4EqvrTPezBiGQWf9cfQLvMwcnj7ViVOliNu_dxgKNMMmP0NloqI_fPaf1PkNqsudlwLAgBCX5rwLRV-ASdmedd57ntOwOclMr5hAMyr6gHbeP3Qu-Xi9xsNv_t9bdh3JfR2Hbc"
+          },
+          {
+            "title": "Team Linquist vs Team Standley",
+            "headers": [
+              "Bowler",
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
+            ],
+            "rows": [
+              [
+                "Team 5",
+                "Lane 5 points won: 0"
+              ],
+              [
+                "Total",
+                "0",
+                "0",
+                "0",
+                "0"
+              ],
+              [
+                "Team 4",
+                "Lane 6 points won: 6.0"
+              ],
+              [
+                "Gary Standley",
+                "102",
+                "78",
+                "84",
+                "94",
+                "100",
+                "278"
+              ],
+              [
+                "Total",
+                "84",
+                "94",
+                "100",
+                "278"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                true,
+                true,
+                true
+              ]
+            ],
+            "recapDetails": [
+              {},
+              {},
+              {},
+              {
+                "handicapSeries": "512",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "512",
+                "handicapGames": [
+                  "162",
+                  "172",
+                  "178"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "2.0",
+                  "2.0",
+                  "6.0",
+                  "6.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F8%2F10377210072026f202608reprnt00.pdf&token=CfDJ8Fc9E-9grVlDj4tX-da8J6vHotQTzDIRb9lZ3bgL1S7-Xc75uct-CWBGdbI_jdX_HzPG3CgU2GUuvOwEiQ5EpTPg935pTrLQGvBg2A4EqvrTPezBiGQWf9cfQLvMwcnj7ViVOliNu_dxgKNMMmP0NloqI_fPaf1PkNqsudlwLAgBCX5rwLRV-ASdmedd57ntOwOclMr5hAMyr6gHbeP3Qu-Xi9xsNv_t9bdh3JfR2Hbc"
+          },
+          {
+            "title": "Team Bailor H vs Team Farrish",
+            "headers": [
+              "Bowler",
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
+            ],
+            "rows": [
+              [
+                "Team 15",
+                "Lane 7 points won: 6.0"
+              ],
+              [
+                "Bailor Henderson-Bryant",
+                "101",
+                "79",
+                "116",
+                "83",
+                "121",
+                "320"
+              ],
+              [
+                "Total",
+                "116",
+                "83",
+                "121",
+                "320"
+              ],
+              [
+                "Team 13",
+                "Lane 8 points won: 2.0"
+              ],
+              [
+                "Pete Farrish",
+                "79",
+                "96",
+                "88",
+                "90",
+                "50",
+                "228"
+              ],
+              [
+                "Total",
+                "88",
+                "90",
+                "50",
+                "228"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                true,
+                false,
+                true,
+                true
+              ],
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                true,
+                false,
+                false
+              ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "557",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "557",
+                "handicapGames": [
+                  "195",
+                  "162",
+                  "200"
+                ],
+                "teamPoints": [
+                  "2.0",
+                  "0.0",
+                  "2.0",
+                  "6.0",
+                  "6.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "516",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "516",
+                "handicapGames": [
+                  "184",
+                  "186",
+                  "146"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "2.0",
+                  "0.0",
+                  "2.0",
+                  "2.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F8%2F10377210072026f202608reprnt00.pdf&token=CfDJ8Fc9E-9grVlDj4tX-da8J6vHotQTzDIRb9lZ3bgL1S7-Xc75uct-CWBGdbI_jdX_HzPG3CgU2GUuvOwEiQ5EpTPg935pTrLQGvBg2A4EqvrTPezBiGQWf9cfQLvMwcnj7ViVOliNu_dxgKNMMmP0NloqI_fPaf1PkNqsudlwLAgBCX5rwLRV-ASdmedd57ntOwOclMr5hAMyr6gHbeP3Qu-Xi9xsNv_t9bdh3JfR2Hbc"
+          },
+          {
+            "title": "CASPER vs Team Kenneally",
+            "headers": [
+              "Bowler",
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
+            ],
+            "rows": [
+              [
+                "Team 16",
+                "Lane 7 points won: 0"
+              ],
+              [
+                "Total",
+                "0",
+                "0",
+                "0",
+                "0"
+              ],
+              [
+                "Team 3",
+                "Lane 8 points won: 8.0"
+              ],
+              [
+                "Karen Kennelly",
+                "88",
+                "89",
+                "108",
+                "97",
+                "105",
+                "310"
+              ],
+              [
+                "Total",
+                "108",
+                "97",
+                "105",
+                "310"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                true,
+                true,
+                true,
+                true
+              ]
+            ],
+            "recapDetails": [
+              {},
+              {},
+              {},
+              {
+                "handicapSeries": "577",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "577",
+                "handicapGames": [
+                  "197",
+                  "186",
+                  "194"
+                ],
+                "teamPoints": [
+                  "2.0",
+                  "2.0",
+                  "2.0",
+                  "8.0",
+                  "8.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F8%2F10377210072026f202608reprnt00.pdf&token=CfDJ8Fc9E-9grVlDj4tX-da8J6vHotQTzDIRb9lZ3bgL1S7-Xc75uct-CWBGdbI_jdX_HzPG3CgU2GUuvOwEiQ5EpTPg935pTrLQGvBg2A4EqvrTPezBiGQWf9cfQLvMwcnj7ViVOliNu_dxgKNMMmP0NloqI_fPaf1PkNqsudlwLAgBCX5rwLRV-ASdmedd57ntOwOclMr5hAMyr6gHbeP3Qu-Xi9xsNv_t9bdh3JfR2Hbc"
+          }
+        ]
+      }
     }
   ],
   "sourceFingerprint": "ad8842606ce84e249566b315d6b2d08922caebb4783b597144c2dcc16217e4b4",
   "lastAttemptedAt": null,
   "lastCheckedAt": "2026-09-21T06:21:09.940Z",
-  "officialRecapHash": "e024818ee48a05983b9af8c3a760bf6830c1a8937a4e5c7be8a35d60ad8d5bef",
-  "officialRecapSyncedAt": "2026-10-07T14:35:50.076Z",
+  "officialRecapHash": "a6135d181234b6009c7e807ccaa72cebc19ff0e1a850705317dfb9c24d6a1c59",
+  "officialRecapSyncedAt": "2026-10-08T14:06:42.274Z",
   "officialRecapParserVersion": 7,
-  "officialRecapCheckedAt": "2026-10-07T14:35:50.076Z",
+  "officialRecapCheckedAt": "2026-10-08T14:06:42.274Z",
   "laneWeek": "9",
   "laneSourceUpdated": "10/14/2026"
 }
