@@ -555,7 +555,7 @@ try {
     catch { catalogById.set(league.id,{...league,sourceUpdated:league.updated||"Not posted",syncedAt:null,status:"awaiting-results",week:null,fingerprint:null,lastCompletedCycle:null,views:{standings:[],bowlers:[],recaps:[],lanes:[],rosters:[]}}); }
   }
   const catalog=[...catalogById.values()];
-  const catalogText=JSON.stringify(catalog,null,2)+"\n";
+  const catalogText=JSON.stringify(catalog)+"\n";
   let existingCatalog="";
   try { existingCatalog=await readFile(catalogFile,"utf8"); } catch {}
   if(catalogText!==existingCatalog) { await writeFile(catalogFile,catalogText,"utf8"); changed=true; }

@@ -81,6 +81,7 @@ jobs:
         shell: bash
         run: |
           set -o pipefail
+          refresh_started_at=$(date -u +%Y-%m-%dT%H:%M:%S.%3NZ)
           git config user.name "FrameLine League Sync"
           git config user.email "actions@users.noreply.github.com"
 
@@ -90,17 +91,30 @@ jobs:
           source_status=${PIPESTATUS[0]}
           set -e
           if (( source_status != 0 )); then
-            if grep -q 'blocking live report reads (HTTP 403)' sync-report.log; then
-              echo 'Live report API blocked; checking published official recap PDFs.' | tee -a sync-report.log
-              echo 'partial_failure=true' >> "$GITHUB_OUTPUT"
-            else
-              exit "$source_status"
-            fi
+            echo 'Live report read failed; continuing with published official PDFs.' | tee -a sync-report.log
+            echo 'partial_failure=true' >> "$GITHUB_OUTPUT"
           fi
+          failed_stages=()
+          set +e
           node scripts/sync-static-recaps.mjs 2>&1 | tee -a sync-report.log
+          recap_status=${PIPESTATUS[0]}
           node scripts/sync-static-standings.mjs 2>&1 | tee -a sync-report.log
+          standings_status=${PIPESTATUS[0]}
           node scripts/sync-static-lanes.mjs 2>&1 | tee -a sync-report.log
-          node scripts/sync-leaguepals.mjs | tee -a sync-report.log
+          lanes_status=${PIPESTATUS[0]}
+          node scripts/sync-leaguepals.mjs 2>&1 | tee -a sync-report.log
+          leaguepals_status=${PIPESTATUS[0]}
+          set -e
+          if (( recap_status != 0 )); then failed_stages+=(recaps); fi
+          if (( standings_status != 0 )); then failed_stages+=(standings); fi
+          if (( lanes_status != 0 )); then failed_stages+=(lanes); fi
+          if (( leaguepals_status != 0 )); then failed_stages+=(leaguepals); fi
+          if (( ${#failed_stages[@]} > 0 )); then
+            echo "partial_failure=true" >> "$GITHUB_OUTPUT"
+          fi
+          FRAMELINE_REFRESH_STARTED_AT="$refresh_started_at" \
+            FRAMELINE_FAILED_STAGES="$(IFS=,; echo "${failed_stages[*]}")" \
+            node scripts/record-fallback-refresh.mjs
           {
             echo "## FrameLine refresh report"
             echo '```'

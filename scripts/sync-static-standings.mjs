@@ -165,5 +165,5 @@ for (const listed of catalog.filter(league => (!requested || league.id === reque
     console.log(`${dryRun ? "Would update" : "Updated"} ${league.displayName} official report${retainedReason ? ` (Bowler List refreshed; standings retained: ${retainedReason})` : ""}`);
   } catch (error) { skipped++; console.warn(`Skipped ${listed.displayName} standings: ${error.message}`); }
 }
-if (updated && !dryRun) await writeFile(catalogFile, JSON.stringify(catalog, null, 2) + "\n");
+if (updated && !dryRun) await writeFile(catalogFile, JSON.stringify(catalog) + "\n");
 console.log(`Official standings pass: ${updated} updated, ${skipped} unchanged or unsafe, ${unavailable} without a posted PDF`);

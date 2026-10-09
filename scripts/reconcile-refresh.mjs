@@ -37,7 +37,7 @@ async function reconcile() {
  const catalog=mergeCatalog(base,local,upstream);
  const catalogById=new Map(catalog.map(entry=>[entry.id,entry]));
  for(const [name,entry] of snapshots) if(stamp(entry)>=stamp(catalogById.get(entry.id))) await writeFile(name,JSON.stringify(entry,null,2)+'\n');
- await writeFile(catalogPath,JSON.stringify(catalog,null,2)+'\n');
+ await writeFile(catalogPath,JSON.stringify(catalog)+'\n');
  await writeFile(historyPath,JSON.stringify(mergeRefreshHistory(history,JSON.parse(await readFile(historyPath,'utf8'))),null,2)+'\n');
  console.log('Reconciled verified refresh with the latest published catalog.');
 }

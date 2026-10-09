@@ -109,5 +109,5 @@ for (const [index, listed] of candidates.entries()) {
   }
   if ((index + 1) % 25 === 0) console.log(`Checked ${index + 1}/${candidates.length} leagues`);
 }
-if (updated && !dryRun) await writeFile(catalogFile, JSON.stringify(catalog, null, 2) + "\n");
+if (updated && !dryRun) await writeFile(catalogFile, JSON.stringify(catalog) + "\n");
 console.log(`Official recap pass: ${updated} updated (${partial} with clipped printed totals), ${skipped} unchanged or unsafe, ${unavailable} without a posted PDF`);

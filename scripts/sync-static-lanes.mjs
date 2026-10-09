@@ -95,5 +95,5 @@ for (let offset = 0; offset < candidates.length; offset += 6) {
     }
   }));
 }
-if (updated && !dryRun) await writeFile(catalogFile, JSON.stringify(catalog, null, 2) + "\n");
+if (updated && !dryRun) await writeFile(catalogFile, JSON.stringify(catalog) + "\n");
 console.log(`Official lane pass: ${updated} updated, ${unchanged} current, ${unavailable} unavailable`);

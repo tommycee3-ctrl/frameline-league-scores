@@ -104,7 +104,7 @@ for (const league of discovered) {
   catalogById.set(league.id, changed ? next : previous);
   console.log(`${changed ? "Refreshed" : "Current"} ${next.displayName}: ${next.views.standings[0].rows.length} teams, ${next.views.bowlers[0].rows.length} bowlers`);
 }
-await writeFile(catalogFile, JSON.stringify([...catalogById.values()], null, 2) + "\n", "utf8");
+await writeFile(catalogFile, JSON.stringify([...catalogById.values()]) + "\n", "utf8");
 const finishedAt = new Date();
 let refreshHistory = [];
 try { refreshHistory = JSON.parse(await readFile(refreshHistoryFile, "utf8")); } catch {}
