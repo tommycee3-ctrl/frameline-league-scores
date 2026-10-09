@@ -10,6 +10,22 @@ test('explicit lane-assignment bowler names are searchable without matching team
  assert.equal(tables[0].headers[2],'Name');assert.equal(tables[0].rows[0][2],'Alex Example');
 });
 
+test('an official recap discovers a substitute under the team they bowled for',()=>{
+ const league={id:'sub',displayName:'Sub League',views:{bowlers:[],rosters:[],lanes:[],standings:[{headers:['Team#','Team'],rows:[['4','Prestige World W']]}],recaps:[{sourceReport:'https://example.test/official.pdf',headers:['Bowler','Average','Game 1','Game 2','Game 3'],rows:[['Team 4','Lane 27 points won: 9'],['Tom Casella','227','203','245','235'],['Total','890','1021','940']]}]}};
+ const tables=bowlerIdentityTables(league);
+ assert.deepEqual(tables[0].headers,['Name','Average','Game 1','Game 2','Game 3','Team#']);
+ assert.deepEqual(tables[0].rows,[['Tom Casella','227','203','245','235','4']]);
+ const compiled=ts.transpileModule(fs.readFileSync('app/bowler-lookup.ts','utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2020}}).outputText;
+ const lookup={};new Function('exports','require',compiled)(lookup,name=>name.includes('identity')?exportsObject:{default:[league]});
+ const result=lookup.findBowlers('Tom Casella')[0].leagues[0];
+ assert.equal(result.id,'sub');assert.deepEqual(result.teams,['Prestige World W']);assert.equal(result.average,'227');
+});
+
+test('an unverified interactive recap cannot create a bowler identity',()=>{
+ const tables=bowlerIdentityTables({views:{recaps:[{headers:['Bowler','Game 1'],rows:[['Team 4','Lane 1'],['Example Person','200']]}]}});
+ assert.equal(tables.length,0);
+});
+
 test('lookup finds a roster-only league and resolves its team through lane assignments',()=>{
  const catalog=[{id:'new',displayName:'New league',centerName:'Maplewood Lanes',views:{bowlers:[],standings:[],rosters:[{team:'7',headers:['Name','Gms','Avg'],rows:[['Example, Alex','0','']]}],lanes:[{headers:['Lane','Team#','Team'],rows:[['2','7','Spare Team']]}]}}];
  const compiled=ts.transpileModule(fs.readFileSync('app/bowler-lookup.ts','utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2020}}).outputText;
