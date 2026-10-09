@@ -1,8 +1,17 @@
 [
   {
-    "startedAt": "2026-10-09T04:16:55.928Z",
-    "finishedAt": "2026-10-09T04:19:56.256Z",
-    "durationSeconds": 180,
+    "startedAt": "2026-10-09T04:23:52.008Z",
+    "finishedAt": "2026-10-09T04:24:50.019Z",
+    "durationSeconds": 58,
+    "mode": "LeaguePals leagues",
+    "leaguesChecked": 11,
+    "changeCount": 0,
+    "changes": []
+  },
+  {
+    "startedAt": "2026-10-09T04:22:16.758Z",
+    "finishedAt": "2026-10-09T04:24:50.384Z",
+    "durationSeconds": 154,
     "mode": "known leagues",
     "scope": "all",
     "source": "official report fallback",
@@ -37,6 +46,19 @@
         "sourceUpdated": "10/07/2026"
       }
     ]
+  },
+  {
+    "startedAt": "2026-10-09T04:16:55.928Z",
+    "finishedAt": "2026-10-09T04:19:56.256Z",
+    "durationSeconds": 180,
+    "mode": "known leagues",
+    "scope": "all",
+    "source": "official report fallback",
+    "checkedCount": 170,
+    "changeCount": 0,
+    "changes": [],
+    "failures": [],
+    "deferredLeagues": []
   },
   {
     "startedAt": "2026-10-08T20:15:58.400Z",
@@ -13359,29 +13381,5 @@
     "leaguesChecked": 9,
     "changeCount": 0,
     "changes": []
-  },
-  {
-    "startedAt": "2026-09-16T17:18:19.768Z",
-    "finishedAt": "2026-09-16T17:19:15.131Z",
-    "durationSeconds": 55,
-    "mode": "directory discovery",
-    "scope": "all",
-    "leaguesChecked": 170,
-    "changeCount": 0,
-    "changes": [],
-    "deferredLeagues": [],
-    "failures": []
-  },
-  {
-    "startedAt": "2026-09-16T17:13:04.941Z",
-    "finishedAt": "2026-09-16T17:13:59.188Z",
-    "durationSeconds": 54,
-    "mode": "directory discovery",
-    "scope": "all",
-    "leaguesChecked": 170,
-    "changeCount": 0,
-    "changes": [],
-    "deferredLeagues": [],
-    "failures": []
   }
 ]
