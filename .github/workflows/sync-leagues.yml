@@ -6,6 +6,10 @@ on:
     # completed cycle is 105 minutes old, recovering quickly from missed cron.
     - cron: "17 * * * *"
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/sync-leagues.yml"
 
 permissions:
   contents: write
