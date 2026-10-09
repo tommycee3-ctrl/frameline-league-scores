@@ -1,5 +1,27 @@
 [
   {
+    "startedAt": "2026-10-09T21:47:38.568Z",
+    "finishedAt": "2026-10-09T21:48:41.091Z",
+    "durationSeconds": 63,
+    "mode": "LeaguePals leagues",
+    "leaguesChecked": 11,
+    "changeCount": 0,
+    "changes": []
+  },
+  {
+    "startedAt": "2026-10-09T21:45:49.073Z",
+    "finishedAt": "2026-10-09T21:48:41.350Z",
+    "durationSeconds": 172,
+    "mode": "known leagues",
+    "scope": "all",
+    "source": "official report fallback",
+    "checkedCount": 170,
+    "changeCount": 0,
+    "changes": [],
+    "failures": [],
+    "deferredLeagues": []
+  },
+  {
     "startedAt": "2026-10-09T19:06:58.637Z",
     "finishedAt": "2026-10-09T19:08:07.791Z",
     "durationSeconds": 69,
@@ -12210,35 +12232,5 @@
     "changes": [],
     "deferredLeagues": [],
     "failures": []
-  },
-  {
-    "startedAt": "2026-09-17T01:36:20.558Z",
-    "finishedAt": "2026-09-17T01:37:14.235Z",
-    "durationSeconds": 54,
-    "mode": "directory discovery",
-    "scope": "all",
-    "leaguesChecked": 170,
-    "changeCount": 0,
-    "changes": [],
-    "deferredLeagues": [],
-    "failures": []
-  },
-  {
-    "startedAt": "2026-09-17T01:35:25.033Z",
-    "finishedAt": "2026-09-17T01:36:12.925Z",
-    "durationSeconds": 48,
-    "mode": "LeaguePals leagues",
-    "leaguesChecked": 9,
-    "changeCount": 1,
-    "changes": [
-      {
-        "id": "lp-6a904a51f09b7f8443e10c94",
-        "name": "Senior Citizens Mixed 26-27",
-        "area": "Council Bluffs",
-        "center": "Bowlero Council Bluffs - 763",
-        "week": "4",
-        "sourceUpdated": "08/26/2026"
-      }
-    ]
   }
 ]
