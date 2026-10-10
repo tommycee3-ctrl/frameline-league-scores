@@ -1,5 +1,27 @@
 [
   {
+    "startedAt": "2026-10-10T15:28:56.844Z",
+    "finishedAt": "2026-10-10T15:29:53.298Z",
+    "durationSeconds": 56,
+    "mode": "LeaguePals leagues",
+    "leaguesChecked": 11,
+    "changeCount": 0,
+    "changes": []
+  },
+  {
+    "startedAt": "2026-10-10T15:27:26.211Z",
+    "finishedAt": "2026-10-10T15:29:53.541Z",
+    "durationSeconds": 147,
+    "mode": "known leagues",
+    "scope": "all",
+    "source": "official report fallback",
+    "checkedCount": 170,
+    "changeCount": 0,
+    "changes": [],
+    "failures": [],
+    "deferredLeagues": []
+  },
+  {
     "startedAt": "2026-10-10T08:40:08.829Z",
     "finishedAt": "2026-10-10T08:41:14.887Z",
     "durationSeconds": 66,
@@ -11331,26 +11353,5 @@
         "error": "Command failed: python /home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py /tmp/frameline-recap-G5DKxT/recap.pdf\nTraceback (most recent call last):\n  File \"/home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py\", line 65, in <module>\n    print(json.dumps(parse(sys.argv[1])))\n                     ^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py\", line 61, in parse\n    raise ValueError(\"Unsupported or empty official recap PDF; no results inferred\")\nValueError: Unsupported or empty official recap PDF; no results inferred\n"
       }
     ]
-  },
-  {
-    "startedAt": "2026-09-17T07:25:15.295Z",
-    "finishedAt": "2026-09-17T07:26:00.928Z",
-    "durationSeconds": 46,
-    "mode": "LeaguePals leagues",
-    "leaguesChecked": 9,
-    "changeCount": 0,
-    "changes": []
-  },
-  {
-    "startedAt": "2026-09-17T06:40:59.975Z",
-    "finishedAt": "2026-09-17T06:41:54.118Z",
-    "durationSeconds": 54,
-    "mode": "directory discovery",
-    "scope": "all",
-    "leaguesChecked": 170,
-    "changeCount": 0,
-    "changes": [],
-    "deferredLeagues": [],
-    "failures": []
   }
 ]
