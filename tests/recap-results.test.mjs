@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync, readdirSync } from "node:fs";
-import { combinedReportedPoints, officialScoreClass, reportedPointTotals } from "../app/leagues/recap-results.ts";
+import { combinedReportedPoints, officialScoreClass, reportedPointTotals, sameBowlerName } from "../app/leagues/recap-results.ts";
 
 test("unmarked scores never imply wins, losses or ties", () => {
   assert.equal(officialScoreClass(false), "");
@@ -46,4 +46,19 @@ test("duplicate League Secretary accounts combine their official wins", () => {
     {week:"4",reportedWeekPoints:0},
     {week:"5",reportedWeekPoints:1.5},
   ]), ["1", "3", "4", "4", "5.5"]);
+});
+
+test("a clipped recap surname joins its full Bowler List identity", () => {
+  assert.equal(sameBowlerName("LAURA BEHRENS-MORR", "Behrens-Morris, Laura"), true);
+  assert.equal(sameBowlerName("LAURA BEHRENS-MORRIS", "Behrens-Morris, Laura"), true);
+  assert.equal(sameBowlerName("LAURA BEHRENS", "Behrens-Morris, Laura"), false);
+  assert.equal(sameBowlerName("LAURA BEHRENS-MORE", "Behrens-Morris, Laura"), false);
+});
+
+test("all seven Nationals recaps match Laura's canonical identity", () => {
+  const league = JSON.parse(readFileSync("public/data/leagues/132277.json"));
+  const weeks = league.history.filter(snapshot => snapshot.views.recaps?.some(table =>
+    table.rows.some(row => sameBowlerName(String(row[0] ?? ""), "Laura Behrens-Morris"))
+  )).map(snapshot => snapshot.week);
+  assert.deepEqual(weeks, ["1", "2", "3", "4", "5", "6", "7"]);
 });

@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { officialScoreClass, reportedPointTotals } from "./recap-results";
+import { officialScoreClass, reportedPointTotals, sameBowlerName } from "./recap-results";
 import { nationalsRosterByTeam } from "./nationals-rosters";
 
 export type Table = {
@@ -153,6 +153,14 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
   const activeViews = selectedSnapshot?.views ?? data.views;
   const standings = activeViews.standings?.[0] ?? data.views.standings?.[0];
   const bowlerTable = activeViews.bowlers?.[0] ?? data.views.bowlers?.[0];
+  const canonicalPersonName = (rawName: string) => {
+    const displayed = personName(rawName);
+    if (!bowlerTable) return displayed;
+    const matches = [...new Set(bowlerTable.rows
+      .map((row) => personName(cell(bowlerTable, row, "Name")))
+      .filter((candidate) => sameBowlerName(candidate, displayed)))];
+    return matches.length === 1 ? matches[0] : displayed;
+  };
   const teamName = (team: string) => {
     const row = standings?.rows.find(
       (item) => cell(standings, item, "Team#") === team,
@@ -172,7 +180,7 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
   const rosterForTeam = (team: string) => bowlersByTeam[team] ?? [];
   const currentBowlerRecord = (name: string) =>
     [...(bowlerTable?.rows ?? [])]
-      .filter((row) => personKey(cell(bowlerTable!, row, "Name")) === personKey(name))
+      .filter((row) => sameBowlerName(cell(bowlerTable!, row, "Name"), name))
       .sort(
         (left, right) =>
           Number(cell(bowlerTable!, right, "Games")) -
@@ -261,7 +269,7 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
         mergePerson(name, cell(currentRoster, person, "Avg"), cell(currentRoster, person, "HCP"));
     }
     for (const person of recapRows) {
-      const name = personName(person[0]);
+      const name = canonicalPersonName(person[0]);
       if (name)
         mergePerson(name, person[1], person[2]);
     }
@@ -284,7 +292,7 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
     if (!table) return null;
     const row = table.rows.find(
       (item) =>
-        personName(cell(table, item, "Name")) === name &&
+        sameBowlerName(cell(table, item, "Name"), name) &&
         cell(table, item, "Team#") === team,
     );
     if (!row) return null;
@@ -346,11 +354,11 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
     const isScratchLeague = data.type?.toLowerCase().includes("scratch");
     const seen = new Set<string>();
     const records = recapMatchups.flatMap((matchup) => matchup.flatMap((team) => team.rows.map((row) => {
-      const name = personName(row[0] ?? "");
+      const name = canonicalPersonName(row[0] ?? "");
       const key = `${team.team}-${name}`;
       if (!name || seen.has(key)) return null;
       seen.add(key);
-      const bowler = bowlerTable.rows.find((candidate) => personName(cell(bowlerTable, candidate, "Name")) === name && cell(bowlerTable, candidate, "Team#") === team.team);
+      const bowler = bowlerTable.rows.find((candidate) => sameBowlerName(cell(bowlerTable, candidate, "Name"), name) && cell(bowlerTable, candidate, "Team#") === team.team);
       const games = [0, 1, 2].map((game) => score(row, game)).filter((value) => value > 0);
       if (!games.length) return null;
       const handicap = Number(row[2] || (bowler ? cell(bowlerTable, bowler, "HCP") : 0)) || 0;
@@ -399,7 +407,7 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
       .map((snapshot) => {
         const table = snapshot.views.bowlers?.[0];
         const rows = table?.rows.filter(
-          (item) => personKey(cell(table, item, "Name")) === personKey(name),
+          (item) => sameBowlerName(cell(table, item, "Name"), name),
         ) ?? [];
         const row = [...rows].sort(
           (left, right) => Number(cell(table!, right, "Games")) - Number(cell(table!, left, "Games")),
@@ -408,7 +416,7 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
         let recapPoints: number | undefined;
         for (const matchup of parseRecapMatchups(snapshot.views.recaps ?? [])) {
           for (const entry of matchup) {
-            const foundIndex = entry.rows.findIndex((candidate) => personKey(candidate[0]) === personKey(name));
+            const foundIndex = entry.rows.findIndex((candidate) => sameBowlerName(candidate[0], name));
             if (foundIndex >= 0) {
               scoreRow = entry.rows[foundIndex];
               recapPoints = entry.details[foundIndex]?.individualPoints;
@@ -444,7 +452,7 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
     return history.at(-1)?.totalPoints || "—";
   };
   const bowlerAccountCount = (name: string) =>
-    bowlerTable?.rows.filter((row) => personName(cell(bowlerTable, row, "Name")) === name).length ?? 0;
+    bowlerTable?.rows.filter((row) => sameBowlerName(cell(bowlerTable, row, "Name"), name)).length ?? 0;
   const q = query.trim().toLowerCase();
   const week = selectedWeek;
   const laneTable = activeViews.lanes?.[0] ?? data.views.lanes?.[0];
@@ -641,7 +649,7 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                         <div className="team-roster">
                           {recap?.rows.length && !hasSeparateSourceEntries
                             ? recap.rows.map((person, index) => {
-                                const n = personName(person[0]),
+                                const n = canonicalPersonName(person[0]),
                                   source = roster.find(
                                     (r) =>
                                       personName(
@@ -794,7 +802,7 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                 const team = cell(bowlerTable, row, "Team#"),
                   name = personName(cell(bowlerTable, row, "Name"));
                 const scoreRow = recapByTeam[team]?.rows.find(
-                  (r) => personName(r[0]) === name,
+                  (r) => sameBowlerName(r[0], name),
                 );
                 const games = scoreRow?.slice(3, 6).filter(Boolean) ?? [];
                 const seasonGames = cell(bowlerTable, row, "Games");
@@ -926,7 +934,7 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                               return (
                                 <tr key={r}>
                                   <td>
-                                    <button className="bowler-history-trigger recap-bowler-trigger" onClick={() => setSelectedBowler({ name: personName(row[0]), team: team.team })}>{personName(row[0])}</button>
+                                    <button className="bowler-history-trigger recap-bowler-trigger" onClick={() => setSelectedBowler({ name: canonicalPersonName(row[0]), team: team.team })}>{canonicalPersonName(row[0])}</button>
                                   </td>
                                   <td>{row[1]}</td>
                                   <td>{row[2]}</td>
@@ -946,7 +954,7 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                                     {team.details[r]?.handicapSeries && <small className="recap-handicap">{team.details[r].handicapSeries} <span>HDCP</span></small>}
                                   </td>
                                   {hasIndividualPoints && <td className="individual-points">
-                                    <b>{bowlerHistory(personName(row[0]), team.team).find((entry) => String(entry.week) === selectedWeek)?.weekPoints ?? "—"}</b>
+                                    <b>{bowlerHistory(canonicalPersonName(row[0]), team.team).find((entry) => String(entry.week) === selectedWeek)?.weekPoints ?? "—"}</b>
                                     <small>official pts</small>
                                   </td>}
                                 </tr>
