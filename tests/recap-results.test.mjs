@@ -55,10 +55,10 @@ test("a clipped recap surname joins its full Bowler List identity", () => {
   assert.equal(sameBowlerName("LAURA BEHRENS-MORE", "Behrens-Morris, Laura"), false);
 });
 
-test("all seven Nationals recaps match Laura's canonical identity", () => {
+test("all posted Nationals recaps match Laura's canonical identity", () => {
   const league = JSON.parse(readFileSync("public/data/leagues/132277.json"));
   const weeks = league.history.filter(snapshot => snapshot.views.recaps?.some(table =>
     table.rows.some(row => sameBowlerName(String(row[0] ?? ""), "Laura Behrens-Morris"))
   )).map(snapshot => snapshot.week);
-  assert.deepEqual(weeks, ["1", "2", "3", "4", "5", "6", "7"]);
+  assert.deepEqual(weeks, ["1", "2", "3", "4", "5", "6", "7", "8"]);
 });
