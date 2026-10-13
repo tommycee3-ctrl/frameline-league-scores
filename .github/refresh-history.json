@@ -1,5 +1,52 @@
 [
   {
+    "startedAt": "2026-10-13T01:51:05.285Z",
+    "finishedAt": "2026-10-13T01:52:05.978Z",
+    "durationSeconds": 61,
+    "mode": "LeaguePals leagues",
+    "leaguesChecked": 10,
+    "changeCount": 3,
+    "changes": [
+      {
+        "id": "lp-6a80c263a09d0e0071913c83",
+        "name": "Saturday Night Mixed 26",
+        "area": "Council Bluffs",
+        "center": "Bowlero Council Bluffs - 763",
+        "week": "9",
+        "sourceUpdated": "08/14/2026"
+      },
+      {
+        "id": "lp-6a830b98fb63f671392e5ce5",
+        "name": "Monday Senior Men 26",
+        "area": "Council Bluffs",
+        "center": "Bowlero Council Bluffs - 763",
+        "week": "8",
+        "sourceUpdated": "08/16/2026"
+      },
+      {
+        "id": "lp-6a957f7bf97455b04731aa65",
+        "name": "Early Birds 26-27",
+        "area": "Council Bluffs",
+        "center": "Bowlero Council Bluffs - 763",
+        "week": "6",
+        "sourceUpdated": "08/30/2026"
+      }
+    ]
+  },
+  {
+    "startedAt": "2026-10-13T01:48:33.310Z",
+    "finishedAt": "2026-10-13T01:52:06.351Z",
+    "durationSeconds": 213,
+    "mode": "known leagues",
+    "scope": "all",
+    "source": "official report fallback",
+    "checkedCount": 170,
+    "changeCount": 0,
+    "changes": [],
+    "failures": [],
+    "deferredLeagues": []
+  },
+  {
     "startedAt": "2026-10-10T23:01:10.040Z",
     "finishedAt": "2026-10-10T23:02:05.084Z",
     "durationSeconds": 55,
@@ -10536,26 +10583,5 @@
         "error": "Command failed: python /home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py /tmp/frameline-recap-mWfheJ/recap.pdf\nTraceback (most recent call last):\n  File \"/home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py\", line 65, in <module>\n    print(json.dumps(parse(sys.argv[1])))\n                     ^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py\", line 61, in parse\n    raise ValueError(\"Unsupported or empty official recap PDF; no results inferred\")\nValueError: Unsupported or empty official recap PDF; no results inferred\n"
       }
     ]
-  },
-  {
-    "startedAt": "2026-09-17T12:55:24.562Z",
-    "finishedAt": "2026-09-17T12:56:04.748Z",
-    "durationSeconds": 40,
-    "mode": "LeaguePals leagues",
-    "leaguesChecked": 9,
-    "changeCount": 0,
-    "changes": []
-  },
-  {
-    "startedAt": "2026-09-17T12:07:07.428Z",
-    "finishedAt": "2026-09-17T12:08:01.186Z",
-    "durationSeconds": 54,
-    "mode": "directory discovery",
-    "scope": "all",
-    "leaguesChecked": 170,
-    "changeCount": 0,
-    "changes": [],
-    "deferredLeagues": [],
-    "failures": []
   }
 ]
