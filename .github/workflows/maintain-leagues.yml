@@ -13,8 +13,8 @@ permissions:
   id-token: write
 
 concurrency:
-  group: frameline-league-data
-  cancel-in-progress: false
+  group: frameline-league-maintenance
+  cancel-in-progress: true
 
 jobs:
   maintain:

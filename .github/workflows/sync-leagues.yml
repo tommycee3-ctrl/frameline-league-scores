@@ -18,7 +18,9 @@ permissions:
 
 concurrency:
   group: frameline-league-data
-  cancel-in-progress: false
+  # A Pages environment job can remain in "waiting" indefinitely. Let the
+  # next scheduled refresh replace that stale run instead of queueing forever.
+  cancel-in-progress: true
 
 jobs:
   sync:
