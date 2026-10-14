@@ -201,27 +201,6 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
       ),
     [activeViews.rosters, data.views.rosters],
   );
-  const positionRanks = useMemo(() => {
-    if (data.id !== "148625") return [];
-    const latestRosters = data.views.rosters ?? [];
-    return ["1", "2", "3"].map((position) => ({
-      position,
-      bowlers: latestRosters
-        .filter((table) => table.team)
-        .flatMap((table) => table.rows
-          .filter((row) => cell(table, row, "Pos") === position)
-          .map((row) => ({
-            name: personName(cell(table, row, "Name")),
-            average: Number(cell(table, row, "Avg")),
-            games: Number(cell(table, row, "Gms")),
-            team: table.team!,
-            teamName: teamName(table.team!),
-          })))
-        .filter((bowler) => bowler.name && !/vacant/i.test(bowler.name) && Number.isFinite(bowler.average))
-        .sort((left, right) => right.average - left.average || left.name.localeCompare(right.name))
-        .slice(0, 5),
-    }));
-  }, [data]);
   const recapByTeam = useMemo(() => {
     const result: Record<
       string,
@@ -451,6 +430,31 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
     const history = bowlerHistory(name);
     return history.at(-1)?.totalPoints || "—";
   };
+  const positionRanks = (() => {
+    if (data.id !== "148625") return [];
+    const latestBowlerTable = data.views.bowlers?.[0] ?? bowlerTable;
+    if (!latestBowlerTable) return [];
+    return ["1", "2", "3"].map((position) => ({
+      position,
+      bowlers: latestBowlerTable.rows
+        .filter((row) => (cell(latestBowlerTable, row, "Pos#") || cell(latestBowlerTable, row, "Pos")) === position)
+        .map((row) => {
+          const name = personName(cell(latestBowlerTable, row, "Name"));
+          const team = cell(latestBowlerTable, row, "Team#");
+          return {
+            name,
+            average: Number(cell(latestBowlerTable, row, "Avg")),
+            games: Number(cell(latestBowlerTable, row, "Games") || cell(latestBowlerTable, row, "Gms")),
+            points: bowlerPointTotal(name, team),
+            team,
+            teamName: cell(latestBowlerTable, row, "Team") || teamName(team),
+          };
+        })
+        .filter((bowler) => bowler.name && !/vacant/i.test(bowler.name) && Number.isFinite(bowler.average))
+        .sort((left, right) => right.average - left.average || left.name.localeCompare(right.name))
+        .slice(0, 5),
+    }));
+  })();
   const bowlerAccountCount = (name: string) =>
     bowlerTable?.rows.filter((row) => sameBowlerName(cell(bowlerTable, row, "Name"), name)).length ?? 0;
   const q = query.trim().toLowerCase();
@@ -774,6 +778,11 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                           <small>Current average</small>
                           <strong>{bowler.average}</strong>
                           <small>{bowler.games} total games</small>
+                        </span>
+                        <span>
+                          <small>Points won</small>
+                          <strong>{bowler.points}</strong>
+                          <small>Season total</small>
                         </span>
                       </li>
                     ))}
