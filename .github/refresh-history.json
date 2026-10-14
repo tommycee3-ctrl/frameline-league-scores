@@ -1,5 +1,36 @@
 [
   {
+    "startedAt": "2026-10-14T02:01:28.716Z",
+    "finishedAt": "2026-10-14T02:02:36.208Z",
+    "durationSeconds": 67,
+    "mode": "LeaguePals leagues",
+    "leaguesChecked": 11,
+    "changeCount": 1,
+    "changes": [
+      {
+        "id": "lp-6a8f046d53c5f51b7b86e8f1",
+        "name": "Cornbelt 26-27",
+        "area": "Council Bluffs",
+        "center": "Bowlero Council Bluffs - 763",
+        "week": "7",
+        "sourceUpdated": "08/25/2026"
+      }
+    ]
+  },
+  {
+    "startedAt": "2026-10-14T01:59:33.642Z",
+    "finishedAt": "2026-10-14T02:02:36.586Z",
+    "durationSeconds": 183,
+    "mode": "known leagues",
+    "scope": "all",
+    "source": "official report fallback",
+    "checkedCount": 170,
+    "changeCount": 0,
+    "changes": [],
+    "failures": [],
+    "deferredLeagues": []
+  },
+  {
     "startedAt": "2026-10-13T22:55:35.822Z",
     "finishedAt": "2026-10-13T22:56:32.586Z",
     "durationSeconds": 57,
@@ -9035,29 +9066,5 @@
         "error": "Command failed: python /home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py /tmp/frameline-recap-7cVvNk/recap.pdf\nTraceback (most recent call last):\n  File \"/home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py\", line 65, in <module>\n    print(json.dumps(parse(sys.argv[1])))\n                     ^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/frameline-league-scores/frameline-league-scores/scripts/parse-recap-pdf.py\", line 61, in parse\n    raise ValueError(\"Unsupported or empty official recap PDF; no results inferred\")\nValueError: Unsupported or empty official recap PDF; no results inferred\n"
       }
     ]
-  },
-  {
-    "startedAt": "2026-09-17T23:07:25.150Z",
-    "finishedAt": "2026-09-17T23:08:18.336Z",
-    "durationSeconds": 53,
-    "mode": "directory discovery",
-    "scope": "all",
-    "leaguesChecked": 170,
-    "changeCount": 0,
-    "changes": [],
-    "deferredLeagues": [],
-    "failures": []
-  },
-  {
-    "startedAt": "2026-09-17T21:39:17.989Z",
-    "finishedAt": "2026-09-17T21:40:11.816Z",
-    "durationSeconds": 54,
-    "mode": "directory discovery",
-    "scope": "all",
-    "leaguesChecked": 170,
-    "changeCount": 0,
-    "changes": [],
-    "deferredLeagues": [],
-    "failures": []
   }
 ]
