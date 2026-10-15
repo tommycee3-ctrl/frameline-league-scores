@@ -1,5 +1,44 @@
 [
   {
+    "startedAt": "2026-10-15T20:49:08.998Z",
+    "finishedAt": "2026-10-15T20:50:10.646Z",
+    "durationSeconds": 62,
+    "mode": "LeaguePals leagues",
+    "leaguesChecked": 11,
+    "changeCount": 2,
+    "changes": [
+      {
+        "id": "lp-6a904a51f09b7f8443e10c94",
+        "name": "Senior Citizens Mixed 26-27",
+        "area": "Council Bluffs",
+        "center": "Bowlero Council Bluffs - 763",
+        "week": "8",
+        "sourceUpdated": "08/26/2026"
+      },
+      {
+        "id": "lp-6ac7fb9b2d694f31242ce3a2",
+        "name": "Regal Six Packers 26-27",
+        "area": "Council Bluffs",
+        "center": "Bowlero Council Bluffs - 763",
+        "week": "2",
+        "sourceUpdated": "10/07/2026"
+      }
+    ]
+  },
+  {
+    "startedAt": "2026-10-15T20:34:37.740Z",
+    "finishedAt": "2026-10-15T20:50:11.025Z",
+    "durationSeconds": 933,
+    "mode": "known leagues",
+    "scope": "all",
+    "source": "official report fallback",
+    "checkedCount": 170,
+    "changeCount": 0,
+    "changes": [],
+    "failures": [],
+    "deferredLeagues": []
+  },
+  {
     "startedAt": "2026-10-15T17:27:00.685Z",
     "finishedAt": "2026-10-15T17:28:39.288Z",
     "durationSeconds": 99,
@@ -7571,52 +7610,6 @@
     "leaguesChecked": 170,
     "changeCount": 0,
     "changes": [],
-    "deferredLeagues": [],
-    "failures": []
-  },
-  {
-    "startedAt": "2026-09-18T12:56:50.384Z",
-    "finishedAt": "2026-09-18T12:57:31.313Z",
-    "durationSeconds": 41,
-    "mode": "LeaguePals leagues",
-    "leaguesChecked": 9,
-    "changeCount": 0,
-    "changes": []
-  },
-  {
-    "startedAt": "2026-09-18T11:53:35.882Z",
-    "finishedAt": "2026-09-18T12:56:50.289Z",
-    "durationSeconds": 3794,
-    "mode": "league discovery",
-    "scope": "all",
-    "leaguesChecked": 170,
-    "changeCount": 3,
-    "changes": [
-      {
-        "id": "55990",
-        "name": "Country Gents 2026-2027",
-        "area": "Omaha",
-        "center": "Mockingbird Lanes",
-        "week": "5",
-        "sourceUpdated": "Sep 18, 2026"
-      },
-      {
-        "id": "55988",
-        "name": "Thursday Seniors 2026-2027",
-        "area": "Omaha",
-        "center": "Mockingbird Lanes",
-        "week": "5",
-        "sourceUpdated": "Sep 17, 2026"
-      },
-      {
-        "id": "45904",
-        "name": "Redwoods 1 26",
-        "area": "Omaha",
-        "center": "Maplewood Lanes",
-        "week": "3",
-        "sourceUpdated": "Sep 1, 2026"
-      }
-    ],
     "deferredLeagues": [],
     "failures": []
   }
