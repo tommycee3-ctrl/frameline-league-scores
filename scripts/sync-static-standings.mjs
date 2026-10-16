@@ -73,7 +73,11 @@ function mergeStandings(league, official) {
   const reportWeek = Number(official.reportWeek), currentWeek = Number(league.week);
   if (reportWeek !== currentWeek && reportWeek !== currentWeek + 1)
     throw new Error(`standings PDF period ${reportWeek} does not match recap Week ${currentWeek}`);
-  const byTeam = new Map(official.teams.map(team => [team.team, team]));
+  // Scratch draft reports print the BYE as a numbered zero-score team. It is
+  // a schedule placeholder and must not block all real team point updates.
+  const byTeam = new Map(official.teams
+    .filter(team => !/^bye\b/i.test(String(team.printedName ?? "").trim()))
+    .map(team => [team.team, team]));
   const publishedTeams = new Set(original.rows.map(row => row[2]));
   const unknownOfficialTeam = [...byTeam.keys()].find(team => !publishedTeams.has(team));
   const activeMissingTeam = original.rows.find(row => !byTeam.has(row[2]) &&
@@ -154,7 +158,12 @@ for (const listed of catalog.filter(league => (!requested || league.id === reque
       if (!bowlers) throw error;
       retainedReason = error.message;
     }
-    const next = { ...league, views: { ...league.views, ...views }, officialStandingsHash: report.hash, officialStandingsParserVersion: parserVersion, officialStandingsSyncedAt: new Date().toISOString() };
+    const next = { ...league, views: { ...league.views, ...views },
+      // Retried on every refresh until the official standings themselves can
+      // be merged safely; refreshing only the Bowler List is not completion.
+      officialStandingsHash: retainedReason ? league.officialStandingsHash : report.hash,
+      officialStandingsParserVersion: retainedReason ? league.officialStandingsParserVersion : parserVersion,
+      officialStandingsSyncedAt: retainedReason ? league.officialStandingsSyncedAt : new Date().toISOString() };
     if (Array.isArray(next.history)) next.history = next.history.map(entry => String(entry.week) === String(league.week) ? { ...entry, views: { ...entry.views, ...views } } : entry);
     if (!dryRun) {
       await writeFile(file, JSON.stringify(next, null, 2) + "\n");
