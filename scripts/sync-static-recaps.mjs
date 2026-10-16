@@ -18,6 +18,9 @@ const force = process.argv.includes("--force");
 const seasonCode = { Fall: "f", Summer: "u", Spring: "s", Winter: "w" };
 const parserVersion = 7;
 let updated = 0, partial = 0, skipped = 0, unavailable = 0;
+const chicagoDate = (value = new Date()) => new Intl.DateTimeFormat("en-US", {
+  month: "short", day: "numeric", year: "numeric", timeZone: "America/Chicago",
+}).format(value);
 
 async function reportFor(league) {
   const sourceFetch = createSourceSession();
@@ -64,7 +67,9 @@ for (const [index, listed] of candidates.entries()) {
     if (unchanged && !force) {
       const lastVerified = Date.parse(league.officialRecapCheckedAt ?? league.officialRecapSyncedAt ?? "");
       if (Number.isFinite(lastVerified) && Date.now() - lastVerified < 24 * 60 * 60 * 1000) { skipped++; continue; }
-      const checked = { ...league, officialRecapCheckedAt: new Date().toISOString() };
+      const printedDate = report.selectedLabel.match(/\b(\d{1,2})\/(\d{1,2})\/(\d{4})\b/);
+      const reportDate = printedDate ? new Date(Date.UTC(Number(printedDate[3]), Number(printedDate[1]) - 1, Number(printedDate[2]))).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" }) : league.reportDate;
+      const checked = { ...league, reportDate, officialRecapCheckedAt: new Date().toISOString() };
       if (!dryRun) {
         await writeFile(file, JSON.stringify(checked, null, 2) + "\n");
         const catalogIndex = catalog.findIndex(item => item.id === league.id);
@@ -88,11 +93,14 @@ for (const [index, listed] of candidates.entries()) {
     const now = new Date().toISOString();
     const incomplete = recaps.some(table => table.officialTotalsComplete === false);
     const printedDate = report.selectedLabel.match(/\b(\d{1,2})\/(\d{1,2})\/(\d{4})\b/);
-    const sourceUpdated = printedDate ? new Date(Date.UTC(Number(printedDate[3]), Number(printedDate[1]) - 1, Number(printedDate[2]))).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" }) : league.sourceUpdated;
-    const next = { ...league, week: report.week, sourceUpdated: newWeek ? sourceUpdated : league.sourceUpdated, views: { ...league.views, recaps }, officialRecapHash: report.hash, officialRecapParserVersion: parserVersion, officialRecapSyncedAt: now, officialRecapCheckedAt: now };
+    const reportDate = printedDate ? new Date(Date.UTC(Number(printedDate[3]), Number(printedDate[1]) - 1, Number(printedDate[2]))).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" }) : league.reportDate;
+    // The selector date is the night bowled, not League Secretary's update
+    // date. A changed official PDF proves a new source publication now.
+    const sourceUpdated = chicagoDate(new Date(now));
+    const next = { ...league, week: report.week, reportDate, sourceUpdated, views: { ...league.views, recaps }, officialRecapHash: report.hash, officialRecapParserVersion: parserVersion, officialRecapSyncedAt: now, officialRecapCheckedAt: now };
     if (Array.isArray(next.history)) {
       next.history = newWeek
-        ? [...next.history.filter(entry => String(entry.week) !== report.week), { week: report.week, sourceUpdated, syncedAt: now, views: { recaps } }]
+        ? [...next.history.filter(entry => String(entry.week) !== report.week), { week: report.week, sourceUpdated: reportDate ?? sourceUpdated, syncedAt: now, views: { recaps } }]
         : next.history.map(entry => String(entry.week) === report.week ? { ...entry, views: { ...entry.views, recaps } } : entry);
     }
     if (!dryRun) {

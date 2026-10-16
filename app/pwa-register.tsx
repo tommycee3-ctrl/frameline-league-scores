@@ -16,6 +16,7 @@ const signature = (entries: typeof leagueCatalog) => JSON.stringify(entries.map(
     current.fingerprint,
     current.sourceFingerprint,
     current.updated,
+    current.sourceUpdated,
     current.week,
     current.officialRecapHash,
     current.officialStandingsHash,
