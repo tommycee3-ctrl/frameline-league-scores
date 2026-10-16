@@ -3,8 +3,8 @@ name: Verify league refresh cadence
 on:
   schedule:
     # Independent safety check. If GitHub misses the regular two-hour schedule,
-    # this workflow restarts it once the last completed refresh is stale.
-    - cron: "52 * * * *"
+    # multiple staggered attempts restart it once the last completed refresh is stale.
+    - cron: "2,17,32,47 * * * *"
   workflow_dispatch:
   push:
     branches: [main]
@@ -37,7 +37,7 @@ jobs:
             now_epoch=$(date +%s)
             age_minutes=$(( (now_epoch - latest_epoch) / 60 ))
             echo "Last completed league refresh: $latest ($age_minutes minutes ago)."
-            if (( age_minutes < 105 )); then
+            if (( age_minutes < 95 )); then
               stale=false
             fi
           else
@@ -59,15 +59,6 @@ jobs:
             echo "A league refresh is already queued or running; no duplicate dispatch needed."
             exit 0
           fi
-          last_run=$(jq -r '.workflow_runs[0].created_at // empty' <<< "$runs")
-          if [[ -n "$last_run" ]]; then
-            run_age_minutes=$(( ($(date +%s) - $(date -d "$last_run" +%s)) / 60 ))
-            if (( run_age_minutes < 105 )); then
-              echo "The backend ran $run_age_minutes minutes ago; the next two-hour cycle will retry any source failure."
-              exit 0
-            fi
-          fi
-
           echo "The refresh is stale. Dispatching the independent score-sync workflow."
           gh api --method POST \
             "repos/${GITHUB_REPOSITORY}/actions/workflows/sync-leagues.yml/dispatches" \

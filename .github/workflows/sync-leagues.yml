@@ -2,9 +2,10 @@ name: Sync league results
 
 on:
   schedule:
-    # Check hourly. The freshness gate below performs a refresh once the last
-    # completed cycle is 105 minutes old, recovering quickly from missed cron.
-    - cron: "17 * * * *"
+    # GitHub can delay or drop individual scheduled events. Four staggered
+    # attempts per hour keep the two-hour refresh SLA intact; the freshness
+    # gate below skips attempts when a completed refresh is still current.
+    - cron: "7,22,37,52 * * * *"
   workflow_dispatch:
   push:
     branches: [main]
@@ -61,7 +62,7 @@ jobs:
           age_minutes=$(( (now_epoch - latest_epoch) / 60 ))
           echo "Last completed refresh was $age_minutes minutes ago."
           pending=$(jq -r '[.[] | select((.mode == "known leagues" or .mode == "league discovery") and ((.scope // "all") == "all"))][0].deferredLeagues | length' .github/refresh-history.json 2>/dev/null || echo 0)
-          if (( age_minutes < 105 && pending == 0 )); then
+          if (( age_minutes < 95 && pending == 0 )); then
             echo "run=false" >> "$GITHUB_OUTPUT"
             echo "League data is still fresh; skipping this duplicate trigger."
           else
