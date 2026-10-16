@@ -3,7 +3,26 @@
 import { useEffect } from "react";
 import leagueCatalog from "../public/data/leagues/all.json";
 
-const signature = (entries: typeof leagueCatalog) => JSON.stringify(entries.map(league => [league.id, league.fingerprint, league.updated, league.week]).sort((a, b) => String(a[0]).localeCompare(String(b[0]))));
+const signature = (entries: typeof leagueCatalog) => JSON.stringify(entries.map(league => {
+  const current = league as typeof league & {
+    sourceFingerprint?: string;
+    officialRecapHash?: string;
+    officialStandingsHash?: string;
+    laneWeek?: string | null;
+    laneSourceUpdated?: string | null;
+  };
+  return [
+    current.id,
+    current.fingerprint,
+    current.sourceFingerprint,
+    current.updated,
+    current.week,
+    current.officialRecapHash,
+    current.officialStandingsHash,
+    current.laneWeek,
+    current.laneSourceUpdated,
+  ];
+}).sort((a, b) => String(a[0]).localeCompare(String(b[0]))));
 
 export function PwaRegister() {
   useEffect(() => {
@@ -19,9 +38,14 @@ export function PwaRegister() {
         const entries = await response.json();
         if (!Array.isArray(entries) || !entries.length || stopped) return;
         const latest = signature(entries);
+        const bundled = signature(leagueCatalog);
         const key = "frameline-last-auto-refresh";
-        if (latest !== signature(leagueCatalog) && sessionStorage.getItem(key) !== latest) {
-          sessionStorage.setItem(key, latest);
+        const attempt = `${bundled}=>${latest}`;
+        const prior = JSON.parse(sessionStorage.getItem(key) || "null") as { attempt?: string; at?: number } | null;
+        // Retry a stale installed app after five minutes. A single cached
+        // navigation must not suppress League Secretary updates indefinitely.
+        if (latest !== bundled && (prior?.attempt !== attempt || Date.now() - (prior.at ?? 0) >= 5 * 60 * 1000)) {
+          sessionStorage.setItem(key, JSON.stringify({ attempt, at: Date.now() }));
           window.location.reload();
         }
       } catch {

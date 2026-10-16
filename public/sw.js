@@ -1,4 +1,4 @@
-const CACHE_NAME = "frameline-shell-v3";
+const CACHE_NAME = "frameline-shell-v4";
 const SHELL = ["./", "./leagues/", "./manifest.webmanifest", "./frameline-mark.svg", "./icon-192.png", "./icon-512.png"];
 
 self.addEventListener("install", event => {
