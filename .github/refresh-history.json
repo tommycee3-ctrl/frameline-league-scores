@@ -1,5 +1,44 @@
 [
   {
+    "startedAt": "2026-10-16T01:30:17.317Z",
+    "finishedAt": "2026-10-16T01:31:21.372Z",
+    "durationSeconds": 64,
+    "mode": "LeaguePals leagues",
+    "leaguesChecked": 11,
+    "changeCount": 2,
+    "changes": [
+      {
+        "id": "lp-6a970dff34a4afbf5c794a8f",
+        "name": "Friday Nighters 26",
+        "area": "Council Bluffs",
+        "center": "Bowlero Council Bluffs - 763",
+        "week": "9",
+        "sourceUpdated": "08/20/2026"
+      },
+      {
+        "id": "lp-6ac7fb9b2d694f31242ce3a2",
+        "name": "Regal Six Packers 26-27",
+        "area": "Council Bluffs",
+        "center": "Bowlero Council Bluffs - 763",
+        "week": "2",
+        "sourceUpdated": "10/07/2026"
+      }
+    ]
+  },
+  {
+    "startedAt": "2026-10-16T01:28:42.671Z",
+    "finishedAt": "2026-10-16T01:31:21.758Z",
+    "durationSeconds": 159,
+    "mode": "known leagues",
+    "scope": "all",
+    "source": "official report fallback",
+    "checkedCount": 170,
+    "changeCount": 0,
+    "changes": [],
+    "failures": [],
+    "deferredLeagues": []
+  },
+  {
     "startedAt": "2026-10-15T20:49:08.998Z",
     "finishedAt": "2026-10-15T20:50:10.646Z",
     "durationSeconds": 62,
@@ -7586,30 +7625,6 @@
         "sourceUpdated": "Sep 18, 2026"
       }
     ],
-    "deferredLeagues": [],
-    "failures": []
-  },
-  {
-    "startedAt": "2026-09-18T16:44:43.342Z",
-    "finishedAt": "2026-09-18T16:45:36.943Z",
-    "durationSeconds": 54,
-    "mode": "directory discovery",
-    "scope": "all",
-    "leaguesChecked": 170,
-    "changeCount": 0,
-    "changes": [],
-    "deferredLeagues": [],
-    "failures": []
-  },
-  {
-    "startedAt": "2026-09-18T16:38:23.100Z",
-    "finishedAt": "2026-09-18T16:39:18.197Z",
-    "durationSeconds": 55,
-    "mode": "directory discovery",
-    "scope": "all",
-    "leaguesChecked": 170,
-    "changeCount": 0,
-    "changes": [],
     "deferredLeagues": [],
     "failures": []
   }
