@@ -1,5 +1,27 @@
 [
   {
+    "startedAt": "2026-10-16T13:32:16.217Z",
+    "finishedAt": "2026-10-16T13:33:19.374Z",
+    "durationSeconds": 63,
+    "mode": "LeaguePals leagues",
+    "leaguesChecked": 11,
+    "changeCount": 0,
+    "changes": []
+  },
+  {
+    "startedAt": "2026-10-16T13:30:13.969Z",
+    "finishedAt": "2026-10-16T13:33:19.739Z",
+    "durationSeconds": 186,
+    "mode": "known leagues",
+    "scope": "all",
+    "source": "official report fallback",
+    "checkedCount": 170,
+    "changeCount": 0,
+    "changes": [],
+    "failures": [],
+    "deferredLeagues": []
+  },
+  {
     "startedAt": "2026-10-16T08:34:54.645Z",
     "finishedAt": "2026-10-16T08:36:06.771Z",
     "durationSeconds": 72,
@@ -7504,86 +7526,5 @@
     "leaguesChecked": 9,
     "changeCount": 0,
     "changes": []
-  },
-  {
-    "startedAt": "2026-09-18T21:53:11.242Z",
-    "finishedAt": "2026-09-18T21:54:04.625Z",
-    "durationSeconds": 53,
-    "mode": "directory discovery",
-    "scope": "all",
-    "leaguesChecked": 170,
-    "changeCount": 0,
-    "changes": [],
-    "deferredLeagues": [],
-    "failures": []
-  },
-  {
-    "startedAt": "2026-09-18T20:57:00.531Z",
-    "finishedAt": "2026-09-18T22:02:22.535Z",
-    "durationSeconds": 3922,
-    "mode": "league discovery",
-    "scope": "all",
-    "leaguesChecked": 170,
-    "changeCount": 7,
-    "changes": [
-      {
-        "id": "47774",
-        "name": "Holy Name Mixed 26-27",
-        "area": "Omaha",
-        "center": "West Lanes",
-        "week": "1",
-        "sourceUpdated": "Sep 13, 2026"
-      },
-      {
-        "id": "121418",
-        "name": "Elks 80-26",
-        "area": "Lincoln",
-        "center": "Parkway Lanes",
-        "week": "5",
-        "sourceUpdated": "Sep 17, 2026"
-      },
-      {
-        "id": "63453",
-        "name": "A.D. Hill 2026-2027",
-        "area": "Omaha",
-        "center": "Mockingbird Lanes",
-        "week": "6",
-        "sourceUpdated": "Sep 13, 2026"
-      },
-      {
-        "id": "121708",
-        "name": "Sunday 2fers 26",
-        "area": "Lincoln",
-        "center": "Parkway Lanes",
-        "week": "1",
-        "sourceUpdated": "Sep 14, 2026"
-      },
-      {
-        "id": "68466",
-        "name": "Friday Morning Men 2026-2027",
-        "area": "Omaha",
-        "center": "Mockingbird Lanes",
-        "week": "5",
-        "sourceUpdated": "Sep 18, 2026"
-      },
-      {
-        "id": "55976",
-        "name": "Sunday Mixed 2026-2027",
-        "area": "Omaha",
-        "center": "Mockingbird Lanes",
-        "week": "4",
-        "sourceUpdated": "Sep 14, 2026"
-      },
-      {
-        "id": "112159",
-        "name": "Friday Senior Crazy Mixed 26-27",
-        "area": "Omaha",
-        "center": "West Lanes",
-        "week": "7",
-        "sourceUpdated": "Sep 18, 2026"
-      }
-    ],
-    "deferredLeagues": [],
-    "failures": []
   }
 ]
