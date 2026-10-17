@@ -1,5 +1,36 @@
 [
   {
+    "startedAt": "2026-10-17T16:21:14.256Z",
+    "finishedAt": "2026-10-17T16:22:22.494Z",
+    "durationSeconds": 68,
+    "mode": "LeaguePals leagues",
+    "leaguesChecked": 11,
+    "changeCount": 1,
+    "changes": [
+      {
+        "id": "lp-6aa4f2c9895707167ebc13a6",
+        "name": "Tornadoes 26-27",
+        "area": "Council Bluffs",
+        "center": "Bowlero Council Bluffs - 763",
+        "week": "5",
+        "sourceUpdated": "09/11/2026"
+      }
+    ]
+  },
+  {
+    "startedAt": "2026-10-17T16:18:57.183Z",
+    "finishedAt": "2026-10-17T16:22:22.823Z",
+    "durationSeconds": 206,
+    "mode": "known leagues",
+    "scope": "all",
+    "source": "official report fallback",
+    "checkedCount": 170,
+    "changeCount": 0,
+    "changes": [],
+    "failures": [],
+    "deferredLeagues": []
+  },
+  {
     "startedAt": "2026-10-17T13:02:24.146Z",
     "finishedAt": "2026-10-17T13:03:31.307Z",
     "durationSeconds": 67,
@@ -7024,62 +7055,5 @@
     "leaguesChecked": 9,
     "changeCount": 0,
     "changes": []
-  },
-  {
-    "startedAt": "2026-09-19T13:26:43.347Z",
-    "finishedAt": "2026-09-19T13:27:38.119Z",
-    "durationSeconds": 55,
-    "mode": "directory discovery",
-    "scope": "all",
-    "leaguesChecked": 170,
-    "changeCount": 0,
-    "changes": [],
-    "deferredLeagues": [],
-    "failures": []
-  },
-  {
-    "startedAt": "2026-09-19T12:31:59.262Z",
-    "finishedAt": "2026-09-19T13:31:17.968Z",
-    "durationSeconds": 3559,
-    "mode": "league discovery",
-    "scope": "all",
-    "leaguesChecked": 170,
-    "changeCount": 4,
-    "changes": [
-      {
-        "id": "64208",
-        "name": "Graphic Arts Bowling League 26-27",
-        "area": "Omaha",
-        "center": "West Lanes",
-        "week": "6",
-        "sourceUpdated": "Sep 18, 2026"
-      },
-      {
-        "id": "112159",
-        "name": "Friday Senior Crazy Mixed 26-27",
-        "area": "Omaha",
-        "center": "West Lanes",
-        "week": "7",
-        "sourceUpdated": "Sep 18, 2026"
-      },
-      {
-        "id": "122315",
-        "name": "F.A.C. 26",
-        "area": "Lincoln",
-        "center": "Parkway Lanes",
-        "week": "1",
-        "sourceUpdated": "Sep 12, 2026"
-      },
-      {
-        "id": "55992",
-        "name": "Friday Commercial 2026-2027",
-        "area": "Omaha",
-        "center": "Mockingbird Lanes",
-        "week": "5",
-        "sourceUpdated": "Sep 12, 2026"
-      }
-    ],
-    "deferredLeagues": [],
-    "failures": []
   }
 ]
