@@ -1,5 +1,27 @@
 [
   {
+    "startedAt": "2026-10-17T23:02:59.378Z",
+    "finishedAt": "2026-10-17T23:04:07.568Z",
+    "durationSeconds": 68,
+    "mode": "LeaguePals leagues",
+    "leaguesChecked": 11,
+    "changeCount": 0,
+    "changes": []
+  },
+  {
+    "startedAt": "2026-10-17T23:01:10.813Z",
+    "finishedAt": "2026-10-17T23:04:07.834Z",
+    "durationSeconds": 177,
+    "mode": "known leagues",
+    "scope": "all",
+    "source": "official report fallback",
+    "checkedCount": 170,
+    "changeCount": 0,
+    "changes": [],
+    "failures": [],
+    "deferredLeagues": []
+  },
+  {
     "startedAt": "2026-10-17T20:56:45.915Z",
     "finishedAt": "2026-10-17T20:57:55.543Z",
     "durationSeconds": 70,
@@ -7049,38 +7071,5 @@
         "sourceUpdated": "09/11/2026"
       }
     ]
-  },
-  {
-    "startedAt": "2026-09-19T16:50:33.764Z",
-    "finishedAt": "2026-09-19T17:51:16.376Z",
-    "durationSeconds": 3643,
-    "mode": "league discovery",
-    "scope": "all",
-    "leaguesChecked": 170,
-    "changeCount": 1,
-    "changes": [
-      {
-        "id": "45897",
-        "name": "Yesterdays Kids 26-27",
-        "area": "Omaha",
-        "center": "Maplewood Lanes",
-        "week": "5",
-        "sourceUpdated": "Sep 19, 2026"
-      }
-    ],
-    "deferredLeagues": [],
-    "failures": []
-  },
-  {
-    "startedAt": "2026-09-19T16:49:17.833Z",
-    "finishedAt": "2026-09-19T16:50:11.008Z",
-    "durationSeconds": 53,
-    "mode": "directory discovery",
-    "scope": "all",
-    "leaguesChecked": 170,
-    "changeCount": 0,
-    "changes": [],
-    "deferredLeagues": [],
-    "failures": []
   }
 ]
