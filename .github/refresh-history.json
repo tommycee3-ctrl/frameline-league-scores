@@ -1,5 +1,27 @@
 [
   {
+    "startedAt": "2026-10-18T13:39:36.179Z",
+    "finishedAt": "2026-10-18T13:40:49.271Z",
+    "durationSeconds": 73,
+    "mode": "LeaguePals leagues",
+    "leaguesChecked": 11,
+    "changeCount": 0,
+    "changes": []
+  },
+  {
+    "startedAt": "2026-10-18T13:37:46.824Z",
+    "finishedAt": "2026-10-18T13:40:49.580Z",
+    "durationSeconds": 183,
+    "mode": "known leagues",
+    "scope": "all",
+    "source": "official report fallback",
+    "checkedCount": 170,
+    "changeCount": 0,
+    "changes": [],
+    "failures": [],
+    "deferredLeagues": []
+  },
+  {
     "startedAt": "2026-10-18T09:44:30.779Z",
     "finishedAt": "2026-10-18T09:45:43.365Z",
     "durationSeconds": 73,
@@ -6551,35 +6573,5 @@
     "changes": [],
     "deferredLeagues": [],
     "failures": []
-  },
-  {
-    "startedAt": "2026-09-19T23:20:02.911Z",
-    "finishedAt": "2026-09-19T23:20:58.298Z",
-    "durationSeconds": 55,
-    "mode": "directory discovery",
-    "scope": "all",
-    "leaguesChecked": 170,
-    "changeCount": 0,
-    "changes": [],
-    "deferredLeagues": [],
-    "failures": []
-  },
-  {
-    "startedAt": "2026-09-19T22:46:42.498Z",
-    "finishedAt": "2026-09-19T22:47:29.109Z",
-    "durationSeconds": 47,
-    "mode": "LeaguePals leagues",
-    "leaguesChecked": 9,
-    "changeCount": 1,
-    "changes": [
-      {
-        "id": "lp-6a80c263a09d0e0071913c83",
-        "name": "Saturday Night Mixed 26",
-        "area": "Council Bluffs",
-        "center": "Bowlero Council Bluffs - 763",
-        "week": "6",
-        "sourceUpdated": "08/14/2026"
-      }
-    ]
   }
 ]
