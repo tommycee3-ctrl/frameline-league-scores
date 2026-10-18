@@ -1,5 +1,27 @@
 [
   {
+    "startedAt": "2026-10-18T00:53:04.024Z",
+    "finishedAt": "2026-10-18T00:54:07.551Z",
+    "durationSeconds": 64,
+    "mode": "LeaguePals leagues",
+    "leaguesChecked": 11,
+    "changeCount": 0,
+    "changes": []
+  },
+  {
+    "startedAt": "2026-10-18T00:51:21.292Z",
+    "finishedAt": "2026-10-18T00:54:07.965Z",
+    "durationSeconds": 167,
+    "mode": "known leagues",
+    "scope": "all",
+    "source": "official report fallback",
+    "checkedCount": 170,
+    "changeCount": 0,
+    "changes": [],
+    "failures": [],
+    "deferredLeagues": []
+  },
+  {
     "startedAt": "2026-10-17T23:02:59.378Z",
     "finishedAt": "2026-10-17T23:04:07.568Z",
     "durationSeconds": 68,
@@ -7025,51 +7047,5 @@
     "changes": [],
     "deferredLeagues": [],
     "failures": []
-  },
-  {
-    "startedAt": "2026-09-19T18:09:48.632Z",
-    "finishedAt": "2026-09-19T18:10:42.244Z",
-    "durationSeconds": 54,
-    "mode": "directory discovery",
-    "scope": "all",
-    "leaguesChecked": 170,
-    "changeCount": 0,
-    "changes": [],
-    "deferredLeagues": [],
-    "failures": []
-  },
-  {
-    "startedAt": "2026-09-19T17:51:16.462Z",
-    "finishedAt": "2026-09-19T17:52:03.052Z",
-    "durationSeconds": 47,
-    "mode": "LeaguePals leagues",
-    "leaguesChecked": 9,
-    "changeCount": 3,
-    "changes": [
-      {
-        "id": "lp-6aa4f2c9895707167ebc13a6",
-        "name": "Tornadoes 26-27",
-        "area": "Council Bluffs",
-        "center": "Bowlero Council Bluffs - 763",
-        "week": "2",
-        "sourceUpdated": "09/11/2026"
-      },
-      {
-        "id": "lp-6aa4f192a11121a87b92a774",
-        "name": "Cyclones 26-27",
-        "area": "Council Bluffs",
-        "center": "Bowlero Council Bluffs - 763",
-        "week": "2",
-        "sourceUpdated": "09/11/2026"
-      },
-      {
-        "id": "lp-6aa4ee8999478ed11e5d3be5",
-        "name": "Thunderbolts 26-27",
-        "area": "Council Bluffs",
-        "center": "Bowlero Council Bluffs - 763",
-        "week": "2",
-        "sourceUpdated": "09/11/2026"
-      }
-    ]
   }
 ]
