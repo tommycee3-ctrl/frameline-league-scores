@@ -1,5 +1,23 @@
 [
   {
+    "startedAt": "2026-10-19T20:02:33.984Z",
+    "finishedAt": "2026-10-19T20:03:44.184Z",
+    "durationSeconds": 70,
+    "mode": "directory discovery",
+    "scope": "all",
+    "leaguesChecked": 167,
+    "changeCount": 0,
+    "changes": [],
+    "deferredLeagues": [],
+    "failures": [
+      {
+        "centerId": "1163",
+        "name": "Thunderbowl of Council Bluffs",
+        "error": "No league rows returned for Thunderbowl of Council Bluffs; refusing to record an empty successful scan."
+      }
+    ]
+  },
+  {
     "startedAt": "2026-10-19T15:33:23.746Z",
     "finishedAt": "2026-10-19T15:34:36.674Z",
     "durationSeconds": 73,
@@ -6340,14 +6358,5 @@
         "error": "Official recap PDF markings are missing for the same week; preserving prior verified results."
       }
     ]
-  },
-  {
-    "startedAt": "2026-09-20T17:12:25.153Z",
-    "finishedAt": "2026-09-20T17:13:11.320Z",
-    "durationSeconds": 46,
-    "mode": "LeaguePals leagues",
-    "leaguesChecked": 9,
-    "changeCount": 0,
-    "changes": []
   }
 ]
