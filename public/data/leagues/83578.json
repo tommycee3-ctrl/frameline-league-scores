@@ -41,42 +41,42 @@
         "rows": [
           [
             "1",
-            "Team 3",
-            "3",
-            "1",
-            "22",
-            "6",
-            "79 %",
-            "22",
-            "12379",
-            "732",
-            "864",
-            "2531"
-          ],
-          [
-            "2",
             "Team 4",
             "4",
             "1",
-            "21",
-            "7",
-            "75 %",
-            "21",
-            "12226",
-            "1224",
-            "894",
-            "2498"
+            "31",
+            "744",
+            "4 %",
+            "31",
+            "17340",
+            "1246",
+            "911",
+            "2581"
+          ],
+          [
+            "2",
+            "Team 3",
+            "3",
+            "1",
+            "29",
+            "937.5",
+            "3 %",
+            "29",
+            "17350",
+            "732",
+            "864",
+            "2531"
           ],
           [
             "3",
             "Malvern Manor",
             "2",
             "1",
-            "20",
+            "24",
             "8",
-            "71 %",
-            "20",
-            "12383",
+            "75 %",
+            "24",
+            "17292",
             "1318",
             "890",
             "2575"
@@ -86,14 +86,14 @@
             "Team 1",
             "1",
             "1",
-            "7",
-            "21",
-            "25 %",
-            "7",
-            "12392",
-            "1412",
+            "14",
+            "1386",
+            "1 %",
+            "14",
+            "17470",
+            "1479",
             "916",
-            "2522"
+            "2613"
           ]
         ],
         "emphasis": [
@@ -7265,6 +7265,141 @@
               ]
             ]
           }
+        ],
+        "standings": [
+          {
+            "title": "League standings",
+            "headers": [
+              "Place",
+              "Team",
+              "Team#",
+              "Div",
+              "WON",
+              "LOST",
+              "%",
+              "YTD WON",
+              "AVG",
+              "Pins",
+              "HSG",
+              "HSS"
+            ],
+            "rows": [
+              [
+                "1",
+                "Team 4",
+                "4",
+                "1",
+                "31",
+                "744",
+                "4 %",
+                "31",
+                "17340",
+                "1246",
+                "911",
+                "2581"
+              ],
+              [
+                "2",
+                "Team 3",
+                "3",
+                "1",
+                "29",
+                "937.5",
+                "3 %",
+                "29",
+                "17350",
+                "732",
+                "864",
+                "2531"
+              ],
+              [
+                "3",
+                "Malvern Manor",
+                "2",
+                "1",
+                "24",
+                "8",
+                "75 %",
+                "24",
+                "17292",
+                "1318",
+                "890",
+                "2575"
+              ],
+              [
+                "4",
+                "Team 1",
+                "1",
+                "1",
+                "14",
+                "1386",
+                "1 %",
+                "14",
+                "17470",
+                "1479",
+                "916",
+                "2613"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ]
+            ]
+          }
         ]
       }
     }
@@ -7274,11 +7409,12 @@
   "officialRecapHash": "1e59e3095812f88e83e1a13e1cb0622e0f65e0e6d0893f5d608a2cff340d938d",
   "officialRecapSyncedAt": "2026-10-16T01:29:05.662Z",
   "officialRecapParserVersion": 7,
-  "officialStandingsHash": "99e8108ad3d0f53a23872bfbe6b5b01845ebb60437e1eb8cfad0e3dae3eb3616",
-  "officialStandingsSyncedAt": "2026-10-10T19:36:13.179Z",
-  "officialStandingsParserVersion": 3,
+  "officialStandingsHash": "275c83fd7aa0d8a4e16d6cc9684101fc4f8f104abd6669edac9a63d75554b755",
+  "officialStandingsSyncedAt": "2026-10-19T15:53:42.306Z",
+  "officialStandingsParserVersion": 4,
   "officialRecapCheckedAt": "2026-10-19T06:46:35.953Z",
   "laneWeek": "9",
   "laneSourceUpdated": "10/24/2026",
-  "reportDate": "Oct 10, 2026"
+  "reportDate": "Oct 10, 2026",
+  "officialStandingsRecapHash": "1e59e3095812f88e83e1a13e1cb0622e0f65e0e6d0893f5d608a2cff340d938d"
 }

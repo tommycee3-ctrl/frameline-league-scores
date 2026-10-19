@@ -14,7 +14,7 @@ const requested = process.argv.find(arg => arg.startsWith("--league="))?.slice(9
 const dryRun = process.argv.includes("--dry-run");
 const seasonCode = { Fall: "f", Summer: "u", Spring: "s", Winter: "w" };
 let updated = 0, skipped = 0, unavailable = 0;
-const parserVersion = 3;
+const parserVersion = 4;
 
 const nameKey = value => String(value ?? "").toLowerCase().replace(/\b(jr|sr|ii|iii|iv)\b/g, " ").replace(/[^a-z0-9]+/g, " ").trim().split(/\s+/).filter(Boolean).sort().join(" ");
 
@@ -78,22 +78,20 @@ function mergeStandings(league, official) {
   const byTeam = new Map(official.teams
     .filter(team => !/^bye\b/i.test(String(team.printedName ?? "").trim()))
     .map(team => [team.team, team]));
-  const publishedTeams = new Set(original.rows.map(row => row[2]));
-  const unknownOfficialTeam = [...byTeam.keys()].find(team => !publishedTeams.has(team));
-  const activeMissingTeam = original.rows.find(row => !byTeam.has(row[2]) &&
-    (Number(row[4]) > 0 || Number(row[7]) > 0 || Number(row[9]) > 0));
-  if (unknownOfficialTeam || activeMissingTeam)
-    throw new Error("official standings team set differs from published league");
-  const rows = original.rows.filter(row => byTeam.has(row[2])).map(row => {
-    const team = byTeam.get(row[2]);
-    const totalPoints = Number(row[4]) + Number(row[5]);
+  if ([...byTeam.values()].every(team => Number(team.won) === 0) && original.rows.some(row => Number(row[4]) > 0))
+    throw new Error("official standings contain no usable point totals");
+  const originalByTeam = new Map(original.rows.map(row => [row[2], row]));
+  const rows = [...byTeam.values()].map(team => {
+    const row = originalByTeam.get(team.team) ?? [];
     const won = Number(team.won);
-    const lost = team.lost !== null ? Number(team.lost) : totalPoints - won;
-    if (!Number.isFinite(totalPoints) || !Number.isFinite(won) || !Number.isFinite(lost) || lost < 0)
+    const publishedLost = team.lost !== null ? Number(team.lost) : Number(row[5]);
+    const lost = Number.isFinite(publishedLost) && publishedLost >= 0 ? publishedLost : null;
+    if (!Number.isFinite(won))
       throw new Error(`official points cannot be reconciled for team ${team.team}`);
-    const percent = totalPoints > 0 ? `${Math.round(won / (won + lost) * 100)} %` : "0 %";
-    return [team.place, row[1], row[2], row[3], team.won, String(lost), percent,
-      row[7] === row[4] ? team.won : row[7], team.avg ?? row[8], team.scratchPins ?? row[9], team.hsg ?? row[10], team.hss ?? row[11]];
+    const percent = lost !== null && won + lost > 0 ? `${Math.round(won / (won + lost) * 100)} %` : row[6] ?? "—";
+    return [team.place, row[1] ?? team.printedName ?? `Team ${team.team}`, team.team, row[3] ?? "1", team.won,
+      lost === null ? (row[5] ?? "—") : String(lost), percent,
+      !row.length || row[7] === row[4] ? team.won : row[7], team.avg ?? row[8] ?? "", team.scratchPins ?? row[9] ?? "", team.hsg ?? row[10] ?? "", team.hss ?? row[11] ?? ""];
   }).sort((a, b) => Number(a[3]) - Number(b[3]) || Number(a[0]) - Number(b[0]));
   // A standings sheet describes the lanes used for the completed score week.
   // League Secretary can already have the next week's assignments posted, so
@@ -103,7 +101,12 @@ function mergeStandings(league, official) {
 
 function mergeBowlers(league, official) {
   const existing = league.views?.bowlers?.[0];
-  if (!official.bowlers?.length) {
+  const officialBowlersAreConsistent = official.bowlers?.length && official.bowlers.every(bowler => {
+    const pins = Number(bowler.pins), games = Number(bowler.games), average = Number(bowler.average);
+    return Number.isFinite(pins) && Number.isFinite(games) && Number.isFinite(average) &&
+      (games === 0 ? pins === 0 : Math.abs(Math.floor(pins / games) - average) <= 1);
+  });
+  if (!officialBowlersAreConsistent) {
     if (!existing) return null;
     const at = label => existing.headers.findIndex(header => header.toLowerCase() === label);
     const indexes = { name: at("name"), pins: at("pins"), games: existing.headers.findIndex(header => ["games", "gms"].includes(header.toLowerCase())), average: at("avg"), highGame: at("hsg"), highSeries: at("hss") };
@@ -140,7 +143,9 @@ for (const listed of catalog.filter(league => (!requested || league.id === reque
     const league = JSON.parse(await readFile(file, "utf8"));
     const report = await reportFor(league);
     if (!report) { unavailable++; continue; }
-    if (report.hash === league.officialStandingsHash && league.officialStandingsParserVersion >= parserVersion) { skipped++; continue; }
+    if (report.hash === league.officialStandingsHash &&
+        league.officialStandingsParserVersion >= parserVersion &&
+        league.officialStandingsRecapHash === league.officialRecapHash) { skipped++; continue; }
     const directory = await mkdtemp(path.join(tmpdir(), "frameline-static-standings-"));
     let official;
     try {
@@ -163,6 +168,7 @@ for (const listed of catalog.filter(league => (!requested || league.id === reque
       // be merged safely; refreshing only the Bowler List is not completion.
       officialStandingsHash: retainedReason ? league.officialStandingsHash : report.hash,
       officialStandingsParserVersion: retainedReason ? league.officialStandingsParserVersion : parserVersion,
+      officialStandingsRecapHash: retainedReason ? league.officialStandingsRecapHash : league.officialRecapHash,
       officialStandingsSyncedAt: retainedReason ? league.officialStandingsSyncedAt : new Date().toISOString() };
     if (Array.isArray(next.history)) next.history = next.history.map(entry => String(entry.week) === String(league.week) ? { ...entry, views: { ...entry.views, ...views } } : entry);
     if (!dryRun) {

@@ -20,12 +20,16 @@ def parse_rosters(pdf):
                 if not active or line.startswith(("Name Pins ", "Temporary Substitutes", "Team Rosters")):
                     continue
                 tokens = line.split()
-                if len(tokens) < 7 or not all(number(token) is not None for token in tokens[-6:]):
+                numeric_start = len(tokens)
+                while numeric_start > 0 and number(tokens[numeric_start - 1]) is not None:
+                    numeric_start -= 1
+                values = tokens[numeric_start:]
+                if numeric_start == 0 or len(values) < 6:
                     continue
-                name = " ".join(tokens[:-6]).strip()
+                name = " ".join(tokens[:numeric_start]).strip()
                 if not name or name.startswith(("HDCP ", "High ")):
                     continue
-                pins, games, average, handicap, high_game, high_series = tokens[-6:]
+                pins, games, average, handicap, high_game, high_series = values[:6]
                 bowlers.append({"name": name, "team": active["team"], "teamName": active["teamName"],
                                 "pins": pins, "games": games, "average": average, "handicap": handicap,
                                 "highGame": high_game, "highSeries": high_series})
@@ -102,6 +106,15 @@ def parse(filename):
             lost = None
         else:
             won, lost, avg, scratch_pins, hsg, hss = tail[0], tail[1], tail[2], tail[5], tail[6], tail[7]
+        # Split-season sheets can omit Lost while printing %Won immediately
+        # after the team name. Recover the current point ceiling from that
+        # official percentage instead of reusing last week's smaller ceiling.
+        percent = re.search(r"\s+(\d+(?:\.\d+)?)$", name)
+        if lost is None and percent and float(percent[1]) > 0:
+            total = round((float(won) / (float(percent[1]) / 100)) * 2) / 2
+            lost_value = total - float(won)
+            lost = str(int(lost_value)) if lost_value.is_integer() else str(lost_value)
+            name = name[:percent.start()].strip()
         teams.append({"place": tokens[0], "lane": None if no_lane else tokens[1], "team": tokens[1] if no_lane else tokens[2], "printedName": name,
                       "won": won, "lost": lost, "avg": avg, "scratchPins": scratch_pins,
                       "hsg": hsg, "hss": hss})
