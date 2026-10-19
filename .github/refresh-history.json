@@ -1,5 +1,43 @@
 [
   {
+    "startedAt": "2026-10-19T13:45:29.475Z",
+    "finishedAt": "2026-10-19T13:47:44.201Z",
+    "durationSeconds": 135,
+    "mode": "directory discovery",
+    "scope": "all",
+    "leaguesChecked": 91,
+    "changeCount": 0,
+    "changes": [],
+    "deferredLeagues": [],
+    "failures": [
+      {
+        "centerId": "1163",
+        "name": "Thunderbowl of Council Bluffs",
+        "error": "No league rows returned for Thunderbowl of Council Bluffs; refusing to record an empty successful scan."
+      },
+      {
+        "centerId": "2118",
+        "name": "Sun Valley Lanes",
+        "error": "No league rows returned for Sun Valley Lanes; refusing to record an empty successful scan."
+      },
+      {
+        "centerId": "2173",
+        "name": "Parkway Lanes",
+        "error": "No league rows returned for Parkway Lanes; refusing to record an empty successful scan."
+      },
+      {
+        "centerId": "2137",
+        "name": "Hollywood Bowl",
+        "error": "No league rows returned for Hollywood Bowl; refusing to record an empty successful scan."
+      },
+      {
+        "centerId": "2110",
+        "name": "West Lanes",
+        "error": "No league rows returned for West Lanes; refusing to record an empty successful scan."
+      }
+    ]
+  },
+  {
     "startedAt": "2026-10-19T06:48:04.495Z",
     "finishedAt": "2026-10-19T06:49:06.714Z",
     "durationSeconds": 62,
@@ -5928,17 +5966,5 @@
         "error": "Official recap PDF markings are missing for the same week; preserving prior verified results."
       }
     ]
-  },
-  {
-    "startedAt": "2026-09-20T12:38:28.529Z",
-    "finishedAt": "2026-09-20T12:39:22.214Z",
-    "durationSeconds": 54,
-    "mode": "directory discovery",
-    "scope": "all",
-    "leaguesChecked": 170,
-    "changeCount": 0,
-    "changes": [],
-    "deferredLeagues": [],
-    "failures": []
   }
 ]
