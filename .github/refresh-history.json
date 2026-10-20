@@ -1,5 +1,27 @@
 [
   {
+    "startedAt": "2026-10-20T12:57:41.190Z",
+    "finishedAt": "2026-10-20T12:58:42.846Z",
+    "durationSeconds": 62,
+    "mode": "LeaguePals leagues",
+    "leaguesChecked": 11,
+    "changeCount": 0,
+    "changes": []
+  },
+  {
+    "startedAt": "2026-10-20T12:55:57.467Z",
+    "finishedAt": "2026-10-20T12:58:43.268Z",
+    "durationSeconds": 166,
+    "mode": "known leagues",
+    "scope": "all",
+    "source": "official report fallback",
+    "checkedCount": 170,
+    "changeCount": 0,
+    "changes": [],
+    "failures": [],
+    "deferredLeagues": []
+  },
+  {
     "startedAt": "2026-10-20T07:28:59.653Z",
     "finishedAt": "2026-10-20T07:30:09.530Z",
     "durationSeconds": 70,
@@ -6603,43 +6625,5 @@
     "changes": [],
     "deferredLeagues": [],
     "failures": []
-  },
-  {
-    "startedAt": "2026-09-21T00:31:25.575Z",
-    "finishedAt": "2026-09-21T00:32:20.740Z",
-    "durationSeconds": 55,
-    "mode": "directory discovery",
-    "scope": "all",
-    "leaguesChecked": 170,
-    "changeCount": 0,
-    "changes": [],
-    "deferredLeagues": [],
-    "failures": []
-  },
-  {
-    "startedAt": "2026-09-21T00:00:05.390Z",
-    "finishedAt": "2026-09-21T00:01:19.585Z",
-    "durationSeconds": 74,
-    "mode": "LeaguePals leagues",
-    "leaguesChecked": 9,
-    "changeCount": 2,
-    "changes": [
-      {
-        "id": "lp-6a830b98fb63f671392e5ce5",
-        "name": "Monday Senior Men 26",
-        "area": "Council Bluffs",
-        "center": "Bowlero Council Bluffs - 763",
-        "week": "5",
-        "sourceUpdated": "08/16/2026"
-      },
-      {
-        "id": "lp-6a957f7bf97455b04731aa65",
-        "name": "Early Birds 26-27",
-        "area": "Council Bluffs",
-        "center": "Bowlero Council Bluffs - 763",
-        "week": "3",
-        "sourceUpdated": "08/30/2026"
-      }
-    ]
   }
 ]
