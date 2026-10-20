@@ -1,5 +1,27 @@
 [
   {
+    "startedAt": "2026-10-20T07:28:59.653Z",
+    "finishedAt": "2026-10-20T07:30:09.530Z",
+    "durationSeconds": 70,
+    "mode": "LeaguePals leagues",
+    "leaguesChecked": 11,
+    "changeCount": 0,
+    "changes": []
+  },
+  {
+    "startedAt": "2026-10-20T07:25:49.182Z",
+    "finishedAt": "2026-10-20T07:30:09.949Z",
+    "durationSeconds": 261,
+    "mode": "known leagues",
+    "scope": "all",
+    "source": "official report fallback",
+    "checkedCount": 170,
+    "changeCount": 0,
+    "changes": [],
+    "failures": [],
+    "deferredLeagues": []
+  },
+  {
     "startedAt": "2026-10-20T01:56:08.263Z",
     "finishedAt": "2026-10-20T01:57:20.692Z",
     "durationSeconds": 72,
@@ -6619,174 +6641,5 @@
         "sourceUpdated": "08/30/2026"
       }
     ]
-  },
-  {
-    "startedAt": "2026-09-20T22:58:17.147Z",
-    "finishedAt": "2026-09-21T00:00:05.291Z",
-    "durationSeconds": 3708,
-    "mode": "league discovery",
-    "scope": "all",
-    "leaguesChecked": 170,
-    "changeCount": 1,
-    "changes": [
-      {
-        "id": "45894",
-        "name": "Wednesday Men 26-27",
-        "area": "Omaha",
-        "center": "Maplewood Lanes",
-        "week": "4",
-        "sourceUpdated": "Sep 16, 2026"
-      }
-    ],
-    "deferredLeagues": [
-      "146916",
-      "128281",
-      "131214",
-      "79460",
-      "111724",
-      "115725",
-      "46383",
-      "48511",
-      "121897",
-      "127518",
-      "68466",
-      "55992",
-      "46208",
-      "55979",
-      "128282",
-      "127515",
-      "45890",
-      "51848",
-      "45880",
-      "103772",
-      "132507",
-      "142876",
-      "131148",
-      "128706",
-      "111723",
-      "51850",
-      "132277",
-      "88381",
-      "55981",
-      "57554",
-      "55980",
-      "124412",
-      "121704",
-      "48706",
-      "127514",
-      "55982",
-      "45091",
-      "122054",
-      "129141",
-      "118566",
-      "63436",
-      "32884",
-      "47774",
-      "45883",
-      "127517",
-      "55976",
-      "121708",
-      "55983",
-      "116033",
-      "116034",
-      "125961",
-      "122055"
-    ],
-    "failures": [
-      {
-        "id": "112159",
-        "name": "Friday Senior Crazy Mixed 26-27",
-        "error": "Official recap PDF markings are missing for the same week; preserving prior verified results."
-      },
-      {
-        "id": "144527",
-        "name": "Thursday Nite Mixed 2026-2027",
-        "error": "Official recap PDF markings are missing for the same week; preserving prior verified results."
-      },
-      {
-        "id": "59988",
-        "name": "Thursday Night Crazy Mixed 2026-2027",
-        "error": "Official recap PDF markings are missing for the same week; preserving prior verified results."
-      },
-      {
-        "id": "148688",
-        "name": "Thirsty Thursday 2026-27",
-        "error": "Source layout check: recaps returned no rows"
-      },
-      {
-        "id": "121373",
-        "name": "Industrial 26",
-        "error": "Official recap PDF markings are missing for the same week; preserving prior verified results."
-      },
-      {
-        "id": "55990",
-        "name": "Country Gents 2026-2027",
-        "error": "Official recap PDF markings are missing for the same week; preserving prior verified results."
-      },
-      {
-        "id": "131630",
-        "name": "Craft Beer League 2026",
-        "error": "Official recap PDF markings are missing for the same week; preserving prior verified results."
-      },
-      {
-        "id": "145370",
-        "name": "Blair Special Olympics 26-27",
-        "error": "Official recap PDF markings are missing for the same week; preserving prior verified results."
-      },
-      {
-        "id": "116670",
-        "name": "Saturday De-Light 26-27",
-        "error": "Official recap PDF markings are missing for the same week; preserving prior verified results."
-      },
-      {
-        "id": "45900",
-        "name": "800 Classic 26-27",
-        "error": "Official recap PDF markings are missing for the same week; preserving prior verified results."
-      },
-      {
-        "id": "121418",
-        "name": "Elks 80-26",
-        "error": "Official recap PDF markings are missing for the same week; preserving prior verified results."
-      },
-      {
-        "id": "121989",
-        "name": "Sweet 16 - 26",
-        "error": "Official recap PDF markings are missing for the same week; preserving prior verified results."
-      },
-      {
-        "id": "115805",
-        "name": "Kevin Haynes Memorial 2026-27",
-        "error": "Official recap PDF markings are missing for the same week; preserving prior verified results."
-      },
-      {
-        "id": "121300",
-        "name": "Leisure Pearls 26",
-        "error": "Official recap PDF markings are missing for the same week; preserving prior verified results."
-      },
-      {
-        "id": "132307",
-        "name": "Cotner Belles 26",
-        "error": "Official recap PDF markings are missing for the same week; preserving prior verified results."
-      },
-      {
-        "id": "148625",
-        "name": "Wednesday Scratch Draft League",
-        "error": "Official recap PDF markings are missing for the same week; preserving prior verified results."
-      },
-      {
-        "id": "144775",
-        "name": "Sunday Nite Mixed 2026-2027",
-        "error": "Official recap PDF markings are missing for the same week; preserving prior verified results."
-      }
-    ]
-  },
-  {
-    "startedAt": "2026-09-20T22:54:50.321Z",
-    "finishedAt": "2026-09-20T22:55:43.161Z",
-    "durationSeconds": 53,
-    "mode": "LeaguePals leagues",
-    "leaguesChecked": 9,
-    "changeCount": 0,
-    "changes": []
   }
 ]
