@@ -1,5 +1,27 @@
 [
   {
+    "startedAt": "2026-10-21T08:51:19.569Z",
+    "finishedAt": "2026-10-21T08:52:31.177Z",
+    "durationSeconds": 72,
+    "mode": "LeaguePals leagues",
+    "leaguesChecked": 11,
+    "changeCount": 0,
+    "changes": []
+  },
+  {
+    "startedAt": "2026-10-21T08:48:56.788Z",
+    "finishedAt": "2026-10-21T08:52:31.520Z",
+    "durationSeconds": 215,
+    "mode": "known leagues",
+    "scope": "all",
+    "source": "official report fallback",
+    "checkedCount": 170,
+    "changeCount": 0,
+    "changes": [],
+    "failures": [],
+    "deferredLeagues": []
+  },
+  {
     "startedAt": "2026-10-21T03:22:09.629Z",
     "finishedAt": "2026-10-21T03:23:17.639Z",
     "durationSeconds": 68,
@@ -5345,57 +5367,5 @@
     "leaguesChecked": 9,
     "changeCount": 0,
     "changes": []
-  },
-  {
-    "startedAt": "2026-09-22T05:03:13.439Z",
-    "finishedAt": "2026-09-22T05:03:54.815Z",
-    "durationSeconds": 41,
-    "mode": "LeaguePals leagues",
-    "leaguesChecked": 9,
-    "changeCount": 3,
-    "changes": [
-      {
-        "id": "lp-6a830b98fb63f671392e5ce5",
-        "name": "Monday Senior Men 26",
-        "area": "Council Bluffs",
-        "center": "Bowlero Council Bluffs - 763",
-        "week": "5",
-        "sourceUpdated": "08/16/2026"
-      },
-      {
-        "id": "lp-6a970dff34a4afbf5c794a8f",
-        "name": "Friday Nighters 26",
-        "area": "Council Bluffs",
-        "center": "Bowlero Council Bluffs - 763",
-        "week": "5",
-        "sourceUpdated": "08/20/2026"
-      },
-      {
-        "id": "lp-6a957f7bf97455b04731aa65",
-        "name": "Early Birds 26-27",
-        "area": "Council Bluffs",
-        "center": "Bowlero Council Bluffs - 763",
-        "week": "3",
-        "sourceUpdated": "08/30/2026"
-      }
-    ]
-  },
-  {
-    "startedAt": "2026-09-21T12:13:07.715Z",
-    "finishedAt": "2026-09-21T12:13:51.842Z",
-    "durationSeconds": 44,
-    "mode": "LeaguePals leagues",
-    "leaguesChecked": 9,
-    "changeCount": 1,
-    "changes": [
-      {
-        "id": "lp-6a8f046d53c5f51b7b86e8f1",
-        "name": "Cornbelt 26-27",
-        "area": "Council Bluffs",
-        "center": "Bowlero Council Bluffs - 763",
-        "week": "4",
-        "sourceUpdated": "08/25/2026"
-      }
-    ]
   }
 ]
