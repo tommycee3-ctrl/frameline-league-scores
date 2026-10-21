@@ -1,5 +1,36 @@
 [
   {
+    "startedAt": "2026-10-20T23:59:08.869Z",
+    "finishedAt": "2026-10-21T00:00:48.829Z",
+    "durationSeconds": 100,
+    "mode": "LeaguePals leagues",
+    "leaguesChecked": 11,
+    "changeCount": 1,
+    "changes": [
+      {
+        "id": "lp-6ace2f1dbcdf642f24243399",
+        "name": "Rolling Thunder 26-27",
+        "area": "Council Bluffs",
+        "center": "Bowlero Council Bluffs - 763",
+        "week": "2",
+        "sourceUpdated": "10/12/2026"
+      }
+    ]
+  },
+  {
+    "startedAt": "2026-10-20T23:56:47.201Z",
+    "finishedAt": "2026-10-21T00:00:49.173Z",
+    "durationSeconds": 242,
+    "mode": "known leagues",
+    "scope": "all",
+    "source": "official report fallback",
+    "checkedCount": 170,
+    "changeCount": 0,
+    "changes": [],
+    "failures": [],
+    "deferredLeagues": []
+  },
+  {
     "startedAt": "2026-10-20T21:19:04.668Z",
     "finishedAt": "2026-10-20T21:20:22.120Z",
     "durationSeconds": 77,
@@ -5759,27 +5790,6 @@
   {
     "startedAt": "2026-09-21T11:07:13.553Z",
     "finishedAt": "2026-09-21T11:08:07.329Z",
-    "durationSeconds": 54,
-    "mode": "directory discovery",
-    "scope": "all",
-    "leaguesChecked": 170,
-    "changeCount": 0,
-    "changes": [],
-    "deferredLeagues": [],
-    "failures": []
-  },
-  {
-    "startedAt": "2026-09-21T07:05:02.767Z",
-    "finishedAt": "2026-09-21T07:05:54.646Z",
-    "durationSeconds": 52,
-    "mode": "LeaguePals leagues",
-    "leaguesChecked": 9,
-    "changeCount": 0,
-    "changes": []
-  },
-  {
-    "startedAt": "2026-09-21T06:46:34.332Z",
-    "finishedAt": "2026-09-21T06:47:28.686Z",
     "durationSeconds": 54,
     "mode": "directory discovery",
     "scope": "all",
