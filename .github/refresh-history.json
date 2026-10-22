@@ -1,5 +1,44 @@
 [
   {
+    "startedAt": "2026-10-22T22:43:24.963Z",
+    "finishedAt": "2026-10-22T22:44:36.379Z",
+    "durationSeconds": 71,
+    "mode": "LeaguePals leagues",
+    "leaguesChecked": 11,
+    "changeCount": 2,
+    "changes": [
+      {
+        "id": "lp-6a904a51f09b7f8443e10c94",
+        "name": "Senior Citizens Mixed 26-27",
+        "area": "Council Bluffs",
+        "center": "Bowlero Council Bluffs - 763",
+        "week": "9",
+        "sourceUpdated": "08/26/2026"
+      },
+      {
+        "id": "lp-6ac7fb9b2d694f31242ce3a2",
+        "name": "Regal Six Packers 26-27",
+        "area": "Council Bluffs",
+        "center": "Bowlero Council Bluffs - 763",
+        "week": "3",
+        "sourceUpdated": "10/07/2026"
+      }
+    ]
+  },
+  {
+    "startedAt": "2026-10-22T22:41:37.122Z",
+    "finishedAt": "2026-10-22T22:44:36.647Z",
+    "durationSeconds": 180,
+    "mode": "known leagues",
+    "scope": "all",
+    "source": "official report fallback",
+    "checkedCount": 170,
+    "changeCount": 0,
+    "changes": [],
+    "failures": [],
+    "deferredLeagues": []
+  },
+  {
     "startedAt": "2026-10-22T19:27:14.094Z",
     "finishedAt": "2026-10-22T19:28:24.105Z",
     "durationSeconds": 70,
@@ -5387,32 +5426,5 @@
     "leaguesChecked": 9,
     "changeCount": 0,
     "changes": []
-  },
-  {
-    "startedAt": "2026-09-24T04:58:36.575Z",
-    "finishedAt": "2026-09-24T04:59:19.767Z",
-    "durationSeconds": 43,
-    "mode": "LeaguePals leagues",
-    "leaguesChecked": 9,
-    "changeCount": 0,
-    "changes": []
-  },
-  {
-    "startedAt": "2026-09-24T01:42:42.665Z",
-    "finishedAt": "2026-09-24T01:43:24.344Z",
-    "durationSeconds": 42,
-    "mode": "LeaguePals leagues",
-    "leaguesChecked": 9,
-    "changeCount": 1,
-    "changes": [
-      {
-        "id": "lp-6a904a51f09b7f8443e10c94",
-        "name": "Senior Citizens Mixed 26-27",
-        "area": "Council Bluffs",
-        "center": "Bowlero Council Bluffs - 763",
-        "week": "5",
-        "sourceUpdated": "08/26/2026"
-      }
-    ]
   }
 ]
