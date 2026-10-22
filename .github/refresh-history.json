@@ -1,5 +1,60 @@
 [
   {
+    "startedAt": "2026-10-22T00:46:11.701Z",
+    "finishedAt": "2026-10-22T00:47:25.720Z",
+    "durationSeconds": 74,
+    "mode": "LeaguePals leagues",
+    "leaguesChecked": 11,
+    "changeCount": 4,
+    "changes": [
+      {
+        "id": "lp-6a8f046d53c5f51b7b86e8f1",
+        "name": "Cornbelt 26-27",
+        "area": "Council Bluffs",
+        "center": "Bowlero Council Bluffs - 763",
+        "week": "8",
+        "sourceUpdated": "08/25/2026"
+      },
+      {
+        "id": "lp-6a904a51f09b7f8443e10c94",
+        "name": "Senior Citizens Mixed 26-27",
+        "area": "Council Bluffs",
+        "center": "Bowlero Council Bluffs - 763",
+        "week": "9",
+        "sourceUpdated": "08/26/2026"
+      },
+      {
+        "id": "lp-6ac7fb9b2d694f31242ce3a2",
+        "name": "Regal Six Packers 26-27",
+        "area": "Council Bluffs",
+        "center": "Bowlero Council Bluffs - 763",
+        "week": "3",
+        "sourceUpdated": "10/07/2026"
+      },
+      {
+        "id": "lp-6ace2f1dbcdf642f24243399",
+        "name": "Rolling Thunder 26-27",
+        "area": "Council Bluffs",
+        "center": "Bowlero Council Bluffs - 763",
+        "week": "2",
+        "sourceUpdated": "10/12/2026"
+      }
+    ]
+  },
+  {
+    "startedAt": "2026-10-22T00:44:15.585Z",
+    "finishedAt": "2026-10-22T00:47:26.185Z",
+    "durationSeconds": 191,
+    "mode": "known leagues",
+    "scope": "all",
+    "source": "official report fallback",
+    "checkedCount": 170,
+    "changeCount": 0,
+    "changes": [],
+    "failures": [],
+    "deferredLeagues": []
+  },
+  {
     "startedAt": "2026-10-21T22:09:15.158Z",
     "finishedAt": "2026-10-21T22:10:37.186Z",
     "durationSeconds": 82,
@@ -5334,41 +5389,5 @@
     "leaguesChecked": 9,
     "changeCount": 0,
     "changes": []
-  },
-  {
-    "startedAt": "2026-09-23T00:41:30.592Z",
-    "finishedAt": "2026-09-23T00:42:18.324Z",
-    "durationSeconds": 48,
-    "mode": "LeaguePals leagues",
-    "leaguesChecked": 9,
-    "changeCount": 1,
-    "changes": [
-      {
-        "id": "lp-6a8f046d53c5f51b7b86e8f1",
-        "name": "Cornbelt 26-27",
-        "area": "Council Bluffs",
-        "center": "Bowlero Council Bluffs - 763",
-        "week": "5",
-        "sourceUpdated": "08/25/2026"
-      }
-    ]
-  },
-  {
-    "startedAt": "2026-09-22T21:24:29.945Z",
-    "finishedAt": "2026-09-22T21:25:18.075Z",
-    "durationSeconds": 48,
-    "mode": "LeaguePals leagues",
-    "leaguesChecked": 9,
-    "changeCount": 1,
-    "changes": [
-      {
-        "id": "lp-6a8f046d53c5f51b7b86e8f1",
-        "name": "Cornbelt 26-27",
-        "area": "Council Bluffs",
-        "center": "Bowlero Council Bluffs - 763",
-        "week": "4",
-        "sourceUpdated": "08/25/2026"
-      }
-    ]
   }
 ]
