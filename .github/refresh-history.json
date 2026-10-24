@@ -1,5 +1,44 @@
 [
   {
+    "startedAt": "2026-10-24T19:22:10.088Z",
+    "finishedAt": "2026-10-24T19:23:15.023Z",
+    "durationSeconds": 65,
+    "mode": "LeaguePals leagues",
+    "leaguesChecked": 11,
+    "changeCount": 2,
+    "changes": [
+      {
+        "id": "lp-6a8f046d53c5f51b7b86e8f1",
+        "name": "Cornbelt 26-27",
+        "area": "Council Bluffs",
+        "center": "Bowlero Council Bluffs - 763",
+        "week": "8",
+        "sourceUpdated": "08/25/2026"
+      },
+      {
+        "id": "lp-6aa4ee8999478ed11e5d3be5",
+        "name": "Thunderbolts 26-27",
+        "area": "Council Bluffs",
+        "center": "Bowlero Council Bluffs - 763",
+        "week": "6",
+        "sourceUpdated": "09/11/2026"
+      }
+    ]
+  },
+  {
+    "startedAt": "2026-10-24T19:20:26.588Z",
+    "finishedAt": "2026-10-24T19:23:15.461Z",
+    "durationSeconds": 169,
+    "mode": "known leagues",
+    "scope": "all",
+    "source": "official report fallback",
+    "checkedCount": 170,
+    "changeCount": 0,
+    "changes": [],
+    "failures": [],
+    "deferredLeagues": []
+  },
+  {
     "startedAt": "2026-10-24T17:04:41.276Z",
     "finishedAt": "2026-10-24T17:06:03.056Z",
     "durationSeconds": 82,
@@ -5439,32 +5478,5 @@
         "sourceUpdated": "08/25/2026"
       }
     ]
-  },
-  {
-    "startedAt": "2026-09-27T14:05:11.033Z",
-    "finishedAt": "2026-09-27T14:06:01.617Z",
-    "durationSeconds": 51,
-    "mode": "LeaguePals leagues",
-    "leaguesChecked": 10,
-    "changeCount": 1,
-    "changes": [
-      {
-        "id": "lp-6ab90894ba442dab0aabe5bc",
-        "name": "Council Bluffs Club Tournament",
-        "area": "Council Bluffs",
-        "center": "Bowlero Council Bluffs - 763",
-        "week": "1",
-        "sourceUpdated": "09/26/2026"
-      }
-    ]
-  },
-  {
-    "startedAt": "2026-09-27T10:54:30.338Z",
-    "finishedAt": "2026-09-27T10:55:24.671Z",
-    "durationSeconds": 54,
-    "mode": "LeaguePals leagues",
-    "leaguesChecked": 9,
-    "changeCount": 0,
-    "changes": []
   }
 ]
