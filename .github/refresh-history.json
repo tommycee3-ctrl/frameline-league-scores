@@ -1,5 +1,27 @@
 [
   {
+    "startedAt": "2026-10-24T05:35:11.169Z",
+    "finishedAt": "2026-10-24T05:36:22.523Z",
+    "durationSeconds": 71,
+    "mode": "LeaguePals leagues",
+    "leaguesChecked": 11,
+    "changeCount": 0,
+    "changes": []
+  },
+  {
+    "startedAt": "2026-10-24T05:33:14.387Z",
+    "finishedAt": "2026-10-24T05:36:22.969Z",
+    "durationSeconds": 189,
+    "mode": "known leagues",
+    "scope": "all",
+    "source": "official report fallback",
+    "checkedCount": 170,
+    "changeCount": 0,
+    "changes": [],
+    "failures": [],
+    "deferredLeagues": []
+  },
+  {
     "startedAt": "2026-10-24T01:03:20.704Z",
     "finishedAt": "2026-10-24T01:04:32.448Z",
     "durationSeconds": 72,
@@ -5413,41 +5435,6 @@
     "startedAt": "2026-09-26T18:49:00.324Z",
     "finishedAt": "2026-09-26T18:49:52.326Z",
     "durationSeconds": 52,
-    "mode": "LeaguePals leagues",
-    "leaguesChecked": 9,
-    "changeCount": 2,
-    "changes": [
-      {
-        "id": "lp-6aa4f192a11121a87b92a774",
-        "name": "Cyclones 26-27",
-        "area": "Council Bluffs",
-        "center": "Bowlero Council Bluffs - 763",
-        "week": "3",
-        "sourceUpdated": "09/11/2026"
-      },
-      {
-        "id": "lp-6aa4ee8999478ed11e5d3be5",
-        "name": "Thunderbolts 26-27",
-        "area": "Council Bluffs",
-        "center": "Bowlero Council Bluffs - 763",
-        "week": "3",
-        "sourceUpdated": "09/11/2026"
-      }
-    ]
-  },
-  {
-    "startedAt": "2026-09-26T16:28:32.279Z",
-    "finishedAt": "2026-09-26T16:29:19.342Z",
-    "durationSeconds": 47,
-    "mode": "LeaguePals leagues",
-    "leaguesChecked": 9,
-    "changeCount": 0,
-    "changes": []
-  },
-  {
-    "startedAt": "2026-09-26T15:11:19.514Z",
-    "finishedAt": "2026-09-26T15:12:06.881Z",
-    "durationSeconds": 47,
     "mode": "LeaguePals leagues",
     "leaguesChecked": 9,
     "changeCount": 2,
