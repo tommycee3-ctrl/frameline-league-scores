@@ -1,5 +1,27 @@
 [
   {
+    "startedAt": "2026-10-24T21:52:18.485Z",
+    "finishedAt": "2026-10-24T21:53:27.426Z",
+    "durationSeconds": 69,
+    "mode": "LeaguePals leagues",
+    "leaguesChecked": 11,
+    "changeCount": 0,
+    "changes": []
+  },
+  {
+    "startedAt": "2026-10-24T21:50:31.438Z",
+    "finishedAt": "2026-10-24T21:53:27.728Z",
+    "durationSeconds": 176,
+    "mode": "known leagues",
+    "scope": "all",
+    "source": "official report fallback",
+    "checkedCount": 170,
+    "changeCount": 0,
+    "changes": [],
+    "failures": [],
+    "deferredLeagues": []
+  },
+  {
     "startedAt": "2026-10-24T19:22:10.088Z",
     "finishedAt": "2026-10-24T19:23:15.023Z",
     "durationSeconds": 65,
@@ -5451,32 +5473,5 @@
     "leaguesChecked": 10,
     "changeCount": 0,
     "changes": []
-  },
-  {
-    "startedAt": "2026-09-27T22:38:16.718Z",
-    "finishedAt": "2026-09-27T22:39:07.239Z",
-    "durationSeconds": 51,
-    "mode": "LeaguePals leagues",
-    "leaguesChecked": 10,
-    "changeCount": 0,
-    "changes": []
-  },
-  {
-    "startedAt": "2026-09-27T18:29:12.143Z",
-    "finishedAt": "2026-09-27T18:29:58.868Z",
-    "durationSeconds": 47,
-    "mode": "LeaguePals leagues",
-    "leaguesChecked": 10,
-    "changeCount": 1,
-    "changes": [
-      {
-        "id": "lp-6a8f046d53c5f51b7b86e8f1",
-        "name": "Cornbelt 26-27",
-        "area": "Council Bluffs",
-        "center": "Bowlero Council Bluffs - 763",
-        "week": "5",
-        "sourceUpdated": "08/25/2026"
-      }
-    ]
   }
 ]
