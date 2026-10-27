@@ -14,10 +14,10 @@
   "centerName": "Parkway Lanes",
   "centerSlug": "parkway-lanes---lincoln-lincoln-nebraska",
   "area": "Lincoln",
-  "sourceUpdated": "Oct 20, 2026",
+  "sourceUpdated": "Oct 27, 2026",
   "syncedAt": "2026-09-21T11:26:45.987Z",
   "status": "current",
-  "week": "8",
+  "week": "9",
   "fingerprint": "5c42585a1d10daf128c42b84d5da590ad82f95430b9a0a2f0bc137b980b25301",
   "lastCompletedCycle": "2026-09-21",
   "views": {
@@ -41,54 +41,96 @@
         "rows": [
           [
             "1",
-            "B B AND J",
-            "4",
-            "1",
-            "39",
-            "17",
-            "70 %",
-            "39",
-            "422",
-            "10690",
-            "524",
-            "1345"
-          ],
-          [
-            "2",
-            "SERVICE MASTER RESTORE",
-            "7",
-            "1",
-            "35",
-            "21",
-            "63 %",
-            "35",
-            "553",
-            "12811",
-            "581",
-            "1704"
-          ],
-          [
-            "3",
             "WOODMEN LIFE",
             "1",
             "1",
-            "33",
+            "40",
             "23",
-            "59 %",
-            "33",
+            "63 %",
+            "40",
             "474",
-            "12240",
+            "13884",
             "604",
             "1539"
           ],
           [
+            "2",
+            "B B AND J",
             "4",
+            "1",
+            "39",
+            "24",
+            "62 %",
+            "39",
+            "422",
+            "12000",
+            "524",
+            "1345"
+          ],
+          [
+            "3",
+            "SERVICE MASTER RESTORE",
+            "7",
+            "1",
+            "35",
+            "28",
+            "56 %",
+            "35",
+            "553",
+            "14282",
+            "581",
+            "1704"
+          ],
+          [
+            "4",
+            "NOVY FARMS",
+            "2",
+            "1",
+            "35",
+            "28",
+            "56 %",
+            "35",
+            "511",
+            "14168",
+            "584",
+            "1644"
+          ],
+          [
+            "5",
+            "STAN'S CLAN",
+            "6",
+            "1",
+            "32",
+            "31",
+            "51 %",
+            "32",
+            "521",
+            "14669",
+            "606",
+            "1622"
+          ],
+          [
+            "6",
+            "3 LEGS",
+            "9",
+            "1",
+            "31",
+            "32",
+            "49 %",
+            "31",
+            "369",
+            "10294",
+            "438",
+            "1146"
+          ],
+          [
+            "7",
             "KOOPAS",
             "5",
             "1",
             "29",
-            "27",
-            "52 %",
+            "34",
+            "46 %",
             "29",
             "487",
             "11830",
@@ -96,74 +138,32 @@
             "1482"
           ],
           [
-            "5",
-            "NOVY FARMS",
-            "2",
+            "8",
+            "MILLS TRANSFER",
+            "8",
             "1",
             "28",
+            "35",
+            "44 %",
             "28",
-            "50 %",
-            "28",
-            "511",
-            "12564",
-            "584",
-            "1644"
+            "543",
+            "14691",
+            "636",
+            "1710"
           ],
           [
-            "6",
+            "9",
             "P.E.A.K. BOWLING",
             "3",
             "1",
             "27",
-            "29",
-            "48 %",
+            "36",
+            "43 %",
             "27",
             "399",
-            "9806",
+            "11008",
             "455",
             "1290"
-          ],
-          [
-            "7",
-            "STAN'S CLAN",
-            "6",
-            "1",
-            "25",
-            "31",
-            "45 %",
-            "25",
-            "521",
-            "13016",
-            "606",
-            "1622"
-          ],
-          [
-            "8",
-            "3 LEGS",
-            "9",
-            "1",
-            "24",
-            "32",
-            "43 %",
-            "24",
-            "369",
-            "9078",
-            "438",
-            "1146"
-          ],
-          [
-            "9",
-            "MILLS TRANSFER",
-            "8",
-            "1",
-            "23",
-            "33",
-            "41 %",
-            "23",
-            "543",
-            "13129",
-            "636",
-            "1710"
           ]
         ],
         "emphasis": [
@@ -338,8 +338,8 @@
             "4",
             "MILLS TRANSFER",
             "M",
-            "2591",
-            "15",
+            "3098",
+            "18",
             "172",
             "178",
             "37",
@@ -356,8 +356,8 @@
             "2",
             "NOVY FARMS",
             "M",
-            "2911",
-            "18",
+            "3388",
+            "21",
             "161",
             "166",
             "48",
@@ -374,15 +374,15 @@
             "1",
             "B B AND J",
             "M",
-            "2967",
-            "24",
-            "123",
+            "3402",
+            "27",
+            "126",
             "0",
             "98",
             "255",
             "680",
             "186",
-            "428",
+            "435",
             "0",
             "0"
           ],
@@ -392,9 +392,9 @@
             "2",
             "B B AND J",
             "M",
-            "4048",
-            "24",
-            "168",
+            "4491",
+            "27",
+            "166",
             "0",
             "46",
             "243",
@@ -410,9 +410,9 @@
             "1",
             "3 LEGS",
             "M",
-            "2642",
-            "21",
-            "125",
+            "2972",
+            "24",
+            "123",
             "0",
             "92",
             "259",
@@ -428,14 +428,14 @@
             "2",
             "3 LEGS",
             "M",
-            "2996",
-            "24",
-            "124",
+            "3388",
+            "27",
+            "125",
             "0",
             "90",
             "237",
             "684",
-            "158",
+            "161",
             "437",
             "0",
             "0"
@@ -464,9 +464,9 @@
             "3",
             "STAN'S CLAN",
             "M",
-            "4222",
-            "21",
-            "201",
+            "4867",
+            "24",
+            "202",
             "213",
             "29",
             "230",
@@ -482,9 +482,9 @@
             "2",
             "SERVICE MASTER RESTORE",
             "M",
-            "4590",
-            "24",
-            "191",
+            "5123",
+            "27",
+            "189",
             "190",
             "20",
             "262",
@@ -500,9 +500,9 @@
             "3",
             "B B AND J",
             "M",
-            "3675",
-            "24",
-            "153",
+            "4107",
+            "27",
+            "152",
             "0",
             "69",
             "284",
@@ -518,15 +518,15 @@
             "3",
             "WOODMEN LIFE",
             "M",
-            "3391",
-            "21",
-            "161",
+            "3964",
+            "24",
+            "165",
             "174",
             "55",
             "232",
             "621",
-            "221",
-            "553",
+            "240",
+            "573",
             "0",
             "0"
           ],
@@ -554,8 +554,8 @@
             "3",
             "SERVICE MASTER RESTORE",
             "M",
-            "3316",
-            "21",
+            "3776",
+            "24",
             "157",
             "169",
             "45",
@@ -590,9 +590,9 @@
             "2",
             "MILLS TRANSFER",
             "M",
-            "4082",
-            "21",
-            "194",
+            "4625",
+            "24",
+            "192",
             "199",
             "41",
             "220",
@@ -608,8 +608,8 @@
             "3",
             "MILLS TRANSFER",
             "M",
-            "3110",
-            "18",
+            "3622",
+            "21",
             "172",
             "181",
             "35",
@@ -626,9 +626,9 @@
             "2",
             "STAN'S CLAN",
             "M",
-            "4222",
-            "24",
-            "175",
+            "4755",
+            "27",
+            "176",
             "181",
             "42",
             "260",
@@ -644,8 +644,8 @@
             "2",
             "P.E.A.K. BOWLING",
             "M",
-            "3488",
-            "24",
+            "3930",
+            "27",
             "145",
             "173",
             "69",
@@ -662,8 +662,8 @@
             "1",
             "P.E.A.K. BOWLING",
             "M",
-            "2542",
-            "24",
+            "2846",
+            "27",
             "105",
             "99",
             "103",
@@ -680,9 +680,9 @@
             "3",
             "P.E.A.K. BOWLING",
             "M",
-            "3776",
-            "24",
-            "157",
+            "4232",
+            "27",
+            "156",
             "168",
             "62",
             "227",
@@ -698,8 +698,8 @@
             "2",
             "KOOPAS",
             "M",
-            "3475",
-            "24",
+            "3889",
+            "27",
             "144",
             "0",
             "68",
@@ -716,9 +716,9 @@
             "3",
             "KOOPAS",
             "M",
-            "4094",
-            "24",
-            "170",
+            "4571",
+            "27",
+            "169",
             "175",
             "47",
             "240",
@@ -734,9 +734,9 @@
             "4",
             "WOODMEN LIFE",
             "M",
-            "4527",
-            "24",
-            "188",
+            "5062",
+            "27",
+            "187",
             "191",
             "28",
             "270",
@@ -752,9 +752,9 @@
             "1",
             "KOOPAS",
             "M",
-            "4255",
-            "24",
-            "177",
+            "4753",
+            "27",
+            "176",
             "178",
             "39",
             "238",
@@ -770,15 +770,15 @@
             "3",
             "3 LEGS",
             "M",
-            "3076",
-            "24",
-            "128",
+            "3570",
+            "27",
+            "132",
             "0",
             "78",
             "233",
             "663",
-            "161",
-            "447",
+            "173",
+            "494",
             "0",
             "0"
           ],
@@ -788,14 +788,14 @@
             "3",
             "NOVY FARMS",
             "M",
-            "1414",
-            "9",
-            "157",
+            "1899",
+            "12",
+            "158",
             "151",
             "62",
             "233",
             "682",
-            "173",
+            "176",
             "496",
             "0",
             "0"
@@ -806,9 +806,9 @@
             "1",
             "SERVICE MASTER RESTORE",
             "M",
-            "4428",
-            "24",
-            "184",
+            "4906",
+            "27",
+            "181",
             "178",
             "29",
             "269",
@@ -824,14 +824,14 @@
             "1",
             "NOVY FARMS",
             "M",
-            "4743",
-            "24",
-            "197",
+            "5385",
+            "27",
+            "199",
             "194",
             "23",
             "237",
             "694",
-            "228",
+            "244",
             "644",
             "0",
             "0"
@@ -860,9 +860,9 @@
             "1",
             "WOODMEN LIFE",
             "M",
-            "3038",
-            "18",
-            "168",
+            "3574",
+            "21",
+            "170",
             "182",
             "34",
             "258",
@@ -1419,234 +1419,7 @@
     ],
     "recaps": [
       {
-        "title": "P.E.A.K. BOWLING vs 3 LEGS",
-        "headers": [
-          "Bowler",
-          "Average",
-          "Handicap",
-          "Game 1",
-          "Game 2",
-          "Game 3",
-          "Scratch series"
-        ],
-        "rows": [
-          [
-            "Team 3",
-            "Lane 1 points won: 7.0"
-          ],
-          [
-            "EVERIX PETERSON",
-            "106",
-            "102",
-            "120",
-            "87",
-            "90",
-            "297"
-          ],
-          [
-            "ALAN PETERSON",
-            "146",
-            "66",
-            "149",
-            "128",
-            "126",
-            "403"
-          ],
-          [
-            "KYLE PETERSON",
-            "153",
-            "60",
-            "205",
-            "179",
-            "177",
-            "561"
-          ],
-          [
-            "Total",
-            "474",
-            "394",
-            "393",
-            "1261"
-          ],
-          [
-            "Team 9",
-            "Lane 2 points won: 0.0"
-          ],
-          [
-            "TOM BRENNAN",
-            "128",
-            "82",
-            "93",
-            "103",
-            "139",
-            "335"
-          ],
-          [
-            "JOHN CEJKA",
-            "126",
-            "84",
-            "138",
-            "97",
-            "110",
-            "345"
-          ],
-          [
-            "MALACHI SMITH",
-            "127",
-            "83",
-            "156",
-            "133",
-            "116",
-            "405"
-          ],
-          [
-            "Total",
-            "387",
-            "333",
-            "365",
-            "1085"
-          ]
-        ],
-        "emphasis": [
-          [
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            true,
-            true,
-            true,
-            true
-          ],
-          [
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false
-          ]
-        ],
-        "recapDetails": [
-          {},
-          {
-            "handicapSeries": "603",
-            "individualPoints": 0
-          },
-          {
-            "handicapSeries": "601",
-            "individualPoints": 0
-          },
-          {
-            "handicapSeries": "741",
-            "individualPoints": 0
-          },
-          {
-            "handicapSeries": "1261",
-            "handicapGames": [
-              "474",
-              "394",
-              "393"
-            ],
-            "teamPoints": [
-              "2.0",
-              "2.0",
-              "2.0",
-              "7.0",
-              "7.0"
-            ]
-          },
-          {},
-          {
-            "handicapSeries": "581",
-            "individualPoints": 0
-          },
-          {
-            "handicapSeries": "597",
-            "individualPoints": 0
-          },
-          {
-            "handicapSeries": "654",
-            "individualPoints": 0
-          },
-          {
-            "handicapSeries": "1148",
-            "handicapGames": [
-              "408",
-              "354",
-              "386"
-            ],
-            "teamPoints": [
-              "0.0",
-              "0.0",
-              "0.0",
-              "0.0",
-              "0.0"
-            ]
-          }
-        ],
-        "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F8%2F12170510192026f202608reprnt00.pdf&token=CfDJ8Fc9E-9grVlDj4tX-da8J6sbYiCNZwPFU-Wr5kkCsD00PYvfNtA3tw_3foJB0Ipo3RVCs9h_3IKCLogCDHKLMFi2lCh_OfMWexP5el90AdxXs5Knn5RnrBzAJ8bu21DmIWxZWmRUwx7AX7TvXe0ipt_72EqBk0FUR3vczWYhtc-Sq331mVqoFT0_sePdV7m-TqEtqmWa1LC4nS3OEVrpYILSanD9-WpMB51DOFD6Wxe3"
-      },
-      {
-        "title": "MILLS TRANSFER vs WOODMEN LIFE",
+        "title": "MILLS TRANSFER vs BYE",
         "headers": [
           "Bowler",
           "Average",
@@ -1659,79 +1432,52 @@
         "rows": [
           [
             "Team 8",
-            "Lane 3 points won: 2.0"
+            "Lane 1 points won: 5.0"
           ],
           [
             "GREG MILLS",
-            "195",
-            "22",
-            "207",
-            "156",
-            "203",
-            "566"
+            "194",
+            "23",
+            "170",
+            "159",
+            "214",
+            "543"
           ],
           [
             "JON MILLS",
-            "173",
-            "42",
-            "160",
-            "179",
-            "168",
-            "507"
+            "172",
+            "43",
+            "187",
+            "163",
+            "162",
+            "512"
           ],
           [
             "JOHN ANDERSON",
-            "174",
-            "41",
-            "160",
-            "170",
-            "165",
-            "495"
-          ],
-          [
-            "Total",
-            "527",
-            "505",
-            "536",
-            "1568"
-          ],
-          [
-            "Team 1",
-            "Lane 4 points won: 5.0"
-          ],
-          [
-            "SEAN WEHLING",
-            "166",
-            "48",
-            "181",
-            "191",
-            "174",
-            "546"
-          ],
-          [
-            "DAVE KADAVY",
-            "157",
-            "56",
-            "181",
-            "221",
+            "172",
+            "43",
             "151",
-            "553"
-          ],
-          [
-            "JON RUETER",
+            "166",
             "190",
-            "27",
-            "138",
-            "191",
-            "201",
-            "530"
+            "507"
           ],
           [
             "Total",
-            "500",
-            "603",
-            "526",
-            "1629"
+            "508",
+            "488",
+            "566",
+            "1562"
+          ],
+          [
+            "Team 10",
+            "Lane 2 points won: 0"
+          ],
+          [
+            "Total",
+            "0",
+            "0",
+            "0",
+            "0"
           ]
         ],
         "emphasis": [
@@ -1770,110 +1516,57 @@
             false,
             true,
             false,
-            false,
-            false
-          ],
-          [
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            true,
             true,
             true
+          ],
+          [
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false
           ]
         ],
         "recapDetails": [
           {},
           {
-            "handicapSeries": "632",
+            "handicapSeries": "612",
             "individualPoints": 0
           },
           {
-            "handicapSeries": "633",
+            "handicapSeries": "641",
             "individualPoints": 0
           },
           {
-            "handicapSeries": "618",
+            "handicapSeries": "636",
             "individualPoints": 0
           },
           {
-            "handicapSeries": "1568",
+            "handicapSeries": "1562",
             "handicapGames": [
-              "527",
-              "505",
-              "536"
+              "508",
+              "488",
+              "566"
             ],
             "teamPoints": [
               "2.0",
               "0.0",
-              "0.0",
-              "2.0",
-              "2.0"
-            ]
-          },
-          {},
-          {
-            "handicapSeries": "690",
-            "individualPoints": 0
-          },
-          {
-            "handicapSeries": "721",
-            "individualPoints": 0
-          },
-          {
-            "handicapSeries": "611",
-            "individualPoints": 0
-          },
-          {
-            "handicapSeries": "1707",
-            "handicapGames": [
-              "526",
-              "629",
-              "552"
-            ],
-            "teamPoints": [
-              "0.0",
-              "2.0",
               "2.0",
               "5.0",
               "5.0"
             ]
-          }
+          },
+          {},
+          {}
         ],
-        "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F8%2F12170510192026f202608reprnt00.pdf&token=CfDJ8Fc9E-9grVlDj4tX-da8J6sbYiCNZwPFU-Wr5kkCsD00PYvfNtA3tw_3foJB0Ipo3RVCs9h_3IKCLogCDHKLMFi2lCh_OfMWexP5el90AdxXs5Knn5RnrBzAJ8bu21DmIWxZWmRUwx7AX7TvXe0ipt_72EqBk0FUR3vczWYhtc-Sq331mVqoFT0_sePdV7m-TqEtqmWa1LC4nS3OEVrpYILSanD9-WpMB51DOFD6Wxe3"
+        "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F9%2F12170510262026f202609reprnt00.pdf&token=CfDJ8F9ZuFM7J1VOjvsIIg808QzCAAqI5b5ZUO253gxdt8ehSAbKbPv1IAB5wiyNjdOaw7oIc_NQlIqaQIj7bBVHG23DyuNNupplglKx9ud9XDCrDxS68QQJVY7DzUoadyQ7WQs0nDEVPP8ZNZq8vuoC4A2RS21EXT5pKQC5KoCdhlvWihRTIxopPkr4zdtaGSrzrmp2QVo4CTxbbj3yjMGK8FrUlup9_ml4yi77j535EDnO"
       },
       {
-        "title": "STAN'S CLAN vs BYE",
+        "title": "NOVY FARMS vs KOOPAS",
         "headers": [
           "Bowler",
           "Average",
@@ -1885,46 +1578,73 @@
         ],
         "rows": [
           [
-            "Team 6",
-            "Lane 5 points won: 7.0"
+            "Team 2",
+            "Lane 3 points won: 7.0"
           ],
           [
-            "ALICIA KREATZ",
-            "169",
-            "45",
-            "183",
-            "168",
-            "192",
-            "543"
+            "AUSTIN VUONG",
+            "197",
+            "20",
+            "244",
+            "198",
+            "200",
+            "642"
           ],
           [
-            "AMBER NIEMAN",
-            "175",
-            "40",
-            "188",
-            "165",
-            "191",
-            "544"
+            "JOHN BIRDSALL",
+            "161",
+            "53",
+            "178",
+            "170",
+            "129",
+            "477"
           ],
           [
-            "PAT DORITY",
-            "196",
-            "21",
-            "205",
-            "268",
-            "214",
-            "687"
+            "TOM STORZ",
+            "157",
+            "56",
+            "162",
+            "147",
+            "176",
+            "485"
           ],
           [
             "Total",
-            "576",
-            "601",
-            "597",
-            "1774"
+            "584",
+            "515",
+            "505",
+            "1604"
           ],
           [
-            "Team 10",
-            "Lane 6 points won: 0"
+            "Team 5",
+            "Lane 4 points won: 0.0"
+          ],
+          [
+            "RILEY SHARP",
+            "176",
+            "39",
+            "166",
+            "166",
+            "166",
+            "498"
+          ],
+          [
+            "WILL PURTZER",
+            "148",
+            "64",
+            "138",
+            "138",
+            "138",
+            "414"
+          ],
+          [
+            "DANIEL RIEDEL",
+            "169",
+            "45",
+            "159",
+            "159",
+            "159",
+            "477"
           ],
           [
             "Total",
@@ -1982,29 +1702,56 @@
             false,
             false,
             false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
             false
           ]
         ],
         "recapDetails": [
           {},
           {
-            "handicapSeries": "678",
+            "handicapSeries": "702",
             "individualPoints": 0
           },
           {
-            "handicapSeries": "664",
+            "handicapSeries": "636",
             "individualPoints": 0
           },
           {
-            "handicapSeries": "750",
+            "handicapSeries": "653",
             "individualPoints": 0
           },
           {
-            "handicapSeries": "1774",
+            "handicapSeries": "1604",
             "handicapGames": [
-              "576",
-              "601",
-              "597"
+              "584",
+              "515",
+              "505"
             ],
             "teamPoints": [
               "2.0",
@@ -2015,12 +1762,39 @@
             ]
           },
           {},
-          {}
+          {
+            "handicapSeries": "615",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "606",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "612",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "0",
+            "handicapGames": [
+              "0",
+              "0",
+              "0"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0"
+            ]
+          }
         ],
-        "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F8%2F12170510192026f202608reprnt00.pdf&token=CfDJ8Fc9E-9grVlDj4tX-da8J6sbYiCNZwPFU-Wr5kkCsD00PYvfNtA3tw_3foJB0Ipo3RVCs9h_3IKCLogCDHKLMFi2lCh_OfMWexP5el90AdxXs5Knn5RnrBzAJ8bu21DmIWxZWmRUwx7AX7TvXe0ipt_72EqBk0FUR3vczWYhtc-Sq331mVqoFT0_sePdV7m-TqEtqmWa1LC4nS3OEVrpYILSanD9-WpMB51DOFD6Wxe3"
+        "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F9%2F12170510262026f202609reprnt00.pdf&token=CfDJ8F9ZuFM7J1VOjvsIIg808QzCAAqI5b5ZUO253gxdt8ehSAbKbPv1IAB5wiyNjdOaw7oIc_NQlIqaQIj7bBVHG23DyuNNupplglKx9ud9XDCrDxS68QQJVY7DzUoadyQ7WQs0nDEVPP8ZNZq8vuoC4A2RS21EXT5pKQC5KoCdhlvWihRTIxopPkr4zdtaGSrzrmp2QVo4CTxbbj3yjMGK8FrUlup9_ml4yi77j535EDnO",
+        "officialTotalsComplete": false
       },
       {
-        "title": "NOVY FARMS vs B B AND J",
+        "title": "3 LEGS vs B B AND J",
         "headers": [
           "Bowler",
           "Average",
@@ -2032,64 +1806,64 @@
         ],
         "rows": [
           [
-            "Team 2",
-            "Lane 7 points won: 2.0"
+            "Team 9",
+            "Lane 5 points won: 7.0"
           ],
           [
-            "AUSTIN VUONG",
-            "197",
-            "20",
-            "189",
-            "185",
-            "214",
-            "588"
-          ],
-          [
-            "JOHN BIRDSALL",
-            "167",
-            "47",
-            "141",
-            "146",
+            "TOM BRENNAN",
+            "125",
+            "85",
             "116",
-            "403"
+            "106",
+            "108",
+            "330"
           ],
           [
-            "STEVE CONNELL",
-            "165",
-            "49",
-            "168",
-            "178",
-            "165",
-            "511"
+            "JOHN CEJKA",
+            "124",
+            "86",
+            "112",
+            "119",
+            "161",
+            "392"
+          ],
+          [
+            "MALACHI SMITH",
+            "128",
+            "82",
+            "152",
+            "169",
+            "173",
+            "494"
           ],
           [
             "Total",
-            "498",
-            "509",
-            "495",
-            "1502"
+            "380",
+            "394",
+            "442",
+            "1216"
           ],
           [
             "Team 4",
-            "Lane 8 points won: 5.0"
+            "Lane 6 points won: 0.0"
           ],
           [
             "JEFF BORER",
             "123",
             "87",
-            "106",
-            "99",
-            "159",
-            "364"
+            "161",
+            "135",
+            "139",
+            "435"
           ],
           [
             "RANDY BORER",
+            "168",
+            "46",
+            "124",
+            "155",
             "164",
-            "50",
-            "204",
-            "186",
-            "200",
-            "590"
+            "443"
           ],
           [
             "DAVE JANECEK",
@@ -2102,10 +1876,10 @@
           ],
           [
             "Total",
-            "454",
             "429",
-            "503",
-            "1386"
+            "434",
+            "447",
+            "1310"
           ]
         ],
         "emphasis": [
@@ -2142,82 +1916,58 @@
           ],
           [
             false,
-            false,
             true,
-            false,
-            false
-          ],
-          [
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
             true,
-            false,
             true,
             true
+          ],
+          [
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false
           ]
         ],
         "recapDetails": [
           {},
           {
-            "handicapSeries": "648",
+            "handicapSeries": "585",
             "individualPoints": 0
           },
           {
-            "handicapSeries": "544",
-            "individualPoints": 0
-          },
-          {
-            "handicapSeries": "658",
-            "individualPoints": 0
-          },
-          {
-            "handicapSeries": "1502",
-            "handicapGames": [
-              "498",
-              "509",
-              "495"
-            ],
-            "teamPoints": [
-              "0.0",
-              "2.0",
-              "0.0",
-              "2.0",
-              "2.0"
-            ]
-          },
-          {},
-          {
-            "handicapSeries": "625",
+            "handicapSeries": "650",
             "individualPoints": 0
           },
           {
@@ -2225,29 +1975,53 @@
             "individualPoints": 0
           },
           {
+            "handicapSeries": "1399",
+            "handicapGames": [
+              "441",
+              "455",
+              "503"
+            ],
+            "teamPoints": [
+              "2.0",
+              "2.0",
+              "2.0",
+              "7.0",
+              "7.0"
+            ]
+          },
+          {},
+          {
+            "handicapSeries": "696",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "581",
+            "individualPoints": 0
+          },
+          {
             "handicapSeries": "609",
             "individualPoints": 0
           },
           {
-            "handicapSeries": "1623",
+            "handicapSeries": "1310",
             "handicapGames": [
-              "533",
-              "508",
-              "582"
+              "429",
+              "434",
+              "447"
             ],
             "teamPoints": [
-              "2.0",
               "0.0",
-              "2.0",
-              "5.0",
-              "5.0"
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0"
             ]
           }
         ],
-        "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F8%2F12170510192026f202608reprnt00.pdf&token=CfDJ8Fc9E-9grVlDj4tX-da8J6sbYiCNZwPFU-Wr5kkCsD00PYvfNtA3tw_3foJB0Ipo3RVCs9h_3IKCLogCDHKLMFi2lCh_OfMWexP5el90AdxXs5Knn5RnrBzAJ8bu21DmIWxZWmRUwx7AX7TvXe0ipt_72EqBk0FUR3vczWYhtc-Sq331mVqoFT0_sePdV7m-TqEtqmWa1LC4nS3OEVrpYILSanD9-WpMB51DOFD6Wxe3"
+        "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F9%2F12170510262026f202609reprnt00.pdf&token=CfDJ8F9ZuFM7J1VOjvsIIg808QzCAAqI5b5ZUO253gxdt8ehSAbKbPv1IAB5wiyNjdOaw7oIc_NQlIqaQIj7bBVHG23DyuNNupplglKx9ud9XDCrDxS68QQJVY7DzUoadyQ7WQs0nDEVPP8ZNZq8vuoC4A2RS21EXT5pKQC5KoCdhlvWihRTIxopPkr4zdtaGSrzrmp2QVo4CTxbbj3yjMGK8FrUlup9_ml4yi77j535EDnO"
       },
       {
-        "title": "SERVICE MASTER RESTORE vs KOOPAS",
+        "title": "WOODMEN LIFE vs SERVICE MASTER RESTORE",
         "headers": [
           "Bowler",
           "Average",
@@ -2259,80 +2033,307 @@
         ],
         "rows": [
           [
+            "Team 1",
+            "Lane 7 points won: 7.0"
+          ],
+          [
+            "SEAN WEHLING",
+            "168",
+            "46",
+            "143",
+            "201",
+            "192",
+            "536"
+          ],
+          [
+            "DAVE KADAVY",
+            "161",
+            "53",
+            "240",
+            "164",
+            "169",
+            "573"
+          ],
+          [
+            "JON RUETER",
+            "188",
+            "28",
+            "183",
+            "176",
+            "176",
+            "535"
+          ],
+          [
+            "Total",
+            "566",
+            "541",
+            "537",
+            "1644"
+          ],
+          [
             "Team 7",
-            "Lane 9 points won: 2.0"
+            "Lane 8 points won: 0.0"
           ],
           [
             "TIM UMSHLER",
-            "188",
-            "28",
-            "128",
-            "150",
-            "188",
-            "466"
+            "184",
+            "32",
+            "167",
+            "181",
+            "130",
+            "478"
           ],
           [
             "MIKE FIELDS",
             "196",
             "21",
-            "186",
-            "186",
-            "186",
-            "558"
+            "191",
+            "178",
+            "164",
+            "533"
           ],
           [
             "JEFF KUNTZ",
-            "158",
-            "55",
-            "153",
-            "152",
+            "157",
+            "56",
             "162",
-            "467"
+            "143",
+            "155",
+            "460"
           ],
           [
             "Total",
-            "467",
-            "488",
-            "536",
-            "1491"
+            "520",
+            "502",
+            "449",
+            "1471"
+          ]
+        ],
+        "emphasis": [
+          [
+            false,
+            false
           ],
           [
-            "Team 5",
-            "Lane 10 points won: 5.0"
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
           ],
           [
-            "RILEY SHARP",
-            "177",
-            "38",
-            "148",
-            "184",
-            "171",
-            "503"
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
           ],
           [
-            "WILL PURTZER",
-            "147",
-            "65",
-            "146",
-            "181",
-            "125",
-            "452"
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
           ],
           [
-            "DANIEL RIEDEL",
-            "168",
-            "46",
+            false,
+            true,
+            true,
+            true,
+            true
+          ],
+          [
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        ],
+        "recapDetails": [
+          {},
+          {
+            "handicapSeries": "674",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "732",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "619",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "1698",
+            "handicapGames": [
+              "584",
+              "559",
+              "555"
+            ],
+            "teamPoints": [
+              "2.0",
+              "2.0",
+              "2.0",
+              "7.0",
+              "7.0"
+            ]
+          },
+          {},
+          {
+            "handicapSeries": "574",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "596",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "628",
+            "individualPoints": 0
+          },
+          {
+            "handicapSeries": "1471",
+            "handicapGames": [
+              "520",
+              "502",
+              "449"
+            ],
+            "teamPoints": [
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0"
+            ]
+          }
+        ],
+        "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F9%2F12170510262026f202609reprnt00.pdf&token=CfDJ8F9ZuFM7J1VOjvsIIg808QzCAAqI5b5ZUO253gxdt8ehSAbKbPv1IAB5wiyNjdOaw7oIc_NQlIqaQIj7bBVHG23DyuNNupplglKx9ud9XDCrDxS68QQJVY7DzUoadyQ7WQs0nDEVPP8ZNZq8vuoC4A2RS21EXT5pKQC5KoCdhlvWihRTIxopPkr4zdtaGSrzrmp2QVo4CTxbbj3yjMGK8FrUlup9_ml4yi77j535EDnO"
+      },
+      {
+        "title": "P.E.A.K. BOWLING vs STAN'S CLAN",
+        "headers": [
+          "Bowler",
+          "Average",
+          "Handicap",
+          "Game 1",
+          "Game 2",
+          "Game 3",
+          "Scratch series"
+        ],
+        "rows": [
+          [
+            "Team 3",
+            "Lane 9 points won: 0.0"
+          ],
+          [
+            "EVERIX PETERSON",
+            "105",
+            "103",
+            "100",
+            "102",
+            "102",
+            "304"
+          ],
+          [
+            "ALAN PETERSON",
+            "145",
+            "67",
+            "162",
+            "157",
+            "123",
+            "442"
+          ],
+          [
+            "KYLE PETERSON",
+            "157",
+            "56",
+            "160",
+            "157",
+            "139",
+            "456"
+          ],
+          [
+            "Total",
+            "422",
+            "416",
+            "364",
+            "1202"
+          ],
+          [
+            "Team 6",
+            "Lane 10 points won: 7.0"
+          ],
+          [
+            "AMBER NIEMAN",
             "175",
-            "195",
-            "170",
-            "540"
+            "40",
+            "196",
+            "169",
+            "168",
+            "533"
+          ],
+          [
+            "PAT DORITY",
+            "201",
+            "17",
+            "192",
+            "217",
+            "236",
+            "645"
+          ],
+          [
+            "BRANDON POWERS",
+            "148",
+            "64",
+            "150",
+            "159",
+            "166",
+            "475"
           ],
           [
             "Total",
-            "469",
-            "560",
-            "466",
-            "1495"
+            "538",
+            "545",
+            "570",
+            "1653"
           ]
         ],
         "emphasis": [
@@ -2371,107 +2372,107 @@
             false,
             false,
             false,
+            false,
+            false
+          ],
+          [
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
             true,
-            false
-          ],
-          [
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
-          ],
-          [
-            false,
             true,
             true,
-            false,
             true
           ]
         ],
         "recapDetails": [
           {},
           {
-            "handicapSeries": "550",
+            "handicapSeries": "613",
             "individualPoints": 0
           },
           {
-            "handicapSeries": "621",
+            "handicapSeries": "643",
             "individualPoints": 0
           },
           {
-            "handicapSeries": "632",
+            "handicapSeries": "624",
             "individualPoints": 0
           },
           {
-            "handicapSeries": "1491",
+            "handicapSeries": "1517",
             "handicapGames": [
-              "467",
-              "488",
-              "536"
+              "527",
+              "521",
+              "469"
             ],
             "teamPoints": [
               "0.0",
               "0.0",
-              "2.0",
-              "2.0",
-              "2.0"
+              "0.0",
+              "0.0",
+              "0.0"
             ]
           },
           {},
           {
-            "handicapSeries": "617",
+            "handicapSeries": "653",
             "individualPoints": 0
           },
           {
-            "handicapSeries": "647",
+            "handicapSeries": "696",
             "individualPoints": 0
           },
           {
-            "handicapSeries": "678",
+            "handicapSeries": "667",
             "individualPoints": 0
           },
           {
-            "handicapSeries": "1630",
+            "handicapSeries": "1653",
             "handicapGames": [
-              "514",
-              "605",
-              "511"
+              "538",
+              "545",
+              "570"
             ],
             "teamPoints": [
               "2.0",
               "2.0",
-              "0.0",
-              "5.0",
-              "5.0"
+              "2.0",
+              "7.0",
+              "7.0"
             ]
           }
         ],
-        "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F8%2F12170510192026f202608reprnt00.pdf&token=CfDJ8Fc9E-9grVlDj4tX-da8J6sbYiCNZwPFU-Wr5kkCsD00PYvfNtA3tw_3foJB0Ipo3RVCs9h_3IKCLogCDHKLMFi2lCh_OfMWexP5el90AdxXs5Knn5RnrBzAJ8bu21DmIWxZWmRUwx7AX7TvXe0ipt_72EqBk0FUR3vczWYhtc-Sq331mVqoFT0_sePdV7m-TqEtqmWa1LC4nS3OEVrpYILSanD9-WpMB51DOFD6Wxe3"
+        "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F9%2F12170510262026f202609reprnt00.pdf&token=CfDJ8F9ZuFM7J1VOjvsIIg808QzCAAqI5b5ZUO253gxdt8ehSAbKbPv1IAB5wiyNjdOaw7oIc_NQlIqaQIj7bBVHG23DyuNNupplglKx9ud9XDCrDxS68QQJVY7DzUoadyQ7WQs0nDEVPP8ZNZq8vuoC4A2RS21EXT5pKQC5KoCdhlvWihRTIxopPkr4zdtaGSrzrmp2QVo4CTxbbj3yjMGK8FrUlup9_ml4yi77j535EDnO"
       }
     ],
     "lanes": [
@@ -24008,19 +24009,2480 @@
           }
         ]
       }
+    },
+    {
+      "week": "9",
+      "sourceUpdated": "Oct 26, 2026",
+      "syncedAt": "2026-10-27T14:43:57.564Z",
+      "views": {
+        "recaps": [
+          {
+            "title": "MILLS TRANSFER vs BYE",
+            "headers": [
+              "Bowler",
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
+            ],
+            "rows": [
+              [
+                "Team 8",
+                "Lane 1 points won: 5.0"
+              ],
+              [
+                "GREG MILLS",
+                "194",
+                "23",
+                "170",
+                "159",
+                "214",
+                "543"
+              ],
+              [
+                "JON MILLS",
+                "172",
+                "43",
+                "187",
+                "163",
+                "162",
+                "512"
+              ],
+              [
+                "JOHN ANDERSON",
+                "172",
+                "43",
+                "151",
+                "166",
+                "190",
+                "507"
+              ],
+              [
+                "Total",
+                "508",
+                "488",
+                "566",
+                "1562"
+              ],
+              [
+                "Team 10",
+                "Lane 2 points won: 0"
+              ],
+              [
+                "Total",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                true,
+                false,
+                true,
+                true
+              ],
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "612",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "641",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "636",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "1562",
+                "handicapGames": [
+                  "508",
+                  "488",
+                  "566"
+                ],
+                "teamPoints": [
+                  "2.0",
+                  "0.0",
+                  "2.0",
+                  "5.0",
+                  "5.0"
+                ]
+              },
+              {},
+              {}
+            ],
+            "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F9%2F12170510262026f202609reprnt00.pdf&token=CfDJ8F9ZuFM7J1VOjvsIIg808QzCAAqI5b5ZUO253gxdt8ehSAbKbPv1IAB5wiyNjdOaw7oIc_NQlIqaQIj7bBVHG23DyuNNupplglKx9ud9XDCrDxS68QQJVY7DzUoadyQ7WQs0nDEVPP8ZNZq8vuoC4A2RS21EXT5pKQC5KoCdhlvWihRTIxopPkr4zdtaGSrzrmp2QVo4CTxbbj3yjMGK8FrUlup9_ml4yi77j535EDnO"
+          },
+          {
+            "title": "NOVY FARMS vs KOOPAS",
+            "headers": [
+              "Bowler",
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
+            ],
+            "rows": [
+              [
+                "Team 2",
+                "Lane 3 points won: 7.0"
+              ],
+              [
+                "AUSTIN VUONG",
+                "197",
+                "20",
+                "244",
+                "198",
+                "200",
+                "642"
+              ],
+              [
+                "JOHN BIRDSALL",
+                "161",
+                "53",
+                "178",
+                "170",
+                "129",
+                "477"
+              ],
+              [
+                "TOM STORZ",
+                "157",
+                "56",
+                "162",
+                "147",
+                "176",
+                "485"
+              ],
+              [
+                "Total",
+                "584",
+                "515",
+                "505",
+                "1604"
+              ],
+              [
+                "Team 5",
+                "Lane 4 points won: 0.0"
+              ],
+              [
+                "RILEY SHARP",
+                "176",
+                "39",
+                "166",
+                "166",
+                "166",
+                "498"
+              ],
+              [
+                "WILL PURTZER",
+                "148",
+                "64",
+                "138",
+                "138",
+                "138",
+                "414"
+              ],
+              [
+                "DANIEL RIEDEL",
+                "169",
+                "45",
+                "159",
+                "159",
+                "159",
+                "477"
+              ],
+              [
+                "Total",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                true,
+                true,
+                true,
+                true
+              ],
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "702",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "636",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "653",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "1604",
+                "handicapGames": [
+                  "584",
+                  "515",
+                  "505"
+                ],
+                "teamPoints": [
+                  "2.0",
+                  "2.0",
+                  "2.0",
+                  "7.0",
+                  "7.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "615",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "606",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "612",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "0",
+                "handicapGames": [
+                  "0",
+                  "0",
+                  "0"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F9%2F12170510262026f202609reprnt00.pdf&token=CfDJ8F9ZuFM7J1VOjvsIIg808QzCAAqI5b5ZUO253gxdt8ehSAbKbPv1IAB5wiyNjdOaw7oIc_NQlIqaQIj7bBVHG23DyuNNupplglKx9ud9XDCrDxS68QQJVY7DzUoadyQ7WQs0nDEVPP8ZNZq8vuoC4A2RS21EXT5pKQC5KoCdhlvWihRTIxopPkr4zdtaGSrzrmp2QVo4CTxbbj3yjMGK8FrUlup9_ml4yi77j535EDnO",
+            "officialTotalsComplete": false
+          },
+          {
+            "title": "3 LEGS vs B B AND J",
+            "headers": [
+              "Bowler",
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
+            ],
+            "rows": [
+              [
+                "Team 9",
+                "Lane 5 points won: 7.0"
+              ],
+              [
+                "TOM BRENNAN",
+                "125",
+                "85",
+                "116",
+                "106",
+                "108",
+                "330"
+              ],
+              [
+                "JOHN CEJKA",
+                "124",
+                "86",
+                "112",
+                "119",
+                "161",
+                "392"
+              ],
+              [
+                "MALACHI SMITH",
+                "128",
+                "82",
+                "152",
+                "169",
+                "173",
+                "494"
+              ],
+              [
+                "Total",
+                "380",
+                "394",
+                "442",
+                "1216"
+              ],
+              [
+                "Team 4",
+                "Lane 6 points won: 0.0"
+              ],
+              [
+                "JEFF BORER",
+                "123",
+                "87",
+                "161",
+                "135",
+                "139",
+                "435"
+              ],
+              [
+                "RANDY BORER",
+                "168",
+                "46",
+                "124",
+                "155",
+                "164",
+                "443"
+              ],
+              [
+                "DAVE JANECEK",
+                "154",
+                "59",
+                "144",
+                "144",
+                "144",
+                "432"
+              ],
+              [
+                "Total",
+                "429",
+                "434",
+                "447",
+                "1310"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                true,
+                true,
+                true,
+                true
+              ],
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "585",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "650",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "740",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "1399",
+                "handicapGames": [
+                  "441",
+                  "455",
+                  "503"
+                ],
+                "teamPoints": [
+                  "2.0",
+                  "2.0",
+                  "2.0",
+                  "7.0",
+                  "7.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "696",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "581",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "609",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "1310",
+                "handicapGames": [
+                  "429",
+                  "434",
+                  "447"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F9%2F12170510262026f202609reprnt00.pdf&token=CfDJ8F9ZuFM7J1VOjvsIIg808QzCAAqI5b5ZUO253gxdt8ehSAbKbPv1IAB5wiyNjdOaw7oIc_NQlIqaQIj7bBVHG23DyuNNupplglKx9ud9XDCrDxS68QQJVY7DzUoadyQ7WQs0nDEVPP8ZNZq8vuoC4A2RS21EXT5pKQC5KoCdhlvWihRTIxopPkr4zdtaGSrzrmp2QVo4CTxbbj3yjMGK8FrUlup9_ml4yi77j535EDnO"
+          },
+          {
+            "title": "WOODMEN LIFE vs SERVICE MASTER RESTORE",
+            "headers": [
+              "Bowler",
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
+            ],
+            "rows": [
+              [
+                "Team 1",
+                "Lane 7 points won: 7.0"
+              ],
+              [
+                "SEAN WEHLING",
+                "168",
+                "46",
+                "143",
+                "201",
+                "192",
+                "536"
+              ],
+              [
+                "DAVE KADAVY",
+                "161",
+                "53",
+                "240",
+                "164",
+                "169",
+                "573"
+              ],
+              [
+                "JON RUETER",
+                "188",
+                "28",
+                "183",
+                "176",
+                "176",
+                "535"
+              ],
+              [
+                "Total",
+                "566",
+                "541",
+                "537",
+                "1644"
+              ],
+              [
+                "Team 7",
+                "Lane 8 points won: 0.0"
+              ],
+              [
+                "TIM UMSHLER",
+                "184",
+                "32",
+                "167",
+                "181",
+                "130",
+                "478"
+              ],
+              [
+                "MIKE FIELDS",
+                "196",
+                "21",
+                "191",
+                "178",
+                "164",
+                "533"
+              ],
+              [
+                "JEFF KUNTZ",
+                "157",
+                "56",
+                "162",
+                "143",
+                "155",
+                "460"
+              ],
+              [
+                "Total",
+                "520",
+                "502",
+                "449",
+                "1471"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                true,
+                true,
+                true,
+                true
+              ],
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "674",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "732",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "619",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "1698",
+                "handicapGames": [
+                  "584",
+                  "559",
+                  "555"
+                ],
+                "teamPoints": [
+                  "2.0",
+                  "2.0",
+                  "2.0",
+                  "7.0",
+                  "7.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "574",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "596",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "628",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "1471",
+                "handicapGames": [
+                  "520",
+                  "502",
+                  "449"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F9%2F12170510262026f202609reprnt00.pdf&token=CfDJ8F9ZuFM7J1VOjvsIIg808QzCAAqI5b5ZUO253gxdt8ehSAbKbPv1IAB5wiyNjdOaw7oIc_NQlIqaQIj7bBVHG23DyuNNupplglKx9ud9XDCrDxS68QQJVY7DzUoadyQ7WQs0nDEVPP8ZNZq8vuoC4A2RS21EXT5pKQC5KoCdhlvWihRTIxopPkr4zdtaGSrzrmp2QVo4CTxbbj3yjMGK8FrUlup9_ml4yi77j535EDnO"
+          },
+          {
+            "title": "P.E.A.K. BOWLING vs STAN'S CLAN",
+            "headers": [
+              "Bowler",
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
+            ],
+            "rows": [
+              [
+                "Team 3",
+                "Lane 9 points won: 0.0"
+              ],
+              [
+                "EVERIX PETERSON",
+                "105",
+                "103",
+                "100",
+                "102",
+                "102",
+                "304"
+              ],
+              [
+                "ALAN PETERSON",
+                "145",
+                "67",
+                "162",
+                "157",
+                "123",
+                "442"
+              ],
+              [
+                "KYLE PETERSON",
+                "157",
+                "56",
+                "160",
+                "157",
+                "139",
+                "456"
+              ],
+              [
+                "Total",
+                "422",
+                "416",
+                "364",
+                "1202"
+              ],
+              [
+                "Team 6",
+                "Lane 10 points won: 7.0"
+              ],
+              [
+                "AMBER NIEMAN",
+                "175",
+                "40",
+                "196",
+                "169",
+                "168",
+                "533"
+              ],
+              [
+                "PAT DORITY",
+                "201",
+                "17",
+                "192",
+                "217",
+                "236",
+                "645"
+              ],
+              [
+                "BRANDON POWERS",
+                "148",
+                "64",
+                "150",
+                "159",
+                "166",
+                "475"
+              ],
+              [
+                "Total",
+                "538",
+                "545",
+                "570",
+                "1653"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                true,
+                true,
+                true,
+                true
+              ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "613",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "643",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "624",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "1517",
+                "handicapGames": [
+                  "527",
+                  "521",
+                  "469"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0"
+                ]
+              },
+              {},
+              {
+                "handicapSeries": "653",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "696",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "667",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "1653",
+                "handicapGames": [
+                  "538",
+                  "545",
+                  "570"
+                ],
+                "teamPoints": [
+                  "2.0",
+                  "2.0",
+                  "2.0",
+                  "7.0",
+                  "7.0"
+                ]
+              }
+            ],
+            "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F9%2F12170510262026f202609reprnt00.pdf&token=CfDJ8F9ZuFM7J1VOjvsIIg808QzCAAqI5b5ZUO253gxdt8ehSAbKbPv1IAB5wiyNjdOaw7oIc_NQlIqaQIj7bBVHG23DyuNNupplglKx9ud9XDCrDxS68QQJVY7DzUoadyQ7WQs0nDEVPP8ZNZq8vuoC4A2RS21EXT5pKQC5KoCdhlvWihRTIxopPkr4zdtaGSrzrmp2QVo4CTxbbj3yjMGK8FrUlup9_ml4yi77j535EDnO"
+          }
+        ],
+        "bowlers": [
+          {
+            "title": "Bowlers and season statistics",
+            "headers": [
+              "Name",
+              "Team#",
+              "Pos#",
+              "Team",
+              "Gndr",
+              "Pins",
+              "Games",
+              "Avg",
+              "EnteringAvg",
+              "HCP",
+              "HHG",
+              "HHS",
+              "HSG",
+              "HSS",
+              "MIB",
+              "WON"
+            ],
+            "rows": [
+              [
+                "Anderson, John",
+                "8",
+                "4",
+                "MILLS TRANSFER",
+                "M",
+                "3098",
+                "18",
+                "172",
+                "178",
+                "37",
+                "250",
+                "687",
+                "213",
+                "576",
+                "0",
+                "0"
+              ],
+              [
+                "Birdsall, John",
+                "2",
+                "2",
+                "NOVY FARMS",
+                "M",
+                "3388",
+                "21",
+                "161",
+                "166",
+                "48",
+                "237",
+                "643",
+                "223",
+                "523",
+                "0",
+                "0"
+              ],
+              [
+                "Borer, Jeff",
+                "4",
+                "1",
+                "B B AND J",
+                "M",
+                "3402",
+                "27",
+                "126",
+                "0",
+                "98",
+                "255",
+                "680",
+                "186",
+                "435",
+                "0",
+                "0"
+              ],
+              [
+                "Borer, Randy",
+                "4",
+                "2",
+                "B B AND J",
+                "M",
+                "4491",
+                "27",
+                "166",
+                "0",
+                "46",
+                "243",
+                "655",
+                "204",
+                "590",
+                "0",
+                "0"
+              ],
+              [
+                "Brennan, Tom",
+                "9",
+                "1",
+                "3 LEGS",
+                "M",
+                "2972",
+                "24",
+                "123",
+                "0",
+                "92",
+                "259",
+                "705",
+                "171",
+                "455",
+                "0",
+                "0"
+              ],
+              [
+                "Cejka, John",
+                "9",
+                "2",
+                "3 LEGS",
+                "M",
+                "3388",
+                "27",
+                "125",
+                "0",
+                "90",
+                "237",
+                "684",
+                "161",
+                "437",
+                "0",
+                "0"
+              ],
+              [
+                "Connell, Steve",
+                "2",
+                "4",
+                "NOVY FARMS",
+                "M",
+                "3496",
+                "21",
+                "166",
+                "175",
+                "43",
+                "242",
+                "651",
+                "202",
+                "552",
+                "0",
+                "0"
+              ],
+              [
+                "Dority, Pat",
+                "6",
+                "3",
+                "STAN'S CLAN",
+                "M",
+                "4867",
+                "24",
+                "202",
+                "213",
+                "29",
+                "230",
+                "603",
+                "268",
+                "687",
+                "0",
+                "0"
+              ],
+              [
+                "Fields, Mike",
+                "7",
+                "2",
+                "SERVICE MASTER RESTORE",
+                "M",
+                "5123",
+                "27",
+                "189",
+                "190",
+                "20",
+                "262",
+                "702",
+                "235",
+                "621",
+                "0",
+                "0"
+              ],
+              [
+                "Janecek, Dave",
+                "4",
+                "3",
+                "B B AND J",
+                "M",
+                "4107",
+                "27",
+                "152",
+                "0",
+                "69",
+                "284",
+                "755",
+                "221",
+                "542",
+                "0",
+                "0"
+              ],
+              [
+                "Kadavy, Dave",
+                "1",
+                "3",
+                "WOODMEN LIFE",
+                "M",
+                "3964",
+                "24",
+                "165",
+                "174",
+                "55",
+                "232",
+                "621",
+                "240",
+                "573",
+                "0",
+                "0"
+              ],
+              [
+                "Kreatz, Alicia",
+                "6",
+                "1",
+                "STAN'S CLAN",
+                "M",
+                "3598",
+                "21",
+                "171",
+                "196",
+                "53",
+                "235",
+                "598",
+                "214",
+                "550",
+                "0",
+                "0"
+              ],
+              [
+                "Kuntz, Jeff",
+                "7",
+                "3",
+                "SERVICE MASTER RESTORE",
+                "M",
+                "3776",
+                "24",
+                "157",
+                "169",
+                "45",
+                "224",
+                "618",
+                "191",
+                "500",
+                "0",
+                "0"
+              ],
+              [
+                "Mills, Gary",
+                "8",
+                "1",
+                "MILLS TRANSFER",
+                "M",
+                "3346",
+                "18",
+                "185",
+                "190",
+                "28",
+                "248",
+                "664",
+                "221",
+                "583",
+                "0",
+                "0"
+              ],
+              [
+                "Mills, Greg",
+                "8",
+                "2",
+                "MILLS TRANSFER",
+                "M",
+                "4625",
+                "24",
+                "192",
+                "199",
+                "41",
+                "220",
+                "636",
+                "277",
+                "685",
+                "0",
+                "0"
+              ],
+              [
+                "Mills, Jon",
+                "8",
+                "3",
+                "MILLS TRANSFER",
+                "M",
+                "3622",
+                "21",
+                "172",
+                "181",
+                "35",
+                "249",
+                "659",
+                "214",
+                "554",
+                "0",
+                "0"
+              ],
+              [
+                "Nieman, Amber",
+                "6",
+                "2",
+                "STAN'S CLAN",
+                "M",
+                "4755",
+                "27",
+                "176",
+                "181",
+                "42",
+                "260",
+                "697",
+                "229",
+                "592",
+                "0",
+                "0"
+              ],
+              [
+                "Peterson, Alan",
+                "3",
+                "2",
+                "P.E.A.K. BOWLING",
+                "M",
+                "3930",
+                "27",
+                "145",
+                "173",
+                "69",
+                "239",
+                "604",
+                "222",
+                "487",
+                "0",
+                "0"
+              ],
+              [
+                "Peterson, Everix",
+                "3",
+                "1",
+                "P.E.A.K. BOWLING",
+                "M",
+                "2846",
+                "27",
+                "105",
+                "99",
+                "103",
+                "242",
+                "666",
+                "148",
+                "346",
+                "0",
+                "0"
+              ],
+              [
+                "Peterson, Kyle",
+                "3",
+                "3",
+                "P.E.A.K. BOWLING",
+                "M",
+                "4232",
+                "27",
+                "156",
+                "168",
+                "62",
+                "227",
+                "626",
+                "205",
+                "561",
+                "0",
+                "0"
+              ],
+              [
+                "Purtzer, Will",
+                "5",
+                "2",
+                "KOOPAS",
+                "M",
+                "3889",
+                "27",
+                "144",
+                "0",
+                "68",
+                "273",
+                "719",
+                "198",
+                "485",
+                "0",
+                "0"
+              ],
+              [
+                "Riedel, Daniel",
+                "5",
+                "3",
+                "KOOPAS",
+                "M",
+                "4571",
+                "27",
+                "169",
+                "175",
+                "47",
+                "240",
+                "681",
+                "200",
+                "561",
+                "0",
+                "0"
+              ],
+              [
+                "Rueter, Jon",
+                "1",
+                "4",
+                "WOODMEN LIFE",
+                "M",
+                "5062",
+                "27",
+                "187",
+                "191",
+                "28",
+                "270",
+                "697",
+                "244",
+                "624",
+                "0",
+                "0"
+              ],
+              [
+                "Sharp, Riley",
+                "5",
+                "1",
+                "KOOPAS",
+                "M",
+                "4753",
+                "27",
+                "176",
+                "178",
+                "39",
+                "238",
+                "652",
+                "237",
+                "616",
+                "0",
+                "0"
+              ],
+              [
+                "Smith, Malachi",
+                "9",
+                "3",
+                "3 LEGS",
+                "M",
+                "3570",
+                "27",
+                "132",
+                "0",
+                "78",
+                "233",
+                "663",
+                "173",
+                "494",
+                "0",
+                "0"
+              ],
+              [
+                "Storz, Tom",
+                "2",
+                "3",
+                "NOVY FARMS",
+                "M",
+                "1899",
+                "12",
+                "158",
+                "151",
+                "62",
+                "233",
+                "682",
+                "176",
+                "496",
+                "0",
+                "0"
+              ],
+              [
+                "Umshler, Tim",
+                "7",
+                "1",
+                "SERVICE MASTER RESTORE",
+                "M",
+                "4906",
+                "27",
+                "181",
+                "178",
+                "29",
+                "269",
+                "711",
+                "232",
+                "600",
+                "0",
+                "0"
+              ],
+              [
+                "Vuong, Austin",
+                "2",
+                "1",
+                "NOVY FARMS",
+                "M",
+                "5385",
+                "27",
+                "199",
+                "194",
+                "23",
+                "237",
+                "694",
+                "244",
+                "644",
+                "0",
+                "0"
+              ],
+              [
+                "Wehling, Alex",
+                "1",
+                "2",
+                "WOODMEN LIFE",
+                "M",
+                "1284",
+                "9",
+                "142",
+                "134",
+                "77",
+                "261",
+                "725",
+                "184",
+                "494",
+                "0",
+                "0"
+              ],
+              [
+                "Wehling, Sean",
+                "1",
+                "1",
+                "WOODMEN LIFE",
+                "M",
+                "3574",
+                "21",
+                "170",
+                "182",
+                "34",
+                "258",
+                "584",
+                "224",
+                "546",
+                "0",
+                "0"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ]
+          }
+        ],
+        "standings": [
+          {
+            "title": "League standings",
+            "headers": [
+              "Place",
+              "Team",
+              "Team#",
+              "Div",
+              "WON",
+              "LOST",
+              "%",
+              "YTD WON",
+              "AVG",
+              "Pins",
+              "HSG",
+              "HSS"
+            ],
+            "rows": [
+              [
+                "1",
+                "WOODMEN LIFE",
+                "1",
+                "1",
+                "40",
+                "23",
+                "63 %",
+                "40",
+                "474",
+                "13884",
+                "604",
+                "1539"
+              ],
+              [
+                "2",
+                "B B AND J",
+                "4",
+                "1",
+                "39",
+                "24",
+                "62 %",
+                "39",
+                "422",
+                "12000",
+                "524",
+                "1345"
+              ],
+              [
+                "3",
+                "SERVICE MASTER RESTORE",
+                "7",
+                "1",
+                "35",
+                "28",
+                "56 %",
+                "35",
+                "553",
+                "14282",
+                "581",
+                "1704"
+              ],
+              [
+                "4",
+                "NOVY FARMS",
+                "2",
+                "1",
+                "35",
+                "28",
+                "56 %",
+                "35",
+                "511",
+                "14168",
+                "584",
+                "1644"
+              ],
+              [
+                "5",
+                "STAN'S CLAN",
+                "6",
+                "1",
+                "32",
+                "31",
+                "51 %",
+                "32",
+                "521",
+                "14669",
+                "606",
+                "1622"
+              ],
+              [
+                "6",
+                "3 LEGS",
+                "9",
+                "1",
+                "31",
+                "32",
+                "49 %",
+                "31",
+                "369",
+                "10294",
+                "438",
+                "1146"
+              ],
+              [
+                "7",
+                "KOOPAS",
+                "5",
+                "1",
+                "29",
+                "34",
+                "46 %",
+                "29",
+                "487",
+                "11830",
+                "520",
+                "1482"
+              ],
+              [
+                "8",
+                "MILLS TRANSFER",
+                "8",
+                "1",
+                "28",
+                "35",
+                "44 %",
+                "28",
+                "543",
+                "14691",
+                "636",
+                "1710"
+              ],
+              [
+                "9",
+                "P.E.A.K. BOWLING",
+                "3",
+                "1",
+                "27",
+                "36",
+                "43 %",
+                "27",
+                "399",
+                "11008",
+                "455",
+                "1290"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ]
+            ]
+          }
+        ]
+      }
     }
   ],
   "lastAttemptedAt": "2026-10-20T00:00:31.199Z",
   "lastCheckedAt": "2026-09-21T11:26:45.987Z",
-  "officialRecapHash": "3640775e26b2eb401419aafe4790dcc854f2afee7205c0623780dbfcef5ec0f8",
+  "officialRecapHash": "213b49c78df86b643fa3f97f38edd7c54e585d966cbf3f3f9c86a2a48d36fc81",
   "officialRecapParserVersion": 7,
-  "officialRecapSyncedAt": "2026-10-20T21:16:42.222Z",
-  "officialStandingsHash": "8875fa58579e6b1b0a278e5aafc9a6b6d6db30ea60ea7885e0de163bde635a13",
-  "officialStandingsSyncedAt": "2026-10-20T21:17:40.722Z",
+  "officialRecapSyncedAt": "2026-10-27T14:43:57.564Z",
+  "officialStandingsHash": "7db6a675bd654ae6005be80888d2d99317c192b11c3b7580490af92242dc7ab0",
+  "officialStandingsSyncedAt": "2026-10-27T14:44:55.897Z",
   "officialStandingsParserVersion": 4,
-  "officialRecapCheckedAt": "2026-10-27T02:28:23.786Z",
+  "officialRecapCheckedAt": "2026-10-27T14:43:57.564Z",
   "laneWeek": "10",
   "laneSourceUpdated": "11/02/2026",
-  "reportDate": "Oct 19, 2026",
-  "officialStandingsRecapHash": "3640775e26b2eb401419aafe4790dcc854f2afee7205c0623780dbfcef5ec0f8"
+  "reportDate": "Oct 26, 2026",
+  "officialStandingsRecapHash": "213b49c78df86b643fa3f97f38edd7c54e585d966cbf3f3f9c86a2a48d36fc81"
 }
