@@ -1,5 +1,44 @@
 [
   {
+    "startedAt": "2026-10-29T23:03:04.260Z",
+    "finishedAt": "2026-10-29T23:04:19.183Z",
+    "durationSeconds": 75,
+    "mode": "LeaguePals leagues",
+    "leaguesChecked": 11,
+    "changeCount": 2,
+    "changes": [
+      {
+        "id": "lp-6a904a51f09b7f8443e10c94",
+        "name": "Senior Citizens Mixed 26-27",
+        "area": "Council Bluffs",
+        "center": "Bowlero Council Bluffs - 763",
+        "week": "10",
+        "sourceUpdated": "08/26/2026"
+      },
+      {
+        "id": "lp-6ac7fb9b2d694f31242ce3a2",
+        "name": "Regal Six Packers 26-27",
+        "area": "Council Bluffs",
+        "center": "Bowlero Council Bluffs - 763",
+        "week": "4",
+        "sourceUpdated": "10/07/2026"
+      }
+    ]
+  },
+  {
+    "startedAt": "2026-10-29T23:00:51.124Z",
+    "finishedAt": "2026-10-29T23:04:19.688Z",
+    "durationSeconds": 209,
+    "mode": "known leagues",
+    "scope": "all",
+    "source": "official report fallback",
+    "checkedCount": 170,
+    "changeCount": 0,
+    "changes": [],
+    "failures": [],
+    "deferredLeagues": []
+  },
+  {
     "startedAt": "2026-10-29T18:43:49.147Z",
     "finishedAt": "2026-10-29T18:45:07.773Z",
     "durationSeconds": 79,
@@ -5468,32 +5507,5 @@
     "changes": [],
     "failures": [],
     "deferredLeagues": []
-  },
-  {
-    "startedAt": "2026-10-08T20:15:58.400Z",
-    "finishedAt": "2026-10-08T20:16:57.864Z",
-    "durationSeconds": 59,
-    "mode": "LeaguePals leagues",
-    "leaguesChecked": 10,
-    "changeCount": 1,
-    "changes": [
-      {
-        "id": "lp-6a904a51f09b7f8443e10c94",
-        "name": "Senior Citizens Mixed 26-27",
-        "area": "Council Bluffs",
-        "center": "Bowlero Council Bluffs - 763",
-        "week": "7",
-        "sourceUpdated": "08/26/2026"
-      }
-    ]
-  },
-  {
-    "startedAt": "2026-10-08T15:45:13.172Z",
-    "finishedAt": "2026-10-08T15:46:20.204Z",
-    "durationSeconds": 67,
-    "mode": "LeaguePals leagues",
-    "leaguesChecked": 10,
-    "changeCount": 0,
-    "changes": []
   }
 ]
