@@ -14,7 +14,7 @@
   "centerName": "Maplewood Lanes",
   "centerSlug": "maplewood-lanes-omaha-nebraska",
   "area": "Omaha",
-  "sourceUpdated": "Oct 23, 2026",
+  "sourceUpdated": "Oct 30, 2026",
   "syncedAt": "2026-09-21T11:17:29.120Z",
   "status": "current",
   "week": "11",
@@ -41,6 +41,20 @@
         "rows": [
           [
             "1",
+            "Here 4 the Beer",
+            "9",
+            "1",
+            "926",
+            "72.5",
+            "93 %",
+            "926",
+            "1092",
+            "3583",
+            "241.5",
+            "1"
+          ],
+          [
+            "2",
             "Rookies Bar & Grill",
             "2",
             "1",
@@ -51,10 +65,10 @@
             "1056",
             "3662",
             "224.5",
-            "1"
+            "2"
           ],
           [
-            "2",
+            "3",
             "Average Joes",
             "7",
             "1",
@@ -64,20 +78,6 @@
             "897",
             "1028",
             "3444",
-            "216.5",
-            "2"
-          ],
-          [
-            "3",
-            "Premier Systems",
-            "14",
-            "1",
-            "932",
-            "75.5",
-            "93 %",
-            "932",
-            "1101",
-            "3562",
             "216.5",
             "3"
           ],
@@ -97,16 +97,16 @@
           ],
           [
             "5",
-            "Here 4 the Beer",
-            "9",
+            "Premier Systems",
+            "14",
             "1",
-            "926",
-            "72.5",
+            "932",
+            "75.5",
             "93 %",
-            "926",
-            "1092",
-            "3583",
-            "214.5",
+            "932",
+            "1101",
+            "3562",
+            "198.5",
             "5"
           ],
           [
@@ -2492,18 +2492,63 @@
         "rows": [
           [
             "Team 9",
-            "Lane 1 points won: 0"
+            "Lane 1 points won: 27.0"
+          ],
+          [
+            "Gunner Bosselman",
+            "208",
+            "19",
+            "204",
+            "236",
+            "189",
+            "629"
+          ],
+          [
+            "Kalvin Lorenzen",
+            "155",
+            "67",
+            "180",
+            "145",
+            "153",
+            "478"
+          ],
+          [
+            "Steve Volkert",
+            "188",
+            "37",
+            "194",
+            "221",
+            "157",
+            "572"
+          ],
+          [
+            "Jack Schueman",
+            "201",
+            "26",
+            "178",
+            "201",
+            "225",
+            "604"
+          ],
+          [
+            "Matthew Trevarthen",
+            "203",
+            "24",
+            "196",
+            "223",
+            "214",
+            "633"
           ],
           [
             "Total",
-            "0",
-            "0",
-            "0",
-            "0"
+            "952",
+            "1026",
+            "938",
+            "2916"
           ],
           [
             "Team 14",
-            "Lane 2 points won: 26.0"
+            "Lane 2 points won: 8.0"
           ],
           [
             "Neil Fortkamp",
@@ -2567,30 +2612,66 @@
             false,
             false,
             false,
+            true,
+            true,
+            true,
+            true
+          ],
+          [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true,
+            true
+          ],
+          [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true,
+            true
+          ],
+          [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true,
+            true
+          ],
+          [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true,
+            true
+          ],
+          [
+            false,
+            true,
+            true,
+            true,
+            true
+          ],
+          [
             false,
             false
           ],
           [
             false,
+            false,
+            false,
+            true,
+            false,
+            true,
             false
-          ],
-          [
-            false,
-            false,
-            false,
-            true,
-            false,
-            true,
-            true
-          ],
-          [
-            false,
-            false,
-            false,
-            true,
-            true,
-            true,
-            true
           ],
           [
             false,
@@ -2605,6 +2686,15 @@
             false,
             false,
             false,
+            false,
+            false,
+            true,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
             true,
             true,
             false,
@@ -2614,30 +2704,71 @@
             false,
             false,
             false,
+            false,
+            false,
             true,
-            true,
-            true,
-            true
+            false
           ],
           [
             false,
             false,
-            true,
-            true,
-            true
+            false,
+            false,
+            false
           ]
         ],
         "recapDetails": [
           {},
-          {},
+          {
+            "handicapSeries": "686",
+            "individualPoints": 3.8
+          },
+          {
+            "handicapSeries": "676",
+            "individualPoints": 3.8
+          },
+          {
+            "handicapSeries": "683",
+            "individualPoints": 3.8
+          },
+          {
+            "handicapSeries": "682",
+            "individualPoints": 3.8
+          },
+          {
+            "handicapSeries": "705",
+            "individualPoints": 3.8
+          },
+          {
+            "handicapSeries": "3432",
+            "handicapGames": [
+              "1125",
+              "1199",
+              "1108"
+            ],
+            "teamPoints": [
+              "4.0",
+              "4.0",
+              "4.0",
+              "15.0",
+              "15.0"
+            ],
+            "matchPoints": [
+              "3.0",
+              "3.0",
+              "2.0",
+              "12.0",
+              "12.0"
+            ]
+          },
           {},
           {
             "handicapSeries": "657",
-            "individualPoints": 3
+            "individualPoints": 2
           },
           {
             "handicapSeries": "639",
-            "individualPoints": 4
+            "individualPoints": 1
           },
           {
             "handicapSeries": "632",
@@ -2649,7 +2780,7 @@
           },
           {
             "handicapSeries": "678",
-            "individualPoints": 4
+            "individualPoints": 1
           },
           {
             "handicapSeries": "3335",
@@ -2660,21 +2791,21 @@
             ],
             "teamPoints": [
               "0.0",
-              "4.0",
-              "4.0",
-              "11.0",
-              "11.0"
+              "0.0",
+              "0.0",
+              "0.0",
+              "0.0"
             ],
             "matchPoints": [
-              "4.0",
-              "4.0",
+              "2.0",
+              "2.0",
               "3.0",
-              "15.0",
-              "15.0"
+              "8.0",
+              "8.0"
             ]
           }
         ],
-        "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F11%2F4590010222026f202611reprnt00.pdf&token=CfDJ8Fc9E-9grVlDj4tX-da8J6vwVPWfD1cp0LHxyQQ1jbN8S8IWzXDsz-7tvqCpcyEQuin0vaPkApOw845qb1sT5qyCa01YBdiB4e44yv28DsX-YZ-Q46aHmJM7w7gFyw4nzq-Sw3sz6lrzosFNSuAim_gcDSBRTIMVSTRaToACTW6VSPCdm7xxZoJmb36FWekzutDO-scOIvct5U-o3KwhWT4UkZuzN4hk75S03401lFHn"
+        "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F11%2F4590010222026f202611reprnt00.pdf&token=CfDJ8F9ZuFM7J1VOjvsIIg808Qz2VJLoQf1qRoa4W-rk1CUNefREqwZiLPV_18lEDUt0w4PoXL-5Z-WBbsHsbZu2hbp0xW9PhUZ13TkVngCyFpKV7_jXH4c-wy1soP8FAWNaak5lKT3E8vyScmlvK627F7HCUduwqqdXUcBA2JG2uUn60zkkcHP822BT__wmzz4jVglS-4-4ne9hDyy7X_xynmxFPkjSGCExe8sGzq6LIx7s"
       },
       {
         "title": "Doll Construction vs Bowldozers",
@@ -3003,7 +3134,7 @@
             ]
           }
         ],
-        "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F11%2F4590010222026f202611reprnt00.pdf&token=CfDJ8Fc9E-9grVlDj4tX-da8J6vwVPWfD1cp0LHxyQQ1jbN8S8IWzXDsz-7tvqCpcyEQuin0vaPkApOw845qb1sT5qyCa01YBdiB4e44yv28DsX-YZ-Q46aHmJM7w7gFyw4nzq-Sw3sz6lrzosFNSuAim_gcDSBRTIMVSTRaToACTW6VSPCdm7xxZoJmb36FWekzutDO-scOIvct5U-o3KwhWT4UkZuzN4hk75S03401lFHn"
+        "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F11%2F4590010222026f202611reprnt00.pdf&token=CfDJ8F9ZuFM7J1VOjvsIIg808Qz2VJLoQf1qRoa4W-rk1CUNefREqwZiLPV_18lEDUt0w4PoXL-5Z-WBbsHsbZu2hbp0xW9PhUZ13TkVngCyFpKV7_jXH4c-wy1soP8FAWNaak5lKT3E8vyScmlvK627F7HCUduwqqdXUcBA2JG2uUn60zkkcHP822BT__wmzz4jVglS-4-4ne9hDyy7X_xynmxFPkjSGCExe8sGzq6LIx7s"
       },
       {
         "title": "The Outsiders vs Elite Improvemen",
@@ -3332,7 +3463,7 @@
             ]
           }
         ],
-        "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F11%2F4590010222026f202611reprnt00.pdf&token=CfDJ8Fc9E-9grVlDj4tX-da8J6vwVPWfD1cp0LHxyQQ1jbN8S8IWzXDsz-7tvqCpcyEQuin0vaPkApOw845qb1sT5qyCa01YBdiB4e44yv28DsX-YZ-Q46aHmJM7w7gFyw4nzq-Sw3sz6lrzosFNSuAim_gcDSBRTIMVSTRaToACTW6VSPCdm7xxZoJmb36FWekzutDO-scOIvct5U-o3KwhWT4UkZuzN4hk75S03401lFHn"
+        "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F11%2F4590010222026f202611reprnt00.pdf&token=CfDJ8F9ZuFM7J1VOjvsIIg808Qz2VJLoQf1qRoa4W-rk1CUNefREqwZiLPV_18lEDUt0w4PoXL-5Z-WBbsHsbZu2hbp0xW9PhUZ13TkVngCyFpKV7_jXH4c-wy1soP8FAWNaak5lKT3E8vyScmlvK627F7HCUduwqqdXUcBA2JG2uUn60zkkcHP822BT__wmzz4jVglS-4-4ne9hDyy7X_xynmxFPkjSGCExe8sGzq6LIx7s"
       },
       {
         "title": "Pure B.S vs Trinity Financial",
@@ -3661,7 +3792,7 @@
             ]
           }
         ],
-        "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F11%2F4590010222026f202611reprnt00.pdf&token=CfDJ8Fc9E-9grVlDj4tX-da8J6vwVPWfD1cp0LHxyQQ1jbN8S8IWzXDsz-7tvqCpcyEQuin0vaPkApOw845qb1sT5qyCa01YBdiB4e44yv28DsX-YZ-Q46aHmJM7w7gFyw4nzq-Sw3sz6lrzosFNSuAim_gcDSBRTIMVSTRaToACTW6VSPCdm7xxZoJmb36FWekzutDO-scOIvct5U-o3KwhWT4UkZuzN4hk75S03401lFHn"
+        "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F11%2F4590010222026f202611reprnt00.pdf&token=CfDJ8F9ZuFM7J1VOjvsIIg808Qz2VJLoQf1qRoa4W-rk1CUNefREqwZiLPV_18lEDUt0w4PoXL-5Z-WBbsHsbZu2hbp0xW9PhUZ13TkVngCyFpKV7_jXH4c-wy1soP8FAWNaak5lKT3E8vyScmlvK627F7HCUduwqqdXUcBA2JG2uUn60zkkcHP822BT__wmzz4jVglS-4-4ne9hDyy7X_xynmxFPkjSGCExe8sGzq6LIx7s"
       },
       {
         "title": "Average Joes vs Ballbarians",
@@ -3990,7 +4121,7 @@
             ]
           }
         ],
-        "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F11%2F4590010222026f202611reprnt00.pdf&token=CfDJ8Fc9E-9grVlDj4tX-da8J6vwVPWfD1cp0LHxyQQ1jbN8S8IWzXDsz-7tvqCpcyEQuin0vaPkApOw845qb1sT5qyCa01YBdiB4e44yv28DsX-YZ-Q46aHmJM7w7gFyw4nzq-Sw3sz6lrzosFNSuAim_gcDSBRTIMVSTRaToACTW6VSPCdm7xxZoJmb36FWekzutDO-scOIvct5U-o3KwhWT4UkZuzN4hk75S03401lFHn"
+        "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F11%2F4590010222026f202611reprnt00.pdf&token=CfDJ8F9ZuFM7J1VOjvsIIg808Qz2VJLoQf1qRoa4W-rk1CUNefREqwZiLPV_18lEDUt0w4PoXL-5Z-WBbsHsbZu2hbp0xW9PhUZ13TkVngCyFpKV7_jXH4c-wy1soP8FAWNaak5lKT3E8vyScmlvK627F7HCUduwqqdXUcBA2JG2uUn60zkkcHP822BT__wmzz4jVglS-4-4ne9hDyy7X_xynmxFPkjSGCExe8sGzq6LIx7s"
       },
       {
         "title": "Rookies Bar & Grill vs Ames Bowling Cen",
@@ -4319,7 +4450,7 @@
             ]
           }
         ],
-        "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F11%2F4590010222026f202611reprnt00.pdf&token=CfDJ8Fc9E-9grVlDj4tX-da8J6vwVPWfD1cp0LHxyQQ1jbN8S8IWzXDsz-7tvqCpcyEQuin0vaPkApOw845qb1sT5qyCa01YBdiB4e44yv28DsX-YZ-Q46aHmJM7w7gFyw4nzq-Sw3sz6lrzosFNSuAim_gcDSBRTIMVSTRaToACTW6VSPCdm7xxZoJmb36FWekzutDO-scOIvct5U-o3KwhWT4UkZuzN4hk75S03401lFHn"
+        "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F11%2F4590010222026f202611reprnt00.pdf&token=CfDJ8F9ZuFM7J1VOjvsIIg808Qz2VJLoQf1qRoa4W-rk1CUNefREqwZiLPV_18lEDUt0w4PoXL-5Z-WBbsHsbZu2hbp0xW9PhUZ13TkVngCyFpKV7_jXH4c-wy1soP8FAWNaak5lKT3E8vyScmlvK627F7HCUduwqqdXUcBA2JG2uUn60zkkcHP822BT__wmzz4jVglS-4-4ne9hDyy7X_xynmxFPkjSGCExe8sGzq6LIx7s"
       },
       {
         "title": "Bowl Till You Bleed vs Bowlin Bros",
@@ -4648,7 +4779,7 @@
             ]
           }
         ],
-        "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F11%2F4590010222026f202611reprnt00.pdf&token=CfDJ8Fc9E-9grVlDj4tX-da8J6vwVPWfD1cp0LHxyQQ1jbN8S8IWzXDsz-7tvqCpcyEQuin0vaPkApOw845qb1sT5qyCa01YBdiB4e44yv28DsX-YZ-Q46aHmJM7w7gFyw4nzq-Sw3sz6lrzosFNSuAim_gcDSBRTIMVSTRaToACTW6VSPCdm7xxZoJmb36FWekzutDO-scOIvct5U-o3KwhWT4UkZuzN4hk75S03401lFHn"
+        "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F11%2F4590010222026f202611reprnt00.pdf&token=CfDJ8F9ZuFM7J1VOjvsIIg808Qz2VJLoQf1qRoa4W-rk1CUNefREqwZiLPV_18lEDUt0w4PoXL-5Z-WBbsHsbZu2hbp0xW9PhUZ13TkVngCyFpKV7_jXH4c-wy1soP8FAWNaak5lKT3E8vyScmlvK627F7HCUduwqqdXUcBA2JG2uUn60zkkcHP822BT__wmzz4jVglS-4-4ne9hDyy7X_xynmxFPkjSGCExe8sGzq6LIx7s"
       }
     ],
     "lanes": [
@@ -4662,73 +4793,73 @@
         "rows": [
           [
             "1",
-            "10",
-            "Ames Bowling Cen"
-          ],
-          [
-            "2",
-            "3",
-            "Bowlin Bros"
-          ],
-          [
-            "3",
-            "6",
-            "Bowl Till You Bleed"
-          ],
-          [
-            "4",
             "11",
             "The Outsiders"
           ],
           [
-            "5",
-            "12",
-            "Trinity Financial"
-          ],
-          [
-            "6",
-            "14",
-            "Premier Systems"
-          ],
-          [
+            "2",
             "7",
-            "13",
-            "Ballbarians"
+            "Average Joes"
           ],
           [
-            "8",
-            "4",
-            "Doll Construction"
-          ],
-          [
-            "9",
+            "3",
             "2",
             "Rookies Bar & Grill"
           ],
           [
-            "10",
-            "8",
-            "Pure B.S"
+            "4",
+            "3",
+            "Bowlin Bros"
           ],
           [
-            "11",
-            "1",
-            "Bowldozers"
+            "5",
+            "13",
+            "Ballbarians"
           ],
           [
-            "12",
+            "6",
             "9",
             "Here 4 the Beer"
           ],
           [
-            "13",
+            "7",
+            "14",
+            "Premier Systems"
+          ],
+          [
+            "8",
+            "10",
+            "Ames Bowling Cen"
+          ],
+          [
+            "9",
+            "4",
+            "Doll Construction"
+          ],
+          [
+            "10",
             "5",
             "Elite Improvemen"
           ],
           [
+            "11",
+            "12",
+            "Trinity Financial"
+          ],
+          [
+            "12",
+            "6",
+            "Bowl Till You Bleed"
+          ],
+          [
+            "13",
+            "8",
+            "Pure B.S"
+          ],
+          [
             "14",
-            "7",
-            "Average Joes"
+            "1",
+            "Bowldozers"
           ]
         ],
         "emphasis": [
@@ -61658,18 +61789,63 @@
             "rows": [
               [
                 "Team 9",
-                "Lane 1 points won: 0"
+                "Lane 1 points won: 27.0"
+              ],
+              [
+                "Gunner Bosselman",
+                "208",
+                "19",
+                "204",
+                "236",
+                "189",
+                "629"
+              ],
+              [
+                "Kalvin Lorenzen",
+                "155",
+                "67",
+                "180",
+                "145",
+                "153",
+                "478"
+              ],
+              [
+                "Steve Volkert",
+                "188",
+                "37",
+                "194",
+                "221",
+                "157",
+                "572"
+              ],
+              [
+                "Jack Schueman",
+                "201",
+                "26",
+                "178",
+                "201",
+                "225",
+                "604"
+              ],
+              [
+                "Matthew Trevarthen",
+                "203",
+                "24",
+                "196",
+                "223",
+                "214",
+                "633"
               ],
               [
                 "Total",
-                "0",
-                "0",
-                "0",
-                "0"
+                "952",
+                "1026",
+                "938",
+                "2916"
               ],
               [
                 "Team 14",
-                "Lane 2 points won: 26.0"
+                "Lane 2 points won: 8.0"
               ],
               [
                 "Neil Fortkamp",
@@ -61733,30 +61909,66 @@
                 false,
                 false,
                 false,
+                true,
+                true,
+                true,
+                true
+              ],
+              [
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true
+              ],
+              [
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true
+              ],
+              [
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true
+              ],
+              [
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true
+              ],
+              [
+                false,
+                true,
+                true,
+                true,
+                true
+              ],
+              [
                 false,
                 false
               ],
               [
                 false,
+                false,
+                false,
+                true,
+                false,
+                true,
                 false
-              ],
-              [
-                false,
-                false,
-                false,
-                true,
-                false,
-                true,
-                true
-              ],
-              [
-                false,
-                false,
-                false,
-                true,
-                true,
-                true,
-                true
               ],
               [
                 false,
@@ -61771,6 +61983,15 @@
                 false,
                 false,
                 false,
+                false,
+                false,
+                true,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
                 true,
                 true,
                 false,
@@ -61780,30 +62001,71 @@
                 false,
                 false,
                 false,
+                false,
+                false,
                 true,
-                true,
-                true,
-                true
+                false
               ],
               [
                 false,
                 false,
-                true,
-                true,
-                true
+                false,
+                false,
+                false
               ]
             ],
             "recapDetails": [
               {},
-              {},
+              {
+                "handicapSeries": "686",
+                "individualPoints": 3.8
+              },
+              {
+                "handicapSeries": "676",
+                "individualPoints": 3.8
+              },
+              {
+                "handicapSeries": "683",
+                "individualPoints": 3.8
+              },
+              {
+                "handicapSeries": "682",
+                "individualPoints": 3.8
+              },
+              {
+                "handicapSeries": "705",
+                "individualPoints": 3.8
+              },
+              {
+                "handicapSeries": "3432",
+                "handicapGames": [
+                  "1125",
+                  "1199",
+                  "1108"
+                ],
+                "teamPoints": [
+                  "4.0",
+                  "4.0",
+                  "4.0",
+                  "15.0",
+                  "15.0"
+                ],
+                "matchPoints": [
+                  "3.0",
+                  "3.0",
+                  "2.0",
+                  "12.0",
+                  "12.0"
+                ]
+              },
               {},
               {
                 "handicapSeries": "657",
-                "individualPoints": 3
+                "individualPoints": 2
               },
               {
                 "handicapSeries": "639",
-                "individualPoints": 4
+                "individualPoints": 1
               },
               {
                 "handicapSeries": "632",
@@ -61815,7 +62077,7 @@
               },
               {
                 "handicapSeries": "678",
-                "individualPoints": 4
+                "individualPoints": 1
               },
               {
                 "handicapSeries": "3335",
@@ -61826,21 +62088,21 @@
                 ],
                 "teamPoints": [
                   "0.0",
-                  "4.0",
-                  "4.0",
-                  "11.0",
-                  "11.0"
+                  "0.0",
+                  "0.0",
+                  "0.0",
+                  "0.0"
                 ],
                 "matchPoints": [
-                  "4.0",
-                  "4.0",
+                  "2.0",
+                  "2.0",
                   "3.0",
-                  "15.0",
-                  "15.0"
+                  "8.0",
+                  "8.0"
                 ]
               }
             ],
-            "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F11%2F4590010222026f202611reprnt00.pdf&token=CfDJ8Fc9E-9grVlDj4tX-da8J6vwVPWfD1cp0LHxyQQ1jbN8S8IWzXDsz-7tvqCpcyEQuin0vaPkApOw845qb1sT5qyCa01YBdiB4e44yv28DsX-YZ-Q46aHmJM7w7gFyw4nzq-Sw3sz6lrzosFNSuAim_gcDSBRTIMVSTRaToACTW6VSPCdm7xxZoJmb36FWekzutDO-scOIvct5U-o3KwhWT4UkZuzN4hk75S03401lFHn"
+            "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F11%2F4590010222026f202611reprnt00.pdf&token=CfDJ8F9ZuFM7J1VOjvsIIg808Qz2VJLoQf1qRoa4W-rk1CUNefREqwZiLPV_18lEDUt0w4PoXL-5Z-WBbsHsbZu2hbp0xW9PhUZ13TkVngCyFpKV7_jXH4c-wy1soP8FAWNaak5lKT3E8vyScmlvK627F7HCUduwqqdXUcBA2JG2uUn60zkkcHP822BT__wmzz4jVglS-4-4ne9hDyy7X_xynmxFPkjSGCExe8sGzq6LIx7s"
           },
           {
             "title": "Doll Construction vs Bowldozers",
@@ -62169,7 +62431,7 @@
                 ]
               }
             ],
-            "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F11%2F4590010222026f202611reprnt00.pdf&token=CfDJ8Fc9E-9grVlDj4tX-da8J6vwVPWfD1cp0LHxyQQ1jbN8S8IWzXDsz-7tvqCpcyEQuin0vaPkApOw845qb1sT5qyCa01YBdiB4e44yv28DsX-YZ-Q46aHmJM7w7gFyw4nzq-Sw3sz6lrzosFNSuAim_gcDSBRTIMVSTRaToACTW6VSPCdm7xxZoJmb36FWekzutDO-scOIvct5U-o3KwhWT4UkZuzN4hk75S03401lFHn"
+            "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F11%2F4590010222026f202611reprnt00.pdf&token=CfDJ8F9ZuFM7J1VOjvsIIg808Qz2VJLoQf1qRoa4W-rk1CUNefREqwZiLPV_18lEDUt0w4PoXL-5Z-WBbsHsbZu2hbp0xW9PhUZ13TkVngCyFpKV7_jXH4c-wy1soP8FAWNaak5lKT3E8vyScmlvK627F7HCUduwqqdXUcBA2JG2uUn60zkkcHP822BT__wmzz4jVglS-4-4ne9hDyy7X_xynmxFPkjSGCExe8sGzq6LIx7s"
           },
           {
             "title": "The Outsiders vs Elite Improvemen",
@@ -62498,7 +62760,7 @@
                 ]
               }
             ],
-            "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F11%2F4590010222026f202611reprnt00.pdf&token=CfDJ8Fc9E-9grVlDj4tX-da8J6vwVPWfD1cp0LHxyQQ1jbN8S8IWzXDsz-7tvqCpcyEQuin0vaPkApOw845qb1sT5qyCa01YBdiB4e44yv28DsX-YZ-Q46aHmJM7w7gFyw4nzq-Sw3sz6lrzosFNSuAim_gcDSBRTIMVSTRaToACTW6VSPCdm7xxZoJmb36FWekzutDO-scOIvct5U-o3KwhWT4UkZuzN4hk75S03401lFHn"
+            "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F11%2F4590010222026f202611reprnt00.pdf&token=CfDJ8F9ZuFM7J1VOjvsIIg808Qz2VJLoQf1qRoa4W-rk1CUNefREqwZiLPV_18lEDUt0w4PoXL-5Z-WBbsHsbZu2hbp0xW9PhUZ13TkVngCyFpKV7_jXH4c-wy1soP8FAWNaak5lKT3E8vyScmlvK627F7HCUduwqqdXUcBA2JG2uUn60zkkcHP822BT__wmzz4jVglS-4-4ne9hDyy7X_xynmxFPkjSGCExe8sGzq6LIx7s"
           },
           {
             "title": "Pure B.S vs Trinity Financial",
@@ -62827,7 +63089,7 @@
                 ]
               }
             ],
-            "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F11%2F4590010222026f202611reprnt00.pdf&token=CfDJ8Fc9E-9grVlDj4tX-da8J6vwVPWfD1cp0LHxyQQ1jbN8S8IWzXDsz-7tvqCpcyEQuin0vaPkApOw845qb1sT5qyCa01YBdiB4e44yv28DsX-YZ-Q46aHmJM7w7gFyw4nzq-Sw3sz6lrzosFNSuAim_gcDSBRTIMVSTRaToACTW6VSPCdm7xxZoJmb36FWekzutDO-scOIvct5U-o3KwhWT4UkZuzN4hk75S03401lFHn"
+            "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F11%2F4590010222026f202611reprnt00.pdf&token=CfDJ8F9ZuFM7J1VOjvsIIg808Qz2VJLoQf1qRoa4W-rk1CUNefREqwZiLPV_18lEDUt0w4PoXL-5Z-WBbsHsbZu2hbp0xW9PhUZ13TkVngCyFpKV7_jXH4c-wy1soP8FAWNaak5lKT3E8vyScmlvK627F7HCUduwqqdXUcBA2JG2uUn60zkkcHP822BT__wmzz4jVglS-4-4ne9hDyy7X_xynmxFPkjSGCExe8sGzq6LIx7s"
           },
           {
             "title": "Average Joes vs Ballbarians",
@@ -63156,7 +63418,7 @@
                 ]
               }
             ],
-            "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F11%2F4590010222026f202611reprnt00.pdf&token=CfDJ8Fc9E-9grVlDj4tX-da8J6vwVPWfD1cp0LHxyQQ1jbN8S8IWzXDsz-7tvqCpcyEQuin0vaPkApOw845qb1sT5qyCa01YBdiB4e44yv28DsX-YZ-Q46aHmJM7w7gFyw4nzq-Sw3sz6lrzosFNSuAim_gcDSBRTIMVSTRaToACTW6VSPCdm7xxZoJmb36FWekzutDO-scOIvct5U-o3KwhWT4UkZuzN4hk75S03401lFHn"
+            "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F11%2F4590010222026f202611reprnt00.pdf&token=CfDJ8F9ZuFM7J1VOjvsIIg808Qz2VJLoQf1qRoa4W-rk1CUNefREqwZiLPV_18lEDUt0w4PoXL-5Z-WBbsHsbZu2hbp0xW9PhUZ13TkVngCyFpKV7_jXH4c-wy1soP8FAWNaak5lKT3E8vyScmlvK627F7HCUduwqqdXUcBA2JG2uUn60zkkcHP822BT__wmzz4jVglS-4-4ne9hDyy7X_xynmxFPkjSGCExe8sGzq6LIx7s"
           },
           {
             "title": "Rookies Bar & Grill vs Ames Bowling Cen",
@@ -63485,7 +63747,7 @@
                 ]
               }
             ],
-            "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F11%2F4590010222026f202611reprnt00.pdf&token=CfDJ8Fc9E-9grVlDj4tX-da8J6vwVPWfD1cp0LHxyQQ1jbN8S8IWzXDsz-7tvqCpcyEQuin0vaPkApOw845qb1sT5qyCa01YBdiB4e44yv28DsX-YZ-Q46aHmJM7w7gFyw4nzq-Sw3sz6lrzosFNSuAim_gcDSBRTIMVSTRaToACTW6VSPCdm7xxZoJmb36FWekzutDO-scOIvct5U-o3KwhWT4UkZuzN4hk75S03401lFHn"
+            "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F11%2F4590010222026f202611reprnt00.pdf&token=CfDJ8F9ZuFM7J1VOjvsIIg808Qz2VJLoQf1qRoa4W-rk1CUNefREqwZiLPV_18lEDUt0w4PoXL-5Z-WBbsHsbZu2hbp0xW9PhUZ13TkVngCyFpKV7_jXH4c-wy1soP8FAWNaak5lKT3E8vyScmlvK627F7HCUduwqqdXUcBA2JG2uUn60zkkcHP822BT__wmzz4jVglS-4-4ne9hDyy7X_xynmxFPkjSGCExe8sGzq6LIx7s"
           },
           {
             "title": "Bowl Till You Bleed vs Bowlin Bros",
@@ -63814,7 +64076,7 @@
                 ]
               }
             ],
-            "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F11%2F4590010222026f202611reprnt00.pdf&token=CfDJ8Fc9E-9grVlDj4tX-da8J6vwVPWfD1cp0LHxyQQ1jbN8S8IWzXDsz-7tvqCpcyEQuin0vaPkApOw845qb1sT5qyCa01YBdiB4e44yv28DsX-YZ-Q46aHmJM7w7gFyw4nzq-Sw3sz6lrzosFNSuAim_gcDSBRTIMVSTRaToACTW6VSPCdm7xxZoJmb36FWekzutDO-scOIvct5U-o3KwhWT4UkZuzN4hk75S03401lFHn"
+            "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F11%2F4590010222026f202611reprnt00.pdf&token=CfDJ8F9ZuFM7J1VOjvsIIg808Qz2VJLoQf1qRoa4W-rk1CUNefREqwZiLPV_18lEDUt0w4PoXL-5Z-WBbsHsbZu2hbp0xW9PhUZ13TkVngCyFpKV7_jXH4c-wy1soP8FAWNaak5lKT3E8vyScmlvK627F7HCUduwqqdXUcBA2JG2uUn60zkkcHP822BT__wmzz4jVglS-4-4ne9hDyy7X_xynmxFPkjSGCExe8sGzq6LIx7s"
           }
         ],
         "standings": [
@@ -63837,6 +64099,20 @@
             "rows": [
               [
                 "1",
+                "Here 4 the Beer",
+                "9",
+                "1",
+                "926",
+                "72.5",
+                "93 %",
+                "926",
+                "1092",
+                "3583",
+                "241.5",
+                "1"
+              ],
+              [
+                "2",
                 "Rookies Bar & Grill",
                 "2",
                 "1",
@@ -63847,10 +64123,10 @@
                 "1056",
                 "3662",
                 "224.5",
-                "1"
+                "2"
               ],
               [
-                "2",
+                "3",
                 "Average Joes",
                 "7",
                 "1",
@@ -63860,20 +64136,6 @@
                 "897",
                 "1028",
                 "3444",
-                "216.5",
-                "2"
-              ],
-              [
-                "3",
-                "Premier Systems",
-                "14",
-                "1",
-                "932",
-                "75.5",
-                "93 %",
-                "932",
-                "1101",
-                "3562",
                 "216.5",
                 "3"
               ],
@@ -63893,16 +64155,16 @@
               ],
               [
                 "5",
-                "Here 4 the Beer",
-                "9",
+                "Premier Systems",
+                "14",
                 "1",
-                "926",
-                "72.5",
+                "932",
+                "75.5",
                 "93 %",
-                "926",
-                "1092",
-                "3583",
-                "214.5",
+                "932",
+                "1101",
+                "3562",
+                "198.5",
                 "5"
               ],
               [
@@ -64239,15 +64501,15 @@
   "officialRecapVersion": 1,
   "lastAttemptedAt": "2026-10-19T23:51:13.996Z",
   "lastCheckedAt": "2026-09-21T11:17:29.120Z",
-  "officialRecapHash": "fa4c2894dc1e90cde61758c301124bbe0e27ce33bf47655a20a043640b64dc71",
-  "officialRecapSyncedAt": "2026-10-23T22:36:27.237Z",
+  "officialRecapHash": "62b1a02e58841ea475527769871671338e183c429d4a79f2365e48d7883c0cc7",
+  "officialRecapSyncedAt": "2026-10-30T08:55:44.848Z",
   "officialRecapParserVersion": 7,
-  "officialStandingsHash": "a15973fe72204508a59eada068d62e4a1d8aa6f23c8b5263e557c712dae862ac",
+  "officialStandingsHash": "0f1620298f5aa935ed36462e7d7047b0a0db01fb28ef13e6cbb1c407b08f8549",
   "officialStandingsParserVersion": 4,
-  "officialStandingsSyncedAt": "2026-10-23T22:37:14.199Z",
-  "officialRecapCheckedAt": "2026-10-29T05:57:11.371Z",
-  "laneWeek": "12",
-  "laneSourceUpdated": "10/29/2026",
+  "officialStandingsSyncedAt": "2026-10-30T08:56:19.369Z",
+  "officialRecapCheckedAt": "2026-10-30T08:55:44.848Z",
+  "laneWeek": "13",
+  "laneSourceUpdated": "11/05/2026",
   "reportDate": "Oct 22, 2026",
-  "officialStandingsRecapHash": "fa4c2894dc1e90cde61758c301124bbe0e27ce33bf47655a20a043640b64dc71"
+  "officialStandingsRecapHash": "62b1a02e58841ea475527769871671338e183c429d4a79f2365e48d7883c0cc7"
 }
