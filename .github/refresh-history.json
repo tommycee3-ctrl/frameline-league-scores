@@ -1,5 +1,44 @@
 [
   {
+    "startedAt": "2026-10-30T23:54:49.786Z",
+    "finishedAt": "2026-10-30T23:56:08.598Z",
+    "durationSeconds": 79,
+    "mode": "LeaguePals leagues",
+    "leaguesChecked": 11,
+    "changeCount": 2,
+    "changes": [
+      {
+        "id": "lp-6a970dff34a4afbf5c794a8f",
+        "name": "Friday Nighters 26",
+        "area": "Council Bluffs",
+        "center": "Bowlero Council Bluffs - 763",
+        "week": "11",
+        "sourceUpdated": "08/20/2026"
+      },
+      {
+        "id": "lp-6a8f046d53c5f51b7b86e8f1",
+        "name": "Cornbelt 26-27",
+        "area": "Council Bluffs",
+        "center": "Bowlero Council Bluffs - 763",
+        "week": "9",
+        "sourceUpdated": "08/25/2026"
+      }
+    ]
+  },
+  {
+    "startedAt": "2026-10-30T23:53:09.855Z",
+    "finishedAt": "2026-10-30T23:56:09.110Z",
+    "durationSeconds": 179,
+    "mode": "known leagues",
+    "scope": "all",
+    "source": "official report fallback",
+    "checkedCount": 170,
+    "changeCount": 0,
+    "changes": [],
+    "failures": [],
+    "deferredLeagues": []
+  },
+  {
     "startedAt": "2026-10-30T20:12:51.999Z",
     "finishedAt": "2026-10-30T20:14:20.547Z",
     "durationSeconds": 89,
@@ -5469,28 +5508,6 @@
     "startedAt": "2026-10-09T16:23:28.836Z",
     "finishedAt": "2026-10-09T16:28:39.712Z",
     "durationSeconds": 311,
-    "mode": "known leagues",
-    "scope": "all",
-    "source": "official report fallback",
-    "checkedCount": 170,
-    "changeCount": 0,
-    "changes": [],
-    "failures": [],
-    "deferredLeagues": []
-  },
-  {
-    "startedAt": "2026-10-09T13:53:25.487Z",
-    "finishedAt": "2026-10-09T13:54:29.589Z",
-    "durationSeconds": 64,
-    "mode": "LeaguePals leagues",
-    "leaguesChecked": 11,
-    "changeCount": 0,
-    "changes": []
-  },
-  {
-    "startedAt": "2026-10-09T13:51:07.520Z",
-    "finishedAt": "2026-10-09T13:54:29.960Z",
-    "durationSeconds": 202,
     "mode": "known leagues",
     "scope": "all",
     "source": "official report fallback",
