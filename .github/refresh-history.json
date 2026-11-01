@@ -1,5 +1,27 @@
 [
   {
+    "startedAt": "2026-11-01T01:30:21.930Z",
+    "finishedAt": "2026-11-01T01:31:40.535Z",
+    "durationSeconds": 79,
+    "mode": "LeaguePals leagues",
+    "leaguesChecked": 11,
+    "changeCount": 0,
+    "changes": []
+  },
+  {
+    "startedAt": "2026-11-01T01:27:24.158Z",
+    "finishedAt": "2026-11-01T01:31:41.054Z",
+    "durationSeconds": 257,
+    "mode": "known leagues",
+    "scope": "all",
+    "source": "official report fallback",
+    "checkedCount": 170,
+    "changeCount": 0,
+    "changes": [],
+    "failures": [],
+    "deferredLeagues": []
+  },
+  {
     "startedAt": "2026-10-31T22:39:05.976Z",
     "finishedAt": "2026-10-31T22:40:25.760Z",
     "durationSeconds": 80,
@@ -5427,53 +5449,6 @@
     "startedAt": "2026-10-13T03:56:04.492Z",
     "finishedAt": "2026-10-13T04:00:11.571Z",
     "durationSeconds": 247,
-    "mode": "known leagues",
-    "scope": "all",
-    "source": "official report fallback",
-    "checkedCount": 170,
-    "changeCount": 0,
-    "changes": [],
-    "failures": [],
-    "deferredLeagues": []
-  },
-  {
-    "startedAt": "2026-10-13T01:51:05.285Z",
-    "finishedAt": "2026-10-13T01:52:05.978Z",
-    "durationSeconds": 61,
-    "mode": "LeaguePals leagues",
-    "leaguesChecked": 10,
-    "changeCount": 3,
-    "changes": [
-      {
-        "id": "lp-6a80c263a09d0e0071913c83",
-        "name": "Saturday Night Mixed 26",
-        "area": "Council Bluffs",
-        "center": "Bowlero Council Bluffs - 763",
-        "week": "9",
-        "sourceUpdated": "08/14/2026"
-      },
-      {
-        "id": "lp-6a830b98fb63f671392e5ce5",
-        "name": "Monday Senior Men 26",
-        "area": "Council Bluffs",
-        "center": "Bowlero Council Bluffs - 763",
-        "week": "8",
-        "sourceUpdated": "08/16/2026"
-      },
-      {
-        "id": "lp-6a957f7bf97455b04731aa65",
-        "name": "Early Birds 26-27",
-        "area": "Council Bluffs",
-        "center": "Bowlero Council Bluffs - 763",
-        "week": "6",
-        "sourceUpdated": "08/30/2026"
-      }
-    ]
-  },
-  {
-    "startedAt": "2026-10-13T01:48:33.310Z",
-    "finishedAt": "2026-10-13T01:52:06.351Z",
-    "durationSeconds": 213,
     "mode": "known leagues",
     "scope": "all",
     "source": "official report fallback",
