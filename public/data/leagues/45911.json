@@ -14,10 +14,10 @@
   "centerName": "Maplewood Lanes",
   "centerSlug": "maplewood-lanes-omaha-nebraska",
   "area": "Omaha",
-  "sourceUpdated": "Oct 27, 2026",
+  "sourceUpdated": "Nov 1, 2026",
   "syncedAt": "2026-09-21T06:58:14.823Z",
   "status": "current",
-  "week": "9",
+  "week": "10",
   "fingerprint": "0c76a729a44a6e3658d79b6011aef874fc7201230d0b9379b609a83183db34a7",
   "lastCompletedCycle": "2026-09-19",
   "views": {
@@ -218,17 +218,17 @@
           ],
           [
             "Asher Kubes",
-            "70",
+            "71",
             "0",
-            "72",
-            "80",
-            "152"
+            "70",
+            "64",
+            "134"
           ],
           [
             "Total",
-            "72",
-            "80",
-            "152"
+            "70",
+            "64",
+            "134"
           ],
           [
             "Team 2",
@@ -276,15 +276,15 @@
         "recapDetails": [
           {},
           {
-            "handicapSeries": "152",
+            "handicapSeries": "134",
             "individualPoints": 0
           },
           {
-            "handicapSeries": "152",
+            "handicapSeries": "134",
             "handicapGames": [
-              "72",
-              "80",
-              "152"
+              "70",
+              "64",
+              "134"
             ],
             "teamPoints": [
               "0.0",
@@ -295,7 +295,7 @@
           {},
           {}
         ],
-        "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F9%2F4591110242026f202609reprnt00.pdf&token=CfDJ8F9ZuFM7J1VOjvsIIg808Qx7pDljep7iG7UuDlzfsHJB1D2lYshkxwxbQ5tb-l5AoB6RjI2nDTlZGeh46e5BwEQCNaduekERdXnOtxnv52uOgNcUK7tkXJLLg3QlSQ7CcmhIRThqY5tXXKm4rmWNefStwXY4X7viVtVPytEVYZcCs-27nFO2lCw-GY7MAY3niZByD4Ibwv2_mnPFCRiJYl0iYWuyGNz-U070MH6KotDL"
+        "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F10%2F4591110312026f202610reprnt00.pdf&token=CfDJ8F9ZuFM7J1VOjvsIIg808QyfS4KNJq-W0QDd78VoOCBhcgKf-WzGxMspAAvADs6FInGmNBOR7R8CBJNs-vKz6IEzacrcI9EbPVSW0dESvBteu2Je07Wkg30v3OzE-v9dt9GVBXOqeUpYR1BxivvGF8n3QwqCXI1Yz67SzJHOFP1z6Ts9v8nv5-8qt01wpgkNYwsbL8DaLKxex5wEwnJdWpCy6qJZzT3lipzolzzpfKJP"
       }
     ],
     "lanes": [
@@ -1823,15 +1823,121 @@
           }
         ]
       }
+    },
+    {
+      "week": "10",
+      "sourceUpdated": "Oct 31, 2026",
+      "syncedAt": "2026-11-01T08:02:46.492Z",
+      "views": {
+        "recaps": [
+          {
+            "title": "Team Asher vs Team Abu",
+            "headers": [
+              "Bowler",
+              "Average",
+              "Handicap",
+              "Game 1",
+              "Game 2",
+              "Game 3",
+              "Scratch series"
+            ],
+            "rows": [
+              [
+                "Team 1",
+                "Lane 13 points won: 0.0"
+              ],
+              [
+                "Asher Kubes",
+                "71",
+                "0",
+                "70",
+                "64",
+                "134"
+              ],
+              [
+                "Total",
+                "70",
+                "64",
+                "134"
+              ],
+              [
+                "Team 2",
+                "Lane 14 points won: 0"
+              ],
+              [
+                "Total",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            ],
+            "recapDetails": [
+              {},
+              {
+                "handicapSeries": "134",
+                "individualPoints": 0
+              },
+              {
+                "handicapSeries": "134",
+                "handicapGames": [
+                  "70",
+                  "64",
+                  "134"
+                ],
+                "teamPoints": [
+                  "0.0",
+                  "0.0",
+                  "0.0"
+                ]
+              },
+              {},
+              {}
+            ],
+            "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F10%2F4591110312026f202610reprnt00.pdf&token=CfDJ8F9ZuFM7J1VOjvsIIg808QyfS4KNJq-W0QDd78VoOCBhcgKf-WzGxMspAAvADs6FInGmNBOR7R8CBJNs-vKz6IEzacrcI9EbPVSW0dESvBteu2Je07Wkg30v3OzE-v9dt9GVBXOqeUpYR1BxivvGF8n3QwqCXI1Yz67SzJHOFP1z6Ts9v8nv5-8qt01wpgkNYwsbL8DaLKxex5wEwnJdWpCy6qJZzT3lipzolzzpfKJP"
+          }
+        ]
+      }
     }
   ],
   "lastAttemptedAt": "2026-10-20T00:39:00.866Z",
   "lastCheckedAt": "2026-09-21T12:00:12.689Z",
-  "officialRecapHash": "53fc7ac0c241a2c580aef6dd48df333dce1a88a84fcc311b69482b3620198513",
+  "officialRecapHash": "c58a3a7e0a45b70ad2d3191b0fa703ee494d8ea277737624a3e5005ad78cebbe",
   "officialRecapParserVersion": 7,
-  "officialRecapSyncedAt": "2026-10-27T23:08:30.129Z",
-  "officialRecapCheckedAt": "2026-10-31T02:49:55.356Z",
-  "laneWeek": "10",
-  "laneSourceUpdated": "10/31/2026",
-  "reportDate": "Oct 24, 2026"
+  "officialRecapSyncedAt": "2026-11-01T08:02:46.492Z",
+  "officialRecapCheckedAt": "2026-11-01T08:02:46.492Z",
+  "laneWeek": "11",
+  "laneSourceUpdated": "11/07/2026",
+  "reportDate": "Oct 31, 2026"
 }

@@ -1,5 +1,44 @@
 [
   {
+    "startedAt": "2026-11-01T08:06:09.599Z",
+    "finishedAt": "2026-11-01T08:07:22.410Z",
+    "durationSeconds": 73,
+    "mode": "LeaguePals leagues",
+    "leaguesChecked": 11,
+    "changeCount": 2,
+    "changes": [
+      {
+        "id": "lp-6a830b98fb63f671392e5ce5",
+        "name": "Monday Senior Men 26",
+        "area": "Council Bluffs",
+        "center": "Bowlero Council Bluffs - 763",
+        "week": "10",
+        "sourceUpdated": "08/16/2026"
+      },
+      {
+        "id": "lp-6a8f046d53c5f51b7b86e8f1",
+        "name": "Cornbelt 26-27",
+        "area": "Council Bluffs",
+        "center": "Bowlero Council Bluffs - 763",
+        "week": "9",
+        "sourceUpdated": "08/25/2026"
+      }
+    ]
+  },
+  {
+    "startedAt": "2026-11-01T08:02:10.600Z",
+    "finishedAt": "2026-11-01T08:07:22.791Z",
+    "durationSeconds": 312,
+    "mode": "known leagues",
+    "scope": "all",
+    "source": "official report fallback",
+    "checkedCount": 170,
+    "changeCount": 0,
+    "changes": [],
+    "failures": [],
+    "deferredLeagues": []
+  },
+  {
     "startedAt": "2026-11-01T01:30:21.930Z",
     "finishedAt": "2026-11-01T01:31:40.535Z",
     "durationSeconds": 79,
@@ -5427,28 +5466,6 @@
     "startedAt": "2026-10-13T09:32:25.412Z",
     "finishedAt": "2026-10-13T09:34:57.656Z",
     "durationSeconds": 152,
-    "mode": "known leagues",
-    "scope": "all",
-    "source": "official report fallback",
-    "checkedCount": 170,
-    "changeCount": 0,
-    "changes": [],
-    "failures": [],
-    "deferredLeagues": []
-  },
-  {
-    "startedAt": "2026-10-13T03:59:06.751Z",
-    "finishedAt": "2026-10-13T04:00:11.207Z",
-    "durationSeconds": 64,
-    "mode": "LeaguePals leagues",
-    "leaguesChecked": 10,
-    "changeCount": 0,
-    "changes": []
-  },
-  {
-    "startedAt": "2026-10-13T03:56:04.492Z",
-    "finishedAt": "2026-10-13T04:00:11.571Z",
-    "durationSeconds": 247,
     "mode": "known leagues",
     "scope": "all",
     "source": "official report fallback",
