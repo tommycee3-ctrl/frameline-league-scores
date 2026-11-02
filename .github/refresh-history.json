@@ -1,5 +1,44 @@
 [
   {
+    "startedAt": "2026-11-02T19:53:54.936Z",
+    "finishedAt": "2026-11-02T19:55:22.379Z",
+    "durationSeconds": 87,
+    "mode": "LeaguePals leagues",
+    "leaguesChecked": 11,
+    "changeCount": 2,
+    "changes": [
+      {
+        "id": "lp-6a830b98fb63f671392e5ce5",
+        "name": "Monday Senior Men 26",
+        "area": "Council Bluffs",
+        "center": "Bowlero Council Bluffs - 763",
+        "week": "11",
+        "sourceUpdated": "08/16/2026"
+      },
+      {
+        "id": "lp-6a957f7bf97455b04731aa65",
+        "name": "Early Birds 26-27",
+        "area": "Council Bluffs",
+        "center": "Bowlero Council Bluffs - 763",
+        "week": "9",
+        "sourceUpdated": "08/30/2026"
+      }
+    ]
+  },
+  {
+    "startedAt": "2026-11-02T19:51:08.537Z",
+    "finishedAt": "2026-11-02T19:55:22.923Z",
+    "durationSeconds": 254,
+    "mode": "known leagues",
+    "scope": "all",
+    "source": "official report fallback",
+    "checkedCount": 170,
+    "changeCount": 0,
+    "changes": [],
+    "failures": [],
+    "deferredLeagues": []
+  },
+  {
     "startedAt": "2026-11-02T12:48:45.343Z",
     "finishedAt": "2026-11-02T12:50:00.812Z",
     "durationSeconds": 75,
@@ -5460,28 +5499,6 @@
     "startedAt": "2026-10-14T22:22:11.286Z",
     "finishedAt": "2026-10-14T22:25:12.433Z",
     "durationSeconds": 181,
-    "mode": "known leagues",
-    "scope": "all",
-    "source": "official report fallback",
-    "checkedCount": 170,
-    "changeCount": 0,
-    "changes": [],
-    "failures": [],
-    "deferredLeagues": []
-  },
-  {
-    "startedAt": "2026-10-14T18:45:48.334Z",
-    "finishedAt": "2026-10-14T18:46:56.542Z",
-    "durationSeconds": 68,
-    "mode": "LeaguePals leagues",
-    "leaguesChecked": 11,
-    "changeCount": 0,
-    "changes": []
-  },
-  {
-    "startedAt": "2026-10-14T18:43:24.648Z",
-    "finishedAt": "2026-10-14T18:46:56.799Z",
-    "durationSeconds": 212,
     "mode": "known leagues",
     "scope": "all",
     "source": "official report fallback",
