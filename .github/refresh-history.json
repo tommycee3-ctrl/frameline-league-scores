@@ -1,5 +1,44 @@
 [
   {
+    "startedAt": "2026-11-04T02:12:48.235Z",
+    "finishedAt": "2026-11-04T02:14:10.855Z",
+    "durationSeconds": 83,
+    "mode": "LeaguePals leagues",
+    "leaguesChecked": 11,
+    "changeCount": 2,
+    "changes": [
+      {
+        "id": "lp-6a8f046d53c5f51b7b86e8f1",
+        "name": "Cornbelt 26-27",
+        "area": "Council Bluffs",
+        "center": "Bowlero Council Bluffs - 763",
+        "week": "10",
+        "sourceUpdated": "08/25/2026"
+      },
+      {
+        "id": "lp-6ace2f1dbcdf642f24243399",
+        "name": "Rolling Thunder 26-27",
+        "area": "Council Bluffs",
+        "center": "Bowlero Council Bluffs - 763",
+        "week": "4",
+        "sourceUpdated": "10/12/2026"
+      }
+    ]
+  },
+  {
+    "startedAt": "2026-11-04T02:10:32.614Z",
+    "finishedAt": "2026-11-04T02:14:11.299Z",
+    "durationSeconds": 219,
+    "mode": "known leagues",
+    "scope": "all",
+    "source": "official report fallback",
+    "checkedCount": 170,
+    "changeCount": 0,
+    "changes": [],
+    "failures": [],
+    "deferredLeagues": []
+  },
+  {
     "startedAt": "2026-11-03T22:08:58.615Z",
     "finishedAt": "2026-11-03T22:10:36.695Z",
     "durationSeconds": 98,
@@ -5452,28 +5491,6 @@
     "startedAt": "2026-10-16T08:32:43.151Z",
     "finishedAt": "2026-10-16T08:36:07.090Z",
     "durationSeconds": 204,
-    "mode": "known leagues",
-    "scope": "all",
-    "source": "official report fallback",
-    "checkedCount": 170,
-    "changeCount": 0,
-    "changes": [],
-    "failures": [],
-    "deferredLeagues": []
-  },
-  {
-    "startedAt": "2026-10-16T03:52:13.942Z",
-    "finishedAt": "2026-10-16T03:53:24.244Z",
-    "durationSeconds": 70,
-    "mode": "LeaguePals leagues",
-    "leaguesChecked": 11,
-    "changeCount": 0,
-    "changes": []
-  },
-  {
-    "startedAt": "2026-10-16T03:49:51.511Z",
-    "finishedAt": "2026-10-16T03:53:24.624Z",
-    "durationSeconds": 213,
     "mode": "known leagues",
     "scope": "all",
     "source": "official report fallback",
