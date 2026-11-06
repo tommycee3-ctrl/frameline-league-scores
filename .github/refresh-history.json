@@ -1,5 +1,36 @@
 [
   {
+    "startedAt": "2026-11-06T08:02:36.835Z",
+    "finishedAt": "2026-11-06T08:03:55.894Z",
+    "durationSeconds": 79,
+    "mode": "LeaguePals leagues",
+    "leaguesChecked": 12,
+    "changeCount": 1,
+    "changes": [
+      {
+        "id": "lp-6ac7fb9b2d694f31242ce3a2",
+        "name": "Regal Six Packers 26-27",
+        "area": "Council Bluffs",
+        "center": "Bowlero Council Bluffs - 763",
+        "week": "5",
+        "sourceUpdated": "10/07/2026"
+      }
+    ]
+  },
+  {
+    "startedAt": "2026-11-06T07:57:20.247Z",
+    "finishedAt": "2026-11-06T08:03:56.423Z",
+    "durationSeconds": 396,
+    "mode": "known leagues",
+    "scope": "all",
+    "source": "official report fallback",
+    "checkedCount": 170,
+    "changeCount": 0,
+    "changes": [],
+    "failures": [],
+    "deferredLeagues": []
+  },
+  {
     "startedAt": "2026-11-06T03:55:16.663Z",
     "finishedAt": "2026-11-06T03:56:41.867Z",
     "durationSeconds": 85,
@@ -5428,53 +5459,6 @@
     "startedAt": "2026-10-17T09:11:25.564Z",
     "finishedAt": "2026-10-17T09:14:18.153Z",
     "durationSeconds": 173,
-    "mode": "known leagues",
-    "scope": "all",
-    "source": "official report fallback",
-    "checkedCount": 170,
-    "changeCount": 0,
-    "changes": [],
-    "failures": [],
-    "deferredLeagues": []
-  },
-  {
-    "startedAt": "2026-10-17T05:06:18.731Z",
-    "finishedAt": "2026-10-17T05:07:28.603Z",
-    "durationSeconds": 70,
-    "mode": "LeaguePals leagues",
-    "leaguesChecked": 11,
-    "changeCount": 3,
-    "changes": [
-      {
-        "id": "lp-6aa4f2c9895707167ebc13a6",
-        "name": "Tornadoes 26-27",
-        "area": "Council Bluffs",
-        "center": "Bowlero Council Bluffs - 763",
-        "week": "5",
-        "sourceUpdated": "09/11/2026"
-      },
-      {
-        "id": "lp-6aa4f192a11121a87b92a774",
-        "name": "Cyclones 26-27",
-        "area": "Council Bluffs",
-        "center": "Bowlero Council Bluffs - 763",
-        "week": "5",
-        "sourceUpdated": "09/11/2026"
-      },
-      {
-        "id": "lp-6aa4ee8999478ed11e5d3be5",
-        "name": "Thunderbolts 26-27",
-        "area": "Council Bluffs",
-        "center": "Bowlero Council Bluffs - 763",
-        "week": "5",
-        "sourceUpdated": "09/11/2026"
-      }
-    ]
-  },
-  {
-    "startedAt": "2026-10-17T05:03:46.505Z",
-    "finishedAt": "2026-10-17T05:07:29.001Z",
-    "durationSeconds": 222,
     "mode": "known leagues",
     "scope": "all",
     "source": "official report fallback",

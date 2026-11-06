@@ -41,34 +41,20 @@
         "rows": [
           [
             "1",
-            "Team 4",
-            "2",
+            "Team 5",
+            "3",
             "1",
             "0",
             "0",
             "100 %",
             "0",
-            "594",
-            "4636",
+            "460",
+            "10110",
             "0",
             "0"
           ],
           [
             "2",
-            "Team 8",
-            "6",
-            "1",
-            "0",
-            "0",
-            "100 %",
-            "0",
-            "635",
-            "2243",
-            "645",
-            "1913"
-          ],
-          [
-            "3",
             "Team 3",
             "1",
             "1",
@@ -77,9 +63,23 @@
             "100 %",
             "0",
             "716",
-            "2167",
+            "7955",
             "746",
             "2167"
+          ],
+          [
+            "3",
+            "Team 7",
+            "5",
+            "1",
+            "0",
+            "0",
+            "100 %",
+            "0",
+            "541",
+            "7532",
+            "579",
+            "1634"
           ],
           [
             "4",
@@ -91,35 +91,35 @@
             "100 %",
             "0",
             "587",
-            "1727",
+            "6488",
             "594",
             "1727"
           ],
           [
             "5",
-            "Team 7",
-            "5",
+            "Team 8",
+            "6",
             "1",
             "0",
             "0",
             "100 %",
             "0",
-            "541",
-            "1634",
-            "579",
-            "1634"
+            "635",
+            "5983",
+            "645",
+            "1913"
           ],
           [
             "6",
-            "Team 5",
-            "3",
+            "Team 4",
+            "2",
             "1",
             "0",
             "0",
             "100 %",
             "0",
-            "460",
-            "1584",
+            "594",
+            "5975",
             "0",
             "0"
           ]
@@ -12614,6 +12614,197 @@
             ],
             "sourceReport": "https://www.leaguesecretary.com/reports/shared?path=%2Fuploads%2F2026%2Ff%2F8%2F14537210312026f202608reprnt00.pdf&token=CfDJ8F9ZuFM7J1VOjvsIIg808QzHfUkpyz_o1qY7s4akefxXn5eTqbW8OMS_AaKGR8liisEp6ZMbJPCIQ41erTSpjEkpnTuDYdFeKlsm1fpmNQXIIFiarLj4jiVS5YB0YhklaRQDCTzWgrPPAxWZUkOsnYSsPn965T_IoRFk6xQ6k4FsOxhJFm7lQqpKZhQhV0pxeUxlIba1cvdwT_VFsMxbQy0jDGGsZD1-061aFP-Jb9EG"
           }
+        ],
+        "standings": [
+          {
+            "title": "League standings",
+            "headers": [
+              "Place",
+              "Team",
+              "Team#",
+              "Div",
+              "WON",
+              "LOST",
+              "%",
+              "YTD WON",
+              "AVG",
+              "Pins",
+              "HSG",
+              "HSS"
+            ],
+            "rows": [
+              [
+                "1",
+                "Team 5",
+                "3",
+                "1",
+                "0",
+                "0",
+                "100 %",
+                "0",
+                "460",
+                "10110",
+                "0",
+                "0"
+              ],
+              [
+                "2",
+                "Team 3",
+                "1",
+                "1",
+                "0",
+                "0",
+                "100 %",
+                "0",
+                "716",
+                "7955",
+                "746",
+                "2167"
+              ],
+              [
+                "3",
+                "Team 7",
+                "5",
+                "1",
+                "0",
+                "0",
+                "100 %",
+                "0",
+                "541",
+                "7532",
+                "579",
+                "1634"
+              ],
+              [
+                "4",
+                "Team 6",
+                "4",
+                "1",
+                "0",
+                "0",
+                "100 %",
+                "0",
+                "587",
+                "6488",
+                "594",
+                "1727"
+              ],
+              [
+                "5",
+                "Team 8",
+                "6",
+                "1",
+                "0",
+                "0",
+                "100 %",
+                "0",
+                "635",
+                "5983",
+                "645",
+                "1913"
+              ],
+              [
+                "6",
+                "Team 4",
+                "2",
+                "1",
+                "0",
+                "0",
+                "100 %",
+                "0",
+                "594",
+                "5975",
+                "0",
+                "0"
+              ]
+            ],
+            "emphasis": [
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+              ]
+            ]
+          }
         ]
       }
     }
@@ -12624,5 +12815,9 @@
   "officialRecapCheckedAt": "2026-11-06T03:53:46.544Z",
   "laneWeek": "9",
   "laneSourceUpdated": "11/07/2026",
-  "reportDate": "Oct 31, 2026"
+  "reportDate": "Oct 31, 2026",
+  "officialStandingsHash": "a1b0613cc839f1139dc0d271796906071e0421a1f63b35155cea2806981db104",
+  "officialStandingsParserVersion": 6,
+  "officialStandingsRecapHash": "f10e90433cfacdc72164fc26632f8a0887f080f1e6de736fa457a70521d5e0b1",
+  "officialStandingsSyncedAt": "2026-11-06T08:01:09.016Z"
 }
