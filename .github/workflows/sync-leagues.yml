@@ -25,7 +25,10 @@ concurrency:
 
 jobs:
   sync:
-    runs-on: ubuntu-latest
+    # Playwright 1.55 does not support the Ubuntu 26 image now served by
+    # ubuntu-latest. Keep the importer on a supported image so browser setup
+    # cannot prevent the two-hour refresh from reaching League Secretary.
+    runs-on: ubuntu-24.04
     timeout-minutes: 180
     outputs:
       changed: ${{ steps.publish.outputs.changed }}
