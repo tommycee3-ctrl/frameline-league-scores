@@ -84,21 +84,41 @@ def parse(filename):
         if no_lane and len(tokens) >= 4 and tokens[0].isdigit() and tokens[1].isdigit() and tokens[2].upper() == "BYE":
             teams.append({"place": tokens[0], "lane": None, "team": tokens[1], "printedName": "BYE",
                           "won": "0", "lost": number(tokens[4]) if len(tokens) > 4 else None,
+                          "totalWon": "0", "totalLost": "0",
                           "avg": None, "scratchPins": "0", "hsg": None, "hss": None})
             continue
         prefix = 2 if no_lane else 3
-        if len(tokens) < width + prefix + 1 or not all(token.isdigit() for token in tokens[:prefix]):
+        row_width = width
+        if no_lane and year_to_date:
+            numeric_suffix = []
+            for token in reversed(tokens):
+                parsed = number(token)
+                if parsed is None:
+                    break
+                numeric_suffix.append(parsed)
+            numeric_suffix.reverse()
+            # The optional YTD games-won column is blank for teams that have
+            # not won a game. Detect it by its position immediately before
+            # the two large pin totals, without consuming a numeric team name.
+            row_width = 9 if len(numeric_suffix) >= 9 and float(numeric_suffix[-3]) <= 10 else 8
+        if len(tokens) < row_width + prefix + 1 or not all(token.isdigit() for token in tokens[:prefix]):
             continue
-        tail = [number(token) for token in tokens[-width:]]
+        tail = [number(token) for token in tokens[-row_width:]]
         if any(value is None for value in tail):
             continue
-        name = " ".join(tokens[prefix:-width])
+        name = " ".join(tokens[prefix:-row_width])
         if not name:
             continue
         if no_lane and split_parts:
             won, lost, avg, scratch_pins, hsg, hss = tail[-6], None, None, None, tail[-4], tail[-3]
         elif no_lane and year_to_date:
-            won, lost, avg, scratch_pins, hsg, hss = tail[-5], tail[-4], None, tail[-2], None, None
+            # Reset/split leagues print both sets of points:
+            # %Won, split WON, split LOST, YTD %, YTD WON, YTD LOST,
+            # games won, scratch pins, total pins. Place is based on the
+            # current split, while YTD points remain the full-season total.
+            won, lost = tail[1], tail[2]
+            total_won, total_lost = tail[4], tail[5]
+            avg, scratch_pins, hsg, hss = None, tail[-2], None, None
         elif divisions and split_parts:
             won, lost, avg, scratch_pins, hsg, hss = tail[0], tail[1], tail[2], tail[5], tail[6], tail[7]
         elif split_parts:
@@ -117,6 +137,8 @@ def parse(filename):
             name = name[:percent.start()].strip()
         teams.append({"place": tokens[0], "lane": None if no_lane else tokens[1], "team": tokens[1] if no_lane else tokens[2], "printedName": name,
                       "won": won, "lost": lost, "avg": avg, "scratchPins": scratch_pins,
+                      "totalWon": total_won if no_lane and year_to_date else won,
+                      "totalLost": total_lost if no_lane and year_to_date else lost,
                       "hsg": hsg, "hss": hss})
     if (not teams or len({team["team"] for team in teams}) != len(teams)) and not bowlers:
         raise ValueError("Official PDF team standings are incomplete or duplicated")

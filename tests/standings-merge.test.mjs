@@ -43,3 +43,14 @@ test("a newly published real team is added from the official standings", () => {
   const rows = mergeStandings(league, official).standings[0].rows;
   assert.deepEqual(rows[1].slice(0, 10), ["2", "New Team", "3", "1", "32", "28", "53 %", "32", "", "4800"]);
 });
+
+test("split points drive standings while year-to-date points remain separate", () => {
+  const league = { week: "12", views: { standings: [{ title: "League standings", headers, rows: [active] }] } };
+  const official = { reportWeek: "12", teams: [
+    { team: "1", place: "1", printedName: "Team 1", won: "30", lost: "10", totalWon: "167", totalLost: "73", scratchPins: "23160" },
+  ] };
+  const row = mergeStandings(league, official).standings[0].rows[0];
+  assert.equal(row[4], "30");
+  assert.equal(row[5], "10");
+  assert.equal(row[7], "167");
+});

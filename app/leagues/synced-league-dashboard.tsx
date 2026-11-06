@@ -138,7 +138,7 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
     team: string;
   } | null>(null);
   const [standingSort, setStandingSort] = useState<{
-    key: "place" | "team" | "points" | "lost" | "average" | "pins";
+    key: "place" | "team" | "points" | "totalPoints" | "lost" | "average" | "pins";
     direction: "asc" | "desc";
   }>({ key: "place", direction: "asc" });
   const weekSnapshots = useMemo(() => {
@@ -476,7 +476,9 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
         ? cell(standings!, row, "Team") ||
           `Team ${cell(standings!, row, "Team#")}`
         : key === "points"
-          ? cell(standings!, row, "YTD WON") || cell(standings!, row, "Won")
+          ? cell(standings!, row, "Won")
+          : key === "totalPoints"
+            ? cell(standings!, row, "YTD WON") || cell(standings!, row, "Won")
           : key === "lost"
             ? cell(standings!, row, "Lost")
             : key === "average"
@@ -557,7 +559,8 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                 [
                   ["place", "Place"],
                   ["team", "Team"],
-                  ["points", "Points"],
+                  ["points", data.id === "148625" ? "Split points" : "Points"],
+                  ["totalPoints", "Total points"],
                   ["lost", "Points lost"],
                   ["average", "Average"],
                   ["pins", "Pins"],
@@ -618,8 +621,12 @@ export function SyncedLeagueDashboard({ data }: { data: LeagueSnapshot }) {
                         <b>{name}</b>
                       </span>
                       <span>
+                        {cell(standings, row, "Won")}
+                        <small className="mobile-label">{data.id === "148625" ? "Split points" : "Points"}</small>
+                      </span>
+                      <span>
                         {cell(standings, row, "YTD WON") || cell(standings, row, "Won")}
-                        <small className="mobile-label">Points</small>
+                        <small className="mobile-label">Total points</small>
                       </span>
                       <span>
                         {cell(standings, row, "Lost")}

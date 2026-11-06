@@ -14,7 +14,7 @@ const requested = process.argv.find(arg => arg.startsWith("--league="))?.slice(9
 const dryRun = process.argv.includes("--dry-run");
 const seasonCode = { Fall: "f", Summer: "u", Spring: "s", Winter: "w" };
 let updated = 0, skipped = 0, unavailable = 0;
-const parserVersion = 4;
+const parserVersion = 6;
 
 const nameKey = value => String(value ?? "").toLowerCase().replace(/\b(jr|sr|ii|iii|iv)\b/g, " ").replace(/[^a-z0-9]+/g, " ").trim().split(/\s+/).filter(Boolean).sort().join(" ");
 
@@ -91,7 +91,7 @@ function mergeStandings(league, official) {
     const percent = lost !== null && won + lost > 0 ? `${Math.round(won / (won + lost) * 100)} %` : row[6] ?? "—";
     return [team.place, row[1] ?? team.printedName ?? `Team ${team.team}`, team.team, row[3] ?? "1", team.won,
       lost === null ? (row[5] ?? "—") : String(lost), percent,
-      !row.length || row[7] === row[4] ? team.won : row[7], team.avg ?? row[8] ?? "", team.scratchPins ?? row[9] ?? "", team.hsg ?? row[10] ?? "", team.hss ?? row[11] ?? ""];
+      team.totalWon ?? (!row.length || row[7] === row[4] ? team.won : row[7]), team.avg ?? row[8] ?? "", team.scratchPins ?? row[9] ?? "", team.hsg ?? row[10] ?? "", team.hss ?? row[11] ?? ""];
   }).sort((a, b) => Number(a[3]) - Number(b[3]) || Number(a[0]) - Number(b[0]));
   // A standings sheet describes the lanes used for the completed score week.
   // League Secretary can already have the next week's assignments posted, so
