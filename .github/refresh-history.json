@@ -1,5 +1,27 @@
 [
   {
+    "startedAt": "2026-11-08T19:13:49.527Z",
+    "finishedAt": "2026-11-08T19:15:15.185Z",
+    "durationSeconds": 86,
+    "mode": "LeaguePals leagues",
+    "leaguesChecked": 12,
+    "changeCount": 0,
+    "changes": []
+  },
+  {
+    "startedAt": "2026-11-08T19:12:09.834Z",
+    "finishedAt": "2026-11-08T19:15:15.725Z",
+    "durationSeconds": 186,
+    "mode": "known leagues",
+    "scope": "all",
+    "source": "official report fallback",
+    "checkedCount": 170,
+    "changeCount": 0,
+    "changes": [],
+    "failures": [],
+    "deferredLeagues": []
+  },
+  {
     "startedAt": "2026-11-08T14:36:33.325Z",
     "finishedAt": "2026-11-08T14:38:03.750Z",
     "durationSeconds": 90,
@@ -5478,27 +5500,5 @@
         "error": "No league rows returned for West Lanes; refusing to record an empty successful scan."
       }
     ]
-  },
-  {
-    "startedAt": "2026-10-19T06:48:04.495Z",
-    "finishedAt": "2026-10-19T06:49:06.714Z",
-    "durationSeconds": 62,
-    "mode": "LeaguePals leagues",
-    "leaguesChecked": 11,
-    "changeCount": 0,
-    "changes": []
-  },
-  {
-    "startedAt": "2026-10-19T06:46:16.750Z",
-    "finishedAt": "2026-10-19T06:49:07.131Z",
-    "durationSeconds": 170,
-    "mode": "known leagues",
-    "scope": "all",
-    "source": "official report fallback",
-    "checkedCount": 170,
-    "changeCount": 0,
-    "changes": [],
-    "failures": [],
-    "deferredLeagues": []
   }
 ]
