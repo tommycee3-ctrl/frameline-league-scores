@@ -1,5 +1,27 @@
 [
   {
+    "startedAt": "2026-11-08T22:57:13.124Z",
+    "finishedAt": "2026-11-08T22:58:40.456Z",
+    "durationSeconds": 87,
+    "mode": "LeaguePals leagues",
+    "leaguesChecked": 12,
+    "changeCount": 0,
+    "changes": []
+  },
+  {
+    "startedAt": "2026-11-08T22:54:51.611Z",
+    "finishedAt": "2026-11-08T22:58:40.807Z",
+    "durationSeconds": 229,
+    "mode": "known leagues",
+    "scope": "all",
+    "source": "official report fallback",
+    "checkedCount": 170,
+    "changeCount": 0,
+    "changes": [],
+    "failures": [],
+    "deferredLeagues": []
+  },
+  {
     "startedAt": "2026-11-08T19:13:49.527Z",
     "finishedAt": "2026-11-08T19:15:15.185Z",
     "durationSeconds": 86,
@@ -5447,57 +5469,6 @@
         "id": "62696",
         "name": "Friday Morning Summer 2026",
         "error": "Official recap PDF markings are missing for the same week; preserving prior verified results."
-      }
-    ]
-  },
-  {
-    "startedAt": "2026-10-19T14:01:42.891Z",
-    "finishedAt": "2026-10-19T15:34:37.015Z",
-    "durationSeconds": 5574,
-    "mode": "known leagues",
-    "scope": "all",
-    "source": "official report fallback",
-    "checkedCount": 170,
-    "changeCount": 0,
-    "changes": [],
-    "failures": [],
-    "deferredLeagues": []
-  },
-  {
-    "startedAt": "2026-10-19T13:45:29.475Z",
-    "finishedAt": "2026-10-19T13:47:44.201Z",
-    "durationSeconds": 135,
-    "mode": "directory discovery",
-    "scope": "all",
-    "leaguesChecked": 91,
-    "changeCount": 0,
-    "changes": [],
-    "deferredLeagues": [],
-    "failures": [
-      {
-        "centerId": "1163",
-        "name": "Thunderbowl of Council Bluffs",
-        "error": "No league rows returned for Thunderbowl of Council Bluffs; refusing to record an empty successful scan."
-      },
-      {
-        "centerId": "2118",
-        "name": "Sun Valley Lanes",
-        "error": "No league rows returned for Sun Valley Lanes; refusing to record an empty successful scan."
-      },
-      {
-        "centerId": "2173",
-        "name": "Parkway Lanes",
-        "error": "No league rows returned for Parkway Lanes; refusing to record an empty successful scan."
-      },
-      {
-        "centerId": "2137",
-        "name": "Hollywood Bowl",
-        "error": "No league rows returned for Hollywood Bowl; refusing to record an empty successful scan."
-      },
-      {
-        "centerId": "2110",
-        "name": "West Lanes",
-        "error": "No league rows returned for West Lanes; refusing to record an empty successful scan."
       }
     ]
   }
