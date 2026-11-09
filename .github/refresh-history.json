@@ -1,5 +1,44 @@
 [
   {
+    "startedAt": "2026-11-09T20:46:56.693Z",
+    "finishedAt": "2026-11-09T20:48:25.967Z",
+    "durationSeconds": 89,
+    "mode": "LeaguePals leagues",
+    "leaguesChecked": 12,
+    "changeCount": 2,
+    "changes": [
+      {
+        "id": "lp-6a830b98fb63f671392e5ce5",
+        "name": "Monday Senior Men 26",
+        "area": "Council Bluffs",
+        "center": "Bowlero Council Bluffs - 763",
+        "week": "12",
+        "sourceUpdated": "08/16/2026"
+      },
+      {
+        "id": "lp-6a957f7bf97455b04731aa65",
+        "name": "Early Birds 26-27",
+        "area": "Council Bluffs",
+        "center": "Bowlero Council Bluffs - 763",
+        "week": "10",
+        "sourceUpdated": "08/30/2026"
+      }
+    ]
+  },
+  {
+    "startedAt": "2026-11-09T20:44:59.883Z",
+    "finishedAt": "2026-11-09T20:48:26.337Z",
+    "durationSeconds": 206,
+    "mode": "known leagues",
+    "scope": "all",
+    "source": "official report fallback",
+    "checkedCount": 170,
+    "changeCount": 0,
+    "changes": [],
+    "failures": [],
+    "deferredLeagues": []
+  },
+  {
     "startedAt": "2026-11-09T16:02:30.581Z",
     "finishedAt": "2026-11-09T16:04:01.219Z",
     "durationSeconds": 91,
@@ -3436,41 +3475,5 @@
     "changes": [],
     "failures": [],
     "deferredLeagues": []
-  },
-  {
-    "startedAt": "2026-10-20T00:45:14.691Z",
-    "finishedAt": "2026-10-20T00:46:21.616Z",
-    "durationSeconds": 67,
-    "mode": "LeaguePals leagues",
-    "leaguesChecked": 11,
-    "changeCount": 1,
-    "changes": [
-      {
-        "id": "lp-6ace2f1dbcdf642f24243399",
-        "name": "Rolling Thunder 26-27",
-        "area": "Council Bluffs",
-        "center": "Bowlero Council Bluffs - 763",
-        "week": "2",
-        "sourceUpdated": "10/12/2026"
-      }
-    ]
-  },
-  {
-    "startedAt": "2026-10-19T23:50:32.285Z",
-    "finishedAt": "2026-10-19T23:51:40.466Z",
-    "durationSeconds": 68,
-    "mode": "directory discovery",
-    "scope": "all",
-    "leaguesChecked": 167,
-    "changeCount": 0,
-    "changes": [],
-    "deferredLeagues": [],
-    "failures": [
-      {
-        "centerId": "1163",
-        "name": "Thunderbowl of Council Bluffs",
-        "error": "No league rows returned for Thunderbowl of Council Bluffs; refusing to record an empty successful scan."
-      }
-    ]
   }
 ]
