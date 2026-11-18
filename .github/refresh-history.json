@@ -1,5 +1,482 @@
 [
   {
+    "startedAt": "2026-11-18T03:35:08.907Z",
+    "finishedAt": "2026-11-18T03:36:56.724Z",
+    "durationSeconds": 108,
+    "mode": "LeaguePals leagues",
+    "leaguesChecked": 12,
+    "changeCount": 2,
+    "changes": [
+      {
+        "id": "lp-6a8f046d53c5f51b7b86e8f1",
+        "name": "Cornbelt 26-27",
+        "area": "Council Bluffs",
+        "center": "Bowlero Council Bluffs - 763",
+        "week": "12",
+        "sourceUpdated": "08/25/2026"
+      },
+      {
+        "id": "lp-6ace2f1dbcdf642f24243399",
+        "name": "Rolling Thunder 26-27",
+        "area": "Council Bluffs",
+        "center": "Bowlero Council Bluffs - 763",
+        "week": "6",
+        "sourceUpdated": "10/12/2026"
+      }
+    ]
+  },
+  {
+    "startedAt": "2026-11-18T01:59:28.284Z",
+    "finishedAt": "2026-11-18T03:34:49.758Z",
+    "durationSeconds": 5721,
+    "mode": "known leagues",
+    "scope": "all",
+    "leaguesChecked": 170,
+    "changeCount": 0,
+    "changes": [],
+    "deferredLeagues": [
+      "122056",
+      "45911",
+      "55988",
+      "55974",
+      "83578",
+      "145372",
+      "130952",
+      "127516",
+      "96414",
+      "133536",
+      "32884",
+      "45904",
+      "51846",
+      "62696",
+      "45895",
+      "144538",
+      "129769",
+      "124413",
+      "111724",
+      "148625",
+      "115725",
+      "128281",
+      "123730",
+      "121897",
+      "68466",
+      "79460",
+      "46383",
+      "46208",
+      "132507",
+      "55979",
+      "127518",
+      "55992",
+      "128282",
+      "127515",
+      "55981",
+      "45890",
+      "51848",
+      "111723",
+      "57554",
+      "103772",
+      "45091",
+      "88381",
+      "48706",
+      "55980",
+      "127517",
+      "116033",
+      "55982",
+      "127514",
+      "125961",
+      "116034",
+      "63436",
+      "122054",
+      "122055",
+      "121373",
+      "55983",
+      "112159",
+      "144527",
+      "148688",
+      "145373",
+      "145370",
+      "63453",
+      "59988",
+      "116670",
+      "55990"
+    ],
+    "failures": [
+      {
+        "id": "131630",
+        "name": "Craft Beer League 2026",
+        "error": "Cannot read properties of null (reading 'replace')"
+      },
+      {
+        "id": "118842",
+        "name": "Scratch Draft 2026",
+        "error": "Cannot read properties of null (reading 'replace')"
+      },
+      {
+        "id": "45910",
+        "name": "Variety Club 26-27",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "122053",
+        "name": "Shooters 26",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "45900",
+        "name": "800 Classic 26-27",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "45908",
+        "name": "Ashrae 26-27",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "45909",
+        "name": "Misfits Plus 26-27",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "137930",
+        "name": "Sum. Wed. Srs. 26",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "145599",
+        "name": "Tornados",
+        "error": "Cannot read properties of null (reading 'replace')"
+      },
+      {
+        "id": "45892",
+        "name": "Young At Heart 26-27",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "50719",
+        "name": "Double Trouble 2026",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "115805",
+        "name": "Kevin Haynes Memorial 2026-27",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "121418",
+        "name": "Elks 80-26",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "121898",
+        "name": "Friday 4Fers 26",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "45881",
+        "name": "Sunday Funnies 26-27",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "45899",
+        "name": "Boozer Snoozers 26-27",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "145573",
+        "name": "Cyclones",
+        "error": "Cannot read properties of null (reading 'replace')"
+      },
+      {
+        "id": "121989",
+        "name": "Sweet 16 - 26",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "118772",
+        "name": "Odd Mixers 2026",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "45887",
+        "name": "89.7 The River Fall 26",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "143398",
+        "name": "Sunday 9 Pin 26",
+        "error": "Cannot read properties of null (reading 'replace')"
+      },
+      {
+        "id": "130990",
+        "name": "Triple Trouble 2026",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "121705",
+        "name": "Centennial 26",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "45885",
+        "name": "Monday Maniacs 26-27",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "145572",
+        "name": "Thunderbolts",
+        "error": "Cannot read properties of null (reading 'replace')"
+      },
+      {
+        "id": "45894",
+        "name": "Wednesday Men 26-27",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "45901",
+        "name": "Thursday Night Mixed 26-27",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "121318",
+        "name": "Electric Service League",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "51851",
+        "name": "Sunday Mixed 2026",
+        "error": "Cannot read properties of null (reading 'replace')"
+      },
+      {
+        "id": "116199",
+        "name": "Friday Night Co-Ed Bowling 2026 - 2027",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "121300",
+        "name": "Leisure Pearls 26",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "45889",
+        "name": "New Frontier 26-27",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "51847",
+        "name": "Tuesday 9 Pin No Tap 2026",
+        "error": "Cannot read properties of null (reading 'replace')"
+      },
+      {
+        "id": "68076",
+        "name": "Summer Doubles 2026",
+        "error": "Source layout check: bowlers returned no rows"
+      },
+      {
+        "id": "146916",
+        "name": "GUTTER DUSTERS:26-27",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "132307",
+        "name": "Cotner Belles 26",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "142876",
+        "name": "Smash & Dash 2026",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "125993",
+        "name": "Sport Shot Challenge 2026",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "121707",
+        "name": "Double Deuce 26",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "144775",
+        "name": "Sunday Nite Mixed 2026-2027",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "131150",
+        "name": "Family 9's Youth/Adult 2026",
+        "error": "Cannot read properties of null (reading 'replace')"
+      },
+      {
+        "id": "131148",
+        "name": "Monday Express Fall 2026",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "23395",
+        "name": "Platte Valley Mens Bowling 2026/2027",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "45880",
+        "name": "Weekenders 26-27",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "81627",
+        "name": "Tuesday Doubles Classic 2026",
+        "error": "Cannot read properties of null (reading 'replace')"
+      },
+      {
+        "id": "129141",
+        "name": "900 Global Scratch Draft 2026",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "131214",
+        "name": "Sunrise Strikers Fall 2026",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "121704",
+        "name": "Suburban 26",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "51850",
+        "name": "Manic Mondays 2026",
+        "error": "Cannot read properties of null (reading 'replace')"
+      },
+      {
+        "id": "47774",
+        "name": "Holy Name Mixed 26-27",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "45883",
+        "name": "Alley Cats 26-27",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "48511",
+        "name": "Sunday Mixers Fall 2026-2027",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "122315",
+        "name": "F.A.C. 26",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "132277",
+        "name": "Nationals League 26-27",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "128706",
+        "name": "Triple Take 2026",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "121280",
+        "name": "Wed. A.M. Ladies 26",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "111725",
+        "name": "LADIES GREATER OMAHA 27",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "121295",
+        "name": "Royal 26",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "118566",
+        "name": "2026 Family Two some",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "124412",
+        "name": "Monday Nite Madness 26",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "51731",
+        "name": "Beta Sigma Phi 26-27",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "64208",
+        "name": "Graphic Arts Bowling League 26-27",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "121708",
+        "name": "Sunday 2fers 26",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "55976",
+        "name": "Sunday Mixed 2026-2027",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "138652",
+        "name": "Wacky Junior Gold Sport 2026",
+        "error": "Cannot read properties of null (reading 'replace')"
+      },
+      {
+        "id": "145181",
+        "name": "Madonna Youth 26",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "121706",
+        "name": "Tues. FunDay 26",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "122058",
+        "name": "Mon. 1pm Srs. 26",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "51861",
+        "name": "2 x 2 26",
+        "error": "Cannot read properties of null (reading 'replace')"
+      },
+      {
+        "id": "123191",
+        "name": "Parks & Rec Fall 26",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "45897",
+        "name": "Yesterdays Kids 26-27",
+        "error": "Source layout check: standings returned no rows"
+      },
+      {
+        "id": "122059",
+        "name": "University 26",
+        "error": "Source layout check: standings returned no rows"
+      }
+    ]
+  },
+  {
+    "startedAt": "2026-11-18T01:59:27.107Z",
+    "finishedAt": "2026-11-18T03:36:57.083Z",
+    "durationSeconds": 5850,
+    "mode": "known leagues",
+    "scope": "all",
+    "source": "official report fallback",
+    "checkedCount": 170,
+    "changeCount": 0,
+    "changes": [],
+    "failures": [],
+    "deferredLeagues": []
+  },
+  {
     "startedAt": "2026-11-17T21:21:35.834Z",
     "finishedAt": "2026-11-17T21:23:07.806Z",
     "durationSeconds": 92,
@@ -16618,54 +17095,5 @@
     "changes": [],
     "failures": [],
     "deferredLeagues": []
-  },
-  {
-    "startedAt": "2026-10-28T17:22:50.061Z",
-    "finishedAt": "2026-10-28T17:24:03.381Z",
-    "durationSeconds": 73,
-    "mode": "LeaguePals leagues",
-    "leaguesChecked": 11,
-    "changeCount": 1,
-    "changes": [
-      {
-        "id": "lp-6a8f046d53c5f51b7b86e8f1",
-        "name": "Cornbelt 26-27",
-        "area": "Council Bluffs",
-        "center": "Bowlero Council Bluffs - 763",
-        "week": "9",
-        "sourceUpdated": "08/25/2026"
-      }
-    ]
-  },
-  {
-    "startedAt": "2026-10-28T17:18:28.419Z",
-    "finishedAt": "2026-10-28T17:24:03.831Z",
-    "durationSeconds": 335,
-    "mode": "known leagues",
-    "scope": "all",
-    "source": "official report fallback",
-    "checkedCount": 170,
-    "changeCount": 0,
-    "changes": [],
-    "failures": [],
-    "deferredLeagues": []
-  },
-  {
-    "startedAt": "2026-10-28T15:33:35.265Z",
-    "finishedAt": "2026-10-28T15:34:56.740Z",
-    "durationSeconds": 81,
-    "mode": "LeaguePals leagues",
-    "leaguesChecked": 11,
-    "changeCount": 1,
-    "changes": [
-      {
-        "id": "lp-6a8f046d53c5f51b7b86e8f1",
-        "name": "Cornbelt 26-27",
-        "area": "Council Bluffs",
-        "center": "Bowlero Council Bluffs - 763",
-        "week": "9",
-        "sourceUpdated": "08/25/2026"
-      }
-    ]
   }
 ]
