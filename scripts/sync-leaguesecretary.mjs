@@ -291,9 +291,12 @@ async function assertLiveReportAccess(browser) {
     page.on("response",response=>{
       if(response.status()===403 && /leaguesecretary\.com\/.*_Read(?:\?|$)/i.test(response.url())) blocked=true;
     });
-    await page.goto("https://www.leaguesecretary.com/bowling-centers/"+sample.centerSlug+"/bowling-leagues/"+sample.slug+"/league/standings/"+sample.id,{waitUntil:"domcontentloaded",timeout:90000});
+    const navigation=await page.goto("https://www.leaguesecretary.com/bowling-centers/"+sample.centerSlug+"/bowling-leagues/"+sample.slug+"/league/standings/"+sample.id,{waitUntil:"domcontentloaded",timeout:90000});
     await page.waitForTimeout(6000);
-    if(blocked) throw new Error("League Secretary is blocking live report reads (HTTP 403); preserving published league data until access resumes.");
+    const title=await page.title().catch(()=>"");
+    const body=clean(await page.locator("body").innerText().catch(()=>""));
+    const challenge=/just a moment|performing security verification|enable javascript and cookies/i.test(`${title} ${body}`);
+    if(blocked||navigation?.status()===403||challenge) throw new Error("League Secretary is blocking live report reads (Cloudflare HTTP 403); preserving published league data until access resumes.");
   } finally {await page.close();}
 }
 

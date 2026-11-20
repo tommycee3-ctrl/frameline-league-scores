@@ -109,31 +109,3 @@ jobs:
             echo '### Import warnings' >> "$GITHUB_STEP_SUMMARY"
             grep '^SYNC FAILURE' sync-report.log >> "$GITHUB_STEP_SUMMARY"
           fi
-
-  deploy:
-    if: needs.sync.outputs.changed == 'true'
-    needs: sync
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: main
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 24
-          cache: npm
-      - run: npm ci
-      - name: Build the refreshed app
-        env:
-          NEXT_PUBLIC_BASE_PATH: /frameline-league-scores
-        run: npm run build:pages
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./out
-      - name: Publish refreshed league data
-        id: deployment
-        uses: actions/deploy-pages@v4
