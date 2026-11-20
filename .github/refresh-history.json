@@ -1,5 +1,34 @@
 [
   {
+    "startedAt": "2026-11-20T17:21:03.975Z",
+    "finishedAt": "2026-11-20T17:22:40.125Z",
+    "durationSeconds": 96,
+    "mode": "LeaguePals leagues",
+    "leaguesChecked": 12,
+    "changeCount": 0,
+    "changes": []
+  },
+  {
+    "startedAt": "2026-11-20T17:20:19.175Z",
+    "finishedAt": "2026-11-20T17:22:40.618Z",
+    "durationSeconds": 141,
+    "mode": "known leagues",
+    "scope": "all",
+    "source": "official report fallback",
+    "checkedCount": 170,
+    "changeCount": 0,
+    "changes": [],
+    "failures": [
+      {
+        "stage": "source",
+        "error": "Refresh stage exited before completing"
+      }
+    ],
+    "deferredLeagues": [
+      "source"
+    ]
+  },
+  {
     "startedAt": "2026-11-20T13:02:02.143Z",
     "finishedAt": "2026-11-20T13:03:38.381Z",
     "durationSeconds": 96,
@@ -19630,28 +19659,6 @@
     "startedAt": "2026-10-31T08:57:52.024Z",
     "finishedAt": "2026-10-31T09:01:14.882Z",
     "durationSeconds": 203,
-    "mode": "known leagues",
-    "scope": "all",
-    "source": "official report fallback",
-    "checkedCount": 170,
-    "changeCount": 0,
-    "changes": [],
-    "failures": [],
-    "deferredLeagues": []
-  },
-  {
-    "startedAt": "2026-10-31T06:09:52.622Z",
-    "finishedAt": "2026-10-31T06:11:13.537Z",
-    "durationSeconds": 81,
-    "mode": "LeaguePals leagues",
-    "leaguesChecked": 11,
-    "changeCount": 0,
-    "changes": []
-  },
-  {
-    "startedAt": "2026-10-31T06:08:00.318Z",
-    "finishedAt": "2026-10-31T06:11:13.899Z",
-    "durationSeconds": 194,
     "mode": "known leagues",
     "scope": "all",
     "source": "official report fallback",
