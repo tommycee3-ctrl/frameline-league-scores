@@ -1,5 +1,43 @@
 [
   {
+    "startedAt": "2026-11-20T05:30:44.957Z",
+    "finishedAt": "2026-11-20T05:32:23.633Z",
+    "durationSeconds": 99,
+    "mode": "LeaguePals leagues",
+    "leaguesChecked": 12,
+    "changeCount": 1,
+    "changes": [
+      {
+        "id": "lp-6ac7fb9b2d694f31242ce3a2",
+        "name": "Regal Six Packers 26-27",
+        "area": "Council Bluffs",
+        "center": "Bowlero Council Bluffs - 763",
+        "week": "7",
+        "sourceUpdated": "10/07/2026"
+      }
+    ]
+  },
+  {
+    "startedAt": "2026-11-20T05:30:22.457Z",
+    "finishedAt": "2026-11-20T05:32:24.004Z",
+    "durationSeconds": 122,
+    "mode": "known leagues",
+    "scope": "all",
+    "source": "official report fallback",
+    "checkedCount": 170,
+    "changeCount": 0,
+    "changes": [],
+    "failures": [
+      {
+        "stage": "source",
+        "error": "Refresh stage exited before completing"
+      }
+    ],
+    "deferredLeagues": [
+      "source"
+    ]
+  },
+  {
     "startedAt": "2026-11-20T01:14:32.893Z",
     "finishedAt": "2026-11-20T01:16:16.985Z",
     "durationSeconds": 104,
@@ -19642,28 +19680,6 @@
     "startedAt": "2026-10-30T23:53:09.855Z",
     "finishedAt": "2026-10-30T23:56:09.110Z",
     "durationSeconds": 179,
-    "mode": "known leagues",
-    "scope": "all",
-    "source": "official report fallback",
-    "checkedCount": 170,
-    "changeCount": 0,
-    "changes": [],
-    "failures": [],
-    "deferredLeagues": []
-  },
-  {
-    "startedAt": "2026-10-30T20:12:51.999Z",
-    "finishedAt": "2026-10-30T20:14:20.547Z",
-    "durationSeconds": 89,
-    "mode": "LeaguePals leagues",
-    "leaguesChecked": 11,
-    "changeCount": 0,
-    "changes": []
-  },
-  {
-    "startedAt": "2026-10-30T20:10:34.847Z",
-    "finishedAt": "2026-10-30T20:14:20.892Z",
-    "durationSeconds": 226,
     "mode": "known leagues",
     "scope": "all",
     "source": "official report fallback",
