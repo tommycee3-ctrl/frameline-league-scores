@@ -1,5 +1,43 @@
 [
   {
+    "startedAt": "2026-11-21T17:00:29.936Z",
+    "finishedAt": "2026-11-21T17:01:58.992Z",
+    "durationSeconds": 89,
+    "mode": "LeaguePals leagues",
+    "leaguesChecked": 12,
+    "changeCount": 1,
+    "changes": [
+      {
+        "id": "lp-6aa4f2c9895707167ebc13a6",
+        "name": "Tornadoes 26-27",
+        "area": "Council Bluffs",
+        "center": "Bowlero Council Bluffs - 763",
+        "week": "10",
+        "sourceUpdated": "09/11/2026"
+      }
+    ]
+  },
+  {
+    "startedAt": "2026-11-21T17:00:10.939Z",
+    "finishedAt": "2026-11-21T17:01:59.364Z",
+    "durationSeconds": 108,
+    "mode": "known leagues",
+    "scope": "all",
+    "source": "official report fallback",
+    "checkedCount": 170,
+    "changeCount": 0,
+    "changes": [],
+    "failures": [
+      {
+        "stage": "source",
+        "error": "Refresh stage exited before completing"
+      }
+    ],
+    "deferredLeagues": [
+      "source"
+    ]
+  },
+  {
     "startedAt": "2026-11-21T12:22:37.152Z",
     "finishedAt": "2026-11-21T12:24:13.679Z",
     "durationSeconds": 97,
@@ -19730,28 +19768,6 @@
     "startedAt": "2026-11-01T08:02:10.600Z",
     "finishedAt": "2026-11-01T08:07:22.791Z",
     "durationSeconds": 312,
-    "mode": "known leagues",
-    "scope": "all",
-    "source": "official report fallback",
-    "checkedCount": 170,
-    "changeCount": 0,
-    "changes": [],
-    "failures": [],
-    "deferredLeagues": []
-  },
-  {
-    "startedAt": "2026-11-01T01:30:21.930Z",
-    "finishedAt": "2026-11-01T01:31:40.535Z",
-    "durationSeconds": 79,
-    "mode": "LeaguePals leagues",
-    "leaguesChecked": 11,
-    "changeCount": 0,
-    "changes": []
-  },
-  {
-    "startedAt": "2026-11-01T01:27:24.158Z",
-    "finishedAt": "2026-11-01T01:31:41.054Z",
-    "durationSeconds": 257,
     "mode": "known leagues",
     "scope": "all",
     "source": "official report fallback",
