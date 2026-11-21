@@ -1,5 +1,59 @@
 [
   {
+    "startedAt": "2026-11-21T19:40:22.031Z",
+    "finishedAt": "2026-11-21T19:41:56.204Z",
+    "durationSeconds": 94,
+    "mode": "LeaguePals leagues",
+    "leaguesChecked": 12,
+    "changeCount": 3,
+    "changes": [
+      {
+        "id": "lp-6aa4f2c9895707167ebc13a6",
+        "name": "Tornadoes 26-27",
+        "area": "Council Bluffs",
+        "center": "Bowlero Council Bluffs - 763",
+        "week": "10",
+        "sourceUpdated": "09/11/2026"
+      },
+      {
+        "id": "lp-6aa4f192a11121a87b92a774",
+        "name": "Cyclones 26-27",
+        "area": "Council Bluffs",
+        "center": "Bowlero Council Bluffs - 763",
+        "week": "10",
+        "sourceUpdated": "09/11/2026"
+      },
+      {
+        "id": "lp-6aa4ee8999478ed11e5d3be5",
+        "name": "Thunderbolts 26-27",
+        "area": "Council Bluffs",
+        "center": "Bowlero Council Bluffs - 763",
+        "week": "10",
+        "sourceUpdated": "09/11/2026"
+      }
+    ]
+  },
+  {
+    "startedAt": "2026-11-21T19:39:59.360Z",
+    "finishedAt": "2026-11-21T19:41:56.571Z",
+    "durationSeconds": 117,
+    "mode": "known leagues",
+    "scope": "all",
+    "source": "official report fallback",
+    "checkedCount": 170,
+    "changeCount": 0,
+    "changes": [],
+    "failures": [
+      {
+        "stage": "source",
+        "error": "Refresh stage exited before completing"
+      }
+    ],
+    "deferredLeagues": [
+      "source"
+    ]
+  },
+  {
     "startedAt": "2026-11-21T17:00:29.936Z",
     "finishedAt": "2026-11-21T17:01:58.992Z",
     "durationSeconds": 89,
@@ -19729,45 +19783,6 @@
     "startedAt": "2026-11-01T09:46:47.929Z",
     "finishedAt": "2026-11-01T09:50:37.786Z",
     "durationSeconds": 230,
-    "mode": "known leagues",
-    "scope": "all",
-    "source": "official report fallback",
-    "checkedCount": 170,
-    "changeCount": 0,
-    "changes": [],
-    "failures": [],
-    "deferredLeagues": []
-  },
-  {
-    "startedAt": "2026-11-01T08:06:09.599Z",
-    "finishedAt": "2026-11-01T08:07:22.410Z",
-    "durationSeconds": 73,
-    "mode": "LeaguePals leagues",
-    "leaguesChecked": 11,
-    "changeCount": 2,
-    "changes": [
-      {
-        "id": "lp-6a830b98fb63f671392e5ce5",
-        "name": "Monday Senior Men 26",
-        "area": "Council Bluffs",
-        "center": "Bowlero Council Bluffs - 763",
-        "week": "10",
-        "sourceUpdated": "08/16/2026"
-      },
-      {
-        "id": "lp-6a8f046d53c5f51b7b86e8f1",
-        "name": "Cornbelt 26-27",
-        "area": "Council Bluffs",
-        "center": "Bowlero Council Bluffs - 763",
-        "week": "9",
-        "sourceUpdated": "08/25/2026"
-      }
-    ]
-  },
-  {
-    "startedAt": "2026-11-01T08:02:10.600Z",
-    "finishedAt": "2026-11-01T08:07:22.791Z",
-    "durationSeconds": 312,
     "mode": "known leagues",
     "scope": "all",
     "source": "official report fallback",
