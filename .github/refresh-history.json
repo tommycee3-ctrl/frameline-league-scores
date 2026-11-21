@@ -1,5 +1,67 @@
 [
   {
+    "startedAt": "2026-11-21T02:07:28.824Z",
+    "finishedAt": "2026-11-21T02:09:09.662Z",
+    "durationSeconds": 101,
+    "mode": "LeaguePals leagues",
+    "leaguesChecked": 12,
+    "changeCount": 4,
+    "changes": [
+      {
+        "id": "lp-6a80c263a09d0e0071913c83",
+        "name": "Saturday Night Mixed 26",
+        "area": "Council Bluffs",
+        "center": "Bowlero Council Bluffs - 763",
+        "week": "14",
+        "sourceUpdated": "08/14/2026"
+      },
+      {
+        "id": "lp-6aa4f2c9895707167ebc13a6",
+        "name": "Tornadoes 26-27",
+        "area": "Council Bluffs",
+        "center": "Bowlero Council Bluffs - 763",
+        "week": "10",
+        "sourceUpdated": "09/11/2026"
+      },
+      {
+        "id": "lp-6aa4f192a11121a87b92a774",
+        "name": "Cyclones 26-27",
+        "area": "Council Bluffs",
+        "center": "Bowlero Council Bluffs - 763",
+        "week": "10",
+        "sourceUpdated": "09/11/2026"
+      },
+      {
+        "id": "lp-6aa4ee8999478ed11e5d3be5",
+        "name": "Thunderbolts 26-27",
+        "area": "Council Bluffs",
+        "center": "Bowlero Council Bluffs - 763",
+        "week": "10",
+        "sourceUpdated": "09/11/2026"
+      }
+    ]
+  },
+  {
+    "startedAt": "2026-11-21T02:07:05.188Z",
+    "finishedAt": "2026-11-21T02:09:10.023Z",
+    "durationSeconds": 125,
+    "mode": "known leagues",
+    "scope": "all",
+    "source": "official report fallback",
+    "checkedCount": 170,
+    "changeCount": 0,
+    "changes": [],
+    "failures": [
+      {
+        "stage": "source",
+        "error": "Refresh stage exited before completing"
+      }
+    ],
+    "deferredLeagues": [
+      "source"
+    ]
+  },
+  {
     "startedAt": "2026-11-20T23:18:14.176Z",
     "finishedAt": "2026-11-20T23:19:55.182Z",
     "durationSeconds": 101,
@@ -19660,28 +19722,6 @@
     "startedAt": "2026-10-31T17:21:23.624Z",
     "finishedAt": "2026-10-31T17:25:23.004Z",
     "durationSeconds": 239,
-    "mode": "known leagues",
-    "scope": "all",
-    "source": "official report fallback",
-    "checkedCount": 170,
-    "changeCount": 0,
-    "changes": [],
-    "failures": [],
-    "deferredLeagues": []
-  },
-  {
-    "startedAt": "2026-10-31T15:18:40.719Z",
-    "finishedAt": "2026-10-31T15:19:55.091Z",
-    "durationSeconds": 74,
-    "mode": "LeaguePals leagues",
-    "leaguesChecked": 11,
-    "changeCount": 0,
-    "changes": []
-  },
-  {
-    "startedAt": "2026-10-31T15:16:38.587Z",
-    "finishedAt": "2026-10-31T15:19:55.529Z",
-    "durationSeconds": 197,
     "mode": "known leagues",
     "scope": "all",
     "source": "official report fallback",
