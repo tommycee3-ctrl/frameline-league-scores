@@ -1,5 +1,43 @@
 [
   {
+    "startedAt": "2026-11-22T22:46:05.435Z",
+    "finishedAt": "2026-11-22T22:47:31.838Z",
+    "durationSeconds": 86,
+    "mode": "LeaguePals leagues",
+    "leaguesChecked": 12,
+    "changeCount": 1,
+    "changes": [
+      {
+        "id": "lp-6aecf4b557a5de1a61c1cdd6",
+        "name": "Nate Okerbloom Memorial 26-27",
+        "area": "Council Bluffs",
+        "center": "Bowlero Council Bluffs - 763",
+        "week": "3",
+        "sourceUpdated": "11/04/2026"
+      }
+    ]
+  },
+  {
+    "startedAt": "2026-11-22T22:45:45.400Z",
+    "finishedAt": "2026-11-22T22:47:32.383Z",
+    "durationSeconds": 107,
+    "mode": "known leagues",
+    "scope": "all",
+    "source": "official report fallback",
+    "checkedCount": 170,
+    "changeCount": 0,
+    "changes": [],
+    "failures": [
+      {
+        "stage": "source",
+        "error": "Refresh stage exited before completing"
+      }
+    ],
+    "deferredLeagues": [
+      "source"
+    ]
+  },
+  {
     "startedAt": "2026-11-22T20:28:30.341Z",
     "finishedAt": "2026-11-22T20:30:00.348Z",
     "durationSeconds": 90,
@@ -19766,45 +19804,6 @@
     "startedAt": "2026-11-02T21:59:13.095Z",
     "finishedAt": "2026-11-02T22:02:51.865Z",
     "durationSeconds": 219,
-    "mode": "known leagues",
-    "scope": "all",
-    "source": "official report fallback",
-    "checkedCount": 170,
-    "changeCount": 0,
-    "changes": [],
-    "failures": [],
-    "deferredLeagues": []
-  },
-  {
-    "startedAt": "2026-11-02T19:53:54.936Z",
-    "finishedAt": "2026-11-02T19:55:22.379Z",
-    "durationSeconds": 87,
-    "mode": "LeaguePals leagues",
-    "leaguesChecked": 11,
-    "changeCount": 2,
-    "changes": [
-      {
-        "id": "lp-6a830b98fb63f671392e5ce5",
-        "name": "Monday Senior Men 26",
-        "area": "Council Bluffs",
-        "center": "Bowlero Council Bluffs - 763",
-        "week": "11",
-        "sourceUpdated": "08/16/2026"
-      },
-      {
-        "id": "lp-6a957f7bf97455b04731aa65",
-        "name": "Early Birds 26-27",
-        "area": "Council Bluffs",
-        "center": "Bowlero Council Bluffs - 763",
-        "week": "9",
-        "sourceUpdated": "08/30/2026"
-      }
-    ]
-  },
-  {
-    "startedAt": "2026-11-02T19:51:08.537Z",
-    "finishedAt": "2026-11-02T19:55:22.923Z",
-    "durationSeconds": 254,
     "mode": "known leagues",
     "scope": "all",
     "source": "official report fallback",
