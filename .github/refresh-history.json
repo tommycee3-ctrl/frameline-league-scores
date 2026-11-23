@@ -1,5 +1,51 @@
 [
   {
+    "startedAt": "2026-11-23T20:55:20.089Z",
+    "finishedAt": "2026-11-23T20:57:02.078Z",
+    "durationSeconds": 102,
+    "mode": "LeaguePals leagues",
+    "leaguesChecked": 12,
+    "changeCount": 2,
+    "changes": [
+      {
+        "id": "lp-6a830b98fb63f671392e5ce5",
+        "name": "Monday Senior Men 26",
+        "area": "Council Bluffs",
+        "center": "Bowlero Council Bluffs - 763",
+        "week": "14",
+        "sourceUpdated": "08/16/2026"
+      },
+      {
+        "id": "lp-6a957f7bf97455b04731aa65",
+        "name": "Early Birds 26-27",
+        "area": "Council Bluffs",
+        "center": "Bowlero Council Bluffs - 763",
+        "week": "12",
+        "sourceUpdated": "08/30/2026"
+      }
+    ]
+  },
+  {
+    "startedAt": "2026-11-23T20:54:56.223Z",
+    "finishedAt": "2026-11-23T20:57:02.455Z",
+    "durationSeconds": 126,
+    "mode": "known leagues",
+    "scope": "all",
+    "source": "official report fallback",
+    "checkedCount": 170,
+    "changeCount": 0,
+    "changes": [],
+    "failures": [
+      {
+        "stage": "source",
+        "error": "Refresh stage exited before completing"
+      }
+    ],
+    "deferredLeagues": [
+      "source"
+    ]
+  },
+  {
     "startedAt": "2026-11-23T13:00:08.225Z",
     "finishedAt": "2026-11-23T13:01:55.644Z",
     "durationSeconds": 107,
@@ -19810,28 +19856,6 @@
     "startedAt": "2026-11-03T18:30:15.518Z",
     "finishedAt": "2026-11-03T18:34:34.220Z",
     "durationSeconds": 259,
-    "mode": "known leagues",
-    "scope": "all",
-    "source": "official report fallback",
-    "checkedCount": 170,
-    "changeCount": 0,
-    "changes": [],
-    "failures": [],
-    "deferredLeagues": []
-  },
-  {
-    "startedAt": "2026-11-03T16:42:26.238Z",
-    "finishedAt": "2026-11-03T16:43:41.017Z",
-    "durationSeconds": 75,
-    "mode": "LeaguePals leagues",
-    "leaguesChecked": 11,
-    "changeCount": 0,
-    "changes": []
-  },
-  {
-    "startedAt": "2026-11-03T16:39:27.834Z",
-    "finishedAt": "2026-11-03T16:43:41.547Z",
-    "durationSeconds": 254,
     "mode": "known leagues",
     "scope": "all",
     "source": "official report fallback",
