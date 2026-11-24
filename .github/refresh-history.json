@@ -1,5 +1,34 @@
 [
   {
+    "startedAt": "2026-11-24T10:30:07.034Z",
+    "finishedAt": "2026-11-24T10:31:49.407Z",
+    "durationSeconds": 102,
+    "mode": "LeaguePals leagues",
+    "leaguesChecked": 12,
+    "changeCount": 0,
+    "changes": []
+  },
+  {
+    "startedAt": "2026-11-24T10:29:42.268Z",
+    "finishedAt": "2026-11-24T10:31:49.774Z",
+    "durationSeconds": 128,
+    "mode": "known leagues",
+    "scope": "all",
+    "source": "official report fallback",
+    "checkedCount": 170,
+    "changeCount": 0,
+    "changes": [],
+    "failures": [
+      {
+        "stage": "source",
+        "error": "Refresh stage exited before completing"
+      }
+    ],
+    "deferredLeagues": [
+      "source"
+    ]
+  },
+  {
     "startedAt": "2026-11-24T05:17:38.027Z",
     "finishedAt": "2026-11-24T05:19:19.584Z",
     "durationSeconds": 102,
@@ -19831,45 +19860,6 @@
     "startedAt": "2026-11-04T09:24:59.493Z",
     "finishedAt": "2026-11-04T09:29:17.066Z",
     "durationSeconds": 258,
-    "mode": "known leagues",
-    "scope": "all",
-    "source": "official report fallback",
-    "checkedCount": 170,
-    "changeCount": 0,
-    "changes": [],
-    "failures": [],
-    "deferredLeagues": []
-  },
-  {
-    "startedAt": "2026-11-04T02:12:48.235Z",
-    "finishedAt": "2026-11-04T02:14:10.855Z",
-    "durationSeconds": 83,
-    "mode": "LeaguePals leagues",
-    "leaguesChecked": 11,
-    "changeCount": 2,
-    "changes": [
-      {
-        "id": "lp-6a8f046d53c5f51b7b86e8f1",
-        "name": "Cornbelt 26-27",
-        "area": "Council Bluffs",
-        "center": "Bowlero Council Bluffs - 763",
-        "week": "10",
-        "sourceUpdated": "08/25/2026"
-      },
-      {
-        "id": "lp-6ace2f1dbcdf642f24243399",
-        "name": "Rolling Thunder 26-27",
-        "area": "Council Bluffs",
-        "center": "Bowlero Council Bluffs - 763",
-        "week": "4",
-        "sourceUpdated": "10/12/2026"
-      }
-    ]
-  },
-  {
-    "startedAt": "2026-11-04T02:10:32.614Z",
-    "finishedAt": "2026-11-04T02:14:11.299Z",
-    "durationSeconds": 219,
     "mode": "known leagues",
     "scope": "all",
     "source": "official report fallback",
