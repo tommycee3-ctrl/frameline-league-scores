@@ -1,5 +1,51 @@
 [
   {
+    "startedAt": "2026-11-26T02:08:09.427Z",
+    "finishedAt": "2026-11-26T02:09:51.210Z",
+    "durationSeconds": 102,
+    "mode": "LeaguePals leagues",
+    "leaguesChecked": 12,
+    "changeCount": 2,
+    "changes": [
+      {
+        "id": "lp-6ac7fb9b2d694f31242ce3a2",
+        "name": "Regal Six Packers 26-27",
+        "area": "Council Bluffs",
+        "center": "Bowlero Council Bluffs - 763",
+        "week": "8",
+        "sourceUpdated": "10/07/2026"
+      },
+      {
+        "id": "lp-6aecf4b557a5de1a61c1cdd6",
+        "name": "Nate Okerbloom Memorial 26-27",
+        "area": "Council Bluffs",
+        "center": "Bowlero Council Bluffs - 763",
+        "week": "4",
+        "sourceUpdated": "11/04/2026"
+      }
+    ]
+  },
+  {
+    "startedAt": "2026-11-26T02:07:47.641Z",
+    "finishedAt": "2026-11-26T02:09:51.651Z",
+    "durationSeconds": 124,
+    "mode": "known leagues",
+    "scope": "all",
+    "source": "official report fallback",
+    "checkedCount": 170,
+    "changeCount": 0,
+    "changes": [],
+    "failures": [
+      {
+        "stage": "source",
+        "error": "Refresh stage exited before completing"
+      }
+    ],
+    "deferredLeagues": [
+      "source"
+    ]
+  },
+  {
     "startedAt": "2026-11-25T22:43:50.194Z",
     "finishedAt": "2026-11-25T22:45:29.428Z",
     "durationSeconds": 99,
@@ -19870,28 +19916,6 @@
     "startedAt": "2026-11-06T18:22:52.863Z",
     "finishedAt": "2026-11-06T18:26:31.719Z",
     "durationSeconds": 219,
-    "mode": "known leagues",
-    "scope": "all",
-    "source": "official report fallback",
-    "checkedCount": 170,
-    "changeCount": 0,
-    "changes": [],
-    "failures": [],
-    "deferredLeagues": []
-  },
-  {
-    "startedAt": "2026-11-06T15:43:32.982Z",
-    "finishedAt": "2026-11-06T15:44:52.115Z",
-    "durationSeconds": 79,
-    "mode": "LeaguePals leagues",
-    "leaguesChecked": 12,
-    "changeCount": 0,
-    "changes": []
-  },
-  {
-    "startedAt": "2026-11-06T15:41:40.229Z",
-    "finishedAt": "2026-11-06T15:44:52.647Z",
-    "durationSeconds": 192,
     "mode": "known leagues",
     "scope": "all",
     "source": "official report fallback",
