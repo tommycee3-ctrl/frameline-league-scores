@@ -1,5 +1,43 @@
 [
   {
+    "startedAt": "2026-11-27T02:43:53.133Z",
+    "finishedAt": "2026-11-27T02:45:24.604Z",
+    "durationSeconds": 91,
+    "mode": "LeaguePals leagues",
+    "leaguesChecked": 12,
+    "changeCount": 1,
+    "changes": [
+      {
+        "id": "lp-6a970dff34a4afbf5c794a8f",
+        "name": "Friday Nighters 26",
+        "area": "Council Bluffs",
+        "center": "Bowlero Council Bluffs - 763",
+        "week": "15",
+        "sourceUpdated": "08/20/2026"
+      }
+    ]
+  },
+  {
+    "startedAt": "2026-11-27T02:43:31.709Z",
+    "finishedAt": "2026-11-27T02:45:25.050Z",
+    "durationSeconds": 113,
+    "mode": "known leagues",
+    "scope": "all",
+    "source": "official report fallback",
+    "checkedCount": 170,
+    "changeCount": 0,
+    "changes": [],
+    "failures": [
+      {
+        "stage": "source",
+        "error": "Refresh stage exited before completing"
+      }
+    ],
+    "deferredLeagues": [
+      "source"
+    ]
+  },
+  {
     "startedAt": "2026-11-26T23:03:39.409Z",
     "finishedAt": "2026-11-26T23:05:10.774Z",
     "durationSeconds": 91,
@@ -19879,28 +19917,6 @@
     "startedAt": "2026-11-07T13:46:10.392Z",
     "finishedAt": "2026-11-07T13:49:33.674Z",
     "durationSeconds": 203,
-    "mode": "known leagues",
-    "scope": "all",
-    "source": "official report fallback",
-    "checkedCount": 170,
-    "changeCount": 0,
-    "changes": [],
-    "failures": [],
-    "deferredLeagues": []
-  },
-  {
-    "startedAt": "2026-11-07T09:22:02.844Z",
-    "finishedAt": "2026-11-07T09:23:16.425Z",
-    "durationSeconds": 74,
-    "mode": "LeaguePals leagues",
-    "leaguesChecked": 12,
-    "changeCount": 0,
-    "changes": []
-  },
-  {
-    "startedAt": "2026-11-07T09:20:19.264Z",
-    "finishedAt": "2026-11-07T09:23:16.972Z",
-    "durationSeconds": 178,
     "mode": "known leagues",
     "scope": "all",
     "source": "official report fallback",
