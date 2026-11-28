@@ -1,5 +1,67 @@
 [
   {
+    "startedAt": "2026-11-28T02:42:55.900Z",
+    "finishedAt": "2026-11-28T02:44:24.999Z",
+    "durationSeconds": 89,
+    "mode": "LeaguePals leagues",
+    "leaguesChecked": 12,
+    "changeCount": 4,
+    "changes": [
+      {
+        "id": "lp-6a80c263a09d0e0071913c83",
+        "name": "Saturday Night Mixed 26",
+        "area": "Council Bluffs",
+        "center": "Bowlero Council Bluffs - 763",
+        "week": "15",
+        "sourceUpdated": "08/14/2026"
+      },
+      {
+        "id": "lp-6aa4f2c9895707167ebc13a6",
+        "name": "Tornadoes 26-27",
+        "area": "Council Bluffs",
+        "center": "Bowlero Council Bluffs - 763",
+        "week": "11",
+        "sourceUpdated": "09/11/2026"
+      },
+      {
+        "id": "lp-6aa4f192a11121a87b92a774",
+        "name": "Cyclones 26-27",
+        "area": "Council Bluffs",
+        "center": "Bowlero Council Bluffs - 763",
+        "week": "11",
+        "sourceUpdated": "09/11/2026"
+      },
+      {
+        "id": "lp-6aa4ee8999478ed11e5d3be5",
+        "name": "Thunderbolts 26-27",
+        "area": "Council Bluffs",
+        "center": "Bowlero Council Bluffs - 763",
+        "week": "11",
+        "sourceUpdated": "09/11/2026"
+      }
+    ]
+  },
+  {
+    "startedAt": "2026-11-28T02:42:36.439Z",
+    "finishedAt": "2026-11-28T02:44:25.372Z",
+    "durationSeconds": 109,
+    "mode": "known leagues",
+    "scope": "all",
+    "source": "official report fallback",
+    "checkedCount": 170,
+    "changeCount": 0,
+    "changes": [],
+    "failures": [
+      {
+        "stage": "source",
+        "error": "Refresh stage exited before completing"
+      }
+    ],
+    "deferredLeagues": [
+      "source"
+    ]
+  },
+  {
     "startedAt": "2026-11-27T23:22:57.310Z",
     "finishedAt": "2026-11-27T23:24:40.413Z",
     "durationSeconds": 103,
@@ -19896,37 +19958,6 @@
     "startedAt": "2026-11-08T14:34:52.130Z",
     "finishedAt": "2026-11-08T14:38:04.274Z",
     "durationSeconds": 192,
-    "mode": "known leagues",
-    "scope": "all",
-    "source": "official report fallback",
-    "checkedCount": 170,
-    "changeCount": 0,
-    "changes": [],
-    "failures": [],
-    "deferredLeagues": []
-  },
-  {
-    "startedAt": "2026-11-08T07:47:16.047Z",
-    "finishedAt": "2026-11-08T07:48:26.909Z",
-    "durationSeconds": 71,
-    "mode": "LeaguePals leagues",
-    "leaguesChecked": 12,
-    "changeCount": 1,
-    "changes": [
-      {
-        "id": "lp-6a80c263a09d0e0071913c83",
-        "name": "Saturday Night Mixed 26",
-        "area": "Council Bluffs",
-        "center": "Bowlero Council Bluffs - 763",
-        "week": "12",
-        "sourceUpdated": "08/14/2026"
-      }
-    ]
-  },
-  {
-    "startedAt": "2026-11-08T07:45:07.233Z",
-    "finishedAt": "2026-11-08T07:48:27.263Z",
-    "durationSeconds": 200,
     "mode": "known leagues",
     "scope": "all",
     "source": "official report fallback",
